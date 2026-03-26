@@ -9,19 +9,19 @@ alias: /landing_pages/
 
 # Acerca de las páginas de destino
 
-> Las páginas de destino de Braze son páginas web independientes que pueden impulsar tu estrategia de captación e interacción de usuarios.
+> Las páginas de destino de Braze son páginas web independientes que pueden impulsar tu estrategia de adquisición y interacción con los usuarios.
 
-Utiliza las páginas de destino para aumentar tu audiencia, captar datos de usuario, promocionar ofertas especiales y apoyar campañas multicanal.
+Utiliza páginas de destino para aumentar tu audiencia, recopilar datos de usuario, promocionar ofertas especiales y respaldar campañas multicanal.
 
 {% alert note %}
-La disponibilidad de la página de destino y del dominio personalizado depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.
+La disponibilidad de la página de destino y el dominio personalizado depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.
 {% endalert %}
 
 {% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## Requisitos previos
 
-Para poder acceder, crear y publicar páginas de destino, necesitas [permisos de]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) administrador o todos los permisos siguientes:
+Antes de poder acceder, crear y publicar páginas de destino, necesitas [permisos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) de administrador o todos los permisos siguientes:
 
 - Ver páginas de inicio
 - Editar borradores de páginas de destino
@@ -41,7 +41,7 @@ El número de páginas de destino publicadas y dominios personalizados que puede
 
 ## Añadir Google Tag Manager a una página de destino
 
-Para añadir Google Tag Manager a tus páginas de destino, añade un bloque de **código personalizado** a tu página de destino en el editor de arrastrar y soltar, y luego inserta el código de Google Tag Manager en el bloque. Asegúrate de añadir una capa de datos antes del código del administrador de etiquetas, como en este ejemplo:
+Para añadir Google Tag Manager a tus páginas de destino, añade un bloque **de código personalizado** a tu página de destino en el editor de arrastrar y soltar, y luego inserta el código de Google Tag Manager en el bloque. Asegúrate de añadir una capa de datos antes del código del Administrador de etiquetas, como en este ejemplo:
 
 ```
 <script>
@@ -56,7 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-Para obtener más información sobre la implementación de Google Tag Manager, consulta [la documentación de Google.](https://developers.google.com/tag-platform/tag-manager/datalayer#installation)
+Para obtener más información sobre cómo implementar Google Tag Manager, consulta [la documentación de Google](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
 
 ## Preguntas más frecuentes
 
@@ -70,7 +70,7 @@ No, no hay requisitos técnicos.
 
 ### ¿Existe un editor HTML para las páginas de destino?
 
-Sí. Utiliza el bloque de **código personalizado** en el editor de arrastrar y soltar para añadir o editar HTML.
+Sí. Utiliza el bloque **Código personalizado** del editor de arrastrar y soltar para añadir o editar HTML.
 
 ### ¿Puedo crear un webhook dentro de una página de destino?
 

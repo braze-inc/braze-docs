@@ -14,7 +14,7 @@ guide_menu_list:
 
 guide_menu_title2: "Content Cards"
 guide_menu_list2:
-  - name: Créer une boîte de réception avec des cartes de contenu
+  - name: "Création d'une boîte de réception avec des cartes de contenu"
     link: /docs/developer_guide/content_cards/content_card_inbox
     image: /assets/img/braze_icons/brush-02.svg
 

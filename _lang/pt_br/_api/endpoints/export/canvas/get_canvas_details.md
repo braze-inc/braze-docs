@@ -1,20 +1,20 @@
 ---
-nav_title: "OBTER: Exportar detalhes do Canvas"
-article_title: "OBTER: Exportar detalhes da tela"
+nav_title: "GET: Exportar detalhes do Canvas"
+article_title: "GET: Exportar detalhes do Canvas"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint da Braze \"Exportar informações do canva\"."
+description: "Este artigo descreve detalhes sobre o endpoint da Braze \"Exportar detalhes do canva\"."
 
 ---
 {% api %}
-# Exportar detalhes do Canvas
+# Exportar detalhes do canva
 {% apimethod get %}
 /canvas/details
 {% endapimethod %}
 
-> Use esse ponto de extremidade para exportar metadados sobre um Canva, como o nome, a hora de criação, o status atual e muito mais.
+> Use esse endpoint para exportar metadados sobre um canva, como o nome, a hora de criação, o status atual e muito mais.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
@@ -30,8 +30,9 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Obrigatória | String | Consulte [Identificador da API do Canvas]({{site.baseurl}}/api/identifier_types/) |
-| `post_launch_draft_version` | Opcional | Booleano | Para as telas que têm um rascunho pós-lançamento, definir isso como `true` mostrará todas as alterações de rascunho disponíveis. O padrão é `false` |
+| `canvas_id` | Obrigatória | String | Consulte [Identificador da API do canva]({{site.baseurl}}/api/identifier_types/) |
+| `post_launch_draft_version` | Opcional | Booleano | Para canvas que têm um rascunho pós-lançamento, definir isso como `true` mostrará quaisquer alterações de rascunho disponíveis. O padrão é `false`. |
+| `include_has_translatable_content` | Opcional | Booleano | Quando definido como `true`, a resposta da API inclui um campo `has_translatable_content` para cada mensagem. O padrão é `false`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -46,7 +47,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Respostas
 
 {% alert note %}
-Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados `{name, next_step_id}`. Para as etapas de mensagens, o campo `next_step_ids` estará presente, mas não conterá dados para outras etapas do Canva.
+Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados `{name, next_step_id}`. Para etapas de mensagem, o campo `next_step_ids` estará presente, mas não conterá dados para outras etapas do canva.
 {% endalert %}
 
 ```json
@@ -92,6 +93,7 @@ Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados 
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
               "channel": (string) the channel type of the message (for example, "email"),
+              "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
               // channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses
           }
       }
@@ -102,9 +104,9 @@ Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados 
 }
 ```
 
-### Envio de mensagens por canal
+### Mensagens por canal
 
-A seguir, um exemplo de resposta que inclui mensagens do Canva enviadas por diferentes canais (e-mail, push, SMS e mensagens no app):
+A seguir, um exemplo de resposta que inclui mensagens do canva enviadas por diferentes canais (e-mail, push, SMS e mensagens no app):
 
 ```json
 {
@@ -213,7 +215,7 @@ A seguir, um exemplo de resposta que inclui mensagens do Canva enviadas por dife
         }
       }
     }
-  ],
+  ]
 }
 ```
 

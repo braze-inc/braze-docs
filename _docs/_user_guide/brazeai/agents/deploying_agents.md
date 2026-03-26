@@ -37,7 +37,7 @@ You can apply an agent to catalog fields so it automatically generates or calcul
 | Generate product descriptions | Automatically create short marketing copy for new catalog entries, for example, by generating a catchy description from structured product data like name, category, and features. |
 | Enrich product attributes | Fill in missing values such as color family, style, or season based on a product name and details. For example, if a product name is “Laguna Polarized Sunglasses,” the agent could assign the style as “sport” and the color family as “blue.” |
 | Calculate derived fields | Use existing fields to generate new data, such as a “fit score” based on attributes or a “popularity tag” from sales and review counts. |
-| Categorize or tag items | Assign tags for recommendation logic so personalization models can segment products more effectively. For example, tag products as “outdoor,” “festival-ready,” or “premium.” |
+| Categorize or tag items | Assign tags for recommendation logic so personalization models can segment products more effectively. For example, tag products as "outdoor," "festival-ready," or "premium." |
 | Localize content | Translate catalog text into another language for global campaigns, or adjust tone and length for region-specific channels. For example, translate “Classic Clubmaster Sunglasses” into Spanish as “Gafas de sol Classic Clubmaster,” or shorten descriptions for SMS campaigns. |
 | Summarize reviews or feedback | Summarize sentiment or feedback into a new field, such as assigning sentiment scores like Positive, Neutral, or Negative, or creating a short text summary like “Most customers mention great fit, but note slow shipping.” |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

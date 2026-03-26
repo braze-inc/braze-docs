@@ -8,7 +8,7 @@
 Para ver como os namespaces mudam entre Java e C#, dê uma olhada em nosso [app de amostra Xample no GitHub](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp).
 {% endalert %}
 
-Para integrar notificações por push para .NET MAUI (anteriormente Xamarin), você precisará concluir as etapas para notificações por push nativas do Android. As etapas a seguir são apenas um resumo. Para obter um passo a passo completo, consulte o [guia de notificações por push nativas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
+Para integrar notificações por push para .NET MAUI (anteriormente Xamarin), você precisará concluir os passos para notificações por push nativas do Android. As etapas a seguir são apenas um resumo. Para obter um passo a passo completo, consulte o [guia de notificações por push nativas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
 
 ### Etapa 1: Atualize seu projeto
 

@@ -4,7 +4,7 @@ article_title: Socios de orquestación de mensajes
 page_order: 2
 
 page_type: landing
-description: "Esta página de destino enumera los socios de Braze (Alloys) que te permiten orquestar tus mensajes con reorientación, plantillas de correo electrónico, promociones, atribución y mucho más."
+description: "Esta página de inicio enumera los socios de Braze (Alloys) que te permiten orquestar tus mensajes con reorientación, plantillas de correo electrónico, promociones, atribución y mucho más."
 layout: partner_page
 search_tag: Partner
 
@@ -23,9 +23,11 @@ valid_partner_list:
   url: /docs/partners/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/kochava/
+- name: Linkrunner
+  url: /docs/partners/linkrunner/
 - name: Singular
   url: /docs/partners/singular/
-- name: Contenido
+- name: Contentful
   url: /docs/partners/contentful/
 - name: AppsFlyer
   url: /docs/partners/appsflyer/
@@ -43,7 +45,7 @@ valid_partner_list:
   url: /docs/partners/liveramp/
 - name: Looker
   url: /docs/partners/looker/
-- name: Rápido
+- name: Quikly
   url: /docs/partners/quikly/
 - name: Remerge
   url: /docs/partners/remerge/
@@ -53,7 +55,9 @@ valid_partner_list:
   url: /docs/partners/blayer/
 - name: Dyspatch
   url: /docs/partners/dyspatch/
-- name: Amor por correo electrónico
+- name: Denada
+  url: /docs/partners/denada/
+- name: Email Love
   url: /docs/partners/email_love/
 - name: IAM Studio
   url: /docs/partners/iam_studio/
@@ -79,7 +83,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: EduMe
   url: /docs/partners/message_orchestration/learning/edume/
-- name: Optilyz
+- name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/

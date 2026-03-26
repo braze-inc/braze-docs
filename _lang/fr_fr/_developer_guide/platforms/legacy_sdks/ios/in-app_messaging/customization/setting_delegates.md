@@ -1,6 +1,6 @@
 ---
 nav_title: Définir les délégués
-article_title: Définir les délégués des messages in-app pour iOS
+article_title: Définir les délégués de messages in-app pour iOS
 platform: iOS
 page_order: 2
 description: "Cet article de référence couvre les délégués de messagerie in-app pour votre application iOS."

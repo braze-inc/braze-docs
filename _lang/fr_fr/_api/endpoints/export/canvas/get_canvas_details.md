@@ -1,11 +1,11 @@
 ---
-nav_title: "GET : Exporter les détails du Canvas"
-article_title: "GET : Exporter les détails de la toile"
+nav_title: "GET : Exporter les détails du Canvas"
+article_title: "GET : Exporter les détails du Canvas"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze les détails du Canvas."
+description: "Cet article présente en détail l'endpoint Braze Exporter les détails du Canvas."
 
 ---
 {% api %}
@@ -14,27 +14,28 @@ description: "Cet article présente en détail l’endpoint Braze les détails d
 /canvas/details
 {% endapimethod %}
 
-> Utilisez cet endpoint pour exporter des métadonnées sur un Canvas, telles que le nom, l’heure de création, l’état actuel, etc.
+> Utilisez cet endpoint pour exporter des métadonnées sur un Canvas, telles que le nom, l'heure de création, l'état actuel, etc.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `canvas.details`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l'autorisation `canvas.details`.
 
 ## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Paramètres de demande
+## Paramètres de requête
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Requis | Chaîne de caractères | Voir [Identifiant de l'API Canvas]({{site.baseurl}}/api/identifier_types/) |
-| `post_launch_draft_version` | Facultatif | Valeur booléenne | Pour les toiles qui ont une ébauche après le lancement, la valeur `true` permet d'afficher toutes les modifications d'ébauche disponibles. La valeur par défaut est `false` |
+| `canvas_id` | Requis | Chaîne de caractères | Voir [Identifiant API Canvas]({{site.baseurl}}/api/identifier_types/) |
+| `post_launch_draft_version` | Facultatif | Valeur booléenne | Pour les Canvas qui disposent d'un brouillon post-lancement, définir ce paramètre sur `true` affiche les modifications de brouillon disponibles. La valeur par défaut est `false`. |
+| `include_has_translatable_content` | Facultatif | Valeur booléenne | Lorsque ce paramètre est défini sur `true`, la réponse de l'API inclut un champ `has_translatable_content` pour chaque message. La valeur par défaut est `false`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Exemple de demande
+## Exemple de requête
 
 {% raw %}
 ```
@@ -46,7 +47,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Réponses
 
 {% alert note %}
-Toutes les étapes Canvas ont un champ `next_paths` qui est un tableau de données `{name, next_step_id}`. Pour les étapes du message, le champ `next_step_ids` sera présent, mais ne contiendra pas de données pour les autres étapes de Canvas.
+Toutes les étapes du Canvas possèdent un champ `next_paths`, qui est un tableau de données `{name, next_step_id}`. Pour les étapes Message, le champ `next_step_ids` sera présent, mais ne contiendra pas de données pour les autres étapes du Canvas.
 {% endalert %}
 
 ```json
@@ -92,6 +93,7 @@ Toutes les étapes Canvas ont un champ `next_paths` qui est un tableau de donné
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
               "channel": (string) the channel type of the message (for example, "email"),
+              "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
               // channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses
           }
       }
@@ -104,7 +106,7 @@ Toutes les étapes Canvas ont un champ `next_paths` qui est un tableau de donné
 
 ### Messages par canal
 
-Voici un exemple de réponse qui inclut les messages Canvas envoyés par différents canaux (e-mail, push, SMS et messages in-app) :
+Voici un exemple de réponse qui inclut des messages Canvas envoyés par différents canaux (e-mail, push, SMS et messages in-app) :
 
 ```json
 {
@@ -213,12 +215,12 @@ Voici un exemple de réponse qui inclut les messages Canvas envoyés par différ
         }
       }
     }
-  ],
+  ]
 }
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+Pour obtenir de l'aide sur les exportations CSV et API, consultez la section [Résolution des problèmes d'exportation]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

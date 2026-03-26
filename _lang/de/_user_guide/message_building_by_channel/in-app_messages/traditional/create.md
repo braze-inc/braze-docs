@@ -17,7 +17,7 @@ toc_headers: h2
 
 ## Schritt 1: Entscheiden Sie, wo Sie die Nachricht erstellen {#create-new-campaign-in-app}
 
-Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind.
+Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, zielgerichtete Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
 
 {% tabs %}
 {% tab Campaign %}
@@ -58,9 +58,9 @@ Wählen Sie zunächst aus, welche Plattformen die Nachricht erhalten sollen. Mit
 
 | Plattform                        | Zustellung        |
 |---------------------------------|-------------------------|
-| Mobile Apps                     | iOS & Android SDKs      |
+| Mobile Apps                     | iOS- und& Android-SDKs      |
 | Webbrowser                    | Web SDK                 |
-| Beide Mobile Apps & Webbrowser | iOS, Android & Internet SDKs |
+| Sowohl mobile Apps als auch& Webbrowser | iOS, Android&Internet-SDKs |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Schritt 3: Nachrichtentyp auswählen
@@ -191,7 +191,7 @@ Wählen Sie **Sprachen hinzufügen** und wählen Sie die gewünschten Sprachen a
 
 ### Bild
 
-Je nach Art Ihrer Nachricht können Sie **ein Bild hochladen**, **ein Abzeichen auswählen** oder **Font Awesome** verwenden. Um ein Bild hochzuladen, wählen Sie **Bild hinzufügen** oder geben Sie eine Bild-URL an. Wenn Sie **Bild hinzufügen** wählen, öffnet sich die **Mediathek**, in der Sie ein zuvor hochgeladenes Bild auswählen oder ein neues Bild hinzufügen können. Jede Art von Nachricht und jede Plattform kann ihre eigenen empfohlenen Proportionen und Anforderungen haben - überprüfen Sie diese, bevor Sie ein Bild in Auftrag geben oder von Grund auf neu erstellen.
+Je nach Art Ihrer Nachricht können Sie **ein Bild hochladen**, **ein Abzeichen auswählen** oder **Font Awesome** verwenden. Um ein Bild hochzuladen, wählen Sie **bitte „Bild hinzufügen“** oder geben Sie eine Bild-URL an. Wenn Sie **Bild hinzufügen** wählen, öffnet sich die **Mediathek**, in der Sie ein zuvor hochgeladenes Bild auswählen oder ein neues Bild hinzufügen können. Jeder Nachrichtentyp und jede Plattform kann eigene empfohlene Proportionen und Anforderungen haben – bitte überprüfen Sie diese, bevor Sie einen Auftrag erteilen oder ein Bild von Grund auf neu erstellen.
 
 {% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
@@ -207,7 +207,7 @@ Einige Nachrichtentypen benötigen keine Kopfzeilen und fragen daher auch nicht 
 
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
-![Starten Sie den KI Copywriter Button, der sich im Nachrichten-Feld des In-App-Nachricht-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+![Bitte klicken Sie auf den Button „KI-Textgenerator starten“, der im Feld „Nachricht“ des Nachrichten-Editors innerhalb der App steht.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
 ##### Erstellen von Nachrichten von rechts nach links
 
@@ -314,7 +314,7 @@ Wählen Sie die Aktion, bei der Sie Ihre Nachricht auslösen möchten, sowie die
 Beachten Sie, dass das angepasste Event über das SDK gesendet werden muss, wenn Sie Ihre In-App-Nachricht durch ein angepasstes Event triggern möchten.
 {% endalert %}
 
-![Aktionsbasierte Kampagne, bei der die Aktion triggern auf "Sitzung starten" eingestellt ist.]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+![Aktionsbasierte Kampagne, bei der die Aktion zum Triggern der Sitzung auf „Sitzung starten“ eingestellt ist.]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 Die Zustellung von In-App-Nachrichten basiert ausschließlich auf den folgenden Aktionsauslösern:
 
@@ -343,17 +343,22 @@ Wenn Sie die Aktion ausgewählt haben, die die In-App-Nachricht auslöst, sollte
 
 Sie können zwischen den folgenden Nachrichtenprioritäten wählen:
 
-- Niedrige Priorität (wird nach anderen Nachrichten angezeigt)
-- Mittlere Priorität
 - Hohe Priorität (wird vor anderen Nachrichten angezeigt)
+- Mittlere Priorität (Standard)
+- Niedrige Priorität (wird nach anderen Nachrichten angezeigt)
 
-Die hohe, mittlere und niedrige Nachrichtenpriorität sind als Buckets zu verstehen, sodass mehrere Nachrichten dieselbe Priorität haben können. Um die Prioritäten innerhalb dieser Bereiche festzulegen, klicken Sie auf **Genaue Priorität festlegen** und Sie können die Kampagnen per Drag & Drop nach der richtigen Priorität ordnen.
+Die Optionen „Hoch“, „Mittel“ und „Niedrig“ für die Priorität getriggerter Nachrichten sind Buckets, sodass mehrere Nachrichten dieselbe ausgewählte Priorität haben können. Wenn mehrere Nachrichten dieselbe Priorität aufweisen, hat die zuletzt erstellte oder zugewiesene Nachricht Vorrang und wird zuerst angezeigt:
 
-![Ein Beispiel für die Festlegung von Prioritäten für eine In-App-Nachricht-Kampagne und Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+- **Standard-Prioritätsgruppe:** Wenn zwei Kampagnen denselben Auslöser haben und die Standardpriorität (mittel) verwenden, erhält die zuletzt erstellte Kampagne den Auslöser.
+- **Spezifischer Prioritäts-Bucket:** Wenn mehrere Kampagnen denselben Auslöser gemeinsam nutzen und einem bestimmten Prioritäts-Bucket zugewiesen sind, erhält die Kampagne, die diesem Bucket zuletzt zugewiesen wurde, den Auslöser.
+
+Um Prioritäten innerhalb dieser Buckets festzulegen, klicken Sie bitte auf **„Genaue Priorität festlegen**“. Anschließend können Sie die Kampagnen per Drag-and-Drop verschieben, um sie mit der richtigen Priorität zu ordnen.
+
+![Ein Beispiel dafür, wie Prioritäten für eine In-App-Nachrichten-Kampagne und Canvas festgelegt werden.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### Zielgruppe auswählen
 
-Als nächstes müssen Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) durch die Auswahl von Segmenten oder Filtern [zielgerichtet zusammen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) stellen, um Ihre Zielgruppe einzugrenzen. Sie erhalten automatisch einen Schnappschuss davon, wie diese ungefähre Segmentpopulation aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
+Anschließend müssen Sie Ihre Zielgruppen durch die Auswahl von Segmenten oder Filtern eingrenzen. Sie erhalten automatisch einen Überblick über die ungefähre Größe dieses Segments. Bitte beachten Sie, dass die genaue Segmentzugehörigkeit immer vor dem Versand der Nachricht berechnet wird.
 
 {% alert note %}
 Wenn es bei der In-App-Nachricht zu einer Verzögerung kommt, wird die Segmentierung erst danach ermittelt. Wenn der Nutzer:innen berechtigt ist, wird die In-App-Nachricht bei der nächsten verfügbaren Sitzung synchronisiert.
@@ -363,14 +368,14 @@ Wenn es bei der In-App-Nachricht zu einer Verzögerung kommt, wird die Segmentie
 
 In einigen Szenarien möchten Sie vielleicht die Berechtigung eines Nutzers neu bewerten, wenn er eine In-App-Nachricht triggert, die angezeigt werden soll. Beispiele hierfür sind Kampagnen, die auf ein benutzerdefiniertes Attribut abzielen, das sich häufig ändert, oder Nachrichten, die kurzfristige Profiländerungen widerspiegeln sollen.
 
-![Markieren Sie das Kontrollkästchen für "Kampagnen vor der Anzeige neu auswerten".]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+![Das Kontrollkästchen „Kampagnenberechtigung vor der Anzeige erneut überprüfen“ ist ausgewählt.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 Wenn Sie die Option **Kampagnenberechtigung vor der Anzeige neu bewerten** auswählen, wird eine zusätzliche Anfrage an Braze gestellt, um zu bestätigen, dass der Benutzer vor dem Versand noch für diese Nachricht berechtigt ist. Außerdem werden alle [Liquid-Variablen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) oder [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) in diesem Moment vor der Anzeige der Nachricht als Vorlage verwendet.
 
 Dadurch wird verhindert, dass In-App-Nachrichten an Benutzer innerhalb abgelaufener oder archivierter Kampagnen gesendet werden. Wenn Sie die Berechtigung eines Benutzers nicht neu bewerten, erhält der Benutzer die In-App-Nachricht auch dann noch, wenn die Kampagne bereits abgelaufen ist oder archiviert wurde, weil die Nachricht in Ihrem SDK liegt und darauf wartet, dass Benutzer sie auslösen.
 
 {% alert note %}
-Die Aktivierung dieser Option führt zu einer leichten Verzögerung (< 100ms) zwischen dem Zeitpunkt, an dem ein Nutzer:in eine In-App-Nachricht triggert und dem Zeitpunkt, an dem die Nachricht angezeigt wird, aufgrund der zusätzlichen Anfrage für die Berechtigung und das Template.
+Die Aktivierung dieser Option führt zu einer leichten Verzögerung ((<100 ms) zwischen dem Zeitpunkt, zu dem ein Nutzer eine In-App-Nachricht triggert, und dem Zeitpunkt, zu dem die Nachricht angezeigt wird, da eine zusätzliche Berechtigungs- und Template-Anfrage erfolgt.
 <br><br>
 Verwenden Sie diese Option nicht für Nachrichten, die ausgelöst werden können, während ein Nutzer:innen offline ist, oder wenn die Berechtigung und die Liquid-Neubewertung nicht erforderlich sind.
 {% endalert %}
@@ -399,7 +404,7 @@ Sehen Sie sich als nächstes die [In-App-Nachrichtenberichte]({{site.baseurl}}/u
 
 ### Limits für aktive In-App-Nachricht-Kampagnen
 
-Braze legt Wert auf Zuverlässigkeit und Geschwindigkeit. Wir empfehlen Ihnen, nur die Daten an Braze zu senden, die Sie benötigen, und alle Kampagnen zu deaktivieren, die keinen Mehrwert für Ihre Marke darstellen.
+Braze legt Wert auf Zuverlässigkeit und Geschwindigkeit. Wir empfehlen Ihnen, nur die erforderlichen Daten an Braze zu senden und alle Kampagnen zu deaktivieren, die keinen Mehrwert für Ihre Marke bieten.
 
 Die Verarbeitung aktionsbasierter In-App-Nachrichtenkampagnen, die noch aktiv sind, aber keine Nachrichten mehr senden oder nicht mehr benötigt werden, verlangsamt die Gesamtleistung der Braze-Dienste für Sie und andere Kunden. Diese zusätzliche Zeit, die für die Verarbeitung dieser großen Anzahl von inaktiven Kampagnen benötigt wird, bedeutet, dass In-App-Nachrichten länger brauchen, um auf den Geräten der Endbenutzer zu erscheinen, was sich auf das Erlebnis der Endbenutzer auswirkt.
 
@@ -411,15 +416,15 @@ Die Zahl 200 bezieht sich auf laufende In-App-Nachrichtenkampagnen, die noch nic
 
 ### Bewertung der Zustellung zur Ortszeit
 
-Wenn eine In-App-Nachricht-Kampagne unter Verwendung der Ortszeit des Nutzers geplant wird, wird die Auswertung der Start- und Endzeit der Kampagne auf dem Gerät selbst durchgeführt.
+Wenn eine In-App-Nachrichtenkampagne anhand der Ortszeit des Nutzers geplant wird, erfolgt die Auswertung der Start- und Endzeit der Kampagne auf dem Gerät selbst.
 
-In-App-Nachricht-Kampagnen werden in der Regel auf das Gerät des Nutzers gepusht, wenn die App-Sitzung beginnt oder aktualisiert wird. In diesem Moment:
+In-App-Nachrichten-Kampagnen werden in der Regel an das Gerät einer Nutzer:in gesendet, wenn die App-Sitzung gestartet oder aktualisiert wird. In diesem Moment:
 
-1. Das SDK prüft, ob der Nutzer:in für In-App-Nachrichten mit Triggern in Frage kommt.
-2. Das Gerät prüft, ob das triggernde Ereignis des Nutzers innerhalb der Start- und Endzeit der Kampagne liegt (entsprechend der Lokalisierung der Zeitzone des Nutzers).
+1. Das SDK überprüft, ob die Nutzer:in für triggerbasierte In-App-Nachrichten qualifiziert ist.
+2. Das Gerät überprüft, ob das auslösende Ereignis des Nutzers innerhalb der Start- und Endzeit der Kampagne (gemäß der Ortszeit des Nutzers) aufgetreten ist.
 3. Wenn beide Bedingungen erfüllt sind, kann die In-App-Nachricht angezeigt werden.
 
 #### Überlegungen
 
-- Wenn ein Nutzer:innen kurz nach der Zustellung der In-App-Nachricht ein Ereignis triggert (z.B. einen Button antippen), erscheint die Nachricht möglicherweise erst bei der nächsten Aktualisierung der Sitzung - vorausgesetzt, alle Zulassungskriterien sind noch erfüllt.
-- Ähnlich wie bei anderen Kanälen sollten In-App-Nachrichten-Kampagnen idealerweise 24-48 Stunden im Voraus eingeführt werden. Dieser Puffer gibt den Nutzer:innen genügend Zeit, die Voraussetzungen zu erfüllen und eine Sitzung zu initiieren, damit die Nachricht ausgewertet und angezeigt werden kann.
+- Wenn ein Nutzer kurz nach der Zustellung der In-App-Nachricht ein Ereignis triggert (z. B. durch Antippen eines Buttons), wird die Nachricht möglicherweise erst bei der nächsten Aktualisierung der Sitzung angezeigt – vorausgesetzt, alle Zulassungskriterien sind weiterhin erfüllt.
+- Ähnlich wie bei anderen Kanaltypen sollten In-App-Nachrichten-Kampagnen idealerweise 24 bis 48 Stunden im Voraus gestartet werden. Dieser Puffer gewährt den Nutzer:innen ausreichend Zeit, um die Voraussetzungen zu erfüllen und eine Sitzung zu starten, damit die Nachricht ausgewertet und angezeigt werden kann.

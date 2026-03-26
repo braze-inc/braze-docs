@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
 
-## Personalizar botones de acción {#push-action-buttons-integration}
+## Personalización de los botones de acción {#push-action-buttons-integration}
 
 El SDK Swift de Braze proporciona soporte de gestión de URL para botones de acción push. Hay cuatro conjuntos de botones de acción para notificación push predeterminados para las categorías de notificación push predeterminadas de Braze: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, y `More`.
 
@@ -9,12 +9,12 @@ El SDK Swift de Braze proporciona soporte de gestión de URL para botones de acc
 ### Registro manual de botones de acción
 
 {% alert important %}
-No se recomienda registrar manualmente los botones de acción para notificación push.
+No se recomienda el registro manual de los botones de acción para notificación push.
 {% endalert %}
 
-Si configuras [las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) mediante la opción de configuración `configuration.push.automation`, Braze registra automáticamente los botones de acción para las categorías push predeterminadas y gestiona el análisis de clics para notificación push y el enrutamiento de URL.
+Si [configuras las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) mediante la opción`configuration.push.automation` de configuración, Braze realiza automáticamente el registro de los botones de acción para las categorías push predeterminadas y se encarga del análisis de los clics en los botones de acción para notificación push y del enrutamiento de URL.
 
-Sin embargo, puedes optar por registrar manualmente los botones de acción para notificación push.
+Sin embargo, puedes optar por realizar el registro manual de los botones de acción para notificación push.
 
 #### Paso 1: Añadir categorías push predeterminadas Braze {#registering}
 
@@ -65,7 +65,7 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 
 Si utilizas el framework `UNNotification` y has implementado los [métodos de notificación]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling) Braze, ya deberías tener integrado este método. 
 
-## Personalizar las categorías push {#customizing-push-categories}
+## Personalización de categorías de push {#customizing-push-categories}
 
 Además de proporcionar un conjunto de categorías push predeterminadas, Braze admite categorías y acciones de notificación personalizadas. Después de registrar las categorías en tu aplicación, puedes utilizar el panel de Braze para enviar estas categorías de notificación personalizadas a tus usuarios.
 
@@ -120,7 +120,7 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 {% endtabs %}
 
 {% alert note %}
-Cuando creas un `UNNotificationAction`, puedes especificar una lista de opciones de acción. Por ejemplo, `UNNotificationActionOptions.foreground` permite a tus usuarios abrir tu aplicación tras pulsar el botón de acción. Esto es necesario para los comportamientos de navegación al hacer clic, como "Abrir aplicación" y "Vínculo profundo dentro de la aplicación". Para más información, consulta [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
+Cuando creas un `UNNotificationAction`, puedes especificar una lista de opciones de acción. Por ejemplo,`.foreground`permite a tus usuarios abrir tu aplicación después de pulsar el botón de acción. Esto es necesario para los comportamientos de navegación al hacer clic, como "Abrir aplicación" y "Vínculo profundo dentro de la aplicación". Si deseas un botón de acción que simplemente descarte la notificación sin abrir la aplicación, omite`.foreground`  de la matriz `options`de acciones. Para más información, consulta [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
 {% endalert %}
 
 ### Paso 2: Selecciona tus categorías
@@ -128,7 +128,7 @@ Cuando creas un `UNNotificationAction`, puedes especificar una lista de opciones
 Después de registrar una categoría, utiliza el panel de Braze para enviar notificaciones de ese tipo a los usuarios.
 
 {% alert tip %}
-Sólo tienes que definir categorías de notificación personalizadas para los botones de acción con _acciones especiales_, como la vinculación en profundidad a tu aplicación o la apertura de una URL. No es necesario definirlos para los botones de acción que sólo rechazan una notificación.
+Solo es necesario definir botones de acción en el panel de Braze para comportamientos que no se pueden crear localmente en tu código SWIFT, como vínculos en profundidad a tu aplicación o redireccionamientos a una URL web. Estas acciones deben configurarse en el panel para que puedan definir qué URL o vínculo profundo abrir. En el caso de los botones de acción que simplemente descartan la notificación sin abrir la aplicación, no es necesario configurarlos en el panel, ya que iOS gestiona automáticamente el comportamiento de descarte. Solo tienes que realizar el registro de tu categoría personalizada y sus acciones en el código de tu aplicación y, a continuación, introducir el nombre de la categoría correspondiente en el panel.
 {% endalert %}
 
 1. En el panel de Braze, selecciona **Mensajería** > **Notificaciones push** y, a continuación, elige tu [campaña push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message) de iOS.
@@ -138,9 +138,36 @@ Sólo tienes que definir categorías de notificación personalizadas para los bo
 
 ![El panel de la campaña de notificaciones push con la configuración de categorías personalizadas.]({% image_buster /assets/img_archive/ios-notification-category.png %})
 
-## Personalización de las señales
+### Ejemplo: Categoría de envío personalizada {#example-custom-push-category}
 
-Las señales son pequeños iconos ideales para llamar la atención del usuario. Puedes especificar un recuento de señales en los [**Configuración**]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings) cuando redactes una notificación push utilizando el panel de Braze. También puedes actualizar manualmente el recuento de señales a través de la propiedad [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) o la [carga útil de notificación remota](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). 
+Supongamos que deseas crear una notificación push con dos botones de acción: **Administrar**, que te lleva directamente a tu aplicación, y **Guardar**, que simplemente descarta la notificación.
+
+En el siguiente ejemplo, la`MANAGE_IDENTIFIER`acción incluye la`.foreground`opción, que abre la aplicación cuando se pulsa; esto es necesario porque se establecerá un vínculo profundo con una parte específica de la aplicación. La`KEEP_IDENTIFIER`acción utiliza una matriz de opciones vacía, lo que significa que descartará la notificación sin abrir la aplicación.
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+Braze.Notifications.categories.insert(
+  .init(identifier: "YOUR_CATEGORY",
+        actions: [
+          .init(identifier: "KEEP_IDENTIFIER", title: "Keep", options: []),
+          .init(identifier: "MANAGE_IDENTIFIER", title: "Manage", options: [.foreground])
+        ],
+        intentIdentifiers: []
+       )
+)
+UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications.categories)
+```
+
+{% endtab %}
+{% endtabs %}
+
+Debido a los vínculos`MANAGE_IDENTIFIER` profundos en la aplicación, deberías configurar ese botón de acción en el panel de Braze con la URL del vínculo profundo asociado. Sin embargo, no es necesario definir un botón en el panel para`KEEP_IDENTIFIER`  ya que solo sirve para descartar la notificación. En el panel, solo tienes que introducir el nombre de la categoría (por ejemplo, `YOUR_CATEGORY`) que coincida con el que registraste en el código de tu aplicación.
+
+## Personalización de señales
+
+Las señales son pequeños iconos ideales para llamar la atención del usuario. Puedes especificar un recuento de insignias en la pestaña [**Configuración**]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings) cuando redactes una notificación push utilizando el panel de Braze. También puedes actualizar manualmente el recuento de señales a través de la propiedad [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) o la [carga útil de notificación remota](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). 
 
 Braze borrará automáticamente el recuento de señales cuando se reciba una notificación Braze mientras la aplicación esté en primer plano. Si estableces manualmente el número de la señal en 0, también se borrarán las notificaciones del centro de notificaciones. 
 
@@ -181,9 +208,9 @@ UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotification
 {% endtab %}
 {% endtabs %}
 
-## Sonidos personalizados
+## Personalización de sonidos personalizados
 
-### Paso 1: Aloja el sonido en tu aplicación
+### Paso 1: Aloja el sonido en tu aplicación.
 
 Los sonidos de notificación push personalizados deben alojarse localmente dentro del paquete principal de tu aplicación. Se aceptan los siguientes formatos de datos de audio:
 
@@ -210,7 +237,7 @@ afconvert /System/Library/Sounds/Submarine.aiff ~/Desktop/sub.caf -d ima4 -f caf
 Puedes inspeccionar un sonido para determinar su formato de datos abriéndolo en QuickTime Player y eligiendo **Mostrar inspector de películas** en el menú **Película**.
 {% endalert %}
 
-### Paso 2: Proporciona una URL de protocolo para el sonido
+### Paso 2: Proporciona una URL de protocolo para el sonido.
 
 Debes especificar una URL de protocolo que dirija a la ubicación del archivo de sonido en tu aplicación. Hay dos métodos para hacerlo:
 
@@ -219,7 +246,7 @@ Debes especificar una URL de protocolo que dirija a la ubicación del archivo de
 
 ![El creador push en el panel de Braze]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
-Si el archivo de sonido especificado no existe o se introduce la palabra clave "predeterminado", Braze utilizará el sonido de alerta del dispositivo predeterminado. Aparte de nuestro panel, el sonido también se puede configurar a través de nuestra [API de mensajería][12].
+Si el archivo de sonido especificado no existe o se introduce la palabra clave "predeterminado", Braze utilizará el sonido de alerta del dispositivo predeterminado. Además de nuestro panel, el sonido también se puede configurar a través de nuestra [API de mensajería][12].
 
 Consulta la documentación para desarrolladores de Apple relativa a la [preparación de sonidos de alerta personalizados](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html) para obtener información adicional.
 

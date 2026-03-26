@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Kataloge auflisten"
 article_title: "GET: Kataloge auflisten"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 2
 
 layout: api_page
@@ -106,12 +106,12 @@ Der Status Code `200` könnte den folgenden Antwortkörper zurückgeben.
         {
           "name": "time_field",
           "type": "time"
-        },
+        }
       ],
       "name": "my_catalog",
       "num_items": 3,
       "updated_at": "2022-11-02T09:03:19.967+00:00"
-    },
+    }
   ],
   "message": "success"
 }

@@ -81,9 +81,24 @@ Check out [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/sele
 
 ### Using Liquid `if` statements
 
-You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign.
+You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign. You must declare the catalog (and, if applicable, the selection) before referencing `items` in an `if` statement.
 
-To do this, you'll use a Liquid `if` statement, such as in this example:
+#### With catalog items
+
+{% raw %}
+```liquid
+{% catalog_items Games 1234 %}
+{% if items[0].on_sale == true %}
+  {{ items[0].title }} is on sale! Get it for {{ items[0].price }}.
+{% else %}
+  Check out {{ items[0].title }} at full price.
+{% endif %}
+```
+{% endraw %}
+
+In this example, the `catalog_items` tag fetches item `1234` from the `Games` catalog, and then the `if` statement checks the `on_sale` field to display different messages.
+
+#### With catalog selections
 
 {% raw %}
 ```liquid
@@ -98,9 +113,11 @@ Message if the venue name's size is 10 characters or fewer.
 ```
 {% endraw %}
 
-In this example, different messages display depending on the number of characters in the catalog item field `venue_name`. If `venue_name` is blank, the message is aborted.
+In this example, different messages display based on whether the `venue_name` field has more or fewer than 10 characters. If `venue_name` is blank, the message is aborted.
 
-Note that you must declare the catalog list and, if applicable, the selection before using `if` statements. In the example, `item-list` is the catalog list, and `selections` is the selection name.
+{% alert tip %}
+To avoid Liquid syntax errors, select the **+** plus button in the message composer to insert catalog Liquid tags automatically.
+{% endalert %}
 
 ### Using images {#using-images}
 
@@ -206,6 +223,31 @@ Welcome to our store, Peter!
 Catalog Liquid tags can't be used recursively inside catalogs.
 {% endalert %}
 
+## Structuring your catalog data
+
+When planning how to structure your catalog data, start from your intended use case and design the catalog around it. Each row in the catalog represents an item (with a unique `id`). The columns should contain the attributes for that item, such as URLs, description copy, image URLs, price, rating, size, or color.
+
+### When to use standard catalog calls
+
+With standard catalog calls, you match a value against the `id` column. By inserting a custom attribute or event property (as an ID string) into the catalog Liquid tag, you can pull multiple attributes for a single item into your message. Common use cases include:
+
+- Recently viewed product or service
+- Wishlist items
+- Deals by location
+- Product purchased
+- Lifecycle stage content
+- Most recently searched product or service
+
+### When to use catalog selections
+
+[Catalog selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) let you filter across any column in your catalog and return up to 50 matching items. By inserting custom attributes or event properties into the selection filters, the results are personalized for each user. Common use cases include:
+
+- Items where category equals a user's preference
+- Items matching a user's preferred brand, cuisine, or size
+- Subscription type or loyalty tier content
+- Products within a user's average order value range
+
+The key difference is that standard catalog calls look up a single known item by `id`, while catalog selections query across the catalog and return multiple items that match your filter criteria.
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}

@@ -1,19 +1,22 @@
 ---
 nav_title: Decisioning Studio Go
 article_title: BrazeAI Decisioning Studio Go
-page_order: 1
+page_order: 7
 description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>TM</sup> Go into Braze."
 ---
 
 # BrazeAI Decisioning Studio™ Go
 
+{% alert important %}
+In mid-2026, a new version of Decisioning Studio™ Go will launch self-serve from the Braze dashboard. The following article applies to the legacy version, which will eventually be deprecated.
+{% endalert %}
+
 ## About Decisioning Studio Go
 
-Decisioning Studio Go includes self-serve creative configuration with a limited action bank, engagement-based customer features only, optimization on clicks, and is only compatible with the following three customer engagement platforms (CEPs):
+Decisioning Studio Go includes self-serve creative configuration with a limited action bank, engagement-based customer features only, optimization on clicks, and is only compatible with the following customer engagement platforms (CEPs):
 
 * Braze
 * Salesforce Marketing Cloud
-* Klaviyo
 
 To learn more about the differences between Decisioning Studio Go and Decisioning Studio Pro, see [Decisioning Studio Go versus Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).
 

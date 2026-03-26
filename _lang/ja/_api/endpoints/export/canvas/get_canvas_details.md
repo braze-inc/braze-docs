@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:キャンバスの詳細をエクスポートする"
 article_title: "取得:キャンバスの詳細をエクスポートする"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -20,7 +20,7 @@ description: "この記事では、「キャンバスの詳細のエクスポー
 
 ## 前提条件
 
-このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`canvas.details`の権限が必要です。
+このエンドポイントを使用するには、`canvas.details` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
 
 ## レート制限
 
@@ -28,13 +28,14 @@ description: "この記事では、「キャンバスの詳細のエクスポー
 
 ## リクエストパラメーター
 
-| パラメーター | 必須かどうか | データ型 | 説明 |
+| パラメーター | 必須 | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 必須かどうか | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
-| `post_launch_draft_version` | オプション | ブール値 | 開始後の下書きがあるキャンバスの場合、これを`true` に設定すると、利用可能な下書きの変更が表示されます。デフォルトは `false` です |
+| `canvas_id` | 必須 | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
+| `post_launch_draft_version` | オプション | ブール値 | 起動後の下書きがあるキャンバスの場合、これを `true` に設定すると、利用可能な下書きの変更が表示されます。デフォルトは `false` です。 |
+| `include_has_translatable_content` | オプション | ブール値 | `true` に設定すると、API 応答の各メッセージに `has_translatable_content` フィールドが含まれます。デフォルトは `false` です。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 例のリクエスト
+## リクエスト例
 
 {% raw %}
 ```
@@ -43,10 +44,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ```
 {% endraw %}
 
-## 回答
+## 応答
 
 {% alert note %}
-すべてのキャンバスステップには、`{name, next_step_id}` データの配列である `next_paths` フィールドがあります。メッセージステップの場合、`next_step_ids` フィールドは存在するが、他のキャンバスステップのデータは含まれない。
+すべてのキャンバスステップには、`{name, next_step_id}` データの配列である `next_paths` フィールドがあります。メッセージステップでは `next_step_ids` フィールドが存在しますが、他のキャンバスステップのデータは含まれません。
 {% endalert %}
 
 ```json
@@ -92,6 +93,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
               "channel": (string) the channel type of the message (for example, "email"),
+              "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
               // channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses
           }
       }
@@ -104,7 +106,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 
 ### チャネル別のメッセージ
 
-以下は、異なるチャネル (メール、プッシュ、SMS、アプリ内メッセージ） を通じて送信されたキャンバスメッセージを含む応答の例です。
+以下は、異なるチャネル（メール、プッシュ、SMS、アプリ内メッセージ）を通じて送信されたキャンバスメッセージを含む応答の例です。
 
 ```json
 {
@@ -213,7 +215,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
         }
       }
     }
-  ],
+  ]
 }
 ```
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Ignorer les pressions internes
-article_title: Ignorer les notifications push internes de Braze pour iOS
+article_title: Ignorer les notifications push internes Braze pour iOS
 platform: iOS
 page_order: 4
 description: "Cet article de référence explique comment ignorer les notifications push internes de Braze."

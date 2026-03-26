@@ -3,6 +3,7 @@ nav_title: Teams
 article_title: Teams
 page_order: 4
 page_type: reference
+alias: /teams/
 description: "This reference article covers how to use Braze Teams in the dashboard. Here, you can learn how to create Teams, assign roles, and assign tags and filters."
 
 ---
@@ -23,9 +24,9 @@ Teams are not available on all Braze contracts. To access this feature, contact 
 
 Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
 
-![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
+![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %})
 
-Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the Team has access to. For example, a possible use case is to perform [testing with Teams](#test-with-teams) by creating a development Team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on the product.
+Enter the **Team Name**. If desired, use the **Define Team (Optional)** field to select a custom attribute, location, or language to further define what user data the Team has access to. For example, a possible use case is to perform [testing with Teams](#test-with-teams) by creating a development Team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on the product.
 
 If a Team is defined by a custom attribute, language, or country, you can then use the Team to filter end-users for features like campaigns, Canvases, Content Cards, segments, and more. For more, see [Assigning Team tags](#tags-and-filters).
 
@@ -39,17 +40,22 @@ Then perform the following steps:
 
 1. In the **Workspace-level permissions** section, add the user to the appropriate workspace if they aren't already included.
 
-![A permission set for the "Swifty & Droidboy" workspace.]({% image_buster /assets/img/team_level_permissions.png %})
+![Workspace-level permissions with the Banner Template permission set.]({% image_buster /assets/img/team_level_permissions.png %})
 
 {: start="2"}
 2. Select **+ Add team-level permissions**, then select the **Team** you'd like to add this user to.
-3. Assign specific permissions from the **Team** permissions column.
+3. Assign specific permissions from the **Team** permissions section.
 
-![A section to select permissions for the "Customer Support" team.]({% image_buster /assets/img/teams.png %})
+![Team-level landing page template permissions.]({% image_buster /assets/img/teams.png %})
 
 ### Available Team-level permissions
 
 The following are all available permissions you can assign at the Team level. Any permissions not listed here are only granted on the workspace level, and these permissions will appear as "--" in the **Teams** permissions column.
+
+{% tabs %}
+{% tab Granular permissions %}
+
+{% multi_lang_include alerts/important_alerts.md alert="granular permissions ea" %}
 
 - View Campaigns
 - Edit Campaigns
@@ -57,10 +63,6 @@ The following are all available permissions you can assign at the Team level. An
 - View Canvases
 - Edit Canvases
 - Archive Canvases
-- View Frequency Capping Rules
-- Edit Frequency Capping Rules
-- View Message Prioritization
-- Edit Message Prioritization
 - View Content Blocks
 - Edit Content Blocks
 - Archive Content Blocks
@@ -68,61 +70,67 @@ The following are all available permissions you can assign at the Team level. An
 - View Feature Flags
 - Edit Feature Flags
 - Archive Feature Flags
-- View Global Control Group
 - View Segments
 - Edit Segments
-- View IAM Templates
-- Edit IAM Templates
-- Archive IAM Templates
 - View Email Templates
 - Edit Email Templates
 - Archive Email Templates
 - View Webhook Templates
 - Edit Webhook Templates
 - Archive Webhook Templates
-- View Link Templates
-- Edit Link Templates
+- View Email Link Templates
+- Edit Email Link Templates
 - View Media Library Assets
 - Edit Media Library Assets
 - Delete Media Library Assets
-- View Locations
-- Edit Locations
-- Archive Locations
-- View Promotion Codes
-- Edit Promotion Codes
-- Export Promotion Codes
-- View Preference Centers
-- Edit Preference Centers
 - Launch Campaigns
 - Launch Canvases
 - Export User Data
-- View User Profiles PII Compliant
-- View Dashboard Users
+- View User Profiles (PII Redacted)
 - Edit Dashboard Users
 - Approve Campaigns
 - Approve Canvases
 - Edit Canvas Templates
 - View Canvas Templates
 - Archive Canvas Templates
-- Publish Landing Pages
+- View Dashboard Reports
+- Edit Dashboard Reports
+- Delete Dashboard Reports
+- View PII
+
+{% endtab %}
+{% tab Legacy permissions %}
+
+- Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Centers
+- Send Campaigns, Canvases
+- Launch and Manage Content Cards
+- Edit Segments
+- Export User Data
+- View User Profiles PII Compliant
+- Manage Dashboard Users
+- Manage Media Library Assets
+- Approve and Deny Campaigns
+- Approve and Deny Canvases
+- Create and Edit Canvas Templates
+- View Canvas Templates
+- Archive Canvas Templates
 - Edit Landing Page Templates
-- Edit Landing Page Drafts
-- View Landing Pages
+- View Landing Page Templates
 - Archive Landing Page Templates
-- View Reports
-- Create Reports
-- Edit Reports
+
+{% endtab %}
+{% endtabs %}
 
 To see descriptions of what each user permission includes and how to use them, check out our [User Permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions) section.
 
 ## Assign Team tags {#tags-and-filters}
 
-You can assign a Team to Canvases, campaigns, cards, segments, email templates, and media library assets with the **Add Team** filter.
+You can assign a Team to Canvases, campaigns, Content Cards, segments, email templates, webhook templates, Content Blocks, and media library assets with the **Add Team** filter.
  
 ![Adding a Team tag to a campaign.]({% image_buster /assets/img/teams1.png %}){: style="max-width:70%;"}
 
 - Based on the *definitions* applied when the Team was created, when a Team filter is assigned, that engagement tool's audience is restricted to user profiles that match the definition.
-- Based on assigned *permissions*, Team members will only be allowed to access dashboard engagement tools that have their Team filter set. If they have limited or no workspace permissions, they must add a Team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, campaigns, cards, and segments by Team to identify content relevant to them.
+- Based on assigned *permissions*, Team members will only be allowed to access dashboard engagement tools that have their Team filter set. If they have limited or no workspace permissions, they must add a Team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, campaigns, Content Cards, and segments by Team to identify content relevant to them.
 
 ### Use cases
 

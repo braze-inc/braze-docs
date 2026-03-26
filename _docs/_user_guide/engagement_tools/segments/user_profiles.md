@@ -87,10 +87,10 @@ The **Engagement** tab contains information about a user's interactions with the
 
 ### Messaging History tab
 
-The **Message History** tab of the user profile shows recent messaging-related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Note that the data in this tab isn't updated after a user is merged.
+The **Message History** tab of the user profile shows recent messaging-related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. 
 
 {% alert note %}
-If you have feedback on this table or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
+The data in this tab isn't updated after a user is merged. Additionally, any events associated with messages sent through API (for example, the [/messages/send endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#creating-new-users-with-api-sends) will not appear in this tab if there is no campaign ID specified in those sends.
 {% endalert %}
 
 ![The Messaging History tab showing which campaigns and Canvases a user has received.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})

@@ -33,6 +33,10 @@ In short, you can use transactional emails to send business-critical notificatio
 Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Transactional campaigns, for instance, can include messages sent after a user adds an item to their cart. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) for more information. 
 {% endalert %}
 
+{% alert note %}
+Transactional Email API sends support Message Archiving. If message archiving is enabled for email in your workspace, Braze saves a rendered copy of each transactional email send. For more information, see [Message archiving]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/message_archiving/).
+{% endalert %}
+
 ## Step 1: Create a new campaign
 
 To create a new transactional email campaign, create a campaign and select **Transactional Email** as your messaging channel.

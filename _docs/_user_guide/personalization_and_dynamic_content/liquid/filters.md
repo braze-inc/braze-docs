@@ -44,7 +44,7 @@ BIG SALE
 In this example, `Big Sale` is a string, and `upcase` is the filter being applied.
 
 {% alert note %}
-Filters can be used in `assign` statements and output tags (`{{ }}`), but not in conditionals (`if`, `elsif`, `unless`), `case`/`when`, `for` loops, or array access brackets. To use a filtered value in one of those contexts, assign the result to a variable first. For more details, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+Filters can be used in `assign` statements and output tags {% raw %}(`{{ }}`){% endraw %}, but not in conditionals (`if`, `elsif`, `unless`), `case`/`when`, `for` loops, or array access brackets. To use a filtered value in one of those contexts, assign the result to a variable first. For more details, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
 {% endalert %}
 
 ### Syntax for multiple filters

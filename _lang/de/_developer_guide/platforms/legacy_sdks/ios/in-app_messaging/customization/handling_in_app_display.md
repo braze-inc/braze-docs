@@ -1,5 +1,5 @@
 ---
-nav_title: Angepasste Handhabung der Anzeige
+nav_title: Angepasste Anzeige
 article_title: Anpassen der Anzeige von In-App-Nachrichten für iOS
 platform: iOS
 page_order: 4

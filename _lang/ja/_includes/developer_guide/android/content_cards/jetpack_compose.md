@@ -12,7 +12,7 @@ setContent {
 
 ## カードのクリックを処理する
 
-カードのクリックを処理するには、`Card`を受け取り、`Boolean`を返す関数を`onCardClicked`に渡します。`true`が返された場合、Braze は分析用にログを取る以外に、クリックに対して何も処理しません。`false`が返された場合、Braze はクリックを処理します。
+カードのクリックを処理するには、`Card`を受け取り、`Boolean`を返す関数を`onCardClicked`に渡します。`true`が返された場合、Braze は分析用にログを取る以外に、クリックに対して何も処理しません。が返された`false`場合、Brazeがクリックを処理する。
 
 ```kotlin
 ContentCardsList(

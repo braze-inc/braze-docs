@@ -1,6 +1,6 @@
 ## Conditions préalables
 
-Avant de commencer ce tutoriel, vérifiez que votre SDK Braze répond aux exigences minimales en matière de version :
+Avant de commencer ce tutoriel, veuillez vérifier que votre SDK Braze répond aux exigences minimales en matière de version :
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
@@ -97,24 +97,24 @@ lignes-MainApplication.kt=12
 Pour faciliter la résolution des problèmes lors du développement, pensez à activer le débogage.
 
 !étape
-lignes-MainApplication.kt=21-28
+lignesMainApplication.kt 21 à 28
 
-#### 2\. S'abonner aux mises à jour de la bannière
+#### 2\. Veuillez vous abonner aux mises à jour de Banner.
 
-Utilisez `subscribeToBannersUpdates()` pour enregistrer un gestionnaire qui s'exécute chaque fois qu'une bannière est mise à jour.
-
-!étape
-lignes-MainActivity.kt=10-14
-
-#### 3\. Actualisez vos stages
-
-Après avoir initialisé le SDK de Braze, appelez `requestBannersRefresh(["PLACEMENT_ID"])` pour récupérer le dernier contenu de la bannière pour ce placement.
+Veuillez utiliser cette méthode`subscribeToBannersUpdates()` pour enregistrer un gestionnaire qui s'exécute chaque fois qu'une bannière est mise à jour.
 
 !étape
-lignes-banners.xml=15-19
+lignes-=10-14MainActivity.kt
 
-#### 4\. Définissez `BannerView` dans votre `banners.xml`
+#### 3\. Veuillez actualiser vos placements.
 
-Dans `banners.xml`, déclarez un élément `<com.braze.ui.banners.BannerView>` avec `app:placementId="PLACEMENT_ID"`. Braze utilisera cet élément pour insérer votre bannière dans votre interface utilisateur.
+Après avoir initialisé le SDK Braze, veuillez appeler  `requestBannersRefresh(["PLACEMENT_ID"])` pour récupérer le dernier contenu de bannière pour cet emplacement.
+
+!étape
+lignes-=15-19banners.xml
+
+#### 4\. Veuillez définir`BannerView`dans votre `banners.xml`
+
+Dans `banners.xml`, veuillez déclarer un`<com.braze.ui.banners.BannerView>`élément avec `app:placementId="PLACEMENT_ID"`. Braze utilisera cet élément pour intégrer votre bannière dans votre interface utilisateur.
 
 {% endscrolly %}

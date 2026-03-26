@@ -62,8 +62,8 @@ description: "Découvrez les messages in-app et comment les configurer pour le S
 
 ## Étapes suivantes
 
-Prêt à approfondir ? Consultez ces tutoriels étape par étape :
+Êtes-vous prêt à approfondir vos connaissances ? Veuillez consulter ces tutoriels étape par étape :
 
-- Réglez avec précision le délai de [réception/distribution]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages) des messages en [reportant et en rétablissant les messages déclenchés]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
+- Ajustez le moment de la réception/distribution des messages en [différant et]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages) en [rétablissant les messages déclenchés]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
 - Affinez le ciblage des messages en [définissant des règles d'affichage conditionnelles]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
-- Adaptez le style [de]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling) votre marque en [personnalisant le style des messages à l'aide de paires clé-valeur]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
+- Adaptez l'apparence de votre marque en [personnalisant le style des messages à l'aide de paires clé-valeur]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).

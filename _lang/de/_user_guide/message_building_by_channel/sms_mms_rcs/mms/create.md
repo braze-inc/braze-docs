@@ -40,7 +40,7 @@ Um eine MMS-Nachricht zu erstellen, muss Ihre Abo-Gruppe für den MMS-Versand ko
 
 {% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
-![Der Tab "Verfassen" zum Verfassen Ihrer Nachricht.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
+![Die Registerkarte „Verfassen“, um Ihre Nachricht zu schreiben.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Bild-Spezifikationen
 
@@ -58,4 +58,4 @@ Braze bietet im Panel **Vorschau** des Nachrichten-Editors eine Vorschau des von
 Die Reihenfolge der SMS/MMS-Assets ist nicht anpassbar. Die Bestellung ist abhängig von dem Telefon, das diese Nachricht empfängt.
 {% endalert %}
 
-![Ein Beispiel für eine Nachricht "Bereit für das Fitnessstudio...zu Hause?". Die Vorschau zeigt die Nachricht und das Bild, die als Text gesendet werden.]({% image_buster /assets/img/sms/mms_preview.png %})
+![Ein Beispiel für eine Nachricht: „Sind Sie bereit, ins Fitnessstudio zu gehen... zu Hause?“ Die Vorschau zeigt die als Text gesendete Nachricht und das Bild an.]({% image_buster /assets/img/sms/mms_preview.png %})

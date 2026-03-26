@@ -1,14 +1,14 @@
 ---
-nav_title: "Tutorial: Exibição de banners"
-article_title: "Tutorial: Exibição de um banner por ID de posicionamento"
-description: "Novo em banners no SDK do Braze? Comece com este tutorial sobre a exibição de Banners por ID de posicionamento."
+nav_title: "Tutorial: Exibindo Banners"
+article_title: "Tutorial: Exibindo um Banner pelo ID de Colocação"
+description: "Novo nos Banners do SDK do Braze? Comece com este tutorial sobre como exibir Banners pelo ID de colocação."
 page_order: 10
 layout: scrolly
 ---
 
-# Tutorial: Exibição de um banner por ID de posicionamento
+# Tutorial: Exibindo um Banner pelo ID de Colocação
 
-> Siga o código de exemplo deste tutorial para exibir Banners usando o ID de posicionamento deles. Para saber mais sobre informações gerais, consulte [Banners]({{site.baseurl}}/developer_guide/banners/).
+> Siga o código de exemplo neste tutorial para exibir Banners usando seu ID de colocação. Para mais informações gerais, veja [Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% sdktabs %}
 {% sdktab web %}

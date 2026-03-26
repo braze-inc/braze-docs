@@ -61,7 +61,7 @@ There are certain browsers, such as the Naver Android and iOS apps, that don’t
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-The plans to phase out the purchase event will be announced in 2026. The purchase event will eventually be replaced by new [eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), which will come with enhanced features for segmentation, reporting, analytics, and more. However, the new eCommerce events will not support existing features related to the purchase event, such as Lifetime Value (LTV) or revenue reporting in Canvases or campaigns. For a complete list of features related to purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+The legacy purchase event will enter a deprecated state (maintenance mode). Purchase events will continue to work as expected, but no new functionality will be built on top of them, in favor of [eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/). If you're currently using purchase events, you will receive advance notice regarding the phase-out plans. For now, you can continue using purchase events until the official deprecation date. For more information, see the [recommended events overview]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/).
 {% endalert %}
 
 {% endif %}
@@ -69,7 +69,7 @@ The plans to phase out the purchase event will be announced in 2026. The purchas
 {% if include.alert == 'Purchase event deprecation for eCommerce filters' %}
 
 {% alert important %}
-The plans to phase out the purchase event will be announced in 2026. The purchase event will eventually be replaced by new [eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), which will come with enhanced features for segmentation, reporting, analytics, and more. When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
+The legacy purchase event will enter a deprecated state (maintenance mode). Purchase events will continue to work as expected, but no net new functionality will be built on top of them, in favor of [eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/). When this happens, segment filters will no longer populate under purchase behavior.<br><br> If you're currently using purchase events, you will receive advance notice regarding the phase-out plans. For now, you can continue using purchase events until the official deprecation date. For more information, see the [recommended events overview]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/).
 {% endalert %}
 
 {% endif %}
@@ -117,6 +117,24 @@ This partner appears on your **Technology Partners** page only if you have [Braz
 Using "Day of year" for absolute dates can produce incorrect or unexpected results because the calculation ignores the year component. For example, if you're comparing a future contract end date in April to determine if it's within 63 days, using "Day of year" may incorrectly match dates because it only compares day numbers (119 vs 359) without considering that April is actually 188 days away.
 
 **General guideline**: Does the date repeat every year? **Yes** → Use "Day of year". **No** → Use "Time".
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'granular permissions ea' %}
+
+{% alert important %}
+Granular permissions are in early access. When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the [granular permission migration]({{site.baseurl}}/granular_permissions_migration/).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Shopify cart token alias' %}
+
+{% alert important %}
+For this integration, the user alias must use the following format so that Braze can match webhooks to the correct user profile:<br><br>
+- `alias_label`: `shopify_cart_${cartToken}`
+- `alias_name`: `shopify_cart_token`
 {% endalert %}
 
 {% endif %}

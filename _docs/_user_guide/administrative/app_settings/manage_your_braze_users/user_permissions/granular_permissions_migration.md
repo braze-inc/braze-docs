@@ -22,7 +22,7 @@ The migration includes these benefits:
 When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the granular permission migration. To prepare for the migration, we recommend that a Braze admin do the following.
 
 1. Identify users, roles, or permission sets that may need to be updated for more tailored access after you migrate to the new permission framework. 
-2. If your company has automated user provisioning using SCIM or compliance tools that rely on permission strings, update them to match the new granular structure. 
+2. If your company has automated user provisioning using SCIM or compliance tools that rely on [permission strings]({{site.baseurl}}/scim_api_appendix/), update them to match the new granular structure. 
 3. Inform your Braze users of any upcoming changes to prevent confusion.
 4. At the scheduled migration date and time, your company will automatically migrate to granular permissions. No further action is required from company admins.
 
@@ -41,7 +41,7 @@ This table shows how each legacy permission maps to the granular permissions. Re
 | Workspace | Workspace Admin | Workspace Admin |
 | Company | Create and delete workspaces | Create and delete workspaces |
 | Company | Manage company settings | Manage company settings |
-| Workspace | Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers | View Campaigns<br>Edit Campaigns<br>Archive Campaigns<br>View Canvases<br>Edit Canvases<br>Archive Canvases<br>View Frequency Capping Rules<br>Edit Frequency Capping Rules<br>View Message Prioritization<br>Edit Message Prioritization<br>View Content Blocks<br>View Feature Flags<br>Edit Feature Flags<br>Archive Feature Flags<br>View Segments<br>Edit Segments<br>Edit Global Control Group<br>View IAM Templates<br>Edit IAM Templates<br>Archive IAM Templates<br>View Email Templates<br>Edit Email Templates<br>Archive Email Templates<br>View Webhook Templates<br>Edit Webhook Templates<br>Archive Webhook Templates<br>View Link Templates<br>Edit Link Templates<br>View Media Library Assets<br>View Locations<br>Edit Locations<br>Archive Locations<br>View Promotion Codes<br>Edit Promotion Codes<br>Export Promotion Codes<br>View Preference Centers<br>Edit Preference Centers<br>Edit Reports<br>View Banner Templates<br>View Multi Language Settings<br>Use Operator<br>View Decisioning Studio Agents<br>View Decisioning Studio Conversion Event |
+| Workspace | Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers | View Campaigns<br>Edit Campaigns<br>Archive Campaigns<br>View Canvases<br>Edit Canvases<br>Archive Canvases<br>View Frequency Capping Rules<br>Edit Frequency Capping Rules<br>View Message Prioritization<br>Edit Message Prioritization<br>View Content Blocks<br>View Feature Flags<br>Edit Feature Flags<br>Archive Feature Flags<br>View Segments<br>Edit Segments<br>Edit Global Control Group<br>View IAM Templates<br>Edit IAM Templates<br>Archive IAM Templates<br>View Email Templates<br>Edit Email Templates<br>Archive Email Templates<br>View Webhook Templates<br>Edit Webhook Templates<br>Archive Webhook Templates<br>View Email Link Templates<br>Edit Email Link Templates<br>View Media Library Assets<br>View Locations<br>Edit Locations<br>Archive Locations<br>View Promotion Codes<br>Edit Promotion Codes<br>Export Promotion Codes<br>View Preference Centers<br>Edit Preference Centers<br>Edit Reports<br>View Banner Templates<br>View Localization Settings<br>Use Operator<br>View Decisioning Studio Agents<br>View Decisioning Studio Conversion Event |
 | Workspace | Access Dev Console | View API Keys<br>Edit API Keys<br>View Internal Groups<br>Edit Internal Groups<br>Delete Internal Groups<br>View Message Activity Log<br>View Event User Log<br>View API Identifiers<br>View API Usage Dashboard<br>View API Limits<br>View API Usage Alerts<br>Edit API Usage Alerts<br>View SDK Debugger<br>Edit SDK Debugger |
 | Workspace | Approve and Deny Campaigns | Approve Campaigns |
 | Workspace | Approve and Deny Canvases | Approve Canvases |
@@ -70,10 +70,9 @@ This table shows how each legacy permission maps to the granular permissions. Re
 | Workspace | Edit Currents Integrations | Edit Currents Integrations |
 | Workspace | View Custom Attributes Marked as PII | View Custom Attributes Marked as PII |
 | Workspace | View PII | View PII |
-| Workspace | View User Profiles PII Compliant | View User Profiles PII Compliant |
+| Workspace | View User Profiles PII Compliant | View User Profiles (PII Redacted) |
 | Workspace | View Usage Data | View Usage Data |
 | Workspace | Merge Duplicate Users | Merge Duplicate Users |
-| Workspace | Preview Duplicate Users | Preview Duplicate Users |
 | Workspace | Create and Edit Canvas Templates | Edit Canvas Templates |
 | Workspace | View Canvas Templates | View Canvas Templates |
 | Workspace | Archive Canvas Templates | Archive Canvas Templates |
@@ -90,7 +89,6 @@ This table shows how each legacy permission maps to the granular permissions. Re
 | Workspace | Archive Placements | Archive Placements |
 | Workspace | New | View Merge Users |
 | Workspace | New | View User Deletion Records |
-| Workspace | New | Delete Users From Dashboard |
 | Workspace | New | View Banner Templates |
 | Workspace | New | Edit Banner Templates |
 | Workspace | New | Archive Banner Templates |

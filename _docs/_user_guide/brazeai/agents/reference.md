@@ -27,11 +27,9 @@ If you don't see **Braze Auto** as an option in the **Model** dropdown when crea
 
 ### Option 2: Bring your own API key
 
-With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
+With this option, you can connect your Braze account with providers like OpenAI, Anthropic, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
 
-{% alert important %}
-We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
-{% endalert %}
+We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months. You can also sign up for Agent Console notifications in [Notification Preferences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) to be alerted when Braze detects a model is no longer available.
 
 To set this up:
 
@@ -41,9 +39,36 @@ To set this up:
 
 Then, you can return to your agent and select your model.
 
+When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.
+
+#### Thinking levels
+
+Some LLM providers may allow you to adjust a selected model's thinking level. Thinking levels define the range of thought the model uses before answering—from quick, direct responses to longer chains of reasoning. This affects response quality, latency, and token usage.
+
+| Level | When to use |
+|-------|-------------|
+| **Minimal** | Simple, well-defined tasks (such as catalog lookup, straightforward classification). Fastest responses and lowest cost. |
+| **Low** | Tasks that benefit from a bit more reasoning but don't need deep analysis. |
+| **Medium** | Multi-step or nuanced tasks (such as analyzing several inputs to recommend an action). |
+| **High** | Complex reasoning, edge cases, or when you need the model to work through steps before answering. |
+
+We recommend starting with **Minimal** and testing your agent’s responses. Then, you can adjust the thinking level to **Low** or **Medium** if you find the agent is struggling to provide accurate answers. In rare cases, a **High** thinking level may be needed, although using this level can result in high token costs and longer response times or higher risk of timeout errors. If your agent is struggling to balance multi-step reasoning with reasonable response times, consider breaking your use case apart into more than one agent that can work together in a Canvas or catalog.
+
+Braze uses the same IP ranges for outbound LLM calls as for Connected Content. The ranges are listed in the [Connected Content IP allowlist]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#connected-content-ip-allowlisting). If your provider supports IP allowlisting, you can restrict the key to those ranges so only Braze can use it.
+
 {% alert important %}
-When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
+When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.
 {% endalert %}
+
+#### Determine which model to use
+
+Each LLM provider has a slightly different mix of model capabilities, costs, and thinking levels. Here are some general guidelines and best practices:
+
+- For cost efficiency, prioritize testing lower token cost models over higher cost models. Adjust to higher cost models only if lower cost models are struggling with the use case or generate inconsistent or inaccurate outputs.
+- For speed and performance efficiency, prioritize testing lower model thinking levels over higher thinking levels. Adjust to higher thinking level models only if lower thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs.
+- If lower cost models or model thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs, consider adjusting to higher cost models or thinking level models.
+- During testing, make sure to balance the reliability and accuracy with token usage and invocation duration.
+- Each use case may have a different optimal model and thinking level. We recommend thoroughly testing to check for consistent quality without timeouts.
 
 ## Writing instructions
 
@@ -76,12 +101,13 @@ In the **Logs** section of the **Agent Console**, you can review the details for
 
 ![The details for an agent that has Liquid in its instructions.]({% image_buster /assets/img/ai_agent/using_liquid_example.png %}){: style="max-width:50%;"}
 
-### Examples
+### Canvas agent examples
 
-Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messages, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals:
+Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messages, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals.
 
 {% tabs %}
-{% tab Personalized message copywriter agent %}
+{% tab Message copywriter %}
+
 {% raw %}
 ```
 Role: 
@@ -107,13 +133,15 @@ Rules:
 - Do not mention "AI," "bot," or "automated message."
 - Do not make up input data that is not present in the prompt.
 - Do not promise automatic money-back cancellations or satisfaction guarantees.
+- Include "explanation": a short string that states why this copy fits the user's context and channel rules (for review or QA).
 
 Final Output Specification:
-You must return an object containing exactly four keys: "email_subject_line", "email_preheader", "push_title", and "push_body". These keys will be inserted into the appropriate locations in subsequent messages in the journey. Ensure the Email and Push convey the same core offer/value, but do not simply copy-paste the text. The Push should be shorter and more direct. Make sure you follow the channel constraints below:
+You must return an object containing exactly five keys: "email_subject_line", "email_preheader", "push_title", "push_body", and "explanation". The first four keys will be inserted into the appropriate locations in subsequent messages in the journey. Ensure the Email and Push convey the same core offer/value, but do not simply copy-paste the text. The Push should be shorter and more direct. Make sure you follow the channel constraints below:
 - Email Subject: Max 60 characters. Intriguing and benefit-led.
 - Email Preheader: Max 100 characters. Supports the subject line.
 - Push Title: Max 50 characters. Punchy and urgent.
 - Push Body: Max 120 characters. Clear value prop.
+- explanation: String. Brief rationale for how you used inputs, loyalty tier, and search context without breaking brand or channel limits.
 
 Input & Output Example:
 <input_example> 
@@ -125,12 +153,14 @@ Input & Output Example:
 The user IS in the segment: “Logged multiple searches in the past 30D”.
 </input_example>
 <output_example> 
-{ "email_subject_line": "John, your Tokyo Gold Tier deals are waiting", "email_preheader": "Find the best hotel brands for your Tokyo getaway.", "push_title": "John, Tokyo is calling!", "push_body": "Your Gold Tier deals are ready. Tap to view exclusive hotel offers." }
+{ "email_subject_line": "John, your Tokyo Gold Tier deals are waiting", "email_preheader": "Find the best hotel brands for your Tokyo getaway.", "push_title": "John, Tokyo is calling!", "push_body": "Your Gold Tier deals are ready. Tap to view exclusive hotel offers.", "explanation": "Personalized on Tokyo and Gold Tier; matched survey value props; English per language code; kept within character limits for email and push." }
 </output_example>
 ```
 {% endraw %}
+
 {% endtab %}
-{% tab Customer feedback analysis agent %}
+{% tab Feedback analysis %}
+
 {% raw %}
 ```
 Role:
@@ -148,14 +178,15 @@ Rules:
 - Analyze Sentiment: Classify the survey_text as "Positive", "Neutral", or "Negative". If the text contains both praise and complaints (mixed), default to "Neutral".
 - Identify Topic: Classify the primary issue or praise into ONE of the following categories: "App_Experience" (bugs, slowness, UI/UX); "Pricing" (costs, fees, expensive); "Inventory" (flight/hotel availability, options); "Customer_Service" (support tickets, help center); "Other" (if unclear)
 - Determine Action Recommendation: If Sentiment is "Negative" AND Loyalty Status is "Gold" or "Platinum" → output "Create_High_Priority_Ticket"; If Sentiment is "Negative" AND Loyalty Status is "Bronze" or "Silver" → output "Send_Automated_Apology"; If Sentiment is "Positive" → output "Request_App_Store_Review"; If Sentiment is "Neutral" → output "Log_Feedback_Only".
-- Data Safety: Do not make up data not present in the input. Return valid JSON only and do not include any extra fields beyond the requested outputs.
-- If the survey response is empty or meaningless, set sentiment as Neutral, topic as Other, and action recommendation as Request_More_Details.
+- Data Safety: Do not make up data not present in the input. Return valid JSON only. Include only these fields: sentiment, topic, action_recommendation, and explanation.
+- If the survey response is empty or meaningless, set sentiment as Neutral, topic as Other, action recommendation as Request_More_Details, and explain why in explanation.
 
 Final Output Specification:
-You must return an object containing exactly three fields: sentiment, topic, and action_recommendation.
+You must return an object containing exactly four fields: sentiment, topic, action_recommendation, and explanation.
 - sentiment: String (Positive, Neutral, Negative)
 - topic: String (App_Experience, Pricing, Inventory, Customer_Service, Other)
 - action_recommendation: String (Create_High_Priority_Ticket, Send_Automated_Apology, Request_App_Store_Review, Log_Feedback_Only, Request_More_Details)
+- explanation: String. Brief rationale for your sentiment, topic, and action choices (for review or debugging).
 
 Input & Output Example:
 <input_example>
@@ -165,13 +196,13 @@ Input & Output Example:
 {{context.${trip_destination}}}: Paris
 </input_example>
 <output_example>
-{"sentiment": "Neutral","topic": "App_Experience", "action_recommendation": "Log_Feedback_Only"}
+{"sentiment": "Neutral","topic": "App_Experience", "action_recommendation": "Log_Feedback_Only", "explanation": "Mixed praise and crash report maps to Neutral per rules; primary issue is app stability (App_Experience). Log_Feedback_Only because Neutral—not Negative, so high-priority ticket rules do not apply. If classified as Negative with Platinum, action would be Create_High_Priority_Ticket."}
 </output_example>
-(Note: In this example, sentiment is Neutral because she said she "loves" it usually but was frustrated this time. However, if you determine the frustration outweighs the love, you may classify as Negative. If classified as Negative + Platinum, the action would be "Create_High_Priority_Ticket".)
 ```
 {% endraw %}
 {% endtab %}
-{% tab Trial conversion and strategy agent %}
+{% tab Trial conversion %}
+
 {% raw %}
 ```
 Role:
@@ -204,10 +235,11 @@ Low/Cold: "Re-engagement Offer" (Deep discount or extension)
 - Data Safety: Do not generate numerical probability scores (e.g., "85%"). Stick to the defined labels.
 
 Final Output Specification:
-You must return an object containing exactly three keys: "segment_label", "primary_barrier", and "retention_strategy".
+You must return an object containing exactly four keys: "segment_label", "primary_barrier", "retention_strategy", and "explanation".
 - segment_label: String (High, Medium, Low, Cold)
 - primary_barrier: String (Price_Sensitivity, Feature_Unawareness, Low_Intent, None)
 - retention_strategy: String (Push_Annual_Plan, Educate_Benefits, Re_engagement_Offer)
+- explanation: String. Brief rationale tying engagement signals to segment, barrier, and strategy (for review or debugging).
 
 Input & Output Example:
 <input_example>
@@ -219,19 +251,191 @@ Input & Output Example:
 The user IS in the segment: "Has Valid Payment Method on File".
 </input_example>
 <output_example>
-{"segment_label": "Medium", "primary_barrier": "Feature_Unawareness", "retention_strategy": "Educate_Benefits"}
+{"segment_label": "Medium", "primary_barrier": "Feature_Unawareness", "retention_strategy": "Educate_Benefits", "explanation": "High search volume (15) but zero Premium feature use—they are engaged but not seeing subscription value. Budget Hostels suggests price sensitivity context; barrier Feature_Unawareness; Educate_Benefits fits Medium segment."}
 </output_example>
-(Rationale: The user is very active [15 searches], so they like the app. But they haven't touched a single Premium feature [0 uses], meaning they don't yet understand why they should pay for the subscription. They are "Medium" risk and need education, not just a generic nudge.)
 ```
 {% endraw %}
+
 {% endtab %}
 {% endtabs %}
+
+### Catalog agent examples
+
+Let's say you're part of an on-demand ridesharing brand, StyleRyde, and your goals are to write marketable summaries of travel methods and to provide translations of the mobile app based on the language being used in the region. Here are examples of different instructions based on the defined goals.
+
+{% tabs %}
+{% tab Destination description %}
+
+{% raw %}
+```
+Role:
+You are an expert Travel Copywriter for StyleRyde. Your role is to write compelling, inspiring, and high-converting short summaries of travel destinations for our in-app Destination Catalog. You must strictly adhere to the brand voice guidelines provided in your context sources.
+
+Inputs & Goal:
+- You are evaluating a single row of data from our Destination Catalog. Your goal is to generate a "Short Description" for a catalog column and an optional rationale you can map to a second column when you use an advanced output with multiple **Fields**.
+- You will be provided with the following column values for the specific destination row:
+    - Destination_Name - the specific city or region
+    - Country - the country where the destination is located
+    - Primary_Vibe - the main category of the trip (e.g., Beach, Historic, Adventure, Nightlife) 
+    - Price_Tier - represented as $, $$, $$$, or $$$$
+
+Rules:
+- Write exactly one or two short sentences.
+- Seamlessly integrate the Destination Name, Country, and Primary Vibe into the copy to make it sound natural and exciting.
+- Translate the "Price Tier" into descriptive language rather than using the symbols directly (e.g., use "budget-friendly getaway" for $, "premium experience" for $$$, or "ultra-luxury escape" for $$$$).
+- Keep the description skimmable and inspiring.
+- Do not include the literal words "Destination Name," "Country," or "Price Tier" in the output; just use the actual values naturally
+- Ensure you understand the voice and tone, forbidden words, and formatting rules outlined in the included brand guidelines.
+- Avoid spammy phrasing (ALL CAPS, excessive punctuation) and emojis.
+- Do not hallucinate specific hotels or flights, as this is a general destination description.
+- If any input fields are missing, write the best description possible with the available data
+- Include "explanation": a short string that states how you applied the rules (for review or QA).
+
+Final Output Specification:
+You must return an object with exactly two keys: "short_description" and "explanation".
+- short_description: Plain text for the catalog cell, maximum 150 characters. No markdown.
+- explanation: String. Brief note on how you combined Destination Name, Country, Primary Vibe, and Price Tier per the brand rules.
+Configure your agent's **Output** with **Fields** that match these key names (catalog agents do not use JSON Schema output in the Agent Console, but your instructions can still ask the model for this key-value shape).
+
+Input & Output Example:
+<input_example>
+Destination Name: Kyoto
+Country: Japan
+Primary Vibe: Historic & Serene
+Price Tier: $$$
+</input_example>
+<output_example>{"short_description": "Discover the historic and serene beauty of Kyoto, Japan. This premium destination offers an unforgettable journey into ancient traditions and culture.", "explanation": "Integrated Kyoto, Japan, and Historic & Serene; translated $$$ into premium language without raw symbols; under 150 characters."}</output_example>
+```
+{% endraw %}
+
+{% endtab %}
+{% tab Localization %}
+
+{% raw %}
+```
+Role:
+You are an expert AI Localization Specialist for StyleRyde. Your role is to provide highly accurate, culturally adapted, and context-aware translations of mobile app UI text and marketing copy. You ensure our app feels native and natural to users around the world.
+
+Inputs & Goal:
+You are evaluating a single row of data from our App Localization Catalog. Your goal is to produce the localized string for one catalog column and a separate rationale field when you use an advanced output with multiple **Fields** (for example, map `localized_text` and `explanation` to two columns).
+
+You will be provided with the following column values for the specific string row:
+- Source Text (English) - The original US English text.
+- Target Language Code - The locale code to translate into (e.g., es-MX, fr-FR, ja-JP, pt-BR).
+- UI Category - Where this text lives in the app (e.g., Tab_Bar, CTA_Button, Screen_Title, Push_Notification).
+- Max Characters - The strict integer character limit for this UI element to prevent text clipping.
+
+Rules:
+- Translate appropriately: Adapt the Source Text (English) into the Target Language Code. Use local spelling norms (e.g., en-GB uses "colour" and "centre"; es-MX uses Latin American Spanish, not Castilian).
+- Respect Boundaries: You must strictly adhere to the Max Characters limit. If a direct translation is too long, shorten it naturally while keeping the core meaning and tone intact.
+
+Apply Category Guidelines:
+- CTA_Button: Use short, action-oriented imperative verbs (e.g., "Book", "Search"). Capitalize words if natural for the locale.
+- Tab_Bar: Maximum 1-2 words. Extremely concise.
+- Screen_Title: Emphasize the core feature.
+- Error_Message: Be polite, clear, and reassuring.
+- Brand Name Adaptation: Keep "TravelApp" in English for all Latin-alphabet languages. Adapt it for the following scripts:
+    - Japanese → トラベルアプリ
+    - Korean → 트래블앱
+    - Arabic → ترافل آب
+    - Chinese (Simplified) → 旅游应用
+
+Fallback Logic: If the source text is empty, if you do not understand the translation, or if it is impossible to translate within the character limit, set localized_text to exactly ERROR_MANUAL_REVIEW_NEEDED and use explanation to describe why.
+
+Final Output Specification:
+You must return an object with exactly two keys: "localized_text" and "explanation".
+- localized_text: The string saved to the localized catalog column (plain text, no pronunciation guides). Must respect Max Characters when you return a translation.
+- explanation: String. Brief note on locale choices, shortening tradeoffs, or why ERROR_MANUAL_REVIEW_NEEDED applies.
+Configure your agent's **Output** with **Fields** that match these key names.
+
+Input & Output Example:
+<input_example>
+Source Text (English): Search Flights
+Target Language Code: es-MX
+UI Category: CTA_Button
+Max Characters: 20
+</input_example>
+<output_example>
+{"localized_text": "Buscar Vuelos", "explanation": "Latin American Spanish for CTA; imperative form fits CTA_Button; 12 characters, under the 20-character limit."}
+</output_example>
+```
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
+For catalog agents, use **Fields** in the **Output** section rather than JSON Schema; you can still write instructions that ask the model for key-value output matching those field names.
 
 For more details on prompting best practices, refer to guides from the following model providers:
 
 - [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
 - [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
 - [Gemini](https://support.google.com/a/users/answer/14200040?hl=en)
+
+## Outputs
+
+### Basic schemas
+
+Basic schemas are a simple output that an agent returns. This can be a string, a number, a boolean, an array of strings, or an array of numbers.
+
+For example, if you want to collect user sentiment scores from a simple feedback survey to determine how satisfied your customers are after receiving a product, you can select **Number** as a basic schema to structure the output format.
+
+{% alert important %}
+Arrays are only available for Canvas agents, not catalog agents.
+{% endalert %}
+
+![Agent Console with number selected as a basic schema.]({% image_buster /assets/img/ai_agent/basic_schema.png %}){: style="max-width:85%;"}
+
+### Advanced schemas
+
+Advanced schema options include manually structuring fields or using JSON.
+
+- **Fields:** A no-code way to enforce an agent output that you can use consistently.
+- **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema. Only available for Canvas agents, not catalog agents.
+
+We recommend using advanced schemas when you want the agent to return a data structure with multiple values defined in a structured manner, rather than a single-value output. This allows the output to be better formatted as a consistent context variable.
+
+For example, you may use an output format within an agent that is intended to create a sample travel itinerary for a user based on a form they submitted. The output format allows you to define that every agent response should come back with values for `tripStartDate`, `tripEndDate`, and `destination` values. Each of these values can be extracted from context variables and placed in a Message step for personalization using Liquid.
+
+{% tabs %}
+{% tab Fields %}
+
+If you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor, you can set up the following fields to structure the output format:
+
+| Field name | Value |
+| --- | --- |
+| **likelihood_score** | Number |
+| **explanation** | String |
+| **confidence_score** | Number |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]({% image_buster /assets/img/ai_agent/output_format_fields.png %}){: style="max-width:85%;"}
+
+{% endtab %}
+{% tab JSON schema %}
+
+If you want to collect user feedback for their most recent dining experience at your restaurant chain, you can select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "sentiment": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sentiment",
+    "reasoning"
+  ]
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Catalogs and fields
 
@@ -241,7 +445,7 @@ Choose specific catalogs for an agent to reference and to give your agent the co
 
 ## Segment membership context
 
-You can select up to three segments for the agent to cross-reference each user's segment membership against when the agent is used in a Canvas. Let's say your agent has segment membership selected for a "Loyalty Users" segment, and the agent is used in a Canvas. When users enter an Agent step, the agent can cross-reference if each user is a member of each segment you specified in the agent console, and use each user's membership (or non-membership) as context for the LLM.
+You can select up to five segments for the agent to cross-reference each user's segment membership against when the agent is used in a Canvas. Let's say your agent has segment membership selected for a "Loyalty Users" segment, and the agent is used in a Canvas. When users enter an Agent step, the agent can cross-reference if each user is a member of each segment you specified in the agent console, and use each user's membership (or non-membership) as context for the LLM.
 
 ![The "Loyalty Users" segment selected for agent membership access.]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:75%;"}
 

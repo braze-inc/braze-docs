@@ -19,7 +19,7 @@ description: "This article outlines details about the Update translation in a ca
 
 If you want to update translations after a campaign has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) first.
 
-{% include early_access_beta_alert.md feature='This endpoint' %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 

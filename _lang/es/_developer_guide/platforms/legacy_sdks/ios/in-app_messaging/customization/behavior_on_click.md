@@ -1,6 +1,6 @@
 ---
 nav_title: Comportamiento personalizado al hacer clic
-article_title: Personaliza el comportamiento de los mensajes dentro de la aplicación al hacer clic para iOS
+article_title: Personalizar el comportamiento al hacer clic en los mensajes dentro de la aplicación para iOS
 platform: iOS
 page_order: 5
 description: "Este artículo de referencia trata del comportamiento personalizado de la mensajería dentro de la aplicación al hacer clic para tu aplicación de iOS."
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Personaliza el comportamiento de los mensajes dentro de la aplicación al hacer clic
+# Personalizar el comportamiento de los mensajes dentro de la aplicación al hacer clic
 
 La propiedad `inAppMessageClickActionType` de `ABKInAppMessage` define el comportamiento de la acción después de hacer clic en el mensaje dentro de la aplicación. Esta propiedad es de sólo lectura. Si quieres cambiar el comportamiento de clic del mensaje dentro de la aplicación, puedes llamar al siguiente método en `ABKInAppMessage`:
 
@@ -127,7 +127,7 @@ if inAppMessage is ABKInAppMessageImmersive {
 {% endtab %}
 {% endtabs %}
 
-Cuando un mensaje dentro de la aplicación tiene botones, las únicas acciones de clic que se ejecutarán son las del modelo `ABKInAppMessageButton`. No se podrá hacer clic en el cuerpo del mensaje dentro de la aplicación aunque el modelo `ABKInAppMessage` tenga asignada la acción predeterminada de hacer clic.
+Cuando un mensaje dentro de la aplicación tiene botones, las únicas acciones de clic que se ejecutarán son las del modelo `ABKInAppMessageButton`. El cuerpo del mensaje dentro de la aplicación no será clicable, aunque al`ABKInAppMessage`modelo se le haya asignado la acción de clic predeterminada.
 
 ## Declaraciones de métodos
 
