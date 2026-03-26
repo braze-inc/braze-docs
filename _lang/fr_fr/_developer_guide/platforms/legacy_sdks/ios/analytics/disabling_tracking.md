@@ -1,6 +1,6 @@
 ---
-nav_title: "Désactiver le suivi du SDK d'iOS"
-article_title: Désactiver le suivi du SDK pour iOS
+nav_title: Désactiver le suivi SDK iOS
+article_title: Désactiver le suivi SDK pour iOS
 platform: iOS
 page_order: 8
 description: "Cet article montre comment désactiver la collecte de données pour votre application iOS."

@@ -1,6 +1,6 @@
 ---
-nav_title: "Additional channels & extensions"
-article_title: Additional Channels & Extensions
+nav_title: "Additional channels and extensions"
+article_title: Additional Channels and Extensions
 page_order: 11
 
 page_type: landing
@@ -8,7 +8,7 @@ description: "This page lists Braze partners (Alloys) who provide services for c
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Additional Channels & Extensions"
+partner_top_header: "Additional Channels and Extensions"
 
 valid_partner_list:
 - name: LiveRamp
@@ -28,9 +28,11 @@ valid_partner_list:
 - name: Pypestream
   url: /docs/partners/pypestream/
 - name: Regal
-  url: /docs/partners/pypestream/
+  url: /docs/partners/regal/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Zendesk
   url: /docs/partners/zendesk/
 - name: PassKit

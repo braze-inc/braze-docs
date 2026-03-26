@@ -1,22 +1,22 @@
 ## Über das Braze Vega SDK
 
-Mit dem Braze Vega SDK können Sie Analytics sammeln und Ihren Nutzer:innen umfangreiche In-App-Nachrichten anzeigen. Die meisten Methoden im Braze Vega SDK sind asynchron und geben Versprechen zurück, die abgewartet oder aufgelöst werden sollten.
+Mit dem Braze Vega SDK können Sie Analytics-Daten erfassen und Ihren Nutzer:innen umfangreiche In-App-Nachrichten anzeigen. Die meisten Methoden im Braze Vega SDK sind asynchron und geben Promises zurück, die abgewartet oder aufgelöst werden sollten.
 
 ## Integration des Braze Vega SDK
 
 ### Schritt 1: Installieren Sie die Braze-Bibliothek
 
-Installieren Sie das Braze Vega SDK mit Ihrem bevorzugten Paket Manager:in.
+Installieren Sie das Braze Vega SDK mit Ihrem bevorzugten Paketmanager.
 
 {% tabs local %}
 {% tab npm %}
-Wenn Ihr Projekt NPM verwendet, können Sie das Braze Vega SDK als Abhängigkeit hinzufügen.
+Falls Ihr Projekt NPM verwendet, können Sie das Braze Vega SDK als Abhängigkeit hinzufügen.
 
 ```bash
 npm install @braze/vega-sdk --save
 ```
 
-Nach der Installation können Sie die von Ihnen benötigten Methoden importieren:
+Nach der Installation können Sie die benötigten Methoden importieren:
 
 ```javascript
 import { initialize, changeUser, openSession } from "@braze/vega-sdk";
@@ -24,13 +24,13 @@ import { initialize, changeUser, openSession } from "@braze/vega-sdk";
 {% endtab %}
 
 {% tab yarn %}
-Wenn Ihr Projekt Yarn verwendet, können Sie das Braze Vega SDK als Abhängigkeit hinzufügen.
+Falls Ihr Projekt Yarn verwendet, können Sie das Braze Vega SDK als Abhängigkeit hinzufügen.
 
 ```bash
 yarn add @braze/vega-sdk
 ```
 
-Nach der Installation können Sie die von Ihnen benötigten Methoden importieren:
+Nach der Installation können Sie die benötigten Methoden importieren:
 
 ```javascript
 import { initialize, changeUser, openSession } from "@braze/vega-sdk";
@@ -40,10 +40,10 @@ import { initialize, changeUser, openSession } from "@braze/vega-sdk";
 
 ### Schritt 2: Initialisieren Sie das SDK
 
-Nachdem das Braze Vega SDK zu Ihrem Projekt hinzugefügt wurde, initialisieren Sie die Bibliothek mit dem API-Schlüssel und der [SDK-Endpunkt-URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints), die Sie unter **Einstellungen** > **App-Einstellungen** in Ihrem Braze-Dashboard finden.
+Nachdem Sie das Braze Vega SDK zu Ihrem Projekt hinzugefügt haben, initialisieren Sie die Bibliothek mit dem SDK-API-Schlüssel und [der SDK-Endpunkt-URL,]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) die Sie in Ihrem Braze-Dashboard unter **„Einstellungen“** > **„App-Einstellungen“** finden.
 
 {% alert important %}
-Sie müssen das `changeUser` Versprechen abwarten oder auflösen, bevor Sie andere Braze-Methoden aufrufen, da sonst Ereignisse und Attribute auf den falschen Nutzer:in gesetzt werden können.
+Sie müssen das`changeUser`Versprechen abwarten oder auflösen, bevor Sie andere Braze-Methoden aufrufen, da sonst Ereignisse und Attribute möglicherweise für die falsche Nutzer:in festgelegt werden.
 {% endalert %}
 
 ```javascript
@@ -89,18 +89,18 @@ const App = () => {
 ```
 
 {% alert important %}
-Anonyme Nutzer:innen können für Ihre [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users) gezählt werden. Vielleicht möchten Sie das SDK deshalb lieber bedingt laden oder initialisieren, um diese Nutzer von der MAU-Zählung auszuschließen.
+Anonyme Nutzer:innen können zu Ihrer [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users) hinzugerechnet werden. Vielleicht möchten Sie das SDK deshalb lieber bedingt laden oder initialisieren, um diese Nutzer von der MAU-Zählung auszuschließen.
 {% endalert %}
 
 ## Optionale Konfigurationen
 
 ### Protokollieren
 
-Sie können die SDK-Protokollierung aktivieren, um bei der Fehlersuche und -behebung zu helfen. Es gibt mehrere Möglichkeiten, die Protokollierung zu aktivieren.
+Sie können die SDK-Protokollierung aktivieren, um die Fehlersuche und Fehlerbehebung zu unterstützen. Es gibt mehrere Möglichkeiten für Enablement der Protokollierung.
 
-#### Enablement der Protokollierung während der Initialisierung
+#### Protokollierung während der Initialisierung aktivieren
 
-Übergeben Sie `enableLogging: true` an `initialize()`, um Debugging-Nachrichten auf der Konsole zu protokollieren:
+Bitte übergeben Sie`enableLogging: true`an, `initialize()`um Debugging-Nachrichten in der Konsole zu protokollieren:
 
 ```javascript
 initialize("YOUR-API-KEY", "YOUR-SDK-ENDPOINT", {
@@ -109,12 +109,12 @@ initialize("YOUR-API-KEY", "YOUR-SDK-ENDPOINT", {
 ```
 
 {% alert important %}
-Grundlegende Protokolle sind für alle Nutzer:innen sichtbar, daher sollten Sie die Protokollierung deaktivieren, bevor Sie Ihren Code für die Produktion freigeben.
+Grundlegende Protokolle sind für alle Nutzer:innen sichtbar. Bitte erwägen Sie daher, die Protokollierung zu deaktivieren, bevor Sie Ihren Code für die Produktion freigeben.
 {% endalert %}
 
-#### Enablement der Protokollierung nach der Initialisierung
+#### Protokollierung nach Initialisierung aktivieren
 
-Verwenden Sie `toggleLogging()`, um die SDK-Protokollierung nach der Initialisierung zu aktivieren oder zu deaktivieren:
+Verwenden Sie die Option`toggleLogging()` für Enablement, um die SDK-Protokollierung nach der Initialisierung zu aktivieren oder zu deaktivieren:
 
 ```javascript
 import { toggleLogging } from "@braze/vega-sdk";
@@ -125,7 +125,7 @@ toggleLogging();
 
 #### Benutzerdefinierte Protokollierung
 
-Verwenden Sie `setLogger()`, um eine angepasste Logger-Funktion bereitzustellen, mit der Sie den Umgang mit SDK-Protokollen besser kontrollieren können:
+Verwenden Sie diese`setLogger()` Option, um eine angepasste Logger-Funktion bereitzustellen und so mehr Kontrolle über die Verarbeitung von SDK-Protokollen zu erhalten:
 
 ```javascript
 import { setLogger } from "@braze/vega-sdk";
@@ -136,9 +136,9 @@ setLogger((message) => {
 });
 ```
 
-### Optionen zur Konfiguration
+### Konfigurationsoptionen
 
-Sie können zusätzliche Konfigurationsoptionen an `initialize()` übergeben, um das SDK-Verhalten anzupassen:
+Sie können zusätzliche Konfigurationsoptionen an `initialize()`übergeben, um das Verhalten des SDK anzupassen:
 
 ```javascript
 await initialize("YOUR-API-KEY", "YOUR-SDK-ENDPOINT", {
@@ -150,7 +150,7 @@ await initialize("YOUR-API-KEY", "YOUR-SDK-ENDPOINT", {
 
 ## Upgraden des SDK
 
-Wenn Sie das Braze Vega SDK von NPM oder Yarn referenzieren, können Sie auf die neueste Version upgraden, indem Sie Ihre Paketabhängigkeit aktualisieren:
+Wenn Sie das Braze Vega SDK von NPM oder Yarn referenzieren, können Sie auf die neueste Version upgraden, indem Sie ein Update für Ihre Paketabhängigkeit durchführen:
 
 ```bash
 npm update @braze/vega-sdk
@@ -158,14 +158,14 @@ npm update @braze/vega-sdk
 yarn upgrade @braze/vega-sdk
 ```
 
-## Testen Ihrer Integration
+## Testen Sie Ihre Integration
 
-So überprüfen Sie, ob Ihre SDK-Integration korrekt funktioniert:
+Um zu überprüfen, ob Ihre SDK-Integration ordnungsgemäß funktioniert:
 
-1. Initialisieren Sie das SDK mit `enableLogging: true`, um Debug-Nachrichten in der Konsole zu sehen
-2. Stellen Sie sicher, dass Sie `await changeUser()` vor dem Aufruf anderer SDK-Methoden
-3. Rufen Sie `await openSession()` an, um eine Sitzung zu beginnen.
-4. Überprüfen Sie auf Ihrem Braze-Dashboard unter **Übersicht**, ob die Daten der Sitzung aufgezeichnet werden.
-5. Testen Sie die Protokollierung eines angepassten Events und überprüfen Sie, ob es in Ihrem Dashboard erscheint.
+1. Initialisieren Sie das SDK mit, `enableLogging: true`um Debug-Nachrichten in der Konsole anzuzeigen.
+2. Bitte stellen Sie sicher, dass Sie`await changeUser()`  bevor Sie andere SDK-Methoden aufrufen.
+3. Bitte rufen Sie `await openSession()`an, um eine Sitzung zu beginnen.
+4. Bitte überprüfen Sie in Ihrem Braze-Dashboard unter **„Übersicht“**, ob die Sitzungsdaten erfasst werden.
+5. Bitte testen Sie die Protokollierung eines angepassten Events und überprüfen Sie, ob es in Ihrem Dashboard angezeigt wird.
 
 

@@ -53,6 +53,10 @@ In the **Target Audiences** step of your campaign composer, you can also limit t
 
 By selecting the maximum user limit, you can limit the volume of messages sent on a per-channel basis or globally across all message types.
 
+{% alert note %}
+The maximum user cap limits the number of users dispatched, not the number of messages successfully sent. Because aborted messages count toward this cap, the actual number of messages sent may be lower than the configured limit. For example, if you set a cap of 10,000 and 2,000 messages are aborted due to Liquid logic or other conditions, only 8,000 messages are sent.
+{% endalert %}
+
 ##### Maximum user cap with optimizations
 
 If you're using an optimization like Winning Variant or Personalized Variant, the campaign will consist of two sends: the initial experiment and the final send. 
@@ -113,9 +117,7 @@ For campaigns or Canvases with push platforms (like Android, iOS, Web Push, or K
 
 ![The channel dropdown with options for push platforms and push notifications.]({% image_buster /assets/img_archive/push_notifications_rate_limit.png %}){: style="max-width:30%;"} 
 
-{% alert note %}
 If you select a limit for push notifications, you can't set individual push channel rate limits. Likewise, if you select limits for individual push channels, you can't set shared push notification limits.
-{% endalert %}
 
 {% alert important %}
 **Updates to rate-limiting interface**<br>
@@ -163,11 +165,8 @@ Instead of trying to make up for the delay and send the remaining 6,000 messages
 Connected Content requests are not rate-limited independently and will follow the webhook rate limit. This means if there is one Connected Content call to a unique endpoint per webhook, you would expect 5,000 webhooks and also 5,000 Connected Content calls per minute. Note that caching may affect this and reduce the number of Connected Content calls. Additionally, retries may increase the Connected Content calls, so we recommend checking that the Connected Content endpoint can handle some fluctuation here.
 
 {% alert note %}
-**Rate limits are speed limits and do not define an exact send speed.** Generally, messages are spread out evenly within any given minute, and in the vast majority of cases they are sent at or very close to the configured limit. This is not always the case—for example, when messages are very large (such as emails with many Content Blocks, Connected Content tags, or Catalog item tags), or when there are many Liquid aborts (aborted messages still consume a slot and can reduce effective send rates).
-
-In practice, the sustained send rate (completed messages per minute) may be lower than the configured rate limit due to retries, network variability, downstream endpoint latency, and per-minute smoothing.
-
-If you consistently see significantly lower throughput than expected, check Connected Content response times, error rates (such as `429`), and retry behavior.
+**Rate limits are speed limits and do not define an exact send speed.** Generally, messages are spread out evenly within any given minute, and in the vast majority of cases, they are sent at or very close to the configured limit. This is not always the case—for example, when messages are very large (such as emails with many Content Blocks, Connected Content tags, or Catalog item tags), or when there are many Liquid aborts (aborted messages still consume a slot and can reduce effective send rates).<br><br>
+In practice, the sustained send rate (completed messages per minute) may be lower than the configured rate limit due to retries, network variability, downstream endpoint latency, and per-minute smoothing. If you consistently see significantly lower throughput than expected, check Connected Content response times, error rates (such as `429`), and retry behavior.
 {% endalert %}
 
 ## About frequency capping
@@ -212,7 +211,7 @@ This behavior changes the default behavior when you turn off frequency capping f
 
 ![Delivery Controls section with Frequency Capping turned on.]({% image_buster /assets/img_archive/frequencycappingupdate.png %}){: style="max-width:90%;"} 
 
-Different channels within a multichannel campaign individually count toward the frequency cap. For instance, if you create a multichannel campaign with both push and email and have frequency capping set up for both of those channels, then the push counts toward one push campaign, and the email message counts toward one email message campaign. The campaign also counts toward one "campaign of any type." If users are capped to one push and one email campaign per day, and a user receives this multichannel campaign, then they no longer are eligible for push or email campaigns for the rest of the day (unless a campaign ignores frequency capping rules).
+Different channels within a multichannel campaign individually count toward the frequency cap. For instance, if you create a multichannel campaign with both push and email and have frequency capping set up for both of those channels, then the push counts toward one push campaign, and the email message counts toward one email message campaign. The campaign also counts toward one "campaign of any type." If users are capped to one push and one email campaign per day, and a user receives this multichannel campaign, then they are no longer eligible for push or email campaigns for the rest of the day (unless a campaign ignores frequency capping rules).
 
 In-app messages and Content Cards are not counted as or toward caps on campaigns or Canvas components of any type.
 

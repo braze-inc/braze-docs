@@ -1,4 +1,4 @@
-## Diagramme des relations
+## Diagramme relationnel
 
 ```mermaid
 ---

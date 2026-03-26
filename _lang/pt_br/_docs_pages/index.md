@@ -7,9 +7,9 @@ hidden: true
 layout: doc_guide
 custom_collection: home
 nav_title: "Documentação"
-description: "Esta é a página principal do site de documentação da Braze. Aqui, você encontra links para o guia do usuário, guia do desenvolvedor, guia da API, documentação dos parceiros de tecnologia e artigos de ajuda. Há também links rápidos para materiais úteis e artigos populares."
+description: "Esta é a landing page do site de documentação da Braze. Aqui, você encontra links para o guia do usuário, guia do desenvolvedor, guia da API, documentação dos parceiros de tecnologia e artigos de ajuda. Há também links rápidos para materiais úteis e artigos populares."
 
-doc_top_header: "Braze Documentation"
+doc_top_header: "Documentação da Braze"
 doc_top_text: ""
 
 braze_learning: "Explicações de termos técnicos e conceitos em formato de vídeos, aulas e exercícios interativos."
@@ -35,11 +35,11 @@ doc_menu_list:
     image: /assets/img/braze_icons/code-browser.svg
     link: /docs/api/home/
     description: "A Braze oferece uma API REST de alta performance para que você possa rastrear usuários, enviar mensagens, exportar dados e muito mais."
-  - name: Ajuda
+  - name: Novidades
     bg_color: '#ff9349'
-    image: /assets/img/braze_icons/info-circle.svg
-    link: /docs/help/home
-    description: "Consulte artigos que ajudarão na solução de problemas e fique por dentro das práticas recomendadas para se comunicar com seus usuários."
+    image: /assets/img/braze_icons/annotation-dots.svg
+    link: /docs/releases/home/
+    description: "Confira resumos mensais sobre os principais lançamentos de produtos, melhorias contínuas, mudanças importantes no SDK e muito mais."
   - name: Documentação de compliance
     bg_color: '#ff9349'
     image: /assets/img/braze_icons/certificate-01.svg
@@ -51,30 +51,24 @@ popular_topic_list:
     link: /docs/api/home/
   - name: Visão geral da API
     link: /docs/api/basics/
-  - name: "POST: rastrear endpoint de usuários"
+  - name: "POST&#58; Endpoint de rastreamento de usuários"
     link: /docs/api/endpoints/user_data/post_user_track/
-  - name: Importação de usuários
-    link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
+  - name: Importação de usuário
+    link: /docs/user_guide/data/user_data_collection/user_import/
   - name: Configuração do Web SDK
-    link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
+    link: /docs/developer_guide/sdk_integration/?sdktab=web
   - name: Eventos personalizados
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
+    link: /docs/user_guide/data/custom_data/custom_events/
   - name: Atributos personalizados
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+    link: /docs/user_guide/data/custom_data/custom_attributes/
   - name: Braze Currents
-    link: /docs/user_guide/data_and_analytics/braze_currents
+    link: /docs/user_guide/data/braze_currents/
 
 helpful_resources_list:
   - name: Declaração de Inovação
     link: /docs/innovation_statement/
-  - name: "Manuais de direitos, suporte e serviços de sucesso do cliente"
-    link: /docs/handbooks/
   - name: Retenção de dados
     link: /docs/api/data_retention/
   - name: Assistência técnica de proteção de dados
     link: /docs/dp-technical-assistance/
-  - name: Notas de versão
-    link: /docs/help/release_notes/
-  - name: Contribuição para a documentação da Braze
-    link: /docs/contributing/home/
 ---

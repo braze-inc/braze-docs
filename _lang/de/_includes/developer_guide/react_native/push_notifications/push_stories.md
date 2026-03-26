@@ -1,8 +1,8 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} Sie müssen auch [Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} Bitte [richten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native) Sie auch [Push-Benachrichtigungen ein]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
-## Enablement von Push-Storys
+## Push-Storys aktivieren
 
-Für das React Native SDK **sind Push-Storys für Android standardmäßig verfügbar**.
+Für das React Native SDK **sind Push-Storys standardmäßig für Android verfügbar**.
 
 Um Push-Storys unter iOS mit Expo zu aktivieren, stellen Sie sicher, dass Sie eine App-Gruppe für Ihre Anwendung definiert haben. Weitere Informationen finden Sie unter [Hinzufügen einer App-Gruppe]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group).
 

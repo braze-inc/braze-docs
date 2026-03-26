@@ -1,7 +1,7 @@
 ---
 nav_title: "LÖSCHEN: Abo-Status nach E-Mail Adresse oder Telefonnummer löschen"
 article_title: "LÖSCHEN: Abo-Status nach E-Mail Adresse oder Telefonnummer löschen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 0
 hidden: true
 layout: api_page
@@ -28,7 +28,7 @@ description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Status d
 
 ## Beispiel Anfrage
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {

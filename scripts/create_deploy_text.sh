@@ -8,13 +8,11 @@ main() {
     TEMP_FILE="$PROJECT_ROOT/scripts/temp/deploy_output"
     rm -f "$TEMP_FILE" # Clear contents from any previous runs
 
-    # Gets the latest commit hash from origin/$PRIMARY_BRANCH that is not in origin/develop.
-    LATEST_COMMIT_HASH=$(git log --max-count=1 --format="%H" origin/$PRIMARY_BRANCH ^origin/develop)
-
+    # Commits to deploy: on develop but not yet on main.
+    # Use origin/$PRIMARY_BRANCH explicitly (not LATEST_COMMIT_HASH) so this works when
+    # the workflow checks out develop—otherwise "..origin/develop" would compare to HEAD.
     if [ -z "$1" ] || [ -z "$2" ]; then
-        # Gets the log of commits starting from the latest 
-        # commit hash if no dates are provided.
-        COMMIT_LOGS=$(git log --first-parent "$LATEST_COMMIT_HASH"..origin/develop --pretty=%s»¦«%b)
+        COMMIT_LOGS=$(git log --first-parent origin/$PRIMARY_BRANCH..origin/develop --pretty=%s»¦«%b)
     else
         # Use the provided start and end dates to get the commit logs
         # Needed so 'release_text.sh' can get all deploys for a monthly release.
@@ -44,12 +42,13 @@ main() {
         echo "- [#$PR_NUMBER](https://github.com/braze-inc/braze-docs/pull/$PR_NUMBER) - $PR_TITLE" >> "$TEMP_FILE"
     done
 
-    # Returns the results in reverse order and clean up files.
-    if command -v tac &> /dev/null
-    then
-        tac "$TEMP_FILE" # 'tac' is used by default
-    else
-        tail -r "$TEMP_FILE" # 'tail -r' is used if tac isn't available
+    # Returns the results in reverse order.
+    if [ -f "$TEMP_FILE" ]; then
+        if command -v tac &> /dev/null; then
+            tac "$TEMP_FILE"
+        else
+            tail -r "$TEMP_FILE"
+        fi
     fi
 }
 

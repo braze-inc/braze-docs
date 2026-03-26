@@ -43,7 +43,7 @@ pod install
 
 이 시점에서 CocoaPods에서 생성한 새 Xcode 프로젝트 작업 공간을 열 수 있어야 합니다. Xcode 프로젝트 대신 이 Xcode 워크스페이스를 사용해야 합니다. 
 
-![새 작업 공간]({% image_buster /assets/img_archive/podsworkspace.png %})
+![새로운 작업 공간]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ### 4단계: 앱 위임 업데이트
 
@@ -101,7 +101,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 2019년 12월부터 커스텀 엔드포인트는 더 이상 제공되지 않으며, 기존 커스텀 엔드포인트가 있는 경우 계속 사용할 수 있습니다. 자세한 내용은 <a href="{{site.baseurl}}/api/basics/#endpoints">사용 가능한 엔드포인트 목록</a>을 참조하십시오.
 {% endalert %}
 
-Braze 담당자가 이미 [올바른 엔드포인트]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/) 를 알려드렸을 것입니다.
+귀사의 Braze 담당자가 이미 [올바른 엔드포인트]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)]에 대해 안내해 드렸을 것입니다.
 
 #### 컴파일 타임 엔드포인트 구성(권장)
 기존 사용자 지정 엔드포인트가 있는 경우...
@@ -117,7 +117,7 @@ Braze 담당자가 이미 [올바른 엔드포인트]({{ site.baseurl }}/user_gu
 {% endalert %}
 
 {% alert important %}
-특정 클러스터를 찾으려면 고객 성공 매니저에게 문의하거나 지원팀에 문의하세요.
+특정 클러스터를 확인하려면 고객 성공 매니저에게 문의하거나 지원팀에 연락하십시오.
 {% endalert %}
 
 ### SDK 통합 완료

@@ -8,6 +8,10 @@ description: "Dieser Referenzartikel erklärt, wie Sie Deeplinking zu Ihren In-A
 
 # Deeplinking zu In-App-Content
 
+{% alert tip %}
+**Für Entwickler:innen:** Eine Anleitung zur Auswahl zwischen benutzerdefinierten Schemata, universellen Links und anderen Optionen – einschließlich der Frage, wann Sie eine AASA-Datei benötigen, welche App-Delegate-Methoden implementiert werden müssen und wie Probleme behoben werden können – finden Sie [im iOS-Deeplinking-Leitfaden]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide) und unter[ Deeplinking-Fehlerbehebung]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
+
 ## Was ist Deep Linking?
 
 Deeplinking ist eine Möglichkeit, eine native App zu starten und zusätzliche Informationen bereitzustellen, die sie anweisen, eine bestimmte Aktion durchzuführen oder bestimmte Inhalte anzuzeigen.
@@ -23,7 +27,7 @@ Deep Links sind benutzerdefinierte URIs, die auf einen bestimmten Teil der App v
 Alles nach dem Doppelpunkt innerhalb eines Deeplinks ist Freitext. Es liegt an Ihnen, seine Struktur und Interpretation zu definieren; eine gängige Konvention ist jedoch, ihn nach `http:` URLs zu modellieren, einschließlich eines führenden `//` und Abfrageparametern (zum Beispiel `?foo=1&bar=2`). Im vorherigen Beispiel würde `twitter://user?screen_name=[id]` verwendet, um ein bestimmtes Profil in der App zu starten.
 
 {% alert important %}
-Braze unterstützt nicht die Verwendung eines Wrappers wie Flutter, um Deeplinks zu setzen. Um dieses Feature zu nutzen, müssen Sie Deeplinks auf der nativen Ebene konfigurieren.
+Für Apps, die mit Wrapper-Frameworks (z. B. Flutter oder cordova) erstellt wurden, bietet Braze keine wrapperspezifische Unterstützung für Deeplinking an. Bitte setzen Sie Deeplinks auf den nativen iOS- und Android-Ebenen. Für Cordova, siehe [Deeplinking in Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=cordova).
 {% endalert %}
 
 ## UTM-Tags und Kampagnenzuordnung

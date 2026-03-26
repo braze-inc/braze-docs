@@ -8,7 +8,7 @@ description: "Learn how to set user IDs through the Braze SDK."
 
 # Set user IDs
 
-> Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze will assign them an anonymous ID instead&#8212;however, you won't be able to use these features until you do.
+> Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze assigns them an anonymous ID instead; however, you can't use these features until you do.
 
 {% alert note %}
 For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
@@ -18,9 +18,17 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 
 {% multi_lang_include anonymous_users/about_anonymous_users.md %}
 
+### Preventing anonymous user tracking
+
+If your use case requires that no data is collected before a user is identified, you can delay initializing the Braze SDK until the user logs in and an `external_id` is available. Set a flag in your code that flips to `true` when the user signs in, and only initialize the SDK when that flag is set.
+
+{% alert warning %}
+Only delay initialization the **first time** a user downloads your app (before an `external_id` is set). If you prevent the SDK from initializing every time a user signs out or starts a new session, it will interfere with prefetching in-app message and Content Card assets, which can lead to deliverability errors for those campaigns.
+{% endalert %}
+
 ## Setting a user ID
 
-To set a user ID, call the `changeUser()` method after the user initially log ins. IDs should be unique and follow our [naming best practices](#naming-best-practices).
+To set a user ID, call the `changeUser()` method after the user initially logs in. IDs should be unique and follow our [naming best practices](#naming-best-practices).
 
 If you're hashing a unique identifier instead, be sure to normalize the input of your hashing function. For example, when hashing an email address, remove any leading or trailing spaces and account for localization.
 
@@ -86,14 +94,29 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
+
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
+```
+{% endtab %}
 {% endtabs %}
+
+### How `changeUser()` works
+
+When you call `changeUser()`, the following behaviors apply:
+
+- Calling `changeUser()` with the **same** user ID that's already set has no effect on session count.
+- Calling `changeUser()` with a **different** user ID automatically ends the current session and starts a new one.
+- When an anonymous user calls `changeUser()` with a **new** user ID (one that doesn't exist in Braze yet), the anonymous profile's data is merged into the new identified profile.
+- When an anonymous user calls `changeUser()` with an **existing** user ID, the anonymous profile's data is not merged into the identified profile.
 
 {% alert note %}
 Calling `changeUser()` triggers a data flush as part of closing the current user's session. The SDK automatically flushes any pending data for the previous user before switching to the new user, so you don't need to manually request a data flush before calling `changeUser()`.
 {% endalert %}
 
 {% alert warning %}
-**Do not assign a static default ID or call `changeUser()` when a user logs out.** Doing so will prevent you from re-engaging any previously logged-in users on shared devices. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze will automatically refresh the data for the newly-active profile.
+Do not assign a single, shared user ID (for example, a static default external ID) or call `changeUser()` when a user logs out. Doing so prevents you from re-engaging any previously logged-in users on shared devices and causes all data to be logged against a single user ID, which can cause other features to not behave as expected. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze automatically refreshes the data for the newly-active profile.
 {% endalert %}
 
 ## User aliases
@@ -151,6 +174,12 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
   "alias_name" : (required, string),
   "alias_label" : (required, string)
 }
+```
+{% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
 ```
 {% endtab %}
 {% endtabs %}

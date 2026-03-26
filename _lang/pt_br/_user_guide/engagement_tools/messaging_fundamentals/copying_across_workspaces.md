@@ -4,26 +4,26 @@ article_title: Copiar Entre Espaços de Trabalho
 page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
-description: "Este artigo de referência fornece uma visão geral de como copiar campanhas e Canvases para diferentes espaços de trabalho."
+description: "Este artigo de referência fornece uma visão geral de como copiar campanhas e canvas para diferentes espaços de trabalho."
 tool:
     - Campaigns
     - Canvas
 ---
 
-# Copiar campanhas e Canvases entre espaços de trabalho
+# Copiar campanhas e canvas entre espaços de trabalho
 
-> Copiar campanhas entre espaços de trabalho permite que você inicie a composição da sua mensagem começando com uma cópia de uma campanha em um espaço de trabalho diferente. Esta página cobre como copiar campanhas para diferentes espaços de trabalho e lista o que é e o que não é copiado.
+> Copiar campanhas entre espaços de trabalho permite que você agilize a composição da sua mensagem começando com uma cópia de uma campanha em um espaço de trabalho diferente. Esta página explica como copiar campanhas para diferentes espaços de trabalho e lista o que é e o que não é copiado.
 
-Quando você copia uma campanha ou Canvas para um espaço de trabalho diferente, a cópia permanecerá como um rascunho até que você edite e lance, ajudando você a manter e construir suas estratégias de envio de mensagens bem-sucedidas.
+Quando você copia uma campanha ou Canvas para um espaço de trabalho diferente, a cópia permanecerá como rascunho até que você edite e lance, ajudando você a manter e evoluir suas estratégias de envio de mensagens bem-sucedidas.
 
 {% tabs local %}
 {% tab campaigns %}
 
 {% alert important %}
-Copiar campanhas entre espaços de trabalho está geralmente disponível. O suporte a canais para Cartões de Conteúdo não está atualmente disponível.
+Copiar campanhas entre espaços de trabalho está disponível de forma geral. O suporte de canal para Cartões de conteúdo não está disponível atualmente.
 {% endalert %}
 
-Você pode copiar campanhas entre espaços de trabalho para estes canais suportados: SMS, mensagens no aplicativo, notificações por push, e-mail e webhooks. Você também pode copiar modelos de e-mail, flags de recursos e Blocos de Conteúdo. Observe que campanhas multicanal com canais não suportados não podem ser copiadas para um espaço de trabalho diferente.
+Você pode copiar campanhas entre espaços de trabalho para estes canais suportados: SMS, mensagens no app, notificações por push, e-mail e webhooks. Você também pode copiar modelos de e-mail, Feature Flags e blocos de conteúdo. Observe que campanhas multicanais com canais não suportados não podem ser copiadas para um espaço de trabalho diferente.
 
 Para copiar uma campanha para um espaço de trabalho diferente:
 
@@ -35,25 +35,25 @@ Para copiar uma campanha para um espaço de trabalho diferente:
 {% tab canvas %}
 
 {% alert important %}
-Copiar Canvases entre espaços de trabalho está geralmente disponível. Os seguintes canais não estão atualmente suportados: LINE, Cartões de Conteúdo e WhatsApp.
+Copiar canvas entre espaços de trabalho está disponível de forma geral. Os seguintes canais não são suportados atualmente: LINE, Cartões de conteúdo e WhatsApp.
 {% endalert %}
 
-Você pode copiar Canvases entre espaços de trabalho para estes canais suportados: e-mail, mensagens no aplicativo, push, webhooks e SMS.
+Você pode copiar canvas entre espaços de trabalho para estes canais suportados: e-mail, mensagens no app, push, webhooks e SMS.
 
 Para copiar um Canvas para um espaço de trabalho diferente:
 
-1. Selecione o menu <i class="fa-solid fa-ellipsis-vertical"></i> ao lado do Canvas selecionado.
+1. Selecione o menu <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;ao lado do Canvas selecionado.
 2. Selecione **Copiar para espaço de trabalho**. 
 3. Após copiar, revise e teste seu Canvas para confirmar que todos os campos funcionam corretamente.
 
-Ao copiar um Canvas com etapas de Sincronização de Público, as configurações não serão copiadas para o espaço de trabalho de destino, mas as etapas na jornada serão.
+Ao copiar um Canvas com etapas de Audience Sync, as configurações não serão copiadas para o espaço de trabalho de destino, mas as etapas na jornada serão.
 
 {% endtab %}
 {% endtabs %}
 
 ## O que é copiado entre espaços de trabalho
 
-Observe que a seguinte não é uma lista abrangente do que é copiado entre espaços de trabalho e o que é omitido. Como uma boa prática, verifique os detalhes da campanha e do Canvas e teste para confirmar que sua mensagem funciona como esperado.
+Observe que a lista a seguir não é abrangente sobre o que é copiado entre espaços de trabalho e o que é omitido. Como boa prática, verifique os detalhes da campanha e do Canvas e teste para confirmar que sua mensagem funciona como esperado.
 
 ### Informações
 
@@ -66,8 +66,8 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Tipo | Tags | 
 | Ações (aninhadas) | Segmentos | 
 | Comportamentos de conversão (aninhados) | Aprovações | 
-| Configurações de tempo de silêncio | Cronograma de disparo | 
-| Configurações de limitação de frequência | Resumos de campanhas | 
+| Configurações de horário de silêncio | Cronograma de disparo | 
+| Configurações de limite de frequência | Resumos de campanhas | 
 | Estado de inscrição do destinatário | Filtros | 
 | Cronograma recorrente |  | 
 | É Transacional |  | 
@@ -82,10 +82,10 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Tipo | Tags | 
 | Ações (aninhadas) | Segmentos | 
 | Comportamentos de conversão (aninhados) | Aprovações | 
-| Configurações de tempo de silêncio | Cronograma de disparo | 
-| Configurações de limitação de frequência | Resumos de Canvas | 
+| Configurações de horário de silêncio | Cronograma de disparo | 
+| Configurações de limite de frequência | Resumos do Canvas | 
 | Estado de inscrição do destinatário | Filtros | 
-| Cronograma recorrente |  | 
+| Cronograma recorrente | Critérios de saída | 
 | É Transacional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -111,7 +111,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Copiado | Omitido |
 |---|---|
 | Tipo de comportamento | IDs de espaços de trabalho |
-| Interação do Canvas |  ID do canva | 
+| Interação do Canvas |  ID do Canvas | 
 | Nome do evento personalizado |  | 
 | Nome do produto |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -138,7 +138,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Copiado | Omitido |
 |---|---|
 | Tipo de comportamento | IDs de espaços de trabalho |
-| Interação do Canvas |  ID do canva | 
+| Interação do Canvas |  ID do Canvas | 
 | Nome do evento personalizado |  | 
 | Nome do produto |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -153,7 +153,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 
 | Copiado | Omitido |
 |---|---|
-| Enviar porcentagem | ID da API |
+| Porcentagem de envio | ID da API |
 | Tipo |  IDs do grupo de teste | 
 |  |  IDs de modelo de link | 
 |  |  IDs de grupo de usuários internos | 
@@ -164,7 +164,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 
 | Copiado | Omitido |
 |---|---|
-| Enviar porcentagem | ID da API |
+| Porcentagem de envio | ID da API |
 | Tipo |  IDs do grupo de teste | 
 |  |  IDs de modelo de link | 
 |  |  IDs de grupo de usuários internos | 
@@ -214,7 +214,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 |---|---|
 | Texto simples | Apelidamento de link |
 | HTML e conteúdo de arrastar e soltar | Traduções | 
-| pré-cabeçalho |  | 
+| Pré-cabeçalho |  | 
 | CSS embutido |  | 
 | AMP HTML |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -226,7 +226,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 |---|---|
 | Texto simples | Apelidamento de link |
 | HTML e conteúdo de arrastar e soltar | Traduções | 
-| pré-cabeçalho |  | 
+| Pré-cabeçalho |  | 
 | CSS embutido |  | 
 | AMP HTML |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -297,9 +297,9 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 
 | Copiado | Omitido |
 |---|---|
-| Corpo | serviço de envio de mensagens |
+| Corpo | Serviço de envio de mensagens |
 | Encurtamento de link | Itens de mídia VCF | 
-| Clique em rastreamento |  | 
+| Rastreamento de cliques |  | 
 | Itens de mídia |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -308,9 +308,9 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 
 | Copiado | Omitido |
 |---|---|
-| Corpo | serviço de envio de mensagens |
+| Corpo | Serviço de envio de mensagens |
 | Encurtamento de link | Itens de mídia VCF | 
-| Clique em rastreamento |  | 
+| Rastreamento de cliques |  | 
 | Itens de mídia |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -319,27 +319,27 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 
 ## Copiando mensagens que contêm Liquid
 
-Referências Liquid dentro dos corpos das mensagens são copiadas para o espaço de trabalho de destino, mas as referências podem não funcionar como esperado. Isso significa que se um Canvas do Espaço de Trabalho A for copiado para o Espaço de Trabalho B, então o Espaço de Trabalho B não pode referenciar os detalhes do Espaço de Trabalho A, incluindo referências Liquid. Por exemplo, campos como ações de disparar e filtros de público não são copiados.
+Referências Liquid dentro dos corpos das mensagens são copiadas para o espaço de trabalho de destino, mas podem não funcionar como esperado. Isso significa que, se um Canvas do Espaço de Trabalho A for copiado para o Espaço de Trabalho B, o Espaço de Trabalho B não poderá referenciar os detalhes do Espaço de Trabalho A, incluindo referências Liquid. Por exemplo, campos como ações-gatilho e filtros de público não são copiados.
 
-Mantenha o controle das seguintes referências Liquid com dependências ao copiar campanhas e Canvases entre espaços de trabalho:
+Fique atento às seguintes referências Liquid com dependências ao copiar campanhas e canvas entre espaços de trabalho:
 
 - Tags de itens do catálogo
-- Tags de conteúdo conectado
+- Tags de Conteúdo conectado
 - Blocos de conteúdo
 - Atributos personalizados
-- Centros de preferência
+- Centrais de Preferências
 - Recomendações de produtos
-- Estado de inscrição tags
-- Etiquetas de voucher e promoção
+- Tags de estado de inscrição
+- Tags de voucher e promoção
 
-## Copiando mensagens com feature flags
+## Copiando mensagens com Feature Flags
 
-Para copiar uma campanha de feature flag e um Canvas com uma etapa de Feature Flag entre espaços de trabalho, certifique-se de que o espaço de trabalho de destino tenha um [experimento de feature flag]({{site.baseurl}}/developer_guide/feature_flags/experiments) configurado com um ID que corresponda ao feature flag referenciado na campanha original ou à etapa de Feature Flag referenciada no Canvas original.
+Para copiar uma campanha de Feature Flag e um Canvas com uma etapa de Feature Flag entre espaços de trabalho, certifique-se de que o espaço de trabalho de destino tenha um [experimento de Feature Flag]({{site.baseurl}}/developer_guide/feature_flags/experiments) configurado com um ID que corresponda ao Feature Flag referenciado na campanha original ou à etapa de Feature Flag referenciada no Canvas original.
 
-Se você copiar uma campanha ou Canvas que tenha uma etapa de Feature Flag com um ID de feature flag que não existe no espaço de trabalho de destino, a etapa de Feature Flag será copiada, mas seu conteúdo não será.
+Se você copiar uma campanha ou Canvas que tenha uma etapa de Feature Flag com um ID de Feature Flag que não existe no espaço de trabalho de destino, a etapa de Feature Flag será copiada, mas seu conteúdo não será.
 
-## Copiando mensagens com Blocos de Conteúdo
+## Copiando mensagens com blocos de conteúdo
 
-Quando você copia uma campanha entre espaços de trabalho, os blocos de conteúdo não serão copiados. No entanto, um bloco de conteúdo pode ser referenciado no espaço de trabalho de destino se existir um bloco com o mesmo nome. Alternativamente, você pode criar o bloco de conteúdo (ou essas referências Liquid) no espaço de trabalho de destino para evitar erros ao lançar uma campanha.
+Quando você copia uma campanha entre espaços de trabalho, os blocos de conteúdo não serão copiados. No entanto, um bloco de conteúdo pode ser referenciado no espaço de trabalho de destino se existir um bloco com o mesmo nome. Como alternativa, você pode criar o bloco de conteúdo (ou essas referências Liquid) no espaço de trabalho de destino para evitar erros ao lançar uma campanha.
 
-Para Canvases que referenciam um Bloco de Conteúdo, o Bloco de Conteúdo deve primeiro ser copiado para o espaço de trabalho de destino.
+Para canvas que referenciam um bloco de conteúdo, o bloco de conteúdo deve primeiro ser copiado para o espaço de trabalho de destino.

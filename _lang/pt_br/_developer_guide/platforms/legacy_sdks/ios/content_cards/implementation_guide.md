@@ -14,7 +14,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Está procurando o guia básico de integração do desenvolvedor do cartão de conteúdo? Encontre-o [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
+Está procurando o guia básico de integração do desenvolvedor do cartão de conteúdo? Encontre [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
 {% endalert %}
 
 # Guia de implementação do cartão de conteúdo
@@ -444,7 +444,7 @@ O exemplo à direita mostra um site `UICollectionView` com uma lista híbrida de
 
 Esse cartão de conteúdo é entregue por uma campanha disparada por API com pares de chave-valor disparados por API. Isso é ideal para campanhas em que os valores do cartão dependem de fatores externos para determinar o conteúdo a ser exibido ao usuário. Note que `class_type` deve ser conhecido no momento da configuração.
 
-![Os pares de valores-chave para o caso de uso de cartões de conteúdo suplementar. Neste exemplo, diferentes aspectos do cartão, como "tile_id", "tile_deeplink", e "tile_title", são definidos usando o Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Os pares de valores-chave para o caso de uso de cartões de conteúdo suplementar. Neste exemplo, diferentes aspectos do cartão, como "tile_id", "tile_deeplink", e "tile_title", são definidos usando Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ##### Pronto para fazer a análise de dados?
 Visite a [seção a seguir](#logging-impressions-clicks-and-dismissals) para entender melhor como deve ser o fluxo de dados.

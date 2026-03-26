@@ -6,7 +6,7 @@ layout: partner_page
 search_tag: Partner
 
 partner_top_header: "Technology Partners"
-partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
+partner_top_text: "Welcome to our list of Alloys—our Braze technology partners. Use this page to help you implement Technology Partners with your Braze SDK. In Braze, go to <b>Partner Integrations</b> > <b>Technology Partners</b> to connect with any of the partners listed on this page. <br> <br> If you're looking for information on joining our Firebrands community of customers using Braze to modernize their customer experience and marketing, see our <a href='https://brazefirebrands.splashthat.com/'>Customer Champions Program</a>."
 description: "This landing page includes all Braze partners. Use it to explore technical documentation that will help implement Technology Partners into your Braze SDK."
 
 valid_partner_list:
@@ -29,7 +29,6 @@ valid_partner_list:
 - name: AppsFlyer
   url: /docs/partners/appsflyer/
 - name: Branch
-  title: Deeplinking
   url: /docs/partners/branch_for_deeplinking/
 - name: Facebook Zapier
   url: /docs/partners/facebook_via_zapier/
@@ -45,6 +44,8 @@ valid_partner_list:
   url: /docs/partners/airbridge/
 - name: Dyspatch.io
   url: /docs/partners/dyspatch/
+- name: Denada
+  url: /docs/partners/denada/
 - name: Stensul
   url: /docs/partners/stensul/
 - name: Stripo
@@ -146,7 +147,7 @@ valid_partner_list:
 - name: BlueConic
   url: /docs/partners/blueconic/
 - name: LINE
-  url: /docs/partners/line/  
+  url: /docs/line/
 - name: LinkedIn Audience Sync
   url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
 - name: Judo
@@ -174,7 +175,7 @@ valid_partner_list:
 - name: Wyng
   url: /docs/partners/wyng/
 - name: Peak
-  url: /docs/partners/Peak/
+  url: /docs/partners/peak/
 - name: Personalize.AI
   url: /docs/partners/personalize_ai/
 - name: Knak
@@ -188,7 +189,7 @@ valid_partner_list:
 - name: Microsoft Dynamics 365
   url: /docs/partners/dynamics_365_customer_insights/
 - name: Heap
-  url: /docs/partners/heap/  
+  url: /docs/partners/heap/
 - name: Quikly
   url: /docs/partners/quikly/
 - name: actionable.me
@@ -215,6 +216,8 @@ valid_partner_list:
   url: /docs/partners/tellius/
 - name: Sheetlabs
   url: /docs/partners/sheetlabs/
+- name: Limbik
+  url: /docs/partners/limbik/
 - name: Contentsquare
   url: /docs/partners/contentsquare/
 - name: Sisu
@@ -243,6 +246,8 @@ valid_partner_list:
   url: /docs/partners/whatsapp/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Smartling
   url: /docs/partners/smartling/
 - name: Regal
@@ -258,7 +263,7 @@ valid_partner_list:
 - name: Stylitics
   url: /docs/partners/stylitics/
 - name: Redpoint
-  url: /docs/partners/redpoint/  
+  url: /docs/partners/redpoint/
 - name: Simon Data
   url: /docs/partners/simon_data/
 - name: Ketch
@@ -280,13 +285,11 @@ valid_partner_list:
 - name: Friendbuy
   url: /docs/partners/friendbuy/
 - name: Alpaco
-  url: /docs/partners/Alpaco/
+  url: /docs/partners/alpaco/
 - name: NiftyImages
   url: /docs/partners/niftyimages/
 - name: MetaRouter
   url: /docs/partners/metarouter/
-- name: Treasure Data
-  url: /docs/partners/treasure_data/
 - name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: LiveRamp
@@ -376,7 +379,7 @@ valid_partner_list:
 - name: Blings
   url: /docs/partners/blings/
 - name: Google Audience Sync
-  url: /docs/google_audience_sync/ 
+  url: /docs/google_audience_sync/
 - name: Optimizely
   url: /docs/partners/optimizely/
 - name: OtherLevels
@@ -387,8 +390,6 @@ valid_partner_list:
   url: /docs/deliverability_center/
 - name: Microsoft SNDS
   url: /docs/deliverability_center/
-- name: Fullstory
-  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
 - name: Open Loyalty
   url: /docs/partners/openloyalty/
 - name: DOTS.ECO
@@ -403,4 +404,10 @@ valid_partner_list:
   url: /docs/partners/anthropic/
 - name: Algolia
   url: /docs/partners/algolia/
+- name: Canva
+  url: /docs/partners/canva/
+- name: Figma
+  url: /docs/partners/figma/
+- name: Poq
+  url: /docs/partners/poq/
 ---

@@ -34,7 +34,7 @@ guide_featured_list:
   - name: 条件分岐ステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     image: /assets/img/braze_icons/dataflow-04.svg
-  - name: 遅延 ステップ
+  - name: 延期期間ステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
     image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: 実験パスステップ
@@ -57,7 +57,7 @@ guide_featured_list:
 
 ### ユーザージャーニーのカスタマイズ
 
-![デシジョン分割ステップの後に遅延ステップs とメッセージステップs が続くキャンバスユーザーのジャーニーの例。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![キャンバスにおけるユーザーージャーニーの例。条件分岐ステップの後に、遅延ステップとメッセージステップが続く。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 [アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths)を使用すると、アクションや購入などのエンゲージメントイベントに基づいてユーザージャーニーを分岐させることができます。オーディエンスをフィルタリングしでターゲティングしたい場合、[オーディエンスパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths)を利用すると、オーディエンスの条件に基づいてユーザーをさまざまなキャンバスパスに誘導できるため、ユーザーのターゲット設定が簡単になります。
 

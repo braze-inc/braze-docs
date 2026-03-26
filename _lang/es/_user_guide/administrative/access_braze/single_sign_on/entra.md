@@ -13,7 +13,7 @@ description: "Este artículo te explicará cómo configurar las funciones de ini
 
 ## Requisitos
 
-Al configurarlo, se te pedirá que proporciones una URL de Servicio al Consumidor de Afirmaciones (ACS).  
+Durante la configuración, se te pedirá que proporciones una URL del Servicio de Consumo de Aserciones (ACS).  
 
 | Requisito | Detalles |
 |---|---|
@@ -35,10 +35,10 @@ Al configurarlo, se te pedirá que proporciones una URL de Servicio al Consumido
 2. En la página **Seleccionar un método de inicio de sesión único**, selecciona **SAML** como método.
 3. En la página **Configurar inicio de sesión único con SAML**, selecciona el icono de edición de **Configuración básica de SAML**.
 4. Configure la aplicación en modo iniciado por IdP introduciendo una **URL de respuesta** que combine su [instancia Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) con el siguiente patrón: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
-5. Opcionalmente, configure RelayState introduciendo su clave API generada por Relay State en el campo **Relay State (Opcional)**.
+5. Configura RelayState introduciendo la clave de API generada por Relay State en el campo **Relay State**.
 
 {% alert important %}
-**No** configures el campo **URL de inicio de sesión**. Deja este campo en blanco para evitar problemas con el SAML SSO iniciado por tu IdP.
+**No** configures el campo **URL de inicio de sesión**. Deja este campo en blanco para evitar problemas con tu SAML SSO iniciado por IdP.
 {% endalert %}
 
 {: start="6"}

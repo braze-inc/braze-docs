@@ -1,5 +1,5 @@
 ---
-nav_title: Envio de mensagens no app
+nav_title: Entrega de mensagem no app
 article_title: Envio de mensagens no app para iOS
 platform: iOS
 page_order: 3
@@ -32,7 +32,7 @@ Pode haver alguma latência para mensagens no app que são exibidas imediatament
 
 ## Intervalo de tempo mínimo entre disparos
 
-Por padrão, limitamos as mensagens no app a uma vez a cada 30 segundos para facilitar uma experiência de qualidade para o usuário.
+Por padrão, limitamos a frequência das mensagens no app para uma vez a cada 30 segundos para facilitar uma experiência de usuário de qualidade.
 
 Você pode alterar esse valor em `ABKMinimumTriggerTimeIntervalKey` no parâmetro `appboyOptions` passado para `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Defina `ABKMinimumTriggerTimeIntervalKey` como o valor inteiro que deseja como tempo mínimo em segundos entre mensagens no app:
 

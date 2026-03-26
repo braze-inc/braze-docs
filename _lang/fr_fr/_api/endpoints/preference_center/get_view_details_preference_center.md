@@ -1,11 +1,11 @@
 ---
-nav_title: "GET : Afficher les détails du centre de préférences"
-article_title: "GET : Afficher les détails du centre de préférences"
+nav_title: "GET : Afficher les détails du centre de préférences"
+article_title: "GET : Afficher les détails du centre de préférences"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint de Braze Afficher les détails du centre de préférences."
+description: "Cet article présente l'endpoint Braze Afficher les détails du centre de préférences."
 
 ---
 {% api %}
@@ -14,30 +14,30 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour afficher les détails de vos centres de préférences, y compris la date de leur création et de leurs mises à jour.
+> Utilisez cet endpoint pour consulter les détails de vos centres de préférences, y compris les dates de création et de mise à jour.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5 {% endapiref %}
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `preference_center.get`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l'autorisation `preference_center.get`.
 
 ## Limite de débit
 
-Cet endpoint a une limitation du débit de 1 000 requêtes par minute, par espace de travail.
+{% multi_lang_include rate_limits.md endpoint='get preference center' %}
 
 ## Paramètres de chemin
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
+|`preferenceCenterExternalID`| Requis | Chaîne de caractères | L'ID de votre centre de préférences. |
 {: role="presentation" }
 
-## Paramètres de demande
+## Paramètres de requête
 
-Cet endpoint n’a pas de paramètres de requête.
+Cet endpoint ne comporte aucun paramètre de requête.
 
-## Exemple de demande
+## Exemple de requête
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/preference_center_external_id \

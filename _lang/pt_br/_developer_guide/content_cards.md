@@ -1,7 +1,7 @@
 ---
 page_order: 2.2
 nav_title: Cartões de conteúdo
-article_title: Cartões de conteúdo no SDK do Braze
+article_title: Cartões de Conteúdo no SDK do Braze
 channel:
   - content cards
 platform:
@@ -13,7 +13,7 @@ platform:
 
 # Cartões de conteúdo
 
-> Saiba mais sobre os cartões de conteúdo para o Braze SDK, incluindo os diferentes modelos de dados e as propriedades específicas do cartão disponíveis para seu aplicativo.
+> Saiba mais sobre os Cartões de Conteúdo para o SDK do Braze, incluindo os diferentes modelos de dados e propriedades específicas de cartões disponíveis para seu aplicativo.
 
 {% multi_lang_include banners/content_card_alert.md %}
 

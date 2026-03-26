@@ -1,6 +1,6 @@
 ---
-nav_title: "OBTER: Exportar detalhes da campanha"
-article_title: "OBTER: Exportar Detalhes da Campanha"
+nav_title: "GET: Exportar detalhes da campanha"
+article_title: "GET: Exportar detalhes da campanha"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -16,7 +16,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Exporta
 
 > Use este endpoint para recuperar informações relevantes sobre uma campanha específica, que pode ser identificada pelo `campaign_id`.
 
-Se quiser recuperar dados de canvas, consulte o endpoint [Exportar informações de canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+Se quiser recuperar dados de Canvas, consulte o endpoint [Exportar informações de Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
@@ -33,7 +33,8 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Obrigatória | String | Veja [identificador da API da campanha]({{site.baseurl}}/api/identifier_types/).<br><br> O `campaign_id` para campanhas de API pode ser encontrado na página [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) e na página **Informações da campanha** dentro do seu dashboard; ou você pode usar o [endpoint "Exportar lista de campanhas"](#campaign-list-endpoint). |
-| `post_launch_draft_version` | Opcional | Booleano | Para mensagens que têm um rascunho pós-lançamento, definir isso como `true` mostrará todas as alterações de rascunho disponíveis. O padrão é `false` |
+| `post_launch_draft_version` | Opcional | booleano | Para mensagens que têm um rascunho pós-lançamento, definir isso como `true` mostrará quaisquer alterações de rascunho disponíveis. Padrão: `false`. |
+| `include_has_translatable_content` | Opcional | booleano | Quando definido como `true`, a resposta da API inclui um campo `has_translatable_content` para cada mensagem. Padrão: `false`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -66,7 +67,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
             "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
-            "name": (string) the name of the message in the dashboard (eg., "Variation 1")
+            "name": (string) the name of the message in the dashboard (for example, "Variation 1"),
+            "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
             ... channel-specific fields for this message, see the following messages section ...
         }
     },
@@ -76,24 +78,21 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 
 ### Mensagens por canal
 
-A `messages` resposta conterá informações sobre cada mensagem. O seguinte inclui respostas de mensagens de exemplo para cada canal:
+A resposta `messages` conterá informações sobre cada mensagem. A seguir, exemplos de respostas de mensagens para cada canal:
 
-#### Push
+{% tabs %}
+{% tab Content Cards %}
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
-    "name": (string) the name of the variant,
-    "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided,
-    "title": (string) the alert title text,
-    "action": (string) action link from click,
-    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
-    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
+    "channel": "content_cards",
+    "name": (string) the name of variant,
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### E-mail
+{% endtab %}
+{% tab Email %}
 
 ```json
 {
@@ -114,7 +113,12 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
 }
 ```
 
-#### Mensagem no app
+{% endtab %}
+{% tab In-app messages %}
+
+O formato da resposta depende do tipo de mensagem no app. Mensagens no app do tipo pesquisa retornam os campos `type` e `data`. Outros tipos de mensagens no app (slideup, modal e tela cheia) retornam os campos `name`, `message` e `extras`.
+
+#### Pesquisas
 
 ```json
 {
@@ -124,7 +128,7 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
             {
                 "header":
                     {
-                         "text":(string) the display text for the header of the survey,
+                         "text":(string) the display text for the header of the survey
                     }
                 "choices": [
                     {
@@ -132,7 +136,7 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
                        "text": (string) the display text,
                        "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign,
+                       "deleted": (boolean) deleted from live campaign
                     },
                     ...
                 ]
@@ -142,17 +146,47 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
 }
 ```
 
-#### Cartões de conteúdo
+#### Slideup, modal, mensagens no app em tela cheia
 
 ```json
 {
-    "channel": "content_cards",
-    "name": (string) the name of variant,
-    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
+    "channel": "in_app_message",
+    "name": (string) the name of the variant,
+    "message": (string, optional) the body text,
+    "extras": (hash, optional) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### Webhook
+{% endtab %}
+{% tab Push %}
+
+```json
+{
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
+    "alert": (string) the alert body text,
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
+}
+```
+
+{% endtab %}
+{% tab SMS %}
+
+```json
+{
+  "channel": "sms",
+  "body": (string) the payload body,
+  "from": (string) the list of numbers associated with the subscription group,
+  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
+}
+```
+
+{% endtab %}
+{% tab Webhook %}
 
 ```json
 {
@@ -165,20 +199,10 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
 }
 ```
 
-#### SMS
+{% endtab %}
+{% tab WhatsApp %}
 
-```json
-{
-  "channel": "sms",
-  "body": (string) the payload body,
-  "from": (string) the list of numbers associated with the subscription group,
-  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
-}
-```
-
-#### WhatsApp
-
-##### mensagens de modelo
+#### Mensagens de modelo
 
 ```json
 {
@@ -193,7 +217,7 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
 }
 ```
 
-##### Mensagens de resposta
+#### Mensagens de resposta
 
 ```json
 {
@@ -208,7 +232,8 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
 }
 ```
 
-#### Mensagens de controle
+{% endtab %}
+{% tab Control messages %}
 
 ```json
 {
@@ -217,11 +242,17 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
 }
 ```
 
+{% endtab %}
+{% endtabs %}
+
+
 ### Comportamentos de conversão
 
-A matriz `conversion_behaviors` contém informações sobre cada comportamento de evento de conversão definido para a campanha. Esses comportamentos estão em ordem conforme estabelecido pela campanha. Por exemplo, o Evento de Conversão A é o primeiro item da matriz, o Evento de Conversão B é o segundo, e assim por diante. Abaixo, você verá uma lista de respostas de comportamento para eventos de conversão de exemplo:
+O array `conversion_behaviors` contém informações sobre o comportamento de cada evento de conversão definido para a campanha. Esses comportamentos estão na ordem estabelecida pela campanha. Por exemplo, o Evento de Conversão A é o primeiro item no array, o Evento de Conversão B é o segundo, e assim por diante. A seguir, exemplos de respostas de comportamento para eventos de conversão:
 
-#### Clica no e-mail
+
+{% tabs %}
+{% tab Clicks email %}
 
 ```json
 {
@@ -230,7 +261,8 @@ A matriz `conversion_behaviors` contém informações sobre cada comportamento d
 }
 ```
 
-#### Abre e-mail
+{% endtab %}
+{% tab Opens email %}
 
 ```json
 {
@@ -239,7 +271,8 @@ A matriz `conversion_behaviors` contém informações sobre cada comportamento d
 }
 ```
 
-#### Faz compras (qualquer compra)
+{% endtab %}
+{% tab Makes purchase (any purchase) %}
 
 ```json
 {
@@ -248,7 +281,8 @@ A matriz `conversion_behaviors` contém informações sobre cada comportamento d
 }
 ```
 
-#### Faz compras (produto específico)
+{% endtab %}
+{% tab Makes purchase (specific product) %}
 
 ```json
 {
@@ -258,7 +292,8 @@ A matriz `conversion_behaviors` contém informações sobre cada comportamento d
 }
 ```
 
-#### Executa evento personalizado
+{% endtab %}
+{% tab Performs custom event %}
 
 ```json
 {
@@ -268,7 +303,9 @@ A matriz `conversion_behaviors` contém informações sobre cada comportamento d
 }
 ```
 
-#### Atualiza o app
+
+{% endtab %}
+{% tab Upgrades app %}
 
 ```json
 {
@@ -277,8 +314,8 @@ A matriz `conversion_behaviors` contém informações sobre cada comportamento d
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
-
-#### Usa app
+{% endtab %}
+{% tab Uses app %}
 
 ```json
 {
@@ -287,6 +324,9 @@ A matriz `conversion_behaviors` contém informações sobre cada comportamento d
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert tip %}
 Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

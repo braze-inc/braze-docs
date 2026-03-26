@@ -1,5 +1,5 @@
 ---
-nav_title: Vorgezogene Implementierung (optional)
+nav_title: Erweiterte Implementierung (optional)
 article_title: Content-Card Implementierungsleitfaden für iOS (optional) 
 platform: iOS
 page_order: 7
@@ -14,7 +14,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Suchen Sie nach dem grundlegenden Leitfaden zur Integration von Content Card Entwicklern? Finden Sie es [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
+Suchen Sie nach dem grundlegenden Leitfaden zur Integration von Content Card Entwicklern? Bitte finden Sie es. [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
 {% endalert %}
 
 # Implementierungsleitfaden für Content-Cards
@@ -444,7 +444,7 @@ Das Beispiel auf der rechten Seite zeigt eine `UICollectionView` mit einer hybri
 
 Diese Content-Card wird über eine API-getriggerte Kampagne mit API-getriggerten Schlüssel-Wert-Paaren zugestellt. Dies ist ideal für Kampagnen, bei denen die Werte der Karte von externen Faktoren abhängen, um zu bestimmen, welche Inhalte dem Nutzer angezeigt werden sollen. Beachten Sie, dass `class_type` zum Zeitpunkt der Einrichtung bekannt sein sollte.
 
-![Die Schlüssel-Wert-Paare für den Anwendungsfall mit Content-Cards. In diesem Beispiel werden verschiedene Aspekte der Karte wie "tile_id", "tile_deeplink", und "tile_title" mit Liquid eingestellt.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Die Schlüssel-Wert-Paare für den Anwendungsfall mit Content-Cards. In diesem Beispiel werden verschiedene Aspekte der"tile_title" Karte, wie z. B"tile_id","tile_deeplink",.   und  , mit Liquid festgelegt.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ##### Sind Sie bereit für die Protokollierung von Analysen?
 Im [folgenden Abschnitt](#logging-impressions-clicks-and-dismissals) wird näher beschrieben, wie der Datenfluss aussehen sollte.
@@ -529,7 +529,7 @@ Wenn eine Nachricht angeklickt wird, bestimmt `ContentCardClassType`, wie der n�
 ##### Sind Sie bereit für die Protokollierung von Analysen?
 Im [folgenden Abschnitt](#logging-impressions-clicks-and-dismissals) wird näher beschrieben, wie der Datenfluss aussehen sollte.
 
-![Unten links im Bildschirm erscheint eine interaktive Content-Card mit einer 50-Prozent-Rabattaktion. Nachdem Sie darauf geklickt haben, wird eine Aktion auf den Warenkorb angewendet.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![Unten links im Bildschirm erscheint eine interaktive Content-Card mit einer 50-Prozent-Rabattaktion. Nach dem Klick wird eine Aktion auf den Warenkorb angewendet.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### Interaktive Content-Cards
 <br>

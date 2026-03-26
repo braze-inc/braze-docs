@@ -2,7 +2,7 @@
 nav_title: Créer une bannière
 article_title: Créer une bannière
 page_order: 1
-description: "Cet article de référence explique comment créer, composer, configurer et envoyer des bannières à l'aide de campagnes et de canevas Braze."
+description: "Cet article de référence explique comment créer, composer, configurer et envoyer des bannières à l'aide des campagnes Braze et des canevas."
 tool:
   - Campaigns
 channel:
@@ -11,23 +11,23 @@ channel:
 
 # Créer une bannière
 
-> Apprenez à créer des bannières lorsque vous créez des campagnes et des canevas dans Braze. Pour plus d'informations générales, reportez-vous à la section [À propos des bannières]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
+> Découvrez comment créer des bannières lorsque vous créez des campagnes et des canevas dans Braze. Pour plus d'informations générales, reportez-vous à la section [À propos des bannières]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 
 {% alert important %}
-La création d'un message de bannière dans Canvas est en accès anticipé. Si vous souhaitez participer à cet accès anticipé, contactez votre gestionnaire de la satisfaction client.
+La création d'un message bannière dans Canvas est actuellement en accès anticipé. Si vous souhaitez participer à cet accès anticipé, contactez votre gestionnaire de la satisfaction client.
 {% endalert %}
 
 ## Conditions préalables
 
-Avant de pouvoir lancer votre Teams, votre équipe de développement doit [mettre en place des placements dans votre appli ou votre site web.]({{site.baseurl}}/developer_guide/banners/creating_placements/) Vous pouvez toujours rédiger votre campagne de bannières pendant ce temps, mais vous ne pourrez pas lancer la campagne tant que les placements n'auront pas été configurés.
+Avant de pouvoir lancer votre bannière, votre équipe de développement doit [configurer des emplacements dans votre application ou votre site Web]({{site.baseurl}}/developer_guide/banners/creating_placements/). Vous pouvez tout de même rédiger votre campagne Banner dans l'intervalle, mais vous ne pourrez pas la lancer tant que les emplacements n'auront pas été configurés.
 
-## Créer un message de bannière
+## Créer un message bannière
 
 {% multi_lang_include banners/creating_placements.md section="user" %}
 
 ### Étape 2 : Choisissez où créer votre message
 
-Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
+Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes de communication uniques et avec ciblage, tandis que les canevas conviennent mieux aux parcours utilisateur en plusieurs étapes.
 
 {% tabs %}
 {% tab Campaign %}
@@ -49,21 +49,21 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 1. [Créez votre canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l'aide du compositeur de canvas.
 2. Après avoir configuré votre canvas, ajoutez une étape du message dans le générateur de canvas. Donnez un nom clair et significatif à votre étape.
-3. Sélectionnez **Banner** comme canal d'envoi de messages.
-4. Sélectionnez un emplacement pour la bannière.
-5. Définissez la priorité de la bannière. La [priorité des bannières]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority) détermine l'ordre dans lequel les bannières sont affichées si elles partagent le même emplacement.
-6. Fixez une date d'expiration pour la bannière. Il peut s'agir d'un délai après la mise à disposition de l'étape ou d'une date et d'une heure spécifiques.
+3. Veuillez sélectionner **« Bannière** » comme canal de communication pour l'envoi de messages.
+4. Veuillez sélectionner un emplacement pour la bannière.
+5. Veuillez définir la priorité pour la bannière. La [priorité des bannières]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority) détermine l'ordre dans lequel les bannières sont affichées si elles partagent le même emplacement.
+6. Veuillez définir une date d'expiration pour la bannière. Cela peut se produire après un certain temps suivant la mise à disposition de l'étape ou à une date et une heure spécifiques.
 
 {% endtab %}
 {% endtabs %}
 
 ### Étape 3 : Composer une bannière {#compose-a-banner}
 
-Pour composer votre Bannière, vous pouvez choisir de.. :
+Pour créer votre bannière, vous avez la possibilité de :
 
 - Commencer par un modèle vide
-- Utilisez un modèle de bannière Braze
-- Sélectionnez un modèle de bannière enregistré
+- Veuillez utiliser un modèle de bannière Braze.
+- Veuillez sélectionner un modèle de bannière enregistré.
 
 ![Possibilité de choisir une bannière vierge ou un modèle.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
@@ -79,38 +79,38 @@ Pour personnaliser les propriétés de l'arrière-plan de votre message, les par
 
 #### Étape 3.2 : Définir le comportement au clic (facultatif)
 
-Lorsqu'un utilisateur clique sur un lien dans la bannière, vous pouvez choisir de le faire naviguer plus profondément dans votre application ou de le rediriger vers une autre page web. En outre, vous pouvez choisir d' [enregistrer un attribut ou un événement personnalisé]({{site.baseurl}}/developer_guide/analytics/), qui met à jour le profil de votre utilisateur avec des données personnalisées lorsqu'il clique sur la bannière.
+Lorsqu'un utilisateur clique sur un lien dans la bannière, vous pouvez choisir de le faire naviguer plus profondément dans votre application ou de le rediriger vers une autre page web. De plus, vous pouvez choisir d'[enregistrer un attribut personnalisé ou un événement personnalisé]({{site.baseurl}}/developer_guide/analytics/), qui met à jour le profil utilisateur avec des données personnalisées lorsqu'il clique sur la bannière.
 
 {% alert important %}
 {::nomarkdown}
-Le comportement au clic peut être remplacé si un élément spécifique (tel qu'un bouton, un lien ou une image, de la bannière) a son propre comportement au clic. Par exemple, compte tenu des comportements suivants lors du clic :<br><ul><li>Une bannière a un comportement au clic qui redirige vers la page d'accueil d'un site web.</li><li>Une image dans la bannière a un comportement de clic qui redirige vers la page produit d'un site web.</li></ul>Si un utilisateur clique sur l'image, il est redirigé vers la page du produit. Cependant, en cliquant sur la zone environnante de la bannière, ils sont redirigés vers la page d'accueil.
+Le comportement au clic peut être remplacé si un élément spécifique (tel qu'un bouton, un lien ou une image, de la bannière) a son propre comportement au clic. Par exemple, compte tenu des comportements suivants lors du clic :<br><ul><li>Une bannière a un comportement au clic qui redirige vers la page d'accueil d'un site web.</li><li>Une image dans la bannière a un comportement de clic qui redirige vers la page produit d'un site web.</li></ul>Si un utilisateur clique sur l'image, il est redirigé vers la page du produit. Cependant, cliquer sur la zone environnante dans la bannière les redirige vers la page d'accueil.
 {:/}
 {% endalert %}
 
 #### Étape 3.3 : Ajouter des propriétés personnalisées (facultatif) {#custom-properties}
 
-Vous pouvez ajouter des objets personnalisés à une bannière pour y attacher des métadonnées structurées, telles que des chaînes de caractères ou des objets JSON. Ces propriétés n'affectent pas l'affichage de la bannière mais sont [accessibles via le SDK de Braze]({{site.baseurl}}/developer_guide/banners/placements/) pour modifier le comportement ou l'apparence de votre application. Par exemple, vous pourriez :
+Vous pouvez ajouter des propriétés personnalisées à une bannière afin d'y associer des métadonnées structurées, telles que des chaînes de caractères ou des objets JSON. Ces propriétés n'affectent pas l'affichage de la bannière, mais sont [accessibles via le SDK Braze]({{site.baseurl}}/developer_guide/banners/placements/) afin de modifier le comportement ou l'apparence de votre application. Par exemple, vous pourriez :
 
-- Envoyez des métadonnées pour vos analyses/analytiques tierces (si utilisées comme adjectifs).
-- Utilisez des métadonnées telles qu'un objet `timestamp` ou JSON pour déclencher une logique conditionnelle.
-- Contrôlez le comportement d'une bannière en fonction des métadonnées incluses telles que `ratio` ou `format`.
+- Veuillez envoyer les métadonnées pour vos analyses/analytiques ou intégrations tierces.
+- Veuillez utiliser des métadonnées telles qu'un objet `timestamp`JSON comme déclencheur de logique conditionnelle.
+- Contrôlez le comportement d'une bannière en fonction des métadonnées incluses telles que`ratio`ou `format`.
 
-Pour ajouter une propriété personnalisée, sélectionnez **Paramètres** > **Propriétés** > **Ajouter une propriété.**
+Pour ajouter une propriété personnalisée, veuillez sélectionner **Paramètres** > **Propriétés** > **Ajouter une propriété**.
 
-![La page des propriétés montrant l'option d'ajouter la première propriété personnalisée à une campagne Banner.]({% image_buster /assets/img/banners/add_property.png %})
+![La page des propriétés présentant l'option permettant d'ajouter la première propriété personnalisée à une campagne Banner.]({% image_buster /assets/img/banners/add_property.png %})
 
-Pour chaque bien que vous souhaitez ajouter, remplissez le formulaire suivant :
+Pour chaque propriété que vous souhaitez ajouter, veuillez remplir les champs suivants :
 
 | Champ | Description | Exemple |
 |-------|-------------|---------|
-| Type de propriété | Le type de données pour la propriété. Les types pris en charge sont les suivants : chaîne de caractères, booléen, nombre, horodatage, URL d'image et objet JSON. | Chaîne de caractères |
-| Clé de propriété | L'identifiant unique du bien. Cette clé est utilisée dans le SDK pour accéder à la propriété. | `color` |
+| Type de propriété | Le type de données de la propriété. Les types pris en charge comprennent les chaînes de caractères, les booléens, les nombres, les horodatages, les URL d'images et les objets JSON. | Chaîne de caractères |
+| Clé de propriété | Identifiant unique de la propriété. Cette clé est utilisée dans le SDK pour accéder à la propriété. | `color` |
 | Valeur | La valeur attribuée à la propriété. Doit correspondre au type de propriété sélectionné. | `#FF0000` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 Lorsque vous avez terminé, sélectionnez **Terminé**.
 
-![La page des propriétés contient une chaîne de caractères dont la clé est color et la valeur #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
+![La page des propriétés avec une propriété de type chaîne de caractères dont la clé est « couleur » et la valeur#FF0000 .]({% image_buster /assets/img/banners/example_property.png %})
 
 ### Étape 4 : Créer le reste de votre campagne ou de votre Canvas
 
@@ -129,20 +129,20 @@ La [priorité des bannières]({{site.baseurl}}/user_guide/message_building_by_ch
 Si vous avez plusieurs campagnes Banner utilisant le même ID de placement, nous vous recommandons d'utiliser la fonction de tri des priorités par glisser-déposer pour définir la priorité exacte.
 {% endalert %}
 
-#### Choisissez votre audience
+#### Veuillez sélectionner votre audience
 
-1. Dans **Audiences cibles**, choisissez des segments ou des filtres pour restreindre votre audience. Vous recevez automatiquement un aperçu de la population approximative de la segmentation. L'appartenance exacte à un segment est calculée avant l'envoi du message.
+1. Dans **Publics cibles**, veuillez sélectionner des segments ou des filtres pour affiner votre audience. Vous recevez automatiquement un aperçu de la population approximative du segment. L'appartenance exacte au segment est calculée avant l'envoi du message.
 
 {% multi_lang_include target_audiences.md %}
 
 {:start="2"}
-2\. Dans **Attribuer des conversions**, suivez la fréquence à laquelle les utilisateurs effectuent des actions spécifiques après avoir reçu une campagne en définissant des événements de conversion avec une fenêtre allant jusqu'à 30 jours pour compter l'action comme une conversion.
+2\. Dans **Assign Conversions**, suivez la fréquence à laquelle les utilisateurs effectuent des actions spécifiques après avoir reçu une campagne en définissant des événements de conversion avec une fenêtre maximale de 30 jours pour compter l'action comme une conversion.
 
 {% multi_lang_include target_audiences.md %}
 
 #### Sélectionner des événements de conversion
 
-Braze vous permet de suivre les [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), c'est-à-dire la fréquence à laquelle les utilisateurs effectuent des actions spécifiques, après avoir reçu une campagne. Vous avez la possibilité d'autoriser une fenêtre de 30 jours maximum pendant laquelle une conversion est comptabilisée si l'utilisateur effectue l'action spécifiée.
+Braze vous permet de suivre [les événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), c'est-à-dire la fréquence à laquelle les utilisateurs effectuent des actions spécifiques après avoir reçu une campagne. Vous avez la possibilité d'autoriser une période maximale de 30 jours pendant laquelle une conversion est comptabilisée si l'utilisateur effectue l'action spécifiée.
 
 {% endtab %}
 
@@ -159,4 +159,4 @@ Si vous ne l’avez pas déjà fait, complétez les sections restantes de votre 
 
 ### Étape 6 : Revue et déploiement
 
-Une fois que vous avez fini de créer votre campagne ou votre Canvas, passez en revue ses détails, [testez-le]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), puis envoyez-le lorsque vous êtes prêt.
+Une fois que vous avez terminé la création de votre campagne ou de votre canvas, veuillez vérifier ses détails, [la tester]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), puis l'envoyer lorsque vous êtes prêt.

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드포인트 업데이트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 사용자의 구독 그룹 상태 업데이트 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 ---
 {% api %}
 # 사용자의 구독 그룹 상태 업데이트
@@ -15,29 +15,29 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 
 > 이 엔드포인트를 사용하여 Braze 대시보드에서 최대 50명의 사용자의 구독 상태를 일괄 업데이트할 수 있습니다.
 
-**구독 그룹 페이지**로 이동하여 구독 그룹 `subscription_group_id`에 액세스할 수 있습니다.
+**구독 그룹** 페이지로 이동하여 구독 그룹의 `subscription_group_id`에 액세스할 수 있습니다.
 
-**이메일 구독 그룹에** 대한 이 엔드포인트의 예제를 보거나 테스트하려면 다음과 같이 하세요:
+**이메일 구독 그룹**에 대한 이 엔드포인트의 예제를 보거나 테스트하려면 다음을 참조하세요:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-**SMS 및 RCS 가입 그룹에** 대한 이 엔드포인트의 예시를 보거나 테스트하려면 다음과 같이 하세요:
+**SMS 및 RCS 구독 그룹**에 대한 이 엔드포인트의 예제를 보거나 테스트하려면 다음을 참조하세요:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
-## Prerequisites
+## 필수 조건
 
 이 엔드포인트를 사용하려면 `subscription.status.set` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
 {% alert note %}
-이 엔드포인트를 [LINE 구독 그룹에]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/) 사용하려면 고객 성공 매니저에게 문의하세요.
+이 엔드포인트를 [LINE 구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/)에 사용하려면 고객 성공 매니저에게 문의하세요.
 {% endalert %}
 
 ## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
-## Request body
+## 요청 본문
 
 {% tabs %}
 {% tab SMS and RCS %}
@@ -52,10 +52,11 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
+   "use_double_opt_in_logic": (optional, boolean) defaults to `false`; when `subscription_state` is "subscribed", set to `true` to enter the user into the SMS double opt-in workflow,
    // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
-\* SMS 및 RCS 구독 그룹: Braze는 `external_id` 또는 `phone` 만 허용합니다.
+\* SMS 및 RCS 구독 그룹: Braze는 `external_id` 또는 `phone`만 허용합니다.
 
 {% endtab %}
 {% tab Email %}
@@ -78,10 +79,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endtab %}
 {% endtabs %}
 
-이 속성은 사용자의 프로필 정보를 업데이트하는 데 사용해서는 안 됩니다. 대신 [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 속성을 사용하세요.
+이 등록정보는 사용자의 프로필 정보를 업데이트하는 데 사용해서는 안 됩니다. 대신 [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 등록정보를 사용하세요.
 
 {% alert tip %}
-[사용자/트랙]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 사용하여 새 사용자를 만들 때 사용자 속성 개체 내에서 구독 그룹을 설정할 수 있으므로 한 번의 API 호출로 사용자를 만들고 구독 그룹 상태를 설정할 수 있습니다.
+**기존 사용자를 구독 그룹에 추가하기:** 이 엔드포인트는 기존 사용자의 구독 그룹 멤버십을 백필하거나 일괄 업데이트하는 데 권장되는 방법입니다. 요청당 최대 50개의 `external_id`, 이메일 주소 또는 전화번호를 전달할 수 있습니다. 사용자는 [이메일 환경설정 센터]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) 링크를 통해 직접 구독 상태를 업데이트할 수도 있습니다.
+
+**구독 그룹과 함께 새 사용자 생성하기:** [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 사용하여 새 사용자를 생성할 때 사용자 속성 오브젝트 내에서 구독 그룹을 설정할 수 있으므로, 한 번의 API 호출로 사용자를 생성하고 구독 그룹 상태를 설정할 수 있습니다.
 {% endalert %}
 
 ## 요청 매개변수
@@ -89,15 +92,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | 필수 | 문자열 | 구독 그룹의 `id`. |
-| `subscription_state` | Required | 문자열 | 사용 가능한 값은 `unsubscribed` (구독 그룹에 속하지 않음) 또는 `subscribed` (구독 그룹에 속함)입니다. |
-| `external_id` | 필수* | 문자열 배열 | 사용자(또는 사용자)의 `external_id` 에는 최대 50개의 `id`을 포함할 수 있습니다. |
-| `email` | 필수* | 문자열 또는 문자열 배열 | 사용자의 이메일 주소는 문자열 배열로 전달할 수 있습니다. 이메일 주소를 하나 이상(최대 50개) 포함해야 합니다. <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 이메일 주소를 공유하는 경우, Braze는 구독 그룹이 변경되면 이메일 주소를 공유하는 모든 사용자에게 업데이트합니다. |
-| `phone` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자의 전화번호는 문자열 배열로 전달할 수 있습니다. 전화번호를 하나 이상 포함해야 합니다(최대 50개). <br><br>동일한 워크스페이스에 있는 여러 사용자(`external_id`)가 동일한 전화번호를 공유하는 경우, Braze는 전화번호를 공유하는 모든 사용자에게 동일한 구독 그룹 변경 사항을 업데이트합니다. |
+| `subscription_state` | 필수 | 문자열 | 사용 가능한 값은 `unsubscribed`(구독 그룹에 속하지 않음) 또는 `subscribed`(구독 그룹에 속함)입니다. |
+| `external_id` | 필수* | 문자열 배열 | 사용자(또는 사용자들)의 `external_id`에는 최대 50개의 `id`를 포함할 수 있습니다. |
+| `email` | 필수* | 문자열 또는 문자열 배열 | 사용자의 이메일 주소는 문자열 배열로 전달할 수 있습니다. 이메일 주소를 하나 이상(최대 50개) 포함해야 합니다. <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 이메일 주소를 공유하는 경우, Braze는 해당 이메일 주소를 공유하는 모든 사용자의 구독 그룹 변경 사항을 업데이트합니다. |
+| `phone` | 필수* | [E.164](https://en.wikipedia.org/wiki/E.164) 형식의 문자열 | 사용자의 전화번호는 문자열 배열로 전달할 수 있습니다. 전화번호를 하나 이상(최대 50개) 포함해야 합니다. <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 전화번호를 공유하는 경우, Braze는 해당 전화번호를 공유하는 모든 사용자에게 동일한 구독 그룹 변경 사항을 업데이트합니다. |
+| `use_double_opt_in_logic` | 선택 사항 | 부울 | SMS 구독 그룹에만 적용되며, 이메일 및 기타 구독 그룹 유형에서는 무시됩니다. 생략 시 기본값은 `false`입니다. SMS 구독 그룹의 경우, 구독 상태가 `subscribed`로 설정될 때 사용자를 [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) 워크플로에 진입시키려면 `true`로 설정하세요. 이 매개변수가 생략되거나 `false`로 설정되면 사용자는 이중 옵트인 워크플로를 거치지 않고 바로 구독됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
-### Email
+### 이메일
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
@@ -127,7 +131,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## 성공 응답의 예
+## 성공 응답 예시
 
 `201` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
@@ -138,8 +142,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 ```
 
 {% alert important %}
-엔드포인트는 `email` 또는 `phone` 값만 허용하며 둘 다 허용하지 않습니다. 두 가지를 모두 제공하면 이 응답을 받게 됩니다: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+엔드포인트는 `email` 또는 `phone` 값만 허용하며 둘 다 허용하지 않습니다. 두 가지를 모두 제공하면 다음과 같은 응답을 받게 됩니다: `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 {% endapi %}
-

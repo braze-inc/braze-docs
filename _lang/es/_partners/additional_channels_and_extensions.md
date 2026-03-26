@@ -4,11 +4,11 @@ article_title: Canales y extensiones adicionales
 page_order: 11
 
 page_type: landing
-description: "En esta página se enumeran los socios de Braze (Alloys) que prestan servicios para canales y extensiones."
+description: "Esta página enumera los socios de Braze (Alloys) que ofrecen servicios de canales y extensiones."
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Additional Channels & Extensions"
+partner_top_header: "Canales y extensiones adicionales"
 
 valid_partner_list:
 - name: LiveRamp
@@ -28,14 +28,16 @@ valid_partner_list:
 - name: Pypestream
   url: /docs/partners/pypestream/
 - name: Regal
-  url: /docs/partners/pypestream/
+  url: /docs/partners/regal/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Zendesk
   url: /docs/partners/zendesk/
 - name: PassKit
   url: /docs/partners/passkit/
-- name: Himno del futuro
+- name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: Komo
   url: /docs/partners/komo/
@@ -45,7 +47,7 @@ valid_partner_list:
   url: /docs/partners/digioh/
 - name: Knak
   url: /docs/partners/knak/
-- name: EduMe
+- name: eduMe
   url: /docs/partners/edume/
 - name: Nift
   url: /docs/partners/nift/

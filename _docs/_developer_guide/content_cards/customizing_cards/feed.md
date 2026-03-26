@@ -1,5 +1,5 @@
 ---
-nav_title: Feed
+nav_title: Default feed
 article_title: Customize the feed for Content Cards
 page_order: 3
 description: "This article covers Content Card feed customization options."
@@ -25,7 +25,7 @@ platform:
 By default, the Content Card feed will automatically refresh when:
 
 - A new session is started
-- The feed is opened, and more than 60 seconds have passed since the last refresh. (This only applies to the default Content Card feed and occurs once per feed opening.)
+- The default Content Card feed is closed and reopened after more than 60 seconds have passed since the last refresh.
 
 {% alert tip %}
 To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed when they are available.

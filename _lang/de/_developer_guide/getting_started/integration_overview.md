@@ -15,11 +15,11 @@ platform:
   - Unity
 ---
 
-# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Erste Schritte: Überblick über die Integration
+# [![Braze Learning-Kurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Erste Schritte: Überblick über die Integration
 
 > Dieser Artikel bietet einen grundlegenden Überblick über den Onboarding-Prozess.
 
-![Ein Venn-Diagramm mit vier Kreisen - Entdeckung, Integration, Qualitätssicherung und Wartung - in dessen Mittelpunkt die "Zeit bis zur Wertschöpfung" steht.]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
+![Ein Venn-Diagramm mit vier Kreisen – Entdeckung, Integration, Qualitätssicherung und Wartung – mit dem Schwerpunkt „Time to Value“.]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
 
 Als technische Ressource stärken Sie Ihr Team durch die Integration von Braze in Ihren Tech-Stack. Das Onboarding gliedert sich im Wesentlichen in vier Schritte:
 * [Identifizierung und Planung](#discovery): Arbeiten Sie mit Ihrem Team zusammen, um den Projektumfang abzustimmen, eine Struktur für Daten und Kampagnen zu planen und eine geeignete Workspace-Struktur zu erstellen. 
@@ -44,7 +44,7 @@ Die Entdeckungs- und Planungsphase dauert im Durchschnitt etwa sechs Wochen. Tec
 Während der Einführungsphase Ihres Unternehmens wird Braze technische Übersichtssitzungen abhalten. Wir empfehlen Ingenieuren dringend, diese Sitzungen zu besuchen. Technische Übersichtssitzungen bieten Ihnen die Möglichkeit, Gespräche über die Skalierbarkeit der Plattformarchitektur zu führen und praktische Beispiele dafür zu sehen, wie Unternehmen Ihrer Größe mit ähnlichen Anwendungsfällen bereits erfolgreich waren.
 {% endalert %}
 
-![Symbole für verschiedene Kanäle wie E-Mail, Warenkorb, Bilder, Geolocation und so weiter.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
+![Symbole für verschiedene Kanäle, wie E-Mail, Warenkorb, Bilder, Geolocation usw.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ### Kampagnenplanung
 
@@ -97,7 +97,7 @@ Wichtig ist, dass Sie unterschiedliche Umgebungen für die Entwicklung und die P
 
 ## Integration {#integration}
 
-![Abstrakte Pyramidengrafik, die den Informationsfluss von einer Datenquelle zu einem Nutzer:in-Gerät darstellt.]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
+![Abstrakte Pyramidengrafik, die den Informationsfluss von einer Datenquelle zu einem Gerät darstellt.]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
 
 Braze unterstützt iOS-Apps, Android-Apps, Web-Apps und mehr. Sie können sich auch für ein plattformübergreifendes Wrapper SDK entscheiden, wie z. B. React Native oder Unity. In der Regel dauert eine Integration bei unseren Kunden zwischen 1 und 6 Wochen. Viele Kunden haben für die Braze-Integration nur einen einzigen Techniker benötigt. Der tatsächliche Personalaufwand hängt jedoch von den technischen Fähigkeiten der beteiligten Teammitglieder und der Bandbreite des Unternehmens ab. Letztlich kommt es darauf an, welchen Umfang Ihre spezifische Integration hat und wie viel Zeit Ihr Team dem Braze-Projekt widmet. 
 
@@ -129,7 +129,7 @@ Wenn das Braze SDK vollständig in Ihre App oder Website integriert ist, eröffn
 {% endalert %}
 
 {% alert note %}
-Um eine zusätzliche Sicherheitsebene zu schaffen, können Sie die [SDK-Authentifizierung]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) aktivieren, um unautorisierte SDK-Anfragen zu verhindern. Dieses Feature ist für alle wichtigen Plattformen verfügbar, einschließlich Internet, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) und Expo.
+Um eine zusätzliche Sicherheitsebene hinzuzufügen, können Sie [die SDK-Authentifizierung]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) aktivieren, um unbefugte SDK-Anfragen zu verhindern. Dieses Feature ist auf allen gängigen Plattformen verfügbar, einschließlich Internet, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) und Expo.
 {% endalert %}
 
 Während der Implementierung des SDK ist Folgendes zu beachten:
@@ -229,9 +229,9 @@ Aktualisierungen an der Braze-Plattform können Sie über das Braze [GitHub](htt
 
 ## SDK Rate-Limits 
 
-### Monatlich aktive Nutzer:innen CY 24-25, Universal MAU, Web MAU und Mobile MAU  
+### Monatlich aktive:r Nutzer:in CY 24-25, Universal MAU, Internet MAU und Mobile MAU  
 
-Für Kunden, die Monthly Active Users CY 24-25, Universal MAU, Web MAU und Mobile MAU erworben haben, setzt Braze serverseitige Ratenbeschränkungen für API-Anfragen durch, die von unseren SDKs zur Aktualisierung von Sitzungen, Benutzerattributen, Events und anderen Benutzerprofildaten verwendet werden. Dies dient der Stabilität der Plattform und der Aufrechterhaltung eines schnellen, zuverlässigen Dienstes. 
+Für Kunden, die Monthly Active Users CY 24-25, Universal MAU, Web MAU und Mobile MAU erworben haben, setzt Braze serverseitige Ratenbeschränkungen für API-Anfragen durch, die von unseren SDKs zur Aktualisierung von Sitzungen, Benutzerattributen, Ereignissen und anderen Benutzerprofildaten verwendet werden. Dies dient der Stabilität der Plattform und der Aufrechterhaltung eines schnellen, zuverlässigen Dienstes. 
 
 * Die stündlichen Rate-Limits richten sich nach dem erwarteten SDK-Traffic auf Ihrem Konto, der der Anzahl der monatlich aktiven Nutzer:innen (MAU), die Sie erworben haben, der Branche, der Saisonalität oder anderen Faktoren entsprechen kann. Wenn das stündliche Rate-Limit erreicht ist, drosselt Braze die Anfragen bis zur nächsten Stunde.
 * Alle Rate-Limiting-Anfragen werden vom SDK automatisch erneut versucht.
@@ -239,12 +239,25 @@ Für Kunden, die Monthly Active Users CY 24-25, Universal MAU, Web MAU und Mobil
     * Überprüfen Sie Ihre SDK-Integration, um eine übermäßige Datenerfassung zu vermeiden.
     * Blockieren Sie angepasste Daten, die für Ihre Marketing-Anwendungsfälle nicht unbedingt erforderlich sind.
 * Burst Rate-Limits sind kurzlebige Rate-Limits, die angewendet werden, wenn in einem sehr kurzen Zeitraum (d.h. innerhalb von Sekunden) eine große Anzahl von Anfragen eintrifft. Sie müssen nicht eingreifen, wenn Burst-Limits auftreten, und das SDK wird es kurz darauf erneut versuchen.
+* Konstante Rate-Limits kontrollieren das anhaltende Anfragenvolumen über einen rollierenden Zeitraum, der länger ist als das Burst-Fenster (z. B. mehrere Minuten), und tragen dazu bei, den laufenden Datenverkehr zwischen Burst-Begrenzungen und Ihrer stündlichen Rate-Begrenzung auszugleichen.
 
 ### Finden Sie Ihre Rate-Limits
 
 Um die aktuellen Grenzen auf der Grundlage des erwarteten SDK-Durchsatzes zu finden, gehen Sie zu **Einstellungen** > **APIs und Bezeichner** > **API- und SDK-Grenzen**.
 
 Die historische Nutzung finden Sie unter **Einstellungen** > **APIs und Bezeichner** > **API- und SDK-Dashboard**.
+
+### Anfrage höherer Rate-Limits
+
+Sollten Sie eine höhere Braze-Rate-Limit-Einstellung benötigen, wenden Sie sich bitte an den Braze-Support oder Ihren Customer-Success-Manager und geben Sie dabei die folgenden Details an:
+
+* Unabhängig davon, ob Sie eine vorübergehende oder dauerhafte Erhöhung benötigen.
+* Warum Sie die Erhöhung benötigen.
+* Welche Endpunkte und Umgebungen sind betroffen?
+* Bitte geben Sie Ihr voraussichtliches Verkehrsaufkommen und Ihren Zeitplan an, einschließlich Startdatum, Dauer und Spitzenzeiten.
+* Ob Sie Anrufe bündeln oder den Datenverkehr über einen längeren Zeitraum verteilen können.
+
+Nachdem Sie Ihre Anfrage eingereicht haben, prüft Braze diese und sendet Ihnen ein Update mit dem Ergebnis.
 
 ### Änderungen und Unterstützung
 
