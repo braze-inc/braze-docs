@@ -19,7 +19,7 @@ Deleting users is currently in early access. Contact your customer success manag
 
 To delete users, you must be an admin or have the **Delete Users** permission. To view user deletion records, you must be an admin or have the **View User Deletion Records** permission. The following permissions control user deletion and deletion records:
 
-| Permission | Description |
+| Requirement | Description |
 |------------|-------------|
 | "Delete Users" | Permanently delete users individually or in bulk. |
 | "View User Deletion Records" | View user deletion records. |
