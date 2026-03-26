@@ -1,13 +1,13 @@
 ---
-nav_title: Connect data sources
-article_title: Connect data sources
-page_order: 1
-description: "Learn how to connect customer data sources to BrazeAI Decisioning Studio Pro for personalized AI decisioning."
+nav_title: Connect your data
+article_title: Connect your data
+page_order: 6
+description: "Learn how to connect customer data sources to BrazeAI Decisioning Studio for personalized AI decisioning."
 ---
 
-# Connect data sources
+# Connect your data
 
-> BrazeAI Decisioning Studio™ Pro agents need to fully understand customer context in order to make effective decisions. This article explains how to connect customer data sources to Decisioning Studio Pro.
+> BrazeAI Decisioning Studio™ agents need to fully understand customer context in order to make effective decisions. This article explains how to connect customer data sources to Decisioning Studio.
 
 {% alert tip %}
 Your AI Decisioning Services team will support you in configuring data connections for optimal performance.
@@ -15,7 +15,7 @@ Your AI Decisioning Services team will support you in configuring data connectio
 
 ## Supported integration patterns
 
-Decisioning Studio Pro supports multiple integration patterns for connecting customer data:
+Decisioning Studio supports multiple integration patterns for connecting customer data:
 
 | Integration pattern | Best for | Setup complexity |
 |---------------------|----------|------------------|
@@ -41,7 +41,7 @@ The following customer data assets help agents personalize more effectively:
 The more information agents have about your customers, the better they will perform. Consider including data on any insights that would be particularly important to your business (for example, do you want to see how AI treats your loyalty customers differently? Make sure loyalty status is in the customer data).
 {% endalert %}
 
-## Connecting data by platform
+## Connect data by platform
 
 {% tabs %}
 {% tab Braze %}
@@ -122,10 +122,10 @@ If this is feasible, we can provide a GCS bucket to export customer data to that
 
 ## Best practices
 
-- **Descriptive column names**: Customer data should have clear, descriptive column names. Ideally, a data dictionary should be provided.
-- **Incremental updates**: Incremental files are preferable versus snapshots of the whole customer history every day
-- **Consistent identifiers**: Each record must contain a unique customer identifier that is consistent across all data assets
-- **Include timestamps**: Records should have associated timestamps for accurate attribution and agent training
+- **Descriptive column names:** Customer data should have clear, descriptive column names. Ideally, a data dictionary should be provided.
+- **Incremental updates:** Incremental files are preferable versus snapshots of the whole customer history every day
+- **Consistent identifiers:** Each record must contain a unique customer identifier that is consistent across all data assets
+- **Include timestamps:** Records should have associated timestamps for accurate attribution and agent training
 
 ## Custom integrations
 
@@ -139,5 +139,4 @@ This guide explains the most common integration patterns. Information Security w
 
 After connecting your data sources, proceed to set up orchestration:
 
-- [Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
-
+- [Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/orchestration_setup/)
