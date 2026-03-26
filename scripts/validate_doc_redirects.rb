@@ -11,7 +11,6 @@
 #
 # Requires: git, bundler, gems from Gemfile (Jekyll). Uses a temporary git worktree for the base ref.
 
-require "English"
 require "fileutils"
 require "json"
 require "open3"
@@ -20,7 +19,12 @@ require "set"
 require "tempfile"
 require "tmpdir"
 
-REPO_ROOT = `git -C "#{Dir.pwd}" rev-parse --show-toplevel`.strip
+REPO_ROOT = begin
+  out, err, st = Open3.capture3("git", "rev-parse", "--show-toplevel")
+  raise "Failed to determine repository root. Is this a git checkout?\n#{err}" unless st.success?
+
+  out.strip
+end
 DUMP_SCRIPT = File.expand_path("jekyll_url_map_dump.rb", __dir__)
 REDIRECT_REL = "assets/js/broken_redirect_list.js"
 RX_VALIDURL = /validurls\['([^']+)'\]\s*=\s*'([^']*)'(?:;)?/
@@ -188,7 +192,7 @@ end
 def validate!(options)
   base_ref = options[:base]
 
-  if options[:fetch] && base_ref.start_with?("origin/")
+  if options[:fetch] && base_ref.match?(/\Aorigin\/[\w\-\.\/]+\z/)
     sh!("git", "fetch", "--quiet", "origin", base_ref.delete_prefix("origin/"))
   end
 
@@ -204,8 +208,12 @@ def validate!(options)
     puts "Building URL map for HEAD…"
     map_head = jekyll_url_map(REPO_ROOT)
   ensure
-    system("git", "-C", REPO_ROOT, "worktree", "remove", "-f", worktree, out: File::NULL, err: File::NULL)
+    success = system("git", "-C", REPO_ROOT, "worktree", "remove", "-f", worktree, out: File::NULL, err: File::NULL)
     FileUtils.remove_entry(tmp_parent, true)
+    unless success
+      system("git", "-C", REPO_ROOT, "worktree", "prune", out: File::NULL, err: File::NULL)
+      raise "Failed to remove git worktree at #{worktree}"
+    end
   end
 
   # Use resolve_ref (the exact SHA) so the diff is guaranteed to be based on
