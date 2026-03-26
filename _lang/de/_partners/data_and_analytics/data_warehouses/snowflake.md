@@ -2,35 +2,41 @@
 nav_title: Snowflake
 article_title: Snowflake
 alias: /partners/snowflake/
-description: "Dieser Artikel referenziert die Partnerschaft zwischen Braze und Snowflake, einem speziell entwickelten SQL Data Warehouse in der Cloud für alle Ihre Daten und Nutzer:innen."
+description: "Dieser Artikel beschreibt die Partnerschaft zwischen Braze und Snowflake und behandelt sowohl Data Sharing (Braze zu Snowflake) als auch Cloud-Datenaufnahme (Snowflake zu Braze)."
 page_type: partner
 search_tag: Partner
 
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) ist ein speziell entwickeltes SQL Data Warehouse in der Cloud, das als Software-as-a-Service (SaaS) angeboten wird. Snowflake bietet ein Data Warehouse, das schneller, benutzerfreundlicher und wesentlich flexibler ist als herkömmliche Data-Warehouse-Angebote. Mit der einzigartigen und patentierten Architektur von Snowflake ist es ein Leichtes, all Ihre Daten zu sammeln, schnelle Analytics zu ermöglichen und datengestützte Insights für alle Ihre Nutzer:innen zu gewinnen.
 
-Personalisierte und relevante Marketingkampagnen erfordern einen sofortigen Zugriff auf Daten. Deshalb hat sich Braze mit Snowflake zusammengetan, um Data Sharing zu ermöglichen. Dieses gemeinsame Angebot ermöglicht es Marketern, das Potenzial ihrer Customer-Engagement- und Kampagnendaten schneller als je zuvor zu erschließen.
+Braze bietet zwei Integrationen mit Snowflake an. Zusammen ermöglichen sie eine vollständige, bidirektionale Datenpipeline zwischen Ihren Braze- und Snowflake-Umgebungen.
 
-Die [Integration von Braze und Snowflake](https://www.braze.com/perspectives/article/snowflake-partner-announcement) nutzt den Datenaustausch von Snowflake, um eine Präsenz aufzubauen, neue Kund:innen zu finden und die Reichweite durch den ständig wachsenden Snowflake-Kundenstamm zu erweitern.
+## Eine Integration auswählen
 
-{% alert tip %}
-**Sind Sie daran interessiert, auf Daten auf Snowflake-Ebene zuzugreifen, ohne ein Snowflake-Konto zu benötigen?**<br>Sehen Sie sich die [Snowflake Reader Accounts]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts) an. Mit Reader Accounts erstellt Braze ein Konto, gibt Ihre Daten darin frei und stellt Ihnen Zugangsdaten zur Verfügung, mit denen Sie sich anmelden und auf Ihre Daten zugreifen können. Dadurch werden Data Sharing und Nutzungsabrechnung vollständig von Braze übernommen.
-{% endalert %}
+### Data Sharing (Braze zu Snowflake)
 
-## Was ist Data Sharing?
+Snowflake [Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_sharing/) bietet Ihnen sicheren Realtime-Zugriff auf Braze-Engagement- und Kampagnendaten direkt in Ihrer Snowflake-Instanz. Es werden keine Daten zwischen Konten kopiert oder übertragen – die gesamte Freigabe erfolgt über die einzigartige Dienstebene und den Metadaten-Store von Snowflake.
 
-Die Snowflake-Funktionalität [Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) erlaubt es Braze, Ihnen sicheren Zugriff auf die Daten in unserem Snowflake-Portal zu gewähren – ohne Reibungen oder Verlangsamungen im Workflow, ohne Fehlerpunkte und ohne unnötige Kosten, wie sie bei typischen Datenanbieter-Beziehungen auftreten. Data Sharing kann über die folgende Integration oder über [Snowflake Reader Accounts]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts) eingerichtet werden.
+**Verwenden Sie Data Sharing, wenn Sie Folgendes möchten:**
+- Braze-Ereignis- und Kampagnendaten mit Snowflake SQL abfragen
+- Komplexe Berichte erstellen und Attributionsmodellierung durchführen
+- Braze-Daten mit anderen Daten in Ihrem Snowflake Data Warehouse verknüpfen
+- Ihre Engagement-Daten über Kanäle, Branchen und Geräteplattformen hinweg vergleichen
 
-- **Reduzieren Sie die Zeit bis zu Insights**<br>Verabschieden Sie sich von ETL-Prozessen, deren Aufbau Wochen dauert. Die einzigartigen Architekturen von Braze und Snowflake machen alle Customer-Engagement- und Kampagnendaten sofort zugänglich und abfragbar, sobald sie im Data Lake ankommen. Es werden keine Daten kopiert oder verschoben, sodass Sie Kundenerlebnisse auf Grundlage der relevantesten und aktuellsten Informationen bereitstellen können.
-- **Keine Datensilos mehr**<br>Schaffen Sie eine ganzheitliche Sicht auf Ihre Kund:innen über alle Kanäle und Plattformen hinweg. Durch Data Sharing ist es einfacher als je zuvor, Ihre Braze Customer-Engagement-Daten mit all Ihren anderen Snowflake-Daten zu verbinden. So erhalten Sie umfassendere Insights aus einer einzigen, zuverlässigen Quelle der Wahrheit.
-- **Sehen Sie, wie Ihr Engagement im Vergleich abschneidet**<br>Optimieren Sie Ihre Customer-Engagement-Strategien mit Braze Benchmarks. Dieses interaktive Tool, unterstützt von Braze und Snowflake, ermöglicht es Ihnen, die Engagement-Daten Ihrer Marke mit Benchmarks über Kanäle, Branchen und Geräteplattformen hinweg zu vergleichen.
+Einrichtungsanweisungen finden Sie unter [Snowflake Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_sharing/).
 
-Beim Data Sharing werden keine tatsächlichen Daten zwischen Konten kopiert oder übertragen. Die gesamte Freigabe erfolgt über die einzigartige Dienstebene und den Metadaten-Store von Snowflake. Dies ist ein wichtiges Konzept, da gemeinsam genutzte Daten keinen Speicherplatz in einem Verbraucher:innen-Konto beanspruchen und daher nicht zu den monatlichen Gebühren für die Datenspeicherung beitragen. Den Verbraucher:innen entstehen **lediglich** Kosten für die Rechenressourcen (z. B. virtuelle Warehouses), die zur Abfrage der gemeinsam genutzten Daten verwendet werden.
+### Cloud-Datenaufnahme (Snowflake zu Braze)
 
-Darüber hinaus kann der Zugriff auf die von Braze freigegebenen Daten mithilfe der in Snowflake integrierten Rollen- und Berechtigungsfunktionen kontrolliert und geregelt werden – mit den Zugriffskontrollen, die bereits für Ihr Snowflake-Konto und die darin enthaltenen Daten eingerichtet wurden. Der Zugriff kann genauso eingeschränkt und überwacht werden wie bei Ihren eigenen Daten.
+[Cloud-Datenaufnahme (CDI)]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) ermöglicht es Ihnen, Daten aus Ihrer Snowflake-Instanz direkt mit Braze zu synchronisieren. So können Sie Nutzerattribute, Ereignisse und Käufe in Braze mit Ihrem Data Warehouse als Single Source of Truth auf dem neuesten Stand halten.
+
+**Verwenden Sie die Cloud-Datenaufnahme, wenn Sie Folgendes möchten:**
+- Nutzerattribute von Snowflake mit Braze-Nutzerprofilen synchronisieren
+- Ereignis- oder Kaufdaten von Snowflake an Braze senden
+- Braze mit Datentransformationen synchron halten, die in Ihrem Data Warehouse stattfinden
+- Den Aufbau und die Wartung angepasster ETL-Pipelines von Snowflake zu Braze vermeiden
 
 Mehr über Data Sharing bei Snowflake erfahren Sie unter [Einführung in Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
 
@@ -46,7 +52,7 @@ Bevor Sie dieses Feature nutzen können, müssen Sie Folgendes abschließen:
 
 ## Secure Data Sharing einrichten
 
-Bei Snowflake findet Data Sharing zwischen einem [Datenanbieter](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) und einem [Datenverbraucher](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers) statt. In diesem Kontext ist Ihr Braze-Konto der Datenanbieter, da es den Datashare erstellt und versendet – während Ihr Snowflake-Konto der Datenverbraucher ist, da es den Datashare verwendet, um eine Datenbank zu erstellen. Weitere Einzelheiten finden Sie unter [Snowflake: Gemeinsame Daten nutzen](https://docs.snowflake.com/en/user-guide/data-share-consumers).
+Bei Snowflake findet Data Sharing zwischen einem [Datenanbieter](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) und einem [Datenverbraucher](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers) statt. In diesem Kontext ist Ihr Braze-Konto der Datenanbieter, da es den Datashare erstellt und versendet&#8212;während Ihr Snowflake-Konto der Datenverbraucher ist, da es den Datashare verwendet, um eine Datenbank zu erstellen. Weitere Einzelheiten finden Sie unter [Snowflake: Gemeinsame Daten nutzen](https://docs.snowflake.com/en/user-guide/data-share-consumers).
 
 ### 1. Schritt: Senden Sie den Datashare von Braze
 
@@ -92,7 +98,7 @@ Beachten Sie die folgenden Unterschiede zwischen den Namenskonventionen von Braz
 | Braze-Schema | Snowflake-Schema | Beschreibung |
 | ----------- | ----------- | ----------- |
 | `braze_id` | `"USER_ID"` | Der eindeutige Bezeichner, der automatisch von Braze zugewiesen wird. |
-| `external_id` | `"EXTERNAL_USER_ID"` | Der eindeutige Bezeichner des Profils einer Nutzerin oder eines Nutzers, der von der Kundschaft festgelegt wird. |
+| `external_id` | `"EXTERNAL_USER_ID"` | Der eindeutige Bezeichner eines Nutzerprofils, der von der Kundschaft festgelegt wird. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Wichtige Informationen und Einschränkungen
@@ -141,3 +147,5 @@ Das Archiv der historischen Ereignisdaten in Snowflake reicht bis April 2019 zur
 Die Geschwindigkeit, Performance und Kosten jeder Abfrage, die auf den Daten ausgeführt wird, hängen von der Warehouse-Größe ab, die Sie zur Abfrage der Daten verwenden. Je nachdem, auf wie viele Daten Sie für Analytics zugreifen, kann es vorkommen, dass Sie eine größere Warehouse-Größe verwenden müssen, damit die Abfrage erfolgreich ist. Snowflake verfügt über ausgezeichnete Ressourcen zur Bestimmung der richtigen Größe, darunter [Übersicht über Warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) und [Überlegungen zu Warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html).
 
 > Eine Reihe von Beispielabfragen, auf die Sie bei der Einrichtung von Snowflake zurückgreifen können, finden Sie in unseren [Beispielabfragen]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) und Beispielen für die [Einrichtung der ETL-Ereignis-Pipeline]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/).
+
+Einrichtungsanweisungen finden Sie unter [Cloud-Datenaufnahme: Data-Warehouse-Integrationen]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/).

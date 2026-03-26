@@ -110,7 +110,7 @@ Les messages média RCS vous permettent d'utiliser des formats média attrayants
 | Type de fichier | Spécifications |
 | --- | --- |
 | Tous | - La taille des fichiers est limitée à 100 Mo <br><br>- L'URL du fichier peut comporter jusqu'à 2 048 caractères |
-| Fichiers images | Les formats pris en charge sont JPG, JPEG et GIF.
+| Fichiers images | Les formats pris en charge sont JPG, JPEG et GIF |
 | Fichiers vidéo | Les formats pris en charge sont H263, M4V, MP4, MPEG-4, MPEG et WEBM |
 | Fichiers de documents | Format pris en charge : PDF |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

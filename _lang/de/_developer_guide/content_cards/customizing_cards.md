@@ -4,18 +4,18 @@ nav_title: Karten anpassen
 description: "Erfahren Sie mehr über die Anpassung von Content-Cards für das Braze SDK."
 layout: dev_guide
 
-guide_top_header: "Anpassen von Content-Cards"
-guide_top_text: "Erfahren Sie mehr über die Anpassung von Content-Cards für das Braze SDK."
+guide_top_header: "Content-Cards anpassen"
+guide_top_text: "> Erfahren Sie mehr über die Anpassung von Content-Cards für das Braze SDK."
 
 guide_featured_title: "Artikel in diesem Abschnitt"
 guide_featured_list:
-- name: Anpassen des Kartenstils
+- name: Kartenstil anpassen
   link: /docs/developer_guide/content_cards/customizing_cards/style/
   image: /assets/img/braze_icons/edit-03.svg
-- name: Anpassen des Kartenverhaltens
+- name: Kartenverhalten anpassen
   link: /docs/developer_guide/content_cards/customizing_cards/behavior/
   image: /assets/img/braze_icons/sliders-01.svg
-- name: Passen des Karten-Feeds
+- name: Standard-Feed anpassen
   link: /docs/developer_guide/content_cards/customizing_cards/feed/
   image: /assets/img/braze_icons/layout-grid-01.svg
 ---

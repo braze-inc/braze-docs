@@ -58,6 +58,10 @@ glossaries:
     description: ユーザープロファイルが作成された時期でユーザーをセグメント化します。ユーザーが CSV または API によって追加された場合、このフィルターは追加された日付を反映します。ユーザーが CSV または API によって追加されておらず、SDK によって最初のセッションが追跡されている場合、このフィルターはその最初のセッションの日付を反映します。
     tags:
       - Other Filters
+  - name: Created From
+    description: "ユーザープロファイルが作成された場所によってユーザーをセグメント化します。<br><br>以下の値がサポートされています:<br>- SDK (<code>sdk</code>): Braze SDK を通じて作成されたユーザープロファイル。<br>- REST API (<code>rest</code>): Braze REST API を通じて作成されたユーザープロファイル。<br>- プッシュトークンインポート (<code>pti</code>): プッシュトークンインポートを通じて作成されたユーザープロファイル。<br>- CSV (<code>csv</code>): CSV インポートを通じて作成されたユーザープロファイル。<br>- デモ (<code>demo</code>): デモデータを通じて作成されたユーザープロファイル。<br>- SMS (<code>sms</code>): SMS を通じて作成されたユーザープロファイル。<br>- Shopify (<code>shopify</code>): Shopify を通じて作成されたユーザープロファイル。<br>- WhatsApp (<code>whats_app</code>): WhatsApp を通じて作成されたユーザープロファイル。<br>- プロバイダーイベント (<code>provider_event</code>): プロバイダーイベントを通じて作成されたユーザープロファイル。<br>- プロバイダー同期 (<code>provider_sync</code>): プロバイダー同期を通じて作成されたユーザープロファイル。<br>- ランディングページ (<code>landing_page</code>): ランディングページを通じて作成されたユーザープロファイル。"
+    tags:
+      - Other Filters
   - name: Nested Custom Attributes
     description: "カスタム属性のプロパティである属性です。<br><br>階層化された時間のカスタム属性にフィルターを適用する場合、基準として「年間通算日」または「時刻」を選択できます。「年間通算日」は比較対象として月と日のみを確認します。「時刻」は、年を含む完全なタイムスタンプを比較します。"
     tags:
@@ -159,7 +163,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Has Never Received a Message from Campaign or Canvas Step
-    description: キャンペーンまたはキャンバスコンポーネントを受信したかどうかによって、ユーザーをセグメント化します。
+    description: キャンペーンまたはキャンバスコンポーネントを受信したことがあるかどうかによって、ユーザーをセグメント化します。
     tags:
       - Retargeting
   - name: Last Received Email
@@ -279,7 +283,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Email Available
-    description: "ユーザーを、有効なメールアドレスを持っているかどうか、およびメール配信の購読またはオプトインの有無によってセグメント化します。このフィルターは、ユーザーがメールの配信停止をしているか、Braze がハードバウンスを受け取っているか、メールがスパムとしてマークされているかの 3 つの条件をチェックします。これらの条件のいずれかが満たされる場合、またはユーザーにメールが存在しない場合、そのユーザーは含まれません。<br><br>メールが利用可能なユーザーが <code>false</code> の場合、キャンペーンのオーディエンスから除外され、メールを受け取りません。たとえ送信設定がすべてのユーザー (配信停止ユーザーを含む) に送信するよう設定されていても同様です。<br><br>オプトインステータスが重要なメールについては、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">メールアドレス</a>の代わりに「利用可能なメール」を使用してください。追加の条件は、メールを受け取る資格があるユーザーをターゲットにするのに役立ちます。"
+    description: "ユーザーを、有効なメールアドレスを持っているかどうか、およびメール配信の購読またはオプトインの有無によってセグメント化します。このフィルターは、ユーザーがメールの配信停止をしているか、Braze がハードバウンスを受け取っているか、メールがスパムとしてマークされているかの 3 つの条件をチェックします。これらの条件のいずれかが満たされる場合、またはユーザーにメールが存在しない場合、そのユーザーは含まれません。<br><br>「利用可能なメール」が <code>false</code> のユーザーは、キャンペーンのオーディエンスから除外され、メールを受け取りません。たとえ送信設定がすべてのユーザー (配信停止ユーザーを含む) に送信するよう設定されていても同様です。<br><br>オプトインステータスが重要なメールについては、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">メールアドレス</a>の代わりに「利用可能なメール」を使用してください。追加の条件は、メールを受け取る資格があるユーザーをターゲットにするのに役立ちます。"
     tags:
       - Channel subscription behavior
   - name: Email Opt In Date

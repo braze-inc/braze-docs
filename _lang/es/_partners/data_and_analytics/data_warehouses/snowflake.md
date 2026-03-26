@@ -2,35 +2,41 @@
 nav_title: Snowflake
 article_title: Snowflake
 alias: /partners/snowflake/
-description: "Este artículo de referencia describe la asociación entre Braze y Snowflake, un almacén de datos en la nube SQL creado específicamente para todos tus datos y usuarios."
+description: "Este artículo describe la asociación entre Braze y Snowflake, cubriendo tanto la compartición de datos (de Braze a Snowflake) como la ingesta de datos en la nube (de Snowflake a Braze)."
 page_type: partner
 search_tag: Partner
 
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) es un almacén de datos SQL en la nube creado específicamente y proporcionado como software como servicio (SaaS). Snowflake proporciona un almacén de datos más rápido, fácil de usar y mucho más flexible que las ofertas tradicionales de almacén de datos. Con la arquitectura única y patentada de Snowflake, es fácil acumular todos tus datos, habilitar análisis rápidos y obtener información basada en datos para todos tus usuarios.
 
-Las campañas de marketing personalizadas y relevantes requieren acceso a los datos en el momento. Por eso Braze se asoció con Snowflake para lanzar el intercambio de datos. Esta oferta conjunta permite a los especialistas en marketing liberar el potencial de sus datos de interacción con los clientes y de campañas más rápido que nunca.
+Braze ofrece dos integraciones con Snowflake. Juntas, proporcionan un pipeline de datos bidireccional completo entre tus entornos de Braze y Snowflake.
 
-La [integración de Braze y Snowflake](https://www.braze.com/perspectives/article/snowflake-partner-announcement) aprovecha el intercambio de datos de Snowflake para construir una presencia, encontrar nuevos clientes y ampliar el alcance a través de la creciente base de clientes de Snowflake.
+## Elegir una integración
 
-{% alert tip %}
-**¿Te interesa tener acceso a los datos a nivel de Snowflake sin necesidad de tener una cuenta de Snowflake?**<br>Consulta las [cuentas de lector de Snowflake]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts). Con las cuentas de lector, Braze creará y compartirá tus datos en una cuenta y te proporcionará credenciales para iniciar sesión y acceder a tus datos. De este modo, todos los datos compartidos y la facturación por uso serán gestionados íntegramente por Braze.
-{% endalert %}
+### Compartición de datos (de Braze a Snowflake)
 
-## ¿Qué es la compartición de datos?
+La [compartición segura de datos]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_sharing/) de Snowflake te da acceso seguro y en tiempo real a los datos de interacción y campañas de Braze directamente en tu instancia de Snowflake. No se copian ni transfieren datos entre cuentas: toda la compartición se realiza a través de la capa de servicios y el almacén de metadatos únicos de Snowflake.
 
-La funcionalidad de [compartición segura de datos](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) de Snowflake permite a Braze darte acceso seguro a los datos de nuestro portal Snowflake sin preocuparte por la fricción o ralentización del flujo de trabajo, los puntos de fallo y los costes innecesarios que conllevan las relaciones típicas con los proveedores de datos. La compartición de datos puede configurarse mediante la siguiente integración o a través de las [cuentas de lector de Snowflake]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts).
+**Usa la compartición de datos cuando quieras:**
+- Consultar datos de eventos y campañas de Braze usando SQL de Snowflake
+- Crear informes complejos y realizar modelos de atribución
+- Unir datos de Braze con otros datos en tu almacén de Snowflake
+- Comparar tus datos de interacción entre canales, sectores y plataformas de dispositivos
 
-- **Reduce el tiempo para obtener información**<br>Di adiós a los procesos ETL que tardan semanas en crearse. Las arquitecturas únicas de Braze y Snowflake hacen que todos los datos de interacción con los clientes y de campañas sean inmediatamente accesibles y consultables desde el instante en que llegan al data lake. No se copian ni se trasladan datos, por lo que puedes entregar experiencias del cliente basadas únicamente en la información más relevante y actualizada.
-- **Elimina los silos de datos**<br>Crea una visión holística de tus clientes a través de canales y plataformas. La compartición de datos hace que unir tus datos de interacción con los clientes de Braze con el resto de tus datos de Snowflake sea más fácil que nunca, creando información más rica a través de una única fuente fiable de la verdad.
-- **Comprueba cómo funciona tu interacción**<br>Optimiza tus estrategias de interacción con los clientes con Braze Benchmarks. Esta herramienta interactiva, desarrollada por Braze y Snowflake, te permite comparar los datos de interacción de tu marca con puntos de referencia de distintos canales, sectores y plataformas de dispositivos.
+Para instrucciones de configuración, consulta [Compartición de datos de Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_sharing/).
 
-Con la compartición de datos, no se copian ni transfieren datos reales entre cuentas. Todo el intercambio se realiza a través de la capa de servicios y el almacén de metadatos únicos de Snowflake. Se trata de un concepto importante porque los datos compartidos no ocupan almacenamiento en la cuenta del consumidor y, por tanto, no contribuyen a los gastos mensuales de almacenamiento de datos del consumidor. **Lo único que** se cobra a los consumidores son los recursos informáticos (como los almacenes virtuales) utilizados para consultar los datos compartidos.
+### Ingesta de datos en la nube (de Snowflake a Braze)
 
-Además, utilizando las funciones y permisos incorporados de Snowflake, el acceso a los datos compartidos desde Braze puede controlarse y gobernarse utilizando los controles de acceso ya existentes para tu cuenta de Snowflake y los datos que contiene. El acceso puede restringirse y monitorizarse del mismo modo que tus propios datos.
+La [ingesta de datos en la nube (CDI)]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) te permite sincronizar datos desde tu instancia de Snowflake directamente en Braze. Esto te permite mantener los atributos de usuario, eventos y compras en Braze actualizados con tu almacén de datos como fuente de la verdad.
+
+**Usa la ingesta de datos en la nube cuando quieras:**
+- Sincronizar atributos de usuario desde Snowflake a perfiles de usuario de Braze
+- Enviar datos de eventos o compras desde Snowflake a Braze
+- Mantener Braze sincronizado con las transformaciones de datos que ocurren en tu almacén
+- Evitar construir y mantener pipelines ETL personalizados de Snowflake a Braze
 
 Para saber más sobre la compartición de datos de Snowflake, consulta [Introducción a la compartición segura de datos](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
 
@@ -126,7 +132,7 @@ Braze aloja actualmente todos los datos de usuario en las regiones de Snowflake 
 
 Los datos que tengan más de dos años se archivarán y se trasladarán a un almacenamiento a largo plazo. Como parte del proceso de archivo, todos los eventos se anonimizan y se elimina cualquier campo confidencial de información personal identificable (PII) (esto incluye campos PII opcionales como `properties`). Los datos archivados siguen conteniendo el campo `user_id`, que permite el análisis por usuario de todos los datos de eventos.
 
-Podrás consultar los datos de los dos últimos años de cada evento en la vista correspondiente de `USERS_*_SHARED`. Además, cada evento tendrá una vista `USERS_*_SHARED_ALL` que puede consultarse para obtener datos anonimizados y no anonimizados.
+Podrás consultar los datos de los dos últimos años de cada evento en la vista correspondiente `USERS_*_SHARED`. Además, cada evento tendrá una vista `USERS_*_SHARED_ALL` que puede consultarse para obtener datos tanto anonimizados como no anonimizados.
 
 #### Datos históricos
 
@@ -141,3 +147,5 @@ El archivo de datos históricos de eventos en Snowflake se remonta a abril de 20
 La velocidad, el rendimiento y el coste de cualquier consulta realizada sobre los datos vienen determinados por el tamaño del almacén que utilices para consultar los datos. En algunos casos, dependiendo de la cantidad de datos a los que accedas para el análisis, puede que necesites utilizar un almacén de mayor tamaño para que la consulta tenga éxito. Snowflake dispone de excelentes recursos sobre la mejor forma de determinar qué tamaño utilizar, entre los que se incluyen [Resumen de los almacenes](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) y [Consideraciones sobre los almacenes](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html).
 
 > Si quieres consultar un conjunto de consultas de ejemplo para configurar Snowflake, echa un vistazo a nuestros ejemplos de [consultas de ejemplo]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) y de [configuración de canalización de eventos ETL]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/).
+
+Para instrucciones de configuración, consulta [Ingesta de datos en la nube: integraciones de almacén de datos]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/).
