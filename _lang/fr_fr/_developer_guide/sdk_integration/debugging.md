@@ -15,7 +15,7 @@ Pour une analyse plus approfondie, vous pouvez également [activer la journalisa
 
 ## Conditions préalables
 
-Pour utiliser le débogueur du SDK de Braze, vous devez disposer des autorisations granulaires « View PII » et « View User Profiles (PII Redacted) » (ou de l'autorisation héritée « View User Profiles PII Compliant »). Pour télécharger les journaux de vos sessions de débogage, vous aurez également besoin de l'autorisation « Export User Data ». De plus, votre SDK Braze doit être conforme ou pointer vers les versions minimales suivantes : 
+Pour utiliser le débogueur du SDK de Braze, vous devez disposer des autorisations granulaires « Voir les données personnelles » et « Voir les profils utilisateurs (données personnelles masquées) » (ou de l'autorisation héritée « Voir les profils utilisateurs conformes aux données personnelles »). Pour télécharger les journaux de vos sessions de débogage, vous aurez également besoin de l'autorisation « Exporter les données utilisateur ». De plus, votre SDK Braze doit être conforme ou pointer vers les versions minimales suivantes : 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 

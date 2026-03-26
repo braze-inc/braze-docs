@@ -15,7 +15,7 @@ Für eine eingehendere Untersuchung können Sie auch [die ausführliche Protokol
 
 ## Voraussetzungen
 
-Um den Braze SDK-Debugger nutzen zu können, benötigen Sie die granularen Berechtigungen „View PII" und „View User Profiles (PII Redacted)" (oder die Legacy-Berechtigung „View User Profiles PII Compliant"). Um Ihre Debugging-Sitzungsprotokolle herunterzuladen, benötigen Sie außerdem die Berechtigung „Export User Data". Darüber hinaus muss Ihr Braze SDK die folgenden Mindestversionen erfüllen oder darauf verweisen: 
+Um den Braze SDK-Debugger nutzen zu können, benötigen Sie die granularen Berechtigungen „PII anzeigen" und „Nutzerprofile anzeigen (PII geschwärzt)" (oder die Legacy-Berechtigung „Nutzerprofile PII-konform anzeigen"). Um Ihre Debugging-Sitzungsprotokolle herunterzuladen, benötigen Sie außerdem die Berechtigung „Nutzerdaten exportieren". Darüber hinaus muss Ihr Braze SDK die folgenden Mindestversionen erfüllen oder darauf verweisen: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 

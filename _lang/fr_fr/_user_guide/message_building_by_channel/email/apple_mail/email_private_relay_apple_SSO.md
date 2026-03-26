@@ -20,7 +20,7 @@ Si un utilisateur décide de désactiver le transfert d'e-mails vers l'adresse r
 {% tabs %}
 {% tab SendGrid %}
 
-## Configurer SendGrid 
+## Configurer SendGrid
 
 Si vous utilisez SendGrid comme fournisseur d'e-mail, vous pouvez envoyer des e-mails à Apple sans modifier le DNS. 
 
@@ -56,7 +56,7 @@ Si un domaine d'envoi est également utilisé comme domaine de rebond, vous ne p
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-Pour éviter les échecs SPF, vous devez créer les enregistrements MX et TXT et les faire propager dans le dns **avant** de supprimer l'enregistrement CNAME.
+Pour éviter les échecs SPF, vous devez créer les enregistrements MX et TXT et les faire propager dans le DNS **avant** de supprimer l'enregistrement CNAME.
 {% endalert %}
 
 {:start="2"}
