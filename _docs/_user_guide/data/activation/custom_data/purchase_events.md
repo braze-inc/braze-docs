@@ -11,13 +11,19 @@ search_rank: 3
 
 > This page covers purchase events and properties, their usage, segmentation, where to view relevant analytics, and more.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 Purchase events are purchase actions taken by your users, and are used to record in-app purchases and establish the Lifetime Value (LTV) for each user profile. These events must be set up by your team. Logging purchase events allows you to add properties like quantity and type, helping you further target your users based on these properties.
 
-## Logging purchase events
+## Log purchase events
 
 You can log purchases by passing a [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), or using one of our SDK libraries listed below.
 
-The following lists methods across various platforms that are used to log purchases. Within these pages, you'll also find documentation on how to add properties and quantities to your purchase event. You can further target your users based on these properties.
+{% alert note %}
+Purchase event properties use the same data types as [custom event properties]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#expected-format).
+{% endalert %}
+
+The following lists methods used across various platforms to log purchases. Within these pages, you'll also find documentation on how to add properties and quantities to your purchase event. You can further target your users based on these properties.
 
 - [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
 - [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
@@ -27,11 +33,11 @@ The following lists methods across various platforms that are used to log purcha
 - [.NET MAUI (formerly Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
-## Viewing purchase data
+## View purchase data
 
 After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab).
 
-## Using purchase data
+## Use purchase data
 
 There are several ways you can use purchase data in Braze:
 
@@ -67,7 +73,7 @@ To segment on the number of times a specific purchase has occurred, record that 
 
 ### Personalization
 
-Like any other type of data you collect from your users, you can use purchase data to personalize your messaging through Liquid. For example, you can send a personalized email to a user recommending products similar to ones they just purchased.
+Like any other type of data you collect from your users, you can use purchase data to personalize your messaging through Liquid. For example, you can send a personalized email to a user recommending products similar to those they just purchased.
 
 Suppose you have a purchase event property called `last_purchased_product` that stores the name of the last product a user purchased. You can use this property to personalize an email message like this:
 
@@ -109,7 +115,7 @@ In addition to tracking purchase metrics for segmentation, Braze also notes the 
 
 You can find this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
 
-### Understanding revenue calculations
+### Revenue calculations
 
 <style>
     .no-split {
@@ -158,7 +164,7 @@ Braze uses purchase events to calculate the lifetime revenue (also called lifeti
 
 $$\text{Average purchase value} = \frac{\text{Total spend in dollars}}{\text{Total number of purchase events}}$$  
 
-There are two main places in Braze you can reference to understand your users' LTV:
+There are two main places in Braze where you can reference to understand your users' LTV:
 
 - For overall metrics like *Lifetime revenue* and the *Lifetime value per user* for each app and site, refer to your [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 - To understand a specific user's lifetime revenue, refer to their [user profile]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
@@ -167,13 +173,13 @@ There are two main places in Braze you can reference to understand your users' L
 
 When using purchase events to track purchase data, you should track refunds by logging a Braze purchase event with a negative `price` property. This approach maintains an accurate total for the lifetime revenue.
 
-However, keep in mind the refund will count as an additional purchase event. Let's consider the following example. Sam makes their first purchase for $12 but returns part of the purchase for a refund of $5. Sam's profile would log:
+However, keep in mind that the refund will count as an additional purchase event. Let's consider the following example. Sam makes their first purchase for $12 but returns part of the purchase for a refund of $5. Sam's profile would log:
 
 - 1 purchase with a price of $12
 - 1 purchase with a price of -$5
 - Lifetime revenue of $7
 
-While Sam would have two purchase events on their profile, in reality, they only made one purchase. This is important to consider if you have any segments or use cases built around the number of purchases a user has made. Constant refunds will inflate the purchase count on user's profile.
+While Sam would have two purchase events on their profile, in reality, they only made one purchase. This is important to consider if you have any segments or use cases built around the number of purchases a user has made. Constant refunds will inflate the purchase count on the user's profile.
 
 ## Purchase event properties {#purchase-properties}
 
@@ -220,7 +226,7 @@ At Braze, we offer some general naming conventions for the purchase object `prod
 
 This makes products straightforward to identify for segmentation and triggering. 
 
-## Blocklisting purchase events
+## Blocklist purchase events
 
 You may occasionally identify purchase events that either log too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
 

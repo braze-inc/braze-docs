@@ -45,6 +45,10 @@ Email delivery metrics (deliveries, bounces, and spam rate) may not add up to 10
 
 Soft bounces are emails that bounce due to a temporary or transient issue, such as "mailbox full," "server temporarily not available," and more. If a soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign delivery metrics.
 
+### What is an email feedback loop?
+
+An email feedback loop (FBL) allows senders to monitor their reputation by identifying campaigns that receive a high volume of complaints. For steps to implement a Gmail feedback loop, see [Google's Feedback Loop](https://support.google.com/a/answer/6254652) article.
+
 ### What are open tracking pixels?
 
 [Open tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#changing-location-of-tracking-pixel) leverage a sender's email click tracking domain to track email open events. The pixel is an image tag appended to the email's HTML. It is most commonly the last HTML element within the body tag. When a user loads their email, a request is made to populate the image from the branded tracking domain, which logs an open event.

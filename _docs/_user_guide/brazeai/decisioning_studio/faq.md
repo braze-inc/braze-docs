@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Decisioning Studio FAQ
-page_order: 10
+page_order: 8
 page_type: FAQ
 description: "This page provides answers to frequently asked questions about Decisioning Studio."
 ---
@@ -24,7 +24,7 @@ Dimensions can be thought of as the *types of levers* which the decisioning agen
 
 ### What is an action bank?
 
-The action bank defines the *specific options* which the decisioning agent has access to for each dimension "lever". For instance, for a channel dimension, you would define the specific channels the decisioning agent has access to. For an offer dimension, you would define the specific offers the decisioning agent can test.
+The action bank defines the *specific options* which the decisioning agent has access to for each dimension "lever". For instance, for a channel dimension, you define the specific channels the decisioning agent has access to. For an offer dimension, you define the specific offers the decisioning agent can test.
 
 ### Can the decisioning agent take actions I haven't configured?
 
