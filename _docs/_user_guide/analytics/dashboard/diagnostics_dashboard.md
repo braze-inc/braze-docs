@@ -94,7 +94,7 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 | ---- | ---- |
 | Content Card expired | The Content Card expired before the user saw it. |
 | Content Card invalid | The Content Card had errors and was not sent to the user. Some common reasons for this include: {::nomarkdown}<ul><li> Maximum size exceeded (2 KB) </li><li> Expiration date is invalid </li><li> Message contains invalid characters </li></ul>{:/} |
-| Connected Content failed | Braze tried to send the message, but Connected Content failed after the maximum number of retries (default is five). **Note:** This count here represents the number of messages aborted due to reaching the maximum number of retries, not the total number of failed Connected Content requests. |
+| Connected Content failed | Braze tried to send the message, but Connected Content failed after the maximum number of retries (default is five). **Note:** This count represents the number of messages aborted due to reaching the maximum number of retries, not the total number of failed Connected Content requests. |
 | In-app-message rendering timeout | After multiple attempts to retry, the Liquid could not be rendered and timed out. |
 | Liquid abort | The [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) Liquid tag was called, so the send was canceled. |
 | Liquid rendering timeout | It took too long to render the Liquid template. Most likely to occur for Banners, in-app messages, and email. |
