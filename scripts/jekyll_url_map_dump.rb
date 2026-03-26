@@ -22,7 +22,7 @@ base = site.config["baseurl"].to_s.chomp("/")
 map = {}
 site.collections.each_value do |coll|
   coll.docs.each do |doc|
-    key = File.join("_docs", doc.relative_path)
+    key = doc.relative_path.sub(%r{\A/}, "")
     map[key] = base + doc.url
   end
 end

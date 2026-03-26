@@ -11,7 +11,6 @@
 #
 # Requires: git, bundler, gems from Gemfile (Jekyll). Uses a temporary git worktree for the base ref.
 
-require "English"
 require "fileutils"
 require "json"
 require "open3"
