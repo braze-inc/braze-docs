@@ -99,6 +99,4 @@ valid_partner_list:
   url: /docs/partners/viralsweep/
 - name: Mention Me
   url: /docs/partners/mention_me/
-- name: VideoSmart
-  url: /docs/partners/videosmart/
 ---
