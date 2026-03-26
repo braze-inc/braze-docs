@@ -15,7 +15,7 @@ page_order: 1
 
 Braze 계정에 연결할 수 있는 커스텀 도메인의 수는 [요금제]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers)에 따라 다릅니다. 제한을 늘리려면 Braze 계정 매니저에게 문의하세요.
 
-## Braze에 도메인 연결하기
+## Braze에 도메인 연결하기 {#connect-your-domain-to-braze}
 
 도메인을 Braze 계정에 연결하려면 관리자가 아래 단계를 따르세요.
 

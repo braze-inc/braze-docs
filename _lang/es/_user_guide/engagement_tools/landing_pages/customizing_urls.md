@@ -15,7 +15,7 @@ Cuando [conectes tu dominio a Braze](#connect-your-domain-to-braze), se utilizar
 
 El número de dominios personalizados que puedes conectar a tu cuenta de Braze depende del [nivel de tu plan]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). Para aumentar tu límite, ponte en contacto con tu director de cuentas de Braze.
 
-## Conectar tu dominio a Braze
+## Conectar tu dominio a Braze {#connect-your-domain-to-braze}
 
 Para conectar un dominio a tu cuenta de Braze, haz que un administrador siga los pasos que se indican a continuación.
 
