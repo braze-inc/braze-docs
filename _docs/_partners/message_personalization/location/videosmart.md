@@ -91,7 +91,7 @@ If you need to choose a specific VideoSmart campaign, pass custom personalizatio
 This example uses Braze user attributes for the first name and last name:
 
 {% raw %}
-```
+```liquid
 {% assign vs_campaign_id = "CAMPAIGN_ID" %}
 
 {% capture vs_record_data %}
