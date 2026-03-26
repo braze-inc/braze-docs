@@ -11,6 +11,8 @@ page_type: reference
 
 > Esta página aborda como configurar o suporte da Ingestão de Dados na Nuvem e sincronizar dados relevantes do S3 para a Braze.
 
+Esta página mostra as etapas de sincronização e origem que estão atualmente em Acesso Antecipado (EA). Para as etapas da experiência geralmente disponível, expanda **Experiência de disponibilidade geral** abaixo.
+
 ## Como funciona
 
 Você pode usar a Ingestão de Dados na Nuvem (CDI) para S3 para integrar diretamente um ou mais buckets S3 na sua conta AWS com a Braze. Quando novos arquivos são publicados no S3, uma mensagem é postada no SQS, e a Ingestão de Dados na Nuvem da Braze recebe esses novos arquivos. 
@@ -55,7 +57,7 @@ As configurações padrão são:
 - Criptografia SSE-S3
   - SSE-S3 é o único tipo de criptografia do lado do servidor suportado. A criptografia do Amazon KMS não é suportada.
 
-Anote a região em que você criou o bucket, pois você criará uma fila SQS na mesma região na próxima etapa.
+Anote a região em que você criou o bucket — você criará uma fila SQS na mesma região na próxima etapa.
 
 ### Etapa 2: Criar fila SQS
 
@@ -67,7 +69,7 @@ Uma fila SQS deve ser única globalmente (por exemplo, apenas uma pode ser usada
 Certifique-se de criar esta SQS na mesma região em que você criou o bucket.
 {% endalert %}
 
-Certifique-se de anotar o ARN e o URL do SQS, pois você os usará com frequência durante esta configuração.
+Anote o ARN e o URL da fila SQS — você precisará deles com frequência durante esta configuração.
 
 ![Selecionando "Avançado" com um objeto JSON de exemplo para definir quem pode acessar uma fila.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
@@ -155,27 +157,26 @@ Crie uma política de IAM para permitir que a Braze interaja com seu bucket de o
 
 ### Etapa 6: Criar uma função de IAM
 
-Para concluir a configuração na AWS, você criará uma função de IAM e anexará a ela a política de IAM da etapa 4. 
+Para concluir a configuração na AWS, crie uma função de IAM e anexe a ela a política de IAM da etapa 5. 
 
 1. Na mesma seção de IAM do console em que criou a política de IAM, acesse **Roles** > **Create Role**. 
 
 ![O botão "Create Role".]({% image_buster /assets/img/create_role_1_list.png %})
 
 {: start="2"}
-2. Copie o ID da conta AWS da Braze do seu dashboard. Acesse **Cloud Data Ingestion**, selecione **Create New Data Sync** e selecione **S3 Import**.
-3. Na AWS, selecione **Another AWS Account** como o tipo de seletor de entidade confiável. Forneça seu ID de conta da Braze. Marque a caixa de seleção **Require external ID**.
-4. Na Braze, acesse **Data Settings** > **Cloud Data Ingestion**, selecione **Create New Data Sync** e selecione **S3 Import** na seção de fontes de arquivo.
-5. Copie o **Braze Account ID** gerado automaticamente. 
+2. Na AWS, selecione **Another AWS Account** como o tipo de seletor de entidade confiável. Forneça seu ID de conta da Braze. Marque a caixa de seleção **Require external ID**.
+3. Na Braze, acesse **Data Settings** > **Cloud Data Ingestion** > **Sources**, selecione **Add data source** e selecione **Amazon S3** na seção de fontes de arquivo.
+4. Copie o **Braze Account ID** gerado automaticamente. 
 
-![Seção de credenciais com o campo Braze Account ID.]({% image_buster /assets/img/braze_account_id.png %})
+![A página "Add New Source" mostrando as seções Source Name e S3 Connection Details.]({% image_buster /assets/img/braze_account_id.png %})
 
 {: start="6"}
-6. Na AWS, cole o ID da conta e selecione **Next**.
+5. Na AWS, cole o ID da conta e selecione **Next**.
 
 ![A página "Create Role" do S3. Essa página tem campos para nome da função, descrição da função, entidades confiáveis, políticas e limite de permissões.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="7"}
-7. Anexe a política criada na etapa 4 à função. Procure a política na barra de pesquisa e marque a caixa de seleção ao lado da política para anexá-la. Selecione **Next** quando terminar.
+6. Anexe a política criada na etapa 5 à função. Procure a política na barra de pesquisa e marque a caixa de seleção ao lado da política para anexá-la. Selecione **Next** quando terminar.
 
 ![ARN da função com a nova política selecionada.]({% image_buster /assets/img/create_role_3_attach.png %})
 
@@ -184,13 +185,42 @@ Dê um nome e uma descrição à função e selecione **Create Role**.
 ![Uma função de exemplo chamada "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})
 
 {: start="8"}
-8. Anote o ARN da função que você criou e o ID externo que você gerou, pois você precisará deles para criar a integração de Ingestão de Dados na Nuvem.
+7. Anote o ARN da função que você criou e o ID externo que você gerou, pois você precisará deles para criar a integração de Ingestão de Dados na Nuvem.
 
 ## Configuração da Ingestão de Dados na Nuvem na Braze
 
-{% alert important %}
-Clientes em integração a partir de fevereiro de 2026 podem ter acesso antecipado a uma nova interface de CDI, onde fontes e sincronizações são configuradas separadamente. Nesta nova interface, crie primeiro uma fonte S3 com suas credenciais, bucket e região. Em seguida, crie uma sincronização com sua URL SQS e caminho da pasta (opcional).
-{% endalert %}
+1. Primeiro, crie uma nova origem no dashboard da Braze. Acesse **Data Settings** > **Cloud Data Ingestion** > **Sources**, selecione **Add data source** e, em seguida, selecione **Amazon S3**.
+2. Escolha um nome para sua origem e insira as informações do processo de configuração da AWS para criar uma nova origem. Especifique o seguinte:
+
+  - ARN da função
+  - ID externo
+  - Nome do bucket
+  - Região
+
+![A seção S3 Connection Details mostrando Credentials (configuração da AWS e da Braze) e campos de Configuration.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+
+{: start="3"}
+3. Selecione **Test connection** para confirmar que a Braze pode acessar seu bucket. Após um teste bem-sucedido, selecione **Connect to Source**. Se a conexão falhar, uma mensagem de erro será exibida para ajudar a solucionar o problema.
+
+{: start="4"}
+4. Em seguida, crie uma nova sincronização. Acesse **Data Settings** > **Cloud Data Ingestion** > **Syncs** e selecione **Create data sync**.
+
+![A página "Create New Sync" mostrando o nome da sincronização e a configuração da fonte de dados.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
+
+{: start="5"}
+5. Escolha um nome para sua sincronização. Em seguida, selecione qualquer origem S3 ativa e insira sua tabela de origem para a sincronização. Selecione um tipo de dado e selecione **Test Connection**.
+
+![Uma opção para testar a conexão com uma prévia de dados.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+
+6. Insira as informações restantes do processo de configuração da AWS. Especifique o seguinte:
+- URL do SQS (deve ser exclusivo para cada nova integração)
+- Caminho da pasta (opcional, deve ser único entre as sincronizações em um espaço de trabalho)
+
+7. Selecione um tipo de dado e selecione **Test Connection** para confirmar que a Braze pode listar os arquivos disponíveis para ingestão (não os dados dentro desses arquivos). Após o sucesso, selecione **Next: Notifications**.
+8. Adicione e-mail(s) de contato para notificações se a sincronização for interrompida devido a problemas de acesso ou permissões. Opcionalmente, ative as notificações para erros no nível do usuário e sucessos de sincronização.
+9. Crie a sincronização.
+
+{% details Experiência de disponibilidade geral %}
 
 1. Para criar uma nova integração, acesse **Data Settings** > **Cloud Data Ingestion**, selecione **Create New Data Sync** e selecione **S3 Import** na seção de fontes de arquivo. 
 2. Insira as informações do processo de configuração da AWS para criar uma nova sincronização. Especifique o seguinte:
@@ -202,22 +232,16 @@ Clientes em integração a partir de fevereiro de 2026 podem ter acesso antecipa
   - Caminho da pasta (opcional, deve ser único entre as sincronizações em um espaço de trabalho)
   - Região
 
-![Exemplo de credenciais de segurança conforme exibido no S3 para criar uma nova sincronização de importação.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
-
 {: start="3"}
 3. Nomeie sua integração e selecione o tipo de dado para esta integração. 
-
-![Configurando detalhes de sincronização para "cdi-s3-as-source-integration" com atributos de usuário como o tipo de dado.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
 
 {: start="4"}
 4. Adicione um e-mail de contato para receber notificações se a sincronização for interrompida devido a problemas de acesso ou permissões. Opcionalmente, ative as notificações para erros no nível do usuário e sucessos de sincronização. 
 
-![Configurando preferências de notificação para notificações de erro de sincronização.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
-
 {: start="5"}
 5. Por fim, selecione **Test connection** para confirmar que a Braze pode acessar seu bucket e listar os arquivos disponíveis para ingestão (não os dados dentro desses arquivos). Em seguida, salve a sincronização. 
 
-![Uma opção para testar a conexão com uma prévia de dados.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+{% enddetails %}
 
 ## Formatos de arquivo necessários
 
@@ -226,7 +250,7 @@ A Ingestão de Dados na Nuvem aceita arquivos JSON, CSV e Parquet. As colunas ob
 - Dados de usuários (atributos, eventos personalizados, eventos de compra) usam identificadores de usuário e uma carga útil
 - Dados de catálogo usam identificadores de catálogo
 
-A Braze não impõe requisitos adicionais de nome de arquivo além do que é imposto pela AWS. Os nomes dos arquivos devem ser únicos. Recomendamos adicionar um timestamp para garantir a exclusividade.
+A Braze não impõe requisitos adicionais de nome de arquivo além do que é imposto pela AWS. Os nomes dos arquivos devem ser únicos. Adicionar um timestamp ajuda a garantir a exclusividade.
 
 Para exemplos de todos os tipos de arquivo suportados (atributos, eventos personalizados, compras, catálogos e exclusões de usuários), consulte os arquivos de amostra em [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).
 
@@ -239,7 +263,7 @@ Para sincronizações de dados de usuários (atributos, eventos personalizados, 
 | `EXTERNAL_ID` | Identifica o usuário que você deseja atualizar. Esse valor deve corresponder ao valor `external_id` usado na Braze. |
 | `ALIAS_NAME` e `ALIAS_LABEL` | Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador único, e `alias_label` especifica o tipo de alias. Os usuários podem ter múltiplos aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`. |
 | `BRAZE_ID` | O identificador de usuário da Braze. Isso é gerado pelo SDK da Braze, e novos usuários não podem ser criados usando um Braze ID por meio da Ingestão de Dados na Nuvem. Para criar novos usuários, especifique um ID externo ou um alias de usuário. |
-| `EMAIL` | O endereço de e-mail do usuário. Se houver vários perfis com o mesmo endereço de e-mail, o perfil atualizado mais recentemente terá prioridade nas atualizações. Se você incluir e-mail e telefone, usaremos o e-mail como identificador principal. |
+| `EMAIL` | O endereço de e-mail do usuário. Se houver vários perfis com o mesmo endereço de e-mail, o perfil atualizado mais recentemente terá prioridade nas atualizações. Se você incluir e-mail e telefone, a Braze usará o e-mail como identificador principal. |
 | `PHONE` | O número de telefone do usuário. Se houver vários perfis com o mesmo número de telefone, o perfil atualizado mais recentemente terá prioridade nas atualizações. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -339,7 +363,7 @@ Cada linha no arquivo deve identificar exatamente um usuário usando um dos segu
 | `BRAZE_ID` | ID de usuário gerado pela Braze (apenas usuários existentes). |
 
 {% alert important %}
-Excluir usuários é permanente e não pode ser desfeito. Inclua apenas usuários que você pretende remover. Para mais detalhes, consulte [Excluir usuários com Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/delete_users/).
+A exclusão de usuários é permanente e não pode ser desfeita. Inclua apenas usuários que você realmente pretende remover. Para mais detalhes, consulte [Excluir usuários com Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/delete_users/).
 {% endalert %}
 
 **Exemplo – JSON (exclusão de usuários):**
@@ -366,7 +390,7 @@ Para remover itens de um catálogo usando armazenamento de arquivos:
 2. Nos seus arquivos CSV ou JSON, adicione uma coluna opcional **`deleted`** (ou **`DELETED`**).
 3. Defina `deleted` como `true` para qualquer item do catálogo que você deseja remover do catálogo na Braze.
 
-Cada linha ainda precisa de `ID` e `PAYLOAD`. Para linhas marcadas para exclusão, a carga útil pode ser mínima; a Braze remove o item por `ID`.
+Cada linha ainda precisa de `ID` e `PAYLOAD`. Para linhas marcadas para exclusão, a carga útil pode ser mínima; a Braze remove o item pelo `ID`.
 
 **Exemplo – JSON (exclusão de item do catálogo):**
 ```jsonl
@@ -394,9 +418,9 @@ Quando a sincronização é executada, linhas com `deleted: true` fazem com que 
 
 ### Upload e processamento de arquivos
 
-O CDI só processará arquivos que forem adicionados após a sincronização ser criada. Neste processo, a Braze procura novos arquivos a serem adicionados, o que aciona uma nova mensagem para o SQS. Isso iniciará uma nova sincronização para processar o novo arquivo.
+O CDI só processará arquivos que forem adicionados após a criação da sincronização. Nesse processo, a Braze procura novos arquivos sendo adicionados, o que aciona uma nova mensagem para o SQS. Isso inicia uma nova sincronização para processar o novo arquivo.
 
-Você pode usar arquivos existentes para validar se a Braze pode acessar seu bucket e detectar arquivos para ingestão, mas eles não são sincronizados com a Braze. Para que o CDI os processe, você deve fazer upload novamente para o S3 de quaisquer arquivos existentes que deseja sincronizar. 
+Você pode usar arquivos existentes para validar se a Braze consegue acessar seu bucket e detectar arquivos para ingestão, mas eles não são sincronizados com a Braze. Para que o CDI os processe, você deve fazer upload novamente para o S3 de quaisquer arquivos existentes que deseja sincronizar. 
 
 ### Tratando erros inesperados de arquivos
 

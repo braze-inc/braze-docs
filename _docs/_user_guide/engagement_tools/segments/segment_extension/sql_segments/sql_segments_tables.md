@@ -993,7 +993,7 @@ Field | Type | Description
 `ad_id` | `null,`&nbsp;`string` | [PII] Advertising identifier
 `ad_id_type` | `null,`&nbsp;`string` | One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (up to 128 chars)
 `banner_placement_id` | `null,`&nbsp;`string` | Customer specified banner placement ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
@@ -1092,7 +1092,7 @@ Field | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 `app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
@@ -1274,7 +1274,7 @@ Field | Type | Description
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 `app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
@@ -1695,7 +1695,7 @@ Field | Type | Description
 `ad_id` | `null,`&nbsp;`string` | [PII] Advertising identifier
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 `app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
@@ -1796,7 +1796,7 @@ Field | Type | Description
 `time` | `int` | UNIX timestamp at which the event happened
 `user_id` | `string` | Braze user ID of the user who performed this event
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (up to 128 chars)
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
@@ -2016,7 +2016,7 @@ Field | Type | Description
 `resolution` | `null,`&nbsp;`string` | Resolution of the device
 `carrier` | `null,`&nbsp;`string` | Carrier of the device
 `browser` | `null,`&nbsp;`string` | Device browser - extracted from user_agent - on which the open occurred
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (up to 128 chars)
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -2103,7 +2103,7 @@ Field | Type | Description
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `platform` | `string` | Platform of the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 `app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
@@ -2314,7 +2314,7 @@ Field | Type | Description
 `time` | `int` | UNIX timestamp at which the event happened
 `user_id` | `string` | Braze user ID of the user who performed this event
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (up to 128 chars)
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `campaign_name` | `null,`&nbsp;`string` | Name of the campaign
 `canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas this event belongs to
 `canvas_name` | `null,`&nbsp;`string` | Name of the Canvas
@@ -2541,7 +2541,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `subscription_group_api_id` | `null,`&nbsp;`string` | External ID of the subscription group
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 `app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
@@ -2820,7 +2820,7 @@ Field | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 `app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
@@ -2953,7 +2953,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type of abort. For a list of values, see [Abort types](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -3306,3 +3306,7 @@ Field | Type | Description
 `conversion_behaviors` | `null,`&nbsp;`string` | Conversion behaviors for the step
 `name` | `null,`&nbsp;`string` | Name of the Experiment step
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+## Abort types
+
+{% include abort_types_reference.md %}
