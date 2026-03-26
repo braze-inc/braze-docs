@@ -231,7 +231,11 @@ def validate!(options)
 
   needed.each do |from_norm, to_norm|
     if to_norm == :deleted_no_target
-      deleted_warn << { old_url: from_norm, note: "Page removed; add redirect manually to a replacement URL." }
+      # Manual redirect in broken_redirect_list.js is sufficient when the doc file
+      # is gone from HEAD (no Jekyll URL to diff against).
+      if redirects[from_norm].nil?
+        deleted_warn << { old_url: from_norm, note: "Page removed; add redirect manually to a replacement URL." }
+      end
       next
     end
 
