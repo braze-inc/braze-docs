@@ -3,17 +3,17 @@ nav_title: Recommend products to users
 article_title: Recommending products to users
 page_order: 4
 page_type: reference
-description: "This reference article walks through how to use the Braze REST API, Catalogs, and Connected Content to recommend products to users across messaging channels."
+description: "This reference article walks through how to use the Braze REST API, catalogs, and Connected Content to recommend products to users across messaging channels."
 ---
 
 # Recommending products to users
 
-> Use the Braze REST API alongside [Catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/create/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) to surface personalized product recommendations in your messages. This approach lets you plug your own recommendation engine into the Braze messaging ecosystem, so non-technical users can own the content and messaging surrounding each recommendation.
+> Use the Braze REST API alongside [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/create/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) to surface personalized product recommendations in your messages. This approach lets you plug your own recommendation engine into the Braze messaging ecosystem, so non-technical users can own the content and messaging surrounding each recommendation.
 
 With this approach, you can:
 
 - Store product recommendations on user profiles from your backend using the REST API.
-- Retrieve product metadata at send time using Catalogs or Connected Content.
+- Retrieve product metadata at send time using catalogs or Connected Content.
 - Display personalized recommendations across any messaging channel, including email, push, in-app messages, and more.
 
 ## Prerequisites
@@ -61,10 +61,10 @@ Use meaningful attribute names (such as `recommended_product_id`) so they're eas
 
 After storing a recommendation identifier on each user profile, you need to retrieve the full product metadata (name, price, image, and so on) to include in your message. You have two options:
 
-- **Option A:** [Braze Catalogs](#option-a-braze-catalogs) — store product information directly in Braze for fast, built-in lookups.
+- **Option A:** [Braze catalogs](#option-a-braze-catalogs) — store product information directly in Braze for fast, built-in lookups.
 - **Option B:** [Connected Content](#option-b-connected-content) — fetch product information from an external API at send time.
 
-### Option A: Braze Catalogs
+### Option A: Braze catalogs
 
 If you've created a [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/create/) with your product inventory, you can look up items directly in your message using Liquid. For a full walkthrough, see [Using catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/use/).
 
@@ -131,7 +131,7 @@ Hi {{${first_name}}}, we think you'll love:
 For more details on making API calls from your messages, see [Making an API call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/).
 
 {% alert warning %}
-Avoid using Connected Content to fetch a large list of products and then iterating through that list in Liquid at send time. Large response payloads increase send latency and can cause message timeouts or delivery failures at scale. Instead, store only the specific product IDs a user needs on their profile (see [Step 1](#step-1-store-recommendations-on-user-profiles)), and fetch metadata for those individual items — or use [Catalogs](#option-a-braze-catalogs), which are optimized for fast lookups.
+Avoid using Connected Content to fetch a large list of products and then iterating through that list in Liquid at send time. Large response payloads increase send latency and can cause message timeouts or delivery failures at scale. Instead, store only the specific product IDs a user needs on their profile (see [Step 1](#step-1-store-recommendations-on-user-profiles)), and fetch metadata for those individual items or use [catalogs](#option-a-braze-catalogs), which are optimized for fast lookups.
 {% endalert %}
 
 ## Step 3: Verify your integration
