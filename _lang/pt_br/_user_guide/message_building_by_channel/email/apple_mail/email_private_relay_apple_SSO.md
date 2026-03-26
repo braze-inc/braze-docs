@@ -20,7 +20,7 @@ Se um usuário decidir desativar o encaminhamento de e-mail para o e-mail de rel
 {% tabs %}
 {% tab SendGrid %}
 
-## Configurar o SendGrid 
+## Configurar o SendGrid
 
 Se você usar o SendGrid como provedor de e-mail, poderá enviar e-mails para a Apple sem fazer alterações no DNS. 
 
@@ -35,7 +35,7 @@ Se o endereço "From" desejado for um endereço `abmail`, inclua-o em seu subdom
 {% endtab %}
 {% tab SparkPost %}
 
-## Configurar o SparkPost 
+## Configurar o SparkPost
 
 Para configurar o Apple Private Relay para o SparkPost, siga estas etapas: 
 
