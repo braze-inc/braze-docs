@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}[学習](https://learning.braze.com/path/developer)コースはじめに：プラットフォームの概要
+# [![Braze学習コース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}はじめに：プラットフォームの概要
 
 > この記事では、Brazeプラットフォームの基本的なパーツと機能について説明する。この記事からのリンクは、Brazeの重要なトピックにつながっている。 
 

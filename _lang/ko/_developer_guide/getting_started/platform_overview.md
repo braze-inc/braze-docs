@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Braze Learning ](https://learning.braze.com/path/developer)과정[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} 시작하기: 플랫폼 개요
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} 시작하기: 플랫폼 개요
 
 > 이 문서에서는 Braze 플랫폼의 기본적인 부분과 기능에 대해 설명합니다. 이 문서의 링크는 필수 Braze 주제로 연결됩니다. 
 

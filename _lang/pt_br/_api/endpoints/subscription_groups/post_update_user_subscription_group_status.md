@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo traz informações sobre o o endpoint da Braze \"Atualizar o status do grupo de inscrições do usuário\""
+description: "Este artigo traz informações sobre o endpoint da Braze \"Atualizar o status do grupo de inscrições do usuário\"."
 ---
 {% api %}
 # Atualizar o status do grupo de inscrições do usuário
@@ -13,15 +13,15 @@ description: "Este artigo traz informações sobre o o endpoint da Braze \"Atual
 /subscription/status/set
 {% endapimethod %}
 
-> Use esse endpoint para atualizar em lote o estado da inscrição de até 50 usuários no dashboard do Braze.
+> Use esse endpoint para atualizar em lote o estado da inscrição de até 50 usuários no dashboard da Braze.
 
-É possível acessar o site `subscription_group_id` de um grupo de inscrições navegando até a página **Grupo de inscrições**.
+É possível acessar o `subscription_group_id` de um grupo de inscrições navegando até a página **Grupo de inscrições**.
 
 Se você quiser ver exemplos ou testar esse endpoint para **grupos de inscrições para e-mail**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-Se você quiser ver exemplos ou testar este endpoint para **Grupos de Inscrição SMS e RCS**:
+Se você quiser ver exemplos ou testar esse endpoint para **grupos de inscrições SMS e RCS**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
@@ -30,7 +30,7 @@ Se você quiser ver exemplos ou testar este endpoint para **Grupos de Inscriçã
 Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}/api/basics#rest-api-key/) com a permissão `subscription.status.set`.
 
 {% alert note %}
-Se você estiver interessado em usar este endpoint com [grupos de inscrição LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), entre em contato com seu gerente de sucesso do cliente.
+Se você estiver interessado em usar esse endpoint com [grupos de inscrição LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), entre em contato com seu gerente de sucesso do cliente.
 {% endalert %}
 
 ## Limite de taxa
@@ -52,10 +52,11 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
+   "use_double_opt_in_logic": (optional, boolean) defaults to `false`; when `subscription_state` is "subscribed", set to `true` to enter the user into the SMS double opt-in workflow,
    // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
-\* Grupos de inscrição SMS e RCS: Braze aceita apenas `external_id` ou `phone`.
+\* Grupos de inscrição SMS e RCS: a Braze aceita apenas `external_id` ou `phone`.
 
 {% endtab %}
 {% tab Email %}
@@ -74,14 +75,16 @@ Authorization: Bearer YOUR-REST-API-KEY
    // Note that sending an email address that is linked to multiple profiles updates all relevant profiles
  }
 ```
-\* Grupos de inscrições para e-mail: Você deve incluir `email` ou `external_id`.
+\* Grupos de inscrições para e-mail: você deve incluir `email` ou `external_id`.
 {% endtab %}
 {% endtabs %}
 
 Essa propriedade não deve ser usada para atualizar as informações de perfil de um usuário. Em vez disso, use a propriedade [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 {% alert tip %}
-Ao criar novos usuários usando o endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), é possível definir grupos de inscrições no objeto de atribuições do usuário, o que permite criar um usuário e definir o estado do grupo de inscrições em uma única chamada de API.
+**Adicionando usuários existentes a um grupo de inscrições:** esse endpoint é a forma recomendada de preencher retroativamente ou atualizar em massa a associação a grupos de inscrições para usuários existentes. Você pode enviar até 50 `external_id`s, endereços de e-mail ou números de telefone por solicitação. Os usuários também podem atualizar seu próprio status de inscrição por meio de um link da [Central de Preferências de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).
+
+**Criando novos usuários com um grupo de inscrições:** ao criar novos usuários usando o endpoint [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), é possível definir grupos de inscrições no objeto de atributos do usuário, o que permite criar um usuário e definir o estado do grupo de inscrições em uma única chamada de API.
 {% endalert %}
 
 ## Parâmetros de solicitação
@@ -90,9 +93,10 @@ Ao criar novos usuários usando o endpoint [/users/track]({{site.baseurl}}/api/e
 |---|---|---|---|
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Obrigatória | String | O `id` do seu grupo de inscrições. |
 | `subscription_state` | Obrigatória | String | Os valores disponíveis são `unsubscribed` (não está no grupo de inscrições) ou `subscribed` (está no grupo de inscrições). |
-| `external_id` | Obrigatório* | Matriz de strings | O `external_id` do usuário ou dos usuários pode incluir até 50 `id`s. |
-| `email` | Obrigatório* | string ou array de strings | O endereço de e-mail do usuário pode ser passado como um vetor de strings. Deve incluir pelo menos um endereço de e-mail (com um máximo de 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo endereço de e-mail, o Braze atualizará todos os usuários que compartilham o endereço de e-mail com as alterações do grupo de inscrições. |
-| `phone` | Obrigatório* | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | O número de telefone do usuário pode ser passado como uma matriz de strings. Deve incluir pelo menos um número de telefone (até 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo número de telefone, o Braze atualizará todos os usuários que compartilham o número de telefone com as mesmas alterações do grupo de inscrições. |
+| `external_id` | Obrigatório* | Matriz de strings | O `external_id` do usuário ou dos usuários, pode incluir até 50 `id`s. |
+| `email` | Obrigatório* | String ou array de strings | O endereço de e-mail do usuário, pode ser passado como um array de strings. Deve incluir pelo menos um endereço de e-mail (com um máximo de 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo endereço de e-mail, a Braze atualizará todos os usuários que compartilham o endereço de e-mail com as alterações do grupo de inscrições. |
+| `phone` | Obrigatório* | String no formato [E.164](https://en.wikipedia.org/wiki/E.164) | O número de telefone do usuário, pode ser passado como um array de strings. Deve incluir pelo menos um número de telefone (até 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo número de telefone, a Braze atualizará todos os usuários que compartilham o número de telefone com as mesmas alterações do grupo de inscrições. |
+| `use_double_opt_in_logic` | Opcional | booleano | Aplica-se apenas a grupos de inscrição SMS; é ignorado para e-mail e outros tipos de grupo de inscrições. O padrão é `false` se omitido. Para grupos de inscrição SMS, defina como `true` para inserir o usuário no fluxo de trabalho de [double opt-in de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) quando o status de inscrição for definido como `subscribed`. Se esse parâmetro for omitido ou definido como `false`, os usuários serão inscritos sem entrar no fluxo de trabalho de double opt-in. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplos de solicitações
@@ -142,4 +146,3 @@ O endpoint aceita apenas o valor `email` ou `phone`, não ambos. Se você fornec
 {% endalert %}
 
 {% endapi %}
-

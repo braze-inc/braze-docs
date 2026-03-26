@@ -29,6 +29,22 @@ To customize your copy further, you can:
 
 - **Apply brand guidelines:** After [generating brand guidelines with BrazeAI<sup>TM</sup>]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines), you can use them to help generate your copy.
 - **Choose a tone:** Each tone will generate copy in a different style. Choose the tone that best matches your brand voice.
+  
+  Selecting a tone adds a style instruction to the prompt sent to OpenAI, so the exact output can vary by input, channel length, brand guidelines, and the model. 
+  
+  Here's what each tone is intended to do by default:
+  - **Formal:** More professional and polished wording. Full sentences, more courteous language, minimal slang.
+  - **Straight-forward:** More direct and concise. Fewer adjectives, less "marketing fluff," clearer calls to action.
+  - **Casual:** More relaxed and conversational. Friendlier phrasing, simpler words, lighter energy.
+  - **Personal:** More 1:1 and empathetic. Uses "you" more, can feel more tailored, especially if you add personalization like {% raw %}`{{${first_name}}}`{% endraw %} to the message you're creating.
+  - **Eye-catching:** More attention-grabbing. Punchier phrasing, higher energy, stronger hooks and CTAs (often reads more "promo" than the other tones).
+  - **Sophisticated:** More elevated, refined language. Less casual, more "premium" positioning.
+  - **Professional:** Businesslike and clear. More modern and approachable than Formal, while still maintaining authority.
+  - **Passive:** Softer, less pushy language. Fewer direct commands, more suggestive phrasing.
+  - **Urgent:** Emphasizes immediacy and time sensitivity. Stronger CTAs, deadlines, scarcity cues.
+  - **Exciting:** More energetic and enthusiastic. Emphasizes positive emotion and celebration (often more hype-focused than Eye-catching's hook-driven approach).
+ 
+  
 - **Reference past campaign data**: When enabled, previous mobile push notifications sent through your campaigns or Canvas steps are used for stylistic reference to generate your new copy. For more information, see [Using past campaign data](#past-campaign-data).
 - **Auto-translate copy:** You can choose a different output language for your copy. Generated content will be output to that language.
 

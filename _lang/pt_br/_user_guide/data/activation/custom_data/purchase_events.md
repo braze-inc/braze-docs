@@ -11,13 +11,13 @@ search_rank: 3
 
 > Esta página aborda eventos e propriedades de compra, seu uso, segmentação, onde visualizar análises de dados relevantes e muito mais.
 
-Os eventos de compra são ações de compra realizadas por seus usuários e são usados para registrar compras no app e estabelecer o valor do tempo de vida (LTV) para cada perfil de usuário. Esses eventos devem ser organizados pela sua equipe. Registrar eventos de compra permite adicionar propriedades como quantidade e tipo, ajudando a segmentar ainda mais seus usuários com base nessas propriedades.
+Os eventos de compra são ações de compra realizadas por seus usuários e são usados para registrar compras no app e estabelecer o valor do tempo de vida (LTV) para cada perfil de usuário. Esses eventos devem ser configurados pela sua equipe. Registrar eventos de compra permite adicionar propriedades como quantidade e tipo, ajudando a direcionar ainda mais seus usuários com base nessas propriedades.
 
 ## Registrando eventos de compra
 
-Você pode registrar compras passando um [objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/) pelo [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), ou usando uma de nossas bibliotecas SDK listadas abaixo.
+Você pode registrar compras passando um [objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/) pelo [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), ou usando uma de nossas bibliotecas SDK listadas abaixo.
 
-A seguir estão listados métodos em várias plataformas que são usados para registrar compras. Nessas páginas, você também encontrará documentação sobre como adicionar propriedades e quantidades ao seu evento de compra. Você pode segmentar ainda mais seus usuários com base nessas propriedades.
+A seguir estão listados métodos em várias plataformas usados para registrar compras. Nessas páginas, você também encontrará documentação sobre como adicionar propriedades e quantidades ao seu evento de compra. Você pode direcionar ainda mais seus usuários com base nessas propriedades.
 
 - [Android e FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
 - [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
@@ -33,7 +33,7 @@ Depois de configurar e começar a registrar eventos de compra, você pode visual
 
 ## Usando dados de compra
 
-Existem várias maneiras de usar os dados de compra no Braze:
+Existem várias maneiras de usar os dados de compra na Braze:
 
 - **[Segmentação](#purchase-event-segmentation):** Use os dados de compra para criar segmentos de usuários com base em seu comportamento de compra.
 - **[Personalização](#personalization):** Use dados de compra para personalizar mensagens para os usuários.
@@ -47,14 +47,14 @@ Você pode disparar qualquer número ou tipo de campanhas de acompanhamento com 
 Os seguintes filtros de segmentação estão disponíveis ao direcionar usuários:
 
 - Primeira compra feita
-- Primeira Compra Para App
-- Última compra de produto
+- Primeira compra para app
+- Último produto comprado
 - Dinheiro gasto
 - Produto comprado
 - Total de compras
-- X Dinheiro Gasto em Y Dias
+- X dinheiro gasto em Y dias
 - Produto X comprado em Y dias
-- X Comprar Propriedade em Y Dias
+- X propriedade de compra em Y dias
 - X compras nos últimos Y dias
 
 Para obter detalhes sobre cada filtro, consulte o glossário [Filtros de segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) e filtre por "Comportamento de compra".
@@ -62,14 +62,14 @@ Para obter detalhes sobre cada filtro, consulte o glossário [Filtros de segment
 ![Filtrando para usuários que fizeram exatamente três compras]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
 {% alert tip %}
-Para segmentar o número de vezes que uma compra específica ocorreu, registre essa compra individualmente como um [atributo personalizado incremental]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
+Para segmentar pelo número de vezes que uma compra específica ocorreu, registre essa compra individualmente como um [atributo personalizado incremental]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
 {% endalert %}
 
 ### Personalização
 
-Como qualquer outro tipo de dado que você coleta de seus usuários, você pode usar dados de compra para personalizar seu envio de mensagens através do Liquid. Por exemplo, você pode enviar um e-mail personalizado para um usuário recomendando produtos semelhantes aos que ele acabou de comprar.
+Como qualquer outro tipo de dado que você coleta dos seus usuários, você pode usar dados de compra para personalizar seu envio de mensagens através do Liquid. Por exemplo, você pode enviar um e-mail personalizado para um usuário recomendando produtos semelhantes aos que ele acabou de comprar.
 
-Suponha que você tenha uma propriedade de evento de compra chamada `last_purchased_product` que armazena o nome do último produto que um usuário comprou. Você pode usar essa propriedade para personalizar uma mensagem de e-mail como esta:
+Suponha que você tenha uma propriedade de evento de compra chamada `last_purchased_product` que armazena o nome do último produto que um usuário comprou. Você pode usar essa propriedade para personalizar uma mensagem de e-mail assim:
 
 {% raw %}
 
@@ -85,15 +85,15 @@ Suponha que você tenha uma propriedade de evento de compra chamada `last_purcha
 
 {% endraw %}
 
-Neste exemplo, a mensagem é personalizada com base na propriedade `last_purchased_product`. Se o último produto que o usuário comprou foi "Tênis de Corrida", ele recebe uma mensagem recomendando shorts de corrida e garrafas de água. Se o último produto foi "Tapete de Yoga", eles recebem uma mensagem recomendando blocos e faixas de yoga. Se o `last_purchased_product` for qualquer outra coisa, eles recebem uma mensagem genérica de agradecimento.
+Neste exemplo, a mensagem é personalizada com base na propriedade `last_purchased_product`. Se o último produto que o usuário comprou foi "Running Shoes", ele recebe uma mensagem recomendando shorts de corrida e garrafas de água. Se o último produto foi "Yoga Mat", ele recebe uma mensagem recomendando blocos e faixas de yoga. Se o `last_purchased_product` for qualquer outra coisa, ele recebe uma mensagem genérica de agradecimento.
 
 ### Disparar mensagens
 
 Um caso de uso comum é enviar automaticamente uma mensagem, como um e-mail, quando um usuário faz uma compra. Por exemplo, você pode enviar uma mensagem de agradecimento ou um código de desconto para uma compra futura.
 
-Para fazer isso, crie uma campanha baseada em ação ou canva, depois defina a ação-gatilho para **Fazer Compra**. Você também pode especificar condições adicionais para o disparo, como o produto comprado ou o valor da compra.
+Para fazer isso, crie uma campanha baseada em ação ou Canvas, depois defina a ação-gatilho para **Fazer Compra**. Você também pode especificar condições adicionais para o disparo, como o produto comprado ou o valor da compra.
 
-Você também pode personalizar sua mensagem acionada com Liquid. No exemplo a seguir, `${purchase_product_name}` é um atributo personalizado que você substituiria pelo nome do atributo real que armazena o nome do produto comprado em sua configuração do Braze.
+Você também pode personalizar sua mensagem disparada com Liquid. No exemplo a seguir, `${purchase_product_name}` é um atributo personalizado que você substituiria pelo nome real do atributo que armazena o nome do produto comprado na sua configuração da Braze.
 
 {% raw %}
 
@@ -120,17 +120,17 @@ Você pode encontrar esses dados na página [Relatório de receita]({{site.baseu
 <table>
     <thead>
         <tr>
-            <th>Métrico</th>
+            <th>Métrica</th>
             <th>Definição</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Receitas por tempo de vida</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Receita do tempo de vida</a></td>
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Valor de tempo de vida por usuário</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Valor do tempo de vida por usuário</a></td>
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
@@ -142,38 +142,42 @@ Você pode encontrar esses dados na página [Relatório de receita]({{site.baseu
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Receitas diárias por usuário</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Receita diária por usuário</a></td>
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
 
-#### Cálculo de receita vitalícia
+#### Conversão de moeda
 
-Braze usa eventos de compra para calcular a receita vitalícia (também chamada de valor do tempo de vida ou LTV) de um usuário, que é uma previsão do lucro líquido atribuído a todo o relacionamento futuro com um cliente. Isso pode ajudá-lo a tomar decisões informadas sobre estratégias de aquisição e retenção de clientes.
+Quando eventos de compra são registrados em uma moeda diferente de USD, a Braze converte o valor para USD usando taxas de câmbio do [Open Exchange Rates](http://openexchangerates.org). Essas taxas são atualizadas uma vez a cada 24 horas. Como as taxas de câmbio são armazenadas em cache, pode haver pequenas diferenças em relação à taxa de mercado em tempo real, especialmente para moedas com flutuações rápidas.
+
+#### Cálculo de receita do tempo de vida
+
+A Braze usa eventos de compra para calcular a receita do tempo de vida (também chamada de valor do tempo de vida ou LTV) de um usuário, que é uma previsão do lucro líquido atribuído a todo o relacionamento futuro com um cliente. Isso pode ajudar você a tomar decisões informadas sobre estratégias de aquisição e retenção de clientes.
 
 $$\text{Average purchase value} = \frac{\text{Total spend in dollars}}{\text{Total number of purchase events}}$$  
 
-Existem dois lugares principais no Braze que você pode consultar para entender o LTV dos seus usuários:
+Existem dois lugares principais na Braze onde você pode consultar o LTV dos seus usuários:
 
-- Para métricas gerais como *Receita do tempo de vida* e o *valor do tempo de vida por usuário* para cada app e site, consulte seu [Relatório de Receita]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
-- Para entender a receita vitalícia de um usuário específico, consulte seu [perfil de usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
+- Para métricas gerais como *Receita do tempo de vida* e o *Valor do tempo de vida por usuário* para cada app e site, consulte seu [Relatório de Receita]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
+- Para entender a receita do tempo de vida de um usuário específico, consulte seu [perfil de usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
 
-##### Impacto dos reembolsos na receita vitalícia
+##### Impacto dos reembolsos na receita do tempo de vida
 
-Ao usar eventos de compra para rastrear dados de compra, você deve rastrear reembolsos registrando um evento de compra do Braze com uma propriedade `price` negativa. Essa abordagem mantém um total preciso para a receita vitalícia.
+Ao usar eventos de compra para rastrear dados de compra, você deve rastrear reembolsos registrando um evento de compra da Braze com uma propriedade `price` negativa. Essa abordagem mantém um total preciso para a receita do tempo de vida.
 
 No entanto, tenha em mente que o reembolso contará como um evento de compra adicional. Vamos considerar o seguinte exemplo. Sam faz sua primeira compra por $12, mas devolve parte da compra para um reembolso de $5. O perfil de Sam registraria:
 
 - 1 compra com um preço de $12
 - 1 compra com um preço de -$5
-- Receita vitalícia de $7
+- Receita do tempo de vida de $7
 
 Embora Sam tenha dois eventos de compra em seu perfil, na realidade, ele fez apenas uma compra. Isso é importante considerar se você tiver algum segmento ou caso de uso construído em torno do número de compras que um usuário fez. Reembolsos constantes irão inflar a contagem de compras no perfil do usuário.
 
 ## Propriedades do evento de compra {#purchase-properties}
 
-Com as propriedades do evento de compra, você pode definir propriedades nas compras que podem ser usadas para qualificar ainda mais as condições de {disparar}, aumentar a personalização no {envio de mensagens} e gerar {análise de dados} mais sofisticadas por meio da exportação de dados brutos. Tipos de valor de propriedade (string, numérico, booleano, data) variam por plataforma e são frequentemente atribuídos como pares chave-valor.
+Com as propriedades do evento de compra, você pode definir propriedades nas compras que podem ser usadas para qualificar ainda mais as condições de disparo, aumentar a personalização no envio de mensagens e gerar análises de dados mais sofisticadas por meio da exportação de dados brutos. Os tipos de valor de propriedade (string, numérico, booleano, data) variam por plataforma e são frequentemente atribuídos como pares chave-valor.
 
 {% alert warning %}
 As seguintes chaves são reservadas e não podem ser usadas como nomes de propriedades de evento de compra: `time`, `product_id`, `quantity`, `event_name`, `price` e `currency`. Usar uma chave reservada no objeto `properties` retornará o erro "Campo 'properties' inválido".
@@ -181,15 +185,15 @@ As seguintes chaves são reservadas e não podem ser usadas como nomes de propri
 
 Por exemplo, se você tiver um aplicativo de comércio eletrônico e quiser enviar mensagens a um usuário depois de fazer uma compra, poderá melhorar ainda mais seu público-alvo e permitir uma maior personalização da campanha adicionando uma propriedade de evento de compra de `brand_name`.
 
-**Exemplo de acionamento com base nas propriedades do evento de compra:**
+**Exemplo de disparo com base nas propriedades do evento de compra:**
 
 ![Configurações de entrega baseada em ação para enviar uma campanha para usuários que compram fones de ouvido com uma marca igual a HeadphoneMart]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
 
-Consulte o objeto de [propriedades de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) para mais.
+Consulte o [objeto de propriedades de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) para mais informações.
 
-### Segmentação de propriedade de evento
+### Segmentação por propriedade de evento
 
-A segmentação de propriedades de evento permite que você direcione usuários com base não apenas em eventos personalizados realizados, mas também nas propriedades associadas a esses eventos. Isso adiciona opções de filtragem adicionais ao segmentar eventos de compra e eventos personalizados.
+A segmentação por propriedades de evento permite que você direcione usuários com base não apenas em eventos personalizados realizados, mas também nas propriedades associadas a esses eventos. Isso adiciona opções de filtragem adicionais ao segmentar eventos de compra e eventos personalizados.
 
 ![Filtros de segmentação para propriedades de eventos de compra, exibindo opções para filtrar usuários com base em valores específicos de propriedades de eventos de compra, como filtrar usuários que compraram um produto com uma determinada propriedade dentro de um período definido.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
 
@@ -198,27 +202,26 @@ Esses filtros de segmentação incluem:
 - Fez alguma compra com a propriedade Y com valor V X vezes nos últimos Y dias
 - Adiciona segmentação de 1 a 30 dias em todas as compras, eventos e propriedades dentro de compras e eventos
 
-Ao contrário das [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), os segmentos usados são atualizados em tempo real, suportam uma quantidade ilimitada de segmentos, oferecem um histórico de até 30 dias e geram pontos de dados. Devido à cobrança adicional de ponto de dados, você deve entrar em contato com seu gerente de sucesso do cliente da Braze para ativar as propriedades de eventos para seus eventos personalizados.
+Ao contrário das [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), os segmentos usados são atualizados em tempo real, suportam uma quantidade ilimitada de segmentos, oferecem um histórico de até 30 dias e geram pontos de dados. Devido à cobrança adicional de pontos de dados, você deve entrar em contato com seu gerente de sucesso do cliente da Braze para ativar as propriedades de eventos para seus eventos personalizados.
 
-Quando aprovadas, propriedades adicionais podem ser adicionadas no dashboard em **Configurações de dados** > **Eventos personalizados**, selecionando **Gerenciar propriedades**. Você pode então usar essas propriedades de evento na {etapa} alvo da campanha ou do construtor de {canva}.
+Quando aprovadas, propriedades adicionais podem ser adicionadas no dashboard em **Configurações de Dados** > **Eventos Personalizados**, selecionando **Gerenciar Propriedades**. Você pode então usar essas propriedades de evento na etapa de direcionamento do construtor de campanha ou Canvas.
 
-### Propriedades de entrada da canva e propriedades de evento
+### Propriedades de entrada do Canvas e propriedades de evento
 
 {% multi_lang_include canvas_entry_event_properties.md %}
 
-### Registre as compras no nível do pedido
+### Registrar compras no nível do pedido
 
-Para registrar compras no nível do pedido em vez de no nível do produto, use o nome do pedido ou a categoria do pedido como `product_id`. Consulte nossa [especificação do objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) para saber mais. 
+Para registrar compras no nível do pedido em vez do nível do produto, use o nome do pedido ou a categoria do pedido como `product_id`. Consulte nossa [especificação do objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) para saber mais. 
 
 ### Convenções de nomenclatura de ID de produto
 
-Na Braze, oferecemos algumas convenções gerais de nomenclatura para o objeto de compra `product_id`. Ao escolher `product_id`, a Braze sugere o uso de nomes simplistas, como o nome do produto ou a categoria do produto (em vez de SKUs), com a intenção de agrupar todos os itens registrados por esse `product_id`.
+Na Braze, oferecemos algumas convenções gerais de nomenclatura para o `product_id` do objeto de compra. Ao escolher o `product_id`, a Braze sugere o uso de nomes simples, como o nome do produto ou a categoria do produto (em vez de SKUs), com a intenção de agrupar todos os itens registrados por esse `product_id`.
 
-Isso torna os produtos fáceis de identificar para segmentação e acionamento. 
+Isso torna os produtos fáceis de identificar para segmentação e direcionamento. 
 
-## Eventos de compra em lista de bloqueio
+## Bloqueio de eventos de compra
 
 Você pode ocasionalmente identificar eventos de compra que registram muitos pontos de dados, não são mais úteis para sua estratégia de marketing ou foram registrados por engano. Para impedir que esses dados sejam enviados para a Braze, você pode colocar o objeto de dados personalizados na lista de bloqueio enquanto sua equipe de engenharia trabalha para removê-lo do backend do seu app ou site.
 
 No dashboard da Braze, você pode gerenciar a lista de bloqueio em **Configurações de Dados** > **Produtos**. Confira [Gerenciamento de dados personalizados]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) para saber mais.
-

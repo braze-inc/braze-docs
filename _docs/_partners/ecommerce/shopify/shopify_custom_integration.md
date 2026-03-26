@@ -31,7 +31,7 @@ To complete these goals, follow these steps:
 
 ### Step 1: Create a Braze website app {#step-1}
 
-In Braze, go to **Settings** > **App Settings** > and then select **Add App**. Name the app as "Shopify".
+In Braze, go to **Settings** > **App Settings**, then select **Add app**. Enter "Shopify" as the app name.
 
 {% alert warning %}
 The shop must be named “Shopify” or the integration may not work properly.
@@ -390,7 +390,7 @@ async function loadCriticalData({context, params, request}) {
 
 #### Cart Updated events
 
-In addition to tracking the `cart_updated` event, you need to send the cart token value over to Braze. We use the cart token value to process order webhooks received from Shopify. This is done by creating a user alias with the Shopify cart token as its name. 
+{% multi_lang_include alerts/important_alerts.md alert='Shopify cart token alias' %}
 
 1. Define functions for tracking the `cart_updated` event and setting the cart token:
 

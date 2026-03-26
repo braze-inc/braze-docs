@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Atribuições padrão do usuário
+## Atributos padrão do usuário
 
 ### Métodos predefinidos
 
@@ -78,7 +78,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ## Atributos personalizados do usuário
 
-Além dos atributos de usuário padrão, a Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para mais informações sobre a opção de segmentação de cada atributo, veja [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
+Além dos atributos de usuário padrão, a Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para saber mais sobre a opção de segmentação de cada atributo, veja [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
 
 ### Definindo atributos personalizados
 
@@ -285,13 +285,13 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 
 {% alert warning %}
-As datas passadas para a Braze com esse método devem estar no formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) (e.g `2013-07-16T19:20:30+01:00`) ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ` (e.g `2016-12-14T13:32:31.601-0800`).
+As datas passadas para a Braze com esse método devem estar no formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) (por exemplo, `2013-07-16T19:20:30+01:00`) ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ` (por exemplo, `2016-12-14T13:32:31.601-0800`).
 {% endalert %}
 
 {% endtab %}
 {% tab Array %}
 
-O número máximo de elementos em matrizes de atributos personalizados tem como padrão 25. O máximo para arrays individuais pode ser aumentado para até 500 no dashboard da Braze, em **Configurações de Dados** > **Atributos Personalizados**. Arrays que excedem o número máximo de elementos são truncados para conter o número máximo de elementos. Para mais informações sobre arrays de atributos personalizados e seu comportamento, veja [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+O número padrão e máximo de elementos em um array é 500. Você pode atualizar o número máximo de elementos no dashboard da Braze, em **Configurações de Dados** > **Atributos personalizados**. Arrays que excedem o número máximo de elementos são truncados para conter o número máximo de elementos. Para saber mais sobre arrays de atributos personalizados e seu comportamento, veja [Arrays]({{site.baseurl}}/developer_guide/analytics/#arrays).
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -358,7 +358,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### Aninhando atributos personalizados
 
-Você também pode aninhar propriedades dentro de atributos personalizados. No exemplo a seguir, um objeto `favorite_book` com propriedades aninhadas é definido como um atributo personalizado no perfil do usuário. Para mais detalhes, consulte [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+Você também pode aninhar propriedades dentro de atributos personalizados. No exemplo a seguir, um objeto `favorite_book` com propriedades aninhadas é definido como um atributo personalizado no perfil do usuário. Para mais detalhes, consulte [Atributos personalizados aninhados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 {% tabs %}
 {% tab JAVA %}
@@ -395,24 +395,24 @@ braze.getCurrentUser { user ->
 
 ### Usando a API REST
 
-Você também pode usar nossa API REST para definir ou remover atributos de usuários. Para saber mais, consulte [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+Você também pode usar nossa API REST para definir ou remover atributos de usuários. Para saber mais, consulte [Endpoints de dados de usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Definindo assinaturas de usuários
+## Definindo inscrições de usuários
 
-Para configurar uma inscrição para seus usuários (envio de e-mail ou push), chame as funções `setEmailNotificationSubscriptionType()` ou `setPushNotificationSubscriptionType()`, respectivamente. Ambas as funções usam o tipo de enum `NotificationSubscriptionType` como argumentos. Esse tipo tem três estados diferentes:
+Para configurar uma inscrição para seus usuários (e-mail ou push), chame as funções `setEmailNotificationSubscriptionType()` ou `setPushNotificationSubscriptionType()`, respectivamente. Ambas as funções usam o tipo de enum `NotificationSubscriptionType` como argumentos. Esse tipo tem três estados diferentes:
 
 | Status da inscrição | Definição |
 | ------------------- | ---------- |
-| `OPTED_IN` | Inscrição e aceitação explícita |
-| `SUBSCRIBED` | Inscrição feita, mas sem aceitação explícita |
-| `UNSUBSCRIBED` | Cancelamento da inscrição e/ou aceitação explícita |
+| `OPTED_IN` | Inscreveu-se com aceitação explícita |
+| `SUBSCRIBED` | Inscreveu-se, mas sem aceitação explícita |
+| `UNSUBSCRIBED` | Cancelou a inscrição e/ou recusou explicitamente |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 Nenhuma aceitação explícita é exigida pelo Android para enviar notificações por push aos usuários. Quando um usuário é registrado para push, ele é definido como `SUBSCRIBED` em vez de `OPTED_IN` por padrão. Consulte [Gerenciar inscrições de usuários]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) para saber mais sobre a implementação de inscrições e aceitação explícita.
 {% endalert %}
 
-### Configuração de envios de e-mail
+### Configuração de inscrições de e-mail
 
 {% tabs %}
 {% tab JAVA %}
@@ -463,4 +463,3 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 {% endtab %}
 {% endtabs %}
-

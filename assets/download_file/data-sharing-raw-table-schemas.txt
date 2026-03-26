@@ -683,7 +683,7 @@ USERS_MESSAGES_BANNER_ABORT_SHARED: An originally scheduled banner message was a
 	AD_ID (VARCHAR(16777216)): [PII] Advertising identifier
 	AD_ID_TYPE (VARCHAR(16777216)): One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']
 	AD_TRACKING_ENABLED (BOOLEAN): Whether advertising tracking is enabled for the device
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	BANNER_PLACEMENT_ID (VARCHAR(16777216)): Customer specified banner placement ID
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
@@ -775,7 +775,7 @@ USERS_MESSAGES_CONTENTCARD_ABORT_SHARED: An originally scheduled contentcard mes
 	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
 	TIMEZONE (VARCHAR(16777216)): Time zone of the user
 	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
 	MESSAGE_VARIATION_NAME (VARCHAR(16777216)): Name of the message variation
@@ -962,7 +962,7 @@ USERS_MESSAGES_EMAIL_ABORT_SHARED: An originally scheduled email message was abo
 	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
 	EMAIL_ADDRESS (VARCHAR(16777216)): [PII] Email address of the user
 	IP_POOL (VARCHAR(16777216)): IP pool from which the email send was made
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
 	MESSAGE_VARIATION_NAME (VARCHAR(16777216)): Name of the message variation
@@ -1388,7 +1388,7 @@ USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED: An originally scheduled inappmessage m
 	AD_ID (VARCHAR(16777216)): [PII] Advertising identifier
 	AD_ID_TYPE (VARCHAR(16777216)): One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']
 	AD_TRACKING_ENABLED (BOOLEAN): Whether advertising tracking is enabled for the device
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
 	MESSAGE_VARIATION_NAME (VARCHAR(16777216)): Name of the message variation
@@ -1406,7 +1406,6 @@ USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED: when a user clicks an in app message
 	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
 	APP_API_ID (VARCHAR(16777216)): API ID of the app on which this event occurred
 	CARD_API_ID (VARCHAR(16777216)): API ID of the card
-	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
 	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
 	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
@@ -1449,7 +1448,6 @@ USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED: when a user views an in app messa
 	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
 	APP_API_ID (VARCHAR(16777216)): API ID of the app on which this event occurred
 	CARD_API_ID (VARCHAR(16777216)): API ID of the card
-	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
 	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
 	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
@@ -1492,7 +1490,7 @@ USERS_MESSAGES_LINE_ABORT_SHARED: when a scheduled LINE message cannot be delive
 	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
 	USER_ID (VARCHAR(16777216)): [PII] Braze user ID of the user who performed this event
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
 	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
 	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
@@ -1674,7 +1672,7 @@ USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED: An originally scheduled newsfeedcard m
 	RESOLUTION (VARCHAR(16777216)): Resolution of the device
 	CARRIER (VARCHAR(16777216)): Carrier of the device
 	BROWSER (VARCHAR(16777216)): Device browser - extracted from user_agent - on which the open occurred
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
@@ -1748,7 +1746,7 @@ USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED: An originally scheduled pushnotifi
 	TIMEZONE (VARCHAR(16777216)): Time zone of the user
 	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
 	PLATFORM (VARCHAR(16777216)): Platform of the device
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
 	MESSAGE_VARIATION_NAME (VARCHAR(16777216)): Name of the message variation
@@ -1992,7 +1990,7 @@ USERS_MESSAGES_RCS_ABORT_SHARED: An event that is created when an RCS send is in
 	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
 	USER_ID (VARCHAR(16777216)): [PII] Braze user ID of the user who performed this event
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
 	CANVAS_ID (VARCHAR(16777216)): BSON ID of the Canvas this event belongs to
 	CANVAS_NAME (VARCHAR(16777216)): Name of the Canvas
@@ -2187,7 +2185,7 @@ USERS_MESSAGES_SMS_ABORT_SHARED: An originally scheduled sms message was aborted
 	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
 	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
 	SUBSCRIPTION_GROUP_API_ID (VARCHAR(16777216)): Subscription group API ID
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
 	MESSAGE_VARIATION_NAME (VARCHAR(16777216)): Name of the message variation
@@ -2469,7 +2467,7 @@ USERS_MESSAGES_WEBHOOK_ABORT_SHARED: An originally scheduled webhook message was
 	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
 	TIMEZONE (VARCHAR(16777216)): Time zone of the user
 	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
 	MESSAGE_VARIATION_NAME (VARCHAR(16777216)): Name of the message variation
@@ -2593,7 +2591,7 @@ USERS_MESSAGES_WHATSAPP_ABORT_SHARED: when a scheduled WhatsApp message cannot b
 	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
 	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
 	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
-	ABORT_TYPE (VARCHAR(16777216)): Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+	ABORT_TYPE (VARCHAR(16777216)): Type of abort. Refer to the abort types reference in the Braze documentation for a full list of values.
 	ABORT_LOG (VARCHAR(16777216)): [PII] Log message describing abort details (up to 128 chars)
 	CAMPAIGN_NAME (VARCHAR(16777216)): Name of the campaign
 	MESSAGE_VARIATION_NAME (VARCHAR(16777216)): Name of the message variation

@@ -1,39 +1,39 @@
 ---
 nav_title: Limites de taxa
-article_title: Limites de frequência da API
+article_title: Limites de taxa da API
 page_order: 4.5
-description: "Este artigo de referência aborda os limites de frequência da API para a infraestrutura da API da Braze."
+description: "Este artigo de referência aborda os limites de taxa da API para a infraestrutura da API da Braze."
 page_type: reference
 
 ---
 
-# Limites de frequência
+# Limites de taxa
 
-> A infraestrutura da API da Braze foi projetada para lidar com grandes volumes de dados de nossa base de clientes. Para isso, aplicamos limites de frequência de API por espaço de trabalho.
+> A infraestrutura da API da Braze foi projetada para lidar com grandes volumes de dados de nossa base de clientes. Para isso, aplicamos limites de taxa de API por espaço de trabalho.
 
-Um limite de frequência é o número de solicitações que a API pode receber em um determinado período de tempo. Muitos incidentes de negação de serviço baseados em carga em grandes sistemas não são intencionais - causados por erros no software ou nas configurações - e não por ataques mal-intencionados. Os limites de frequência verificam se esses erros não privam nossos clientes dos recursos da API do Braze. Se muitas solicitações forem enviadas em um determinado período de tempo, você poderá ver respostas de erro com um código de status `429`, o que indica que o limite de frequência foi atingido.
+Um limite de taxa é o número de solicitações que a API pode receber em um determinado período de tempo. Muitos incidentes de negação de serviço baseados em carga em grandes sistemas não são intencionais — causados por erros no software ou nas configurações — e não por ataques mal-intencionados. Os limites de taxa verificam se esses erros não privam nossos clientes dos recursos da API da Braze. Se muitas solicitações forem enviadas em um determinado período de tempo, você poderá ver respostas de erro com um código de status `429`, o que indica que o limite de taxa foi atingido.
 
 {% alert warning %}
-Os limites de frequência da API estão sujeitos a alterações, dependendo do uso adequado de nosso sistema. Incentivamos limites sensatos ao fazer uma chamada à API para evitar danos ou uso indevido.
+Os limites de taxa da API estão sujeitos a alterações, dependendo do uso adequado de nosso sistema. Incentivamos limites sensatos ao fazer uma chamada à API para evitar danos ou uso indevido.
 {% endalert %}
 
-## Limites de frequência por tipo de solicitação
+## Limites de taxa por tipo de solicitação
 
-Consulte o seguinte para os limites de taxa padrão da API para diferentes tipos de solicitações. Esses limites padrão podem ser aumentados mediante solicitação. Entre em contato com seu gerente de sucesso do cliente para saber mais.
+Consulte a seguir os limites de taxa padrão da API para diferentes tipos de solicitações. Esses limites padrão podem ser aumentados mediante solicitação. Entre em contato com seu gerente de sucesso do cliente para saber mais.
 
 ### Solicitações com diferentes limites de taxa
 
-| Tipo de solicitação                                                                                                                                                                                                                                           | Limite de frequência padrão da API                                                                                                                                                                                                                                                                                                                                                                    |
+| Tipo de solicitação                                                                                                                                                                                                                                           | Limite de taxa padrão da API                                                                                                                                                                                                                                                                                                                                                                    |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)                                                                                                                                                                                                                                   | **Solicitações:** 3.000 solicitações a cada três segundos.<br><br>**Lotes:** 75 eventos, 75 compras e 75 atribuições por solicitação de API. Para obter mais informações, consulte [Agrupamento de solicitações de rastreamento do usuário](#batch-user-track).<br><br>**Limites para Usuários Ativos Mensais CY 24-25, MAU Universal, MAU Web e MAU Móvel:** veja [orientações sobre limites aqui]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25). |
-| [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)                                                                                                                                                                                                                              | **Se você embarcou em 22 de agosto de 2024 ou após essa data:** 250 solicitações por minuto. <br><br> **Se sua integração foi feita antes de 22 de agosto de 2024:** 2.500 solicitações por minuto.                                                                                                                                                                                                                               |
+| [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)                                                                                                                                                                                                                                   | **Solicitações:** 3.000 solicitações a cada três segundos.<br><br>**Lotes:** Até 75 objetos no total combinados entre `attributes`, `events` e `purchases` por solicitação de API. Clientes com limites de taxa legados podem incluir até 75 objetos por array de forma independente. Para saber mais, consulte [Agrupamento de solicitações de rastreamento de usuários](#batch-user-track).<br><br>**Limites para Usuários Ativos Mensais CY 24-25, MAU Universal, MAU Web e MAU Celular:** veja [orientações sobre limites aqui]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25). |
+| [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)                                                                                                                                                                                                                              | **Se você fez a integração em 22 de agosto de 2024 ou após essa data:** 250 solicitações por minuto. <br><br> **Se você fez a integração antes de 22 de agosto de 2024:** 2.500 solicitações por minuto.                                                                                                                                                                                                                               |
 | [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)<br>[`/users/alias/new`]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/)<br>[`/users/alias/update`]({{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/)<br>[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)<br>[`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/)                                                                                                                    | 20.000 solicitações por minuto, compartilhadas entre os endpoints.                                                                                                                                                                                                                                                                                                                                 |
 | [`/users/external_id/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/)                                                                                                                                                                                                                      | 1.000 solicitações por minuto.                                                                                                                                                                                                                                                                                                                                                                |
 | [`/users/external_id/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/)                                                                                                                                                                                                                      | 1.000 solicitações por minuto.                                                                                                                                                                                                                                                                                                                                                                |
-| [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/)                                                                                                                                                                                                                                   | 1.000 solicitações por hora, compartilhadas com o ponto de extremidade `/purchases/product_list`.                                                                                                                                                                                                                                                                                                              |
-| [`/purchases/product_list`]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/)                                                                                                                                                                                                                        | 1.000 solicitações por hora, compartilhadas com o ponto de extremidade `/events/list`.                                                                                                                                                                                                                                                                                                                         |
+| [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/)                                                                                                                                                                                                                                   | 1.000 solicitações por hora, compartilhadas com o endpoint `/purchases/product_list`.                                                                                                                                                                                                                                                                                                              |
+| [`/purchases/product_list`]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/)                                                                                                                                                                                                                        | 1.000 solicitações por hora, compartilhadas com o endpoint `/events/list`.                                                                                                                                                                                                                                                                                                                         |
 | [`/campaigns/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/)                                                                                                                                                                                                                       | 50.000 solicitações por minuto.                                                                                                                                                                                                                                                                                                                                                               |
-| [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)<br>[`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)<br>[`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)                                                                                                                                                          | Para chamadas de transmissão (quando direcionando amplamente segmentos ou filtros ou um público conectado), 250 solicitações por minuto em todos os públicos, **e** 10 solicitações por minuto por [público único]({{site.baseurl}}/api/api_limits/#what-counts-as-the-same-unique-audience) (o limite que atingir primeiro).<br><br>Caso contrário, ao direcionar destinatários individuais, a solicitação está incluída nos 250.000 pedidos por hora [limite de taxa compartilhado]({{site.baseurl}}/api/api_limits/#requests-with-shared-rate-limits).                                                                                                                                                                                                                    |
+| [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)<br>[`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)<br>[`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)                                                                                                                                                          | Para chamadas de transmissão (quando direcionando amplamente segmentos ou filtros ou um público conectado), 250 solicitações por minuto em todos os públicos, **e** 10 solicitações por minuto por [público único]({{site.baseurl}}/api/api_limits/#what-counts-as-the-same-unique-audience) (o limite que for atingido primeiro).<br><br>Caso contrário, ao direcionar destinatários individuais, a solicitação está incluída nas 250.000 solicitações por hora do [limite de taxa compartilhado]({{site.baseurl}}/api/api_limits/#requests-with-shared-rate-limits).                                                                                                                                                                                                                    |
 | [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/)                                                                                                                                                                                                                               | 100 solicitações por dia.                                                                                                                                                                                                                                                                                                                                                                     |
 | [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)                                                                                                                                                                                                                       | 5.000 solicitações por minuto.                                                                                                                                                                                                                                                                                                                                                                |
 | [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/)<br>[`/preference_center/v1/list`]({{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center/)<br>[`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/)                                                                            | 1.000 solicitações por minuto.                                                                                                                                                                                                                                                                                                                                                 |
@@ -50,7 +50,7 @@ Consulte o seguinte para os limites de taxa padrão da API para diferentes tipos
 
 ### Solicitações com limites de taxa compartilhados
 
-As seguintes solicitações têm um limite de taxa de 250.000 solicitações por hora, compartilhadas entre elas.
+As seguintes solicitações têm um limite de taxa de 250.000 solicitações por hora, compartilhado entre elas.
 
 - [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/)
 - [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys/)
@@ -58,7 +58,7 @@ As seguintes solicitações têm um limite de taxa de 250.000 solicitações por
 - [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key/)
 - [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details)
 - [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns)
-- [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) (apenas para chamadas não de transmissão—aqueles que especificam `external_user_ids` ou `aliases`)
+- [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) (apenas para chamadas não de transmissão — aquelas que especificam `external_user_ids` ou `aliases`)
 - [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/)
 - [`/campaigns/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/)
 - [`/campaigns/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/)
@@ -111,45 +111,51 @@ As seguintes solicitações têm um limite de taxa de 250.000 solicitações por
 
 ### O que conta como o mesmo público único? {#what-counts-as-the-same-unique-audience}
 
-Isso se aplica aos seguintes três endpoints: [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/), [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), e [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
+Isso se aplica aos seguintes três endpoints: [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/), [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) e [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
 
-Para esses endpoints, as solicitações de transmissão são consideradas direcionadas ao mesmo público único quando todos os seguintes correspondem:
+Para esses endpoints, as solicitações de transmissão são consideradas direcionadas ao mesmo público único quando todos os seguintes critérios correspondem:
 
-- A campanha ou Canvas sendo acionada (o `campaign_id` ou `canvas_id` na sua solicitação de API, se especificado)
+- A campanha ou Canvas sendo acionado (o `campaign_id` ou `canvas_id` na sua solicitação de API, se especificado)
 - O público sendo direcionado (os segmentos ou filtros, ou para campanhas de API, o `segment_id` na sua solicitação de API)
-- Os filtros de público conectado (o `audience` objeto na sua solicitação de API, se especificado)
+- Os filtros de público conectado (o objeto `audience` na sua solicitação de API, se especificado)
 
-Cada combinação única desses atributos conta como um público distinto, portanto, o limite de frequência adicional para cada público único se aplica a cada combinação de forma independente.
+Cada combinação única desses atributos conta como um público distinto, portanto, o limite de taxa adicional para cada público único se aplica a cada combinação de forma independente.
 
 ## Agrupamento de solicitações de API
 
 As APIs da Braze foram criadas para oferecer suporte a lotes. Com os lotes, a Braze pode receber o máximo de dados possível em uma única chamada de API para que você não precise fazer muitas chamadas de API. É mais eficiente para a Braze processar dados em lotes do que processar dados em uma chamada de cada vez. Por exemplo, lidar com 1.000 chamadas de API em lote requer menos recursos do que lidar com 75.000 chamadas individuais. O agrupamento é extremamente importante para qualquer aplicativo que possa necessitar de mais de 75.000 chamadas por hora.
 
 {% alert note %}
-Os aumentos do limite de frequência da API REST são considerados com base na necessidade dos clientes que estão usando os recursos em lote da API.
+Os aumentos do limite de taxa da API REST são considerados com base na necessidade dos clientes que estão usando os recursos de lote da API.
 {% endalert %}
 
 ### Agrupando solicitações para o endpoint de rastreamento de usuários {#batch-user-track}
 
-Cada solicitação `/users/track` pode conter até 75 objetos de evento, 75 objetos de atribuição e 75 objetos de compra. Cada objeto (evento, atributo e vetores de compra) pode atualizar um usuário cada. No total, isso significa que até 225 usuários podem ser atualizados em uma única chamada. Além disso, um único perfil de usuário pode ser atualizado por vários objetos.
+Cada solicitação `/users/track` pode conter até 75 objetos no total combinados entre `attributes`, `events` e `purchases`. Cada objeto pode atualizar um usuário. Um único perfil de usuário pode ser atualizado por vários objetos.
 
-As solicitações feitas a esse ponto de extremidade geralmente começarão a ser processadas nessa ordem:
+{% details Limites de taxa legados %}
+Para clientes com limites de taxa legados, cada array (`attributes`, `events` e `purchases`) pode conter até 75 objetos de forma independente, para um máximo combinado de até 225 objetos por solicitação.
+{% enddetails %}
+
+Para saber mais sobre os limites de taxa do `/users/track`, consulte [POST: Criar e atualizar usuários]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+
+As solicitações feitas a esse endpoint geralmente começarão a ser processadas nesta ordem:
 
 1. Atributos
 2. Eventos
 3. Compras
 
-### Envio de mensagens em lote para solicitações de endpoint
+### Agrupando solicitações de endpoints de envio de mensagens
 
-Uma única solicitação para os [pontos de extremidade de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/) pode alcançar qualquer um dos seguintes:
+Uma única solicitação para os [endpoints de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/) pode alcançar qualquer um dos seguintes:
 
-- Até 50 sites específicos `external_ids`, cada um com parâmetros de mensagens individuais
-- Um segmento de qualquer tamanho criado no dashboard do Braze, especificado por seu `segment_id`
-- Usuários que correspondem a filtros de público adicionais de qualquer tamanho, definidos na solicitação como um objeto [de público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/) 
+- Até 50 `external_ids` específicos, cada um com parâmetros de mensagens individuais
+- Um segmento de qualquer tamanho criado no dashboard da Braze, especificado por seu `segment_id`
+- Usuários que correspondem a filtros de público adicionais de qualquer tamanho, definidos na solicitação como um objeto de [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/)
 
-### Exemplo de solicitação de lote
+### Exemplo de solicitação em lote
 
-O exemplo a seguir usa `external_id` para fazer uma chamada de API para envio de e-mail e SMS.
+O exemplo a seguir usa `external_id` para fazer uma chamada de API para e-mail e SMS.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
@@ -171,36 +177,39 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 }
 ```
 
-## Monitoramento de seus limites de frequência
+## Monitoramento dos seus limites de taxa
 
 Toda solicitação de API enviada à Braze retorna as seguintes informações nos cabeçalhos de resposta:
 
 | Nome do cabeçalho             | Descrição                                                                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------- |
-| `X-RateLimit-Limit`     | O número máximo de solicitações que você pode fazer em um intervalo especificado (seu limite de frequência). |
-| `X-RateLimit-Remaining` | O número de solicitações restantes na janela do limite de frequência atual.                          |
-| `X-RateLimit-Reset`     | A hora em que a janela do limite de frequência atual é redefinida em segundos de epoch UTC.                |
+| `X-RateLimit-Limit`     | O número máximo de solicitações que você pode fazer em um intervalo especificado (seu limite de taxa). |
+| `X-RateLimit-Remaining` | O número de solicitações restantes na janela do limite de taxa atual.                          |
+| `X-RateLimit-Reset`     | A hora em que a janela do limite de taxa atual é redefinida em segundos de epoch UTC.                |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Essas informações são incluídas intencionalmente no cabeçalho da resposta à solicitação da API, e não no dashboard da Braze. Isso permite que seu sistema reaja melhor em tempo real à medida que você interage com nossa API. Por exemplo, se o valor de `X-RateLimit-Remaining` cair abaixo de um determinado limite, talvez você queira diminuir a velocidade de envio para garantir que todos os e-mails de transação sejam enviados. Ou, se chegar a zero, talvez você queira pausar todos os envios até que passe o tempo especificado em `X-RateLimit-Reset`.
 
 {% alert note %}
-Os cabeçalhos HTTP serão retornados com todos os caracteres em minúsculas. Esse comportamento está alinhado com o protocolo HTTP/2, que exige que todos os nomes de campos de cabeçalho sejam minúsculos. Isso difere do HTTP/1.X, em que os nomes de cabeçalho não diferenciavam maiúsculas de minúsculas, mas eram comumente escritos em várias maiúsculas.
+Os cabeçalhos HTTP serão retornados com todos os caracteres em minúsculas. Esse comportamento está alinhado com o protocolo HTTP/2, que exige que todos os nomes de campos de cabeçalho sejam minúsculos. Isso difere do HTTP/1.X, em que os nomes de cabeçalho não diferenciavam maiúsculas de minúsculas, mas eram comumente escritos em várias capitalizações.
 {% endalert %}
 
 Se tiver dúvidas sobre os limites da API, entre em contato com o gerente de sucesso do cliente ou abra um [tíquete de suporte]({{site.baseurl}}/braze_support/).
 
 {% alert tip %}
-Você pode usar o [painel de uso da API]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_dashboard/) para visualizar e comparar o tráfego de entrada em relação aos seus limites de frequência.
+Você pode usar o [dashboard de uso da API]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_dashboard/) para visualizar e comparar o tráfego de entrada em relação aos seus limites de taxa.
 {% endalert %}
 
-### Postergação ideal entre os pontos finais
+### Postergação ideal entre endpoints
 
 {% alert note %}
 Recomendamos que você permita uma postergação de 5 minutos entre chamadas consecutivas ao endpoint para minimizar erros.
 {% endalert %}
 
-Compreender a postergação ideal entre os pontos de extremidade é crucial ao fazer chamadas consecutivas para a API do Braze. Os problemas surgem quando os endpoints dependem do processamento bem-sucedido de outros endpoints e, se as chamadas forem feitas muito cedo, podem gerar erros. Por exemplo, se estiver atribuindo aos usuários um alias por meio do nosso endpoint `/user/alias/new` e, em seguida, usar esse alias para enviar um evento personalizado por meio do nosso endpoint `/users/track`, quanto tempo deve esperar?
+Compreender a postergação ideal entre endpoints é crucial ao fazer chamadas consecutivas para a API da Braze. Os problemas surgem quando os endpoints dependem do processamento bem-sucedido de outros endpoints e, se as chamadas forem feitas muito cedo, podem gerar erros. Por exemplo, se você estiver atribuindo aos usuários um alias por meio do nosso endpoint `/user/alias/new` e, em seguida, usando esse alias para enviar um evento personalizado por meio do nosso endpoint `/users/track`, quanto tempo deve esperar?
 
 Em condições normais, o tempo para a eventual consistência dos nossos dados ocorrer é de 10-100ms (1/10 de segundo). No entanto, em alguns casos, pode levar mais tempo para que essa consistência ocorra, portanto, recomendamos que você permita uma postergação de 5 minutos entre as chamadas subsequentes para minimizar a probabilidade de erro.
 
+### Redefinição do limite de taxa
+
+Os limites de taxa são redefinidos na hora cheia, e não em uma janela contínua. Por exemplo, se o limite for de 250.000 solicitações por hora, você pode fazer 50.000 solicitações entre 22h00 e 22h59 e outras 250.000 solicitações entre 23h00 e 23h59, porque o contador é redefinido no início de cada hora.

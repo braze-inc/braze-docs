@@ -1,6 +1,6 @@
 ---
-nav_title: "Zusätzliche Kanäle &amp; Erweiterungen"
-article_title: Zusätzliche Kanäle &amp; Erweiterungen
+nav_title: "Zusätzliche Kanäle und Erweiterungen"
+article_title: Zusätzliche Kanäle und Erweiterungen
 page_order: 11
 
 page_type: landing
@@ -8,7 +8,7 @@ description: "Auf dieser Seite finden Sie Braze-Partner (Technologie-Partner), d
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Additional Channels & Extensions"
+partner_top_header: "Zusätzliche Kanäle und Erweiterungen"
 
 valid_partner_list:
 - name: LiveRamp
@@ -28,9 +28,11 @@ valid_partner_list:
 - name: Pypestream
   url: /docs/partners/pypestream/
 - name: Regal
-  url: /docs/partners/pypestream/
+  url: /docs/partners/regal/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Zendesk
   url: /docs/partners/zendesk/
 - name: PassKit
