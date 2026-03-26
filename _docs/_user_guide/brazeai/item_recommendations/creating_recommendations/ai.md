@@ -14,7 +14,7 @@ page_order: 1
 Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
 
 {% alert tip %}
-[AI Personalized recommendations](#recommendation-types) work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
+[AI Personalized recommendations](#recommendation-types) work best with at least a few hundred catalog items, at most 100,000 catalog items, and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data, including when **Most popular** is used as a fallback.
 {% endalert %}
 
 {% multi_lang_include brazeai/recommendations/ai.md section="Plan-specific features" %}
