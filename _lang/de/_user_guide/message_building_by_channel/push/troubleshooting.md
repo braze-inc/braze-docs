@@ -30,7 +30,7 @@ Pushes können nur an abonnierte oder Opt-in-Nutzer:innen gesendet werden. Über
 
 ![Push registriert für]({% image_buster /assets/img_archive/trouble1.png %})
 
-Sie können die Nutzerprofile auch über Braze Export-Endpunkte exportieren:
+Sie können die Nutzerprofile auch über Braze-Export-Endpunkte exportieren:
 - [Nutzer:innen nach Bezeichner]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)
 - [Nutzer:innen nach Segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment)
 
@@ -70,7 +70,7 @@ Ein Push-Token ist ein Bezeichner, den Absender verwenden, um bestimmte Geräte 
 
 #### Art der Push-Benachrichtigung
 
-Überprüfen Sie, ob Sie die richtige Art von Push-Benachrichtigung verwenden. Wenn Sie beispielsweise ein FireTV als Zielgruppe ansprechen möchten, würden Sie eine Kindle-Push-Benachrichtigung verwenden und keine Android-Push-Kampagne. Wenn Sie ein Android-Gerät targetieren möchten, verwenden Sie eine Android-Push-Benachrichtigung und keine iOS-Push-Kampagne. In den folgenden Artikeln finden Sie weitere Informationen zum Verständnis des Braze-Workflows für:
+Überprüfen Sie, ob Sie die richtige Art von Push-Benachrichtigung verwenden. Wenn Sie beispielsweise ein FireTV ansprechen möchten, würden Sie eine Kindle-Push-Benachrichtigung verwenden und keine Android-Push-Kampagne. Wenn Sie ein Android-Gerät targetieren möchten, verwenden Sie eine Android-Push-Benachrichtigung und keine iOS-Push-Kampagne. In den folgenden Artikeln finden Sie weitere Informationen zum Verständnis des Braze-Workflows für:
 - [Apple Push Notification]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=swift)
 - [Firebase Cloud Messaging]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android)
 
@@ -78,9 +78,27 @@ Ein Push-Token ist ein Bezeichner, den Absender verwenden, um bestimmte Geräte 
 
 Wenn Sie Push-Sendungen mit internen Nutzer:innen testen, vergewissern Sie sich, dass der/die Nutzer:in, der/die die Push-Benachrichtigung erhalten soll, derzeit in der entsprechenden App angemeldet ist. Dies kann dazu führen, dass Nutzer:innen entweder keinen Push erhalten oder einen Push erhalten, von dem Sie glauben, dass er nicht für sie segmentiert ist.
 
+## Klick auf eine Push-Benachrichtigung öffnet die App nicht
+
+Wenn das Klicken auf eine Push-Benachrichtigung Ihre App nicht öffnet, überprüfen Sie je nach Plattform Folgendes.
+
+### Android
+
+1. **Klickverhalten überprüfen:** Bestätigen Sie, dass die Kampagne so konfiguriert ist, dass die App beim Klicken geöffnet wird.
+2. **Deeplink-Behandlung prüfen:** Überprüfen Sie in Ihrer `braze.xml`-Datei, ob `com_braze_handle_push_deep_links_automatically` auf `true` oder `false` gesetzt ist.
+   - Wenn auf `true` gesetzt, behandelt das Braze SDK Deeplinks direkt und die App sollte wie erwartet geöffnet werden.
+   - Wenn auf `false` gesetzt, benötigt Ihre App einen Broadcast-Receiver, der Push-Empfangs- und Öffnungs-Intents abhört und verarbeitet. Überprüfen Sie, ob dieser Receiver korrekt implementiert ist.
+3. **Ausführliche Logs erfassen:** [Aktivieren Sie die ausführliche Protokollierung]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduzieren Sie das Problem und stellen Sie die Logs zusammen mit Ihrer `braze.xml` und `AndroidManifest.xml` dem Braze Support zur Verfügung.
+
+### iOS
+
+1. **Klickverhalten überprüfen:** Bestätigen Sie, dass die Kampagne so konfiguriert ist, dass die App beim Klicken geöffnet wird.
+2. **Push-Integration prüfen:** Deeplinking von einem Push in die App wird automatisch durch die Braze [Standard-Push-Integration]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) behandelt. Bestätigen Sie, dass die Integration korrekt implementiert ist, einschließlich einer eventuellen angepassten Delegate-Behandlung.
+3. **Ausführliche Logs erfassen:** [Aktivieren Sie die ausführliche Protokollierung]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduzieren Sie das Problem und stellen Sie die Logs dem Braze Support zur Verfügung.
+
 ## Push-Klicks werden unerwartet in der App geöffnet
 
-Wenn Sie Probleme damit haben, dass Links in Push-Benachrichtigungen unerwartet in Ihrer App statt in Ihrem Webbrowser geöffnet werden, liegt möglicherweise ein Problem mit der Konfiguration Ihrer Kampagne oder der SDK-Implementierung vor. Befolgen Sie diese Schritte zur Hilfe.
+Wenn Links in Push-Benachrichtigungen unerwartet in Ihrer App statt in Ihrem Webbrowser geöffnet werden, liegt möglicherweise ein Problem mit der Konfiguration Ihrer Kampagne oder der SDK-Implementierung vor. Befolgen Sie diese Schritte zur Hilfe.
 
 ### Klickverhalten überprüfen
 
@@ -98,14 +116,14 @@ Wenn Links in Ihren Push-Benachrichtigungen unerwartet in der App geöffnet werd
 
 1. **Überprüfen Sie die Implementierung des Push-Delegaten:** Stellen Sie sicher, dass der Push-Delegat von Braze korrekt implementiert ist. Ausführliche Anweisungen finden Sie in der Integrationsanleitung für Push-Benachrichtigungen für Ihre [Plattform]({{site.baseurl}}/developer_guide/home/).
 2. **Prüfen Sie die angepasste Linkbehandlung:** Prüfen Sie, ob die App eine angepasste Handhabung für alle `https://`-Links enthält. Angepasste Konfigurationen können die Standardverhaltensweisen außer Kraft setzen. Arbeiten Sie mit Ihrem Entwickler:innen-Team zusammen, um diese Einstellungen zu überprüfen und ggf. anzupassen.
-3. **Überprüfen Sie die iOS-Push-Registrierung:** Für iOS sehen Sie sich Schritt 1 der Anleitung zur Push-Integration zur [Registrierung von Push-Benachrichtigungen mit APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns) an. Stellen Sie sicher, dass Ihr Delegatenobjekt synchron zugewiesen wird, bevor die App den Start beendet. Diesen Schritt sollten Sie in der Methode `application:didFinishLaunchingWithOptions:` durchführen.
+3. **Überprüfen Sie die iOS-Push-Registrierung:** Für iOS sehen Sie sich Schritt 1 der Anleitung zur Push-Integration zur [Registrierung von Push-Benachrichtigungen mit APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns) an. Stellen Sie sicher, dass Ihr Delegate-Objekt synchron zugewiesen wird, bevor die App den Start beendet. Diesen Schritt sollten Sie in der Methode `application:didFinishLaunchingWithOptions:` durchführen.
 4. **Testen Sie Ihre Integration:** Nachdem Sie die Anpassungen vorgenommen haben, testen Sie das Verhalten der Push-Benachrichtigung sowohl auf iOS- als auch auf Android-Geräten, um sicherzustellen, dass das Problem behoben ist.
 
 ## Push-Titel wird auf iOS abgeschnitten, wird aber auf Android korrekt angezeigt
 
-Wenn Ihr Push-Benachrichtigungstitel Liquid-Personalisierung enthält und auf Android vollständig angezeigt wird, aber auf iOS abgeschnitten ist, liegt dies daran, wie jede Plattform Zeilenumbruchzeichen (`\n`) im Titelstring behandelt.
+Wenn Ihr Push-Benachrichtigungstitel Liquid-Personalisierung enthält und auf Android vollständig angezeigt wird, aber auf iOS abgeschnitten ist, liegt dies daran, wie jede Plattform Zeilenumbruchzeichen (`\n`) im Titel-String behandelt.
 
-Android entfernt automatisch Leerzeichen, Tabulatoren und Zeilenumbrüche aus Push-Titelstrings. iOS tut dies nicht – wenn also eine Liquid-Variable zu einem Wert aufgelöst wird, der einen abschließenden Zeilenumbruch enthält, behandelt iOS den Zeilenumbruch als Ende des Titels und schneidet den restlichen Text ab.
+Android entfernt automatisch Leerzeichen, Tabulatoren und Zeilenumbrüche aus Push-Titel-Strings. iOS tut dies nicht – wenn also eine Liquid-Variable zu einem Wert aufgelöst wird, der einen abschließenden Zeilenumbruch enthält, behandelt iOS den Zeilenumbruch als Ende des Titels und schneidet den restlichen Text ab.
 
 Zum Beispiel könnte ein Titel wie `Regarding your flight from {% raw %}{{${city_from}}}{% endraw %} to {% raw %}{{${city_to}}}{% endraw %}` auf iOS als `Regarding your flight from` angezeigt werden, wenn die Variable `city_from` einen abschließenden Zeilenumbruch enthält.
 

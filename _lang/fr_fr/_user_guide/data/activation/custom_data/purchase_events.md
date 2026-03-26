@@ -11,11 +11,17 @@ search_rank: 3
 
 > Cette page traite des événements et propriétés d'achat, de leur utilisation, de la segmentation, de l'affichage des analyses pertinentes, etc.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 Les événements d'achat sont des actions d'achat effectuées par vos utilisateurs. Ils servent à enregistrer les achats in-app et à établir la valeur vie client (LTV) pour chaque profil utilisateur. Ces événements doivent être mis en place par votre équipe. L'enregistrement des événements d'achat vous permet d'ajouter des propriétés telles que la quantité et le type, ce qui vous aide à mieux cibler vos utilisateurs en fonction de ces propriétés.
 
 ## Enregistrement des événements d'achat
 
 Vous pouvez enregistrer vos achats en transmettant un [objet d'achat]({{site.baseurl}}/api/objects_filters/purchase_object/) via l'[endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), ou en utilisant l'une de nos bibliothèques SDK répertoriées ci-dessous.
+
+{% alert note %}
+Les propriétés d'événement d'achat utilisent les mêmes types de données que les [propriétés d'événement personnalisé]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#expected-format).
+{% endalert %}
 
 La liste suivante énumère les méthodes utilisées pour enregistrer les achats sur les différentes plateformes. Dans ces pages, vous trouverez également de la documentation sur la manière d'ajouter des propriétés et des quantités à votre événement d'achat. Vous pouvez ensuite cibler vos utilisateurs en fonction de ces propriétés.
 
@@ -57,7 +63,7 @@ Les filtres de segmentation suivants sont disponibles pour le ciblage des utilis
 - X propriétés d'achat en Y jours
 - X achats dans les Y derniers jours
 
-Pour plus de détails sur chaque filtre, consultez le glossaire des [filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) et filtrez par « comportement d'achat ».
+Pour plus de détails sur chaque filtre, consultez le glossaire des [filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) et filtrez par « Comportement d'achat ».
 
 ![Filtrage des utilisateurs ayant effectué exactement trois achats]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
@@ -91,7 +97,7 @@ Dans cet exemple, le message est personnalisé en fonction de la propriété `la
 
 Un cas d'utilisation courant consiste à envoyer automatiquement un message, par exemple un e-mail, lorsqu'un utilisateur effectue un achat. Vous pouvez par exemple envoyer un message de remerciement ou un code de réduction pour un prochain achat.
 
-Pour ce faire, créez une campagne ou un canvas basé sur une action, puis définissez l'action de déclenchement sur **Effectuer un achat**. Vous pouvez également spécifier des conditions supplémentaires pour le déclencheur, telles que le produit acheté ou le montant de l'achat.
+Pour ce faire, créez une campagne ou un Canvas basé sur une action, puis définissez l'action de déclenchement sur **Effectuer un achat**. Vous pouvez également spécifier des conditions supplémentaires pour le déclencheur, telles que le produit acheté ou le montant de l'achat.
 
 Vous pouvez également personnaliser votre message déclenché avec Liquid. Dans l'exemple suivant, `${purchase_product_name}` est un attribut personnalisé que vous remplacerez par le nom de l'attribut qui stocke le nom du produit acheté dans votre configuration Braze.
 
@@ -109,7 +115,7 @@ En plus du suivi des indicateurs d'achat pour la segmentation, Braze note égale
 
 Vous trouverez ces données sur la page du [rapport sur le chiffre d'affaires]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
-### Comprendre le calcul du chiffre d'affaires
+### Calcul du chiffre d'affaires
 
 <style>
     .no-split {
@@ -204,7 +210,7 @@ Ces filtres de segmentation comprennent :
 
 Contrairement aux [extensions de segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), les segments utilisés sont mis à jour en temps réel, prennent en charge un nombre illimité de segments, offrent un historique de 30 jours au maximum et consomment des points de données. En raison des frais liés aux points de données supplémentaires, vous devez contacter votre Customer Success Manager Braze pour activer les propriétés d'événement pour vos événements personnalisés.
 
-Une fois approuvées, des propriétés supplémentaires peuvent être ajoutées dans le tableau de bord sous **Paramètres des données** > **Événements personnalisés** en sélectionnant **Gérer les propriétés**. Vous pouvez ensuite utiliser ces propriétés d'événement dans l'étape de ciblage du générateur de campagne ou de canvas.
+Une fois approuvées, des propriétés supplémentaires peuvent être ajoutées dans le tableau de bord sous **Paramètres des données** > **Événements personnalisés** en sélectionnant **Gérer les propriétés**. Vous pouvez ensuite utiliser ces propriétés d'événement dans l'étape de ciblage du générateur de campagne ou de Canvas.
 
 ### Propriétés d'entrée et propriétés d'événement Canvas
 
@@ -218,7 +224,7 @@ Pour enregistrer les achats au niveau de la commande plutôt qu'au niveau du pro
 
 Chez Braze, nous proposons des conventions générales de nommage pour le `product_id` de l'objet d'achat. Lorsque vous choisissez un `product_id`, Braze suggère d'utiliser des noms simples tels que le nom du produit ou la catégorie de produit (au lieu des unités de gestion des stocks) afin de regrouper tous les éléments enregistrés par ce `product_id`.
 
-Cela facilite l'identification des produits pour la segmentation et les déclencheurs. 
+Cela facilite l'identification des produits pour la segmentation et le déclenchement. 
 
 ## Exclure des événements d'achat
 

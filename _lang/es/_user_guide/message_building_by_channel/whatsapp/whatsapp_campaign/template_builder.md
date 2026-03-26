@@ -20,6 +20,10 @@ El constructor de plantillas de WhatsApp se encuentra actualmente en acceso anti
 
 Antes de crear una plantilla de WhatsApp en Braze, completa la [configuración de WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/).
 
+### Plantillas de carrusel de WhatsApp
+
+{% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
+
 ## Crear una plantilla
 
 ### Paso 1: Ve a plantillas de WhatsApp

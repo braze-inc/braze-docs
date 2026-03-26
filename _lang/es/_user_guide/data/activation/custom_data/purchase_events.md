@@ -11,11 +11,17 @@ search_rank: 3
 
 > Esta página cubre los eventos y propiedades de la compra, su uso, segmentación, dónde ver los análisis relevantes y mucho más.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 Los eventos de compra son acciones de compra realizadas por tus usuarios, y se utilizan para registrar las compras dentro de la aplicación y establecer el valor de duración del ciclo de vida (LTV) para cada perfil de usuario. Estos eventos deben ser configurados por tu equipo. El registro de eventos de compra te permite añadir propiedades como la cantidad y el tipo, lo que te ayuda a segmentar aún más a tus usuarios en función de estas propiedades.
 
 ## Registro de eventos de compra
 
 Puedes registrar las compras pasando un [objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/) a través del [punto de conexión `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), o utilizando una de nuestras bibliotecas SDK que se enumeran a continuación.
+
+{% alert note %}
+Las propiedades de eventos de compra utilizan los mismos tipos de datos que las [propiedades de eventos personalizados]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#expected-format).
+{% endalert %}
 
 A continuación se enumeran los métodos utilizados en diversas plataformas para registrar las compras. En estas páginas también encontrarás documentación sobre cómo añadir propiedades y cantidades a tu evento de compra. En función de estas propiedades, puedes segmentar aún más a tus usuarios.
 
@@ -109,7 +115,7 @@ Además de realizar un seguimiento de las métricas de compra para la segmentaci
 
 Puedes encontrar estos datos en la página [Informe de ingresos]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
-### Comprender los cálculos de ingresos
+### Cálculos de ingresos
 
 <style>
     .no-split {
@@ -167,7 +173,7 @@ Hay dos lugares principales en Braze que puedes consultar para comprender el LTV
 
 Cuando utilices eventos de compra para realizar un seguimiento de los datos de compra, debes registrar los reembolsos como un evento de compra de Braze con una propiedad `price` negativa. Este enfoque mantiene un total exacto de los ingresos del ciclo de vida.
 
-Sin embargo, ten en cuenta que el reembolso contará como un evento de compra adicional. Veamos el siguiente ejemplo. Sam hace su primera compra por $12 pero devuelve parte de la compra para que le reembolsen $5. El perfil de Sam registraría:
+Sin embargo, ten en cuenta que el reembolso contará como un evento de compra adicional. Veamos el siguiente ejemplo. Sam hace su primera compra por $12, pero devuelve parte de la compra y recibe un reembolso de $5. El perfil de Sam registraría:
 
 - 1 compra con un precio de $12
 - 1 compra con un precio de -$5
