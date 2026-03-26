@@ -85,10 +85,11 @@ As the name implies, RCS text messages focus on text as a medium. If you type up
 
 #### Considerations
 
-- For character limits on text, you may write up to 160 characters for a text-only (basic) RCS message or up to 3072 for a rich (single) RCS message. 
-- For button limits, you can add up to five buttons per message. These buttons can be either suggested actions or suggested replies.
-- Longer text blocks and too many buttons can frustrate users, so wherever possible, we recommend leaning into simplicity. 
-- In some cases, it can be more cost-effective to send longer text-only messages through RCS than with SMS. This is because longer SMS messages are broken down into multiple segments, each of which is billable, whereas RCS messages are instead billed per message. Contact your Braze account manager for more details and guidance. 
+- For character limits, you may write up to 160 characters for a basic RCS message or up to 3,072 characters for a rich (single) RCS message when rich elements or longer copy apply.
+- Android and iOS can truncate differently: Android shows full rich message text, while iOS truncates after the third line.
+- You can add up to five buttons per message. These can be either suggested actions or suggested replies.
+- Longer text blocks and many buttons can overwhelm recipients; favor simplicity when you can.
+- In some cases, it can be more cost-effective to send longer text-only messages through RCS than with SMS, because longer SMS messages are broken into multiple billable segments, whereas RCS messages are billed per message.
 {% endtab %}
 
 {% tab Media %}

@@ -49,7 +49,7 @@ Esto significa:
 - Los lotes se completan en diferentes momentos, por lo que los usuarios pasan al siguiente paso a medida que se completa su lote.
 - Los primeros usuarios pueden llegar al siguiente paso varios minutos antes que los últimos, dependiendo del tamaño del lote y de los tiempos de respuesta del contenido conectado.
 
-Sin contenido conectado, los pasos de contexto se procesan mucho más rápido porque no hay que esperar llamadas API externas.
+Sin contenido conectado, los pasos de contexto se procesan mucho más rápido porque no hay que esperar llamadas a API externas.
 
 ## Consideraciones
 
@@ -97,13 +97,13 @@ Puedes crear filtros utilizando variables de contexto en los pasos [Rutas de aud
 
 ## Vista previa de las rutas de los usuarios
 
-Recomendamos probar y [realizar una vista previa de las rutas de los usuarios]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) para asegurarte de que tus mensajes se envían a la audiencia adecuada y que las variables de contexto se evalúan según los resultados esperados.
+Recomendamos probar y [realizar una vista previa de las rutas de los usuarios]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) para asegurarte de que tus mensajes se envían a la audiencia adecuada y que las variables de contexto se evalúan con los resultados esperados.
 
 {% alert note %}
 Si estás previsualizando tu Canvas en la sección **Vista previa y envío de prueba** del editor, la marca de tiempo en la vista previa del mensaje de prueba **no se** estandariza a UTC porque este panel genera vistas previas como cadenas. Esto significa que si un Canvas está configurado para aceptar un objeto `time`, la vista previa del mensaje no muestra con precisión lo que ocurre cuando el Canvas está en vivo. Para probar tu Canvas con mayor precisión, te recomendamos que realices una vista previa de las rutas de los usuarios.
 {% endalert %}
 
-Asegúrate de observar cualquier situación habitual que genere variables de contexto no válidas. Al realizar la vista previa de la ruta del usuario, puedes ver los resultados de los pasos de retraso personalizados utilizando variables de contexto, así como cualquier comparación de audiencias o pasos de decisión que relacionen a los usuarios con cualquier variable de contexto.
+Asegúrate de observar cualquier situación habitual que genere variables de contexto no válidas. Al realizar la vista previa de la ruta del usuario, puedes ver los resultados de los pasos de retraso personalizados que utilizan variables de contexto, así como cualquier comparación de audiencias o pasos de decisión que relacionen a los usuarios con cualquier variable de contexto.
 
 Si la variable de contexto es válida, puedes hacer referencia a ella en todo tu Canvas. Sin embargo, si la variable de contexto no se ha creado correctamente, los pasos posteriores de tu Canvas tampoco funcionarán correctamente. Por ejemplo, si creas un paso de contexto para asignar a los usuarios una hora de cita y estableces el valor de la hora de la cita en una fecha pasada, el correo electrónico de recordatorio del paso de mensaje no se enviará.
 
@@ -156,7 +156,7 @@ Si tu punto de conexión de contenido conectado tiene límites de velocidad, ten
 
 ## Estandarización de la coherencia de las zonas horarias
 
-Aunque la mayoría de las propiedades del evento que utilizan el tipo de marca de tiempo ya están en UTC en Canvas, hay algunas excepciones. Con la incorporación de Canvas Context, todas las propiedades predeterminadas del evento de marca de tiempo en los Canvas basados en acciones están en UTC. Este cambio forma parte de un esfuerzo más amplio por garantizar una experiencia más predecible y coherente al editar los pasos y mensajes en Canvas. Ten en cuenta que este cambio afecta a todos los Canvas basados en acciones, independientemente de si el Canvas específico utiliza un paso de contexto o no.
+Con la disponibilidad general de Canvas Context, todas las propiedades predeterminadas de evento con marca de tiempo en los Canvas basados en acciones están en UTC. Este cambio forma parte de un esfuerzo más amplio por garantizar una experiencia más predecible y coherente al editar los pasos y mensajes en Canvas. Ten en cuenta que este cambio afecta a todos los Canvas basados en acciones, independientemente de si el Canvas específico utiliza un paso de contexto o no.
 
 {% alert important %}
 En cualquier caso, recomendamos encarecidamente utilizar [filtros time_zone de Liquid]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) para que las marcas de tiempo se representen en la zona horaria deseada. Puedes consultar esta [pregunta frecuente](#faq-example) para ver un ejemplo.

@@ -58,8 +58,12 @@ glossaries:
     description: 사용자 프로필이 생성된 시점을 기준으로 사용자를 세분화합니다. 사용자가 CSV 또는 API를 통해 추가된 경우 이 필터는 추가된 날짜를 반영합니다. 사용자가 CSV 또는 API로 추가되지 않았고 SDK에서 첫 번째 세션이 추적된 경우 이 필터는 해당 첫 번째 세션의 날짜를 반영합니다.
     tags:
       - Other Filters
+  - name: Created From
+    description: "사용자 프로필이 생성된 위치를 기준으로 사용자를 세분화합니다.<br><br>지원되는 값은 다음과 같습니다:<br>- SDK (<code>sdk</code>): Braze SDK를 통해 생성된 사용자 프로필.<br>- REST API (<code>rest</code>): Braze REST API를 통해 생성된 사용자 프로필.<br>- 푸시 토큰 가져오기 (<code>pti</code>): 푸시 토큰 가져오기를 통해 생성된 사용자 프로필.<br>- CSV (<code>csv</code>): CSV 가져오기를 통해 생성된 사용자 프로필.<br>- 데모 (<code>demo</code>): 데모 데이터를 통해 생성된 사용자 프로필.<br>- SMS (<code>sms</code>): SMS를 통해 생성된 사용자 프로필.<br>- Shopify (<code>shopify</code>): Shopify를 통해 생성된 사용자 프로필.<br>- WhatsApp (<code>whats_app</code>): WhatsApp을 통해 생성된 사용자 프로필.<br>- 제공업체 이벤트 (<code>provider_event</code>): 제공업체 이벤트를 통해 생성된 사용자 프로필.<br>- 제공업체 동기화 (<code>provider_sync</code>): 제공업체 동기화를 통해 생성된 사용자 프로필.<br>- 랜딩 페이지 (<code>landing_page</code>): 랜딩 페이지를 통해 생성된 사용자 프로필."
+    tags:
+      - Other Filters
   - name: Nested Custom Attributes
-    description: "커스텀 속성의 속성정보입니다.<br><br>중첩된 시간 커스텀 속성을 필터링할 때 \"연중일\" 또는 \"시간\"을 기준으로 필터링하도록 선택할 수 있습니다. \"연중일\"은 비교를 위해 월과 일만 확인합니다. \"시간\"은 연도를 포함한 전체 타임스탬프를 비교합니다."
+    description: "커스텀 속성의 등록정보입니다.<br><br>중첩된 시간 커스텀 속성을 필터링할 때 \"연중일\" 또는 \"시간\"을 기준으로 필터링하도록 선택할 수 있습니다. \"연중일\"은 비교를 위해 월과 일만 확인합니다. \"시간\"은 연도를 포함한 전체 타임스탬프를 비교합니다."
     tags:
       - Custom attribute
   - name: Day of Recurring Event
@@ -67,7 +71,7 @@ glossaries:
     tags:
       - Custom attribute
   - name: Custom Event
-    description: "사용자가 특별히 기록된 이벤트를 수행했는지 여부를 확인합니다.<br><br> 예시:<br>activity_name 속성정보로 완료된 활동.<br><br>시간대:<br>UTC - 캘린더 일 = 1 캘린더 일은 24-48시간의 사용자 기록을 봅니다"
+    description: "사용자가 특별히 기록된 이벤트를 수행했는지 여부를 확인합니다.<br><br> 예시:<br>activity_name 이벤트 속성정보로 완료된 활동.<br><br>시간대:<br>UTC - 캘린더 일 = 1 캘린더 일은 24-48시간의 사용자 기록을 봅니다"
     tags:
       - Custom events
   - name: First Did Custom Event
@@ -83,11 +87,11 @@ glossaries:
     tags:
       - Custom events
   - name: X Custom Event Property In Y Days
-    description: "사용자가 1~30일 사이의 마지막 지정된 캘린더 일수 동안 0~50회 사이에 특정 속성정보와 관련하여 특별히 기록된 이벤트를 수행했는지 여부를 결정합니다. (캘린더 일 = 1 캘린더 일은 24-48시간의 사용자 기록을 봅니다)<br><a href=\"/docs/x-in-y-behavior/\">여기에서 X-in-Y 동작에 대해 자세히 알아보세요.</a> <br><br>예시:<br> 지난 1 캘린더 일 동안 \"event_name\" 속성정보를 가진 즐겨찾기에 정확히 0번 추가됨<br><br>시간대:<br>UTC - 모든 시간대를 고려하기 위해 1 캘린더 일은 세그먼트가 평가되는 시간에 따라 24-48시간의 사용자 기록을 보고, 2 캘린더 일은 48-72시간의 사용자 기록을 봅니다."
+    description: "사용자가 1~30일 사이의 마지막 지정된 캘린더 일수 동안 0~50회 사이에 특정 등록정보와 관련하여 특별히 기록된 이벤트를 수행했는지 여부를 결정합니다. (캘린더 일 = 1 캘린더 일은 24-48시간의 사용자 기록을 봅니다)<br><a href=\"/docs/x-in-y-behavior/\">여기에서 X-in-Y 동작에 대해 자세히 알아보세요.</a> <br><br>예시:<br> 지난 1 캘린더 일 동안 \"event_name\" 등록정보를 가진 즐겨찾기에 정확히 0번 추가됨<br><br>시간대:<br>UTC - 모든 시간대를 고려하기 위해 1 캘린더 일은 세그먼트가 평가되는 시간에 따라 24-48시간의 사용자 기록을 보고, 2 캘린더 일은 48-72시간의 사용자 기록을 봅니다."
     tags:
       - Custom events
   - name: Email Address
-    description: "테스트를 위해 개별 이메일 주소로 캠페인 수신자를 지정할 수 있습니다. 또한 필터 내에서 '이메일 주소가 비어 있지 않음' 지정자를 사용하여 모든 사용자(구독 취소된 사용자 포함)에게 트랜잭션 이메일을 전송하는 데 사용할 수 있으므로 옵트인 상태와 관계없이 이메일 전달을 극대화할 수 있습니다. <br><br>이 필터는 사용자 프로필에 이메일 주소가 있는지 여부만 확인하지만, <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-available\">이메일 사용 가능</a> 필터는 추가 기준을 확인합니다."
+    description: "테스트를 위해 개별 이메일 주소로 캠페인 수신자를 지정할 수 있습니다. 또한 필터 내에서 '이메일 주소가 비어 있지 않음' 지정자를 사용하여 모든 사용자(탈퇴한 사용자 포함)에게 트랜잭션 이메일을 전송하는 데 사용할 수 있으므로 옵트인 상태와 관계없이 이메일 전달을 극대화할 수 있습니다. <br><br>이 필터는 사용자 프로필에 이메일 주소가 있는지 여부만 확인하지만, <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-available\">이메일 사용 가능</a> 필터는 추가 기준을 확인합니다."
     tags:
       - Other Filters
   - name: External User ID
@@ -279,7 +283,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Email Available
-    description: "유효한 이메일 주소가 있는지 여부와 이메일에 구독되었거나 옵트인되었는지 여부에 따라 사용자를 세분화합니다. 이 필터는 사용자가 이메일을 구독 취소했는지, Braze가 하드바운스를 받았는지, 이메일이 스팸으로 표시되었는지 등 세 가지 기준을 확인합니다. 이 기준 중 하나라도 충족되거나 사용자의 이메일이 존재하지 않으면 사용자는 포함되지 않습니다.<br><br>이메일 사용 가능 여부가 <code>false</code>인 사용자는 캠페인 오디언스에서 제외되며 이메일을 받지 않습니다. 전송 설정이 모든 사용자(구독 취소된 사용자 포함)에게 전송하도록 구성되어 있더라도 마찬가지입니다.<br><br>옵트인 상태가 중요한 이메일의 경우 <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">이메일 주소</a> 대신 이메일 사용 가능 여부를 사용하세요. 추가 기준은 이메일을 받을 자격이 있는 사용자를 타겟팅하는 데 도움이 됩니다."
+    description: "유효한 이메일 주소가 있는지 여부와 이메일에 가입되었거나 옵트인되었는지 여부에 따라 사용자를 세분화합니다. 이 필터는 사용자가 이메일을 탈퇴했는지, Braze가 하드바운스를 받았는지, 이메일이 스팸으로 표시되었는지 등 세 가지 기준을 확인합니다. 이 기준 중 하나라도 충족되거나 사용자의 이메일이 존재하지 않으면 사용자는 포함되지 않습니다.<br><br>이메일 사용 가능 여부가 <code>false</code>인 사용자는 캠페인 오디언스에서 제외되며 이메일을 받지 않습니다. 전송 설정이 모든 사용자(탈퇴한 사용자 포함)에게 전송하도록 구성되어 있더라도 마찬가지입니다.<br><br>옵트인 상태가 중요한 이메일의 경우 <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">이메일 주소</a> 대신 이메일 사용 가능 여부를 사용하세요. 추가 기준은 이메일을 받을 자격이 있는 사용자를 타겟팅하는 데 도움이 됩니다."
     tags:
       - Channel subscription behavior
   - name: Email Opt In Date
@@ -291,11 +295,11 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Email Unsubscribed Date
-    description: 사용자가 향후 이메일 수신을 취소한 날짜를 기준으로 사용자를 세분화합니다.
+    description: 사용자가 향후 이메일 수신을 탈퇴한 날짜를 기준으로 사용자를 세분화합니다.
     tags:
       - Channel subscription behavior
   - name: Foreground Push Enabled
-    description: "임시 푸시 권한이 있거나 포그라운드 푸시를 사용하도록 설정된 사용자를 세분화합니다. 구체적으로 이 수에는 다음이 포함됩니다:<br>1. 푸시 권한이 잠정적으로 승인된 iOS 사용자. <br>2. 모든 앱에 대해 포그라운드 푸시가 활성화되어 있고 푸시 구독 상태가 구독 취소되지 않은 사용자입니다. 이러한 사용자의 경우 이 카운트에는 포그라운드 푸시만 포함됩니다.<br><br>포그라운드 푸시 활성화에는 구독 취소된 사용자가 포함되지 않습니다. <br><br>이 필터로 세분화한 후, <em>도달 가능한 사용자</em>라는 하단 패널에서 Android, iOS 및 웹에서 해당 세그먼트에 포함된 사용자의 세부 정보를 볼 수 있습니다."
+    description: "임시 푸시 권한이 있거나 포그라운드 푸시를 사용하도록 설정된 사용자를 세분화합니다. 구체적으로 이 수에는 다음이 포함됩니다:<br>1. 푸시 권한이 잠정적으로 승인된 iOS 사용자. <br>2. 모든 앱에 대해 포그라운드 푸시가 활성화되어 있고 푸시 구독 상태가 탈퇴되지 않은 사용자입니다. 이러한 사용자의 경우 이 카운트에는 포그라운드 푸시만 포함됩니다.<br><br>포그라운드 푸시 활성화에는 탈퇴한 사용자가 포함되지 않습니다. <br><br>이 필터로 세분화한 후, <em>도달 가능한 사용자</em>라는 하단 패널에서 Android, iOS 및 웹에서 해당 세그먼트에 포함된 사용자의 세부 정보를 볼 수 있습니다."
     tags:
       - Channel subscription behavior
   - name: Foreground Push Enabled for App
@@ -303,7 +307,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Background or Foreground Push Enabled
-    description: 푸시 토큰이 있고 구독 취소하지 않은 사용자를 기준으로 세분화합니다. 모든 앱에 대해 백그라운드 또는 포그라운드 푸시가 활성화된 사용자입니다.
+    description: 푸시 토큰이 있고 탈퇴하지 않은 사용자를 기준으로 세분화합니다. 모든 앱에 대해 백그라운드 또는 포그라운드 푸시가 활성화된 사용자입니다.
     tags:
       - Channel subscription behavior
   - name: Push Opt In Date
@@ -315,7 +319,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Push Unsubscribed Date
-    description: 사용자가 향후 푸시 알림을 구독 취소한 날짜를 기준으로 사용자를 세분화합니다.
+    description: 사용자가 향후 푸시 알림을 탈퇴한 날짜를 기준으로 사용자를 세분화합니다.
     tags:
       - Channel subscription behavior
   - name: Purchased Product
@@ -583,7 +587,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Event Likelihood Score
-    description: 특정 예측에 따라 이벤트 수행 가능성별로 사용자를 세분화합니다.
+    description: 특정 예측에 따라 이벤트 수행 가능성 점수별로 사용자를 세분화합니다.
     tags:
       - Intelligence and predictive
   - name: Intelligent Channel

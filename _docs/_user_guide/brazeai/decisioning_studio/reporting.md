@@ -2,7 +2,7 @@
 nav_title: Reports and insights
 article_title: Reports and Insights
 description: "Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns."
-page_order: 3
+page_order: 6
 ---
 
 # Reports and insights
@@ -21,7 +21,7 @@ Before you can view Decisioning Studio reports in the Braze, you must:
 
 To view metrics for a Decisioning Studio agent in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
 
-![BrazeAI Decisioning Studio™ reporting home screen showing a dashboard with multiple report cards. Each card displays a report type such as Performance, Insights, Diagnostics, and Timeline, with brief descriptions and icons for each.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
+![BrazeAI Decisioning Studio™ reporting home screen showing a dashboard with multiple report cards. Each card displays a report type such as Performance, Insights, Diagnostics, and Timeline, with brief descriptions and icons for each.]({% image_buster /assets/img/decisioning_studio/reporting_home.png %})
 
 Here, you can view reports like performance, insights, diagnostics, and timelines. For more details, see [Available reports](#available-reports).
 

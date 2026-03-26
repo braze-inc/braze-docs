@@ -45,7 +45,7 @@ Dies wird folgendermaßen gerendert:
 
 ## Kataloge exportieren
 
-Es gibt zwei Möglichkeiten, wie Sie Kataloge aus dem Dashboard exportieren können: 
+Es gibt zwei Möglichkeiten, Kataloge aus dem Dashboard zu exportieren: 
 
 - Bewegen Sie den Mauszeiger über die Katalogzeile im Abschnitt **Kataloge**. Wählen Sie dann den Button **Katalog exportieren** aus.
 - Wählen Sie Ihren Katalog aus. Wählen Sie dann den Button **Katalog exportieren** auf dem Tab **Vorschau** des Katalogs aus.
@@ -141,7 +141,7 @@ So sieht das aus, wenn das Liquid gerendert wird:
 
 ### Templates für Katalogartikel
 
-Sie können auch Templates verwenden, um Katalogartikel auf der Grundlage angepasster Attribute dynamisch abzurufen. Nehmen wir zum Beispiel an, eine Nutzer:in hat das angepasste Attribut `wishlist`, das ein Array von Spiele-IDs aus Ihrem Katalog enthält.
+Sie können auch Templates verwenden, um Katalogartikel auf der Grundlage angepasster Attribute dynamisch abzurufen. Nehmen wir zum Beispiel an, ein Nutzer bzw. eine Nutzerin hat das angepasste Attribut `wishlist`, das ein Array von Spiele-IDs aus Ihrem Katalog enthält.
 
 ```json
 {
@@ -164,7 +164,7 @@ Mit Liquid-Templates können Sie die Wunschlisten-IDs dynamisch abrufen und sie 
 Denken Sie daran, dass Arrays bei `0` beginnen, nicht bei `1`.
 {% endalert %}
 
-Um eine Nutzer:in zum Beispiel darüber zu informieren, dass Tales (ein Artikel aus unserem Katalog, den sie sich gewünscht hat) im Angebot ist, können wir unserem Nachrichten-Editor Folgendes hinzufügen:
+Um beispielsweise einen Nutzer bzw. eine Nutzerin darüber zu informieren, dass Tales (ein Artikel aus unserem Katalog, der auf der Wunschliste steht) im Angebot ist, können wir unserem Nachrichten-Editor Folgendes hinzufügen:
 
 {% raw %}
 ```liquid
@@ -178,7 +178,7 @@ Get {{ items[0].title }} now for {{ items[0].price }}!
 Dies wird wie folgt angezeigt:
 > Get Tales now for just 7.49!
 
-Mit Templates können Sie für jede Nutzer:in einen anderen Katalogartikel rendern, der auf den individuellen angepassten Attributen, Event-Eigenschaften oder einem anderen in Templates verwendbaren Feld basiert.
+Mit Templates können Sie für jeden Nutzer bzw. jede Nutzerin einen anderen Katalogartikel rendern, der auf den individuellen angepassten Attributen, Event-Eigenschaften oder einem anderen in Templates verwendbaren Feld basiert.
 
 ### Hochladen einer CSV-Datei
 
@@ -223,6 +223,31 @@ Welcome to our store, Peter!
 Katalog-Liquid-Tags können innerhalb von Katalogen nicht rekursiv verwendet werden.
 {% endalert %}
 
+## Strukturierung Ihrer Katalogdaten
+
+Wenn Sie planen, wie Sie Ihre Katalogdaten strukturieren, beginnen Sie mit Ihrem beabsichtigten Anwendungsfall und gestalten Sie den Katalog entsprechend. Jede Zeile im Katalog stellt einen Artikel dar (mit einer eindeutigen `id`). Die Spalten sollten die Attribute für diesen Artikel enthalten, wie z. B. URLs, Beschreibungstexte, Bild-URLs, Preis, Bewertung, Größe oder Farbe.
+
+### Wann Sie Standard-Katalogaufrufe verwenden sollten
+
+Bei Standard-Katalogaufrufen gleichen Sie einen Wert mit der `id`-Spalte ab. Indem Sie ein angepasstes Attribut oder eine Event-Eigenschaft (als ID-String) in den Katalog-Liquid-Tag einfügen, können Sie mehrere Attribute für einen einzelnen Artikel in Ihre Nachricht einbinden. Häufige Anwendungsfälle sind:
+
+- Zuletzt angesehenes Produkt oder zuletzt angesehener Dienst
+- Wunschlisten-Artikel
+- Angebote nach Standort
+- Gekauftes Produkt
+- Inhalte zur Lifecycle-Phase
+- Zuletzt gesuchtes Produkt oder zuletzt gesuchter Dienst
+
+### Wann Sie Katalogauswahlen verwenden sollten
+
+[Katalogauswahlen]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) ermöglichen es Ihnen, über jede Spalte in Ihrem Katalog zu filtern und bis zu 50 übereinstimmende Artikel zurückzugeben. Indem Sie angepasste Attribute oder Event-Eigenschaften in die Auswahlfilter einfügen, werden die Ergebnisse für jeden Nutzer bzw. jede Nutzerin personalisiert. Häufige Anwendungsfälle sind:
+
+- Artikel, deren Kategorie den Präferenzen eines Nutzers bzw. einer Nutzerin entspricht
+- Artikel, die zur bevorzugten Marke, Küche oder Größe eines Nutzers bzw. einer Nutzerin passen
+- Inhalte zum Abo-Typ oder zur Treuestufe
+- Produkte innerhalb des durchschnittlichen Bestellwerts eines Nutzers bzw. einer Nutzerin
+
+Der wesentliche Unterschied besteht darin, dass Standard-Katalogaufrufe einen einzelnen bekannten Artikel anhand der `id` nachschlagen, während Katalogauswahlen den gesamten Katalog abfragen und mehrere Artikel zurückgeben, die Ihren Filterkriterien entsprechen.
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
