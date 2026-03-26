@@ -9,14 +9,14 @@ description: "Este artigo de referência aborda as convenções adequadas de nom
 
 # Convenções de nomenclatura de eventos
 
-> Esta página aborda as convenções adequadas de nomenclatura de eventos e as práticas recomendadas. Ao manter a consistência em sua taxonomia de eventos e atributos, você manterá seus dados limpos e utilizáveis para usuários novos e existentes da plataforma Braze. Isso ajuda a evitar problemas posteriores, como o acionamento de uma campanha para o público errado ou a geração de resultados errados após o uso do evento errado.
+> Esta página aborda as convenções adequadas de nomenclatura de eventos e as práticas recomendadas. Ao manter a consistência em sua taxonomia de eventos e atribuições, você manterá seus dados limpos e utilizáveis por usuários novos e existentes da plataforma Braze. Isso ajuda a evitar problemas posteriores, como disparar uma campanha para o público errado ou gerar resultados errados depois de usar o evento errado.
 
-## Práticas recomendadas
+## Melhores práticas
 
 - Mantenha sua convenção de nomenclatura clara.
 - Use letras maiúsculas e minúsculas e formatação consistente nos nomes dos eventos.
 - Evite dar nomes semelhantes aos eventos.
-- Evite longas sequências de atributos de eventos, que serão truncadas ou cortadas no painel do Braze.
+- Evite longas strings de atribuições de eventos, que serão truncadas ou cortadas no dashboard da Braze.
 
 ## Convenções de nomenclatura
 
@@ -30,13 +30,13 @@ A estrutura de nomes mais comum é `group_noun_action`. Os eventos devem ser tod
 
 ### Propriedades
 
-Marque um evento e, em seguida, identifique as diferenças usando as propriedades. Isso é útil para eventos que são inerentemente iguais, mas têm pequenas diferenças, como canais para uma campanha. Também podemos ver facilmente como os usuários fluem pelos eventos. Consulte o [objeto de propriedades do evento]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) para obter um exemplo e contexto adicional.
+Tag um evento e, em seguida, identifique as diferenças usando as propriedades. Isso é útil para eventos que são inerentemente iguais, mas têm pequenas diferenças, como canais para uma campanha. Também podemos ver facilmente como os usuários fluem pelos eventos. Consulte o [objeto de propriedades do evento]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) para obter um exemplo e contexto adicional.
 
 ## Exemplos
 
-Digamos que você faça parte de uma empresa de comércio eletrônico e esteja interessado em rastrear quando os clientes se inscreveram no seu aplicativo e quando assinaram o seu boletim informativo. Aqui estão alguns exemplos de nomes de eventos eficazes:
+Digamos que você faça parte de uma empresa de comércio eletrônico e esteja interessado em rastrear quando os clientes inscreveram-se em seu app e quando assinaram seu boletim informativo. Aqui estão alguns exemplos de nomes de eventos eficazes:
 
 - `user_signup`
 - `newsletter_subscribed`
 
-Esses dois nomes de eventos indicam claramente o evento que estão rastreando. À medida que você criar mais eventos personalizados, certifique-se de manter suas convenções de nomenclatura compreensíveis. Por exemplo, evite usar nomes de eventos como `signup_event_1`, pois isso não é claro e não transmite o que o evento está rastreando, em comparação com `user_signup`.
+Esses dois nomes de eventos indicam claramente o evento que estão rastreando. Ao criar mais eventos personalizados, certifique-se de manter suas convenções de nomenclatura compreensíveis. Por exemplo, evite usar nomes de eventos como `signup_event_1`, pois isso não é claro e não transmite o que o evento está rastreando, em comparação com `user_signup`.

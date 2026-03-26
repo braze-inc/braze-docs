@@ -1,8 +1,8 @@
 ---
-nav_title: "POST: Crear una nueva cuenta de usuario en el panel"
-article_title: "POST: Crear una nueva cuenta de usuario en el panel"
+nav_title: "PUBLICAR: Crear una nueva cuenta de usuario en el panel"
+article_title: "PUBLICAR: Crear una nueva cuenta de usuario en el panel"
 alias: /post_create_user_account/
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -118,11 +118,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }'
@@ -145,7 +145,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "roles": [
             {
                 "roleName": "Test Role",
-                "roleId": "519dafcdba23dfaae7,
+                "roleId": "519dafcdba23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25789fabcded",
@@ -154,16 +154,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                         "team": [
                             {
                                 "teamId": "2519dafcdba238ae7",
-                                "teamName": "Some Team",                  
+                                "teamName": "Some Team",
                                 "teamPermissions": ["export_user_data"]
                             }
                         ]
-                    } 
+                    }
                 ]
             },
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
@@ -175,7 +175,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -187,7 +187,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                 "team": [
                     {
                          "teamId": "2519dafcdba238ae7",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
@@ -199,7 +199,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                         "appGroupPermissionSetName":  "Test Permission Set"
                     }
                 ]
-            } 
+            }
         ]
     }
 }
@@ -222,7 +222,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 Si ya existe en Braze un usuario con este `userName` o dirección de correo electrónico, el punto final responderá con:
 
-```json
+```http
 HTTP/1.1 409 Conflict
 Date: Tue, 10 Sep 2019 02:22:30 GMT
 Content-Type: text/json;charset=UTF-8

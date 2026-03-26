@@ -30,7 +30,7 @@ guide_featured_list:
 
 guide_menu_title: "More articles"
 guide_menu_list:
-  - name: Configuring Reporting
+  - name: Configure Reporting
     link: /docs/user_guide/analytics/reporting/configuring_reporting/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Campaign Analytics

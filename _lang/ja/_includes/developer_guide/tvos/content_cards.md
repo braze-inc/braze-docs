@@ -24,7 +24,7 @@ Braze で、[**設定**] > [**アプリの設定**] を選択し、[**アプリ�
 
 ![ALT_TEXT]({% image_buster /assets/img/tvos1.png %}){: style="width:70%"}
 
-### ステップ3: BrazeKitを統合する
+### ステップ 3:BrazeKitを統合する
 
 アプリの API キーを使用して、Xcode で [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk) を tvOS プロジェクトに統合します。Braze Swift SDK から BrazeKit を統合するだけでよいです。
 

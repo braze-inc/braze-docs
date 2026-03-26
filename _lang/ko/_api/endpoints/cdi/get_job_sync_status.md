@@ -29,7 +29,7 @@ description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `integration_id` | 필수 | 문자열 | 통합 ID. |
+| `integration_id` | Required | 문자열 | 통합 ID. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 쿼리 매개변수
@@ -38,7 +38,7 @@ description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `cursor` | 선택 사항 | 문자열 | 동기화 상태의 페이지 매김을 결정합니다. |
+| `cursor` | Optional | 문자열 | 동기화 상태의 페이지 매김을 결정합니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
@@ -82,14 +82,14 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
         "sync_finish_time": (string) time the sync finished in ISO 8601,
         "last_timestamp_synced": (string) last UPDATED_AT timestamp processed by the sync in ISO 8601,
         "rows_synced": (integer) number of rows successfully synced to Braze,
-        "rows_failed_with_errors": (integer) number of rows failed because of errors,
-    },
+        "rows_failed_with_errors": (integer) number of rows failed because of errors
+    }
   ],
   "message": "success"
 }
 ```
 
-| 직업 상태 | 설명 |
+| job_status | 설명 |
 | --- | --- |
 | `running` | 작업이 현재 실행 중입니다. |
 | `success` | 모든 행이 성공적으로 동기화되었습니다. |
@@ -100,7 +100,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 
 ## 문제 해결
 
-다음 표에는 반환될 수 있는 오류와 관련 문제 해결 단계가 나와 있습니다.
+다음 표에는 가능한 반환 오류와 관련된 문제 해결 단계가 나와 있습니다.
 
 | 오류 | 문제 해결 |
 | --- | --- |
@@ -108,6 +108,6 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 | `400 Invalid integration ID` | `integration_id` 주소가 유효한지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-추가 상태 코드 및 관련 오류 메시지는 [치명적인 오류 및 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
+추가 상태 코드 및 관련 오류 메시지는 [치명적인 오류 & 응답]({{site.baseurl}}/api/errors/#fatal-errors)을 참조하십시오.
 
 {% endapi %}

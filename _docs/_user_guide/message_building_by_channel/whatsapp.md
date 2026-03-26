@@ -16,6 +16,9 @@ guide_featured_list:
 - name: "WhatsApp Setup"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
   image: /assets/img/braze_icons/whatsapp.svg
+- name: "Bring Your Own WhatsApp Connector"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
+  image: /assets/img/braze_icons/whatsapp.svg
 - name: "WhatsApp Subscription Group"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
   image: /assets/img/braze_icons/table.svg
@@ -25,6 +28,9 @@ guide_featured_list:
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "WhatsApp Template Builder"
+  link: /docs/whatsapp_template_builder/
+  image: /assets/img/braze_icons/layout-alt-04.svg
 - name: "User Retargeting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
   image: /assets/img/braze_icons/users-01.svg

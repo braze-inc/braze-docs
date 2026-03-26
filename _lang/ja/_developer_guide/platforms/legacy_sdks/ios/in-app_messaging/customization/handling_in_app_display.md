@@ -1,6 +1,6 @@
 ---
-nav_title: カスタムディスプレイ処理
-article_title: iOS のアプリ内メッセージ表示処理のカスタマイズ
+nav_title: カスタム表示処理
+article_title: iOS向けアプリ内メッセージ表示の処理をカスタマイズする
 platform: iOS
 page_order: 4
 description: "この参考記事では、iOS アプリケーションのアプリ内メッセージングのカスタム表示処理について説明します。"

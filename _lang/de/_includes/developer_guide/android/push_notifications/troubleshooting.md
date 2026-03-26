@@ -1,4 +1,4 @@
-## Den Push-Workflow von Braze verstehen
+## Den Braze-Push-Workflow verstehen
 
 Der Firebase Cloud Messaging (FCM)-Dienst ist die Infrastruktur von Google für Push-Benachrichtigungen, die an Android-Anwendungen gesendet werden. Hier ist die vereinfachte Struktur, wie Push-Benachrichtigungen für die Geräte Ihrer Benutzer aktiviert werden und wie Braze Push-Benachrichtigungen an sie senden kann:
 
@@ -14,7 +14,7 @@ sequenceDiagram
   participant BrazeAPI as Braze Server
   participant Firebase as Google Firebase
   Note over Device, Firebase: Register Option 1<br/>Register Automatically using `com_braze_firebase_cloud_messaging_registration_enabled` in braze.xml
-  App ->> Braze: App intializes Braze with the first Braze call<br>This could be automatic session handling
+  App ->> Braze: App initializes Braze with the first Braze call<br>This could be automatic session handling
   BrazeSDK ->> App: Get push token from Firebase Manager
   BrazeSDK ->> BrazeAPI: Send push token to Braze Server
   Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.
@@ -33,7 +33,7 @@ sequenceDiagram
   Firebase ->> Device: Push message sent
   Device ->> App: Android will send the push to the App.<br>This could be blocked to Do Not Disturb, Power Saving Mode, etc.
   App ->> BrazeSDK: Message is sent to BrazeFirebaseMessagingService
-  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notfication and displayed.
+  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notification and displayed.
 
 ```
 
@@ -76,7 +76,7 @@ Ihre Push-Nachrichten werden möglicherweise aus folgenden Gründen nicht gesend
 - Ihre Anmeldedaten haben den falschen Berechtigungsumfang.
 - Sie haben falsche Anmeldedaten in den falschen Braze-Arbeitsbereich hochgeladen (falsche Absender-ID).
 
-Weitere Probleme, die das Versenden einer Push Nachricht verhindern können, finden Sie im [Benutzerhandbuch: Fehlerbehebung bei Push-Benachrichtigungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
+Weitere Probleme, die das Senden einer Push-Nachricht verhindern können, werden im [Benutzerhandbuch referenziert: Fehlerbehebung bei Push-Benachrichtigungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
 
 ### Keine Anzeige von "push-registrierten" Nutzern im Dashboard (vor dem Senden von Nachrichten)
 
@@ -172,7 +172,7 @@ Die Benutzer haben die Anwendung deinstalliert. Dadurch wird ihr FCM-Push-Token 
 
 Der im Braze Dashboard angegebene Firebase Cloud Messaging-Serverschlüssel ist ungültig. Die angegebene Absender-ID sollte mit derjenigen übereinstimmen, auf die in der Datei `braze.xml` Ihrer App verwiesen wird. Den Serverschlüssel und die Absender-ID finden Sie hier in Ihrer Firebase-Konsole:
 
-![Auf der Firebase-Plattform werden unter "Einstellungen" > "Cloud Messaging" Ihre Server-ID und Ihr Serverschlüssel angezeigt.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
+![Auf der Firebase-Plattform finden Sie unter „Einstellungen“ und anschließend „Cloud Messaging“ Ihre Server-ID und Ihren Server-Schlüssel.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
 
 ### Push-Klicks nicht protokolliert
 

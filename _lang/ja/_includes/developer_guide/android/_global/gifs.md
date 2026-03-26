@@ -1,6 +1,6 @@
-## GIF について
+## GIFについて
 
-Braze では、カスタム"画像 ライブラリーを使用してGIF アニメーションを表示できます。以下の例では[Glide](https://bumptech.github.io/glide/) を使用していますが、GIF をサポートするイメージライブラリには互換性があります。
+Brazeはカスタム画像ライブラリーを使ってアニメーションGIFを表示する機能を提供する。以下の例では[Glide](https://bumptech.github.io/glide/) を使用していますが、GIF をサポートするイメージライブラリには互換性があります。
 
 ## カスタムイメージライブラリの統合
 
@@ -163,7 +163,7 @@ class GlideIntegrationApplication : Application() {
 
 ## Jetpack Compose によるカスタムイメージのロード
 
-Jetpack Compose で"画像 読み込むを上書きするには、[`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721) に値を渡します。この関数は`Card` を取り、必要な画像と修飾子をレンダリングします。または、`ContentCardsList` の`customCardComposer` を使用してカード全体をレンダリングすることもできます。
+Jetpack Composeで画像を読み込む上書きするには、. [`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721)に値を渡すことができる。この関数は`Card` を取り、必要な画像と修飾子をレンダリングします。または、`ContentCardsList` の`customCardComposer` を使用してカード全体をレンダリングすることもできます。
 
 次の例では、`imageComposable` 関数にリストされているカードにGlide のCompose ライブラリが使用されています。
 

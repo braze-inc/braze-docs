@@ -135,15 +135,27 @@ The following cookies are stored:
 |`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain, which allows the SDK to work properly across sub-domains.|n/a|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+### Changing cookie expiry {#cookie-expiry}
+
+By default, Braze cookies expire after 400 days. To override this, use the `cookieExpiryInDays` option when initializing the Web SDK. Values must be greater than 0; if the option is omitted or set to 0 or less, the 400-day default applies. This option requires Web SDK 6.6.0 or later.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+braze.initialize("API-KEY", {
+  baseUrl: "BASE-URL",
+  cookieExpiryInDays: 30 // expires after 30 days
+});
+```
+
 ### Disabling cookies {#disable-cookies}
 
 To disable all cookies, use the [`noCookies`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) option when initializing the Web SDK. This will prevent you from associating anonymous users who navigate across sub-domains and will result in a new user on each subdomain.
 
 ```javascript
-import * as braze from"@braze/web-sdk";
+import * as braze from "@braze/web-sdk";
 braze.initialize("API-KEY", {
-    baseUrl: "BASE-URL",
-    noCookies: true
+  baseUrl: "BASE-URL",
+  noCookies: true
 });
 ```
 

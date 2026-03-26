@@ -18,13 +18,13 @@ alias: /geographic_permissions/
 
 Als Administrator:in können Sie die Länder konfigurieren, die auf der Allowlist stehen. Die Länder-Allowlist wird auf der Ebene der [Abo-Gruppe]({{site.baseurl}}/sms_rcs_subscription_groups/) konfiguriert. Sie können darauf zugreifen, indem Sie auf **Zielgruppe** > **Abonnements** gehen und eine SMS-, MMS- oder RCS-Abo-Gruppe auswählen. Die Zulassen-Liste finden Sie unter **Geografische Berechtigungen**.
 
-![Der bearbeitbare Abschnitt SMS Geografische Berechtigungen für einen Administrator, der mehrere Länder in der "Länderzulassungsliste" ausgewählt hat.]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+![Der bearbeitbare Abschnitt SMS Geografische Berechtigungen für einen Administrator, der mehrere Länder in der "Länderliste" ausgewählt hat.]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
 
 ### Länder auswählen
 
 Fügen Sie über das Dropdown-Menü Länder zur Liste der zulässigen Länder hinzu. Die gebräuchlichsten SMS- und RCS-Länder werden oben angezeigt, andere darunter. Sie können auch nach Ländern suchen, indem Sie in das Textfeld tippen.
 
-![Das Dropdown-Menü "Länderliste" mit den gängigsten Ländern wird oben angezeigt.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
+![Das Dropdown-Menü "Länderliste", in dem die gängigsten Länder ganz oben angezeigt werden.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
 
 Entfernen Sie zuvor ausgewählte Länder, indem Sie die entsprechenden Kontrollkästchen neben den Ländern deaktivieren.
 
@@ -32,7 +32,7 @@ Entfernen Sie zuvor ausgewählte Länder, indem Sie die entsprechenden Kontrollk
 
 Die Änderungen werden wirksam, nachdem Sie **Speichern** ausgewählt haben. Wenn Sie Länder aus Ihrer Zulassungsliste entfernen, werden alle SMS-, MMS- und RCS-Nachrichten nicht an Nummern in diesen Ländern gesendet.
 
-Modal mit einer Warnung über die Länder, die aus der Liste der zulässigen Länder gelöscht werden sollen.]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}){: style="max-width:70%;"}
+![Warnmeldung zur Bestätigung der Länder, die aus der Allowlist gelöscht werden.]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}){: style="max-width:70%;"}
 
 ## Länder mit hohem Risiko
 
@@ -52,5 +52,5 @@ Sendeversuche an Länder, die nicht auf Ihrer Allowlist stehen, werden abgebroch
 
 Abgebrochene Nachrichten, die durch blockierte Sendungen verursacht wurden, werden als **Fehler bei abgebrochenen Nachrichten** angezeigt und enthalten die Nachricht "Die Telefonnummer des Empfängers befindet sich in einem blockierten Land".
 
-![Abbruchprotokoll mit mehreren SMS-Sendungen, die blockiert wurden, weil sich die Telefonnummer in einem blockierten Land befindet.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
+![Abbruchprotokoll, das mehrere SMS-Sendungen anzeigt, die blockiert wurden, weil die Telefonnummer in einem blockierten Land liegt.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
 

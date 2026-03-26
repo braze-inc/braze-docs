@@ -1,22 +1,23 @@
 ---
-nav_title: Deleting users
-article_title: Deleting users
+nav_title: Delete users
+article_title: Delete users
 page_order: 4.2
 toc_headers: h2
-description: "Learn how to delete an individual user or a segment of users directly through the Braze dashboard." 
+description: "Learn how to delete an individual user or a segment of users directly through the Braze dashboard."
+alias: /delete_users/
 ---
 
-# Deleting users
+# Delete users
 
 > Learn how to delete an individual user or a segment of users directly through the Braze dashboard.
 
 {% alert important %}
-This feature is currently in early access. Contact your customer success manager if you're interested in participating.
+Deleting users is currently in early access. Contact your customer success manager if you're interested in participating.
 {% endalert %}
 
 ## Prerequisites
 
-To delete users, you'll need to be an admin or have **Delete User** permissions.
+To delete users, you must be an admin or have **Delete User** permissions.
 
 ## About user deletion
 
@@ -69,6 +70,14 @@ The users in this segment won't be deleted immediately. Instead, they'll be mark
 To ensure that these exact users are deleted regardless of segment changes, a segment filter called **Pending Deletion** is automatically created. You can [use this filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) to check the status of pending deletions.
 {% endalert %}
 
+## Confirming segment deletions
+
+Braze sends a confirmation email with the number of profiles pending deletion.
+
+To continue with the deletion, log in to Braze and confirm the deletion request.
+
+If you don't confirm within the time frame shown in the email, the deletion request expires and doesn't proceed.
+
 ## Canceling segment deletions {#cancel}
 
 You have 7 days to cancel pending segment deletions. To cancel, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
@@ -96,13 +105,13 @@ You can check the status of a deletion using [segment filters](#segment-filters)
 When you request a segment of users to be deleted, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically created. You can use it to:
 
 - See the exact set of users tied to a specific deletion run date.
-- Exclude those users from campaigns so they don’t receive messages before removal.
+- Exclude those users from Campaigns so they don’t receive messages before removal.
 - Export the list if you need it for compliance or record-keeping.
 
 ### Manage audience
 
 {% alert note %}
-To get the list of exact users that will be deleted, use the [Pending Deletion segment filter](#segment-filters) instead.
+To get the list of exact users who will be deleted, use the [Pending Deletion segment filter](#segment-filters) instead.
 {% endalert %}
 
 Go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
@@ -131,7 +140,15 @@ You can also check the status of previous deletions by downloading a security ev
 
 ### Can I delete segments with more than 100 million users?
 
-No. You cannot delete segments with more than 100 million users. If you need help deleting a segment of this size, contact [support@braze.com](mailto:support@braze.com).
+No. You cannot delete segments with more than 100 million users. If you need help deleting a segment of this size, contact [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support).
+
+### It looks like I am not able to delete 100 million users and am limited to deleting only 10 million. Is this a bug?
+
+No, this is not a bug. Certain customers are limited in the number of users they can delete during the early access (EA) program.
+
+As the EA program progresses, this capacity is designed to increase until all customers can delete up to 100 million users.
+
+If you want to increase this capacity, contact your Braze account manager. Requests are granted at the discretion of the product team.
 
 ### Does automated user merging affect user deletion?
 
@@ -141,7 +158,7 @@ If a scheduled merge includes user profiles pending deletion, Braze skips those 
 
 Data sent from external systems or SDKs is still accepted, but the users will be deleted as scheduled regardless of activity.
 
-### Will Canvases and campaigns trigger for users pending deletion?
+### Do Canvases and Campaigns trigger for users pending deletion?
 
 Yes. However, you can add a segment inclusion filter to exclude all users with the **Pending Deletion** [segment filter](#segment-filters).
 

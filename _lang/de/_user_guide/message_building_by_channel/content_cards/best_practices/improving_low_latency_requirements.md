@@ -1,13 +1,13 @@
 ---
 nav_title: Verbesserung der niedrigen Latenzzeit
-article_title: Verbesserung der niedrigen Latenz für Content-Cards als Banner
+article_title: Niedrige Latenzzeit für Content-Cards als Banner verbessern
 page_order: 10
 description: "Dieser Artikel befasst sich mit Strategien, die sicherstellen, dass die Anforderungen an niedrige Latenzzeiten mit Content-Cards erfüllt werden."
 channel:
   - content cards
 ---
 
-# Verbesserung der Latenzzeit für Content-Cards als Banner
+# Verbessern Sie die Latenzzeit für Content-Cards als Banner
 
 > Wenn Sie bei Ihrer Content-Cards-Implementierung für kritische Anwendungsfälle, wie z.B. Homepage-Banner, mit Latenz zu kämpfen haben, finden Sie auf dieser Seite Strategien und Tipps zur Lösung und Beschleunigung des Renderings.
 
@@ -31,13 +31,13 @@ Das bedeutet, dass die Karten zusammen mit dem geplanten Eingang sofort verfügb
 
 ## Denken Sie daran, dass der Eingang in Canvas eine Voraussetzung für den Erhalt von Karten ist.
 
-Denken Sie bei der Verwendung von Canvas daran, dass ein Nutzer:innen zunächst auf der Grundlage der von Ihnen konfigurierten Eingangskriterien in das Canvas eintreten muss und *dann* den Nachrichten-Schritt Ihrer Content-Card durchlaufen muss. Erst dann wird die Karte für Ihre App oder Website verfügbar sein. Denken Sie daran, dass die Karte erst erstellt wird, wenn der Nutzer:innen den Schritt durchläuft, und dass es zu einer Verzögerung kommen kann, wenn die Karte verfügbar ist.
+Denken Sie bei der Verwendung von Canvas daran, dass ein Nutzer:innen zunächst auf der Grundlage der von Ihnen konfigurierten Eingangskriterien in das Canvas eintreten und *dann* Ihren Nachrichten-Schritt für Content-Cards durchlaufen muss. Erst dann wird die Karte für Ihre App oder Website verfügbar sein. Denken Sie daran, dass die Karte erst erstellt wird, wenn der Nutzer:innen den Schritt durchläuft, und dass es zu einer Verzögerung kommen kann, wenn die Karte verfügbar ist.
 
 ## Aktualisieren Sie die Karten nicht übermäßig
 
 Content-Cards werden vom SDK bei jedem neuen Sitzungsstart automatisch aktualisiert. Sie können während einer aktiven Sitzung auch jederzeit manuell eine Aktualisierung der Content-Cards anfragen.
 
-Wenn Sie die Methode `requestContentCardsRefresh` aufrufen und zu häufig aktualisieren, kann dies zu Rate-Limiting führen. Wenn Ihre App vorübergehend eine Rate-Limitierung erfährt, können Sie die Karten bei Bedarf oder zu einem kritischen Zeitpunkt des Engagements des Nutzers:innen in Ihrer App nicht mehr aktualisieren.
+Wenn Sie die Methode `requestContentCardsRefresh` aufrufen und zu häufig aktualisieren, kann dies zu Rate-Limiting führen. Wenn Ihre App vorübergehend eine Rate-Limitierung erfährt, können Sie die Karten bei Bedarf oder zu einem kritischen Zeitpunkt des Engagements des Nutzers:innen mit Ihrer App nicht mehr aktualisieren.
 
 Um dies zu verhindern, rufen Sie diese Aktualisierungsmethode nur zu wichtigen Zeitpunkten im Lebenszyklus des Nutzers auf, z.B. nachdem ein Nutzer:in einen Kauf getätigt hat oder nachdem ein Nutzer:in sein Abo upgegradet hat.
 

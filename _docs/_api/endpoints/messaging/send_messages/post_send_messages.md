@@ -18,9 +18,26 @@ description: "This article outlines details about the Send messages immediately 
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+
 {% multi_lang_include api/payload_size_alert.md %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+{% alert important %}
+When using this endpoint for API campaigns, the recipient must already exist in Braze for the request to succeed. This applies when specifying users in the `external_user_ids` or `user_aliases` parameters.
+{% endalert %}
+
+### Creating new users with API sends
+
+If you need to create a user as part of a send using the API, you have two options:
+
+#### Option 1: Use `/users/track` then send
+
+First, create the user with the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, then wait for the data to propagate (generally, a few minutes is recommended) before initiating the API-only send. Note that Braze doesn't guarantee data processing times on `/users/track`, so [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) may occur if you don't allow enough time between these calls.
+
+#### Option 2: Use an API-triggered campaign or Canvas
+
+Use an [API-triggered campaign]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) workflow. These allow you to create a recipient if one doesn't already exist. This option simplifies your backend processes, but requires you to configure a campaign or Canvas in the Braze dashboard.
+
 
 ## Prerequisites
 
@@ -79,7 +96,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`user_aliases`| Optional | Array of user alias objects| See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) for more information. <br><br>*Required if you wish to track campaign metrics (such as _Sends_, _Clicks_, or _Bounces_) on the Braze dashboard. |
+|`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) for more information. <br><br>*Required if you wish to track campaign metrics (such as _Sends_, _Clicks_, or _Bounces_) on the Braze dashboard, or if you want to see events associated with this message in the user profile [Message History tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab). |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Optional | Boolean | Ignore `frequency_capping` for campaigns, defaults to `false`. |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |

@@ -1,48 +1,48 @@
 ---
 nav_title: eコマース推奨イベント
-article_title: e コマースのおすすめイベント
+article_title: e コマースの推奨イベント
 page_type: reference
 alias: /ecommerce_events/
 toc_headers: h2
-description: "この参考記事では、eコマース推奨のイベントとプロパティ、その使用方法、セグメンテーション、関連する分析を表示する場所などについて説明している。"
+description: "この参照記事では、e コマース推奨のイベントとプロパティ、その使用方法、セグメンテーション、関連する分析の表示場所などについて説明します。"
 ---
 
 # e コマースの推奨イベント
 
-> このページでは、e コマース推奨のイベントとプロパティについて説明します。これらのイベントは、マーケターが効果的なメッセージング (カート放棄のターゲット設定など) をトリガーするために必要な主な購入行動をキャプチャする貯めに作成されます。
+> このページでは、e コマース推奨のイベントとプロパティについて説明します。これらのイベントは、マーケターが効果的なメッセージング (カート放棄のターゲット設定など) をトリガーするために必要な主要な購買行動をキャプチャするために作成されています。
 
 {% alert important %}
-e コマースの推奨イベントは現在、早期アクセス段階です。早期アクセスにご興味のある方は、Brazeカスタマーサクセスマネージャーまでお問い合わせください。<br><br>新しい[Shopifyコネクタを]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector)使用している場合、これらの推奨イベントは統合によって自動的に利用できるようになる。
+e コマースの推奨イベントは現在、早期アクセス段階です。早期アクセスにご興味のある方は、Braze カスタマーサクセスマネージャーまでお問い合わせください。<br><br>新しい [Shopify コネクタ]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector)を使用している場合、これらの推奨イベントは統合を通じて自動的に利用可能になります。
 {% endalert %}
 
-Braze は、データプランニングには時間がかかることを認識しています。お客様の開発チームに周知し、このイベント微送信を今すぐ開始することををお勧めします。eコマース推奨イベントですぐに利用できない機能もあるかもしれないが、eコマース機能を強化する新製品の登場を2025年中に期待できる。
+Braze は、データプランニングには時間がかかることを認識しています。お客様の開発チームに周知し、これらのイベントの送信を今すぐ開始することをお勧めします。e コマース推奨イベントですぐに利用できない機能もあるかもしれませんが、e コマース機能を強化する新製品が2025年中に順次リリースされる予定です。
 
 ## e コマースの推奨イベントのタイプ
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
-USD以外の通貨がレポートされた場合、Brazeではレポートされた日の為替レートに基づいてUSDで表示される。通貨コンバージョンを防ぐため、通貨をUSDにハードコードする。
+レポートされた米ドル以外の通貨は、レポート日の為替レートに基づき、Braze では米ドルで表示されます。通貨換算を防ぐには、通貨を米ドルにハードコードしてください。
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
 
-顧客が商品詳細ページを閲覧する時点でトリガーされる製品閲覧イベントを使用できます。
+顧客が商品詳細ページを閲覧した時点でトリガーされる製品閲覧イベントを使用できます。
 
 #### プロパティ
 
-| プロパティ名 | required | データタイプ | 説明 | 
+| プロパティ名 | 必須 | データタイプ | 説明 | 
 |---|---|---|---|
-| `product_id` | はい | string | 閲覧された製品の一意の識別子。<br> Shopify以外の顧客の場合、これはSKUのようなカタログアイテムIDに設定した値になる。 |
-| `product_name` | はい | string | 閲覧された商品名。 | 
-| `variant_id` | はい | string | 製品バリアントに固有の識別子。例は`shirt_medium_blue`です |
-| `image_url` | いいえ | string | 商品画像のURL。 |
-| `product_url` | いいえ | string | 詳細情報がある製品ページの URL。 |
+| `product_id` | はい | 文字列 | 閲覧された製品の一意の識別子。<br> Shopify 以外の顧客の場合、これは SKU のようなカタログアイテム ID に設定した値になります。 |
+| `product_name` | はい | 文字列 | 閲覧された商品名。 | 
+| `variant_id` | はい | 文字列 | 製品バリアントの一意の識別子。例: `shirt_medium_blue` |
+| `image_url` | いいえ | 文字列 | 商品画像の URL。 |
+| `product_url` | いいえ | 文字列 | 詳細情報がある製品ページの URL。 |
 | `price` | はい | フロート | 閲覧時の製品のバリアント単価。 |
-| `currency` | はい | string | 製品価格の表示通貨 (「USD」や「EUR」など)。[ISO 4217 フォーマット](https://www.iso.org/iso-4217-currency-codes.html)です。 |
-| `source` | はい | string | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
+| `currency` | はい | 文字列 | 製品価格の表示通貨 (「USD」や「EUR」など)。[ISO 4217 フォーマット](https://www.iso.org/iso-4217-currency-codes.html)です。 |
+| `source` | はい | 文字列 | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
 | `metadata` | いいえ | オブジェクト | |
-| `type` | いいえ | オブジェクト | [在庫切れ通知や]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications) [値下げ通知と]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications)連動する。 |
-| `sku` | いいえ | string | (Shopifyのみ）Shopify SKU.これはカタログ ID フィールドとして設定できます。 |
+| `type` | いいえ | オブジェクト | [再入荷通知]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications)と[値下げ通知]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications)に対応しています。 |
+| `sku` | いいえ | 文字列 | (Shopify のみ) Shopify SKU。これはカタログ ID フィールドとして設定できます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### オブジェクトの例
@@ -140,7 +140,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "color": "ORANGE",
           "size": "6",
           "brand": "Braze"
-        }
+        },
         "type": [
           "price_drop",
           "back_in_stock"
@@ -156,15 +156,15 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
 {% endtab %}
 {% tab ecommerce.cart_updated %}
 
-カートに製品が追加された時点、削除された時点、更新された時点を追跡するには、カードの更新イベントを使用できます。`ecommerce.cart_updated` イベントはトリガー前に以下の情報を検証します。
+**カート更新イベントの実行**トリガーを使用して、カートに製品が追加、削除、または更新された時点をトラッキングできます。このイベントはトリガー前に以下の情報を検証します。
 
-- イベントの時刻が、ユーザーの特定のカートの`updated_at` の時刻よりも後である。
+- イベントの時刻が、ユーザーの特定のカートの `updated_at` の時刻よりも後である。
 - カートが購入手続きに進んでいない。
 - `products` の配列が空ではない。
 
 #### カートマッピングオブジェクト
 
-`ecommerce.cart_updated` イベントにはカートマッピングオブジェクトがあります。このオブジェクトは、カートのマッピングを含むユーザープロファイルに対して作成されます。購入者のカートに入っているすべての製品が含まれています。Liquid タグを使用してショッピングカート内の製品にアクセスできます。 
+`ecommerce.cart_updated` イベントにはカートマッピングオブジェクトがあります。このオブジェクトは、カートのマッピングを含むユーザープロファイルに対して作成され、購入者のカートに入っているすべての製品が含まれています。Liquid タグを使用してショッピングカート内の製品にアクセスできます。 
 
 {%raw%}
 ```liquid
@@ -174,35 +174,35 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
 ```
 {%endraw%}
 
-10日以内にカートが更新されず、注文イベントに進まなかった場合、カートと関連製品は削除されます。
+10日以内にカートが更新されず、注文確定イベントに進まなかった場合、カートと関連製品は削除されます。
 
 {% alert note %}
-Braze ではカートあたりの製品の数に制限はありません。ただし Shopify での上限は500です。
+Braze ではカートあたりの製品数に制限はありません。ただし Shopify での上限は500です。
 {% endalert %}
 
 #### ユーザープロファイルをマージする際のカートの動作
 
-カートが2つある場合は、この両方がマージユーザーに追加されます。同じカートまたは異なるカートが最新のカート情報を含むメッセージを送信する場合、キャンバスを再度キューに入れます。`ecommerce.cart_updated` イベントには、最新のカート ID とカート内の最新の商品が含まれます。
+カートが2つある場合は、両方がマージされたユーザーに追加されます。同じカートまたは異なるカートの場合、最新のカート情報を含むメッセージを送信するためにキャンバスを再度キューに入れます。`ecommerce.cart_updated` イベントには、最新のカート ID とカート内の最新の商品が含まれます。
 
 #### プロパティ
 
-| プロパティ名 | required | データタイプ | 説明 | 
+| プロパティ名 | 必須 | データタイプ | 説明 | 
 |---|---|---|---|
-| `cart_id` | はい | string | カートの一意の識別子。値が渡されない場合、Braze によりユーザーカートマッピングのデフォルト値 (カート、チェックアウト、注文イベントで共有) が決定します。 |
+| `cart_id` | はい | 文字列 | `cart_id` を提供するサードパーティプラットフォームを使用していない場合は、[Braze のセッション ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) を使用できます。 |
 | `total_value` | はい | フロート | カートの合計金額。 | 
-| `currency` | はい | string | 製品価格の表示通貨 (「USD」や「EUR」など)。[ISO 4217 フォーマット](https://www.iso.org/iso-4217-currency-codes.html)です。 |
+| `currency` | はい | 文字列 | 製品価格の表示通貨 (「USD」や「EUR」など)。[ISO 4217 フォーマット](https://www.iso.org/iso-4217-currency-codes.html)です。 |
 | `products` | はい | 配列 |  |
-| `product_id` | はい | string | 閲覧された製品の一意の識別子。<br> この値には、製品 ID または SKU を使用できます。 |
-| `product_name` | はい | string | 閲覧された商品名。 |
-| `variant_id` | はい | string | 製品バリアントに固有の識別子。例は`shirt_medium_blue`です |
-| `image_url` | いいえ | string | 商品画像のURL。 |
-| `product_url` | いいえ | string | 詳細情報がある製品ページの URL。 |
+| `product_id` | はい | 文字列 | 閲覧された製品の一意の識別子。<br> この値には、製品 ID または SKU を使用できます。 |
+| `product_name` | はい | 文字列 | 閲覧された商品名。 |
+| `variant_id` | はい | 文字列 | 製品バリアントの一意の識別子。例: `shirt_medium_blue` |
+| `image_url` | いいえ | 文字列 | 商品画像の URL。 |
+| `product_url` | いいえ | 文字列 | 詳細情報がある製品ページの URL。 |
 | `quantity` | はい | 整数 | カートに入っている製品の個数。 |
 | `price` | はい | フロート | 閲覧時の製品のバリアント単価。 |
-| `metadata` | いいえ | オブジェクト | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。<br> 一般的なイベントプロパティの上限である50kb に基づく制限があります。 |
-| `sku` | いいえ | string | (Shopifyのみ）Shopify SKU.これはカタログ ID フィールドとして設定できます。 |
-| `source` | はい | string | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
-| `metadata` | いいえ | オブジェクト | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。<br> 一般的なイベントプロパティの上限である50kb に基づく制限があります。 |
+| `metadata` | いいえ | オブジェクト | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。<br> 一般的なイベントプロパティの上限である 50KB に基づく制限があります。 |
+| `sku` | いいえ | 文字列 | (Shopify のみ) Shopify SKU。これはカタログ ID フィールドとして設定できます。 |
+| `source` | はい | 文字列 | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
+| `metadata` | いいえ | オブジェクト | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。<br> 一般的なイベントプロパティの上限である 50KB に基づく制限があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### オブジェクトの例
@@ -347,9 +347,9 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: pr
 {% endtab %}
 {% tab ecommerce.checkout_started %}
 
-チェックアウト開始イベントを使用して、チェックアウトプロセスを開始したが発注していない顧客をリターゲティングできます。
+チェックアウト開始イベントを使用して、チェックアウトプロセスを開始したが注文を完了していない顧客をリターゲティングできます。
 
-`ecommerce.cart_updated` イベントと同様に、このイベントでは、ショッピングカート Liquid タグを使用して、購入手続き放棄メッセージのためにカート内のすべての製品にアクセスできます。
+`ecommerce.cart_updated` イベントと同様に、このイベントではショッピングカート Liquid タグを使用して、購入手続き放棄メッセージのためにカート内のすべての製品にアクセスできます。
 
 {%raw%}
 ```liquid
@@ -361,25 +361,25 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: pr
 
 #### プロパティ
 
-| プロパティ名 | required | データタイプ | 説明 | 
+| プロパティ名 | 必須 | データタイプ | 説明 | 
 |---|---|---|---|
-| `checkout_id` | はい | string | チェックアウトの一意の識別子。 |
-| `cart_id` | いいえ | string | カートの一意の識別子。値が渡されない場合、Braze によりユーザーカートマッピングのデフォルト値 (カート、チェックアウト、注文イベントで共有) が決定します。 | 
+| `checkout_id` | はい | 文字列 | チェックアウトの一意の識別子。 |
+| `cart_id` | いいえ | 文字列 | `cart_id` を提供するサードパーティプラットフォームを使用していない場合は、[Braze のセッション ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) を使用できます。 | 
 | `total_value` | はい | フロート | カートの合計金額。 |
-| `currency` | はい | string | カートの金額の通貨。 |
+| `currency` | はい | 文字列 | カートの金額の通貨。 |
 | `products` | はい | オブジェクト配列 |  |
-| `product_id` | はい | string | 閲覧された製品の一意の識別子。例えば製品 ID や SKU がこの値になります。 |
-| `product_name` | はい | string | 閲覧された商品名。  |
-| `variant_id` | はい | string | 製品バリアントに固有の識別子。例は`shirt_medium_blue`です |
-| `image_url` | いいえ | string | 商品画像のURL。 |
-| `product_url` | いいえ | string | 詳細情報がある製品ページの URL。 |
+| `product_id` | はい | 文字列 | 閲覧された製品の一意の識別子。例えば製品 ID や SKU がこの値になります。 |
+| `product_name` | はい | 文字列 | 閲覧された商品名。  |
+| `variant_id` | はい | 文字列 | 製品バリアントの一意の識別子。例: `shirt_medium_blue` |
+| `image_url` | いいえ | 文字列 | 商品画像の URL。 |
+| `product_url` | いいえ | 文字列 | 詳細情報がある製品ページの URL。 |
 | `quantity` | はい | 整数 | カートに入っている製品の個数。 |
 | `price` | はい | フロート | 閲覧時の製品のバリアント単価。 |
-| `metadata` | いいえ | オブジェクト | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。<br> 一般的なイベントプロパティの上限である50kb に基づく制限があります。 |
-| `sku` | いいえ | string | (Shopifyのみ）Shopify SKU.これはカタログ ID フィールドとして設定できます。 |
-| `source` | はい | string | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
+| `metadata` | いいえ | オブジェクト | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。<br> 一般的なイベントプロパティの上限である 50KB に基づく制限があります。 |
+| `sku` | いいえ | 文字列 | (Shopify のみ) Shopify SKU。これはカタログ ID フィールドとして設定できます。 |
+| `source` | はい | 文字列 | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
 | `metadata` | いいえ | オブジェクト |  |
-| `checkout_url` | いいえ | string | チェックアウトページのURL。 |
+| `checkout_url` | いいえ | 文字列 | チェックアウトページの URL。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### オブジェクトの例
@@ -523,35 +523,34 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.checkout_started", properties
 {% endtab %}
 {% tab ecommerce.order_placed %}
 
-顧客が正常にチェックアウトを完了し、発注した時点でトリガーする注文イベントを使用できます。
+顧客が正常にチェックアウトを完了し、注文を確定した時点でトリガーする注文確定イベントを使用できます。
 
 #### プロパティ
 
-| プロパティ名 | required | データタイプ | 説明 | 
+| プロパティ名 | 必須 | データタイプ | 説明 | 
 |---|---|---|---|
-| `order_id` | はい | string | 注文の一意の識別子。 |
-| `cart_id` | いいえ | string | カートの一意の識別子。値が渡されない場合、Braze によりユーザーカートマッピングのデフォルト値 (カート、チェックアウト、注文イベントで共有) が決定します。 |
+| `order_id` | はい | 文字列 | 注文の一意の識別子。 |
+| `cart_id` | いいえ | 文字列 | `cart_id` を提供するサードパーティプラットフォームを使用していない場合は、[Braze のセッション ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) を使用できます。 |
 | `total_value` | はい | フロート | カートの合計金額。 | 
-| `currency` | はい | string | カートの金額の通貨。 |
+| `currency` | はい | 文字列 | カートの金額の通貨。 |
 | `total_discounts` | いいえ | フロート | 注文に適用された割引の総額。 | 
-| `discounts`| いいえ | オブジェクト配列 | 注文に適用される割引の詳細リスト。 |
+| `discounts`| いいえ | オブジェクト配列 | 注文に適用された割引の詳細リスト。 |
 | `products` | はい | オブジェクト配列 |  |
-| `product_id` | はい | string | 閲覧された製品の一意の識別子。この値には、製品 ID または SKU を使用できます。 |
-| `product_name` | はい | string | 閲覧された商品名。 |
-| `variant_id` | はい | string | 製品バリアントに固有の識別子。例は`shirt_medium_blue`です |
-| `image_url` | いいえ | string | 商品画像のURL。 |
-| `product_url` | いいえ | string | 詳細情報がある製品ページの URL。 |
+| `product_id` | はい | 文字列 | 閲覧された製品の一意の識別子。この値には、製品 ID または SKU を使用できます。 |
+| `product_name` | はい | 文字列 | 閲覧された商品名。 |
+| `variant_id` | はい | 文字列 | 製品バリアントの一意の識別子。例: `shirt_medium_blue` |
+| `image_url` | いいえ | 文字列 | 商品画像の URL。 |
+| `product_url` | いいえ | 文字列 | 詳細情報がある製品ページの URL。 |
 | `quantity` | はい | 整数 | カートに入っている製品の個数。 |
 | `price` | はい | フロート | 閲覧時の製品のバリアント単価。 |
-| `metadata` | いいえ | オブジェクト | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。<br> 一般的なイベントプロパティの上限である50kb に基づく制限があります。 |
-| `sku` | いいえ | string | (Shopifyのみ）Shopify SKU.これはカタログ ID フィールドとして設定できます。 |
-| `source` | はい | string | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
-| `metadata` | いいえ | オブジェクト |  |
-| `order_status_url` | いいえ | string | 注文のステータスを見るためのURL。 |
-| `order_number` | いいえ | string | (Shopifyのみ) 発注された注文の固有の注文番号。 |
-| `tags` | いいえ | 配列 | (Shopifyのみ）注文タグ
-| `referring_site` | いいえ | string | (Shopifyのみ）注文の発信元サイト（Metaなど）。 |
-| `payment_gateway_names` | いいえ | 配列 | (Shopifyのみ）決済システムのソース（POSやモバイルなど）。 |
+| `metadata` | いいえ | オブジェクト | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。<br> 一般的なイベントプロパティの上限である 50KB に基づく制限があります。 |
+| `sku` | いいえ | 文字列 | (Shopify のみ) Shopify SKU。これはカタログ ID フィールドとして設定できます。 |
+| `source` | はい | 文字列 | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
+| `order_status_url` | いいえ | 文字列 | 注文のステータスを確認するための URL。 |
+| `order_number` | いいえ | 文字列 | (Shopify のみ) 注文の固有の注文番号。 |
+| `tags` | いいえ | 配列 | (Shopify のみ) 注文タグ
+| `referring_site` | いいえ | 文字列 | (Shopify のみ) 注文の発信元サイト (Meta など)。 |
+| `payment_gateway_names` | いいえ | 配列 | (Shopify のみ) 決済システムのソース (POS システムやモバイル端末など)。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### オブジェクトの例
@@ -745,29 +744,29 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_placed", properties: pr
 
 #### プロパティ
 
-| プロパティ名       | required | データ型 | 説明   |
+| プロパティ名       | 必須 | データタイプ | 説明   |
 |---------------|---------|-----------|-------------------------|
-| `order_id`            | はい      | string    | 注文の一意の識別子。        |
+| `order_id`            | はい      | 文字列    | 注文の一意の識別子。        |
 | `total_value`         | はい      | フロート     | カートの合計金額。    |
-| `currency`            | はい      | string    | カートの金額の通貨。    |
+| `currency`            | はい      | 文字列    | カートの金額の通貨。    |
 | `total_discounts`     | いいえ       | フロート     | 注文に適用された割引の総額。   |
-| `discounts`           | いいえ       | オブジェクト配列     | 注文に適用される割引の詳細リスト。 |
+| `discounts`           | いいえ       | オブジェクト配列     | 注文に適用された割引の詳細リスト。 |
 | `products`            | はい      | オブジェクト配列     |  |
-| `product_id`       | はい      | string    | 閲覧された製品の一意の識別子。この値には、製品 ID、SKU などを使用できます。<br>一部払い戻しが行われ、払い戻しに `product_id` が割り当てられていない場合 (注文レベルの払い戻しなど) には、一般化された`product_id` を指定します。             |
-| `product_name`     | はい      | string    | 閲覧された商品名。                                                                      |
-| `variant_id`       | はい      | string    | 製品バリアントの一意の識別子 (`shirt_medium_blue` など)。                                         |
-| `image_url`        | いいえ       | string    | 商品画像のURL。     |
-| `product_url`      | いいえ       | string    | 詳細情報がある製品ページの URL。  |
+| `product_id`       | はい      | 文字列    | 閲覧された製品の一意の識別子。この値には、製品 ID、SKU などを使用できます。<br>一部払い戻しが行われ、払い戻しに `product_id` が割り当てられていない場合 (注文レベルの払い戻しなど) には、汎用の `product_id` を指定してください。             |
+| `product_name`     | はい      | 文字列    | 閲覧された商品名。                                                                      |
+| `variant_id`       | はい      | 文字列    | 製品バリアントの一意の識別子 (`shirt_medium_blue` など)。                                         |
+| `image_url`        | いいえ       | 文字列    | 商品画像の URL。     |
+| `product_url`      | いいえ       | 文字列    | 詳細情報がある製品ページの URL。  |
 | `quantity`         | はい      | 整数   | カートに入っている製品の個数。   |
 | `price`            | はい      | フロート     | 閲覧時の製品のバリアント単価。  |
-| `metadata`         | いいえ       | オブジェクト    | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。一般的なイベントプロパティの上限である50kb に基づく制限があります。 |
-| `sku`            | いいえ       | string    | (Shopifyのみ）Shopify SKU.これはカタログ ID フィールドとして設定できます。  |
-| `source`              | はい      | string    | イベントの派生元ソース。(Shopify の場合これはストアフロントです。)    |
+| `metadata`         | いいえ       | オブジェクト    | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。一般的なイベントプロパティの上限である 50KB に基づく制限があります。 |
+| `sku`            | いいえ       | 文字列    | (Shopify のみ) Shopify SKU。これはカタログ ID フィールドとして設定できます。  |
+| `source`              | はい      | 文字列    | イベントの派生元ソース。(Shopify の場合これはストアフロントです。)    |
 | `metadata`            | いいえ       | オブジェクト    |                |
-| `order_status_url`  | いいえ       | string    | 注文のステータスを見るためのURL。     |
-| `order_note`       | いいえ       | string    | (Shopify のみ) マーチャントが注文に追加したメモ。    |
-| `order_number`     | いいえ       | string    | (Shopifyのみ) 発注された注文の固有の注文番号。   |
-| `tags`             | いいえ       | 配列     | (Shopifyのみ）注文タグ。  |
+| `order_status_url`  | いいえ       | 文字列    | 注文のステータスを確認するための URL。     |
+| `order_note`       | いいえ       | 文字列    | (Shopify のみ) マーチャントが注文に追加したメモ。    |
+| `order_number`     | いいえ       | 文字列    | (Shopify のみ) 注文の固有の注文番号。   |
+| `tags`             | いいえ       | 配列     | (Shopify のみ) 注文タグ。  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### オブジェクトの例
@@ -953,29 +952,29 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_refunded", properties: 
 
 #### プロパティ
 
-| プロパティ名      | required | データ型 | 説明       |
+| プロパティ名      | 必須 | データタイプ | 説明       |
 |---------------------|----------|-----------|-------------------|
-| `order_id`            | はい      | string    | 注文の一意の識別子。              |
-| `cancel_reason`       | はい      | string    | 注文がキャンセルされた理由。           |
+| `order_id`            | はい      | 文字列    | 注文の一意の識別子。              |
+| `cancel_reason`       | はい      | 文字列    | 注文がキャンセルされた理由。           |
 | `total_value`         | はい      | フロート     | カートの合計金額。         |
-| `currency`            | はい      | string    | カートの金額の通貨。           |
+| `currency`            | はい      | 文字列    | カートの金額の通貨。           |
 | `total_discounts`     | いいえ       | フロート     | 注文に適用された割引の総額。     |
-| `discounts`           | いいえ       | オブジェクト配列     | 注文に適用される割引の詳細リスト。             |
+| `discounts`           | いいえ       | オブジェクト配列     | 注文に適用された割引の詳細リスト。             |
 | `products`            | はい      | オブジェクト配列     |         |
-| `product_id`          | はい      | string    | 閲覧された製品の一意の識別子。この値には、製品 ID、SKU などを使用できます。             |
-| `product_name`        | はい      | string    | 閲覧された商品名。          |
-| `variant_id`          | はい      | string    | 製品バリアントの一意の識別子 (`shirt_medium_blue` など)。        |
-| `image_url`           | いいえ       | string    | 商品画像のURL。           |
-| `product_url`         | いいえ       | string    | 詳細情報がある製品ページの URL。                                                                     |
+| `product_id`          | はい      | 文字列    | 閲覧された製品の一意の識別子。この値には、製品 ID、SKU などを使用できます。             |
+| `product_name`        | はい      | 文字列    | 閲覧された商品名。          |
+| `variant_id`          | はい      | 文字列    | 製品バリアントの一意の識別子 (`shirt_medium_blue` など)。        |
+| `image_url`           | いいえ       | 文字列    | 商品画像の URL。           |
+| `product_url`         | いいえ       | 文字列    | 詳細情報がある製品ページの URL。                                                                     |
 | `quantity`            | はい      | 整数   | カートに入っている製品の個数。        |
 | `price`               | はい      | フロート     | 閲覧時の製品のバリアント単価。     |
-| `metadata`            | いいえ       | オブジェクト    | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。一般的なイベントプロパティの上限である50kb に基づく制限があります。 |
-| `sku`                 | いいえ       | string    | (Shopifyのみ）Shopify SKU.これはカタログ ID フィールドとして設定できます。        |
-| `source`              | はい      | string    | イベントの派生元ソース。(Shopify の場合これはストアフロントです。)    |
+| `metadata`            | いいえ       | オブジェクト    | 顧客がユースケースのために追加する製品に関する追加のメタデータフィールド。Shopify の場合は SKU が追加されます。一般的なイベントプロパティの上限である 50KB に基づく制限があります。 |
+| `sku`                 | いいえ       | 文字列    | (Shopify のみ) Shopify SKU。これはカタログ ID フィールドとして設定できます。        |
+| `source`              | はい      | 文字列    | イベントの派生元ソース。(Shopify の場合これはストアフロントです。)    |
 | `metadata`            | いいえ       | オブジェクト    |       |
-| `order_status_url`    | いいえ       | string    | 注文のステータスを見るためのURL。                                                                          |
-| `order_number`        | いいえ       | string    | (Shopifyのみ) 発注された注文の固有の注文番号。  |
-| `tags`                | いいえ       | 配列     | (Shopifyのみ）注文タグ。            |
+| `order_status_url`    | いいえ       | 文字列    | 注文のステータスを確認するための URL。                                                                          |
+| `order_number`        | いいえ       | 文字列    | (Shopify のみ) 注文の固有の注文番号。  |
+| `tags`                | いいえ       | 配列     | (Shopify のみ) 注文タグ。            |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### オブジェクトの例
@@ -1158,24 +1157,61 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties:
 {% endtab %}
 {% endtabs %}
 
-## eコマースキャンバスのテンプレート
+## e コマースキャンバステンプレート
 
-Braze では、e コマースの推奨イベントを使用した事前作成済みのキャンバステンプレートを用意しています (チェックアウトプロセスを開始したが注文前に離脱した顧客のターゲティングなど)。メッセージングをパーソナライズしたり、特定のオーディエンスをターゲットにすることで、ユーザー・ジャーニーを向上させるための情報に基づいた決定を下すために、これらのイベントを利用することができる。
+Braze では、e コマースの推奨イベントを活用した事前作成済みのキャンバステンプレートを用意しています (チェックアウトプロセスを開始したが注文前に離脱した顧客のターゲティングなど)。これらのイベントを使用して、メッセージングをパーソナライズしたり、特定のオーディエンスをターゲットにすることで、ユーザージャーニーを向上させるための情報に基づいた意思決定を行うことができます。
 
-Canvasテンプレートでこれらのイベントを使用する方法については、[eコマース専用のユースケースを]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases)チェックしてほしい。
+キャンバステンプレートでこれらのイベントを使用する方法については、[e コマース専用のユースケース]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases)をご覧ください。
 
 ## ユーザー計算フィールド
 
 以下のフィールドについては、標準化されたユーザーフィールド計算を使用しています。 
 
-- **総収益** = 発注額の合計 - 払い戻し金額の合計
-- **注文数の合計** = 個別の注文イベントの数 - 個別の注文キャンセルの数
+- **総収益** = 注文確定額の合計 - 払い戻し金額の合計
+- **注文数の合計** = 個別の注文確定イベントの数 - 個別の注文キャンセルの数
 - **払い戻し合計額** = 払い戻された注文の合計額 
 
 これらのユーザーフィールド計算は、ユーザープロファイルの [**トランザクション**] タブにも含まれています。
 
-<<<<<<< HEAD
-![ユーザーによって計算されたフィールドを持つ "取引 "タブ。]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
-=======
-\![ユーザーによって計算されたフィールドを持つ "取引 "タブ。]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
->>>>>>> main
+![ユーザー計算フィールドを含む「トランザクション」タブ。]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}
+
+## よくある質問
+
+### 製品レベルの購入データはどこで確認できますか？
+
+ユーザープロファイルの [**トランザクション**] タブには、高レベルの計算フィールド (総収益や総注文数など) が表示されます。特定のユーザーに関する製品レベルの詳細を表示するには、[クエリビルダー]({{site.baseurl}}/user_guide/analytics/query_builder/)を使用して e コマースイベントデータをクエリするか、[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) を通じてイベントデータをエクスポートしてください。
+
+従来の購入イベントとは異なり、e コマース推奨イベントでは、商品詳細が `products` 配列内のネストされたイベントプロパティとして保存されます。これらのプロパティは、Liquid によるメッセージングと、[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)によるセグメンテーションで利用できます。
+
+### 特定の製品でユーザーをセグメントするにはどうすればよいですか？
+
+セグメンターでは、ユーザーが e コマースイベントを実行した回数でフィルターをかけることができます。特定の製品プロパティ (`product_id` や `product_name` など) でフィルターするには、ネストされたイベントプロパティフィルターをサポートする[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用してください。例えば、過去90日間に商品「SKU-123」を購入した全ユーザーを検索できます。
+
+### レガシー購入イベントと e コマース推奨イベントの違いは何ですか？
+
+従来の購入イベントは Braze の[購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)を使用し、個々の製品購入を `product_id` と `price` で記録します。e コマース推奨イベント (`ecommerce.order_placed` など) はカスタムイベントプロパティを使用し、複数の製品、割引、メタデータを含む完全な注文コンテキストを単一のイベントでキャプチャします。
+
+e コマースの推奨イベントの導入に伴い、Braze は今後、従来の購入イベントを段階的に廃止していく予定です。現在購入イベントを使用している場合は、事前に通知が届きます。その間、正式な廃止日までは購入イベントを引き続き使用できます。詳細は[推奨イベントの概要]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/)を参照してください。
+
+### e コマースの推奨イベントにカスタムプロパティを追加できますか？
+
+e コマースの推奨イベントには、必須フィールドとオプションフィールドを含む定義済みスキーマがあります。各イベントの `metadata` オブジェクト内に追加のカスタムデータを含めることができます。ただし、カスタム注文レベルのタグや独自フィールド (購入チャネルや小売店情報など) は、最上位のプロパティとしてサポートされていません。セグメンテーションにこれらのフィールドが必要な場合は、e コマースイベントとは別にカスタムイベントとして送信し続けてください。
+
+### e コマースイベントを送信する際に `external_id` を含める必要がありますか？
+
+イベントの送信方法によって異なります。
+
+- **SDK 経由の場合**: いいえ。Braze SDK を使用する場合、イベントは自動的に SDK の現在のユーザーコンテキスト (匿名または識別済みユーザー) に関連付けられます。各イベント呼び出しごとにユーザー識別子を渡す必要はありません。代わりに、`changeUser` などのメソッドを使用してそのコンテキストのユーザーを特定できます。
+- **REST API (`/users/track`) 経由の場合**: はい。各 API リクエストには、`external_id`、`braze_id`、`user_alias`、`email`、`phone` などのユーザー識別子を含める必要があります。API には「現在のユーザー」というコンテキストが存在しないためです。
+
+### なぜネストされた製品プロパティが AI レコメンデーション設定のドロップダウンに表示されないのですか？
+
+[AI アイテムレコメンデーション]({{site.baseurl}}/user_guide/brazeai/recommendations/)を設定する際、**プロパティ名**のドロップダウンには最上位のイベントプロパティ (`order_id`、`total_value`、`currency` など) のみが表示されます。`products` 配列内のネストされたプロパティ (`products.product_id` や `products.variant_id` など) はこのリストに表示されない場合がありますが、フィールド内でドット表記を使って手動で入力できます。ほとんどの e コマース実装において、Braze はアイテム識別子として `products.product_id` を使用し、アイテム ID が `product_id` または `variant_id` の値と一致する[カタログ]({{site.baseurl}}/user_guide/data/activation/catalogs/)と組み合わせることを推奨しています。
+
+### なぜ一部の e コマースイベントが Braze に表示されないのですか？
+
+イベントがユーザープロファイルやログに表示されない場合は、以下の点を確認してください。
+
+- **SDK データのフラッシュタイミング**: Braze SDK はデータをローカルにキャッシュし、定期的にアップロードします (通常10〜60秒以内)。即時アップロードを強制するには、`logCustomEvent()` の後に `requestImmediateDataFlush()` を呼び出してください。
+- **必須プロパティ**: e コマースイベントには必須のプロパティがあります。必須プロパティが欠けているか、データタイプが無効な場合、イベントは拒否される可能性があります。イベントペイロードが[必須スキーマ](#types-of-ecommerce-recommended-events)と一致していることを確認してください。
+- **イベント名の正確性**: e コマースのイベント名は大文字小文字を区別し、完全に一致する必要があります (例: `ecommerce.checkoutStarted` ではなく `ecommerce.checkout_started`)。

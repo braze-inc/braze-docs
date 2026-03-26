@@ -10,7 +10,7 @@ description: "Auf dieser Referenzseite finden Sie die von Liquid unterstützten 
 
 > Liquid unterstützt viele [Operatoren](https://docs.shopify.com/themes/liquid/basics/operators), die Sie in Ihren bedingten Anweisungen verwenden können. Auf dieser Seite finden Sie die von Liquid unterstützten Operatoren und Anwendungsbeispiele, wie Sie sie in Ihren Nachrichten verwenden können.
 
-Diese Tabelle enthält die unterstützten Operatoren. Beachten Sie, dass Klammern in Liquid ungültig sind und verhindern, dass Tags funktionieren.
+Diese Tabelle enthält die unterstützten Operatoren. Bitte beachten Sie, dass Klammern in Liquid ungültige Zeichen sind und die Funktion Ihrer Tags beeinträchtigen können.
 
 |   Syntax| Beschreibung|
 |---------|-----------|
@@ -25,11 +25,36 @@ Diese Tabelle enthält die unterstützten Operatoren. Beachten Sie, dass Klammer
 | enthält | prüft, ob ein String oder ein String-Array einen String enthält|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+Operatoren können in bedingten Anweisungen (`if`, `elsif`, `unless`) verwendet werden, jedoch nicht in`assign`  Anweisungen,`for`  Schleifen, `case`/`when` Anweisungen oder Array-Zugriffsklammern. Eine vollständige Aufschlüsselung finden Sie unter [Wo werden Operatoren und Filter verwendet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters)?
+{% endalert %}
+
+### Gruppierungsbedingungen ohne Klammern
+
+Liquid unterstützt keine Klammern zum Gruppieren von Ausdrücken. Um komplexe Boolesche Logik wie zu bewerten`(a and b) or c`, verwenden Sie bitte verschachtelte`if`Anweisungen oder Zwischenvariablen.
+
+Um beispielsweise zu überprüfen, ob ein Wert eine zusammengesetzte Bedingung erfüllt, weisen Sie eine Zwischenvariable zu:
+
+{% raw %}
+```liquid
+{% assign qualifies = false %}
+{% if points > 100 %}
+{% assign qualifies = true %}
+{% elsif points == 100 and member_level == 'gold' %}
+{% assign qualifies = true %}
+{% endif %}
+
+{% if qualifies %}
+You qualify for a reward!
+{% endif %}
+```
+{% endraw %}
+
 ## Tutorials
 
 Gehen wir ein paar Tutorials durch, um zu lernen, wie Sie diese Operatoren für Ihre Kampagnen nutzen können:
 
-### Nachricht mit einem ganzzahligen benutzerdefinierten Attribut auswählen
+### Bitte wählen Sie eine Nachricht mit einem angepassten Attribut vom Typ „Ganzzahl“ aus.
 
 Lassen Sie sich Push-Benachrichtigungen mit personalisierten Aktionen an Nutzer:innen schicken, die eingekauft haben oder nicht. Die Push-Benachrichtigung verwendet ein ganzzahliges angepasstes Attribut namens `total_spend`, um die Gesamtausgaben eines Nutzers:innen zu überprüfen.
 
@@ -61,7 +86,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
+![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details Full Liquid code %}
 {% raw %}
@@ -75,7 +100,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Wenn das angepasste Attribut "Gesamtausgaben" eines Nutzers:in größer ist als `0`, erhält er jetzt die Nachricht:
+Wenn das angepasste Attribut „Gesamtausgaben“ eines Nutzers größer als ist`0`, erhält er die folgende Nachricht:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
@@ -86,7 +111,7 @@ Wenn das angepasste Attribut "Gesamtausgaben" eines Nutzers nicht existiert oder
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### Nachricht mit einem benutzerdefinierten String-Attribut auswählen
+### Bitte wählen Sie eine Nachricht mit einem angepassten Attribut aus.
 
 Senden Sie Push-Benachrichtigungen an Nutzer:innen und personalisieren Sie die Nachricht auf der Grundlage des zuletzt gespielten Spiels des jeweiligen Nutzers. Hier wird ein angepasstes String Attribut namens `recent_game` verwendet, um zu überprüfen, welches Spiel ein Nutzer:in zuletzt gespielt hat.
 
@@ -110,11 +135,11 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3\. Verwenden Sie den Tag `elsif` mit den Operatoren "does not equal" (`!=`) und "and" (`&&`), um zu überprüfen, ob der Nutzer:in ein aktuelles Spiel hat (d.h. der Wert ist nicht leer) und ob es sich bei dem Spiel nicht um *Awkward Dinner Party* oder *Proxy War 3 handelt: Krieg des Durstes*. Dann erstellen Sie eine Nachricht, die Sie an diese Nutzer:innen senden.
+3\. Verwenden Sie das`elsif`Tag mit den Operatoren „ist nicht gleich“ (`!=`) und „und“ (`and`), um zu überprüfen, ob die Nutzer:in ein aktuelles Spiel hat (d. h. der Wert ist nicht leer) und dass es sich bei dem Spiel nicht um *„Awkward Dinner Party“* oder *„Proxy War 3“ handelt: Krieg des Durstes*. Dann erstellen Sie eine Nachricht, die Sie an diese Nutzer:innen senden.
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
@@ -145,7 +170,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 {% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 {% else %}
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
@@ -154,7 +179,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
+![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Wenn ein Nutzer:innen zuletzt *Awkward Dinner Party* gespielt hat, erhält er jetzt diese Nachricht:
 
@@ -216,8 +241,32 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/abort-if.png %})
+![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/abort-if.png %})
 
 Sie können Nachrichten auch auf Grundlage verbundener Inhalte [abbrechen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/).
 
+## Fehlersuche
 
+### Die Vorschau kann Eigenschaftstypen möglicherweise falsch erzwingen. 
+
+Bei der Vorschau einer Nachricht im Dashboard werden die meisten Variablen (wie benutzerdefinierte Attribute) in den korrekten Typ umgewandelt. Einige Variablen verfügen jedoch nicht über einen definierten Typ, den die Vorschau nachschlagen kann:
+
+- `api_trigger_properties`
+- `canvas_entry_properties`
+- `context`
+
+Bei diesen Eigenschaften versucht die Vorschau, den Typ aus dem Wert abzuleiten. Dies bedeutet, dass ein Wert, den Sie als **String**-Wert beabsichtigen, möglicherweise fälschlicherweise als **Zahl** interpretiert wird. Wenn beispielsweise ein String-Wert eine Zeichenfolge ist, kann die Vorschau ihn `"3"`in eine Ganzzahl `3`umwandeln, was zu unerwartetem Verhalten bei Zeichenfolgenoperationen wie`contains`oder `split`führen kann.
+
+Wenn Sie bei der Verwendung dieser Eigenschaftstypen unerwartete Ergebnisse der Vorschau sehen, beachten Sie bitte, dass die Typinferenz der Vorschau möglicherweise nicht mit dem übereinstimmt, was zum Zeitpunkt des Sendens geschieht. Zum Zeitpunkt des Versands werden die tatsächlichen Datentypen aus dem auslösenden Ereignis oder API-Aufruf beibehalten.
+
+Um einen bestimmten Typ in der Vorschau zu erzwingen, können Sie den Wert explizit umwandeln:
+
+{% raw %}
+```liquid
+{% comment %} Force a value to be treated as a number {% endcomment %}
+{% assign orders = {{canvas_entry_properties.${number_of_orders}}} | plus: 0 %}
+
+{% comment %} Force a value to be treated as a string {% endcomment %}
+{% assign code = {{api_trigger_properties.${promo_code}}} | append: "" %}
+```
+{% endraw %}

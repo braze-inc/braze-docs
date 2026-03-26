@@ -1,11 +1,11 @@
 ---
-nav_title: SDK Übersicht
+nav_title: SDK-Übersicht
 article_title: "SDK Übersicht für Entwickler:in"
 description: "Dieser Onboarding-Referenzartikel enthält eine technische Übersicht für Entwickler des Braze SDK. Er behandelt die Standarddaten, die vom SDK getrackt werden, die Sperrung der automatischen Datenerfassung und die aktive SDK-Version Ihrer App."
 page_order: 0
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}SDK-Übersicht für Entwickler
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} SDK-Übersicht für Entwickler:innen
 
 > Bevor Sie mit der Integration der Braze SDKs beginnen, werden Sie sich vielleicht fragen, was genau Sie da eigentlich entwickeln und integrieren. Vielleicht sind Sie neugierig, wie Sie das SDK weiter an Ihre Bedürfnisse anpassen können. Dieser Artikel hilft Ihnen, alle Ihre Fragen zum SDK zu beantworten. 
 
@@ -25,11 +25,11 @@ Die SDKs von Braze haben einen sehr geringen Platzbedarf. Wir ändern die Flush-
 
 ## SDK-Kompatibilität
 
-Das Braze SDK ist so konzipiert, dass es andere SDKs in Ihrer App nicht beeinträchtigt. Wenn Sie Probleme haben, die Ihrer Meinung nach auf eine Inkompatibilität mit einem anderen SDK zurückzuführen sind, wenden Sie sich an den Braze Support.
+Das Braze SDK ist so konzipiert, dass es andere SDKs in Ihrer App nicht beeinträchtigt. Sollten Sie Probleme feststellen, die Ihrer Meinung nach auf Inkompatibilität mit einem anderen SDK zurückzuführen sind, wenden Sie sich bitte an den Braze-Support.
 
 ## Standard Analytics und Sitzungsbehandlung
 
-Bestimmte Nutzerdaten werden von unserem SDK automatisch erfasst, z. B. die zuerst verwendete App, die zuletzt verwendete App, die Gesamtzahl der Sitzungen, das Betriebssystem des Geräts usw. Wenn Sie unseren Integrationsleitfäden folgen, um unsere SDKs zu implementieren, können Sie die Vorteile dieser [Standard Datenerfassung]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) nutzen. Wenn Sie diese Liste überprüfen, können Sie vermeiden, die gleichen Informationen über Nutzer mehrfach zu speichern. Mit Ausnahme des Sitzungsbeginns und des Sitzungsendes werden alle anderen automatisch getrackten Daten nicht auf Ihr Datenpunkt-Kontingent angerechnet.
+Bestimmte Nutzerdaten werden von unserem SDK automatisch erfasst, z. B. die zuerst verwendete App, die zuletzt verwendete App, die Gesamtzahl der Sitzungen, das Betriebssystem des Geräts usw. Wenn Sie unseren Integrationsleitfäden folgen, um unsere SDKs zu implementieren, können Sie die Vorteile dieser [Standard Datenerfassung]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) nutzen. Wenn Sie diese Liste überprüfen, können Sie vermeiden, die gleichen Informationen über Nutzer mehrfach zu speichern. Mit Ausnahme des Sitzungsbeginns und des Sitzungsendes werden alle anderen automatisch erfassten Daten nicht auf Ihre Datenpunkt-Nutzung angerechnet.
 
 {% alert note %}
 Alle unsere Features sind konfigurierbar, aber es empfiehlt sich, das Standardmodell für die Datenerfassung vollständig zu implementieren.
@@ -65,7 +65,7 @@ Die Sperrung der Datenerfassung ist nicht empfehlenswert, da die Entfernung von 
 Wir empfehlen Ihnen dringend, die SDKs vollständig zu integrieren, um dessen Möglichkeiten voll auszuschöpfen.
 
 {% tabs %}
-{% tab Internet SDK %}
+{% tab Web SDK %}
 
 Sie können entweder bestimmte Teile des SDK einfach nicht integrieren oder verwenden [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) für spezifische Nutzer. Diese Methode synchronisiert die Daten, die vor dem Aufruf von `disableSDK()` aufgezeichnet wurden, und führt dazu, dass alle nachfolgenden Aufrufe des Braze Web SDK für diese Seite und zukünftige Seitenladungen ignoriert werden. Wenn Sie die Datenerfassung zu einem späteren Zeitpunkt wieder aufnehmen möchten, können Sie mit der Methode [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) die Datenerfassung fortsetzen. Mehr dazu erfahren Sie in unserem Artikel [Deaktivieren von Internet-Tracking]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=web).
 
@@ -96,7 +96,7 @@ Weitere Einzelheiten zur Verwendung dieser Methode finden Sie unter [Speicherung
 
 Sie können die SDK-Version einer bestimmten App im Dashboard unter **Einstellungen > App-Einstellungen** sehen. Unter **Live SDK Version** finden Sie die höchste Braze SDK Version, die von Ihrer letzten Live-App für mindestens 5 % Ihrer Nutzer verwendet wurde.
 
-![Eine App namens Swifty in einem Workspace. Die Live SDK Version ist 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
+![Eine App namens Swifty in einem Workspace. Die Live SDK-Version ist 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
 Wenn Sie eine iOS App haben, können Sie sich vergewissern, dass Sie das [Swift SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) anstelle des alten [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) verwenden, wenn Ihre **Live SDK Version** gleich oder höher als 5.0.0 ist, was die erste veröffentlichte Version des Swift SDK war.

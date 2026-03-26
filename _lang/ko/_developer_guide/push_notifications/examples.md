@@ -8,7 +8,7 @@ channel:
 
 # 고급 푸시 알림 예시
 
-> 다음 가이드에서는 Braze SDK의 몇 가지 고급 푸시 알림 예제를 다룹니다.
+> 다음 가이드에서는 Braze SDK의 고급 푸시 알림 예제를 다룹니다.
 
 {% sdktabs %}
 {% sdktab android %}

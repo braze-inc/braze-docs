@@ -23,7 +23,7 @@ This article is not intended to provide, nor may it be relied upon as providing 
 
 In general, we encourage using your best judgment when sending SMS, MMS, or RCS messages. Braze, as well as our sending partners, have checks in place that prevent most SMS, MMS, and RCS abuses.
 
-There are the six rules you should follow:
+Use the following rules when sending messages:
 
 1. **Obtain explicit consent from users before sending them SMS, MMS, or RCS.** Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
   - The time and date the user gave consent
@@ -48,7 +48,7 @@ RCS is an emerging and evolving space. States, countries, and other regulatory b
 {% endalert %}
 
 - **Understand regulatory overlap:** Because RCS and SMS share many similarities, the same laws, regulations, and carrier policies apply. This includes TCPA rules for collecting opt-in and CTIA guidelines (such as SHAFT).
-- **Consent transfer:** Industry guidance is that consent transfers across SMS and RCS **for the same type of messaging (such as promotional or transactional)**, if the user has already provided opt-in to receive that type of messaging. Conversely, if the user did not opt-in to receive promotional SMS, you should not start sending promotional RCS without collecting opt-in for that type of messaging.
+- **Consents:** Work with your legal team to assess whether you need to collect additional consents to send RCS to your existing SMS users.
 - **Update policies and disclaimers:** It is recommended to update your Mobile Terms of Service & Privacy Policy to include RCS references. It is also recommended that your opt-in campaigns include language about RCS, in addition to SMS.
 
 ## Resources
@@ -81,7 +81,7 @@ Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by
 
 ### Spam and cadence
 
-Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) to ensure compliance (in the U.S.).
+Similar to email, your users or customers can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) to ensure compliance (in the U.S.).
 
 Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze rate limits. However, you should still consider compliance laws when planning your campaigns.
 

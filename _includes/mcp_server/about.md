@@ -43,7 +43,7 @@ You can interact with Braze through natural language using tools like Claude or 
 
 ### Which MCP clients are supported?
 
-Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You'll need an account for one of these clients to use the Braze MCP server.
+Only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You must have an account for one of these clients to use the Braze MCP server.
 
 ### What Braze data can my MCP client access?
 
@@ -55,11 +55,11 @@ No. The MCP server only exposes tools that handle non-PII, read-only data.
 
 ### Can I use a third-party MCP server for Braze?
 
-Using a third-party MCP server for Braze data is not recommend. Only use the official Braze MCP server hosted on [PyPi](https://pypi.org/project/braze-mcp-server/).
+Using a third-party MCP server for Braze data is not recommended. Only use the official Braze MCP server hosted on [PyPi](https://pypi.org/project/braze-mcp-server/).
 
 ### Why doesn’t the Braze MCP server offer PII or write access?
 
-To protect data while still enabling innovation, we have built the server to be limited to endpoints that are read-only and do not typically return PII. This reduces risk while supporting valuable use cases.
+To protect data while still enabling innovation, the server is limited to endpoints that are read-only and do not typically return PII. This reduces risk while supporting valuable use cases.
 
 ### Can I reuse my API keys?
 
@@ -67,7 +67,7 @@ No. You'll need to create a new API key for your MCP client. Remember to only gi
 
 ### Is the Braze MCP server hosted locally or remotely?
 
-Currently, the Braze MCP server is hosted locally.
+The Braze MCP server is hosted locally.
 
 ### Why is Cursor only listing functions?
 

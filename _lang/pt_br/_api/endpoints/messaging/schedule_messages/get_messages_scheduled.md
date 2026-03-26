@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar as próximas campanhas e telas programadas"
+nav_title: "OBTER: Liste as próximas campanhas e telas programadas"
 article_title: "OBTER: Listar as próximas campanhas e telas programadas"
 search_tag: Endpoint
 page_order: 0
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "scheduled_broadcasts": [
     {
@@ -54,8 +52,8 @@ Authorization: Bearer YOUR-REST-API-KEY
       "type": (string) the broadcast type either Canvas or Campaign,
       "tags": (array) an array of tag names formatted as strings,
       "next_send_time": (string) The next send time formatted in ISO 8601, may also include time zone if not local/intelligent delivery,
-      "schedule_type": (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone,
-    },
+      "schedule_type": (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone
+    }
   ]
 }
 ```

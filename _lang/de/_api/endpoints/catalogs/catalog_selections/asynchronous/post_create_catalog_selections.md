@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Katalogauswahl erstellen"
 article_title: "POST: Katalogauswahl erstellen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 2
 
 layout: api_page
@@ -36,8 +36,26 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 | Parameter   | Erforderlich | Datentyp | Beschreibung                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `selection` | Erforderlich | Objekt    | Ein Objekt, das Auswahlkriterien enthält. Die Auswahlobjekte könnten `name`, `description`, `filters`, `results_limit`, `sort_field` und `sort_order` enthalten. |
+| `selection` | Erforderlich | Objekt    | Ein Objekt, das Auswahlkriterien enthält. Eine vollständige Aufschlüsselung des Objekts und seiner Felder finden Sie im [Objekt, das die Kataloge auswählt]({{site.baseurl}}/api/objects_filters/catalog_selection_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+### Auswahlobjektparameter
+
+| Parameter        | Erforderlich | Datentyp | Beschreibung                                                                                                                                                        |
+| ---------------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`           | Erforderlich | String    | Der Name der Katalogauswahl, die ausgewählt wurde. |
+| `description`    | Optional | String    | Eine Beschreibung der Auswahl der Kataloge. |
+| `external_id`    | Erforderlich | String    | Ein eindeutiger Bezeichner für die Auswahl. |
+| `source`         | Erforderlich | String    | Die Quelle der Katalogdaten. Für Shopify-Kataloge verwenden Sie bitte `"Shopify"`. Für angepasste Kataloge verwenden Sie bitte `"custom"`. |
+| `filters`        | Optional | Array    | Ein Array von Filtern, die auf die Artikel angewendet werden sollen. Sie können bis zu vier Filter pro Anfrage festlegen. Wenn keine Filter angegeben werden, werden alle Artikel aus dem Katalog berücksichtigt. |
+| `results_limit`  | Optional | Integer   | Die maximale Anzahl der zurückzugebenden Ergebnisse. Es muss sich um eine Zahl zwischen 1 und 50 handeln. |
+| `sort_field`     | Optional | String    | Das Feld, nach dem die Ergebnisse sortiert werden sollen. Dies muss mit `sort_order`kombiniert werden. Wenn sowohl`sort_field`  als auch  `sort_order`nicht vorhanden sind, werden die Ergebnisse randomisiert. |
+| `sort_order`     | Optional | String    | Die Reihenfolge, in der die Ergebnisse sortiert werden sollen. Zulässige Werte sind`"asc"`(aufsteigend) oder`"desc"`(absteigend). Dies muss mit `sort_field`kombiniert werden. Wenn sowohl`sort_field`  als auch  `sort_order`nicht vorhanden sind, werden die Ergebnisse randomisiert. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+Die `sort_field`Parameter`sort_order` und müssen zusammen verwendet werden. Wenn Sie nur einen der beiden Parameter angeben oder beide Parameter weglassen, werden die Ergebnisse, die Sie ausgewählt haben, in zufälliger Reihenfolge angezeigt.
+{% endalert %}
 
 ## Beispiel Anfrage
 
@@ -49,6 +67,8 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
   "selection": {
     "name": "favorite-restaurants",
     "description": "Favorite restaurants in NYC",
+    "external_id": "favorite-nyc-restaurants",
+    "source": "custom",
     "filters": [
       {
         "field": "City",
@@ -60,7 +80,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
         "operator": "greater than",
         "value": 7
       }
-    ]
+    ],
+    "results_limit": 10,
+    "sort_field": "Rating",
+    "sort_order": "desc"
   }
 }'
 ```
@@ -75,6 +98,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `time`     | `before`, `after`                                       |
 | `array`    | `includes value`, `does not include value`              |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert note %}
+Die API unterstützt maximal vier Filter pro Auswahlanfrage. Im Braze-Dashboard können Sie bis zu 10 Filter pro Auswahl hinzufügen. Filter werden in der Reihenfolge angewendet, in der sie im Array erscheinen.
+{% endalert %}
 
 ## Antwort
 

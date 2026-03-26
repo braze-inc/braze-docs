@@ -4,23 +4,23 @@ article_title: Socios de comercio electrónico
 page_order: 10
 
 page_type: landing
-description: "Esta página de destino enumera los socios de Braze (Alloys) que te permiten integrarte con su plataforma de comercio electrónico."
+description: "Esta página de inicio enumera los socios de Braze (Alloys) que te permiten integrarte con su plataforma de comercio electrónico."
 
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "eCommerce"
+partner_top_header: "Comercio electrónico"
 
 valid_partner_list:
 - name: Lexer
   url: /docs/partners/lexer/
 - name: Peak
   url: /docs/partners/peak/
-- name: Personalizar
+- name: Personalize
   url: /docs/partners/personalize/
 - name: Tangerine
   url: /docs/partners/tangerine/
-- name: Niño prodigio
+- name: Wunderkind
   url: /docs/partners/wunderkind/
 - name: Talon.One
   url: /docs/partners/talonone/
@@ -50,6 +50,16 @@ valid_partner_list:
   url: /docs/partners/stylitics/
 - name: Shopify
   url: /docs/partners/shopify/
-- name: Raya
+- name: Stripe
   url: /docs/partners/stripe/
+- name: Okendo
+  url: /docs/partners/okendo/
+- name: Swym
+  url: /docs/partners/swym/
+- name: Algolia
+  url: /docs/partners/algolia/
+- name: Tapcart
+  url: /docs/partners/tapcart/
+- name: Poq
+  url: /docs/partners/poq/
 ---

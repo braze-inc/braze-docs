@@ -1,5 +1,5 @@
 ---
-nav_title: Cabeceras de la Política de Seguridad de Contenidos
+nav_title: Cabeceras de la política de seguridad de contenidos
 article_title: Cabeceras de Política de Seguridad de Contenidos para la Web
 platform: Web
 page_order: 21
@@ -36,7 +36,7 @@ braze.initialize(apiKey, {
 ### `connect-src` {#connect-src}
 
 {% alert warning %}
-Tu URL debe coincidir con el [punto final SDK de la API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) de la opción de inicialización `baseUrl` que hayas elegido.
+Tu URL debe coincidir con el [punto final SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) de [la API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) de la opción de inicialización`baseUrl` elegida.
 {% endalert %}
 
 |URL|Información|

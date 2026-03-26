@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Supprimer l'ID externe"
+nav_title: "POST : Supprimer des ID externes"
 article_title: "POST : Supprimer l'ID externe"
 search_tag: Endpoint
 page_order: 2
@@ -14,9 +14,9 @@ description: "Cet article présente en détail l’endpoint Supprimer des ID ext
 /users/external_ids/remove
 {% endapimethod %}
 
-> Utilisez cet endpoint pour supprimer les anciens ID externes obsolètes de vos utilisateurs. 
+> Utilisez cet endpoint pour supprimer les anciens ID externes obsolètes de vos utilisateurs.
 
-Vous pouvez envoyer jusqu’à 50 ID externes par demande. 
+Vous pouvez envoyer jusqu’à 50 ID externes par demande.
 
 {% alert warning %}
 Cet endpoint supprime complètement l’ID obsolète et ne peut pas être annulé. Utilisez cet endpoint pour enlever des `external_ids` obsolètes qui sont toujours associés à des utilisateurs dans votre système peut vous empêcher définitivement de trouver les données de ces utilisateurs.

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: [Endpoint Name]"
+nav_title: "GETする：[エンドポイント名]。"
 article_title: "レイアウト例：GET: [Endpoint Name]"
 search_tag: Endpoint
 page_order: 1
@@ -12,7 +12,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# クエリまたは List [項目エンドポイント "Gets"]
+# クエリまたはリスト [項目エンドポイント "Gets"]] 。
 
 {% apimethod get %}
 /sms/invalid_phone_numbers
@@ -34,7 +34,7 @@ This is the description of the endpoint. API descriptions usually start with "Us
 
 <!--This is where you can give more information about your endpoint parameters. -->
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | ----------|-----------| ----------|----- |
 | `start_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列| 無効な電話番号を取得する範囲の開始日であり、`end_date` より前である必要があります。これは API によって UTC 時間の真夜中として扱われます。 |
 | `end_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列 | 無効な電話番号を取得する範囲の終了日。これは API によって UTC 時間の真夜中として扱われます。 |
@@ -59,8 +59,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 
 <!-- An example response that defines the different variables returned-->
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

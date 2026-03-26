@@ -18,6 +18,16 @@ tool: Currents
 Dieser Content **gilt nur für die Flat File-Event-Daten, die wir an Data Warehouse-Speicherpartner (Google Cloud Storage, Amazon S3 und Microsoft Azure Blob Storage) senden**. <br><br>Inhalte, die für andere Partner gelten, finden Sie in unserer Liste der [verfügbaren Partner]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) und auf den jeweiligen Seiten.
 {% endalert %}
 
+## Testveranstaltungen
+
+Wenn Sie eine Currents-Integration einrichten, klicken **Sie bitte auf „Testereignisse senden“,** um die Verbindung mit Ihrem Speicher-Bucket zu überprüfen. Diese Testvorgänge bestätigen, dass Ihre Integration Daten korrekt empfangen und verarbeiten kann.
+
+{% alert important %}
+**Testereignis-Datenformat:** Testereignisse enthalten Platzhalterwerte, die den korrekten Datentypen für jedes Feld entsprechen, jedoch keine realistischen oder genauen Daten enthalten. Beispielsweise kann ein`timezone`Feld eine UUID-ähnliche Zeichenfolge anstelle eines gültigen Bezeichners für die Zeitzone (wie „America/Chicago“) enthalten, und andere Felder wie`campaign_name`und`ip_pool`können ebenfalls Platzhalterwerte anstelle von tatsächlichen Daten enthalten.<br>
+
+Dies ist das erwartete Verhalten. Testveranstaltungen dienen in erster Linie dazu, die Verbindung und die Integration zu überprüfen, nicht jedoch dazu, die Richtigkeit der Daten zu validieren. Um reale Ereignisse mit genauen Daten anzuzeigen, verwenden Sie bitte eine Test-Currents-Integration, um tatsächliche Ereignisdaten über Ihre Pipeline zu senden.
+{% endalert %}
+
 ## Mindestens einmal durchgeführte Zustellung
 
 Als System mit hohem Durchsatz bietet Currents eine Zustellung von Events, die mindestens einmal erfolgt, was bedeutet, dass gelegentlich doppelte Events in Ihren Speicherbereich geschrieben werden können. Dies kann passieren, wenn Events aus unserer Warteschlange aus irgendeinem Grund erneut verarbeitet werden.
@@ -65,7 +75,7 @@ Sie können den Code wegen der Bildlaufleiste nicht sehen? Erfahren Sie [hier]({
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Die Namenskonventionen für Dateien können sich in Zukunft ändern. Braze empfiehlt, alle Schlüssel in Ihrem Bucket zu durchsuchen, die das Präfix <your-bucket-prefix> haben.
+Die Konventionen für die Dateibenennung können sich ändern. Braze empfiehlt, alle Schlüssel in Ihrem Bucket zu durchsuchen, die das<your-bucket-prefix> Präfix .
 {% endalert %}
 
 ### Avro Schreibschwelle

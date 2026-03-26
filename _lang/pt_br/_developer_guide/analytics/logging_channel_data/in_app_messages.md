@@ -1,14 +1,14 @@
 ---
-nav_title: Mensagens no app
-article_title: Registrando dados de mensagens no app através do SDK Braze
+nav_title: Mensagem no app
+article_title: Registre os dados da mensagem no app através do SDK Braze
 page_order: 7.1
-description: "Aprenda como registrar dados de mensagens no app (IAM) através do SDK Braze."
+description: "Aprenda como registrar os dados da mensagem no app (IAM) através do SDK Braze."
 noindex: true
 ---
 
-# Registrando dados de mensagens no app
+# Registre os dados da mensagem no app
 
-> Aprenda como registrar dados de mensagens no app (IAM) através do SDK Braze.
+> Aprenda como registrar os dados da mensagem no app (IAM) através do SDK Braze.
 
 {% sdktabs %}
 {% sdktab web %}

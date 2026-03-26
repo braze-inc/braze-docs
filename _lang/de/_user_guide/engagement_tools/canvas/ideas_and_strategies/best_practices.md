@@ -23,7 +23,11 @@ Tauchen Sie ein in das Was, Wer und Warum!
 Erschließen Sie mit [Canvas-Komponenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) neue Kombinationen von User Journeys.
 - Teilen Sie Ihre Benutzer mit [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) auf und erstellen Sie unterschiedliche Arbeitsabläufe.
 - Verteilen Sie Ihre Nutzer:innen mit einem [Verzögerungsschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/).
-- Fügen Sie [eigenständige Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) an beliebiger Stelle in Ihrem Canvas-Fluss ein. 
+- Fügen Sie [eigenständige Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) an beliebiger Stelle in Ihrem Canvas-Fluss ein.
+
+{% alert note %}
+Canvas-Schritte können Nutzer:innen nur vorwärts im Ablauf bewegen. Es ist nicht möglich, einen Canvas so zu konfigurieren, dass ein Schritt mit einem vorherigen Schritt verknüpft wird, da dies die Nutzer:innen zurückführen würde. Diese Validierung stellt sicher, dass die Nutzer:innen in einer einzigen Richtung durch Ihre Canvas-Umgebung navigieren.
+{% endalert %}
 
 ## Erstellen Sie aussagekräftigere Nachrichten
 

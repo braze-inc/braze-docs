@@ -1,6 +1,6 @@
 ---
 nav_title: アンインストール追跡
-article_title: Braze SDKによるアンインストール追跡
+article_title: Braze SDKを通じてアンインストールを追跡する
 page_order: 3.5
 description: "Braze SDKによるアンインストール追跡方法を学習する。"
 
@@ -8,7 +8,7 @@ description: "Braze SDKによるアンインストール追跡方法を学習す
 
 # アンインストール追跡
 
-> Braze SDKを通してアンインストール追跡を設定する方法を学習する。一般的な情報については、[ユーザーガイドを参照のこと：アンインストール追跡]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
+> Braze SDKを通してアンインストール追跡を設定する方法を学習する。一般情報については、[ユーザーガイド] を参照してください。アンインストール追跡]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 
 {% sdktabs %}
 {% sdktab android %}

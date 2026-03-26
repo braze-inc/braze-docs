@@ -16,7 +16,7 @@ toc_headers: h2
 
 First, forward your domains and subdomains to Google’s Promotions Tab outreach team at <a href="mailto:p-promo-outreach@google.com">p-promo-outreach@google.com</a> to be added to Gmail’s allowlist. This allows you to use any feature that shows rich imagery, such as the product carousel for the Gmail Promotions tab.
 
-## Building the card with Braze
+## Build the card with Braze
 
 Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
 
@@ -98,22 +98,14 @@ We recommend uploading your product images to the media library, then copying an
 After building your Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML. 
 
 {% alert tip %}
-For the drag-and-drop editor, you can copy and paste the generated HTML code into an [HTML attribute]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#html).
+For the drag-and-drop editor, copy and paste the generated HTML code into the [custom head tags]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#custom-head-tags) section under **Sending Settings**.
 {% endalert %}
 
 {% alert warning %}
 The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
 {% endalert %}
 
-## Best practices
-
-In general, adhere to these [best practices recommended by Gmail](https://developers.google.com/gmail/promotab/best-practices). 
-
-{% alert tip %}
-While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
-{% endalert %}
-
-## Measuring Gmail Cards
+## Measure Gmail Cards
 
 Gmail does not return analytics on these cards, and email service providers (ESPs) like Braze cannot insert their own link tracking on links in the header section (including promotion cards and product carousels). However, you can append UTM parameters or unique codes to the URLs during setup. These parameters allow you to track engagement using your own website analytics or conversion tracking, because the tracking is part of the URL itself—not inserted by the ESP. ESP-level click tracking is not available for these links.
 
@@ -124,6 +116,38 @@ Gmail has seen better results with strong imagery related to the email message. 
 ### Describe offers
 
 Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. This space should only be used to engage your customers with your messaging, so avoid any language similar to "Open this email now" or "Click here for deals". It's best to avoid repeating your subject line.
+
+## Best practices
+
+In general, adhere to these [best practices recommended by Gmail](https://developers.google.com/gmail/promotab/best-practices). 
+
+{% alert tip %}
+While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
+{% endalert %}
+
+### Preview your annotation
+
+Use the [preview tool](https://developers.google.com/workspace/gmail/promotab/preview) to preview your annotation. Note that sending yourself a test email won’t work for annotations, as your annotation only renders if the email has to be sent to a significant number of recipients. Make sure you send the final email (with its image URLs) to at least 100 Gmail recipients.
+
+Do not use Google Workspace to send emails with annotations. Only use allowlisted email domains to send annotations to a large group of recipients.
+
+### Adhere to image guidelines
+
+Check that your images adhere to these guidelines:
+- Use high-quality and high-resolution images.
+- All annotated images use the same aspect ratio. Supported aspect ratios include: 4:5, 1:1, 1.91:1.
+- Use correct image sizes. The minimum is 256x256; the maximum is 4096x4096 pixels.
+
+Gmail recommends avoiding:
+- Overusing text in your images
+- Using images that are only icons
+- Using images with round masks
+- Using personalized image URLs
+
+### Register with DMARC
+
+For your annotations to render correctly, confirm that the submitted domains are registered with DMARC and all policies are enabled.
+
 
 ## Frequently asked questions
 

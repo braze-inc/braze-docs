@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT:ユーザー設定センターの更新"
+nav_title: "PUT:ユーザー設定センターを更新"
 article_title: "PUT:ユーザー設定センターの更新"
 search_tag: Endpoint
 page_order: 5
@@ -20,21 +20,21 @@ description: "この記事では、「ユーザー設定センターの更新」
 
 ## 前提条件
 
-このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`preference_center.update`の権限が必要です。
+このエンドポイントを使用するには、`preference_center.update` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
 
 ## レート制限
 
-このエンドポイントには、1分あたり、ワークスペースあたり、10件のリクエストというレート制限があります。
+{% multi_lang_include rate_limits.md endpoint='post or put preference center' %}
 
 ## パスパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | 必須 | データタイプ | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| 必須 | 文字列 | ユーザー設定センターの ID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
-## 要求本文:
+## リクエスト本文
 
 ```
 Content-Type: application/json
@@ -61,21 +61,21 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須 | データタイプ | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`preference_center_page_html`| 必須 | 文字列 | ユーザー設定センター画面のHTMLです。 |
-|`preference_center_title`| オプション | 文字列 | ユーザー設定センターおよび確定ページのタイトル。タイトルが指定されていない場合、ページのタイトルはデフォルトで「ユーザー設定センター」になります。 |
-|`confirmation_page_html`| 必須 | 文字列 | 確定画面のHTML。 |
-|`state` | オプション | 文字列 | `active` または`draft` を選択する。|
-|`options` | オプション | オブジェクト | 属性:<br>`meta-viewport-content`:存在する場合、`viewport` メタタグが`content= <value of attribute>` でページに追加されます。<br><br> `link-tags`:ページのファビコンを設定します。設定すると、rel 属性を持つ`<link>` タグがページに追加されます。  |
+|`preference_center_page_html`| 必須 | 文字列 | ユーザー設定センターページの HTML。 |
+|`preference_center_title`| オプション | 文字列 | ユーザー設定センターおよび確認ページのタイトル。タイトルが指定されていない場合、ページのタイトルはデフォルトで「Preference Center」になります。 |
+|`confirmation_page_html`| 必須 | 文字列 | 確認ページの HTML。 |
+|`state` | オプション | 文字列 | `active` または `draft` を選択します。|
+|`options` | オプション | オブジェクト | 属性:<br>`meta-viewport-content`:存在する場合、`viewport` メタタグが `content= <value of attribute>` でページに追加されます。<br><br> `link-tags`:ページのファビコンを設定します。設定すると、rel 属性を持つ `<link>` タグがページに追加されます。  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 例のリクエスト
+## リクエスト例
 
 {% raw %}
 ```
@@ -93,7 +93,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 ```
 {% endraw %}
 
-## 応答の例
+## 応答例
 {% raw %}
 ```
 {

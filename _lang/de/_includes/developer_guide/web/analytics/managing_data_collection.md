@@ -3,11 +3,11 @@
 {% multi_lang_include archive/web-v4-rename.md %}
 
 {% tabs %}
-{% tab Standardimplementierung %}
+{% tab standard implementation %}
 Um das Tracking von Daten im Internet SDK zu deaktivieren, verwenden Sie die Methode [`disableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk). Dadurch werden alle Daten synchronisiert, die vor dem Aufruf von `disableSDK()` aufgezeichnet wurden, und alle nachfolgenden Aufrufe des Braze Web SDK für diese Seite und zukünftige Seitenladungen werden ignoriert.
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Verwenden Sie den Tag-Typ **Tracking deaktivieren** oder **Tracking fortsetzen**, um das Web Tracking zu deaktivieren bzw. wieder zu aktivieren. Diese beiden Optionen rufen [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) und [`enableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk).
 {% endtab %}
 {% endtabs %}

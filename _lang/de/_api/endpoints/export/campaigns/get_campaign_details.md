@@ -1,22 +1,22 @@
 ---
 nav_title: "GET: Details zur Kampagne exportieren"
 article_title: "GET: Details zur Kampagne exportieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Endpunkts Export von Kampagnendetails Braze."
+description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts „Kampagnendetails exportieren"."
 
 ---
 {% api %}
 # Details zur Kampagne exportieren
 {% apimethod get %}
-/kampagnen/details
+/campaigns/details
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um relevante Informationen zu einer bestimmten Kampagne abzurufen, die durch den Bezeichner `campaign_id` identifiziert werden kann.
+> Verwenden Sie diesen Endpunkt, um relevante Informationen zu einer bestimmten Kampagne abzurufen, die durch die `campaign_id` identifiziert werden kann.
 
-Wenn Sie Canvas-Daten abrufen möchten, referenzieren Sie auf den Endpunkt [Canvas-Details exportieren]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+Wenn Sie Canvas-Daten abrufen möchten, lesen Sie den Endpunkt [Canvas-Details exportieren]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
@@ -24,19 +24,20 @@ Wenn Sie Canvas-Daten abrufen möchten, referenzieren Sie auf den Endpunkt [Canv
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `campaigns.details`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter der Anfrage
+## Anfrageparameter
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Erforderlich | String | Siehe [API-Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/).<br><br> Die `campaign_id` für API-Kampagnen finden Sie auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) und auf der Seite **Kampagnendetails** in Ihrem Dashboard; oder Sie können den [Endpunkt Liste der Kampagnen exportieren](#campaign-list-endpoint) verwenden. |
-| `post_launch_draft_version` | Optional | Boolesch | Bei Nachrichten, die einen Entwurf nach dem Start haben, zeigt die Einstellung `true` alle verfügbaren Entwürfe an. Standardmäßig ist `false` |
+| `campaign_id` | Erforderlich | String | Siehe [API-Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/).<br><br> Die `campaign_id` für API-Kampagnen finden Sie auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) und auf der Seite **Kampagnendetails** in Ihrem Dashboard; alternativ können Sie den [Endpunkt „Liste der Kampagnen exportieren"](#campaign-list-endpoint) verwenden. |
+| `post_launch_draft_version` | Optional | Boolescher Wert | Bei Nachrichten, die einen Entwurf nach dem Start haben, werden durch die Einstellung `true` alle verfügbaren Entwurfsänderungen angezeigt. Standardmäßig `false`. |
+| `include_has_translatable_content` | Optional | Boolescher Wert | Wenn auf `true` gesetzt, enthält die API-Antwort ein Feld `has_translatable_content` für jede Nachricht. Standardmäßig `false`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Beispiel Anfrage
+## Beispielanfrage
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
@@ -47,8 +48,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## Antworten
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
@@ -68,7 +67,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
             "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
-            "name": (string) the name of the message in the dashboard (eg., "Variation 1")
+            "name": (string) the name of the message in the dashboard (for example, "Variation 1"),
+            "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
             ... channel-specific fields for this message, see the following messages section ...
         }
     },
@@ -78,22 +78,21 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Nachrichten nach Kanal
 
-Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden finden Sie Beispielantworten auf Nachrichten für die einzelnen Kanäle:
+Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden finden Sie Beispielantworten für die einzelnen Kanäle:
 
-#### Push
+{% tabs %}
+{% tab Content Cards %}
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
-    "name": (string) the name of the variant,
-    "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided,
-    "title": (string) the alert title text,
-    "action": (string) action link from click
+    "channel": "content_cards",
+    "name": (string) the name of variant,
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### E-Mail
+{% endtab %}
+{% tab Email %}
 
 ```json
 {
@@ -114,7 +113,12 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-#### In-App-Nachrichten
+{% endtab %}
+{% tab In-app messages %}
+
+Das Antwortformat hängt vom Typ der In-App-Nachricht ab. Umfrage-In-App-Nachrichten geben die Felder `type` und `data` zurück. Andere In-App-Nachrichtentypen (Slideup, Modal und Vollbild) geben die Felder `name`, `message` und `extras` zurück.
+
+#### Umfragen
 
 ```json
 {
@@ -124,7 +128,7 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
             {
                 "header":
                     {
-                         "text":(string) the display text for the header of the survey,
+                         "text":(string) the display text for the header of the survey
                     }
                 "choices": [
                     {
@@ -132,7 +136,7 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
                        "text": (string) the display text,
                        "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign,
+                       "deleted": (boolean) deleted from live campaign
                     },
                     ...
                 ]
@@ -142,17 +146,47 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-#### Content-Cards
+#### Slideup-, Modal- und Vollbild-In-App-Nachrichten
 
 ```json
 {
-    "channel": "content_cards",
-    "name": (string) the name of variant,
-    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
+    "channel": "in_app_message",
+    "name": (string) the name of the variant,
+    "message": (string, optional) the body text,
+    "extras": (hash, optional) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### Webhook
+{% endtab %}
+{% tab Push %}
+
+```json
+{
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
+    "alert": (string) the alert body text,
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
+}
+```
+
+{% endtab %}
+{% tab SMS %}
+
+```json
+{
+  "channel": "sms",
+  "body": (string) the payload body,
+  "from": (string) the list of numbers associated with the subscription group,
+  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
+}
+```
+
+{% endtab %}
+{% tab Webhook %}
 
 ```json
 {
@@ -165,20 +199,10 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-#### SMS
+{% endtab %}
+{% tab WhatsApp %}
 
-```json
-{
-  "channel": "sms",
-  "body": (string) the payload body,
-  "from": (string) the list of numbers associated with the subscription group,
-  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
-}
-```
-
-#### WhatsApp
-
-##### Template Nachrichten
+#### Template-Nachrichten
 
 ```json
 {
@@ -193,7 +217,7 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-##### Responsive Nachrichten
+#### Antwortnachrichten
 
 ```json
 {
@@ -208,7 +232,8 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-#### Nachrichten kontrollieren
+{% endtab %}
+{% tab Control messages %}
 
 ```json
 {
@@ -217,11 +242,17 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 }
 ```
 
-### Verhalten bei Konversion
+{% endtab %}
+{% endtabs %}
 
-Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-Event-Verhalten, das für die Kampagne festgelegt wurde. Diese Verhaltensweisen sind in der von der Kampagne vorgegebenen Reihenfolge. Zum Beispiel wird Konversions-Event A der erste Artikel im Array sein, Konversions-Event B der zweite usw. Im Folgenden finden Sie Beispiele für das Verhalten bei Konversions-Events:
 
-#### Klicks auf E-Mail
+### Konversionsverhalten
+
+Das Array `conversion_behaviors` enthält Informationen zu jedem für die Kampagne festgelegten Konversions-Event-Verhalten. Diese Verhaltensweisen sind in der von der Kampagne vorgegebenen Reihenfolge angeordnet. Beispielsweise ist Konversions-Event A das erste Element im Array, Konversions-Event B das zweite und so weiter. Im Folgenden finden Sie Beispiele für Konversions-Event-Verhalten:
+
+
+{% tabs %}
+{% tab Clicks email %}
 
 ```json
 {
@@ -230,7 +261,8 @@ Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-
 }
 ```
 
-#### Öffnet eine E-Mail
+{% endtab %}
+{% tab Opens email %}
 
 ```json
 {
@@ -239,7 +271,8 @@ Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-
 }
 ```
 
-#### Tätigt einen Kauf (egal welchen)
+{% endtab %}
+{% tab Makes purchase (any purchase) %}
 
 ```json
 {
@@ -248,7 +281,8 @@ Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-
 }
 ```
 
-#### Tätigt einen Kauf (bestimmtes Produkt)
+{% endtab %}
+{% tab Makes purchase (specific product) %}
 
 ```json
 {
@@ -258,7 +292,8 @@ Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-
 }
 ```
 
-#### Führt angepasste Events durch
+{% endtab %}
+{% tab Performs custom event %}
 
 ```json
 {
@@ -268,7 +303,9 @@ Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-
 }
 ```
 
-#### Upgraden Sie die App
+
+{% endtab %}
+{% tab Upgrades app %}
 
 ```json
 {
@@ -277,8 +314,8 @@ Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
-
-#### Nutzt die App
+{% endtab %}
+{% tab Uses app %}
 
 ```json
 {
@@ -287,6 +324,9 @@ Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert tip %}
 Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

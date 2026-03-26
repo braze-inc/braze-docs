@@ -1,6 +1,6 @@
 ---
 nav_title: Zeitplan für Ihre Kampagne
-article_title: Ihre Kampagne planen
+article_title: Zeitplan für Ihre Kampagne
 layout: dev_guide
 page_order: 3
 guide_top_header: "Ihre Kampagne planen"

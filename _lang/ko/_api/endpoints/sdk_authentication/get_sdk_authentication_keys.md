@@ -26,14 +26,14 @@ description: "이 문서에서는 SDK 인증 키 목록 Braze 엔드포인트에
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | Description |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | 필수 | 문자열 | 앱 API 식별자입니다. |
+| `app_id` | Required | 문자열 | 앱 API 식별자입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 예시 요청
 
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication/keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -61,7 +61,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 ## 응답 매개변수
 
-| 매개변수 | 데이터 유형 | 설명 |
+| 매개변수 | 데이터 유형 | Description |
 | --------- | --------- | ----------- |
 | `keys` | 배열 | SDK 인증 키 개체의 배열입니다. |
 | `keys[].id` | 문자열 | SDK 인증 키의 ID입니다. |

@@ -1,3 +1,3 @@
 {% alert important %}
-Braze MCP Serverは現在ベータ版である。より良いものにするために協力したい？フィードバックは[mcp-product@braze.com](mailto:mcp-product@braze.com) まで。
+Braze MCPサーバーはベータ版である。改善に協力したいなら、[mcp-product@](mailto:mcp-product@braze.com) までフィードバック[braze.com](mailto:mcp-product@braze.com)を送ってくれ。
 {% endalert %}

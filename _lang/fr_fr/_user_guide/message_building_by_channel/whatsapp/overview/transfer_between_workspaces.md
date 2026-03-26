@@ -1,7 +1,7 @@
 ---
 nav_title: Transfert entre espaces de travail
 article_title: "Transfert de numéros de téléphone et de groupes d'abonnement entre espaces de travail"
-page_order: 4
+page_order: 5
 description: "Cet article de référence explique comment transférer votre numéro de téléphone WhatsApp et vos groupes d'abonnement entre les espaces de travail."
 page_type: reference
 channel:
@@ -10,7 +10,7 @@ channel:
 
 # Transférez les numéros de téléphone WhatsApp et les groupes d'abonnement entre les espaces de travail.
 
-> Cette page explique comment déplacer un numéro de téléphone WhatsApp Business Account (WABA) et son groupe d'abonnement associé d'un espace de travail à un autre au sein de Braze. Ce processus simplifie votre expérience de l'utilisation de WhatsApp avec Braze, et réduit le besoin d'une aide technique.
+> Cette page explique comment vous pouvez déplacer un numéro de téléphone WhatsApp Business Account (WABA) et son groupe d'abonnement associé d'un espace de travail à un autre au sein de Braze. Ce processus simplifie votre expérience de l'utilisation de WhatsApp avec Braze, et réduit le besoin d'une aide technique.
 
 ## Conditions préalables
 
@@ -19,24 +19,24 @@ channel:
 
 ## Transfert d'un numéro de téléphone et d'un groupe d'abonnement
 
-### Étape 1 : Archiver le groupe d'abonnement
+### Étape 1 : Archiver le groupe d'abonnement
 
 Pour archiver un groupe d'abonnement WhatsApp, procédez comme suit :
 
 1. Accédez à l'espace de travail dans lequel le groupe d'abonnement existe actuellement.
 2. Allez dans **Audience** > **Gestion des subscription groups** et trouvez le groupe d'abonnement associé au numéro de téléphone WhatsApp que vous souhaitez déplacer.
-3. Passez la souris sur le statut du groupe d'abonnement et sélectionnez <i class="fa-solid fa-box-archive"></i> **Archive**, ce qui marquera le groupe d'abonnement comme inactif mais ne le supprimera pas.
+3. Survolez le statut du groupe d'abonnement et sélectionnez <i class="fa-solid fa-box-archive"></i> **Archive**, ce qui marquera le groupe d'abonnement comme inactif mais ne le supprimera pas.
 
-!bouton "Archive" apparaissant au survol du statut du groupe d'abonnement "Actif".]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
+![Bouton "Archive" apparaissant au survol de l'état "Actif" d'un statut du subscription groups.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
 
-### Étape 2 : Intégrer le numéro de téléphone WhatsApp dans le nouvel espace de travail.
+### Étape 2 : Intégrer le numéro de téléphone WhatsApp dans le nouvel espace de travail.
 
 1. Allez dans l'espace de travail où vous souhaitez déplacer le numéro de téléphone WhatsApp.
 2. Allez dans **Intégrations partenaires** > **Partenaires technologiques** > **WhatsApp**, puis faites défiler jusqu'à la section **Intégration de l'envoi messages WhatsApp**. 
 3. Sélectionnez l'option **Créer un nouveau groupe d'abonnement et un nouveau numéro de téléphone.**
 4. Commencez le processus d'intégration, au cours duquel vous pouvez sélectionner le numéro de téléphone dans le groupe d'abonnement archivé.
 
-### Étape 3 : Vérifier l'intégration
+### Étape 3 : Vérifier l'intégration
 
 1. Une fois l'intégration terminée, confirmez que le numéro de téléphone WhatsApp est désormais associé au groupe d'abonnement dans le nouvel espace de travail.
 2. Testez pour confirmer que les messages peuvent être envoyés et reçus via ce numéro de téléphone WhatsApp.

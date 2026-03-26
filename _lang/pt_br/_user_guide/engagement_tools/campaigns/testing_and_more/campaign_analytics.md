@@ -1,5 +1,5 @@
 ---
-nav_title: Análise de campanhas
+nav_title: Análise de dados de campanha
 noindex: true
 layout: redirect
 redirect_to: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/

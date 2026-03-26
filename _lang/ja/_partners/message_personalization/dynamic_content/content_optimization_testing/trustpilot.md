@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Trustpilot
 
-> [Trustpilot](https://www.trustpilot.com/) は、顧客がフィードバックを共有し、レビューの管理と返信を可能にするオンラインレビュープラットフォームです。
+> [Trustpilot](https://www.trustpilot.com/) は、顧客がフィードバックを伝え、そうしたレビューの管理とその対応を行うためのオンラインレビュープラットフォームです。
 
 このページでは、次の手順について説明します。
 
@@ -31,7 +31,7 @@ search_tag: Partner
 ### ステップ 1: Trustpilot API 認証情報を取得する
 
 1. [資格情報を使用してTrustpilot](https://app.contentful.com/login) にログインします。  
-2. Trustpilot ダッシュボードで API キーとシークレットを作成または取得するには、[**統合**] > [**開発者**] > [**API**] と移動します。APIキーをまだ持っていない場合は、新規に作成する：  
+2. Trustpilot ダッシュボードで API キーとシークレットを作成または取得するには、[**統合**] > [**開発者**] > [**API**] と移動します。まだ API キーがない場合は、新規作成します。  
    1. [**アプリケーション名**] > [**アプリケーションを作成**] に移動します。  
    2. API キーとシークレットをコピーします。これは、接続コンテンツリクエストの認証に使用されます。
 
@@ -41,13 +41,13 @@ search_tag: Partner
 
 アクションベースのBraze webhook キャンペーンを設定して、Trustpilot API をトリガしてメールレビューの招待状をユーザに送信します。たとえば、ユーザーが次の Webhook 詳細を使用して注文した後に、レビュー招待を送信できます。
    * [Webhook URL](https://developers.trustpilot.com/invitation-api?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..#create-invitation(s)): `https://invitations-api.trustpilot.com/v1/private/business-units/{businessUnitId}/email-invitations`  
-   * 方法:POST  
-   * 関連する顧客情報をキーと値のペアとして追加する
+   * メソッド: POST  
+   * 関連する顧客情報をキーと値のペアとして追加します
 
 ### ステップ2: アクセストークンを取得する
 
 1. [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)を使用して、[Trustpilot の認証エンドポイント](https://documentation-apidocumentation.trustpilot.com/authentication?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..)に要求してアクセストークンを取得します。
-2. **client_credentials** 付与タイプを使用し、API キーとシークレットをConnected Content タグに入力してトークンを取得します。コネクテッドコンテンツリクエストは、リクエストヘッダーに入力できます。コネクテッドコンテンツは次のようになります。
+2. を使用する。 **client_credentials**グラント・タイプを使用し、APIキーとシークレットをコネクテッド・コンテンツ・タグに入力してトークンを取得する。コネクテッドコンテンツリクエストは、リクエストヘッダーに入力できます。Connected Content は次のようになります。
   
 {% raw %}
 
@@ -76,7 +76,7 @@ https://api.trustpilot.com/v1/oauth/oauth-business-users-for-applications/access
 
 ## 製品レビューインサイトを使用したメッセージのカスタマイズ
 
-Braze キャンペーンで、Trustpilot の[製品レビューサマリーエンドポイント](https://developers.trustpilot.com/product-reviews-api#get-product-reviews-summary) ({% raw %}`https://api.trustpilot.com/v1/product-reviews/business-units/{businessUnitId}`{% endraw %}) からデータをリクエストするために、コネクテッドコンテンツコールを実行します。この方法では、ビジネスユニットから特定のSKU の製品レビューを取得します。次の例では、5つ星レビューの特定の製品SKUとフィルタを指定します。
+Braze キャンペーンで、Trustpilot の[製品レビューサマリーエンドポイント](https://developers.trustpilot.com/product-reviews-api#get-product-reviews-summary) ({% raw %}`https://api.trustpilot.com/v1/product-reviews/business-units/{businessUnitId}`{% endraw %}) からデータをリクエストするために、コネクテッドコンテンツコールを実行します。この方法では、ビジネスユニットから特定の SKU の製品レビューを取得します。次の例では、5つ星レビューの特定の製品 SKU とフィルターを指定します。
 
 {% raw %}
 ```liquid
@@ -87,7 +87,7 @@ Braze キャンペーンで、Trustpilot の[製品レビューサマリーエ�
 ```
 {% endraw %}
 
-![Liquid を使用して情報を取得するためにメールで接続されたコンテンツ。]({% image_buster /assets/img/trustpilot_connected_content_example.png %}){:style="max-width:38%;"}
+![コネクテッドコンテンツはLiquidを使ってメールに情報を取り込む。]({% image_buster /assets/img/trustpilot_connected_content_example.png %}){:style="max-width:38%;"}
 
 Connected Content リクエストは、製品レビューを返します。
 
@@ -117,4 +117,4 @@ Connected Content リクエストは、製品レビューを返します。
 {: start="2"}
 2\.Liquid 構文を使用して、関連するコンテンツをメッセージにプルします。たとえば、製品レビューのコンテンツをプルインするには、Liquid タグ{% raw %}`{{result.productReviews[0].content}}`{% endraw %} を使用します。
 
-![ユーザーがカートに残したおもちゃのトラックのレビューを含むパーソナライズされたメール。]({% image_buster /assets/img/trustpilot_personalized_email.png %}){:style="max-width:38%;"}
+![パーソナライズされたメールで、ユーザーがカートに入れたままにしていたおもちゃのトラックのレビューを送信。]({% image_buster /assets/img/trustpilot_personalized_email.png %}){:style="max-width:38%;"}

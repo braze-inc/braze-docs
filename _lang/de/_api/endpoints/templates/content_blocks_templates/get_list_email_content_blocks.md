@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Verfügbare Content-Blöcke auflisten"
 article_title: "GET: Verfügbare Content-Blöcke auflisten"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Liste verfügb
 {% api %}
 # Liste der verfügbaren Content-Blöcke
 {% apimethod get %}
-/inhalt_blöcke/liste
+/content_blocks/list
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um Ihre vorhandenen [Content-Blöcke]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) aufzulisten.
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [
@@ -57,7 +55,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       "inclusion_count" : (integer) the inclusion count,
       "created_at": (string) The time the Content Block was created in ISO 8601,
       "last_edited": (string) The time the Content Block was last edited in ISO 8601,
-      "tags": (array) An array of tags formatted as strings,
+      "tags": (array) An array of tags formatted as strings
     }
   ]
 }

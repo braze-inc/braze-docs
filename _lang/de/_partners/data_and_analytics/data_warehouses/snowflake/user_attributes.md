@@ -162,7 +162,7 @@ Diese Ansichten bieten nahezu Realtime-Updates der Attribute des Nutzerprofils, 
 * Nützlich für Realtime-Analysen und Szenarien, in denen aktuelle Daten benötigt werden.
 * **Überlegungen zur Performance:**
     * Abfragen zu einzelnen Nutzer:innen sind schneller (unter einer Minute bei einem großen Lagerhaus).
-    * Abfragen ohne USER_ID-Filter erfordern eine Aggregation über alle Nutzer:innen, was zu deutlich längeren Ausführungszeiten führt.
+    * Abfragen ohne USER_ID Filter erfordern eine Aggregation über alle Nutzer:innen, was zu deutlich längeren Ausführungszeiten führt.
     * Abfragen eines großen Datensatzes (z.B. über 100 Millionen Nutzer:innen) können viele Minuten dauern.
 
 ## Historische Änderungsprotokolle

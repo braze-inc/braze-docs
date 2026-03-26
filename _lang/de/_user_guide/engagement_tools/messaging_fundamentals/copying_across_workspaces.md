@@ -1,20 +1,20 @@
 ---
-nav_title: Kopieren zwischen Arbeitsbereichen
-article_title: Kopieren über Arbeitsbereiche hinweg
-page_order: 4.5
+nav_title: Zwischen Workspaces kopieren
+article_title: Zwischen Workspaces kopieren
+page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
-description: "Dieser referenzierte Artikel bietet eine Übersicht darüber, wie Sie Kampagnen und Canvase in verschiedene Workspaces kopieren können."
+description: "Dieser Referenzartikel bietet eine Übersicht darüber, wie Sie Kampagnen und Canvase in verschiedene Workspaces kopieren können."
 tool:
     - Campaigns
     - Canvas
 ---
 
-# Kopieren von Kampagnen und Canvase zwischen Workspaces
+# Kampagnen und Canvase über Workspaces hinweg kopieren
 
-> Durch das Kopieren von Kampagnen über verschiedene Arbeitsbereiche hinweg können Sie mit einer Kopie einer Kampagne in einem anderen Arbeitsbereich beginnen und so die Erstellung Ihrer Nachrichten beschleunigen. Auf dieser Seite erfahren Sie, wie Sie Kampagnen in verschiedene Arbeitsbereiche kopieren können und was kopiert wird und was nicht.
+> Durch das Kopieren von Kampagnen über verschiedene Workspaces hinweg können Sie mit einer Kopie einer Kampagne in einem anderen Workspace beginnen und so die Erstellung Ihrer Nachrichten beschleunigen. Auf dieser Seite erfahren Sie, wie Sie Kampagnen in verschiedene Workspaces kopieren können und was dabei kopiert wird und was nicht.
 
-Wenn Sie eine Kampagne oder ein Canvas in einen anderen Workspace kopieren, bleibt die Kopie als Entwurf erhalten, bis Sie sie bearbeiten und einführen. So können Sie Ihre erfolgreichen Messaging-Strategien beibehalten und weiter ausbauen.
+Wenn Sie eine Kampagne oder ein Canvas in einen anderen Workspace kopieren, bleibt die Kopie als Entwurf erhalten, bis Sie sie bearbeiten und starten. So können Sie Ihre erfolgreichen Messaging-Strategien beibehalten und weiter ausbauen.
 
 {% tabs local %}
 {% tab campaigns %}
@@ -23,11 +23,11 @@ Wenn Sie eine Kampagne oder ein Canvas in einen anderen Workspace kopieren, blei
 Das Kopieren von Kampagnen über Workspaces hinweg ist allgemein verfügbar. Kanal-Unterstützung für Content-Cards ist derzeit nicht verfügbar.
 {% endalert %}
 
-Sie können Kampagnen für diese unterstützten Kanäle in verschiedene Workspaces kopieren: SMS, In-App-Nachrichten, Push-Benachrichtigungen, E-Mail und Webhooks. Sie können auch über E-Mail Templates, Feature-Flags und Content-Blöcke hinweg kopieren. Beachten Sie, dass Multichannel-Kampagnen mit nicht unterstützten Kanälen nicht in andere Arbeitsbereiche kopiert werden können.
+Sie können Kampagnen für die folgenden unterstützten Kanäle in verschiedene Workspaces kopieren: SMS, In-App-Nachrichten, Push-Benachrichtigungen, E-Mail und Webhooks. Sie können auch E-Mail-Templates, Feature-Flags und Content-Blöcke kopieren. Beachten Sie, dass Multichannel-Kampagnen mit nicht unterstützten Kanälen nicht in andere Workspaces kopiert werden können.
 
 So kopieren Sie eine Kampagne in einen anderen Workspace:
 
-1. Wählen Sie das Zahnradsymbol <i class="fas fa-cog"></i> neben der ausgewählten Kampagne aus.
+1. Wählen Sie das <i class="fas fa-cog"></i> Zahnradsymbol neben der ausgewählten Kampagne aus.
 2. Wählen Sie **In Workspace kopieren**. 
 3. Prüfen und testen Sie Ihre Kampagne nach dem Kopieren, um sicherzustellen, dass alle Felder korrekt funktionieren.
 
@@ -35,25 +35,25 @@ So kopieren Sie eine Kampagne in einen anderen Workspace:
 {% tab canvas %}
 
 {% alert important %}
-Das Kopieren von Canvase über mehrere Workspaces hinweg ist allgemein verfügbar. Die folgenden Kanäle werden derzeit nicht unterstützt: LINE, Content-Cards, und WhatsApp.
+Das Kopieren von Canvases über Workspaces hinweg ist allgemein verfügbar. Die folgenden Kanäle werden derzeit nicht unterstützt: LINE, Content-Cards und WhatsApp.
 {% endalert %}
 
-Sie können Canvase für diese unterstützten Kanäle in verschiedene Workspaces kopieren: E-Mail, In-App-Nachrichten, Push, Webhooks und SMS.
+Sie können Canvase für die folgenden unterstützten Kanäle in verschiedene Workspaces kopieren: E-Mail, In-App-Nachrichten, Push, Webhooks und SMS.
 
 So kopieren Sie ein Canvas in einen anderen Workspace:
 
-1. Wählen Sie das Menü <i class="fa-solid fa-ellipsis-vertical"></i> neben dem ausgewählten Canvas aus.
+1. Wählen Sie das Menü <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;neben dem ausgewählten Canvas aus.
 2. Wählen Sie **In Workspace kopieren**. 
 3. Prüfen und testen Sie nach dem Kopieren Ihr Canvas, um sicherzustellen, dass alle Felder korrekt funktionieren.
 
-Beim Kopieren eines Canvas mit Audience Sync-Schritten werden die Einstellungen nicht in den Workspace des Ziels kopiert, wohl aber die Schritte auf dem Weg dorthin.
+Beim Kopieren eines Canvas mit Audience-Sync-Schritten werden die Einstellungen nicht in den Ziel-Workspace kopiert, wohl aber die Schritte im Verlauf.
 
 {% endtab %}
 {% endtabs %}
 
-## Was über Arbeitsbereiche hinweg kopiert wird
+## Was über Workspaces hinweg kopiert wird
 
-Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspaces kopiert wird und was nicht. Überprüfen Sie am besten die Details der Kampagne und des Canvas und testen Sie, ob Ihre Nachricht wie erwartet funktioniert.
+Beachten Sie, dass die folgende Liste nicht vollständig ist, was über Workspaces hinweg kopiert wird und was nicht. Überprüfen Sie am besten die Details der Kampagne und des Canvas und testen Sie, ob Ihre Nachricht wie erwartet funktioniert.
 
 ### Details
 
@@ -65,11 +65,11 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 | Beschreibung | Territorien | 
 | Typ | Tags | 
 | Aktionen (verschachtelt) | Segmente | 
-| Konvertierungsverhalten (verschachtelt) | Genehmigungen | 
+| Konversionsverhalten (verschachtelt) | Genehmigungen | 
 | Konfigurationen für die stille Zeit | Auslösezeitplan | 
-| Frequency-Capping | Kampagnen-Zusammenfassungen | 
-| Abonnementstatus |  | 
-| Wiederholungen |  | 
+| Frequency-Capping-Konfigurationen | Kampagnen-Zusammenfassungen | 
+| Abo-Status der Empfänger:innen | Filter | 
+| Wiederkehrender Zeitplan |  | 
 | Ist transaktional |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -81,26 +81,26 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 | Beschreibung | Territorien | 
 | Typ | Tags | 
 | Aktionen (verschachtelt) | Segmente | 
-| Konvertierungsverhalten (verschachtelt) | Genehmigungen | 
+| Konversionsverhalten (verschachtelt) | Genehmigungen | 
 | Konfigurationen für die stille Zeit | Auslösezeitplan | 
-| Frequency-Capping | Canvas-Zusammenfassungen | 
-| Abonnementstatus |  | 
-| Wiederholungen |  | 
+| Frequency-Capping-Konfigurationen | Canvas-Zusammenfassungen | 
+| Abo-Status der Empfänger:innen | Filter | 
+| Wiederkehrender Zeitplan | Ausstiegskriterien | 
 | Ist transaktional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
 
-### Verhalten bei Konversion
+### Konversionsverhalten
 
 {% tabs local %}
 {% tab campaigns %}
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Verhalten | Arbeitsbereich-IDs |
-| Interaktion im Rahmen der Kampagne |  Kampagnen-ID | 
+| Verhaltenstyp | Workspace-IDs |
+| Kampagnen-Interaktion |  Kampagnen-ID | 
 | Name des angepassten Events |  | 
 | Produktname |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -110,7 +110,7 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Verhalten | Arbeitsbereich-IDs |
+| Verhaltenstyp | Workspace-IDs |
 | Canvas-Interaktion |  Canvas-ID | 
 | Name des angepassten Events |  | 
 | Produktname |  | 
@@ -126,8 +126,8 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Verhalten | Arbeitsbereich-IDs |
-| Interaktion im Rahmen der Kampagne |  Kampagnen-ID | 
+| Verhaltenstyp | Workspace-IDs |
+| Kampagnen-Interaktion |  Kampagnen-ID | 
 | Name des angepassten Events |  | 
 | Produktname |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -137,7 +137,7 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Verhalten | Arbeitsbereich-IDs |
+| Verhaltenstyp | Workspace-IDs |
 | Canvas-Interaktion |  Canvas-ID | 
 | Name des angepassten Events |  | 
 | Produktname |  | 
@@ -153,10 +153,10 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Prozentsatz senden | API-ID |
-| Typ |  Seedgruppen-IDs | 
-|  |  Linkvorlagen-IDs | 
-|  |  Interne Benutzergruppen-IDs | 
+| Sendeprozentsatz | API-ID |
+| Typ |  Seed-Gruppen-IDs | 
+|  |  Link-Template-IDs | 
+|  |  Interne Nutzergruppen-IDs | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -164,28 +164,28 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Prozentsatz senden | API-ID |
-| Typ |  Seedgruppen-IDs | 
-|  |  Linkvorlagen-IDs | 
-|  |  Interne Benutzergruppen-IDs | 
+| Sendeprozentsatz | API-ID |
+| Typ |  Seed-Gruppen-IDs | 
+|  |  Link-Template-IDs | 
+|  |  Interne Nutzergruppen-IDs | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
 
 
-### E-Mail Nachricht Variation
+### E-Mail-Nachrichtenvariante
 
 {% tabs local %}
 {% tab campaigns %}
 
 | Kopiert | Ausgelassen |
 |---|---|
-| E-Mail-Textkörper | Absender |
+| E-Mail-Textkörper | Absenderadresse |
 | Nachrichtenzusätze |  Antwort an | 
 | Titel |  BCC | 
 | Betreff |  Link-Template | 
-|  |  Link-Aliasing |
+|  |  Link Aliasing |
 |  | Übersetzungen |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -194,11 +194,11 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| E-Mail-Textkörper | Absender |
+| E-Mail-Textkörper | Absenderadresse |
 | Nachrichtenzusätze |  Antwort an | 
 | Titel |  BCC | 
 | Betreff |  Link-Template | 
-|  |  Link-Aliasing |
+|  |  Link Aliasing |
 |  | Übersetzungen |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -212,7 +212,7 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Klartext | Link-Aliasing |
+| Klartext | Link Aliasing |
 | HTML und Drag-and-Drop-Inhalte | Übersetzungen | 
 | Preheader |  | 
 | Inline-CSS |  | 
@@ -224,7 +224,7 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Klartext | Link-Aliasing |
+| Klartext | Link Aliasing |
 | HTML und Drag-and-Drop-Inhalte | Übersetzungen | 
 | Preheader |  | 
 | Inline-CSS |  | 
@@ -270,9 +270,9 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Name | Link-Aliasing |
+| Name | Link Aliasing |
 | Beschreibung | API-Schlüssel | 
-| Content | Territorien | 
+| Inhalt | Territorien | 
 | HTML und Drag-and-Drop-Inhalte | Tags | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -281,26 +281,26 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Name | Link-Aliasing |
+| Name | Link Aliasing |
 | Beschreibung | API-Schlüssel | 
-| Content | Territorien | 
+| Inhalt | Territorien | 
 | HTML und Drag-and-Drop-Inhalte | Tags | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
 
-### SMS Nachrichten Variation
+### SMS-Nachrichtenvariante
 
 {% tabs local %}
 {% tab campaigns %}
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Textkörper | Messenger |
+| Textkörper | Messaging-Dienst |
 | Link-Verkürzung | VCF-Medienobjekte | 
 | Klick-Tracking |  | 
-| Medien |  | 
+| Medienobjekte |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -308,10 +308,10 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 | Kopiert | Ausgelassen |
 |---|---|
-| Textkörper | Messenger |
+| Textkörper | Messaging-Dienst |
 | Link-Verkürzung | VCF-Medienobjekte | 
 | Klick-Tracking |  | 
-| Medien |  | 
+| Medienobjekte |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -319,27 +319,27 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 
 ## Kopieren von Nachrichten, die Liquid enthalten
 
-Liquid-Referenzen in Nachrichten werden in den Workspace des Ziels kopiert, aber die Referenzen funktionieren möglicherweise nicht wie erwartet. Das bedeutet, wenn ein Canvas aus Workspace A in Workspace B kopiert wird, kann Workspace B nicht auf die Details von Workspace A referenzieren, auch nicht auf Liquid-Referenzen. So werden u. a. keine Felder wie Auslöseaktionen und Zielgruppenfilter übernommen.
+Liquid-Referenzen in Nachrichtentexten werden in den Ziel-Workspace kopiert, funktionieren dort aber möglicherweise nicht wie erwartet. Das bedeutet: Wenn ein Canvas aus Workspace A in Workspace B kopiert wird, kann Workspace B nicht auf die Details von Workspace A zugreifen – einschließlich Liquid-Referenzen. So werden beispielsweise Felder wie Auslöseaktionen und Zielgruppen-Filter nicht übernommen.
 
-Behalten Sie beim Kopieren von Kampagnen und Canvase über Workspaces hinweg die folgenden Liquid-Referenzen mit Abhängigkeiten im Auge:
+Behalten Sie beim Kopieren von Kampagnen und Canvases über Workspaces hinweg die folgenden Liquid-Referenzen mit Abhängigkeiten im Auge:
 
 - Katalogartikel-Tags
 - Connected-Content-Tags
 - Content-Blöcke
 - Angepasste Attribute
 - Einstellungszentren
-- Produkt-Empfehlungen
-- Abonnementstatus-Tags
-- Gutschein- und Aktionstags
+- Produktempfehlungen
+- Abo-Status-Tags
+- Gutschein- und Aktions-Tags
 
 ## Kopieren von Nachrichten mit Feature-Flags
 
-Um eine Feature-Flag-Kampagne und ein Canvas mit einem Feature-Flag-Schritt zwischen Workspaces zu kopieren, vergewissern Sie sich, dass im Ziel-Workspace ein [Feature-Flag-Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments) mit einer ID konfiguriert ist, die entweder mit dem Feature-Flag übereinstimmt, das in der ursprünglichen Kampagne referenziert wurde, oder mit dem Feature-Flag-Schritt, der im ursprünglichen Canvas referenziert wurde.
+Um eine Feature-Flag-Kampagne und ein Canvas mit einem Feature-Flag-Schritt zwischen Workspaces zu kopieren, stellen Sie sicher, dass im Ziel-Workspace ein [Feature-Flag-Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments) mit einer ID konfiguriert ist, die entweder mit dem Feature-Flag übereinstimmt, auf das in der ursprünglichen Kampagne verwiesen wird, oder mit dem Feature-Flag-Schritt, auf den im ursprünglichen Canvas verwiesen wird.
 
-Wenn Sie eine Kampagne oder ein Canvas kopieren, das einen Feature-Flag-Schritt mit einer Feature-Flag ID enthält, die im Ziel-Workspace nicht vorhanden ist, wird der Feature-Flag-Schritt kopiert, nicht aber sein Inhalt.
+Wenn Sie eine Kampagne oder ein Canvas kopieren, das einen Feature-Flag-Schritt mit einer Feature-Flag-ID enthält, die im Ziel-Workspace nicht vorhanden ist, wird der Feature-Flag-Schritt zwar kopiert, nicht aber sein Inhalt.
 
 ## Kopieren von Nachrichten mit Content-Blöcken
 
-Wenn Sie eine Kampagne in andere Arbeitsbereiche kopieren, werden die Content-Blöcke nicht mitkopiert. Sie können jedoch im Zielarbeitsbereich referenziert werden, wenn ein Block mit demselben Namen existiert. Alternativ können Sie ihn (oder entsprechende Liquid-Verweise) auch im Zielarbeitsbereich erstellen und so Fehler beim Kampagnenstart vermeiden.
+Wenn Sie eine Kampagne über Workspaces hinweg kopieren, werden die Content-Blöcke nicht mitkopiert. Ein Content-Block kann jedoch im Ziel-Workspace referenziert werden, wenn dort ein Block mit demselben Namen existiert. Alternativ können Sie den Content-Block (oder die entsprechenden Liquid-Referenzen) im Ziel-Workspace erstellen, um Fehler beim Starten einer Kampagne zu vermeiden.
 
-Bei Canvase, die auf einen Content-Block referenzieren, muss der Content-Block zunächst in den Ziel-Workspace kopiert werden.
+Bei Canvases, die auf einen Content-Block verweisen, muss der Content-Block zunächst in den Ziel-Workspace kopiert werden.

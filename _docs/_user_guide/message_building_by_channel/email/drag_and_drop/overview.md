@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an email
-article_title: Creating an Email with Drag-and-Drop
+nav_title: Create an email
+article_title: Create an Email with Drag-and-Drop
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
@@ -10,7 +10,7 @@ tool:
 - Canvas
 ---
 
-# Creating an email with drag-and-drop
+# Create an email with drag-and-drop
 
 > Using the drag-and-drop editor, you can create completely custom and personalized email messages for either campaigns or Canvases, all without using HTML to build your email body.
 
@@ -244,7 +244,11 @@ Liquid personalization is not supported for image blocks and button link type fi
 
 #### Dynamic images
 
-You can choose to include dynamic images in your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
+You can choose to include dynamic images in your email messaging by including [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) or [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
+
+{% alert important %}
+Your image URL must begin with `https://`. Using `http://` crashes your app.
+{% endalert %}
 
 ### Text direction
 

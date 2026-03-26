@@ -1,6 +1,6 @@
 ---
-nav_title: "Dados e análises"
-article_title: Parceiros de dados e análises
+nav_title: "Dados e análise de dados"
+article_title: Parceiros de dados e análise de dados
 page_order: 5
 
 page_type: landing
@@ -8,7 +8,7 @@ description: "Esta página lista os parceiros da Braze (Alloys) que permitem que
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Data & Analytics"
+partner_top_header: "Dados e análise de dados"
 
 valid_partner_list:
 - name: Optimizely
@@ -53,17 +53,17 @@ valid_partner_list:
   url: /docs/partners/mozart_data/
 - name: SalesWings
   url: /docs/partners/saleswings/
-- name: Mergulho
-  url: /docs/partners/scuba/
-- name: Monstro da Caixa de Entrada
+- name: Inbox Monster
   url: /docs/partners/inbox_monster/
+- name: Kickbox
+  url: /docs/partners/kickbox/
 - name: Amazon S3
   url: /docs/partners/amazon_s3/
 - name: Google Cloud Storage
   url: /docs/partners/google_cloud_storage_for_currents/
-- name: Armazenamento de Blob do Microsoft Azure
+- name: Microsoft Azure Blob Storage
   url: /docs/partners/microsoft_azure_blob_storage_for_currents/
-- name: Pequenas pistas
+- name: Tiny Clues
   url: /docs/partners/tinyclues/
 - name: Treasure Data
   url: /docs/partners/treasure_data/
@@ -85,7 +85,7 @@ valid_partner_list:
   url: /docs/partners/hightouch/
 - name: Lexer
   url: /docs/partners/lexer/
-- name: Lítica
+- name: Lytics
   url: /docs/partners/lytics/
 - name: Merkury
   url: /docs/partners/merkury/
@@ -95,11 +95,11 @@ valid_partner_list:
   url: /docs/partners/octolis/
 - name: Redpoint
   url: /docs/partners/redpoint/
-- name: RudderStack
+- name: Rudderstack
   url: /docs/partners/rudderstack/
-- name: Segmento
+- name: Segment
   url: /docs/partners/segment/
-- name: Dados do Simon
+- name: Simon Data
   url: /docs/partners/simon_data/
 - name: Snowplow
   url: /docs/partners/snowplow/
@@ -119,7 +119,7 @@ valid_partner_list:
   url: /docs/partners/onetrust/
 - name: Snowflake
   url: /docs/partners/snowflake/
-- name: Anúncios de leads do Facebook via Zapier
+- name: Facebook Lead Ads via Zapier
   url: /docs/partners/facebook_via_zapier/
 - name: Zapier
   url: /docs/partners/zapier/
@@ -139,13 +139,15 @@ valid_partner_list:
   url: /docs/partners/wyng/
 - name: Antavo
   url: /docs/partners/antavo/
+- name: Talon.One
+  url: /docs/partners/talonone/
 - name: FriendBuy
   url: /docs/partners/friendbuy/
 - name: Kognitiv Inspire
   url: /docs/partners/kognitiv/
 - name: Punchh
   url: /docs/partners/punchh/
-- name: SessãoM
+- name: SessionM
   url: /docs/partners/sessionm/
 - name: Voucherify
   url: /docs/partners/voucherify/
@@ -159,8 +161,10 @@ valid_partner_list:
   url: /docs/partners/metarouter/
 - name: Nexla
   url: /docs/partners/nexla/
-- name: Olho de águia
+- name: Eagle Eye
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
+- name: Lemnisk
+  url: /docs/partners/lemnisk/
 ---

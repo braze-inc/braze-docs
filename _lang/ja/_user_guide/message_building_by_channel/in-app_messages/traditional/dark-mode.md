@@ -10,9 +10,9 @@ channel:
 
 # ダークモードテーマ
 
-> ダークモードは、ユーザーにシステム全体のカラープリファレンスを設定する機会を提供します（[Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme)および[iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)で導入されました）。「ダーク」テーマはバッテリー寿命を節約し、ユーザーの目の負担を軽減することを目的としており、アプリ開発者にとってユーザーが好むダークカラーテーマを実装するための簡単な方法を提供します。
+> ダークモードは、ユーザーにシステム全体のカラープリファレンスを設定する機会を提供します（[Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme)および[iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)で導入されました）。"ダーク "テーマは、アプリ開発者にダークカラーテーマを実装する方法を提供する一方で、バッテリー寿命を節約し、ユーザーの目への負担を軽減することを意図している。
 
-Braze のアプリ内メッセージは、切り替え用のダークテーマの追加をサポートしているため、ユーザーの好みに合わせて適切な色のメッセージを配信したり、アプリのデザインとの一貫性を維持したりするうえで役立ちます。
+Brazeアプリ内メッセージは、ユーザー群の好みに応じて適切な色のメッセージを配信し、アプリのデザインとの一貫性を維持するために、代替のDarkテーマの追加をサポートしている。
 
 ## ダークモードの仕組み
 
@@ -22,15 +22,11 @@ Android 10 以降または iOS 13 以降のバージョンを使用している�
 
 ## ダークモードテーマの設定
 
-この新しい [ダークモード] オプションは、[アプリ内メッセージの作成]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)画面の [スタイル] タブにあり、デバイスをダークモードにしているユーザー向けに代替のカラーテーマを簡単に追加できます。
+[アプリ内メッセージの作成]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)時に**Design**タブにあるDark Modeを使えば、端末をDark Modeにしているユーザー向けに別のカラーテーマを追加できる。
 
-<<<<<<< HEAD
-![アプリ内メッセージ作成時のスタイルタブのライトモードスタイルとダークモードスタイルの間のユーザー切り替える]]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
-=======
-\![アプリ内メッセージ作成時のスタイルタブのライトモードスタイルとダークモードスタイルの間のユーザー切り替える]]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
->>>>>>> main
+![アプリ内メッセージ作成時に、ユーザーがスタイルタブでライトモードスタイルとダークモードスタイルを切り替える。]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
-このオプションを有効にすると、カラーピッカーを使用してアプリ内メッセージのダークテーマの色を選択するか、既存の[カラープロファイル]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)を選択して既存のダークまたはライトテーマを再利用できます。
+このオプションをイネーブルメントにすると、カラーピッカーを使用してアプリ内メッセージのダークテーマカラーを選択するか、既存の[カラープロファイルを]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)選択して既存のダークまたはライトテーマを再利用することができる。
 
 {% alert note %}
 アプリが独自のダークテーマを提供していなくても、この機能を使用できます。ただし、ダークモードをサポートしていないデバイスでは、デフォルトでライトテーマが表示されます。Androidでアプリ内メッセージが表示されている間にデバイスのテーマを変更しても、そのアプリ内メッセージに使用されるテーマは変更されません。

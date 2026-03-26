@@ -14,11 +14,7 @@ channel: email
 
 そのためには、メールの下書きを作成し、リンクをどこに配置するかを決めます。次に、2 つのオプションを追加します。1 つは Google カレンダー用、もう 1 つは他のカレンダー (iCal や Outlook など) 用です。たとえば、「Google カレンダーに追加」や「iCal または Outlook に追加」などとします。
 
-<<<<<<< HEAD
-![ダッシュボードにリンクを追加するときのリンクダイアログ。「リンク情報」タブが選択され、テキストが「Googleカレンダーに追加」に設定されています。]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
-=======
-\![ダッシュボードにリンクを追加するときのリンクダイアログ。「リンク情報」タブが選択され、テキストが「Googleカレンダーに追加」に設定されています。]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
->>>>>>> main
+![ダッシュボードにリンクを追加する際のリンクダイアログ。「リンク情報」タブが選択され、テキストが「Googleカレンダーに追加」に設定されています。]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
 
 ## URL フォーマット
 
@@ -83,19 +79,19 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 クリックすると、Google カレンダーが新しいタブまたはウィンドウで開き、イベントの詳細が招待状に事前入力され、ユーザーが保存できるようになります。これはモバイルとデスクトップの両方で発生します。
 
-Googleカレンダーのダイアログで、イベントを追加する。]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
+![イベントを追加する Google カレンダーダイアログ。イベントの詳細が追加されて保存できる状態です。]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
 
 ### iCal と Outlook
 
 デスクトップでは、クリックすると ICS ファイルがダウンロードされます。次に、ユーザーは ICS ファイルを開く必要があります。これにより iCal または Outlook が開き、カレンダーにイベントを追加するよう求められます。
 
-iCalカレンダーに新しいイベントを追加するダイアログが表示され、ユーザーはカレンダーを選択して確定する。]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
+![iCalカレンダーに新しいイベントを追加するためのダイアログが表示され、ユーザーにカレンダーの選択と確認を促します。]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
 
-iCalカレンダーにイベントが追加された。]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
+![イベントが追加されたiCalカレンダーです。]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
 
 モバイルでは、ユーザーはリンクを長押しする必要があります。これにより、カレンダーに追加するよう求められます。
 
-カレンダーのリンクを長押しすると、iOSのポップアップが表示される。]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
+![カレンダーリンクを長押しすると表示されるiOSのポップアップで、「カレンダーに追加」ボタンが含まれています。]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
 
 詳細については、参照してください。
 * [Google カレンダーのイベントを作成する](https://developers.google.com/calendar/api/guides/create-events)

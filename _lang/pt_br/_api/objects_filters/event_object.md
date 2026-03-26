@@ -15,7 +15,7 @@ description: "Este artigo de referência aborda o objeto de evento, o que ele é
 
 Um objeto de evento é um objeto que é passado pela API quando ocorre um evento específico. Os objetos de eventos são armazenados em um vetor de eventos. Cada objeto de evento no vetor de eventos representa uma única ocorrência de um evento personalizado por um usuário específico no valor de tempo designado. O objeto de evento tem muitos campos diferentes que permitem a personalização por meio da configuração e do uso das propriedades do evento em mensagens, coleta de dados e personalização.
 
-Para obter etapas sobre como configurar eventos personalizados para uma plataforma específica, consulte o Guia de Integração de Plataformas no [Guia do Desenvolvedor]({{site.baseurl}}/developer_guide/home/). Consulte o artigo relevante de acordo com sua plataforma:
+Para etapas sobre como configurar eventos personalizados para uma plataforma específica, consulte o Guia de Integração da Plataforma no [Guia do Desenvolvedor]({{site.baseurl}}/developer_guide/home/). Consulte o artigo relevante com base na sua plataforma:
 
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
@@ -46,12 +46,16 @@ Para obter etapas sobre como configurar eventos personalizados para uma platafor
 - [Identificador do app]({{site.baseurl}}/api/identifier_types/)
 - [Código de tempo ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Alguns pares de identificadores não podem ser usados juntos em uma única solicitação. Quando tanto `email` quanto `phone` são fornecidos, `email` tem precedência sobre `phone`. Para detalhes completos, consulte [Resolução de identificadores]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
+
 #### Atualizar apenas os perfis existentes
 
-Para atualizar apenas os perfis de usuário existentes no Braze, passe a chave `_update_existing_only` com um valor de `true` no corpo da solicitação. Se esse valor for omitido, a Braze criará um novo perfil de usuário se o `external_id` ainda não existir.
+Para atualizar apenas perfis de usuário existentes no Braze, você deve passar a chave `_update_existing_only` com um valor de `true` dentro do corpo da sua solicitação. Se esse valor for omitido, a Braze criará um novo perfil de usuário se o `external_id` ainda não existir.
 
 {% alert note %}
-Se você estiver criando um perfil de usuário somente de alias por meio do ponto de extremidade `/users/track`, `_update_existing_only` deverá ser definido como `false`. Se esse valor for omitido, o perfil somente de alias não será criado.
+Se você estiver criando um perfil de usuário apenas com alias através do endpoint `/users/track`, `_update_existing_only` deve ser definido como `false`. Se esse valor for omitido, o perfil somente de alias não será criado.
 {% endalert %}
 
 ## Objeto de propriedades do evento
@@ -64,7 +68,7 @@ Os valores de propriedade podem ser qualquer um dos seguintes tipos de dados:
 | --- | --- |
 | Números | Como [números inteiros](https://en.wikipedia.org/wiki/Integer) ou [flutuantes](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booleanos | `true` ou `false` |
-| Datetimes | Deve ser formatado como strings no formato [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) ou em qualquer um dos seguintes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Não é compatível com matrizes. <br><br>Note que "T" é um designador de tempo, não um espaço reservado, e não deve ser alterado ou removido. <br><br>As atribuições de horário sem um fuso horário terão como padrão a meia-noite UTC (e serão formatadas no dashboard como o equivalente à meia-noite UTC no fuso horário da empresa). <br><br> Os eventos com registros de data e hora no futuro terão como padrão a hora atual.  |
+| Datetimes | Deve ser formatado como strings no formato [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) ou em qualquer um dos seguintes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Não é compatível com matrizes. <br><br>Note que "T" é um designador de tempo, não um espaço reservado, e não deve ser alterado ou removido. <br><br>Atributos de tempo sem um fuso horário padrão serão definidos para meia-noite UTC (e serão formatados no dashboard como o equivalente a meia-noite UTC no fuso horário da empresa). <br><br> Os eventos com registros de data e hora no futuro terão como padrão a hora atual.  |
 | Strings | 255 caracteres ou menos. |
 | Matrizes | As matrizes não podem incluir datas e horários. |
 | Objetos | Os objetos serão ingeridos como strings. |
@@ -72,13 +76,24 @@ Os valores de propriedade podem ser qualquer um dos seguintes tipos de dados:
 
 Os objetos de propriedade de evento que contêm valores de vetor ou objeto podem ter uma carga útil de propriedade de evento de até 100 KB.
 
+### Chaves reservadas
+
+As seguintes chaves são reservadas e não podem ser usadas como propriedades de eventos personalizados:
+
+- `time`
+- `event_name`
+
+{% alert important %}
+Usar chaves reservadas como nomes de propriedades de eventos personalizados resultará em erros de API ao enviar solicitações para o endpoint `/users/track`.
+{% endalert %}
+
 ### Persistência de propriedades de eventos
 
 As propriedades de eventos são projetadas para filtragem e personalização de Liquid em mensagens disparadas por seus eventos principais. Por padrão, eles não são mantidos no perfil de usuário da Braze. Para usar valores de propriedades de eventos na segmentação, consulte [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), que detalha as várias abordagens para armazenar valores de propriedades de eventos a longo prazo.
 
 #### Exemplo de solicitação de evento
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY

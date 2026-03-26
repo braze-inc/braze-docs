@@ -1,10 +1,10 @@
 ---
-nav_title: e-commerce
+nav_title: eCommerce
 article_title: Parceiros de eCommerce
 page_order: 10
 
 page_type: landing
-description: "Esta landing page lista os parceiros Braze (Alloys) que permitem que você se integre à sua plataforma de eCommerce."
+description: "Esta landing page lista os parceiros da Braze (Alloys) que permitem que você se integre à plataforma de eCommerce deles."
 
 layout: partner_page
 search_tag: Partner
@@ -44,7 +44,7 @@ valid_partner_list:
   url: /docs/partners/revenuecat
 - name: Transcend
   url: /docs/partners/transcend/
-- name: Construtor
+- name: Constructor
   url: /docs/partners/constructor/
 - name: Stylitics
   url: /docs/partners/stylitics/
@@ -52,4 +52,14 @@ valid_partner_list:
   url: /docs/partners/shopify/
 - name: Stripe
   url: /docs/partners/stripe/
+- name: Okendo
+  url: /docs/partners/okendo/
+- name: Swym
+  url: /docs/partners/swym/
+- name: Algolia
+  url: /docs/partners/algolia/
+- name: Tapcart
+  url: /docs/partners/tapcart/
+- name: Poq
+  url: /docs/partners/poq/
 ---

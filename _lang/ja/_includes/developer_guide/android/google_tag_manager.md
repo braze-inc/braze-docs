@@ -1,34 +1,34 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Android版Googleタグマネージャーを使う
+## Androidでのグーグルタグマネージャの使用
 
-次の例では、ある音楽ストリーミングアプリが、ユーザーが曲を聴くときにさまざまなイベントを記録したいとする。Google Tag Manager for Androidを使えば、Brazeのどのサードパーティベンダーがこのイベントを受け取るかをコントロールし、Braze専用のタグを作成することができる。
+次の例では、音楽ストリーミングアプリは、ユーザーが曲を聴くときに別のイベントを記録したいと考えています。Google タグ Manager for Android を使用すると、どのサードパーティベンダがこのイベントを受信するかをコントロールし、Brazeに固有のBrazeを作成できます。
 
-### ステップ 1: カスタムイベントのトリガーを作成する
+### ステップ 1: カスタムイベント s のトリガーの作成
 
-カスタムイベントは、`logEvent` に設定した `actionType` によってログに記録されます。この例のBrazeカスタムタグプロバイダーは、カスタムイベント名が`eventName` を使用して設定されることを期待している。
+カスタムイベントは、`logEvent` に設定した `actionType` によってログに記録されます。このサンプルのBraze カスタムタグプロバイダーは、`eventName` を使用してカスタムイベントの名前を設定することを想定しています。
 
 最初に、`played song` である「イベント名」を検索するトリガーを作成します
 
 ![「eventName」が「played song」である場合に一部のイベントに対してトリガーするよう設定された Google Tag Manager のカスタムトリガー。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
-次に、新しいタグ（「ファンクション・コール」とも呼ばれる）を作成し、この記事の後半で説明する[カスタム・タグ・プロバイダーの](#adding-android-google-tag-provider)クラス・パスを入力する。このタグは、`played song` イベントを記録したときにトリガーされる。
+次に、新しいタグ("Function Call"とも呼ばれます)を作成し、この項で後述する[カスタムタグプロバイダー](#adding-android-google-tag-provider)のクラスパスを入力します。このタグは、`played song` イベントを記録するとトリガーされます。
 
-タグのカスタム・パラメーター（キーと値のペアとしても知られる）で、`eventName` を`played song` に設定する。これがBrazeに記録されるカスタムイベント名になる。
+タグのカスタムパラメータ(キーと値のペアとも呼ばれます)で、`eventName` を`played song` に設定します。これは、Brazeに記録されるカスタムイベントの名前になります。
 
 ![classpath フィールドと、キーと値のペアフィールドを含む Google Tag Manager のタグ。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 {% alert important %}
-カスタムイベントを送信する際は、必ず`actionType` を`logEvent` に設定し、`eventName` に値を設定して、Brazeが正しいイベント名とアクションを受け取れるようにする。
+カスタムイベントを送信するときは、必ず`actionType` を`logEvent` に設定し、`eventName` の値を設定して、Braze が取得する正しいイベント名とアクションを受け取るようにします。
 {% endalert %}
 
-また、追加のキーと値のペア引数をタグに含めることもできます。この引数は、カスタムイベントプロパティとして Braze に送信されます。`eventName` および `actionType` は、カスタムイベントプロパティで無視されません。以下のタグの例では、`genre` が渡され、Google タグマネージャーのタグ変数を使って定義される。この変数は、アプリに記録されたカスタムイベントから取得される。
+また、追加のキーと値のペア引数をタグに含めることもできます。この引数は、カスタムイベントプロパティとして Braze に送信されます。`eventName` および `actionType` は、カスタムイベントプロパティで無視されません。次のサンプルタグでは、`genre` が渡され、Google タグマネージャでアプリにログインしたカスタムイベントから取得される変数を使用して定義されます。
 
-Google Tag Manager for AndroidはデータレイヤーとしてFirebaseを使用しているため、`genre` イベントプロパティは "Firebase - Event Parameter "変数としてGoogle Tag Managerに送信される。
+Google Tag Manager for Android はFirebase をデータレイヤーとして使用するため、`genre` イベントプロパティは"Firebase - Event Parameter" 変数としてGoogle Tag Manager に送信されます。
 
-![Google Tag Manager の変数で、「Braze - Played Song Event」タグのイベントパラメータとして「genre」が追加されます。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
+![Google Tag Managerの変数で、「Braze - Played Song Event」タグのイベントパラメータとして「genre」が追加されます。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
 
-ユーザーがアプリで曲を再生すると、FirebaseとGoogleタグマネージャーを通じて、タグのトリガー名`played song` と一致するFirebaseアナリティクスのイベント名を使ってイベントが記録される：
+ユーザーがアプリで曲を再生すると、イベントはFirebase およびGoogle タグ マネージャを介して、タグのトリガーの名前`played song` に一致するFirebase 分析 イベント名を使用してログに記録されます。
 
 {% tabs %}
 {% tab JAVA %}
@@ -53,7 +53,7 @@ mFirebaseAnalytics.logEvent("played song", params)
 {% endtab %}
 {% endtabs %}
 
-### ステップ 2:カスタム属性を記録する
+### ステップ 2:履歴カスタム属性s
 
 カスタム属性は、`customAttribute` に設定された `actionType` を介して設定されます。Braze カスタムタグプロバイダーは、カスタム属性のキーと値が `customAttributeKey` および `customAttributeValue` を介して設定されることを想定しています。
 
@@ -80,7 +80,7 @@ mFirebaseAnalytics.logEvent("customAttribute", params)
 {% endtab %}
 {% endtabs %}
 
-### ステップ 3:電話 `changeUser()`
+### ステップ 3:コール `changeUser()`
 
 `changeUser()` の呼び出しは、`changeUser` に設定された `actionType` を介して行われます。Braze カスタムタグプロバイダーは、Braze ユーザー ID がタグ内のキーと値のペア `externalUserId` を介して設定されることを想定しています。
 
@@ -105,17 +105,17 @@ mFirebaseAnalytics.logEvent("changeUser", params)
 {% endtab %}
 {% endtabs %}
 
-### ステップ 4: カスタムタグプロバイダーを追加する {#adding-android-google-tag-provider}
+### ステップ 4: カスタムタグプロバイダーの追加 {#adding-android-google-tag-provider}
 
 タグとトリガーが設定されたら、Android アプリに Google Tag Manager を実装する必要もあります。これについては、Google の[ドキュメント](https://developers.google.com/tag-manager/android/v5/)に記載されています。
 
-アプリにGoogle Tag Managerをインストールしたら、Google Tag Manager内で設定したタグに基づいてBraze SDKメソッドを呼び出すカスタムタグプロバイダを追加する。
+Google タグマネージャがアプリにインストールされたら、カスタムタグプロバイダーを追加して、Google タグマネージャで設定したタグに基づいてBraze SDKメソッドを呼び出します。
 
 [Google Tag Manager](https://tagmanager.google.com/)コンソールでタグを設定するときに入力するのは、ファイルに"Class Path"を必ず書き留めておいてください。
 
-この例では、カスタムタグ・プロバイダーを構成するさまざまな方法のひとつを紹介している。具体的には、GTMタグから送信された`actionType` キーと値のペアに基づいて、どのBraze SDKメソッドを呼び出すかを決定する方法を示す。
+このサンプルでは、カスタムタグプロバイダーを構築するさまざまな方法の1 つを示します。具体的には、GTMタグから送信された`actionType`キーと値の対に基づいて、どのBraze SDKメソッドを呼び出すかを決定する方法を示します。
 
-この例で示した`actionType` は、`logEvent` 、`customAttribute` 、`changeUser` であるが、タグプロバイダーがGoogleタグマネージャーからのデータをどのように扱うかは、お好みで変更していただきたい。
+この例で示されている`actionType` は`logEvent`、`customAttribute`、`changeUser` ですが、タグプロバイダーがGoogle タグマネージャからのデータの処理方法を変更することをお勧めします。
 
 {% tabs %}
 {% tab JAVA %}

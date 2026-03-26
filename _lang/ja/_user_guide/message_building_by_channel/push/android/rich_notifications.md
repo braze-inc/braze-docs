@@ -1,5 +1,5 @@
 ---
-nav_title: "リッチプッシュ通知の作成"
+nav_title: リッチプッシュ通知の作成
 article_title: "Androidのリッチプッシュ通知の作成"
 page_order: 3
 page_layout: tutorial
@@ -12,7 +12,7 @@ tool:
   
 ---
 
-# Androidのリッチプッシュ通知の作成
+# Androidのための豊かなプッシュ通知sの作成
 
 > リッチ通知では、コピーだけでなく追加のコンテンツを追加することで、プッシュ通知をよりカスタマイズすることができる。Androidの通知機能には、以前からプッシュ通知に画像が含まれており、「拡張通知画像」と呼ばれている。
 
@@ -20,8 +20,7 @@ tool:
 
 Android のリッチプッシュ通知を作成する前に、次の点に注意してください。
 
-- クイックプッシュキャンペーンを作成する際、Androidのリッチ通知は利用できない。
-- Androidの拡張通知画像は2:1の比率でなければならないが、サイズ制限はない。
+- Android拡張通知 "画像sは2:1の比率でなければなりませんが、サイズ制限はありません。
 - Androidでは、標準の通知ビューに別の画像を設定することもできる。これらは推奨サイズの画像である： 
   - **小:**512x256
   - **中:**1024x512 
@@ -42,19 +41,18 @@ Android用のプッシュ通知を作成するための[キャンペーンを作
 
 ### ステップ 2: キャプションを追加する
 
-通知の画像の前に表示する **要約テキスト / 画像キャプション**を追加します。
+通知の"画像の前に表示する**Summary Text**を追加します。
 
-!["画像を追加したり、"画像のURLを入力したりできる拡張通知 "画像画面。]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![ペットフードアプリからのリッチプッシュ通知では、サマリーテキスト付きのスポットのために、より多くの食べ物を注文する時期であることを示す、ドッグと呼ばれた。]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
-### ステップ 3: メディアを追加する
+### ステップ 3:メディアを追加する
 
-メッセージのコンポーザーにある**Expanded Notification Image**フィールドに画像を追加する。画像は、ダッシュボードから直接アップロードすることも、他の場所でホストされているコンテンツ URL を指定してアップロードすることもできます。
+メッセージの作成者の**Android通知"画像**フィールドに"画像を追加します。画像は、ダッシュボードから直接アップロードすることも、他の場所でホストされているコンテンツ URL を指定してアップロードすることもできます。
 
 サポートしている画像の詳細については、「[画像の仕様]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)」を参照してください。
 
-![ユーザーは、"Hi the" as the title and " the title and " ロイヤルティプログラム!" を本文として、iOSのプッシュ通知を受け取ります。]({% image_buster /assets/img_archive/android_rich_image.png %})
+!["画像を追加したり、"画像のURL を入力したりできるAndroid 通知 "画像欄です。]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### ステップ 4: キャンペーンの作成を続ける
 
 リッチプッシュ通知がダッシュボードにアップロードされたら、[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)を続行できます。
-

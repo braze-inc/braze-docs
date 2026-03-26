@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Effectuer une 
 scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
-> Utilisez cet endpoint pour rechercher un compte utilisateur de tableau de bord existant en spécifiant son e-mail dans le paramètre de requête du filtre. 
+> Utilisez cet endpoint pour rechercher un compte utilisateur de tableau de bord existant en spécifiant son e-mail dans le paramètre de requête du filtre.
 
 Veuillez prendre en compte que, lorsque le paramètre de recherche est encodé par URL, il s’affichera ainsi :
 
@@ -40,14 +40,14 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Vous utiliserez
 
 ## Paramètres de demande
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Exemple de demande
-```json
+```bash
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -79,11 +79,11 @@ curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?fil
                         "team": [
                             {
                                 "teamId": "241adcd25789fabcded",
-                                "teamName": "Test Team",                  
+                                "teamName": "Test Team",
                                 "teamPermissions": ["admin"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         }

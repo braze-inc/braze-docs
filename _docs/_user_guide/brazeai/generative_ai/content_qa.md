@@ -5,7 +5,7 @@ page_order: 4
 description: "This reference article covers how to perform quality assurance on your message content with AI directly from the message composer."
 ---
 
-# Content QA with BrazeAI<sup>TM</sup>
+# Content QA with BrazeAI
 
 > Learn how to QA your content with BrazeAI<sup>TM</sup>, so you can catch spelling errors, grammar issues, inappropriate tone, or offensive language&#8212;before hitting send.
 

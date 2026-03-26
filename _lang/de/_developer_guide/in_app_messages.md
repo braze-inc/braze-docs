@@ -15,16 +15,16 @@ description: "Erfahren Sie mehr über In-App-Nachrichten und wie Sie sie für da
 > Erfahren Sie mehr über In-App-Nachrichten und wie Sie sie für das Braze SDK einrichten.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/in_app_messages.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab android ott %}
@@ -55,7 +55,15 @@ description: "Erfahren Sie mehr über In-App-Nachrichten und wie Sie sie für da
 {% multi_lang_include developer_guide/unity/in_app_messages.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}
+
+## Nächste Schritte
+
+Sind Sie bereit, tiefer einzutauchen? Bitte beachten Sie diese Schritt-für-Schritt-Anleitungen:
+
+- Optimieren Sie den Zeitpunkt der Zustellung von Nachrichten, indem Sie [getriggerte Nachrichten zurückstellen und wiederherstellen]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
+- Verfeinern Sie das Targeting Ihrer Nachrichten, indem [Sie bedingte Anzeigeregeln festlegen]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
+- Passen Sie das Erscheinungsbild Ihrer Marke an, indem [Sie das Design der Nachrichten mit Schlüssel-Wert-Paaren individuell anpassen]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).

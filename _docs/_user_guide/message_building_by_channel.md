@@ -52,10 +52,10 @@ When determining what message channel is best for your campaigns and Canvases, a
 - **Content** is how visually engaging your message is. You can add multimedia and other assets to your copy to make your content more rich.
 - **Urgency** is a measure of how quickly a message is able to notify your user and attract their attention. Notifications the user can immediately view have a high urgency, whereas messages that need the user to log in to your app have a low urgency.
 
-The following matrix illustrates the strengths and weaknesses of key messaging channels in terms of content and urgency. Always think about how urgent and content rich your message should be, then choose the right channel for your campaign.
+The Braze Messaging Matrix streamlines channel selection by mapping **Content Complexity** against **Delivery Urgency**. By balancing these two factors, you can help your message resonate rather than interrupt.
 
 ![Mobile/web push are simple content, high urgency; Emails are rich content, high urgency; In-app/browser messages are simple content, low urgency; Content Cards are low urgency, rich content]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
-To learn more about how you can leverage this matrix, check out our Braze Learning course on [Understanding the Messaging Matrix](https://learning.braze.com/understand-the-messaging-matrix).
+While the matrix highlights core channels, it is adaptable: SMS and WhatsApp, for instance, are high-urgency tools that scale into rich content when utilizing multimedia formats. To learn more about how you can leverage this matrix, check out our Braze Learning course on [Cross-Channel Messaging](https://learning.braze.com/cross-channel-messaging).
 
 <br><br>

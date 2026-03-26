@@ -1,7 +1,7 @@
 ---
 page_order: 4
 nav_title: 푸시 스토리
-article_title: Braze SDK용 푸시 스토리 설정하기
+article_title: Braze SDK를 위한 푸시 스토리 설정
 channel:
   - push notifications
 ---

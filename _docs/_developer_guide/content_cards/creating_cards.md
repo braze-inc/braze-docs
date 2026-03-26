@@ -1,6 +1,6 @@
 ---
-nav_title: Creating cards
-article_title: Creating Content Cards
+nav_title: Create cards
+article_title: Create Content Cards
 page_order: 0
 description: "This article covers components of creating a custom Content Card UI."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Creating Content Cards
+# Create content cards
 
 > This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It's especially helpful to understand how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
 
@@ -42,11 +42,182 @@ First, create your own custom view controller component. The default [`BrazeCont
 
 ### Step 2: Subscribe to card updates
 
-Then, register a callback function to [subscribe for data updates]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/#listening-for-card-updates) when cards are refreshed. 
+Register a callback function to subscribe for data updates when cards are refreshed. You can parse the Content Card objects and extract their payload data, such as `title`, `cardDescription`, and `imageUrl`, then use the resulting model data to populate your custom UI.
+
+To obtain the Content Card data models, subscribe to Content Card updates. Pay particular attention to the following properties:
+
+* **`id`:** Represents the Content Card ID string. This is the unique identifier used to log analytics from custom Content Cards.
+* **`extras`:** Encompasses all the key-value pairs from the Braze dashboard. 
+
+All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android), [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift), [Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web).
+
+{% tabs local %}
+{% tab web %}
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.subscribeToContentCardsUpdates((updates) => {
+  const cards = updates.cards;
+// For example:
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
+    }
+    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
+      // Use `card.title`, `card.imageUrl`, etc.
+    }
+    else if (card instanceof braze.ImageOnly) {
+      // Use `card.imageUrl`, etc.
+    }
+  })
+});
+
+braze.openSession();
+```
+
+{% alert note %}
+Content Cards only refresh on session start if `subscribeToContentCardsUpdates()` is called before `openSession()`. You can also [manually refresh the feed]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/) at any time.
+{% endalert %}
+
+{% endtab %}
+{% tab android %}
+{% subtabs local %}
+{% subtab Java %}
+
+#### Step 2a: Create a private subscriber variable
+
+To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
+
+```java
+// subscriber variable
+private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscriber;
+```
+
+#### Step 2b: Subscribe to updates
+
+Add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
+
+```java
+// Remove the previous subscriber before rebuilding a new one with our new activity.
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
+    @Override
+    public void trigger(ContentCardsUpdatedEvent event) {
+        // List of all Content Cards
+        List<Card> allCards = event.getAllCards();
+
+        // Your logic below
+    }
+};
+Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
+Braze.getInstance(context).requestContentCardsRefresh();
+```
+
+#### Step 2c: Unsubscribe
+
+Unsubscribe when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
+
+```java
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+```
+
+{% endsubtab %}
+{% subtab Kotlin %}
+
+#### Step 2a: Create a private subscriber variable
+
+To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
+
+```kotlin
+private var contentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+```
+
+#### Step 2b: Subscribe to updates
+
+Add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
+
+```kotlin
+// Remove the previous subscriber before rebuilding a new one with our new activity.
+Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
+Braze.getInstance(context).requestContentCardsRefresh()
+  // List of all Content Cards
+  val allCards = event.allCards
+
+  // Your logic below
+}
+Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Braze.getInstance(context).requestContentCardsRefresh(true)
+```
+
+#### Step 2c: Unsubscribe
+
+Unsubscribe when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
+
+```kotlin
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab swift %}
+
+To access the Content Cards data model, call [`contentCards.cards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/cards) on your `braze` instance.
+
+{% subtabs local %}
+{% subtab Swift %}
+
+```swift
+let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards
+```
+
+Additionally, you can maintain a subscription to observe for changes in your Content Cards. You can do so in one of two ways: 
+1. Maintaining a cancellable; or 
+2. Maintaining an `AsyncStream`.
+
+##### Cancellable 
+
+```swift
+// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
+// You must keep a strong reference to the cancellable to keep the subscription active.
+// The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
+let cancellable = AppDelegate.braze?.contentCards.subscribeToUpdates { [weak self] contentCards in
+  // Implement your completion handler to respond to updates in `contentCards`.
+}
+```
+
+##### AsyncStream
+
+```swift
+let stream: AsyncStream<[Braze.ContentCard]> = AppDelegate.braze?.contentCards.cardsStream
+```
+
+{% endsubtab %}
+{% subtab Objective-C %}
+
+```objc
+NSArray<BRZContentCardRaw *> *contentCards = AppDelegate.braze.contentCards.cards;
+```
+
+Additionally, if you want to maintain a subscription to your content cards, you can call [`subscribeToUpdates`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)):
+
+```objc
+// This subscription is maintained through Braze cancellable, which will continue to observe for changes until the subscription is cancelled.
+BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSArray<BRZContentCardRaw *> *contentCards) {
+  // Implement your completion handler to respond to updates in `contentCards`.
+}];
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
 
 ### Step 3: Implement analytics
 
-Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/#logging-events) to properly log all metrics back to Braze dashboard analytics.
+Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) to properly log all metrics back to Braze dashboard analytics.
 
 ### Step 4: Test your card (optional)
 

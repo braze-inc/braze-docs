@@ -6,7 +6,7 @@ URL에 UTM 매개변수를 추가하려면 다음과 같이 하세요:
 
 1. 기본 URL로 시작하세요. 추적하려는 페이지의 URL(예: `https://www.example.com`)입니다.
 2. 기본 URL 뒤에 물음표(?)를 추가합니다.
-3. 각 UTM 매개변수를 앰퍼샌드(&)로 구분하여 추가합니다.
+3. 앰퍼샌드로 구분하여 각 UTM 매개 변수를 추가합니다. (&).
 
 예는 `https://www.example.com?utm_source=newsletter&utm_medium=sms` 입니다.
 

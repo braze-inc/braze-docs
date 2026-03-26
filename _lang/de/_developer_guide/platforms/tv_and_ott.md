@@ -258,7 +258,7 @@ Für das Targeting von OTT-Apps für Messaging empfehlen wir die Erstellung eine
 ## Headless UI {#custom-ui}
 
 {% alert important %}
-Plattformen, die In-App-Nachrichten oder Content-Cards über Headless UI unterstützen , enthalten **keine** standardmäßige UI oder Ansichten. Implementieren Sie also unbedingt Ihre eigene angepasste UI.
+Plattformen, die In-App-Nachrichten oder Content-Cards über eine Headless-UI unterstützen, enthalten **keine** Standard-UI oder -Ansichten. Entwickeln Sie Ihre eigene angepasste Benutzeroberfläche (z. B. für In-App-Nachrichten) und verwenden Sie anschließend die vom SDK bereitgestellten Datenmodelle, um diese Benutzeroberflächen zu füllen.
 {% endalert %}
 
 Mit Headless UI stellt Braze ein Datenmodell (z.B. JSON) bereit, das Ihre App lesen und innerhalb eines UI verwenden kann, das Ihre App steuert. Diese Daten enthalten die im Dashboard konfigurierten Felder (Titel, Textkörper, Button-Text, Farben usw.), die Ihre App lesen und entsprechend anzeigen kann. Weitere Informationen zum angepassten Messaging-Handling finden Sie unter:

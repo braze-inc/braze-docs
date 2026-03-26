@@ -1,6 +1,6 @@
 ---
-nav_title: Internen Push ignorieren
-article_title: Braze-interne Push-Benachrichtigungen für iOS ignorieren
+nav_title: Interne Pushes ignorieren
+article_title: Interne Push-Benachrichtigungen von Braze für iOS ignorieren
 platform: iOS
 page_order: 4
 description: "Dieser Referenzartikel beschreibt, wie interne Push-Benachrichtigungen von Braze ignoriert werden können."
@@ -53,7 +53,7 @@ Sie können die Utility-Methoden in `ABKPushUtils` verwenden, um zu überprüfen
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {

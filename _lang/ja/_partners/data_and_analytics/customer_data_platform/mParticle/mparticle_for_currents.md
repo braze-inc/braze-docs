@@ -45,7 +45,7 @@ Braze フィード統合は、iOS、Android、Web、Unbound の4つのフィー�
 
 フィードごとに、[**Act as Platform**] で対応するプラットフォームをリストから選択します。**act-as**フィードを選択するオプションが表示されない場合、データは結合されていないものとして扱われるが、データウェアハウスの出力に転送することは可能である。
 
-![設定名を入力し、フィードのステータスを決定し、act as platform を選択することを求める最初の統合ダイアログボックス。]({% image_buster /assets/img/braze-feed-act1.png %}){: style="max-width:40%;"}![ サーバー間キーとサーバー間シークレットを示す 2 番目の統合ダイアログボックス。]{% image_buster /assets/img/braze-feed-act2.png %}{: style="max-width:37%;"}
+![設定名を入力し、フィードのステータスを決定し、act as platform を選択することを求める最初の統合ダイアログボックス。]({% image_buster /assets/img/braze-feed-act1.png %}){: style="max-width:40%;"} ![サーバー間キーとサーバー間シークレットを示す2つ目の統合ダイアログボックス。]({% image_buster /assets/img/braze-feed-act2.png %}){: style="max-width:37%;"}
 
 各入力を作成すると、mParticleはキーとシークレットを提供する。これらの認証情報をコピーし、各認証情報のペアがどのフィードのものであるかをメモしておいてください。
 
@@ -53,10 +53,10 @@ Braze フィード統合は、iOS、Android、Web、Unbound の4つのフィー�
 
 Braze で **[Currents] > [+ Currents を作成] > [mParticle エクスポートを作成]** に移動します。統合名、連絡先メールアドレス、各プラットフォームの mParticle API キーと mParticle シークレットキーを入力します。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に [**Currents を起動**] をクリックします。
 
-![BrazeのmParticle Currentsページ。統合名、連絡先メール、API キー、シークレットキーのフィールドがある。]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
+![BrazeのmParticle Currentsページ。ここでは、インテグレーションの名前、連絡先メール、API キー、およびシークレットキーのフィールドs を確認できます。]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
 {% alert important %}
-mParticle API キーと mParticle シークレットキーを最新の状態に維持することが重要です。コネクターの認証情報の有効期限が切れると、コネクターはイベントの送信を停止します。この状態のまま **48 時間**を超えると、コネクターのイベントがドロップし、データが永久に喪失します。
+mParticle API キーと mParticle シークレットキーを最新の状態に維持することが重要です。コネクターの認証情報の有効期限が切れると、コネクターはイベントの送信を停止します。これが **5 日** 以上続く場合、コネクタのイベントはドロップされ、データは永続的に失われます。
 {% endalert %}
 
 mParticleに送信されるすべてのイベントには、ユーザーの `external_user_id` が `customerid` として含まれます。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータを送信しない。mParticle で、デフォルトの `customerid` ではない別の ID に `external_user_id` をマッピングする場合は、Braze カスタマーサクセスマネージャーにお問い合わせください。 

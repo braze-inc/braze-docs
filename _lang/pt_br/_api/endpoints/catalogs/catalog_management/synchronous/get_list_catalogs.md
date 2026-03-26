@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Catálogos de listas"
+nav_title: "OBTER: Listar catálogos"
 article_title: "OBTER: Catálogos de listas"
 search_tag: Endpoint
 page_order: 2
@@ -106,12 +106,12 @@ O código de status `200` poderia retornar o seguinte corpo de resposta.
         {
           "name": "time_field",
           "type": "time"
-        },
+        }
       ],
       "name": "my_catalog",
       "num_items": 3,
       "updated_at": "2022-11-02T09:03:19.967+00:00"
-    },
+    }
   ],
   "message": "success"
 }

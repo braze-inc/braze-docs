@@ -8,21 +8,21 @@
 
 ## Habilitación de mensajes dentro de la aplicación
 
-### Paso 1: Registro `BrazeInAppMessageManager`
+### Paso 1: Realizar el registro `BrazeInAppMessageManager`
 
 La visualización de mensajes dentro de la aplicación es gestionada por la clase [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html). Cada actividad de tu aplicación debe registrarse en `BrazeInAppMessageManager` para que pueda añadir vistas de mensajes dentro de la aplicación a la jerarquía de vistas. Hay dos formas de conseguirlo:
 
 {% tabs local %}
-{% tab automáticamente %}
+{% tab automatically %}
 La [integración de la devolución de llamada del ciclo de vida de la actividad]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) gestiona automáticamente el registro de mensajes dentro de la aplicación; no se requiere ninguna integración adicional. Este es el método recomendado para gestionar el registro de mensajes dentro de la aplicación.
 {% endtab %}
 
-{% tab manualmente %}
+{% tab manually %}
 {% alert warning %}
 Si utilizas la devolución de llamada del ciclo de vida de la actividad para el registro automático, no completes este paso.
 {% endalert %}
 
-En tu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())llamada [`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html):
+En tu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()), llama al[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html) :
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -41,7 +41,7 @@ BrazeInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(cont
 {% endsubtab %}
 {% endsubtabs %}
 
-En cada actividad en la que se puedan mostrar mensajes dentro de la aplicación, llama a [`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html) en la página `onResume()` de esa actividad:
+En cada actividad en la que se puedan mostrar mensajes dentro de la aplicación, llama a[`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html)  en esa actividad`onResume()`:
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -71,7 +71,7 @@ public override fun onResume() {
 {% endsubtab %}
 {% endsubtabs %}
 
-En cada actividad en la que [`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html) se ha llamado, llama a [`unregisterInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/unregister-in-app-message-manager.html) en la página `onPause()` de esa actividad:
+En cada actividad en la que[`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html)se haya llamado a , llama a[`unregisterInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/unregister-in-app-message-manager.html)  en la actividad `onPause()`:
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -101,7 +101,7 @@ public override fun onPause() {
 {% endtab %}
 {% endtabs %}
 
-### Paso 2: Actualizar la lista de bloqueo del administrador (opcional)
+### Paso 2: Actualiza la lista de bloqueados del administrador (opcional)
 
 En tu integración, puedes requerir que ciertas actividades de tu aplicación no muestren mensajes dentro de la aplicación. La [integración de la devolución de llamada del ciclo de vida de la actividad]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) proporciona una forma sencilla de conseguirlo.
 

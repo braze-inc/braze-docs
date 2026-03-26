@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting
-article_title: Troubleshooting Segments
+article_title: Troubleshoot Segments
 page_order: 12
 page_type: reference
 tool: 
@@ -8,7 +8,7 @@ tool:
 description: "This reference article covers troubleshooting steps and considerations to keep in mind while using segments."
 ---
 
-# Troubleshooting segments
+# Troubleshoot segments
 
 ## Errors
 
@@ -106,6 +106,7 @@ The first scenario is if the `app_id` field is populated when using the `/users/
 The second scenario is if the `app_id` field is populated when using the `/users/track` endpoint to migrate push tickets, such as in this example: 
 
 ```json
+{
 "app_group_id": "{YOUR_APP_GROUP_ID}",
 "attributes": [
 {
@@ -119,4 +120,5 @@ The second scenario is if the `app_id` field is populated when using the `/users
       ]
   }
 ]
+}
 ```

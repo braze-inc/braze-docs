@@ -2,140 +2,150 @@
 nav_title: Snowflake
 article_title: Snowflake
 alias: /partners/snowflake/
-description: "This reference article outlines the partnership between Braze and Snowflake, a purpose-built SQL cloud data warehouse for all of your data and users."
+description: "이 문서에서는 데이터 공유(Braze에서 Snowflake로)와 클라우드 데이터 수집(Snowflake에서 Braze로)을 포함하여 Braze와 Snowflake 간의 파트너십에 대해 설명합니다."
 page_type: partner
 search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# Snowflake
 
-> [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is a purpose-built SQL cloud data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings. With Snowflake's unique and patented architecture, it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
+> [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html)는 SaaS(software-as-a-service)로 제공되는 전용 SQL 클라우드 데이터 웨어하우스입니다. Snowflake는 기존 데이터 웨어하우스 제품보다 더 빠르고, 사용하기 쉬우며, 훨씬 유연한 데이터 웨어하우스를 제공합니다. Snowflake의 고유하고 특허받은 아키텍처를 통해 모든 데이터를 쉽게 수집하고, 빠른 분석을 수행하며, 모든 사용자를 위한 데이터 중심 인사이트를 도출할 수 있습니다.
 
-Personalized and relevant marketing campaigns require in-the-moment access to data. That's why Braze teamed up with Snowflake to launch data sharing. This joint offering enables marketers to unlock the potential of their customer engagement and campaign data faster than ever before.
+Braze는 Snowflake와 두 가지 통합을 제공합니다. 이 두 가지를 함께 사용하면 Braze와 Snowflake 환경 간에 완전한 양방향 데이터 파이프라인을 구축할 수 있습니다.
 
-The [Braze and Snowflake integration](https://www.braze.com/perspectives/article/snowflake-partner-announcement) leverages Snowflake's data exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
+## 통합 선택
 
-{% alert tip %}
-**Interested in having access to Snowflake-level data without the need for a Snowflake account?**<br>Check out [Snowflake Reader Accounts]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts). With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled entirely by Braze.
-{% endalert %}
+### 데이터 공유 (Braze에서 Snowflake로)
 
-## What is Data Sharing?
+Snowflake [Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_sharing/)을 사용하면 Snowflake 인스턴스에서 직접 Braze 참여 및 캠페인 데이터에 안전하게 실시간으로 접근할 수 있습니다. 계정 간에 데이터가 복사되거나 전송되지 않으며, 모든 공유는 Snowflake의 고유한 서비스 레이어와 메타데이터 저장소를 통해 이루어집니다.
 
-Snowflake's [Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) functionality allows Braze to give you secure access to data on our Snowflake portal without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships. Data sharing can be set up through the following integration or through [Snowflake Reader Accounts]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts).
+**데이터 공유를 사용하면 좋은 경우:**
+- Snowflake SQL을 사용하여 Braze 이벤트 및 캠페인 데이터를 쿼리하고 싶을 때
+- 복잡한 보고서를 생성하고 기여도 모델링을 수행하고 싶을 때
+- Braze 데이터를 Snowflake 웨어하우스의 다른 데이터와 결합하고 싶을 때
+- 채널, 산업, 기기 플랫폼 전반에 걸쳐 참여 데이터를 벤치마크하고 싶을 때
 
-- **Reduce time to insights**<br>Say goodbye to ETL processes that take weeks to build out. Braze and Snowflake's unique architectures make all customer engagement and campaign data immediately accessible and queryable from the instant it arrives in the data lake. No data is copied or moved, so you can deliver customer experiences based on only the most relevant, up-to-date information.
-- **Break down data silos**<br>Create a holistic view of your customers across channels and platforms. Data sharing makes joining your Braze customer engagement data with all of your other Snowflake data easier than ever—creating richer insights across a single, reliable source of truth.
-- **See how your engagement stacks up**<br>Optimize your customer engagement strategies with Braze Benchmarks. This interactive tool, powered by Braze and Snowflake, allows you to compare your brand's engagement data to benchmarks across channels, industry, and device platforms.
+설정 방법은 [Snowflake 데이터 공유]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_sharing/)를 참조하세요.
 
-With data sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake's unique services layer and metadata store. This is an important concept because shared data does not take up any storage in a consumer account and, therefore, does not contribute to the consumer's monthly data storage charges. The **only** charges to consumers are for the computing resources (such as virtual warehouses) used to query the shared data.
+### 클라우드 데이터 수집 (Snowflake에서 Braze로)
 
-Additionally, using Snowflake's built-in roles and permissions capabilities, access to data shared from Braze can be controlled and governed using the access controls already in place for your Snowflake account and the data therein. Access can be restricted and monitored the same way as your own data.
+[클라우드 데이터 수집(CDI)]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/)을 사용하면 Snowflake 인스턴스의 데이터를 Braze로 직접 동기화할 수 있습니다. 이를 통해 Braze의 사용자 속성, 이벤트, 구매 데이터를 신뢰할 수 있는 소스인 데이터 웨어하우스와 최신 상태로 유지할 수 있습니다.
 
-To learn more about Snowflake's data sharing, see [Introduction to Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
+**클라우드 데이터 수집을 사용하면 좋은 경우:**
+- Snowflake의 사용자 속성을 Braze 고객 프로필에 동기화하고 싶을 때
+- Snowflake의 이벤트 또는 구매 데이터를 Braze로 전송하고 싶을 때
+- 웨어하우스에서 발생하는 데이터 변환과 Braze를 동기화 상태로 유지하고 싶을 때
+- Snowflake에서 Braze로의 커스텀 ETL 파이프라인 구축 및 유지 관리를 피하고 싶을 때
 
-## Prerequisites
+Snowflake의 데이터 공유에 대해 자세히 알아보려면 [Secure Data Sharing 소개](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work)를 참조하세요.
 
-Before you can use this feature, you'll need to complete the following:
+## 필수 조건
 
-| Requirement | Description |
+이 기능을 사용하기 전에 다음을 완료해야 합니다:
+
+| 요구 사항 | 설명 |
 | ----------- | ----------- |
-| Braze access | To access this feature in Braze, you'll need to reach out to your Braze account or customer success manager. |
-| Snowflake account | A Snowflake account with `admin` permissions. |
+| Braze 접근 권한 | Braze에서 이 기능에 접근하려면 Braze 계정 매니저 또는 고객 성공 매니저에게 문의해야 합니다. |
+| Snowflake 계정 | `admin` 권한이 있는 Snowflake 계정이 필요합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Setting up Secure Data Sharing
+## Secure Data Sharing 설정
 
-For Snowflake, data sharing happens between a [data provider](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) and [data consumer](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers). Within this context, your Braze account is the data provider because it creates and sends the datashare—whereas your Snowflake account is the data consumer because it uses the datashare to create a database. For more details, see [Snowflake: Consuming Shared Data](https://docs.snowflake.com/en/user-guide/data-share-consumers).
+Snowflake에서 데이터 공유는 [데이터 공급자](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers)와 [데이터 소비자](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers) 간에 이루어집니다. 이 컨텍스트에서 Braze 계정은 데이터 공유를 생성하고 전송하는 데이터 공급자이며&#8212;Snowflake 계정은 데이터 공유를 사용하여 데이터베이스를 생성하는 데이터 소비자입니다. 자세한 내용은 [Snowflake: 공유 데이터 사용](https://docs.snowflake.com/en/user-guide/data-share-consumers)을 참조하세요.
 
-### Step 1: Send the datashare from Braze
+### 1단계: Braze에서 데이터 공유 전송
 
-1. In Braze, go to **Partner Integrations** > **Data Sharing**.
-2. Enter your Snowflake account details and locator. To get your account locator, run `SELECT CURRENT_ACCOUNT()` in the destination account.
-3. If you're using a CRR share, specify the cloud provider and region.
-4. When you're finished, select **Create Datashare**. This will send the datashare to your Snowflake account.
+1. Braze에서 **파트너 통합** > **데이터 공유**로 이동합니다.
+2. Snowflake 계정 세부 정보와 로케이터를 입력합니다. 계정 로케이터를 얻으려면 대상 계정에서 `SELECT CURRENT_ACCOUNT()`를 실행하세요.
+3. CRR 공유를 사용하는 경우 클라우드 공급자와 리전을 지정합니다.
+4. 완료되면 **데이터 공유 생성**을 선택합니다. 그러면 데이터 공유가 Snowflake 계정으로 전송됩니다.
 
-### Step 2: Create the database in Snowflake
+### 2단계: Snowflake에서 데이터베이스 생성
 
-1. After a few minutes, you should receive the inbound datashare in your Snowflake acccount.
-2. Using the inbound datashare, create a database to view and query the tables. For example:
+1. 몇 분 후, 인바운드 데이터 공유가 Snowflake 계정에 수신됩니다.
+2. 인바운드 데이터 공유를 사용하여 테이블을 조회하고 쿼리할 데이터베이스를 생성합니다. 예시:
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
-3. Grant priviliges to query the new database.
+3. 새 데이터베이스를 쿼리할 수 있는 권한을 부여합니다.
 
 {% alert warning %}
-If you delete and recreate a share in the Braze dashboard, you must drop the previously-created database and recreate it using `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` to query the inbound share.
+Braze 대시보드에서 공유를 삭제하고 다시 생성하는 경우, 이전에 생성한 데이터베이스를 삭제하고 `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>`을 사용하여 다시 생성해야 인바운드 공유를 쿼리할 수 있습니다.
+여러 워크스페이스가 동일한 Snowflake 계정으로 데이터를 공유하는 경우, 다중 워크스페이스 구성 관리에 대한 안내는 [Snowflake 데이터 공유 FAQ]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/)를 참조하세요.
 {% endalert %}
 
-## Usage and visualization
+## 사용 및 시각화
 
-After the data share is provisioned, you will need to create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
+데이터 공유가 프로비저닝된 후, 수신 데이터 공유에서 데이터베이스를 생성해야 합니다. 그러면 공유된 모든 테이블이 Snowflake 인스턴스에 나타나며, 인스턴스에 저장된 다른 데이터와 마찬가지로 쿼리할 수 있습니다. 다만, 공유 데이터는 읽기 전용이며 쿼리만 가능하고 어떤 방식으로도 수정하거나 삭제할 수 없다는 점을 유의하세요.
 
-Similar to Currents, you can use your Snowflake Secure Data Sharing to:
+커런츠와 마찬가지로, Snowflake Secure Data Sharing을 사용하여 다음을 수행할 수 있습니다:
 
-- Create complex reports
-- Perform attribution modeling
-- Secure sharing within your own company
-- Map raw event or user data to a CRM (like Salesforce)
-- And more
+- 복잡한 보고서 생성
+- 기여도 모델링 수행
+- 회사 내 안전한 공유
+- 원시 이벤트 또는 사용자 데이터를 CRM(예: Salesforce)에 매핑
+- 기타 다양한 활용
 
-[Download the raw table schemas here.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
+사용 가능한 테이블 및 열의 전체 목록은 [SQL 테이블 참조]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)를 참조하세요. Snowflake 데이터 공유에는 해당 참조의 모든 테이블과 스냅샷, 캠페인 및 Canvas 체인지로그, 에이전트 콘솔 이벤트, 메시지 재시도 이벤트에 대한 추가 Snowflake 전용 테이블이 포함됩니다.
 
-### User ID schema
+[원시 테이블 스키마를 다운로드]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})하여 텍스트 파일로 확인할 수도 있습니다.
 
-Note the following differences between Braze and Snowflake naming conventions for user IDs.
+### 사용자 ID 스키마
 
-| Braze schema | Snowflake schema | Description |
+사용자 ID에 대한 Braze와 Snowflake 명명 규칙의 다음 차이점에 유의하세요.
+
+| Braze 스키마 | Snowflake 스키마 | 설명 |
 | ----------- | ----------- | ----------- |
-| `braze_id` | `"USER_ID"` | The unique identifier that is automatically assigned by Braze. |
-| `external_id` | `"EXTERNAL_USER_ID"` | The unique identifier of a user's profile that is set by the customer. |
+| `braze_id` | `"USER_ID"` | Braze에서 자동으로 할당하는 고유 식별자입니다. |
+| `external_id` | `"EXTERNAL_USER_ID"` | 고객이 설정하는 고객 프로필의 고유 식별자입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Important information and limitations
+## 중요 정보 및 제한 사항
 
-### Breaking versus non-breaking changes
+### 호환성을 깨는 변경과 깨지 않는 변경
 
-#### Non-breaking changes
+#### 호환성을 깨지 않는 변경
 
-Non-breaking changes can happen at any time and generally provide additional functionality. Examples of non-breaking changes:
-- Adding a new table or view
-- Adding a column to an existing table or view
+호환성을 깨지 않는 변경은 언제든지 발생할 수 있으며, 일반적으로 추가 기능을 제공합니다. 호환성을 깨지 않는 변경의 예시:
+- 새 테이블 또는 뷰 추가
+- 기존 테이블 또는 뷰에 열 추가
 
 {% alert important %}
-Because new columns are considered non-breaking, Braze strongly recommends explicitly listing the columns of interest in each query instead of using `SELECT *` queries. Alternately, you might want to create views that explicitly name columns and then query those views instead of the tables directly.
+새 열은 호환성을 깨지 않는 변경으로 간주되므로, Braze는 `SELECT *` 쿼리를 사용하는 대신 각 쿼리에서 관심 있는 열을 명시적으로 나열할 것을 강력히 권장합니다. 또는 열을 명시적으로 지정하는 뷰를 생성한 다음 테이블 대신 해당 뷰를 쿼리하는 것도 좋은 방법입니다.
 {% endalert %}
 
-#### Breaking changes
+#### 호환성을 깨는 변경
 
-When possible, breaking changes will be preceded by an announcement and a migration period. Examples of breaking changes include:
-- Removing a table or view
-- Removing a column from an existing table or view
-- Changing the type or nullability of an existing column
+가능한 경우, 호환성을 깨는 변경은 사전 공지와 마이그레이션 기간이 선행됩니다. 호환성을 깨는 변경의 예시:
+- 테이블 또는 뷰 제거
+- 기존 테이블 또는 뷰에서 열 제거
+- 기존 열의 유형 또는 null 허용 여부 변경
 
-### Snowflake regions
+### Snowflake 리전
 
-Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
+Braze는 현재 Snowflake AWS 미국 동부-1, 유럽 중부(프랑크푸르트), AP 동남부-2(시드니), AP 동남부-3(자카르타) 리전에서 모든 사용자 수준 데이터를 호스팅하고 있습니다. 해당 리전 외부의 사용자에 대해서는, Braze가 AWS, Azure 또는 GCP 리전에서 Snowflake 인프라를 호스팅하는 공동 고객에게 데이터 공유를 제공할 수 있습니다.
 
-### Data Retention
+### 데이터 보존
 
-#### Retention Policy
+#### 보존 정책
 
-Any data older than two years will be archived and moved to long term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields are stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
+2년이 지난 데이터는 아카이브되어 장기 스토리지로 이동됩니다. 아카이브 프로세스의 일환으로 모든 이벤트가 익명화되며, 개인 식별 정보(PII) 민감 필드가 제거됩니다(`properties`와 같은 선택적 PII 필드 포함). 아카이브된 데이터에는 여전히 `user_id` 필드가 포함되어 있어 모든 이벤트 데이터에 대한 사용자별 분석이 가능합니다.
 
-You will be able to query against the most recent two years of data for each event in the corresponding `USERS_*_SHARED` view. Additionally, each event will have a `USERS_*_SHARED_ALL` view which can be queried against to return both anonymized and non-anonymized data.
+각 이벤트에 대해 해당 `USERS_*_SHARED` 뷰에서 최근 2년간의 데이터를 쿼리할 수 있습니다. 또한 각 이벤트에는 익명화된 데이터와 익명화되지 않은 데이터를 모두 반환하도록 쿼리할 수 있는 `USERS_*_SHARED_ALL` 뷰가 있습니다.
 
-#### Historical data
+#### 과거 데이터
 
-The archive of historical event data in Snowflake goes back to April 2019. In the first few months of Braze storing data in Snowflake, product changes were made that may have resulted in some of that data looking slightly different or having some null values (as we weren't passing data into every available field at this time). It's best to assume that any results that include data before August 2019 may look slightly different from expectations.
+Snowflake의 과거 이벤트 데이터 아카이브는 2019년 4월까지 거슬러 올라갑니다. Braze가 Snowflake에 데이터를 저장하기 시작한 초기 몇 달 동안 제품 변경이 이루어져, 일부 데이터가 약간 다르게 보이거나 null 값이 있을 수 있습니다(당시 모든 사용 가능한 필드에 데이터를 전달하지 않았기 때문입니다). 2019년 8월 이전의 데이터를 포함하는 결과는 예상과 약간 다를 수 있다고 가정하는 것이 좋습니다.
 
-### General Data Protection Regulation (GDPR) compliance
+### 일반 데이터 보호 규정(GDPR) 준수
 
-Nearly every event record Braze stores includes a few fields representing users' personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user's request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
+{% multi_lang_include partners/snowflake_pii_gdpr.md %}
 
-### Speed, performance, cost of queries
+### 쿼리 속도, 성능, 비용
 
-The speed, performance, and cost of any query run on top of the data are determined by the warehouse size you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be successful. Snowflake has excellent resources available about how to best determine which size to use including [Overview of warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse considerations](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
+데이터에 대해 실행하는 모든 쿼리의 속도, 성능 및 비용은 데이터를 쿼리하는 데 사용하는 웨어하우스 크기에 따라 결정됩니다. 경우에 따라 분석을 위해 접근하는 데이터 양에 따라 쿼리가 성공하려면 더 큰 웨어하우스 크기를 사용해야 할 수 있습니다. Snowflake는 [웨어하우스 개요](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) 및 [웨어하우스 고려 사항](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)을 포함하여 최적의 크기를 결정하는 방법에 대한 훌륭한 리소스를 제공합니다.
 
-> For a set of example queries to reference when setting up snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/) examples.
+> Snowflake 설정 시 참조할 수 있는 예시 쿼리 세트는 [샘플 쿼리]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) 및 [ETL 이벤트 파이프라인 설정]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/) 예시를 확인하세요.
 
+설정 방법은 [클라우드 데이터 수집: 데이터 웨어하우스 통합]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/)을 참조하세요.

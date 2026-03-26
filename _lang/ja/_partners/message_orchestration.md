@@ -4,11 +4,11 @@ article_title: メッセージオーケストレーションパートナー
 page_order: 2
 
 page_type: landing
-description: "このランディングページには、リターゲティング、メールテンプレート、プロモーション、アトリビューションなどを使用してメッセージを調整できるBrazeパートナー（Alloys）が一覧表示されています。"
+description: "このランディングページには、リターゲティング、メールテンプレート、プロモーション、アトリビューションなどを使用してメッセージのオーケストレーションを行える Braze パートナー（Alloys）が一覧表示されています。"
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Message Orchestration"
+partner_top_header: "メッセージオーケストレーション"
 
 valid_partner_list:
 - name: Jacquard
@@ -23,6 +23,8 @@ valid_partner_list:
   url: /docs/partners/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/kochava/
+- name: Linkrunner
+  url: /docs/partners/linkrunner/
 - name: Singular
   url: /docs/partners/singular/
 - name: Contentful
@@ -53,9 +55,11 @@ valid_partner_list:
   url: /docs/partners/blayer/
 - name: Dyspatch
   url: /docs/partners/dyspatch/
+- name: Denada
+  url: /docs/partners/denada/
 - name: Email Love
   url: /docs/partners/email_love/
-- name: IAMスタジオ
+- name: IAM Studio
   url: /docs/partners/iam_studio/
 - name: Knak
   url: /docs/partners/knak/
@@ -88,7 +92,7 @@ valid_partner_list:
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
+  url: /docs/partners/ecommerce/shopify
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Knak
@@ -121,7 +125,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
-- name: マイポストカード
+- name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: Dixa
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
@@ -129,4 +133,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Jasper
+  url: /docs/partners/jasper/
 ---

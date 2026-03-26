@@ -21,13 +21,13 @@ braze.logInAppMessageButtonClicked(inAppMessage, 0);
 
 ## Zugriff auf Nachrichten-Daten
 
-Für den Zugriff auf In-App-Nachricht-Daten in Ihrer Flutter App unterstützt `BrazePlugin` das Senden von In-App-Nachricht-Daten über [Dart Streams](https://dart.dev/tutorials/language/streams).
+Für den Zugriff auf In-App-Nachrichten-Daten in Ihrer Flutter-App unterstützt das `BrazePlugin` das Senden von In-App-Nachrichten-Daten über [Dart Streams](https://dart.dev/tutorials/language/streams).
 
-Das Objekt `BrazeInAppMessage` unterstützt eine Teilmenge der Felder, die in den nativen Modellobjekten verfügbar sind, darunter `uri`, `message`, `header`, `buttons`, `extras` und weitere.
+Das `BrazeInAppMessage`-Objekt unterstützt eine Teilmenge der Felder, die in den nativen Modellobjekten verfügbar sind, darunter `uri`, `message`, `header`, `buttons`, `extras` und weitere.
 
-### Schritt 1: Auf In-App-Nachrichten-Daten im Dart-Layer achten
+### Auf In-App-Nachrichten-Daten im Dart-Layer lauschen
 
-Um die Daten der In-App-Nachricht im Dart-Layer zu empfangen, verwenden Sie den folgenden Code, um `StreamSubscription` zu erstellen und `braze.subscribeToInAppMessages()` aufzurufen. Denken Sie daran, das Stream-Abo auf `cancel()` zu setzen, wenn Sie es nicht mehr benötigen.
+Um In-App-Nachrichten-Daten im Dart-Layer zu empfangen, verwenden Sie den folgenden Code, um eine `StreamSubscription` zu erstellen und `braze.subscribeToInAppMessages()` aufzurufen. Denken Sie daran, das Stream-Abo mit `cancel()` zu beenden, wenn es nicht mehr benötigt wird.
 
 ```dart
 // Create stream subscription
@@ -41,37 +41,31 @@ inAppMessageStreamSubscription = braze.subscribeToInAppMessages((BrazeInAppMessa
 inAppMessageStreamSubscription.cancel();
 ```
 
-Ein Beispiel finden Sie [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) in unserer Beispiel-App.
+Ein Beispiel finden Sie in [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) in der Braze Flutter SDK Beispiel-App.
 
-### Schritt 2: In-App-Nachrichten-Daten aus dem nativen Layer weiterleiten
-
-Um die Daten im Dart-Layer aus Schritt 1 zu empfangen, fügen Sie den folgenden Code hinzu, um die In-App-Nachrichten-Daten aus den nativen Layern weiterzuleiten.
+### In-App-Nachrichten-Daten aus dem nativen Layer weiterleiten
 
 {% tabs %}
-{% tab Android %}
+{% tab Flutter SDK 18.0.0+ %}
 
-Die In-App-Nachrichtendaten werden automatisch von der Android-Ebene weitergeleitet.
+In-App-Nachrichten-Daten werden automatisch von den nativen Android- und iOS-Layern weitergeleitet. Es ist keine zusätzliche Einrichtung erforderlich.
 
 {% endtab %}
-{% tab iOS %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
+Wenn Sie Flutter SDK 17.1.0 oder älter verwenden, erfordert die Weiterleitung von In-App-Nachrichten-Daten aus dem nativen iOS-Layer eine manuelle Einrichtung. Ihre Anwendung enthält wahrscheinlich eine der folgenden Varianten. Um auf Flutter SDK 18.0.0 zu migrieren, entfernen Sie den Aufruf von `BrazePlugin.processInAppMessage(_:)` – die Datenweiterleitung wird jetzt automatisch gehandhabt.
+
 {% subtabs %}
+{% subtab UI Delegate %}
 
-Sie können In-App-Nachricht-Daten auf eine von zwei Arten weiterleiten:
+Entfernen Sie den Aufruf von `BrazePlugin.processInAppMessage(_:)` aus Ihrer [`willPresent`-Delegatenimplementierung](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv).
 
-{% subtab ui deligate %}
-
-1. Implementieren Sie den Delegaten `BrazeInAppMessageUIDelegate` wie im iOS-Artikel zum [Delegaten für In-App-Nachrichten](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui) beschrieben.
-
-2. Aktualisieren Sie Ihre [`willPresent` Delegatenimplementierung](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv), um `BrazePlugin.process(inAppMessage)` aufzurufen.
 {% endsubtab %}
 
-{% subtab custom presenter %}
-1. Vergewissern Sie sich, dass Sie die In-App-Nachrichten-Benutzeroberfläche aktiviert haben und stellen Sie `inAppMessagePresenter` auf Ihren benutzerdefinierten Präsentator ein.
-```swift
-    let inAppMessageUI = CustomInAppMessagePresenter()
-    braze.inAppMessagePresenter = inAppMessageUI
-```
-2. Erstellen Sie Ihre eigene Presenter-Klasse und rufen Sie `BrazePlugin.process(inAppMessage)` innerhalb von [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/present(message:)-f2ra).
+{% subtab Custom presenter %}
+
+Entfernen Sie den Aufruf von `BrazePlugin.processInAppMessage(message)` aus der [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/present(message:)-f2ra)-Implementierung Ihres angepassten Presenters:
+
 ```swift
 class CustomInAppMessagePresenter: BrazeInAppMessageUI {
   override func present(message: Braze.InAppMessage) {
@@ -83,14 +77,16 @@ class CustomInAppMessagePresenter: BrazeInAppMessageUI {
   }
 }
 ```
+
 {% endsubtab %}
 {% endsubtabs %}
+
 {% endtab %}
 {% endtabs %}
 
-### Schritt 3: Wiederholung des Callbacks für In-App-Nachrichten (optional)
+### Callback für In-App-Nachrichten erneut abspielen (optional)
 
-Um alle vor dem Callback getriggerten In-App-Nachrichten zu speichern und nach dem Setzen des Callbacks erneut wiederzugeben, fügen Sie bei der Initialisierung von `BrazePlugin` Folgendes in `customConfigs` ein:
+Um alle In-App-Nachrichten zu speichern, die getriggert wurden, bevor der Callback verfügbar ist, und sie nach dem Setzen des Callbacks erneut abzuspielen, fügen Sie bei der Initialisierung des `BrazePlugin` den folgenden Eintrag in die `customConfigs`-Map ein:
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```

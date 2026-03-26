@@ -1,127 +1,167 @@
 ---
-nav_title: SEEN
-article_title: SEEN
-description: "This reference article outlines the partnership between Braze and SEEN, a platform to design personalized videos to increase engagement throughout the customer journey."
+nav_title: Seen
+article_title: Seen
+description: "Seen enables personalized video experiences at scale, helping brands drive higher engagement across the customer journey."
 alias: /partners/seen/
 page_type: partner
 search_tag: Partner
 ---
 
-# SEEN
+# Seen
 
-> [SEEN](https://seen.io/) is a personalization video platform that allows companies to create and build videos around their customers to deliver a more engaging experience. With SEEN, you can design a video around your data, personalize it at scale in the cloud, then distribute it where it works best.
+> [Seen](https://seen.io) enables brands to create and deliver personalized video experiences at scale. With Seen, you can design a video around your data, personalize it at scale in the cloud, then distribute it where it works best.
+>
+> The Braze and Seen integration lets you send user data from Braze to Seen, dynamically generate personalized videos, and return video assets—such as a unique player URL and thumbnail—back into Braze for use in campaigns and Canvases.
+
 
 ## Use cases
 
-SEEN offers automated video personalization across the entire customer journey. Common uses include onboarding, loyalty, sign-ups and conversion, and win-back and anti-churn.
+Seen supports automated, personalized video delivery across the customer lifecycle, including:
+
+- **Onboarding**: Welcome new users with videos personalized to their profile or signup context
+- **Conversion and activation**: Reinforce key actions with contextual video messaging
+- **Loyalty and upsell**: Highlight personalized offers or usage milestones
+- **Win-back and churn prevention**: Re-engage inactive users with tailored video content
+
 
 ## Prerequisites
 
-Before you start, you'll need the following:
+Before you begin, you need the following:
 
-| Prerequisite          | Description                                                                                                                                |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| A SEEN campaign   | A SEEN campaign is required to take advantage of this partnership.                                                                     |
-| Data source   | You'll need to send data to SEEN to personalize your videos. Make sure you have all relevant data available in Braze, and that you pass data with **braze_id** as the identifier. |
-| Braze Data Transformation Webhook URL   | Braze Data Transformation will be used to reformat the incoming data from SEEN so it can be accepted by Braze’s /users/track endpoint. |
+| Prerequisite | Description |
+|--------------|-------------|
+| Seen Platform access | You need a Seen Platform subscription or active Seen campaign. You need access to your Workspace settings to retrieve your Workspace ID and generate an API token. |
+| Braze Data Transformation Webhook URL | Braze Data Transformation reformats the incoming data from Seen so it can be accepted by Braze’s /users/track endpoint. |
+| Braze user data | Video personalization requires user-level data. Ensure the relevant attributes are available in Braze and that you pass **braze_id** as the unique identifier. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+
+
+
+## How Seen Journeys work
+
+Seen uses [Journeys](https://docs.seen.io/journey) to control how incoming data is processed and how video outputs are generated.
+
+A Journey is a configurable workflow that:
+- Receives data from external systems (such as Braze)
+- Applies logic and personalization rules
+- Generates a video and associated assets
+- Returns a configurable response payload
+
+Journeys are composed of **nodes**, each with a specific function:
+
+- **Trigger node**: Defines how and when a Journey starts (for Braze integrations, use an `On Create` trigger)
+- **Conditional node**: Routes users through different logic paths based on data values
+- **Project node**: Applies dynamic video personalization using the incoming data
+- **Player node**: Generates a unique video player URL
+- **Webhook node**: Defines the response payload sent back to Braze
+
+Because Journey responses are configurable, ensure the output fields returned by Seen match the attributes expected by your Braze Data Transformation.
+
 
 ## Rate limit
+The Seen API accepts up to 100 calls every 10 seconds.
 
-The SEEN API currently accepts 1,000 calls per hour.
 
-## Integrating SEEN with Braze
+## Integration
 
-In the following example, we'll send users' data to SEEN for video generation, and receive a unique landing page link and a unique, personalized thumbnail back to Braze for distribution. This example uses a POST webhook to send data to SEEN, and data transformation to receive the data back to Braze. If you have multiple video campaigns with SEEN, repeat the process to connect Braze with all video campaigns.
+In this example, Braze sends user data to Seen to generate a personalized video. Seen then returns a unique video player URL and thumbnail URL, which are stored as custom attributes in Braze for use in messaging.
 
-{% alert tip %}
-If you experience any issues, contact your SEEN customer success manager for assistance.
-{% endalert %}
+If you have multiple video campaigns with Seen, repeat the process to connect Braze with all video campaigns.
 
-### Step 1: Create a webhook campaign
+### Step 1: Create a webhook campaign to send data to Seen
 
-Create a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) in Braze. Give your campaign a name, then refer to the following table to compose your webhook:
+Create a new [Webhook Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) in Braze.
+
+Configure the webhook as follows:
+
+- **Webhook URL**:  
+  `https://next.seen.io/v1/workspaces/{WORKSPACE_ID}/data`  
+  Find your Workspace ID in the Seen Platform settings.
+
+- **HTTP Method**: POST
+- **Request body**: Raw Text  
+  Use the following example as a starting point. Refer to [Seen’s data creation documentation](https://docs.seen.io/create-data) for further information.
 
 {% raw %}
-<table>
-  <thead>
-    <tr>
-      <th><strong>Field</strong></th>
-      <th><strong>Details</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Webhook URL</strong></td>
-      <td>Use the following webhook URL. You will receive your <code>campaign_slug</code> from SEEN to call the correct endpoint.<br><br><code>https://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</code></td>
-    </tr>
-    <tr>
-      <td><strong>HTTP Method</strong></td>
-      <td>Use the <code>POST</code> method.</td>
-    </tr>
-    <tr>
-      <td><strong>Request body</strong></td>
-      <td>Enter your request body in raw text similar to the following.<br><br><pre><code>[
-    {
-    "first_name":"{{${first_name}}}",
-    "last_name":"{{${last_name}}}",
-    "email":"{{${email_address}}}",
-    "customer_id":"{{${braze_id}}}"
-    }
-]</code></pre><br>For more information, see <a href="https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/overview/tvy2F5tS3JRM7DfcHwz5fK#request-content">SEEN API</a>.</td>
-    </tr>
-    <tr>
-      <td><strong>Request headers</strong></td>
-      <td>Use the following information to fill out your request headers:<br>- <strong>Authorization:</strong> <code>Token {token}</code><br>- <strong>Content-Type:</strong> <code>application/json</code><br><br>You will receive your Authentication Token from SEEN.</td>
-    </tr>
-  </tbody>
-</table>
+```json
+{
+  "first_name": "{{${first_name}}}",
+  "last_name": "{{${last_name}}}",
+  "email": "{{${email_address}}}",
+  "id": "{{${braze_id}}}"
+}
+```
 {% endraw %}
+- **Request headers**:
+  - `Authorization`: Bearer `{Seen_API_TOKEN}`
+  - `Content-Type`: `application/json`
+
+  > Generate an [API token](https://docs.seen.io/authorization) in the Seen Platform under Workspace settings. You can reach out to your Seen Customer Success Manager for assistance.
+
+- To test the webhook with a user, switch to the **Test** tab.
+- After confirming the test works as intended, complete the webhook setup.
+
+
+### Step 2: Configure a Journey in the Seen Platform
+
+Seen uses [Journeys](https://docs.seen.io/journey) to define how incoming data is processed, personalized, and returned to Braze.  
+Each Journey is a configurable workflow composed of nodes that let you control both video generation logic and the response payload.
+
+To configure your Journey:
+
+1. Create a new Journey in the Seen Platform
+2. Add a **Trigger node** and select the `On Create` trigger  
+   This ensures the Journey starts when Braze sends data to Seen. Create and add any [segmentation](https://docs.seen.io/segments) logic within your workspace if needed.
+3. Build your logic using the following nodes as needed:
+   - **Conditional node**: Route users based on attribute values (for example, plan type or region)
+   - **Project node**: Apply dynamic video personalization using the incoming data
+   - **Player node**: Generate a unique video player URL
+4. Add a **Webhook node** to define the response sent back to Braze
+
+#### Webhook node response requirements
+
+Because the response payload is configurable, ensure the following fields are returned to support the Braze Data Transformation described in the next step:
+
+| Field | Description |
+|------|-------------|
+| `id` | Must match the `braze_id` sent from Braze |
+| `player_url` | Unique URL for the personalized video player |
+| `email_thumbnail_url` | URL of the generated video thumbnail |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-You can now test the webhook with a user by switching to the **Test** tab.
+If your use case requires additional attributes, include them in the response and map them in Braze.
 
-If everything works as intended, go to Braze, then set the rate at which the campaign sends to 10 **messages per minute**. This way you won't exceed the SEEN's rate limit of 1,000 calls per hour.
 
-### Step 2: Create data transformation
+### Step 3: Create a Data Transformation to receive data from Seen
 
-1. Create new [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for `landing_page_url` and `email_thumbnail_url`. These are the two attributes we will be using in this example.
-2. Open [Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) under **Data Settings**, and select **Create transformation**.
-3. Give your transformation a name, then choose **Start from scratch** and set **Destination** to **POST: Track users**.
-4. Select **Share your Webhook URL with SEEN**.
-5. You can use the code below as the starting point for the transformation:
+Use Braze Data Transformations to ingest the Seen Journey response and store video assets on the user profile.
+
+1. Create the following [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) in Braze:
+   - `player_url`
+   - `email_thumbnail_url`
+2. Navigate to **Data Settings** → **Data Transformation** and click **Create transformation**
+3. Configure the transformation:
+   - **Start from scratch**
+   - **Destination** → POST: Track users
+4. Share the generated webhook URL with Seen, or add it directly to the Journey **Webhook node**
+5. Use the following transformation code:
 
 ```javascript
 let brazecall = {
   "attributes": [
     {
-      "braze_id": payload.customer_id,
+      "braze_id": payload.id,
       "_update_existing_only": true,
-      "landing_page_url": payload.landing_page_url,
+      "player_url": payload.player_url,
       "email_thumbnail_url": payload.email_thumbnail_url
     }
   ]
 };
 return brazecall;
 ```
-{% alert note %}
-If you want to include other data, make sure to include those as well. Remember to discuss with SEEN as well so that the callback payload includes all needed fields.
-{% endalert %}
 
 {: start="6"}
-6. Send a test payload to the provided endpoint. If you want to use the callback payload defined in the [SEEN documentation](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp), you can send this yourself with [Postman](https://www.postman.com/) or another similar service:
-
-```json
-{
-        "customer_id": "101",
-        "campaign_slug": "onboarding",
-        "landing_page_url": "your.subdomain.com/v/12345",
-        "video_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/output.m3u8",
-        "thumbnail_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/thumbnail.jpg",
-        "email_thumbnail_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/email_thumbnail.jpg"
-       
-}
-```
-
-{: start="7"}
-7. Select **Validate** to make sure everything works as intended.
+6. Send a test payload to the provided endpoint. Send data to Seen Platform to run your Journey, or send the payload directly to Braze with [Postman](https://www.postman.com/) or another similar service.
+7. Select **Validate** to ensure everything works as intended.
 8. Select **Save** and **Activate**.

@@ -16,7 +16,7 @@ tool:
 
 Fragen Sie die Nutzer zum Beispiel, wie sie Ihre App verwenden möchten, erfahren Sie mehr über ihre persönlichen Vorlieben oder fragen Sie sie nach ihrer Zufriedenheit mit einer bestimmten Funktion.
 
-![Drei einfache Nachrichten: Benachrichtigungspräferenzen, Ernährungspräferenzen und eine Umfrage zur Kundenzufriedenheit. Die ausgewählten Optionen in den Umfragen entsprechen den angepassten Attributen, die für diese Nutzer:innen protokolliert werden.]({% image_buster /assets/img/iam/iam-survey.png %})
+![Drei einfache Nachrichten für Umfragen: Benachrichtigungspräferenzen, Ernährungspräferenzen und eine Umfrage zur Kundenzufriedenheit. Die in den Umfragen ausgewählten Optionen entsprechen benutzerdefinierten Attributen, die für diesen Nutzer:in protokolliert werden.]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## SDK-Anforderungen {#supported-sdk-versions}
 
@@ -38,7 +38,7 @@ Diese Umfragevorlage wird sowohl für mobile Apps als auch für Webbrowser unter
 
 Um mit der Erstellung Ihrer Umfrage zu beginnen, fügen Sie Ihre Frage in das Feld **Überschrift der** Umfrage ein. Falls gewünscht, können Sie eine optionale **Nachricht** hinzufügen, die unter der Frage Ihrer Umfrage erscheint.
 
-![Tab des einfachen Editors für Umfragen, mit Feldern für eine Überschrift, einen optionalen Hauptteil und einen optionalen Hilfstext.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![Tab „Erstellen“ des einfachen Editors für Umfragen mit Feldern für eine Überschrift, einen optionalen Textkörper und optionalen Hilfetext.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Diese Felder können sowohl Liquid als auch Emojis enthalten, also lassen Sie sich etwas einfallen!
@@ -52,7 +52,7 @@ Wählen Sie entweder **Single-Choice-Auswahl** oder **Multiple-Choice-Auswahl**.
 
 Legen Sie dann fest, ob Sie [angepasste Attribute](#custom-attributes) oder [nur Protokollantworten](#no-attributes) sammeln wollen.
 
-![Dropdown-Menü mit ausgewählter Option "Attribute bei Übermittlung protokollieren".]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![Auswahlmenü mit der Option „Attribute bei Übermittlung protokollieren“ ausgewählt.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### Angepasste Attribute sammeln {#custom-attributes}
 
@@ -63,7 +63,7 @@ Um jeder Auswahl ein benutzerdefiniertes Attribut hinzuzufügen, wählen Sie den
 Der Datentyp Ihrer benutzerdefinierten Attribute hängt davon ab, wie Sie Ihre Umfrage eingerichtet haben.
 
 - **Auswahl im Multiple-Choice-Verfahren:** Der Datentyp des benutzerdefinierten Attributs muss ein Array sein. Wenn das angepasste Attribut auf einen anderen Datentyp eingestellt ist, werden die Antworten nicht protokolliert.
-- **Einzelne Auswahlmöglichkeiten:** Der Datentyp des angepassten Attributs _darf kein_ Array sein. Die Antworten werden nicht protokolliert, wenn das Attribut ein Array ist.
+- **Einzelne Auswahlmöglichkeiten:** Der Datentyp des benutzerdefinierten Attributs muss eine String-Zeichenfolge sein. Angepasste Attribute, die nicht vom Typ „String“ sind, werden nicht in der Dropdown-Liste angezeigt, und die Antworten werden nicht protokolliert.
 
 {% alert important %}
 Wenn die Sammlung von benutzerdefinierten Attributen aktiviert ist, werden Auswahlmöglichkeiten, die denselben benutzerdefinierten Attributnamen haben, in einem Array zusammengefasst.
@@ -89,11 +89,11 @@ Eine Bestätigungsseite ist ein guter Ort, um sich bei den Nutzern für ihre Zei
 
 Bearbeiten Sie den Text der Schaltfläche und das On-Click-Verhalten im Abschnitt **Schaltfläche einreichen** unten auf der Registerkarte **Umfrage**:
 
-![Verhalten bei Klick auf "Antworten senden und Bestätigungsseite anzeigen" eingestellt.]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
+![Das Klickverhalten ist auf „Antworten senden und Bestätigungsseite anzeigen“ eingestellt.]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
 Wenn Sie eine Bestätigungsseite hinzufügen möchten, wechseln Sie zur Registerkarte **Bestätigungsseite**, um Ihre Nachricht anzupassen:
 
-![Tab Bestätigungsseite des einfachen Editors für Umfragen. Die verfügbaren Felder sind Überschrift, optionaler Textkörper, Button-Text und das Verhalten des Buttons beim Klick.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
+![Registerkarte Bestätigungsseite des einfachen Umfrage-Editors. Die verfügbaren Felder sind Kopfzeile, optionaler Textkörper, Button-Text und Verhalten des Buttons beim Klick.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 Wenn Sie Benutzer auf eine andere Seite Ihrer App oder Website leiten möchten, ändern Sie das **On-Click-Verhalten** des Buttons.
 
@@ -101,7 +101,7 @@ Wenn Sie Benutzer auf eine andere Seite Ihrer App oder Website leiten möchten, 
 
 Sie können die Schriftfarbe und die Akzentfarbe der Nachricht mit dem **Farbthema-Picker** anpassen.
 
-![Tab des einfachen Editors für Umfragen mit der erweiterten Farbauswahl, nachdem ein Nutzer:innen auf die Farbpalette geklickt hat.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![Tab „Erstellen“ des einfachen Editors für Umfragen mit erweitertem Farbthemen-Auswahlfeld, nachdem eine Nutzer:in auf die Farbpalette geklickt hat.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## Analysieren Sie die Ergebnisse {#analytics}
 
@@ -134,9 +134,9 @@ Die ausgewählten Optionen fließen automatisch in Currents ein, und zwar unter 
 
 **Das Ziel:** Messen Sie die Kundenzufriedenheit und senden Sie Win-Back-Kampagnen an Nutzer, die schlechte Bewertungen hinterlassen haben.
 
-Verwenden Sie dazu eine Umfrage mit einer Auswahl von fünf Optionen, die von "😡 Sehr unzufrieden" bis "😍 Sehr zufrieden" reichen. Jede Auswahl wird dem angepassten Attribut `customer_satisfaction` mit einem numerischen Wert von 1 bis 5 zugeordnet, wobei 1 für die geringste Zufriedenheit und 5 für die höchste Zufriedenheit steht.
+Verwenden Sie dazu eine Umfrage mit einer Auswahl von fünf Optionen, die von "😡 Sehr unzufrieden" bis "😍 Sehr zufrieden" reichen. Jede Auswahl wird dem angepassten Attribut `customer_satisfaction` mit einem numerischen Wert von 1 bis 5 zugeordnet, wobei 1 für die geringste Zufriedenheit und 5 für die höchste Zufriedenheit steht. Bitte beachten Sie, dass diese numerischen Werte als String-Werte gespeichert werden, da für die Einfachauswahl benutzerdefinierte Attribute erforderlich sind.
 
-| Auswahl                                | Attribute              | Wert |
+| Choice                                | Attribute              | Wert |
 |---------------------------------------|------------------------|-------|
 | 😡 Sehr unzufrieden                  | `customer_satisfaction` | (1 %)     |
 | 😟 Unzufrieden                       | `customer_satisfaction` | (2 %)     |
@@ -145,7 +145,7 @@ Verwenden Sie dazu eine Umfrage mit einer Auswahl von fünf Optionen, die von "�
 | 😍 Sehr zufrieden                     | `customer_satisfaction` | (5 %)     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Wenn ein Nutzer:innen die Umfrage abschickt, wird sein ausgewählter Wert als angepasstes Attribut protokolliert. Anschließend können Sie mithilfe von Zielgruppen-Filtern Folgekampagnen erstellen. Richten Sie beispielsweise Nachrichten zur Rückgewinnung an Nutzer:innen, deren Attribut `customer_satisfaction` auf 1 oder 2 steht.
+Wenn ein Nutzer:innen die Umfrage abschickt, wird sein ausgewählter Wert als angepasstes Attribut protokolliert. Anschließend können Sie mithilfe von Zielgruppen-Filtern Folgekampagnen erstellen. Richten Sie beispielsweise Nachrichten zur Rückgewinnung an Nutzer:innen, deren`customer_satisfaction`Attribut „1” oder „2” ist.
 
 {% endtab %}
 {% tab Notification preferences %}
@@ -161,8 +161,8 @@ Verwenden Sie dazu eine Umfrage mit Multiple-Choice-Auswahl, bei der jede Auswah
 | Produkt Updates    | `wants_product_updates`| `true` |
 | Aktionen         | `wants_promotions`     | `true` |
 | Event-Einladungen      | `wants_event_invites`  | `true` |
-| Umfragen & Feedback | `wants_surveys`        | `true` |
-| Tipps & Tutorials   | `wants_tips`           | `true` |
+| Umfragen&  Rückmeldungen | `wants_surveys`        | `true` |
+| Tipps&  Anleitungen   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}

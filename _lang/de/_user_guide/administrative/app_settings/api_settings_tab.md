@@ -13,15 +13,15 @@ description: "Dieser Artikel behandelt die Seite APIs und Identifikatoren, auf d
 
 Die Seite **APIs und Identifikatoren** finden Sie unter **Einstellungen**.
 
-### API-Schlüssel
+## API-Schlüssel
 
 In diesem Abschnitt finden Sie Ihre REST API-Schlüssel für den Workspace, die eindeutigen Bezeichner, die Ihnen den Zugriff auf Ihre Daten für einen Workspace ermöglichen. Bei jeder Anfrage an die Braze-API ist ein REST-API-Schlüssel erforderlich. Weitere Informationen zur Erstellung und Verwendung von API-Schlüsseln finden Sie in unserer [Übersicht über REST-API-Schlüssel]({{site.baseurl}}/api/api_key/).
 
-#### API IP allowlisting
+### API IP allowlisting
 
 Für zusätzliche Sicherheit können Sie eine Liste von IP-Adressen und Subnetzen angeben, die REST-API-Anfragen für einen bestimmten REST-API-Schlüssel stellen dürfen. Dies wird als Allowlisting oder Whitelisting bezeichnet. Um bestimmte IP-Adressen oder Subnetze zuzulassen, fügen Sie sie bei der Erstellung eines neuen REST-API-Schlüssels dem Abschnitt **Whitelist IPs** hinzu: 
 
-![API IP Whitelisting Abschnitt der Erstellung eines neuen API-Schlüssels]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
+![Abschnitt API IP Whitelisting bei der Erstellung eines neuen API-Schlüssels]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Wenn Sie nichts angeben, können Anfragen von jeder IP-Adresse gesendet werden.
 
@@ -29,11 +29,22 @@ Wenn Sie nichts angeben, können Anfragen von jeder IP-Adresse gesendet werden.
 Einen Braze-to-Braze Webhook erstellen und allowlisting verwenden? Sehen Sie sich unsere Liste der [IPs an, die Sie auf die Whitelist setzen können]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
 {% endalert %}
 
-### App-Kennungen
+### Warnungen zur API-Nutzung
+
+Richten Sie API-Nutzungswarnungen ein, um wichtige API-Aktivitäten zu überwachen und Probleme frühzeitig zu erkennen. Diese Warnungen helfen Ihnen, unerwartete Verkehrsmuster zu erkennen, bevor sie sich auf Ihr Erlebnis auswirken.
+
+Sie können zwei Arten von API-Aktivitäten tracken:
+
+- **REST API Endpunkte:** Aktionen wie das Senden von Nachrichten, das Erstellen von Kampagnen oder das Exportieren von Daten.
+- **SDK API-Anfragen:** Ereignisse aus Ihrem Kundenerlebnis, wie das Triggern von In-App-Nachrichten oder die Synchronisierung von Benutzerprofilen. *Dieses Feature ist verfügbar, wenn Sie monatlich aktive:r Nutzer:innen (CY 24-25) erworben haben.*
+
+Sobald Sie ausgewählt haben, was getrackt werden soll, können Sie Warnbedingungen definieren. Lassen Sie sich z.B. benachrichtigen, wenn die Fehlerantworten innerhalb einer Stunde um 20% steigen. Sie erhalten eine Benachrichtigung per E-Mail, Webhook oder beides, je nach Ihren Einstellungen. Weitere Informationen finden Sie unter [Warnungen zur API-Nutzung]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts/).
+
+## App-Kennungen
 
 Dieser Abschnitt enthält eine Liste von Bezeichnern, die dazu dienen, bestimmte Apps in Anfragen an die Braze API zu referenzieren. Weitere Informationen über Anwendungskennungen finden Sie unter [API-Schlüssel für Anwendungskennungen]({{site.baseurl}}/api/identifier_types/).
 
-### Andere Identifikatoren
+## Andere Identifikatoren
 
 Für die Integration mit unserer API können Sie nach den Identifikatoren für alle Segmente, Kampagnen, Content Cards und mehr suchen, auf die Sie über die externe API von Braze zugreifen möchten. Alle Nachrichten sollten in [UTF-8](https://en.wikipedia.org/wiki/UTF-8) kodiert sein. Nachdem Sie einen von ihnen ausgewählt haben, wird der Bezeichner unterhalb des Dropdown-Menüs angezeigt.
 

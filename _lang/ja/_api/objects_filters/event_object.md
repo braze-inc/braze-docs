@@ -1,5 +1,5 @@
 ---
-nav_title: "イベントオブジェクト"
+nav_title: "イベント・オブジェクト"
 article_title: APIイベントオブジェクト
 page_order: 6
 page_type: reference
@@ -46,6 +46,10 @@ description: "この参考記事では、イベント・オブジェクトとは
 - [アプリ識別子]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601タイムコード](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+一部の識別子ペアは、単一のリクエスト内で同時に使用できない。と`phone`が`email`両方指定された場合、がより`email`優先される`phone`。詳細については、[識別子解決]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution)を参照せよ。
+{% endalert %}
+
 #### 既存のプロファイルのみを更新する
 
 Braze で既存のユーザープロファイルのみを更新するには、`_update_existing_only` キーをリクエストの本文内に `true` の値で渡す必要があります。この値を省略すると、`external_id` がまだ存在しない場合、Brazeは新しいユーザープロファイルを作成する。
@@ -72,13 +76,24 @@ Braze で既存のユーザープロファイルのみを更新するには、`_
 
 配列またはオブジェクト値を含むイベントプロパティオブジェクトには、最大 100 KB のイベントプロパティペイロードを設定できます。
 
+### 予約済みのキー
+
+以下のキーは予約されているため、カスタムイベントプロパティとして使用できません。
+
+- `time`
+- `event_name`
+
+{% alert important %}
+予約済みキーをカスタムイベントのプロパティ名として使用すると、エンド`/users/track`ポイントへのリクエスト送信時にAPIエラーが発生する。
+{% endalert %}
+
 ### イベント・プロパティの永続性
 
 イベント・プロパティは、親イベントによってトリガーされるメッセージのフィルタリングと、リキッド・パーソナライゼーションのために設計されている。デフォルトでは、Braze ユーザープロファイルでは永続化されません。セグメンテーションでイベントプロパティ値を使用するには、イベントプロパティ値を長期的に保存するための様々なアプローチについて詳述している[カスタム]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)イベントを参照のこと。
 
 #### イベント依頼例
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY

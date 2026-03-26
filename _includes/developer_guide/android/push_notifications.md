@@ -557,6 +557,74 @@ Braze.configure(this, brazeConfig)
 
 If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. For more information, see [Using a callback for push events]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events).
 
+## Handling foreground notifications
+
+By default, when a push notification arrives while your app is in the foreground on Android, the system displays it automatically. To have Braze process the push notification payload (for analytics tracking, deep link handling, and custom processing), route the incoming push data to Braze inside your `FirebaseMessagingService.onMessageReceived` method.
+
+### How it works
+
+When you call `BrazeFirebaseMessagingService.handleBrazeRemoteMessage`, Braze determines if the payload is a Braze push notification and, if so, creates and displays the notification with the `NotificationManagerCompat` method. Unlike iOS, Android displays notifications regardless of whether the app is in the foreground or background.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+package com.example.push;
+
+import com.braze.push.BrazeFirebaseMessagingService;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+package com.example.push
+
+import com.braze.push.BrazeFirebaseMessagingService
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+For more information, see the [Firebase integration sample](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseMessagingService.kt) in the Braze Android SDK repository.
+
+### Customizing foreground behavior
+
+If you want custom foreground behavior, such as suppressing the system notification or showing an in-app UI instead, you can:
+
+- Use `subscribeToPushNotificationEvents` to react to push events and handle deep links with the `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent` method. For more information, see the [Firebase push sample](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
+- Build and post your own notification using a custom `IBrazeNotificationFactory`, or suppress the notification by not calling `notificationManager.notify` in your handling path.
+
+For more information on customizing notifications, see [Custom notification factory]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
+
 #### Creating custom deep links
 
 Follow the instructions found within the [Android developer documentation](http://developer.android.com/training/app-indexing/deep-linking.html) on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
@@ -607,7 +675,7 @@ See the equivalent configuration for your `braze.xml`. Note that the class name 
 
 ### Step 5: Define notification channels
 
-The Braze Android SDK supports [Android notification channels](https://developer.android.com/preview/features/notification-channels.html). If a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users use [Android Notification Channels]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) within the platform to group notifications.
+The Braze Android SDK supports [Android notification channels](https://developer.android.com/preview/features/notification-channels.html). If a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Company users use [Android Notification Channels]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) within the platform to group notifications.
 
 To set the user facing name of the default Braze notification channel, use [`BrazeConfig.setDefaultNotificationChannelName()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html).
 

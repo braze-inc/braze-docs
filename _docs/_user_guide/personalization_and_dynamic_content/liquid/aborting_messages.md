@@ -1,12 +1,12 @@
 ---
 nav_title: Aborting messages
-article_title: Aborting Liquid Messages
+article_title: Abort Liquid Messages
 page_order: 7
 description: "This reference article covers aborting Liquid messages and some example use cases."
 
 ---
 
-# Aborting messages
+# Abort messages
 
 > Optionally, you can use the `abort_message("optional reason for aborting")` Liquid message tag within conditionals to prevent sending a message to a user. This reference article lists some examples of how this feature can be used in marketing campaigns.
 
@@ -64,6 +64,18 @@ You can also have the abort message log something to your Message Activity Log b
 ## Query for abort messages
 
 You can use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or your own data warehouse, if it's connected to Braze, to query for specific abort messages that are triggered when Liquid logic causes a message to abort.
+
+## When abort logic is evaluated
+
+The timing of abort logic evaluation depends on the message channel.
+
+### Push, email, SMS, webhooks, and Content Cards
+
+Abort logic is evaluated at send time, when Braze processes the message for delivery.
+
+### In-app messages
+
+Abort logic is evaluated at the time the in-app message is triggered (for example, when the user performs the trigger event or starts a session), not when the message is initially sent to the device. In-app messages are delivered to the SDK on session start and cached locally; the Liquid—including any `abort_message()` calls—is executed when the trigger condition is met.
 
 ## Considerations
 

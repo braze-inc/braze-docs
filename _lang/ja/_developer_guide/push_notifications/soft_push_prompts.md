@@ -1,7 +1,7 @@
 ---
 page_order: 6
-nav_title: ソフト・プッシュ・プロンプト
-article_title: Braze SDKのソフトプッシュプロンプトの設定
+nav_title: ソフトな押し込みによるプロンプト
+article_title: Braze SDK向けにソフトプッシュ通知の設定を行う
 channel:
   - push notifications
 ---

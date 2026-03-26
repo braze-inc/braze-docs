@@ -1,5 +1,5 @@
 ---
-nav_title: 収入レポート
+nav_title: 収益レポート
 article_title: 収益レポート
 page_type: reference
 description: "このページでは、特定の期間の収益、特定の製品の収益、アプリの総収益に関するデータを表示するための収益レポートページの使用方法について説明する。"
@@ -16,7 +16,7 @@ tool: Reports
 
 期間やレポート対象のアプリ、およびパラメーターを選択して、収益レポートをカスタマイズできます。
 
-![収益」をパラメータとして設定し、「経時パフォーマンス」グラフを表示した「収益レポート」ページ。]({% image_buster /assets/img/revenue_report.png %})
+![パラメーターとして [収益] を設定した [経時的なパフォーマンス] グラフを表示している [収益レポート] ページ。]({% image_buster /assets/img/revenue_report.png %})
 
 ### 日付とアプリを使用したフィルターの適用
 
@@ -38,6 +38,10 @@ tool: Reports
 - ユーザーあたりの収益
 
 ## 収益計算の理解
+
+{% alert note %}
+為替レートなしで通貨の収益を記録すると、Braze はそれを0.00 米ドルの購入として記録します。
+{% endalert %}
 
 <style>
     .no-split {
@@ -80,6 +84,6 @@ tool: Reports
 
 選択した日付範囲内で購入された製品のリスト、各製品の購入数、および各製品で生成された収益の量については、**Product Breakdown**テーブルを参照してください。
 
-![商品名」、「仕入高」、「売上高」の列を示す「商品内訳」表である。]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
+![「製品名」、「購入数」、「収益」の各列を示す [製品の内訳] のテーブル]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 

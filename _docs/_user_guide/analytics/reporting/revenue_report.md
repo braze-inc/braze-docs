@@ -39,6 +39,10 @@ You can view the following data in the **Performance Over Time Graph**:
 
 ## Understanding revenue calculations
 
+{% alert note %}
+When you record revenue for a currency without an exchange rate, Braze records it as a purchase of US $0.00.
+{% endalert %}
+
 <style>
     .no-split {
         word-break: keep-all;

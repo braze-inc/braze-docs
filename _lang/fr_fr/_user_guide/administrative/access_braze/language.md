@@ -1,7 +1,7 @@
 ---
 nav_title: Paramètres linguistiques
 article_title: Paramètres linguistiques
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "Cet article explique comment modifier la langue dans laquelle le tableau de bord de Braze s'affiche."
 
@@ -15,10 +15,10 @@ Cet article explique comment modifier la langue dans laquelle le tableau de bord
 
 Le tableau de bord de Braze est disponible en [plusieurs langues](#supported-languages). Vous pouvez à tout moment changer la langue d'affichage pour la langue de votre choix.
 
-1. Dans l'en-tête global, sélectionnez <i class="fa-solid fa-globe" aria-label="Sélectionnez votre langue"></i>.
+1. Dans l'en-tête global, veuillez <i class="fa-solid fa-globe" aria-label="sélectionner votre langue"></i>.
 2. Choisissez votre langue dans la liste.
 
-\![Anglais sélectionné pour la langue du tableau de bord de Braze.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
+![L'anglais a été sélectionné comme langue du tableau de bord de Braze.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 Le rechargement du tableau de bord peut prendre quelques instants.
 
@@ -29,10 +29,10 @@ Vous pouvez choisir parmi les langues prises en charge suivantes :
 - Allemand (Deutsch)
 - Anglais
 - Espagnol (Español)
-- Français (French)
+- Français
 - Japonais (日本語)
 - Coréen (한국어)
-- Portugais (Brasil)
+- Portugais (Brésil)
 
 <!--
 Note: This content is pending development

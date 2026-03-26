@@ -1,5 +1,5 @@
 ---
-nav_title: "Android のオブジェクト"
+nav_title: "Androidオブジェクト"
 article_title: Android メッセージングオブジェクト
 page_order: 0
 page_type: reference
@@ -22,12 +22,12 @@ description: "このリファレンス記事では、Brazeで使用されてい�
    "title": (required, string) the title that appears in the notification drawer,
    "extra": (optional, object) additional keys and values to be sent in the push,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Android Push Message),
-   "notification_channel_id": (optional, string) the channel ID the notification will be sent with,
+   "notification_channel_id": (optional, string) the channel ID the notification is sent with,
    "priority": (optional, integer) the notification priority value,
    "android_priority": (optional, string) the FCM sender priority,
-   "send_to_sync": (optional, if set to true we will throw an error if "alert" or "title" is set),
+   "send_to_sync": (optional, if set to true we throw an error if "alert" or "title" is set),
    "collapse_key": (optional, string) the collapse key for this message,
-   // Specifying "default" in the sound field will play the standard notification sound
+   // Specifying "default" in the sound field plays the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
    "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to false,
@@ -36,7 +36,7 @@ description: "このリファレンス記事では、Brazeで使用されてい�
    "notification_id": (optional, integer),
    "push_icon_image_url": (optional, string) an image URL for the large icon,
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
-   "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
+   "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze only sends this push to a user's most recently used Android device, rather than all eligible Android devices,
    "buttons" : (optional, array of Android push action button objects) push action buttons to display
    "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push
 }
@@ -48,11 +48,11 @@ description: "このリファレンス記事では、Brazeで使用されてい�
 
 | パラメータ | 詳細 |
 | --------- | ------- |
-| `priority` | このパラメーターには `-2` から `2` までの値を指定できます。`-2` は「MIN」優先度を表し、`2` は「MAX」を表します。`0` は「デフォルト」値です。<br> <br> その範囲外の値が送信された場合、デフォルトは0となる。どの優先度を使うかについては、[Android の通知優先度]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority)を参照してください。 |
-| `android_priority` | このパラメーターは、FCM 送信者の優先順位を指定するために、`normal` または `high` のいずれかの値を受け入れます。デフォルトでは、メッセージは[プッシュ設定]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/#default-fcm-priority-for-android-campaigns)ページで構成されたデフォルトの FCM 優先度で送信されます。<br><br> 値の違いが配信に与える影響の詳細については、[Android メッセージの優先度](https://firebase.google.com/docs/cloud-messaging/android/message-priority)を参照してください。 |
-| `collapse_key` | FCM で同時に保存できるのは、1つのデバイスにつき最大4つの折りたたみキーのみです。4つを超える折りたたみキーを使用する場合、FCM でどの折りたたみキーが保持されるかについては保証されません。Braze はデフォルトでこれらのうちの1つをキャンペーンに使用するため、Android メッセージ用に指定する追加の折りたたみキーは3つまでにしてください。 |
+| `priority` | このパラメータは、`-2` から`2` までの値を受け付ける。`-2` は「MIN」優先度を表し、`2` は「MAX」を表す。`0` は「DEFAULT」値である。<br> <br> その範囲外の値が送信された場合、デフォルトは0となる。どの優先度を使うかについては、[Android の通知優先度]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority)を参照してください。 |
+| `android_priority` | このパラメータは、FCM送信者の優先順位を指定するために、`normal` または`high` のいずれかの値を受け付ける。デフォルトでは、メッセージは[プッシュ設定]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/#default-fcm-priority-for-android-campaigns)ページで構成されたデフォルトの FCM 優先度で送信されます。<br><br> 値の違いが配信に与える影響の詳細については、[Android メッセージの優先度](https://firebase.google.com/docs/cloud-messaging/android/message-priority)を参照してください。 |
+| `collapse_key` | FCMは、同時に1台につき最大4つまでしか崩壊キーを保存できない。4つ以上の崩壊鍵を使用する場合、FCMはどの鍵が保管されるかを保証しない。Brazeはキャンペーン用にデフォルトでこれらのうちの1つを使用するので、Androidメッセージ用に最大3つだけ追加の崩壊キーを指定するようにしてほしい。 |
 | `push_icon_image_url` | large icon パラメーターの値は、画像がホストされている場所にリンクする URL である必要があります。<br> <br> イメージは1:1のアスペクト比にトリミングする必要があり、40x40以上にする必要があります。 |
-| `notification_channel` | これが指定されない場合、Brazeは[ダッシュボードのフォールバック]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel)チャンネルIDで通知ペイロードを送信しようとする。詳細については、「[通知チャネル]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/)」を参照し、統合中に「[通知チャネルを定義する]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels)」ステップを参照してください。 |
+| `notification_channel` | これが指定されていない場合、Brazeは[ダッシュボードのフォールバック]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel)チャネルIDで通知ペイロードを送信しようとする。詳細については、「[通知チャネル]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/)」を参照し、統合中に「[通知チャネルを定義する]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels)」ステップを参照してください。 |
 | `send_to_sync` | `send_to_sync` メッセージの詳細については、[Android のサイレント通知]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/#silent-push-notifications)を参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

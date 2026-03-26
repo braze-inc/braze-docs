@@ -32,12 +32,12 @@ Puede haber cierta latencia en los mensajes dentro de la aplicación que se mues
 
 ## Intervalo de tiempo mínimo entre desencadenamientos
 
-De forma predeterminada, limitamos la tasa de mensajes dentro de la aplicación a una vez cada 30 segundos para facilitar una experiencia de usuario de calidad.
+De forma predeterminada, establecemos un límite de velocidad para los mensajes dentro de la aplicación, que son uno cada 30 segundos, para facilitar una experiencia de usuario de calidad.
 
 Puedes anular este valor a través de `ABKMinimumTriggerTimeIntervalKey` dentro del parámetro `appboyOptions` pasado a `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Establece en `ABKMinimumTriggerTimeIntervalKey` el valor entero que desees como tiempo mínimo en segundos entre mensajes dentro de la aplicación:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Sets the minimum trigger time interval to 5 seconds
@@ -108,7 +108,7 @@ Un mensaje dentro de la aplicación desencadenado se descartará en las siguient
 Si quieres mostrar un mensaje dentro de la aplicación en otro momento, puedes mostrar manualmente el mensaje más alto de la pila llamando al método siguiente:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance].inAppMessageController displayNextInAppMessage];
@@ -129,7 +129,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 Los mensajes dentro de la aplicación también pueden crearse localmente dentro de la aplicación y mostrarse a través de Braze. Esto es especialmente útil para mostrar mensajes que deseas desencadenar dentro de la aplicación en tiempo real. Braze no admite análisis de mensajes dentro de la aplicación creados localmente.
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
   ABKInAppMessageSlideup *customInAppMessage = [[ABKInAppMessageSlideup alloc] init];

@@ -22,52 +22,52 @@ O Braze fornece métodos predefinidos para configurar as seguintes atribuições
 Para definir uma atribuição padrão, chame o método relevante no objeto `BrazeBinding`.
 
 {% tabs local %}
-{% tab Nome %}
+{% tab First name %}
 ```csharp
 BrazeBinding.SetUserFirstName("first name");
 ```
 {% endtab %}
-{% tab Sobrenome %}
+{% tab Last name %}
 ```csharp
 BrazeBinding.SetUserLastName("last name");
 ```
 {% endtab %}
-{% tab e-mail %}
+{% tab Email %}
 ```csharp
 BrazeBinding.SetUserEmail("email@email.com");
 ```
 {% endtab %}
-{% tab Gênero %}
+{% tab Gender %}
 ```csharp
 BrazeBinding.SetUserGender(Appboy.Models.Gender);
 ```
 {% endtab %}
-{% tab Data de nascimento %}
+{% tab Birth date %}
 ```csharp
 BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
 ```
 {% endtab %}
-{% tab País %}
+{% tab Country %}
 ```csharp
 BrazeBinding.SetUserCountry("country name");
 ```
 {% endtab %}
-{% tab Cidade natal %}
+{% tab Home city %}
 ```csharp
 BrazeBinding.SetUserHomeCity("city name");
 ```
 {% endtab %}
-{% tab Envio de e-mail %}
+{% tab Email subscription %}
 ```csharp
 BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab Inscrição por push %}
+{% tab Push subscription %}
 ```csharp
 BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab Número de telefone %}
+{% tab Phone number %}
 ```csharp
 BrazeBinding.SetUserPhoneNumber("phone number");
 ```
@@ -84,7 +84,7 @@ BrazeBinding.SetUserFirstName(null);
 
 ## Atributos personalizados do usuário
 
-Além dos atributos padrão de usuários, o Braze também permite definir atributos personalizados usando vários tipos de dados diferentes. Para saber mais sobre a opção de segmentação de cada atributo, consulte [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
+Além dos atributos de usuário padrão, o Braze também permite definir atributos personalizados usando vários tipos de dados diferentes. Para saber mais sobre a opção de segmentação de cada atribuição, consulte [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
 
 ### Definindo atributos personalizados
 
@@ -99,7 +99,7 @@ AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string cust
 
 {% endtab %}
 
-{% tab Inteiro %}
+{% tab Integer %}
 
 ```csharp
 // Set Integer Attribute
@@ -117,14 +117,14 @@ AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double valu
 
 {% endtab %}
 
-{% tab Booleano %}
+{% tab Boolean %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
 {% endtab %}
 
-{% tab Data %}
+{% tab Date %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
@@ -140,7 +140,7 @@ As datas passadas para o Braze devem estar no formato [ISO 8601](http://en.wikip
 
 {% endtab %}
 
-{% tab Vetor %}
+{% tab Array %}
 
 ```csharp
 // Setting An Array

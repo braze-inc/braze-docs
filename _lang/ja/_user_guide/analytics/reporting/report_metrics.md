@@ -357,7 +357,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}
 
-<a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
+配送障害の原因究明については、<a href="/docs/braze_support/">Brazeサポートに</a>問い合わせること。
 
 <span class="calculation-line">計算式: (送信数) - (通信事業者への送信数)</span>
 
@@ -373,7 +373,7 @@ RCS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures RCS' %}
 
-<a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
+配送障害の原因究明については、<a href="/docs/braze_support/">Brazeサポートに</a>問い合わせること。
 
 <span class="calculation-line">計算式: (送信数) - (通信事業者への送信数)</span>
 
@@ -389,7 +389,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Failed Delivery Rate' %}
 
-<a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
+配送障害の原因究明については、<a href="/docs/braze_support/">Brazeサポートに</a>問い合わせること。
 
 <span class="calculation-line">計算式: (配信失敗)/(送信)</span>
 
@@ -643,17 +643,17 @@ SMS/MMS、RCS
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
 
-|チャネル|追加情報|
+|チャネル|動作|
 |-------------|----------------------|
-|電子メール、プッシュ、Webhook|初回送信後。|
-|コンテンツカード、アプリ内メッセージ|ユーザーがコンテンツカードまたはメッセージを初めて閲覧したとき。|
+|電子メール、プッシュ、Webhook|メッセージ送信後、ユーザーは受信者としてカウントされる。|
+|コンテンツカード、アプリ内メッセージ|ユーザーが初めてメッセージを閲覧した時点で受信者としてカウントされる。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     計算式: 
     <ul>
-        <li><i>1次コンバージョン (A) または 1次コンバージョンイベント</i>:カウント</li>
+        <li><i>1次コンバージョン (A) または 1次コンバージョンイベント</i>:定義されたコンバージョンウィンドウ内に1次コンバージョンイベントを完了したユーザー数 </li>
         <li><i>1次コンバージョン (A) %</i> または<i>1次コンバージョンイベント率</i>:(1次コンバージョン数) / (ユニーク受信者数)</li>
     </ul>
 </span>

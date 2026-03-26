@@ -42,6 +42,7 @@ glossary_tags:
   - name: Email List
   - name: Email Templates
   - name: KPI
+  - name: Media Library
   - name: Purchases
   - name: Preference Center
   - name: Schedule Messages
@@ -227,7 +228,7 @@ glossaries:
     tags:
       - Campaigns
   - name: <a href='/docs/api/endpoints/export/campaigns/get_campaigns/'>/campaigns/list</a>
-    description: Export a list of campaigns, each of which will include its name, campaign API identifier, whether it is an API campaign, and tags associated with the campaign.
+    description: Export a list of campaigns, each of which includes its name, campaign API identifier, whether it is an API campaign, and tags associated with the campaign.
     tags:
       - Campaigns
   - name: <a href='/docs/api/endpoints/export/campaigns/get_send_analytics/'>/sends/data_series</a>
@@ -259,7 +260,7 @@ glossaries:
     tags:
       - Segments
   - name: <a href='/docs/api/endpoints/export/segments/get_segment/'>/segments/list</a>
-    description: Export a list of segments, each of which will include its name, Segment API identifier, and whether it has analytics tracking enabled.
+    description: Export a list of segments, each of which includes its name, Segment API identifier, and whether it has analytics tracking enabled.
     tags:
       - Segments
   - name: <a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/segment/cancel</a>
@@ -474,4 +475,8 @@ glossaries:
     description: Delete an SDK Authentication key for your app.
     tags:
       - SDK Authentication
+  - name: <a href='/docs/api/endpoints/media_library/manage_assets/create/'>/media_library/create</a>
+    description: Upload an asset to the media library.
+    tags:
+      - Media Library
 ---

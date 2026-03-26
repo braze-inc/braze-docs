@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Track users (synchronous)"
-article_title: "POST: Track Users (Synchronous)"
+nav_title: "POST: Create and update users (synchronous)"
+article_title: "POST: Create and update users (Synchronous)"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -9,7 +9,7 @@ description: "This article outlines details about the synchronous Track user Bra
 
 ---
 {% api %}
-# Track users (synchronous)
+# Create and update users (synchronous)
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track/sync
 {% endapimethod %}
@@ -17,14 +17,14 @@ description: "This article outlines details about the synchronous Track user Bra
 > Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which updates user profiles asynchronously.
 
 {% alert important %}
-This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in this beta.
+This endpoint is currently in **limited beta** . Although we're not adding new customers to the beta right now, let your Braze account manager know if you think this feature could be useful for your Braze integration.
 {% endalert %}
 
 ## Synchronous and asynchronous API calls
 
-In an asynchronous call, the API will return the status code `201`, indicating that your request was successfully received, understood, and accepted. However, this does not mean that your request has been fully completed.
+In an asynchronous call, the API returns the status code `201`, indicating that your request was successfully received, understood, and accepted. However, this does not mean that your request has been fully completed.
 
-In a synchronous call, the API will return a status code `201`, indicating that your request was successfully received, understood, accepted, and completed. The call response will show select user profile fields as a result of the operation.
+In a synchronous call, the API returns a status code `201`, indicating that your request was successfully received, understood, accepted, and completed. The call response shows select user profile fields as a result of the operation.
 
 This endpoint has a lower rate limit than the `/users/track` endpoint (see [rate limit](#rate-limit) below). Each `/users/track/sync` request can contain only  one event object, one attribute object, **or** one purchase object. This endpoint should be reserved for user profile updates where a synchronous call is needed. For a healthy implementation, we recommend using `/users/track/sync` and `/users/track` together.
 
@@ -271,7 +271,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 
 ### Should I use the asynchronous or synchronous endpoint?
 
-For most profile updates, the `/users/track` endpoint will work best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
+For most profile updates, the `/users/track` endpoint works best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
 
 ### Does the response time differ from the `/users/track` endpoint?
 

@@ -16,25 +16,25 @@ page_order: 6.2
 ## Verwendung einer Berichtsvorlage
 
 1. Gehen Sie zu **Analytics** > **Berichts-Builder (Neu)**.
-2. Klicken Sie auf den Pfeil für **weitere Optionen** neben dem Button **Neuen Bericht erstellen** und wählen Sie dann **eine Berichtsvorlage verwenden**.<br><br>!["Neuen Bericht erstellen" Button Dropdown mit Optionen zum Erstellen eines angepassten Berichts oder zur Verwendung einer Vorlage.]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
+2. Klicken Sie auf den Pfeil für **weitere Optionen** neben dem Button **Neuen Bericht erstellen** und wählen Sie dann **eine Berichtsvorlage verwenden**.<br><br>![Der Button "Neuen Bericht erstellen" bietet Ihnen die Möglichkeit, einen angepassten Bericht zu erstellen oder eine Vorlage zu verwenden.]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
 3. Wählen Sie eine der Berichtsvorlagen aus der Bibliothek für Braze-Vorlagen aus.
-    - Verwenden Sie das Dropdown-Menü **Artikel** und **Tags**, um relevante Berichte für Ihre Anwendungsfälle zu finden.<br><br>!["Braze Berichtsvorlagen" Fenster mit einer Liste von Braze Templates zum Auswählen.]({% image_buster /assets/img/report_builder_2/report_templates.png %}){: style="max-width:90%;"}<br><br>
+    - Verwenden Sie das Dropdown-Menü **Artikel** und **Tags**, um relevante Berichte für Ihre Anwendungsfälle zu finden.<br><br>![Fenster "Braze-Berichtsvorlagen" mit einer Liste von Braze-Templates zum Auswählen.]({% image_buster /assets/img/report_builder_2/report_templates.png %}){: style="max-width:90%;"}<br><br>
 4. Folgen Sie Schritt 3 und weiter unter [Erstellen eines Berichts](#creating-a-report), um den Bericht weiter an Ihren Anwendungsfall anzupassen.
 
 ## Einen Bericht erstellen
 
 1. Gehen Sie zu **Analytics** > **Berichts-Builder (Neu)**.
 2. Wählen Sie **Neuen Bericht erstellen**.
-3. Wählen Sie in der Dropdown-Liste **Zeilen** aus, worüber Sie berichten möchten:
+3. Wählen Sie im Dropdown-Menü **„Zeilen“** aus, worüber Sie berichten möchten:
     - Kampagnen
     - Canvase
     - Kampagnen und Canvase
     - Kanäle
     - Tags
 
-    Beachten Sie, dass sich Ihre Auswahl an **Zeilen** auf [die Metriken](#metrics-availability) auswirkt [, die Sie sehen können](#metrics-availability). Zum Beispiel können Sie multivariate Metriken nur anzeigen, wenn Sie über **Canvase** oder **Kampagnen** mit einem **Varianten-Drilldown** berichten. Sie können diese Metriken nicht anzeigen, wenn Sie über **Kampagnen und Canvase** berichten, selbst wenn diese Kampagnen und Canvase über multivariate Tests verfügen. 
+    Bitte beachten Sie, dass Sie bei der Auswahl **unter „Zeilen“** [Metriken](#metrics-availability) auswählen[, die Sie anzeigen können](#metrics-availability). Beispielsweise können Sie multivariate Metriken nur anzeigen, wenn Sie Berichte zu **Canvases** oder **Kampagnen** mit einem **Varianten**-Drilldown erstellen. Sie können diese Metriken nicht anzeigen, wenn Sie Berichte zu **Kampagnen und Canvases** erstellen, selbst wenn diese Kampagnen und Canvases multivariate Tests enthalten. 
 
-![Der Abschnitt "Zeilen und Spalten" mit Feldern zum Auswählen der Zeilen und Gruppierungen für Ihren Bericht.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
+![Der Bereich "Zeilen und Spalten" mit Feldern zum Auswählen der Zeilen und Gruppierungen für Ihren Bericht.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
 
 {: start="4"}
 4\. (Optional) Wählen Sie **Drilldown hinzufügen**, um Ihre Daten in detailliertere Ansichten aufzuschlüsseln:
@@ -61,10 +61,10 @@ Probieren Sie verschiedene Konfigurationen von Drilldown-Optionen aus, um die [v
     \- Ordnen Sie die Metriken und Spalten neu an, indem Sie das gepunktete Symbol nach oben oder unten ziehen.
 7\. In **Berichtsinhalt** konfigurieren Sie den Datumsbereich, für den Sie Daten in Ihren Bericht aufnehmen möchten.
 8\. Wählen Sie dann je nach Ihrer Auswahl in Schritt 3, ob Sie Ihrem Bericht manuell oder automatisch Kampagnen, Canvase oder beides hinzufügen möchten.
-    - **Manuell hinzufügen:** Wählen Sie die einzelnen Kampagnen oder Canvas aus, die in den Bericht aufgenommen werden sollen, indem Sie die Filter für das Datum der **letzten Sendung** und die Tags oder Kanäle verwenden oder den Namen der Kampagne oder des Canvas suchen.<br><br>![Der Bereich "Kampagnen und Canvases manuell hinzufügen" mit einer Liste von Kampagnen zum Auswählen.]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
+    - **Manuell hinzufügen:** Wählen Sie die einzelnen Kampagnen oder Canvas aus, die in den Bericht aufgenommen werden sollen, indem Sie die Filter für das Datum der **letzten Sendung** und die Tags oder Kanäle verwenden oder den Namen der Kampagne oder des Canvas suchen.<br><br>![Der Bereich "Manuelles Hinzufügen von Kampagnen und Canvases" mit einer Liste von Kampagnen zum Auswählen.]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
     - **Automatisch hinzufügen:** Legen Sie Regeln dafür fest, welche Kampagnen oder Canvase in den Bericht aufgenommen werden sollen. Sie müssen auf dieser Seite nur ein Feld auswählen.
         \- Beachten Sie, dass zusätzliche Kampagnen oder Canvase, die die Bedingungen erfüllen, die Sie auf diesem Bildschirm festgelegt haben, automatisch zu zukünftigen Ausführungen Ihres Berichts hinzugefügt werden.<br><br>![Der Abschnitt "Kampagnen und Canvase automatisch hinzufügen" mit Feldern zum Festlegen von Regeln, welche Kampagnen und Canvase dem Bericht hinzugefügt werden sollen.]({% image_buster /assets/img/report_builder_2/automatically_add.png %}){: style="width:90%;"}<br><br>
-9\. Führen Sie den Bericht aus, indem Sie **Speichern** auswählen ** & Ausführen**.
+9\. Führen Sie den Bericht aus, indem Sie **„Speichern&und ausführen“** auswählen.
 
 {% alert note %}
 Die Ausführung des Berichts kann bis zu einigen Minuten dauern, je nach Datumsbereich und Anzahl der Kampagnen oder Canvase, die Sie in der Konfigurationsphase ausgewählt haben.
@@ -75,16 +75,16 @@ Die Ausführung des Berichts kann bis zu einigen Minuten dauern, je nach Datumsb
 Ihre Auswahl für **Zeilen** wirkt sich auf die Metriken aus, die Sie auswählen können.
 
 {% alert tip %}
-Wenn Sie über Canvas-Varianten oder -Schritte berichten möchten, wählen Sie **Canvase** für Zeilen und lassen Sie das Feld entweder leer oder wählen Sie **Datum** als Aufriss. Damit wird ein Dropdown-Menü für die **Canvas-Ansicht** erstellt, in dem Sie Metriken nur für den Canvas anzeigen oder Metriken nach Variante, Schritt oder Nachricht gruppieren können. 
+Wenn Sie über Canvas-Varianten oder -Schritte berichten möchten, wählen Sie **„Canvase“** für Zeilen aus und wählen Sie entweder ein leeres Feld oder **„Datum“** als Drilldown aus. Dadurch wird ein Dropdown-Menü **„Canvas-Ansicht“** erstellt, in dem Sie Metriken nur für Canvas anzeigen oder Metriken nach Variante, Schritt oder Nachricht gruppieren können. 
 
-![Das geöffnete Dropdown-Menü "Canvas-Ansicht".]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
+![Die Öffnung des Dropdown-Menüs „Canvas-Ansicht“.]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
 {% endalert %}
 
 | Metrisch | Beschreibung |
 | --- | --- |
 | Metriken für die Konversion | Verfügbar für Kampagnen, Canvase, Kampagnen und Canvase. |
 | Entrys | Verfügbar für Kampagnen, Canvase, Kampagnen und Canvase, Tags. |
-| Zuletzt gesendetes Datum | Verfügbar für Kampagnen, Canvase, Kampagnen und Canvase. Wird nur für geplante Kampagnen angezeigt - bei aktionsbasierten oder API-getriggerten Kampagnen wird es nicht ausgefüllt. |
+| Zuletzt gesendetes Datum | Verfügbar für Kampagnen, Canvase, Kampagnen und Canvase. Wird nur für geplante Kampagnen angezeigt – nicht für aktionsbasierte oder API-ausgelöste Kampagnen. |
 | Sendungen | Verfügbar für jeden relevanten Kanal. |
 | Nachrichten gesendet | Verfügbar für Kampagnen, Canvase, Kampagnen und Canvase, Tags. |
 | Betreffzeile | Verfügbar für E-Mail-Kampagnen mit **Varianten-Drilldown**, Canvase und Canvase mit **Varianten-Drilldown**. |
@@ -93,11 +93,15 @@ Wenn Sie über Canvas-Varianten oder -Schritte berichten möchten, wählen Sie *
 | Eindeutige Empfänger:innen | Verfügbar für Kampagnen, Canvase, Kampagnen und Canvase, Tags. Nicht verfügbar mit dem Drilldown **Kanäle**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+### Gelöschte Nachrichtenvarianten
+
+Statistiken für gelöschte Nachrichtenvarianten werden nicht angezeigt, wenn Sie Ihren Bericht nach Kampagnen oder Canvases aufschlüsseln. Die Summen auf Kanalebene umfassen jedoch alle Statistiken, unabhängig davon, ob die Variante gelöscht wurde. Beispielsweise umfassen _die_ E-Mail_-Versendungen_ alle E-Mail-Versendungen. Wenn Sie diese Statistiken jedoch nach Kampagnen aufschlüsseln, können die Zahlen niedriger ausfallen, da die Versendungen für gelöschte Nachrichtenvarianten herausgefiltert werden.
+
 ## Anzeigen eines Berichts
 
 Nachdem Sie Ihren Bericht ausgeführt haben, können Sie die Ergebnisse in Tabellenform auf der Berichtsseite einsehen. 
 
-![Eine Tabelle mit den Berichtsdaten für die Metriken der einzelnen Kampagnen.]({% image_buster /assets/img/report_builder_2/report_table.png %}){: style="width:90%;"}
+![Eine Tabelle mit den Berichtsdaten für die Metriken jeder Kampagne.]({% image_buster /assets/img/report_builder_2/report_table.png %}){: style="width:90%;"}
 
 ### Erstellen eines Berichts-Charts
 
@@ -117,16 +121,16 @@ Um ein Bild des Berichts-Charts herunterzuladen, wählen Sie das gepunktete Symb
 
 ## Einen Bericht teilen
 
-Sie können einen Dashboard-Link zum Bericht freigeben, indem Sie **Teilen** und eine dieser Optionen auswählen:
-- **Teilen Sie einen Link:** Kopieren und teilen Sie den Link.
+Sie können einen Dashboard-Link zum Bericht freigeben, indem Sie **„Freigeben“** und eine der folgenden Optionen auswählen:
+- **Bitte einen Link teilen:** Bitte kopieren Sie den Link und teilen Sie ihn.
 
-!["Link freigeben"-Dropdown mit einem Link zu dem Bericht.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
+![Dropdown-Menü „Link teilen“ mit einem Link zum Bericht.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
-- **Senden oder planen Sie eine E-Mail:** Senden Sie sofort oder zu einem bestimmten Zeitpunkt eine E-Mail, die einen Download-Link enthält, der nach einer Stunde abläuft. Sie können Empfänger:innen aus den Nutzern:innen des Dashboards auswählen, die in der Dropdown-Liste **E-Mail-Empfänger** aufgeführt sind, oder eine beliebige andere E-Mail-Adresse eingeben.
+- **Eine E-Mail senden oder einen Zeitplan für die E-Mail erstellen:** Bitte senden Sie umgehend oder zu einem festgelegten Zeitpunkt eine E-Mail mit einem Download-Link, der nach einer Stunde abläuft. Sie können Empfänger:innen aus der Liste der Unternehmensnutzer:innen im Dropdown-Menü **„E-Mail-Empfänger:innen“** auswählen oder eine beliebige andere E-Mail-Adresse eingeben.
 
-!["Zeitplan für eine E-Mail" Fenster mit Feldern, in denen Sie auswählen können, wie der Bericht formatiert wird, wer ihn erhalten soll und wann er gesendet werden soll.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
+![Fenster „Zeitplan für eine E-Mail“ mit Feldern zur Auswahl des Berichtsformats, der Empfänger und des Versandzeitpunkts.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 
-- **CSV herunterladen:** Laden Sie eine CSV-Datei des Berichts herunter.
+- **CSV herunterladen:** Bitte laden Sie eine CSV-Datei des Berichts herunter.
 
 ## Einem Dashboard einen Bericht hinzufügen
 

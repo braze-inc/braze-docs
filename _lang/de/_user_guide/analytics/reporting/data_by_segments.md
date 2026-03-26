@@ -105,7 +105,7 @@ Alle Metriken verwenden eindeutige E-Mail Empfänger:innen als Nenner.
 
 Nehmen wir zum Beispiel an, ein Segment enthält 10 Nutzer:innen und fünf von ihnen haben nach Erhalt Ihrer E-Mail einen Kauf getätigt. Wenn einer dieser fünf einen Kauf getätigt hat, nachdem er auf Ihre E-Mail geklickt hat, würde Ihre "Eindeutige Kaufrate bei Erhalt" 50% und Ihre "Eindeutige Kaufrate bei Klick" 10% betragen.
 
-Der Bericht zeigt Metriken für E-Mails, darunter eindeutige Käufe bei Erhalt, Einnahmen bei Erhalt, eindeutige Käufe bei Klick, Einnahmen bei Klick, eindeutige Empfänger und eindeutige Klicks auf E-Mails.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
+![Der Bericht zeigt Metriken für E-Mails, darunter eindeutige Käufe bei Erhalt, Einnahmen bei Erhalt, eindeutige Käufe bei Klick, Einnahmen bei Klick, eindeutige Empfänger und eindeutige Klicks auf E-Mails.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
 
 #### Ergebnisse
 

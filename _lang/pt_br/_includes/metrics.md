@@ -175,7 +175,7 @@ As <i>aberturas</i> são instâncias que incluem <i>aberturas diretas</i> e <i>a
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Conversões primárias (A)</i> ou <i>evento de conversão primária</i> é o número de vezes que um evento definido ocorreu após a interação ou a visualização de uma mensagem recebida de uma campanha do Braze. Esse evento definido é determinado por você ao criar a campanha.
+<i>Conversões Primárias (A)</i> ou <i>Evento de Conversão Primária</i> é o número de usuários únicos que realizam um evento definido após receber ou visualizar uma mensagem de uma campanha Braze. Este evento é selecionado por você ao configurar a campanha e é usado como a principal métrica de sucesso para relatórios e otimização.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -219,7 +219,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora o Braze não mude o estado de inscrição desses usuários, esses usuários serão automaticamente excluídos em e-mails futuros, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar para todos os usuários, incluindo cancelados".
+<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora o Braze não mude o estado de inscrição desses usuários, esses usuários serão automaticamente excluídos em futuros e-mails, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar para todos os usuários, incluindo cancelados".
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
@@ -251,7 +251,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Cliques únicos</i> é o número distinto de destinatários que clicaram em um link em uma mensagem pelo menos uma vez e é medido por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>Clique Único</i> é o número distinto de destinatários que clicaram em um link dentro de uma mensagem pelo menos uma vez e é medido por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
@@ -270,7 +270,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Destinatários Únicos</i> é o número de destinatários diários únicos, ou usuários que receberam uma nova mensagem em um dia. Para que essa contagem aumente para um usuário mais de uma vez, o usuário deve receber uma nova mensagem em um dia diferente.
+<i>Destinatários Únicos</i> é o número de destinatários diários únicos, ou usuários que receberam uma nova mensagem em um dia. Para que essa contagem incremente para um usuário mais de uma vez, o usuário deve receber uma nova mensagem em um dia diferente.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}

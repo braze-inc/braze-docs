@@ -27,13 +27,13 @@ Before you start, you'll need the following:
 
 ## Use cases
 
-Surface Braze data into the customer service agent view while communicating with your users on different communication channels, such as email, messenger, or chat.
+Surface Braze data into the customer service agent view while communicating with your users on different communication channels, such as email, messenger, or chat. Additionally, use Braze Data Transformation to send data from Dixa to Braze to pause marketing while solving a user's problem.
 
 ## Integration
 
 You must be a Dixa administrator to configure integrations within Dixa. For the Braze integration, in Dixa, go to **Settings** > **Integrations** > **Braze**.
 
-![]({% image_buster /assets/img/dixa/dixa-create-integration.png %}){: style="width:450px;"}
+![The Create Braze widget page in Dixa where you enter the widget name, API URL, and API key.]({% image_buster /assets/img/dixa/dixa-create-integration.png %}){: style="width:450px;"}
 
 ### Step 1: Create the integration in Dixa
 
@@ -59,7 +59,7 @@ Choose to show or hide the user's details. The details contain data about locati
 
 #### Display the button to change the email subscription state
 
-The buttons are based on one of the three subscription states from Braze: `subscribed`, `opted-in`, and `unsubscribed`. If a user is `subscribed`, the agent can choose to `opt-in` or `unsubscribe`. When a user is `opted-in` or `unsubscribed`, it's only possible to switch between the two.
+The buttons are based on one of the three subscription states from Braze: `subscribed`, `opted-in`, and `unsubscribed`. If a user is `subscribed`, the agent can choose to `opt-in` or `unsubscribe`. When a user is `opted-in` or `unsubscribed`, the agent can only switch between the two.
 
 #### Display a list of custom attributes
 
@@ -71,7 +71,7 @@ Choose to show or hide the user's custom Braze events.
 
 #### Display a list of purchases
 
-Choose to show or hide a list products purchased by the user. Here, you can see how many times it was purchased. To view the first and last purchase date, hover above the item. 
+Choose to show or hide a list of products the user purchased. Here, you can see how many times the user purchased the product. To view the first and last purchase date, hover over the item. 
 
 ### Example integration
 
@@ -79,3 +79,54 @@ The following shows an example of the integration:
 
 ![The Braze and Dixa integration in Dixa that displays a user's email subscription state, custom attributes, custom events, and purchases.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
 
+## Data transformation tool
+
+Dixa uses webhooks to send data to Braze. You must be a Dixa administrator to configure webhooks.
+
+The first step is to create a data transformation in Braze. 
+
+1. Go to **Data Settings** > **Data Transformations** > **Create transformation**.
+2. Select **Start from scratch**, select destination **POST: Track Users**, and select **Create transformation**.
+3. In the transformation editor, copy the code example from **Example transformation tool** below and insert it in the **Transformation code** field. Select **Save**, copy the **Webhook URL**, and open Dixa.
+4. In Dixa, go to **Settings** > **Integrations** > **Webhooks** > **+ Outbound webhook**.
+5. On the webhook settings page, paste the URL from Braze and toggle the events you want to track. **Conversation created** is a good starting point to track customers' conversations. 
+6. Select **Save** to finish the Dixa setup.
+
+### Example transformation tool
+
+```js
+// Transforming the provided payload to match Braze /users/track endpoint specifications.
+
+// Extracting necessary details from the payload
+const requester = payload.data.conversation.requester;
+const event = payload.data.conversation;
+
+// Defining user attributes based on the provided payload, prioritizing email if available.
+const userAttributes = {
+  email: requester.email, // Prioritizing email over external_id and user_alias
+  _update_existing_only: false, // Set to false to create or update user profiles when identified by email
+  organization: payload.organization.name, // Including an additional attribute for demonstration
+};
+
+// Defining event attributes based on the provided payload.
+const eventAttributes = {
+  email: requester.email, // Prioritizing email over external_id and user_alias
+  name: payload.event_fqn, // The name of the event
+  time: event.created_at, // ISO 8601 datetime format
+  properties: { // Including additional event properties
+    event_version: payload.event_version,
+    conversation_status: event.status,
+    conversation_channel: event.channel
+  },
+  _update_existing_only: false // Set to false to create or update user profiles when identified by email
+};
+
+// Constructing the final object to match Braze /users/track endpoint schema
+const brazecall = {
+  attributes: [userAttributes], // Wrapping userAttributes in an array as per specifications
+  events: [eventAttributes] // Wrapping eventAttributes in an array as per specifications
+};
+
+// Returning the transformed data
+return brazecall;
+```

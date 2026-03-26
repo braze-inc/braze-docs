@@ -96,4 +96,8 @@ All successful responses will return `Subscribed`, `Unsubscribed`, or `Unknown` 
 }
 ```
 
+{% alert important %}
+This endpoint returns the subscription group status independently of the user's global subscription state. If a user is globally unsubscribed, the Braze dashboard shows them as unsubscribed from each subscription group. However, this endpoint still returns the last saved subscription group status (for example, `Subscribed`) because the global subscription state supersedes individual subscription groups without overwriting them.<br><br>Braze preserves individual subscription group states so that if the user globally resubscribes, each subscription group reverts to its previously saved status. To determine a user's effective subscription state, check both their global subscription status and the subscription group status returned by this endpoint.
+{% endalert %}
+
 {% endapi %}

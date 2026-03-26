@@ -1,6 +1,6 @@
 ---
-nav_title: WhatsApp-Nachrichten erstellen
-article_title: WhatsApp-Nachrichten erstellen
+nav_title: Erstellen Sie eine WhatsApp-Nachricht
+article_title: Erstellen Sie eine WhatsApp-Nachricht
 page_order: 0
 description: "In diesem Referenzartikel werden die einzelnen Schritte zur Erstellung einer WhatsApp-Nachricht beschrieben."
 page_type: reference
@@ -11,7 +11,7 @@ channel:
 search_rank: 1
 ---
 
-# WhatsApp-Nachrichten erstellen
+# Erstellen Sie eine WhatsApp-Nachricht
 
 > WhatsApp-Kampagnen eignen sich hervorragend, um Ihre Kunden direkt zu erreichen und programmgesteuert mit ihnen zu kommunizieren. Sie können Liquid und andere dynamische Inhalte verwenden, um ein persönliches Erlebnis mit Ihren Nutzern zu schaffen und eine Umgebung zu schaffen, die ein unaufdringliches Nutzererlebnis mit Ihrer Marke fördert und verbessert. 
 
@@ -30,7 +30,7 @@ Bevor Sie WhatsApp Nachrichten erstellen können, müssen Sie die folgenden Punk
 WhatsApp erstellt für jede Sprache unterschiedliche [Nachrichtenvorlagen](#template-messages). Entweder erstellen Sie für jede Sprache eine Kampagne mit Segmentierung, um den Benutzern die richtige Vorlage zu liefern, oder Sie verwenden Canvas.
 {% endalert %}
 
-Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
+Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, zielgerichtete Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
 
 {% tabs %}
 {% tab Campaign %}
@@ -71,7 +71,7 @@ Wenn ein aktionsbasiertes Canvas durch eine eingehende WhatsApp-Nachricht ausgel
 
 Wählen Sie, ob Sie eine [WhatsApp-Vorlage](#template-messages) oder eine Antwortnachricht erstellen möchten, je nach Anwendungsfall. Jede geschäftlich initiierte Konversation muss von einer genehmigten Vorlage ausgehen, wohingegen Antwortnachrichten innerhalb eines Zeitfensters von 24 Stunden als Antwort auf eingehende Nachrichten von Benutzern verwendet werden können.
 
-![Im Bereich Nachrichten-Varianten können Sie eine Abo-Gruppe und eine von zwei Nachrichtenarten auswählen: WhatsApp-Vorlage Nachricht und Antwortnachricht.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
+![Unter Nachrichtenvarianten können Sie eine Abo-Gruppe und eine von zwei Nachrichtentypen auswählen: WhatsApp-Vorlage Nachricht und Antwortnachricht.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
 {% tabs %}
 {% tab Template messages %}
@@ -85,13 +85,13 @@ Deaktivierte Textfelder (grau unterlegt) können nicht bearbeitet werden, da sie
 
 Jede Vorlage hat eine zugewiesene Sprache, so dass Sie für jede Sprache eine Kampagne oder einen Canvas-Schritt erstellen müssen, um den Benutzerabgleich korrekt einzurichten. Wenn Sie z.B. ein Canvas erstellen, das Vorlagen verwendet, die mit Indonesisch und Englisch belegt sind, müssen Sie einen Canvas-Schritt für die indonesische Vorlage und einen Canvas-Schritt für die englische Vorlage erstellen.
 
-![Liste der Templates mit einer Vorschau ihrer Nachrichten, der ihnen zugewiesenen Sprachen und ihres Genehmigungsstatus.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
+![Template-Liste mit Nachrichteninhalt, zugewiesenen Sprachen und Genehmigungsstatus.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 Wenn Sie Texte in einer Sprache hinzufügen, die von rechts nach links geschrieben ist, beachten Sie, dass das endgültige Aussehen von Nachrichten von rechts nach links weitgehend davon abhängt, wie die Dienste sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
 
 #### Variablen
 
-Wenn Sie bei der Erstellung der WhatsApp-Vorlage im Meta Business Manager Variablen hinzugefügt haben, werden diese Variablen im Message Composer als Leerstellen angezeigt. Ersetzen Sie diese Leerzeichen durch Liquid oder einfachen Text. Um reinen Text zu verwenden, benutzen Sie das Format "Text hier", das von doppelten Klammern umgeben ist. Wenn Sie sich bei der Erstellung Ihrer Vorlage für Bilder entschieden haben, können Sie Bilder aus der Mediathek hochladen oder hinzufügen, indem Sie auf eine Bild-URL verweisen.
+Wenn Sie bei der Erstellung der WhatsApp-Vorlage im Meta Business Manager Variablen hinzugefügt haben, werden diese Variablen im Message Composer als Leerstellen angezeigt. Ersetzen Sie diese Leerzeichen durch Liquid oder einfachen Text. Um reinen Text zu verwenden, benutzen Sie das Format "Text hier", das von doppelten Klammern umgeben ist. Wenn Sie sich bei der Erstellung Ihrer Vorlage für Bilder entschieden haben, können Sie Bilder aus der Mediathek hochladen oder hinzufügen, indem Sie auf eine Bild-URL verweisen. Nach Möglichkeit sollten Bilder direkt in Ihre Medienbibliothek hochgeladen werden, um einheitliche und zuverlässige Ergebnisse zu erhalten.
 
 Beachten Sie, dass deaktivierte Textfelder (grau unterlegt) nicht bearbeitet werden können, da sie Teil der genehmigten WhatsApp-Vorlage sind. Wenn Sie Änderungen am deaktivierten Text vornehmen möchten, müssen Sie Ihre Vorlage bearbeiten und erneut genehmigen lassen.
 
@@ -101,11 +101,15 @@ Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardw
 {% endraw %}
 {% endalert %}
 
-![Das Tool Personalisierung hinzufügen mit dem Attribut "first_name" und dem Standardwert "Sie".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
+![Das Tool „Personalisierung hinzufügen” mit dem Attribut"first_name"und dem Standardwert „Sie”.]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
 ### Dynamische Links 
 
-CTA-URLs können Variablen enthalten. Meta verlangt jedoch, dass diese wie bei `{% raw %}https://example.com/{{variable}}{% endraw %}` am Ende der URL stehen, wo sie dann in Braze durch Liquid ersetzt werden kann. Links können auch als Teil des Textes in Templates aufgenommen werden. Beide Links können gekürzt und mit [Klick Tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/) verfolgt werden.
+CTA-URLs können Variablen enthalten. Meta verlangt jedoch, dass diese wie bei `{% raw %}https://example.com/{{variable}}{% endraw %}` am Ende der URL stehen, wo sie dann in Braze durch Liquid ersetzt werden kann. Links können auch als Teil des Textes in Templates aufgenommen werden. Beide Links können verkürzt und mithilfe von [Klick-Tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/) verfolgt werden.
+
+### Dynamische Bilder
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 {% endtab %}
 {% tab Response messages %}
@@ -119,7 +123,7 @@ Es gibt fünf Layouts für Nachrichten, die Sie verwenden können:
 - CTA-Button
 - Listennachricht
 
-![Der Nachrichten-Editor für eine Antwortnachricht, die neue Nutzer:innen mit einem Rabattcode begrüßt.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
+![Der Nachrichten-Editor für eine Antwortnachricht mit mit einem Rabattcode für Neuanmeldungen.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -128,13 +132,13 @@ Es gibt fünf Layouts für Nachrichten, die Sie verwenden können:
 
 Braze empfiehlt Ihnen, Ihre Nachricht vor dem Versenden in der Vorschau anzusehen und zu testen. Wechseln Sie auf die Registerkarte **Test**, um eine Test-WhatsApp-Nachricht an [Inhaltstestgruppen]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) oder einzelne Benutzer zu senden, oder um eine Vorschau der Nachricht als Benutzer direkt in Braze anzuzeigen.
 
-![Eine Vorschau auf eine Nachricht für einen angepassten Nutzer:in namens Max.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
+![Eine Vorschau-Nachricht für einen benutzerdefinierten Nutzer namens Max.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 Ein Konversationsfenster ist erforderlich, um Antwort- und Testnachrichten zu senden. Um ein Konversationsfenster zu initiieren, senden Sie eine WhatsApp-Nachricht an die Telefonnummer, die mit der Abonnementgruppe verbunden ist, die Sie für diese Nachricht verwenden. Die zugehörige Telefonnummer wird in der Benachrichtigung auf der Registerkarte **Test** aufgeführt.
 {% endalert %}
 
-![Eine Meldung, die besagt: "Um zu testen, öffnen Sie zunächst ein Konversationsfenster, indem Sie eine WhatsApp Nachricht an +1 217-582-9414 senden. Senden Sie dann Ihre Antwortnachricht an den Testbenutzer."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
+![Eine Warnung, die besagt: "Um zu testen, öffnen Sie zunächst ein Konversationsfenster, indem Sie eine WhatsApp Nachricht an +1 217-582-9414 senden. Senden Sie dann Ihre Antwortnachricht an den Testbenutzer."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
 
 ### Schritt 4: Erstellen Sie den Rest Ihrer Kampagne oder Ihres Canvas
 
@@ -151,9 +155,9 @@ Für die aktionsbasierte Zustellung können Sie auch die Dauer der Kampagne und 
 
 In diesem Schritt können Sie auch Zustellungskontrollen festlegen, z. B. dass Nutzer:innen wieder für den Empfang der Kampagne [zugelassen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) werden oder [Frequency-Capping-Regeln]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) aktiviert werden.
 
-#### Wählen Sie Benutzer als Zielgruppe aus
+#### Zielgruppe auswählen
 
-Als Nächstes müssen Sie mithilfe von Segmenten oder Filtern eine [Zielgruppe erstellen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Sie sollten bereits die Abonnementgruppe ausgewählt haben, die die Nutzer nach der Ebene oder Kategorie der Kommunikation mit Ihnen eingrenzt. In diesem Schritt wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit unseren Filtern weiter ein. Sie erhalten automatisch einen Überblick über die ungefähre Zusammensetzung dieses Segments. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Nachrichtenversand berechnet wird.
+Anschließend müssen Sie Ihre Zielgruppen durch die Auswahl von Segmenten oder Filtern eingrenzen. Sie sollten bereits die Abo-Gruppe ausgewählt haben, die die Nutzer:innen nach dem Grad oder der Kategorie der Kommunikation, die sie mit Ihnen führen möchten, eingrenzt. In diesem Schritt wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit unseren Filtern weiter ein. Sie erhalten automatisch einen Überblick über die ungefähre Größe dieses Segments. Bitte beachten Sie, dass die genaue Segmentzugehörigkeit immer vor dem Versand der Nachricht berechnet wird.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -198,6 +202,10 @@ Die folgenden Features werden für ausgehende WhatsApp Nachrichten, die Sie übe
 | Audio | Audio wird nur von Nachrichten mit Antwortfunktion unterstützt. Die Dateien müssen über eine URL gehostet werden. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
+{% alert important %}
+Meta weist ein bekanntes Problem auf, das aufgrund bestimmter Codierungs- oder Containereinstellungen dazu führen kann, dass einige MP4-Videos auf Android-Geräten nicht wiedergegeben werden können. Bis eine dauerhafte Lösung verfügbar ist, behebt das Neuformatieren der MP4-Datei das Problem für die meisten Absender. Bitte testen Sie alle Videos auf Android-Geräten, um die korrekte Zustellbarkeit zu bestätigen. <br><br>Sie können die MP4-Datei mit einem Tool für das Internet wie [CloudConvert](https://cloudconvert.com/mp4-converter) neu formatieren. Bitte laden Sie Ihre MP4-Datei in das Tool hoch, konvertieren Sie sie erneut in MP4 und laden Sie anschließend die konvertierte Datei herunter.
+{% endalert %}
+
 ### Eingehende Nachrichten
 
 Die folgenden Features werden für eingehende WhatsApp Nachrichten, die Sie über Braze erhalten, unterstützt:
@@ -221,7 +229,7 @@ Die folgenden Call-to-Action-Typen werden für WhatsApp Nachrichten unterstützt
 | Website besuchen | Maximal eine Taste (einschließlich variabler Parameter). |
 | Telefonnummer anrufen | Nur für Nachrichtenvorlagen verfügbar. <br>Maximal eine Taste. |
 | Benutzerdefinierte Schnellantwort-Schaltflächen | Maximal drei Tasten. |
-| Opt-in Button für Marketing | Standardmäßig wird der Status von Abos nicht automatisch aktualisiert. Eine vollständige Übersicht finden Sie unter [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection). |
+| Opt-in Button für Marketing | Standardmäßig wird der Status von Abos nicht automatisch aktualisiert. Eine vollständige Anleitung finden Sie unter [Opt-ins]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection) und[& Opt-outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection). |
 | Nachrichtenvorlagen für Gutscheincodes | Nur für Nachrichtenvorlagen verfügbar. <br>Diese können wie andere Nachrichtenvorlagen geöffnet und bearbeitet werden und sind mit Liquid- und Braze-Aktionscodes kompatibel. |
 | CTA-Antwortnachrichten  | Erstellen Sie eine Nachricht mit einem Aktionsbutton. |
 | [Antwortnachrichten auflisten]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#list-messages) | Erstellen Sie eine responsive Nachricht mit einer Liste von bis zu 10 Optionen, aus denen die Nutzer:innen wählen können. |

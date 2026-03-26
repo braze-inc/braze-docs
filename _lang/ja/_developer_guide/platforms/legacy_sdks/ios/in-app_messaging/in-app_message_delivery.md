@@ -32,7 +32,7 @@ noindex: true
 
 ## トリガー間の最小時間間隔
 
-デフォルトでは、質の高いユーザー体験を促進するため、アプリ内メッセージは30秒に1回にレート制限している。
+デフォルトでは、高品質のユーザーエクスペリエンスを促進するため、アプリ内メッセージのレートが 30 秒に 1 回に制限されています。
 
 この値は、`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡された `appboyOptions` パラメーター内の `ABKMinimumTriggerTimeIntervalKey` を使用してオーバーライドできます。`ABKMinimumTriggerTimeIntervalKey` を、アプリ内メッセージ間の最小時間 (秒) として使用する整数値に設定します。
 

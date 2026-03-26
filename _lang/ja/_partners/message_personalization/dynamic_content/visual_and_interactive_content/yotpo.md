@@ -2,7 +2,7 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: "この参考記事では、Braze と Yotpo のパートナーシップについて概説しています。Yotpo　は e コマースマーケティングプラットフォームのリーディングカンパニーで、何千もの先進的なブランドが消費者直販の成長を加速させるのを支援しています。"
+description: "このリファレンス記事では、Braze と Yotpo のパートナーシップについて概説しています。Yotpo は e コマースマーケティングプラットフォームのリーディングカンパニーで、何千もの先進的なブランドが消費者直販の成長を加速させるのを支援しています。"
 page_type: partner
 search_tag: Partner
 ---
@@ -23,7 +23,7 @@ BrazeとYotpoの統合により、Braze内のEメールやその他のコミュ�
 | ----------- | ----------- |
 | Yotpoアカウント | このパートナーシップを利用するには、Yotpoアカウントが必要である。 |
 | YotpoレビューAPIキー | この API は、コネクテッドコンテンツのコードスニペット内に実装されます。<br><br>詳細については、[Yotpo アプリのキーとシークレットキーの確認方法](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key)を参照してください |
-| YotpoロイヤリティAPIキー | この API キーと GUID は、コネクテッドコンテンツのコードスニペット内に実装されます。<br><br>詳細については、[Loyalty & Referrals API キーと GUID の確認方法](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)を参照してください。|
+| YotpoロイヤリティAPIキー | このAPIキーとグローバル一意識別子（GUID）は、コネクテッドコンテンツのコードスニペット内に実装される。<br><br>詳細については、[ロイヤルティ& リファーラルAPIキーとGUIDの検索を](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)参照のこと。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 続行する前に、YotpoのプロダクトIDが、Brazeから動的に引き出される`product_id` と同じであることを確認する。これは統合が機能するために必須の作業です。 
@@ -35,7 +35,7 @@ BrazeとYotpoの統合により、Braze内のEメールやその他のコミュ�
 3. 右クリックして [**Inspect**] を選択します。
 4. <kbd>Control</kbd>+<kbd>F</kbd>キーを押し、コード内の`yotpo-main` を検索する。`data-product ID` 変数とその値が Yotpo div に表示されます。
 
-![調査して yotpo-main を探し、data-product ID 変数を確認します。]({% image_buster /assets/img/yotpo/image1.png %})
+![調査して yotpo-main を探し、data-product ID 変数を確認する。]({% image_buster /assets/img/yotpo/image1.png %})
 
 ## 統合
 
@@ -69,7 +69,7 @@ The average rating for this product is:
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合が機能するためには、Braze の`product_id` が Yotpo の製品 ID (通常は e コマース親製品 ID) と一致している必要があります。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合を機能させるには、Braze の`product_id` が Yotpo の製品 ID (通常は e コマース親製品 ID) と一致している必要があります。
 
 ![YOTPO-API-KEYをあなたのYotpo Reviews APIキーに置き換える。]({% image_buster /assets/img/yotpo/image2.png %})
 
@@ -96,7 +96,7 @@ Recent 5 Star Review for this product:
 
 メールエディターのスニペットはこんな感じになる：
 
-![最近の5つ星レビューのスニペットを表示するEメールエディターの例s]({% image_buster /assets/img/yotpo/image3.png %})
+![最近の5つ星レビューのスニペットを表示するEメールエディターの例]({% image_buster /assets/img/yotpo/image3.png %})
 
 ### 製品別にビジュアルUGCを表示する {#visual-ugc}
 
@@ -125,7 +125,7 @@ Image return NULL
 
 スニペットは次のようになります。
 
-![Yotpo で公開された画像のスニペットを表示するEメールエディタの例]({% image_buster /assets/img/yotpo/image4.png %})
+![Yotpoで公開された画像のスニペットを表示するEメールエディタの例]({% image_buster /assets/img/yotpo/image4.png %})
 
 ### 顧客のロイヤルティポイント残高をメールに表示する{#loyalty-balance}
 
@@ -159,15 +159,15 @@ Only {{publication.vip_tier_upgrade_requirements.points_needed}} more points to 
 
 ## よくある質問 {#faq}
 
-#### 5つ星レビューがない場合
+### 5つ星レビューがない場合
 
 5つ星のレビューがない場合（エンドポイントのレスポンスが5つ星のレビューに対してNULLを返した場合など）、コンテンツは表示されない。
 
-#### 商品の画像が公開されていない場合は？
+### 商品の画像が公開されていない場合は？
 
 商品の画像がない場合（エンドポイントのレスポンスが商品画像に対してNULLを返した場合など）、コンテンツは表示されない。
 
-#### ルック＆フィールをカスタマイズしたり、Yotpoから他のデータフィールドを引き出すことは可能か？
+### ルック＆フィールをカスタマイズしたり、Yotpoから他のデータフィールドを引き出すことは可能か？
 
 はい、できます。その他のデータポイントやカスタマイズオプションについては、「[API 呼び出し]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)」を参照してください。そのためには、フロントエンド開発者の支援が必要かもしれない。
 

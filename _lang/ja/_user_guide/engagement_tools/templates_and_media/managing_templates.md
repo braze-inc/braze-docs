@@ -1,6 +1,6 @@
 ---
-nav_title: テンプレートを管理する
-article_title: テンプレートを管理する
+nav_title: テンプレートの管理
+article_title: テンプレートの管理
 page_order: 3
 
 page_type: reference
@@ -11,7 +11,7 @@ tool:
 
 ---
 
-# テンプレートを管理する
+# テンプレートの管理
 
 > テンプレートをアーカイブまたは複製すると、テンプレートの整理と管理が容易になります。この参考記事では、Braze ダッシュボードの [**テンプレート**] セクションでテンプレートをアーカイブおよび複製する方法について説明します。
 
@@ -38,11 +38,11 @@ tool:
 
 {% endraw %}
 
-![テンプレートsが最後に編集された時刻でソートされ、コピーされたテンプレートが一覧の一番上に表示されます。]({% image_buster /assets/img/duplicate_multiple_template.gif %})
+![テンプレートsが最後に編集された時刻でソートされ、コピーされたテンプレートが一覧の上部に表示される3つのテンプレート。]({% image_buster /assets/img/duplicate_multiple_template.gif %})
 
 ## テンプレートのアーカイブ
 
-![拡張設定] ドロップダウンメニューには次の3つのオプションが表示されます。" Archive" " Duplicate" および" Copy to ワークスペース" with " Archive" オプションが強調表示されています。]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
+![設定ドロップダウンメニューが拡張され、3つのオプションが表示される：" Archive" " Duplicate" および" Copy to ワークスペース" with " Archive" オプションが強調表示されています。]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
 
 個々のテンプレートをアーカイブするには、テンプレートグリッド画面の設定アイコンを選択し、[**アーカイブ**] を選択します。テンプレートがアーカイブされるとき、以下の異なるシナリオに注意すること：
 
@@ -52,7 +52,7 @@ tool:
 
 複数のテンプレートをアーカイブするには、アーカイブする各テンプレートの横にあるチェックボックスを選択します。複数のテンプレートを選択したら、[**アーカイブ**] を選択します。テンプレートグリッドの [**表示**] で [**アーカイブ済み**] を選択すると、アーカイブされたテンプレートを見つけることができます。
 
-![保存されたドロップ& 2 つの選択されたテンプレートとアーカイブオプションを含むツールバーを示す、電子メールテンプレートのドロップセクション。]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
+![保存されたドロップ& 2 つの選択されたテンプレートとツールバーを表示するメールテンプレートのドロップセクション。]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 現在、[リンクテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)をアーカイブすることはできません。

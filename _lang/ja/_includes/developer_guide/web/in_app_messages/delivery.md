@@ -4,23 +4,23 @@
 
 ## トリガーの種類
 
-アプリ内メッセージは、SDKが以下のカスタムイベントタイプのいずれかを記録すると自動的にトリガーされる：`Any Purchase` `Specific Purchase` 、`Session Start` 、`Custom Event` 、`Push Click` 。`Specific Purchase` 、`Custom Event` のトリガーには、ロバストなプロパティフィルターも含まれている。
+アプリ内メッセージは、SDKが以下のカスタムイベントタイプを記録した際に自動的にトリガーされる：`Any Purchase`、`Session Start``Specific Purchase`、`Custom Event`、、および`Push Click`なお、および`Custom Event`トリガー`Specific Purchase`には堅牢なプロパティフィルターも含まれている。
 
 {% alert note %}
-アプリ内メッセージは、APIやAPIイベントによってトリガーされることはなく、SDKによって記録されるカスタムイベントによってのみトリガーされる。ロギングの詳細については、[カスタムイベントの学習を]({{site.baseurl}}/developer_guide/analytics/logging_events/)参照のこと。
+アプリ内メッセージは、API または API イベントによってトリガーすることはできません。SDK によってログに記録されるカスタムイベントによってのみトリガーされます。ロギングの詳細については、[カスタムイベントのログ記録]({{site.baseurl}}/developer_guide/analytics/logging_events/)を参照してください。
 {% endalert %}
 
 ### 配信セマンティクス
 
-対象となるアプリ内メッセージはすべて、セッション開始時にユーザーの端末に配信される。SDKは配信時にアセットをプリフェッチするため、トリガー時にアセットを利用でき、表示レイテンシを最小限に抑えることができる。トリガーイベントに複数のアプリ内メッセージがある場合、最も優先度の高いメッセージのみが配信される。
+すべての適格なアプリ内メッセージは、ユーザーのセッション開始時に端末に配信される。SDKが配信されると、アセットを事前に読み込む。これにより、トリガー時にアセットが利用可能となり、表示の遅延を最小限に抑える。トリガーイベントに複数の適格なアプリ内メッセージがある場合、最も優先度の高いメッセージのみが配信されます。
 
-SDKのセッション開始セマンティクスの詳細については、セッション[ライフサイクルを]({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/)参照のこと。
+SDKのセッション開始の仕組みについて詳しくは、[セッションのライフサイクルを参照せよ]({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/)。
 
 ### レート制限
 
-デフォルトでは、アプリ内メッセージは30秒に1回送信できる。
+デフォルトでは、アプリ内メッセージは 30 秒に 1 回送信できます。
 
-これをオーバーライドするには、Brazeインスタンスが初期化される前に、次のプロパティをBraze設定に追加する。任意の正の整数に設定することができ、これは最小時間間隔を秒単位で表す。以下に例を示します。
+これを上書きするには、Brazeインスタンスが初期化される前に、Braze設定に次のプロパティを追加する。任意の正の整数に設定できる。これは最小の時間間隔を秒単位で表す。以下に例を示します。
 
 ```javascript
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
@@ -29,7 +29,7 @@ braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds
 
 ## キーと値のペア
 
-Brazeでキャンペーンを作成する際、キーと値のペアを`extras` 、アプリ内メッセージングオブジェクトがアプリにデータを送信する際に使用できるように設定できる。以下に例を示します。
+Brazeでキャンペーンを作成する際、キーと値のペアをパラメータとして設定できる。このパラメータは、アプリ内`extras`メッセージングオブジェクトがデータをアプリに送信する際に使用できる。以下に例を示します。
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -56,9 +56,9 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 
 ## 自動トリガーを無効にする
 
-アプリ内メッセージが自動的にトリガーされないようにする：
+アプリ内メッセージが自動的にトリガーされるのを防ぐには：
 
-読み込むスニペット内の`braze.automaticallyShowInAppMessages()` への呼び出しを削除し、アプリ内メッセージの表示/非表示を処理するカスタムロジックを作成する。
+読み込みスニペット内の`braze.automaticallyShowInAppMessages()`呼び出しを削除し、アプリ内メッセージの表示・非表示を処理するカスタムロジックを作成せよ。
 
 ```javascript
 braze.subscribeToInAppMessage(function(inAppMessage) {
@@ -81,7 +81,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 ```
 
 {% alert important %}
-Webサイトから`braze.automaticallyShowInAppMessages()` を削除せず、`braze.showInAppMessage` 、メッセージが何度も表示されることがある。
+Web サイトから`braze.automaticallyShowInAppMessages()`削除しない場合、またはに連絡しない`braze.showInAppMessage`場合、メッセージが複数回表示される可能性がある。
 {% endalert %}
 
 `inAppMessage` パラメータは [`braze.InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) サブクラスまたは [`braze.ControlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html) オブジェクトになり、それぞれにさまざまライフサイクルイベントのサブスクリプション方式があります。完全なドキュメントについては、[JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) を参照してください。
@@ -101,11 +101,11 @@ Webサイトから`braze.automaticallyShowInAppMessages()` を削除せず、`br
   braze.showInAppMessage(message);
 ```
 
-## 退団メッセージのトリガー
+## 退出意図メッセージのトリガー
 
-終了意図メッセージは、サイトを離れる前に訪問者に重要な情報を伝えるために使用される、中断のないアプリ内メッセージである。
+離脱意図メッセージとは、訪問者がサイトを離れる前に重要な情報を伝えるために使用される、邪魔にならないアプリ内メッセージである。
 
-これらのメッセージタイプのトリガーを設定するには、Webサイトにexit-intentライブラリ（[ouibounceのオープンソースライブラリなど](https://github.com/carlsednaoui/ouibounce)）を実装し、次のコードを使ってBrazeのカスタムイベントとして`'exit intent'` 。これで、今後のアプリ内メッセージキャンペーンでは、このメッセージタイプをカスタムイベントトリガーとして使うことができる。
+これらのメッセージタイプにトリガーを設定するには、Web サイトに退出検知ライブラリー（[ouibounceのオープンソースライブラリー](https://github.com/carlsednaoui/ouibounce)など）を実装する。その後、以下のコードを使用して、Brazeでカスタムイベントとして`'exit intent'`ログを記録する。これで、今後のアプリ内メッセージキャンペーンでは、このメッセージタイプをカスタムイベントトリガーとして使うことができる。
 
 ```javascript
   var _ouibounce = ouibounce(false, {

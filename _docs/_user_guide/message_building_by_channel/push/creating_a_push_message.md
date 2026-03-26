@@ -1,6 +1,6 @@
 ---
-nav_title: "Creating a push message"
-article_title: Creating a Push Campaign
+nav_title: Create a push message
+article_title: Create a Push Campaign
 page_order: 4
 page_type: tutorial
 description: "This tutorial page covers the different components involved in creating a Push Message, including configuration, sending, targeting, and more."
@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# Creating a push message
+# Create a push message
 
 > Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your app. To see examples of push notifications, check out our [case studies](https://www.braze.com/customers).
 
@@ -150,6 +150,8 @@ For additional guidance on using images in your push notifications, refer to the
 - [Create rich notifications for iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 - [Create rich notifications for Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### On-click behavior
 
 Specify what happens when a user selects the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
@@ -167,7 +169,22 @@ If a user has your app installed on multiple devices, by default, your push mess
 
 ![Device options checkbox to only send this push to the user's most recently used device.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
-There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they'll receive a push for both platforms. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#foreground-push-enabled), the message will not send.
+
+By default, Braze sends messages to every device a user owns that has a valid push token. For iOS, you can further refine your reach by choosing to send notifications only to iPad devices, or only to iPhone and iPod devices.
+
+If desired, you can set the push destination to **Most recently used device**. 
+
+##### Most recently used device
+
+"Most recently used" is a technical status, not a behavioral one. Because Braze defaults to all devices, switching to this setting significantly narrows your reach and relies entirely on the status of the single device with the newest token.
+
+![Device options checkbox to only send this push to the user's most recently used device.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
+
+The most recently used device is determined by which device has the most recently updated push token, rather than which device had the most recent session. 
+* If a new device's push token is added to a user profile through the API, that device is immediately considered the most recently used, even if the user hasn't started a session on it yet. 
+* If a user's most recently used device is not [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#foreground-push-enabled), the message will not send at all.
+
+Multiple sends can still occur if a campaign targets different platforms, such as both iOS and Android. If a user has the app on both, they can receive a push for both platforms.
 
 For iOS, you can further limit messaging by only sending push notifications to iPad devices, or only sending to iPhone and iPod devices.
 
@@ -192,7 +209,7 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that approximate segment population looks like right now. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
+Next, you must [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow your audience. You automatically receive a preview of what that approximate segment population looks like. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -204,7 +221,7 @@ When you view the Total Reachable Users for your filtered audience, you may noti
 
 ![Table of detailed audience statistics for Reachable Users.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
-Keep in mind that exact segment membership is always calculated just before the message is sent.
+Keep in mind that exact segment membership is always calculated before the message is sent.
 
 You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to push.
 

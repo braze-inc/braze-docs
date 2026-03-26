@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-# This script finds and deletes all files that exist in one or more '_lang' 
-# subdirectories that don't exist in the primary '_docs' directory. If no 
-# argument is given, all languages are processed. To see the full list of 
-# options, append '--help' to the script.
+# This script finds and deletes all files that exist in one or more '_lang'
+# subdirectories that don't have a corresponding source file in '_docs/' or
+# '_includes/'. If no argument is given, all languages are processed. To see
+# the full list of options, append '--help' to the script.
 #
 # Usage:  ./scripts/clean_orphaned_translations.py [LANGUAGE]
 
@@ -13,7 +13,10 @@ import sys
 from pathlib import Path
 
 # Base directories
-docs_dir = Path("_docs")
+source_dirs = {
+    "_docs": Path("_docs"),
+    "_includes": Path("_includes"),
+}
 lang_dirs = {
     "ja": Path("_lang/ja"),
     "de": Path("_lang/de"),
@@ -35,7 +38,7 @@ def get_all_files(directory):
     return all_files
 
 help_text = f"""This script finds and deletes all files that exist in one or more '_lang' subdirectories
-that don't exist in the primary '_docs' directory. It can be run against a single language or all languages.
+that don't have a corresponding source file in '_docs/' or '_includes/'. It can be run against a single language or all languages.
 
 USAGE:
   ./scripts/clean_orphaned_translations.py [LANGUAGE]
@@ -46,8 +49,17 @@ OPTIONS:
   -h, --help         Show this help message"""
 
 def main():
-    # Get all files in the _docs directory
-    docs_files = set(get_all_files(docs_dir))
+    # Get all files from all source directories (_docs and _includes).
+    # Files from _docs/ are stored as-is (e.g. "_user_guide/foo.md") since
+    # _lang/<code>/ mirrors _docs/ directly.  Files from _includes/ are
+    # prefixed with "_includes/" (e.g. "_includes/analytics/metrics.md")
+    # because that's how they appear inside _lang/<code>/.
+    docs_files = set()
+    if source_dirs["_docs"].exists():
+        docs_files.update(get_all_files(source_dirs["_docs"]))
+    if source_dirs["_includes"].exists():
+        for f in get_all_files(source_dirs["_includes"]):
+            docs_files.add(os.path.join("_includes", f))
 
     # Initialize a dictionary to track orphaned files by section for each language
     language_summaries = {}
@@ -88,11 +100,7 @@ def main():
             section_counts = {}
 
             for lang_file in lang_files:
-                # Skip files in _includes directory
-                if lang_file.startswith("_includes/"):
-                    continue
-
-                # Check if the file exists in _docs
+                # Check if the file exists in any source directory
                 if lang_file not in docs_files:
                     orphaned_files.append(lang_file)
                     file_path = os.path.join(lang_dir, lang_file)
