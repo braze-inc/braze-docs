@@ -20,7 +20,7 @@ Os modelos de carrossel do WhatsApp estão em acesso antecipado. Fale com o seu 
 
 {% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
-## Criar um modelo de carrossel
+## Criar um modelo de carrossel {#create-a-carousel-template}
 
 Você pode criar modelos de carrossel na Braze com o construtor de modelos do WhatsApp. Quando você cria modelos, a Braze valida seu conteúdo para atender aos critérios da Meta.
 
@@ -29,7 +29,7 @@ Ao criar um modelo na Braze, você pode usar:
 - Variáveis genéricas como {% raw %}`{{1}}`{% endraw %}.
 
 {% alert note %}
-As Liquid tags {% raw %}`{% %}`{% endraw %} não são compatíveis com o construtor de modelos porque não atendem aos critérios de conteúdo da Meta. 
+As Liquid tags {% raw %}`{% %}`{% endraw %} não são compatíveis com o construtor de modelos porque não atendem aos critérios de conteúdo da Meta.
 {% endalert %}
 
 Após o envio do modelo, ele aparece na lista de modelos da WABA e é revisado em até 24 horas. No entanto, a revisão geralmente ocorre em poucos minutos.
@@ -150,7 +150,7 @@ Quando seu modelo é carregado, ele contém conteúdo bloqueado e editável.
 - Se você enviou o modelo com Liquid (por exemplo, `{{first_name}}`), a Braze preserva e exibe automaticamente esse Liquid.
 - Você pode alterar o Liquid para variáveis diferentes (por exemplo, trocar de `{{first_name}}` para `{{last_name}}`).
 - Imagens com variáveis podem ser tornadas dinâmicas usando URLs com Liquid.
-- Você pode fazer upload de novas imagens da biblioteca de mídia da Braze em vez de usar a mídia enviada. 
+- Você pode fazer upload de novas imagens da biblioteca de mídia da Braze em vez de usar a mídia enviada.
 {% endraw %}
 
 #### Exemplo

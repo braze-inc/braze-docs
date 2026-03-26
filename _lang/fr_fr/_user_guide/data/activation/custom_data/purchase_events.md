@@ -67,7 +67,7 @@ Pour plus de détails sur chaque filtre, consultez le glossaire des [filtres de 
 
 ![Filtrage des utilisateurs ayant effectué exactement trois achats]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
-{% alert tip %} 
+{% alert tip %}
 Pour segmenter sur le nombre de fois qu'un achat spécifique a été effectué, enregistrez cet achat individuellement en tant qu'[attribut personnalisé incrémentiel]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
 {% endalert %}
 

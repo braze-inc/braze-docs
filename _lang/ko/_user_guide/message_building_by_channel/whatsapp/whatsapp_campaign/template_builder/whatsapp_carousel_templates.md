@@ -20,7 +20,7 @@ WhatsApp 캐러셀 템플릿은 얼리 액세스 중입니다. 이 얼리 액세
 
 {% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
-## 캐러셀 템플릿 만들기
+## 캐러셀 템플릿 만들기 {#create-a-carousel-template}
 
 WhatsApp 템플릿 빌더를 사용하여 Braze 내에서 캐러셀 템플릿을 만들 수 있습니다. 템플릿을 만들 때 Braze는 Meta의 기준을 충족하는지 콘텐츠를 검증합니다.
 

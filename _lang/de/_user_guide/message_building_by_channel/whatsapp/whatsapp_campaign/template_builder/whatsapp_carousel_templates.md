@@ -20,7 +20,7 @@ WhatsApp-Karussell-Templates befinden sich im Early Access. Kontaktieren Sie Ihr
 
 {% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
-## Ein Karussell-Template erstellen
+## Ein Karussell-Template erstellen {#create-a-carousel-template}
 
 Sie können Karussell-Templates in Braze mit dem WhatsApp-Template-Builder erstellen. Wenn Sie Templates erstellen, validiert Braze Ihren Inhalt anhand der Kriterien von Meta.
 

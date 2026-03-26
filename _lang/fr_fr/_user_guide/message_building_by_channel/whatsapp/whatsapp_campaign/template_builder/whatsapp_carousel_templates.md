@@ -20,7 +20,7 @@ Les modèles de carrousel WhatsApp sont en accès anticipé. Contactez votre Cus
 
 {% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
-## Créer un modèle de carrousel
+## Créer un modèle de carrousel {#create-a-carousel-template}
 
 Vous pouvez créer des modèles de carrousel dans Braze avec le générateur de modèles WhatsApp. Lorsque vous créez des modèles, Braze valide votre contenu pour répondre aux critères de Meta.
 
@@ -52,7 +52,7 @@ Remplissez les champs requis.
 
 | Champ | Description |
 | --- | --- |
-| WhatsApp Business Account | Sélectionnez le WABA dans lequel ce modèle sera stocké. N'oubliez pas que tous les Groupes d'abonnement et numéros de téléphone au sein de ce WABA auront accès au modèle. |
+| WhatsApp Business Account | Sélectionnez le WABA dans lequel ce modèle sera stocké. N'oubliez pas que tous les groupes d'abonnement et numéros de téléphone au sein de ce WABA auront accès au modèle. |
 | Template Language | Sélectionnez la langue de votre modèle. Meta limite les modèles à une seule langue, choisissez donc la langue que votre audience verra. |
 | Template Name | Saisissez un nom descriptif qui vous aidera à identifier ce modèle ultérieurement. Les noms de modèles ne peuvent pas contenir d'espaces — utilisez des underscores ou supprimez les espaces entièrement (par exemple `carousel_example` ou `carouselexample`). |
 | Category | Automatiquement défini sur **Marketing**. Tous les messages de carrousel sont catégorisés comme messages marketing. |
@@ -120,7 +120,7 @@ Une fois votre modèle de carrousel approuvé par Meta, vous pouvez l'utiliser d
 2. Sélectionnez le groupe d'abonnement qui correspond au compte WhatsApp Business (WABA) de votre modèle.
 
 {% alert important %}
-Si vous avez plusieurs comptes WhatsApp Business, sélectionnez un groupe d'abonnement du même WABA que celui où le modèle a été créé. Les modèles ne sont pas partagés entre les WABA, mais sont partagés entre tous les Groupes d'abonnement et numéros de téléphone au sein du même WABA.
+Si vous avez plusieurs comptes WhatsApp Business, sélectionnez un groupe d'abonnement du même WABA que celui où le modèle a été créé. Les modèles ne sont pas partagés entre les WABA, mais sont partagés entre tous les groupes d'abonnement et numéros de téléphone au sein du même WABA.
 {% endalert %}
 
 ### Étape 2 : Sélectionner votre modèle de carrousel

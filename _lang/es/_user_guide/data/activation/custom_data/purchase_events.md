@@ -67,7 +67,7 @@ Para más detalles sobre cada filtro, consulta el glosario de [filtros de segmen
 
 ![Filtrado de usuarios que han realizado exactamente tres compras]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
-{% alert tip %} 
+{% alert tip %}
 Para segmentar en función del número de veces que se ha producido una compra concreta, registra esa compra individualmente como un [atributo personalizado incremental]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
 {% endalert %}
 

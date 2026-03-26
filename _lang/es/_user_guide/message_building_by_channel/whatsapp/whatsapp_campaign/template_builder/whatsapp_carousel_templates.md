@@ -20,7 +20,7 @@ Las plantillas de carrusel de WhatsApp están en acceso anticipado. Ponte en con
 
 {% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
-## Crear una plantilla de carrusel
+## Crear una plantilla de carrusel {#create-a-carousel-template}
 
 Puedes crear plantillas de carrusel dentro de Braze con el constructor de plantillas de WhatsApp. Cuando creas plantillas, Braze valida tu contenido para cumplir con los criterios de Meta.
 
@@ -29,7 +29,7 @@ Al crear una plantilla en Braze, puedes usar:
 - Variables genéricas como {% raw %}`{{1}}`{% endraw %}.
 
 {% alert note %}
-Las etiquetas de Liquid {% raw %}`{% %}`{% endraw %} no son compatibles en el constructor de plantillas porque no pasan los criterios de contenido de Meta. 
+Las etiquetas de Liquid {% raw %}`{% %}`{% endraw %} no son compatibles en el constructor de plantillas porque no pasan los criterios de contenido de Meta.
 {% endalert %}
 
 Después de enviar la plantilla, aparece en la lista de plantillas de la WABA y se revisa en un plazo de 24 horas. Sin embargo, la revisión suele ocurrir en pocos minutos.
@@ -150,7 +150,7 @@ Cuando tu plantilla se carga, contiene contenido bloqueado y editable.
 - Si enviaste la plantilla con Liquid (por ejemplo, `{{first_name}}`), Braze lo preserva y muestra automáticamente.
 - Puedes cambiar el Liquid a diferentes variables (por ejemplo, cambiar de `{{first_name}}` a `{{last_name}}`).
 - Las imágenes con variables pueden hacerse dinámicas usando URLs con Liquid.
-- Puedes cargar nuevas imágenes desde la biblioteca de medios de Braze en lugar de usar los medios enviados. 
+- Puedes cargar nuevas imágenes desde la biblioteca de medios de Braze en lugar de usar los medios enviados.
 {% endraw %}
 
 #### Ejemplo
