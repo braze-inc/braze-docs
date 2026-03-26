@@ -20,7 +20,12 @@ require "set"
 require "tempfile"
 require "tmpdir"
 
-REPO_ROOT = `git -C "#{Dir.pwd}" rev-parse --show-toplevel`.strip
+REPO_ROOT = begin
+  out, err, st = Open3.capture3("git", "rev-parse", "--show-toplevel")
+  raise "Failed to determine repository root. Is this a git checkout?\n#{err}" unless st.success?
+
+  out.strip
+end
 DUMP_SCRIPT = File.expand_path("jekyll_url_map_dump.rb", __dir__)
 REDIRECT_REL = "assets/js/broken_redirect_list.js"
 RX_VALIDURL = /validurls\['([^']+)'\]\s*=\s*'([^']*)'(?:;)?/
@@ -188,7 +193,7 @@ end
 def validate!(options)
   base_ref = options[:base]
 
-  if options[:fetch] && base_ref.start_with?("origin/")
+  if options[:fetch] && base_ref.match?(/\Aorigin\/[\w\-\.\/]+\z/)
     sh!("git", "fetch", "--quiet", "origin", base_ref.delete_prefix("origin/"))
   end
 
