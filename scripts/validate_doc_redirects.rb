@@ -11,7 +11,6 @@
 #
 # Requires: git, bundler, gems from Gemfile (Jekyll). Uses a temporary git worktree for the base ref.
 
-require "English"
 require "fileutils"
 require "json"
 require "open3"
@@ -20,7 +19,12 @@ require "set"
 require "tempfile"
 require "tmpdir"
 
-REPO_ROOT = `git -C "#{Dir.pwd}" rev-parse --show-toplevel`.strip
+REPO_ROOT = begin
+  out, err, st = Open3.capture3("git", "rev-parse", "--show-toplevel")
+  raise "Failed to determine repository root. Is this a git checkout?\n#{err}" unless st.success?
+
+  out.strip
+end
 DUMP_SCRIPT = File.expand_path("jekyll_url_map_dump.rb", __dir__)
 REDIRECT_REL = "assets/js/broken_redirect_list.js"
 RX_VALIDURL = /validurls\['([^']+)'\]\s*=\s*'([^']*)'(?:;)?/
@@ -55,7 +59,11 @@ def sh!(*cmd)
 end
 
 def normalize_url_for_compare(url)
-  u = url.to_s.strip.downcase.gsub(%r{//+}, "/")
+  # Use a negative lookbehind so the repeated-slash collapse does not destroy
+  # the "//" in an absolute URL scheme (e.g. "https://…" stays "https://…").
+  # Lowercasing is intentionally omitted: case-only URL changes are real and
+  # should be caught as mismatches rather than silently normalised away.
+  u = url.to_s.strip.gsub(%r{(?<!:)//+}, "/")
   # Ruby: "".split("#", 2) => [] — always use indexed parts
   parts = u.split("#", 2)
   path = parts[0] || ""
@@ -67,7 +75,9 @@ def normalize_url_for_compare(url)
     q = pq[1] ? "?#{pq[1]}" : nil
   end
   path = path.chomp("/")
-  path += "/" unless path.empty? || path.end_with?(".html") || path.end_with?(".json")
+  file_segment = File.basename(path)
+  has_extension = !file_segment.empty? && file_segment.match?(/\.[A-Za-z0-9]{2,}$/)
+  path += "/" unless path.empty? || has_extension
   "#{path}#{q}#{frag}"
 end
 
@@ -125,9 +135,7 @@ end
 
 def required_redirects(url_map_base, url_map_head, diff_rows)
   needed = {} # old_url_norm => new_url_norm
-  md_paths = lambda do |p|
-    p.end_with?(".md")
-  end
+  md_paths = lambda { |p| p.end_with?(".md") }
 
   renames = diff_rows.select { |r| r[0] == :rename }
   deleted = diff_rows.select { |r| r[0] == :d }.map { |r| r[1] }.select(&md_paths)
@@ -136,6 +144,7 @@ def required_redirects(url_map_base, url_map_head, diff_rows)
 
   renamed_sources = renames.map { |(_, old_p, _)| old_p }.to_set
 
+  # Process renames: use git's rename detection to pair old→new paths.
   renames.each do |(_, old_p, new_p)|
     next unless md_paths.call(old_p) && md_paths.call(new_p)
 
@@ -147,16 +156,28 @@ def required_redirects(url_map_base, url_map_head, diff_rows)
     needed[normalize_url_for_compare(old_u)] = normalize_url_for_compare(new_u)
   end
 
-  modified.each do |p|
-    old_u = url_map_base[p]
-    new_u = url_map_head[p]
-    next if old_u.nil? || new_u.nil?
-    next if normalize_url_for_compare(old_u) == normalize_url_for_compare(new_u)
+  # Detect URL changes for all paths shared between base and HEAD. Comparing
+  # URL maps directly (rather than relying solely on the _docs/ git diff) catches
+  # permalink re-URLs driven by _config.yml or _plugins/ changes, where doc files
+  # themselves are not modified.
+  head_keys = url_map_head.keys.to_set
+  url_map_base.each_key do |p|
+    next unless md_paths.call(p)
+    next unless head_keys.include?(p)
+    next if renamed_sources.include?(p)
 
-    needed[normalize_url_for_compare(old_u)] = normalize_url_for_compare(new_u)
+    old_u = normalize_url_for_compare(url_map_base[p])
+    new_u = normalize_url_for_compare(url_map_head[p])
+    next if old_u == new_u
+
+    needed[old_u] = new_u
   end
 
-  deleted.each do |p|
+  # Deleted pages: paths present in the base URL map but absent from HEAD's map
+  # (and not the source of a rename) need a manual redirect to a replacement URL.
+  url_map_base.each_key do |p|
+    next unless md_paths.call(p)
+    next if head_keys.include?(p)
     next if renamed_sources.include?(p)
 
     old_u = url_map_base[p]
@@ -165,15 +186,13 @@ def required_redirects(url_map_base, url_map_head, diff_rows)
     needed[normalize_url_for_compare(old_u)] = :deleted_no_target
   end
 
-  # New paths that might be rename targets without similarity (copy/add): no automatic old URL.
-
   [needed, { renames: renames.size, modified: modified.size, deleted: deleted.size, added: added.size }]
 end
 
 def validate!(options)
   base_ref = options[:base]
 
-  if options[:fetch] && base_ref.start_with?("origin/")
+  if options[:fetch] && base_ref.match?(/\Aorigin\/[\w\-\.\/]+\z/)
     sh!("git", "fetch", "--quiet", "origin", base_ref.delete_prefix("origin/"))
   end
 
@@ -189,11 +208,18 @@ def validate!(options)
     puts "Building URL map for HEAD…"
     map_head = jekyll_url_map(REPO_ROOT)
   ensure
-    system("git", "-C", REPO_ROOT, "worktree", "remove", "-f", worktree, out: File::NULL, err: File::NULL)
+    success = system("git", "-C", REPO_ROOT, "worktree", "remove", "-f", worktree, out: File::NULL, err: File::NULL)
     FileUtils.remove_entry(tmp_parent, true)
+    unless success
+      system("git", "-C", REPO_ROOT, "worktree", "prune", out: File::NULL, err: File::NULL)
+      raise "Failed to remove git worktree at #{worktree}"
+    end
   end
 
-  diff_rows = git_diff_name_status(base_ref)
+  # Use resolve_ref (the exact SHA) so the diff is guaranteed to be based on
+  # the same commit that was checked out for the base URL map, even if base_ref
+  # is a mutable ref (branch or remote-tracking branch) that could advance.
+  diff_rows = git_diff_name_status(resolve_ref)
   needed, stats = required_redirects(map_base, map_head, diff_rows)
 
   redirect_path = File.join(REPO_ROOT, REDIRECT_REL)
@@ -205,9 +231,6 @@ def validate!(options)
 
   needed.each do |from_norm, to_norm|
     if to_norm == :deleted_no_target
-      # Git reports D for removed files; a global redirect may already cover the old URL.
-      next if redirects[from_norm]
-
       deleted_warn << { old_url: from_norm, note: "Page removed; add redirect manually to a replacement URL." }
       next
     end
