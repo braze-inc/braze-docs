@@ -125,4 +125,31 @@ If your app is successfully requesting and receiving in-app messages, but they a
 6. If the device orientation does not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
 {% endcase %}
 7. If your in-app message is triggered by session start and you've set an extended session timeout, this will affect how quickly you can show messages. For instance, if your session timeout is set to 300 seconds, closing and re-opening the app in less than that time will not refresh the session, so an in-app message triggered by a session start will not display.
+{% if include.sdk == "Web" %}
 
+#### Debugging in the browser console
+
+You can test in-app messages and Content Cards triggered on session start directly from your browser's developer console:
+
+1. Open your website in Google Chrome (or another Chromium-based browser).
+2. Open the developer tools (**Right-click** > **Inspect**, or press <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>J</kbd> on Mac / <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> on Windows).
+3. In the **Console** tab, toggle SDK logging on or off:
+
+    ```javascript
+    braze.toggleLogging();
+    ```
+    If logging is already enabled, running this command disables it.
+
+4. To force a new session and trigger session-start messages, clear the browser's local storage to reset the SDK's session state, then reload the page:
+
+    ```javascript
+    localStorage.clear();
+    location.reload();
+    ```
+
+5. Check the console output for Braze SDK logs indicating whether in-app messages or Content Cards were delivered. If the message still doesn't display, review the logs for errors or eligibility issues.
+
+{% alert warning %}
+Clearing `localStorage` removes all data stored in the browser for your site—not just Braze data. Don't run this command on a production site, as it may log users out or clear their stored preferences.
+{% endalert %}
+{% endif %}
