@@ -173,7 +173,7 @@ Include a resubscribe link (for example {% raw %}`{{${set_user_to_subscribed_url
 You can also send users to your site and update status with the Braze REST API (for example link with {% raw %}`?user_id={{${user_id}}}`{% endraw %} and then call [`/email/status`]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/).
 
 {% alert note %}
-If you use the dashboard footer instead of only an HTML Content Block, the template must still contain {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} to save. To use a different unsubscribe URL temporarily, you can comment out the default tag, for example {% raw %}`<!-- {{${set_user_to_unsubscribed_url}}} -->`{% endraw %}.
+If you use the dashboard footer instead of only an HTML content block, the template must still contain {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} to save. To use a different unsubscribe URL temporarily, you can comment out the default tag. An example is: {% raw %}`<!-- {{${set_user_to_unsubscribed_url}}} -->`{% endraw %}.
 {% endalert %}
 
 ![Custom unsubscribe page with a preview "Sorry to see you go!".]({% image_buster /assets/img/custom_unsubscribe.png %})
