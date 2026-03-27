@@ -268,3 +268,7 @@ Caching can help reduce duplicate Connected Content calls but isn't guaranteed t
 {% multi_lang_include connected_content.md section='default behavior' %}
 
 {% multi_lang_include connected_content.md section='http post' %}
+
+### If you use the same Connected Content call in multiple places, what will happen?
+
+Each Connected Content tag is evaluated separately, even if multiple tags use the same URL and parameters. When the URL and cache settings allow, identical requests may be served from cache rather than triggering a new outbound request (see [Caching responses]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/caching_responses/) for details).
