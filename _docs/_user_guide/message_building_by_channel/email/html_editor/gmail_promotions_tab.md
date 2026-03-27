@@ -112,7 +112,7 @@ Follow [Gmail's Promotions tab best practices](https://developers.google.com/gma
 As you build your card, ask:
 
 - Is the annotation script valid? [Preview with Google](https://developers.google.com/workspace/gmail/promotab/preview).
-- Does **Show original** in Gmail web show the script in the raw message?
+- Does **Show original** in Gmail show the script in the raw message?
 - Is mail landing in **Promotions**? Cards only apply there.
 - Have you tested desktop and mobile?
 
