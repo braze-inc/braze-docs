@@ -3018,6 +3018,33 @@ validurls['/docs/contributing/content_management/pages/#managing-pages'] = '/doc
 validurls['/docs/contributing/content_management/sections/#managing-sections'] = '/docs/feedback/';
 validurls['/docs/contributing/local_environment/#setting-up-your-local-environment'] = '/docs/feedback/';
 
+validurls['/docs/contributing/home'] = '/docs/';
+validurls['/docs/contributing/bdocs'] = '/docs/';
+validurls['/docs/contributing/content_management'] = '/docs/';
+validurls['/docs/contributing/content_management/cross_referencing'] = '/docs/';
+validurls['/docs/contributing/content_management/images'] = '/docs/';
+validurls['/docs/contributing/content_management/jekyll_collections'] = '/docs/';
+validurls['/docs/contributing/content_management/pages'] = '/docs/';
+validurls['/docs/contributing/content_management/redirecting_urls'] = '/docs/';
+validurls['/docs/contributing/content_management/reusing_content'] = '/docs/';
+validurls['/docs/contributing/content_management/sections'] = '/docs/';
+validurls['/docs/contributing/content_types'] = '/docs/';
+validurls['/docs/contributing/generating_a_preview'] = '/docs/';
+validurls['/docs/contributing/git_and_github'] = '/docs/';
+validurls['/docs/contributing/local_environment'] = '/docs/';
+validurls['/docs/contributing/mermaid_support'] = '/docs/';
+validurls['/docs/contributing/style_guide'] = '/docs/';
+validurls['/docs/contributing/style_guide/alerts'] = '/docs/';
+validurls['/docs/contributing/style_guide/api_endpoint_guidelines'] = '/docs/';
+validurls['/docs/contributing/style_guide/image_style_guide'] = '/docs/';
+validurls['/docs/contributing/style_guide/writing_style_guide'] = '/docs/';
+validurls['/docs/contributing/styling_examples'] = '/docs/';
+validurls['/docs/contributing/troubleshooting'] = '/docs/';
+validurls['/docs/contributing/yaml_front_matter'] = '/docs/';
+validurls['/docs/contributing/yaml_front_matter/metadata'] = '/docs/';
+validurls['/docs/contributing/yaml_front_matter/page_layouts'] = '/docs/';
+validurls['/docs/contributing/your_first_contribution'] = '/docs/';
+
 // Developer Guide - SDK Integration & Analytics
 validurls['/docs/developer_guide/sdk_integration/#integrating-the-braze-sdk'] = '/docs/developer_guide/sdk_integration/#integrate-the-braze-sdk';
 validurls['/docs/developer_guide/analytics/tracking_location/#tracking-location'] = '/docs/developer_guide/analytics/tracking_location/#track-location';

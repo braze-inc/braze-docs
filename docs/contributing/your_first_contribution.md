@@ -13,7 +13,7 @@ When you're finished with this tutorial, you'll be able to:
 
 ## Prerequisites
 
-If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+<!-- If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo. -->
 
 
 ## Making your first contribution
