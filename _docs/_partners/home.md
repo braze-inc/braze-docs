@@ -149,7 +149,7 @@ valid_partner_list:
 - name: LINE
   url: /docs/line/
 - name: LinkedIn Audience Sync
-  url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
+  url: /docs/partners/linkedin_audience_sync/
 - name: Judo
   url: /docs/partners/judo/
 - name: Shopify
@@ -410,4 +410,6 @@ valid_partner_list:
   url: /docs/partners/figma/
 - name: Poq
   url: /docs/partners/poq/
+- name: The Trade Desk
+  url: /docs/partners/trade_desk_audience_sync/
 ---
