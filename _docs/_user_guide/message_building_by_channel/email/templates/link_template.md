@@ -70,13 +70,14 @@ If you want to add query parameters after a URL in your email message:
 
 After your link templates are set up, you can select the template to use in your email.
 
-- **HTML editor:** Go to the **Link Management** tab under the **Content** section. Select **Add a Link Template**, choose your link template, and select **Add**.
+1. Create an email campaign using the drag-and-drop editor or HTML editor.
+2. In the **Content** section, select the **Link Management** tab.
+3. Select **Add a Link Template**, then choose your link template.
+4. Select **Add**.
 
 {% alert important %}
-To access the **Link Management** tab in the updated HTML email editor, you must have link aliasing turned on. To turn on link aliasing, contact your account manager.
+To access the **Link Management** tab, you must have link aliasing turned on. To turn on link aliasing, contact your account manager.
 {% endalert %}
-
-- **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Then, select **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on.
 
 ![Link Management tab in the drag-and-drop editor with an example list of link templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
@@ -93,6 +94,28 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 {% alert important %}
 Archiving templates is not currently available for link templates.
 {% endalert %}
+
+{% alert tip %}
+When including links in your message, be sure to start the URLs with `http://` or `https://`.
+{% endalert %}
+
+## Troubleshooting
+
+### Missing UTM parameters
+
+Link templating isn't applied to links in HTML comments. Check that your links aren't in HTML comments that are conditional statements.
+
+### UTM parameters aren't displaying in each link, but are present when viewed in-browser
+
+Check if the full path to the website was added. If not, the UTM parameter was not applied to clicked links in those cases. The user may still be redirected to the correct page from the website. For example, if the full website link is `https://www.somewebsite.com/women/designer/johnjane` and the link added to the email body is `https://www.somewebsite.com/designer/johnjane`, it's expected that the UTM parameters won't be added to the link.
+
+### UTM parameters aren't appending for a link rendered from a Liquid tag
+
+Before appending UTM parameters to a link, Braze checks if the resulting link is likely to fail. If so, Braze won't append the parameters.
+
+### UTM values don't populate compared to the preview in a test send
+
+When test sending link templates, `{{${user_id}}}` does not get rendered. Instead, duplicate the campaign and set it to target your internal users' email or `external_id` and launch the campaign to verify that all UTM parameters from the link template are populated.
 
 ## Frequently asked questions
 
