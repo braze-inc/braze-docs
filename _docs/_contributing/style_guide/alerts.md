@@ -1,6 +1,6 @@
 ---
 nav_title: Alerts
-article_title: Alerts
+article_title: Alerts best practices
 description: "Information, guidelines, and examples for alert types used in Braze documentation."
 page_order: 2
 noindex: true

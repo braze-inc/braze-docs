@@ -233,7 +233,7 @@ erDiagram
 - `PK` = 기본 키
 - `FK` = 외래 키
 
-## Relationship tables
+## 관계 테이블
 
 ### `ABORT_SHARED`
 
@@ -279,7 +279,7 @@ erDiagram
         "VERSION": "Which version of in-app message, legacy or triggered",
         "AD_ID_TYPE": "One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
         "AD_TRACKING_ENABLED": "Whether advertising tracking is enabled for the device",
-        "ABORT_TYPE": "Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']",
+        "ABORT_TYPE": "Type of abort. Refer to the abort types reference for a full list of values.",
         "ABORT_LOG": "[PII] Log message describing abort details (up to 128 chars)",
         "SF_CREATED_AT": "when this event was picked up by the Snowpipe",
         "AD_ID": "[PII] Advertising identifier",

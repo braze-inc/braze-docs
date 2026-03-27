@@ -1,6 +1,6 @@
 ---
 nav_title: 가격 하락 알림
-article_title: 가격 인하 알림
+article_title: 가격 하락 알림
 page_order: 3
 alias: "/price_drop_notifications/"
 description: "이 참조 문서에서는 Braze 카탈로그에서 가격 하락 알림을 생성하는 방법을 설명합니다."
@@ -8,39 +8,39 @@ description: "이 참조 문서에서는 Braze 카탈로그에서 가격 하락 
 
 # 가격 하락 알림
 
-> This page covers how price drop notifications work and how you can set up and use them. Braze 카탈로그와 캔버스를 통해 가격 인하 알림을 조합하면, 고객에게 상품의 가격이 하락했음을 알릴 수 있습니다.
+> 이 페이지에서는 가격 하락 알림의 작동 방식과 설정 및 사용 방법을 다룹니다. Braze 카탈로그와 Canvas를 통한 가격 하락 알림을 조합하면, 고객에게 상품의 가격이 하락했음을 알릴 수 있습니다.
 
-## How it works
+## 작동 방식
 
-사용자가 항목에 대한 커스텀 이벤트를 트리거하면 해당 항목의 가격 하락 알림을 자동으로 가입합니다. 항목의 가격이 재고 규칙(예: 50% 이상의 하락)을 충족하면 모든 구독자는 캠페인 또는 캔버스를 통해 알림을 받을 수 있습니다. 그러나 알림을 선택한 사용자만 알림을 받게 됩니다. 
+사용자가 항목에 대한 커스텀 이벤트를 트리거하면 해당 항목의 가격 하락 알림을 자동으로 구독하게 됩니다. 항목의 가격이 재고 규칙(예: 50% 이상의 하락)을 충족하면 모든 가입자는 캠페인 또는 Canvas를 통해 알림을 받을 수 있습니다. 그러나 알림 수신을 선택한 사용자만 알림을 받게 됩니다. 
 
-## 가격 인하 알림을 위한 커스텀 이벤트 설정
+## 가격 하락 알림을 위한 커스텀 이벤트 설정
 
-구독 이벤트로 사용할 커스텀 이벤트를 설정합니다. 예를 들어 `product_clicked` 이벤트와 같은 이벤트입니다. 이 이벤트에는 항목 ID(카탈로그 항목 ID) 속성이 포함되어야 합니다. 카탈로그 이름을 포함하는 것을 권장하지만, 필수는 아닙니다. 가격 필드의 이름을 제공해야 하며, 이는 숫자 데이터 유형이어야 합니다. 
+구독 이벤트로 사용할 커스텀 이벤트를 설정합니다(예: `product_clicked` 이벤트). 이 이벤트에는 항목 ID(카탈로그 항목 ID) 등록정보가 포함되어야 합니다. 카탈로그 이름을 포함하는 것을 권장하지만, 필수는 아닙니다. 가격 필드의 이름도 제공해야 하며, 이는 숫자 데이터 유형이어야 합니다. 
 
-You can create a price drop subscription for a user and a catalog item when the following occurs:
+다음 조건이 충족되면 사용자와 카탈로그 항목에 대한 가격 하락 구독을 생성할 수 있습니다:
 
-- 사용자가 선택한 커스텀 이벤트가 수행됩니다.
-- 커스텀 이벤트에는 `type` 속성이 있으며, `price_drop`를 포함합니다 (`type`는 배열이어야 합니다)
+- 사용자가 선택한 커스텀 이벤트를 수행합니다.
+- 커스텀 이벤트에 `price_drop`을 포함하는 `type` 등록정보가 있습니다(`type`은 배열이어야 합니다).
 
-To set both price-drop and back-in-stock notifications in the same event, you can use the `type` property, which must be an array. 항목의 가격 변경이 가격 규칙을 충족하면 해당 항목에 구독한 모든 사용자(구독 이벤트를 수행한 사용자)를 조회하고 캠페인 또는 캔버스를 트리거하는 데 사용할 수 있는 Braze 커스텀 이벤트를 보냅니다. 
+동일한 이벤트에서 가격 하락 알림과 재입고 알림을 모두 설정하려면 `type` 등록정보를 사용할 수 있으며, 이는 배열이어야 합니다. 항목의 가격 변경이 가격 규칙을 충족하면 해당 항목을 구독한 모든 사용자(구독 이벤트를 수행한 사용자)를 조회하고, 캠페인 또는 Canvas를 트리거하는 데 사용할 수 있는 Braze 커스텀 이벤트를 전송합니다. 
 
-이벤트 속성은 사용자와 함께 전송되므로, 캠페인이나 캔버스에 항목 세부정보를 템플릿으로 삽입할 수 있습니다.
+이벤트 속성정보는 사용자와 함께 전송되므로, 전송하는 캠페인이나 Canvas에 항목 세부 정보를 템플릿으로 삽입할 수 있습니다.
 
-## 가격 인하 알림 설정
+## 가격 하락 알림 설정
 
 다음 단계를 따라 특정 카탈로그에서 가격 하락 알림을 설정하세요.
 
-1. 카탈로그로 이동하여 **설정** 탭을 선택하십시오.
-2. **가격 인하** 토글을 선택하십시오.
-3. 전역 카탈로그 설정이 구성되지 않은 경우, 알림을 트리거하는 데 사용될 커스텀 이벤트 및 속성을 설정하라는 메시지가 표시됩니다. <br><br> ![카탈로그 설정 서랍.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
+1. 카탈로그로 이동하여 **설정** 탭을 선택합니다.
+2. **가격 하락** 토글을 선택합니다.
+3. 전역 카탈로그 설정이 구성되지 않은 경우, 알림을 트리거하는 데 사용할 커스텀 이벤트 및 등록정보를 설정하라는 메시지가 표시됩니다. <br><br> ![카탈로그 설정 서랍.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
 
 | 필드 | 설명 |
 | --- | --- |
-| **대체 카탈로그** | 구독에 사용되는 카탈로그는 커스텀 이벤트에 `catalog_name` 속성이 없는 경우입니다. |
-| **구독을 위한 커스텀 이벤트** | 카탈로그 알림을 위해 사용자를 구독시키는 데 사용되는 커스텀 이벤트입니다. 이 이벤트가 발생하면 이벤트를 수행한 사용자가 구독됩니다. |
-| **구독 취소를 위한 사용자 지정 이벤트** | 알림에서 사용자를 탈퇴시키는 데 사용되는 커스텀 이벤트입니다. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the price drop event triggers, whichever occurs first. |
-| **항목 ID 등록정보** | 위의 커스텀 이벤트에서 구독 또는 구독 취소 항목을 결정하는 데 사용되는 속성입니다. 이 속성은 커스텀 이벤트에 있는 항목 ID를 포함해야 합니다. 커스텀 이벤트에는 이 항목이 속한 카탈로그를 지정하는 `catalog_name` 속성이 포함되어야 합니다. |
+| **대체 카탈로그** | 커스텀 이벤트에 `catalog_name` 등록정보가 없는 경우 구독에 사용되는 카탈로그입니다. |
+| **구독을 위한 커스텀 이벤트** | 카탈로그 알림에 사용자를 구독시키는 데 사용되는 커스텀 이벤트입니다. 이 이벤트가 발생하면 이벤트를 수행한 사용자가 구독됩니다. |
+| **구독 취소를 위한 커스텀 이벤트** | 알림에서 사용자를 탈퇴시키는 데 사용되는 커스텀 이벤트입니다. 이 이벤트는 선택 사항입니다. 사용자가 이 이벤트를 수행하지 않으면 90일 후 또는 가격 하락 이벤트가 트리거될 때 중 먼저 발생하는 시점에 구독이 해제됩니다. |
+| **항목 ID 이벤트 등록정보** | 위의 커스텀 이벤트에서 구독 또는 구독 취소 항목을 결정하는 데 사용되는 등록정보입니다. 이 커스텀 이벤트의 등록정보에는 카탈로그에 존재하는 항목 ID가 포함되어야 합니다. 커스텀 이벤트에는 이 항목이 속한 카탈로그를 지정하는 `catalog_name` 등록정보가 포함되어야 합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 다음은 예시 커스텀 이벤트입니다:
@@ -63,49 +63,51 @@ To set both price-drop and back-in-stock notifications in the same event, you ca
 ```
 
 {: start="4"}
-4\. **저장**을 선택하고, 알림 규칙을 설정하기 위해 다음 섹션으로 계속 진행합니다.
+4. **저장**을 선택하고, 알림 규칙을 설정하기 위해 다음 섹션으로 계속 진행합니다.
 
 ### 알림 규칙 설정
 
 1. 카탈로그의 **설정** 페이지로 이동합니다. 
-2. **알림 규칙**에 대해 다음 옵션 중에서 선택합니다:<br>
+2. **알림 규칙**에서 다음 옵션 중 하나를 선택합니다:<br>
 
     - **모든 구독 사용자에게 알림:** 상품의 가격이 하락할 때 대기 중인 모든 고객에게 알림을 보냅니다.
-    - **알림 한도 설정:** 설정한 알림 주기에 따라 지정된 수의 고객에게 알립니다. Braze는 알림을 받을 고객 수를 지정된 수만큼 순차적으로 알립니다. 더 이상 알릴 고객이 없거나, 해당 품목의 가격이 다시 오를 때까지 알림을 보냅니다. 알림 속도는 분당 10,000명의 사용자에게 알림을 보낼 수 없습니다.<br>
+    - **알림 한도 설정:** 설정한 알림 주기에 따라 지정된 수의 고객에게 알립니다. Braze는 지정된 수만큼 고객에게 순차적으로 알림을 보내며, 더 이상 알릴 고객이 없거나 해당 품목의 가격이 다시 오를 때까지 계속합니다. 알림 속도는 분당 10,000명의 사용자를 초과할 수 없습니다.<br>
 
-2. 카탈로그에서 **가격 필드를 설정하십시오**. 이것은 항목의 가격을 결정하는 데 사용될 카탈로그 필드입니다. 숫자 형식이어야 합니다.
-3. **가격 인하 규칙**을 설정하세요. 이것은 알림을 보내야 하는지 여부를 결정하는 데 사용되는 논리입니다. A price drop can be configured as a percentage price change or by the change in value for the price field.
-4. **저장 설정**을 선택합니다.
+2. **카탈로그의 가격 필드**를 설정합니다. 이것은 항목의 가격을 결정하는 데 사용될 카탈로그 필드입니다. 숫자 유형이어야 합니다.
+3. **가격 하락 규칙**을 설정합니다. 이것은 알림을 보내야 하는지 여부를 결정하는 로직입니다. 가격 하락은 가격 변동 비율 또는 가격 필드의 값 변동으로 설정할 수 있습니다.
+4. **설정 저장**을 선택합니다.
 
-![카탈로그 설정에 가격 하락 기능이 켜져 있습니다. 가격 인하 규칙은 원래 가격에 대한 3%의 변경입니다.]({% image_buster /assets/img/price_drop_notifications.png %})
+![카탈로그 설정에 가격 하락 기능이 켜져 있습니다. 가격 하락 규칙은 원래 가격 대비 3%의 변동입니다.]({% image_buster /assets/img/price_drop_notifications.png %})
 
 {% alert important %}
-이 설정의 알림 규칙은 캔버스 알림 설정(예: 방해금지 시간)을 대체하지 않습니다.
+이 설정의 알림 규칙은 방해금지 시간 등 Canvas 알림 설정을 대체하지 않습니다.
 {% endalert %}
 
-## Using price drop notifications in a Canvas
+## Canvas에서 가격 하락 알림 사용
 
-After setting up the price drop notifications in a catalog, follow these steps to use these notifications for a Canvas.
+카탈로그에서 가격 하락 알림을 설정한 후, 다음 단계를 따라 Canvas에서 이 알림을 사용하세요.
 
-1. 액션 기반 캔버스를 설정합니다.
-2. 트리거로 **가격 인하 이벤트 수행**을 선택하십시오.
-3. 카탈로그 이름을 선택하여 가격 하락 알림을 받으세요.
-4. 계속해서 [캔버스를 설정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)하세요.
+1. 액션 기반 Canvas를 설정합니다.
+2. 트리거로 **가격 하락 이벤트 수행**을 선택합니다.
+3. 가격 하락 알림이 설정된 카탈로그 이름을 선택합니다.
+4. 평소와 같이 [Canvas를 설정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)합니다.
 
-이제 고객님께서는 상품의 가격이 하락할 때 알림을 받게 됩니다.
+이제 고객은 상품의 가격이 하락할 때 알림을 받게 됩니다.
 
 ### Liquid 사용
 
-가격이 하락한 카탈로그 항목에 대한 세부 정보를 템플릿화하려면 `canvas_entry_properties` Liquid 태그를 사용하여 `item_id`에 액세스할 수 있습니다. 
+가격이 하락한 카탈로그 항목의 세부 정보를 템플릿화하려면 `context` Liquid 태그를 사용하여 `item_id`에 액세스할 수 있습니다. 
 
-Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that dropped in price. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} will return the price value of the item before the update, and {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} will return the new price value after the update. 
+{%raw%}``{{context.${catalog_update}.item_id}}``{%endraw%}를 사용하면 가격이 하락한 항목의 ID를 반환합니다. {%raw%}``{{context.${catalog_update}.previous_value}}``{%endraw%}는 업데이트 이전의 항목 가격 값을 반환하고, {%raw%}``{{context.${catalog_update}.new_value}}``{%endraw%}는 업데이트 이후의 새로운 가격 값을 반환합니다. 
 
-Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} at the top of your message, then use {%raw%}`{{items[0].<field_name>}}`{%endraw%} to access data about that item throughout the message.
+메시지 맨 위에 Liquid 태그 {%raw%}``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}``{%endraw%}를 사용한 다음, {%raw%}`{{items[0].<field_name>}}`{%endraw%}을 사용하여 메시지 전반에 걸쳐 해당 항목의 데이터에 액세스합니다.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 {% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
 ## 고려 사항
 
-- 사용자는 90일 동안 구독됩니다. 항목의 가격이 90일 이내에 떨어지지 않으면 사용자는 구독에서 제거됩니다.
-- **구독한 모든 사용자에게 알림** 규칙을 사용할 때, Braze는 10분 동안 100,000명의 사용자에게 알림을 보냅니다.
-- Braze will process 10 requests to update catalog items per minute. 업데이트 엔드포인트는 요청당 50개의 항목 업데이트를 허용하며, 분당 최대 500개의 항목 업데이트를 지원하여 재고 알림을 트리거할 수 있습니다.
+- 사용자는 90일 동안 구독됩니다. 항목의 가격이 90일 이내에 하락하지 않으면 사용자는 구독에서 제거됩니다.
+- **모든 구독 사용자에게 알림** 규칙을 사용할 때, Braze는 10분 동안 100,000명의 사용자에게 알림을 보냅니다.
+- Braze는 매일 최대 50,000개의 업데이트된 항목을 처리하여 가격 하락 알림을 트리거할 수 있습니다. 주어진 시점에 최대 1억 개의 활성 구독을 보유할 수 있으며, 각 구독은 카탈로그 항목을 모니터링하도록 구독한 고객 프로필을 나타냅니다.

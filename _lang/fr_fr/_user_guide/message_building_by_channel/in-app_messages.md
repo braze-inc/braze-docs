@@ -9,11 +9,11 @@ channel:
 search_rank: 5
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Messages in-app
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Messages in-app
 
-> Les messages in-app vous permettent d'envoyer du contenu à votre utilisateur sans interrompre sa journée avec une notification push, car ces messages ne sont pas envoyés en dehors de l'application de l'utilisateur et n'empiètent pas sur son écran d'accueil. 
+> Les messages in-app vous permettent de transmettre du contenu à vos utilisateurs sans les interrompre avec une notification push, car ces messages ne sont pas diffusés en dehors de l'application et n'apparaissent pas sur leur écran d'accueil. 
 
-Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Grâce à un choix de mises en page et d’outils de personnalisation, les messages in-app supposent un engagement inédit de vos utilisateurs. Ils s'inscrivent dans un contexte, sont moins urgents et sont délivrés lorsque l'utilisateur est actif dans votre application. Pour des exemples de messages in-app, consultez nos [témoignages de clients](https://www.braze.com/customers/).
+Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Grâce à un choix de mises en page et d’outils de personnalisation, les messages in-app supposent un engagement inédit de vos utilisateurs. Elles sont accompagnées d'un contexte, sont moins urgentes et sont envoyées lorsque l'utilisateur est actif dans votre application. Pour des exemples de messages in-app, veuillez consulter nos [témoignages clients](https://www.braze.com/customers/).
 
 ## Cas d’utilisation
 
@@ -44,14 +44,14 @@ Les onglets suivants montrent ce que vos utilisateurs voient s’ils ouvrent l�
 
 Les messages slideup apparaissent généralement en haut et en bas de l’écran de l’application (vous pouvez le définir à la création du message). Ils sont parfaits pour avertir vos utilisateurs de nouvelles conditions de service, cookies et autres extraits de code d’information.
 
-![Message in-app slideup apparaissant en bas de l’écran de l’application. Le diaporama comprend une image d'icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Message in-app slideup apparaissant en bas de l’écran de l’application. La fenêtre contextuelle comprend une icône et un message succinct.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Modal %}
 
 Les modaux apparaissent au centre de l’écran de l’appareil avec une incrustation le démarquant de votre application en arrière-plan. Ils sont parfaits pour suggérer plus ou moins subtilement à votre utilisateur de profiter d’une vente ou d’un concours.
 
-![Message in-app modal apparaissant au centre d’une application et d’un site Web comme boîte de dialogue. La fenêtre modale comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Message in-app modal apparaissant au centre d’une application et d’un site Web comme boîte de dialogue. La fenêtre modale comprend une image, un en-tête, le corps du message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Fullscreen %}
@@ -63,11 +63,11 @@ Comme leur nom l’indique, les messages plein écran occupent tout l’écran d
 {% endtab %}
 {% endtabs %}
 
-Outre ces modèles de messages par défaut, vous pouvez également personnaliser davantage votre envoi à l'aide de messages in-app personnalisés en HTML, de fenêtres modales/boîtes de dialogue en CSS ou de formulaires de capture d'e-mails en ligne. Pour plus d'informations, reportez-vous à la rubrique [Personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
+En plus de ces modèles de messages par défaut, vous pouvez également personnaliser davantage votre envoi de messages à l'aide de messages in-app personnalisés, de fenêtres modales/boîtes de dialogue modales avec CSS ou de formulaires de capture d'e-mails Web. Pour plus d'informations, reportez-vous à la rubrique [Personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
-## Des messages in-app personnalisés
+## Modèles de messages in-app
 
-Les messages in-app sont envoyés sous forme de modèles de messages in-app lorsque l'option **Réévaluer l'éligibilité de la campagne avant affichage** est sélectionnée ou si l'une des étiquettes Liquid suivantes est présente dans le message :
+Les messages in-app sont envoyés sous forme de messages in-app modélisés lorsque **l'option Réévaluer l'éligibilité à la campagne avant l'affichage** est sélectionnée ou si l'une des étiquettes Liquid suivantes est présente dans le message :
 
 - `canvas_entry_properties`
 - `connected_content`
@@ -76,57 +76,57 @@ Les messages in-app sont envoyés sous forme de modèles de messages in-app lors
 - `catalog_selection_items`
 - `event_properties`
 
-Cela signifie que lors du démarrage de la session, l'appareil recevra le déclencheur de ce message in-app au lieu de l'intégralité du message. Lorsque l'utilisateur déclenche le message intégré à l'application, l'appareil de l'utilisateur effectuera une demande réseau pour récupérer le message réel.
+Cela signifie que lors du démarrage de la session, l'appareil recevra le déclencheur de ce message in-app au lieu du message complet. Lorsque l'utilisateur déclenche le message intégré à l'application, l'appareil de l'utilisateur effectuera une demande réseau pour récupérer le message réel.
 
 {% alert note %}
-Le message ne sera pas envoyé si l'appareil n'a pas accès à l'internet. Le message risque de ne pas être envoyé si la logique du liquide prend trop de temps à se mettre en place.
+Le message ne sera pas transmis si l'appareil n'a pas accès à Internet. Le message pourrait ne pas être transmis si la logique Liquid prend trop de temps à se résoudre.
 {% endalert %}
 
-## Abandonner le comportement
+## Comportement d'interruption
 
-Chez Braze, un abandon se produit lorsqu'un utilisateur entreprend une action qui le rend éligible pour recevoir un message, mais qu'il ne reçoit pas le message parce que la logique Liquid le marque comme inéligible. Par exemple :
+Chez Braze, un abandon se produit lorsqu'un utilisateur effectue une action qui le rend éligible à recevoir un message, mais qu'il ne reçoit pas ce message car la logique Liquid le marque comme non éligible. Par exemple :
 
-1. Sam effectue une action qui devrait déclencher une campagne d'e-mailing.
-2. Le corps de l'e-mail contient une logique liquide qui indique que si le score d'un attribut personnalisé est inférieur à 50, il ne faut pas envoyer cet e-mail.
+1. Sam effectue une action qui devrait déclencher une campagne par e-mail.
+2. Le corps de l'e-mail contient une logique Liquid qui indique que si le score d'un attribut personnalisé est inférieur à 50, cet e-mail ne doit pas être envoyé.
 3. Le score de l'attribut personnalisé de Sam est de 20.
-4. Braze reconnaît que Sam ne devrait pas recevoir cet e-mail, et l'e-mail est interrompu.
-5. Un événement d'abandon est enregistré.
+4. Braze identifie que Sam ne devrait pas recevoir cet e-mail, et l'envoi de l'e-mail est interrompu.
+5. Un événement d'interruption est enregistré.
 
-Cependant, comme les messages in-app sont un canal de communication à flux tiré, le fonctionnement des interruptions est un peu différent.
+Cependant, étant donné que les messages in-app constituent un canal de communication passif, les interruptions fonctionnent de manière légèrement différente pour ceux-ci.
 
-### Comportement d'abandon des messages in-app
+### Comportement d'interruption des messages in-app
 
-Les messages in-app sont récupérés par l'appareil au début de la session et mis en cache sur l'appareil, de sorte que, quelle que soit la qualité de la connexion Internet, le message peut être délivré instantanément à l'utilisateur. Par exemple, si un utilisateur reçoit cinq messages in-app au cours de sa session, il recevra les cinq au début de la session. Les messages seront mis en cache localement et apparaîtront lorsque les événements personnalisés définis se produiront (démarrage de la session, clic de l'utilisateur sur un bouton qui enregistre un événement personnalisé, ou autre).
+Les messages in-app sont récupérés par l'appareil au début de la session et mis en cache sur l'appareil. Ainsi, quelle que soit la qualité de la connexion Internet, le message peut être transmis instantanément à l'utilisateur. Par exemple, si un utilisateur reçoit cinq messages in-app au cours de sa session, il recevra les cinq messages au début de la session. Les messages seront mis en cache localement et apparaîtront lorsque les événements déclencheurs définis se produiront (début de session, clic de l'utilisateur sur un bouton qui enregistre un événement personnalisé, ou autre).
 
-En d'autres termes, la logique qui détermine si nous devons interrompre un message in-app intervient **avant que** le déclencheur ne se produise. Pour le démontrer, disons que Sam, dans l'exemple de l'e-mail, est abonné aux notifications push.
+En d'autres termes, la logique qui détermine si nous devons interrompre un message in-app intervient **avant que** le déclencheur ne se produise. Pour illustrer cela, supposons que Sam, dans l'exemple d'e-mail, soit abonné aux notifications push.
 
-1. Sam commence une session en lançant une application alimentée par Braze sur leur téléphone.
-2. Sur la base des critères d'audience des campagnes actives dans l'espace de travail, Sam pourrait être éligible à cinq campagnes différentes. Les cinq sont téléchargés sur leur téléphone et mis en cache.
-3. Sam **n'a** effectué **aucune** action qui déclencherait ces messages, mais il pourrait recevoir ces messages au cours de la session.
-4. Dans deux des messages in-app, le liquid a des règles qui excluent Sam de la réception du message (par exemple, l'attribut personnalisé de son score n'est pas assez élevé).
-5. Sam ne reçoit pas les deux messages in-app qui les excluent, mais ils reçoivent les trois autres messages.
-6. Aucun événement d'abandon n'est enregistré.
+1. Sam commence une session en lançant une application Braze sur son téléphone.
+2. En fonction des critères d'audience des campagnes actives dans l'espace de travail, Sam pourrait être éligible pour cinq campagnes différentes. Les cinq sont enregistrés sur leur téléphone et mis en cache.
+3. Sam **n'a** effectué aucune action susceptible de déclencher ces messages, mais il pourrait les recevoir au cours de la session.
+4. Le Liquid dans deux des messages in-app comporte des règles qui empêchent Sam de recevoir le message (par exemple, son attribut personnalisé de score n'est pas suffisamment élevé).
+5. Sam ne reçoit pas les deux messages in-app qui les excluent, mais il reçoit les trois autres messages.
+6. Aucun événement d'interruption n'est consigné.
 
-Braze n'enregistre aucun événement d'abandon dans le cas de Sam, car cela ne correspond pas à notre définition d'un abandon ; Sam **n'a** effectué **aucune** action susceptible de déclencher les messages. Pour les messages in-app, les utilisateurs n'effectuent jamais réellement le déclencheur avant que Braze ne détermine qu'ils ne doivent pas voir le message.
+Braze n'enregistre aucun événement d'abandon dans le cas de Sam, car cela ne correspond pas à notre définition d'un abandon ; Sam **n'a** effectué aucune action susceptible de déclencher ces messages. Pour les messages in-app, les utilisateurs n'effectuent jamais réellement l'action déclencheuse avant que Braze ne détermine qu'ils ne devraient pas voir le message.
 
-#### Modèle de comportement d'abandon des messages in-app
+#### Comportement d'interruption des messages in-app
 
-Les [messages in-app modélisés](#templated-in-app-messages) obligent le SDK à réévaluer si un message doit s'afficher lorsque l'événement déclencheur se produit. Le comportement d'abandon est différent. Pour le démontrer, prenons l'exemple suivant :
+[Les messages in-app](#templated-in-app-messages) forcent le SDK à réévaluer si un message doit s'afficher lorsque l'événement déclencheur se produit. Ceci présente un comportement d'interruption différent. Pour illustrer cela, examinons l'exemple suivant :
 
-1. Sam démarre une session Braze en lançant une application alimentée par Braze sur son téléphone.
-2. Les critères d'audience des campagnes actives indiquent que Sam pourrait être éligible pour un message in-app modélisé, de sorte que les informations de déclenchement sont envoyées à leur appareil sans la charge utile du message.
-3. Sam sélectionne un bouton qui enregistre un événement personnalisé, déclenchant ainsi le message in-app.
-4. L'appareil de Sam émet une requête réseau pour récupérer le message in-app.
-5. La logique Liquid du message conduit à un abandon, Braze enregistre donc ce message comme un abandon ; Sam a effectué l'action de déclenchement avant cette évaluation.
+1. Sam commence une session Braze en lançant une application Braze sur son téléphone.
+2. Les critères d'audience des campagnes actives indiquent que Sam pourrait être éligible pour recevoir un message in-app type. Par conséquent, les informations de déclencheur sont envoyées à son appareil sans la charge utile du message.
+3. Sam sélectionne un bouton qui enregistre un événement personnalisé, déclenchant ainsi le message in-app type.
+4. L'appareil de Sam effectue une requête réseau pour récupérer le message in-app.
+5. La logique Liquid du message entraîne un abandon, Braze enregistre donc cela comme un abandon ; Sam a effectué l'action de déclenchement avant cette évaluation.
 
-##### Comparaison du comportement d'abandon des messages in-app
+##### Comparaison du comportement d'interruption des messages in-app
 
-Ce tableau compare les envois de messages in-app auxquels Sam a été confronté :
+Ce tableau compare les flux de messages in-app que Sam a rencontrés :
 
-| Message in-app | Abandonner le comportement |
+| Message in-app | Comportement d'interruption |
 | --- | --- |
-| Standard | Un événement d'abandon n'a pas été déclenché parce que Sam n'a effectué aucune action susceptible de déclencher un message.<br><br>Les messages in-app standard n'enregistrent pas les abandons car la définition d'un abandon est "n'a pas vu le message malgré l'exécution de l'action déclenchchement". Étant donné que les messages in-app sont envoyés à l'appareil avant que les actions déclenchantes ne se produisent, il n'est pas logique de considérer que les messages in-app ont été omis en raison de la logique du déclencheur. |
-| Modèle | Un événement d'abandon a été enregistré parce que Sam a effectué l'action déclencheur pour déclencher le message in-app tempplated, mais a reçu un abandon dans le Liquid templating. <br><br>Les messages in-app templis enregistrent des abandons parce que l'évaluation du Liquid a lieu après l'exécution de l'action déclenchchement. |
+| Standard | Aucun événement d'interruption n'a été enregistré, car Sam n'a effectué aucune action susceptible de déclencher un message.<br><br>Les messages in-app standard n'enregistrent pas les abandons, car la définition d'un abandon est « n'avoir pas vu le message malgré l'exécution de l'action de déclenchement ». Étant donné que les messages in-app sont envoyés à l'appareil avant que les actions de déclenchement ne se produisent, il n'est pas pertinent de considérer que les messages in-app sont omis en raison de la logique Liquid. |
+| Modèle | Un événement d'interruption a été enregistré car Sam a effectué l'action de déclenchement pour déclencher le message in-app, mais a reçu une interruption dans le modèle Liquid. <br><br>Les messages in-app basés sur des modèles sont interrompus car l'évaluation Liquid se produit après l'exécution de l'action de déclenchement. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Ressources supplémentaires

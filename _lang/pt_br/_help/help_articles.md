@@ -4,10 +4,10 @@ article_title: Artigos de ajuda
 page_order: 1
 layout: dev_guide
 guide_top_header: "Artigos de ajuda"
-guide_top_text: "Temos muitos artigos de ajuda que podem ajudá-lo a resolver problemas e revelar dependências em suas campanhas. Se você tiver alguma sugestão para um novo artigo de ajuda, deixe seu comentário na parte inferior desta ou de qualquer página de artigo de ajuda. Ou você mesmo pode aprender a escrever um artigo acessando o <a href='https://www.braze.com/docs/contributing/home'>Guia do Colaborador Braze</a>. <br> <br>Escolha entre os tópicos populares a seguir ou veja outros artigos listados no painel de navegação."
+guide_top_text: "Temos muitos artigos de ajuda que podem ajudar você a resolver problemas e revelar dependências em suas campanhas. Se você tiver alguma sugestão para um novo artigo de ajuda, deixe seu comentário na parte inferior desta ou de qualquer página de artigo de ajuda. <br> <br>Escolha entre os tópicos populares a seguir ou veja outros artigos listados no painel de navegação."
 
 page_type: landing
-description: "Esta landing page contém artigos de ajuda que podem ajudá-lo a resolver problemas e revelar dependências ao usar o Braze."
+description: "Esta landing page contém artigos de ajuda que podem ajudar você a resolver problemas e revelar dependências ao usar a Braze."
 
 guide_featured_title: "Tópicos"
 guide_featured_list:
@@ -26,7 +26,7 @@ guide_featured_list:
   - name: Dados
     link: /docs/help/help_articles/data/
     image: /assets/img/braze_icons/line-chart-up-01.svg
-  - name: Documentação
+  - name: Documentos
     link: /docs/help/help_articles/docs/
     image: /assets/img/braze_icons/file-06.svg
   - name: E-mail
@@ -39,4 +39,3 @@ guide_featured_list:
     link: /docs/help/help_articles/segments/
     image: /assets/img/braze_icons/users-01.svg
 ---
-

@@ -10,9 +10,9 @@ tool:
 - Canvas
 ---
 
-# Créer un e-mail par glisser-déposer
+# Veuillez créer un e-mail à l'aide de la fonction glisser-déposer.
 
-> Grâce à l'éditeur par glisser-déposer, vous pouvez créer des messages e-mail entièrement personnalisés pour les campagnes ou les toiles, sans utiliser le langage HTML pour construire le corps de votre e-mail.
+> Grâce à l'éditeur par glisser-déposer, vous pouvez créer des messages électroniques entièrement personnalisés pour vos campagnes ou vos canevas, sans avoir à utiliser le langage HTML pour créer le corps de votre message.
 
 ## À propos de l'éditeur
 
@@ -25,10 +25,10 @@ L'éditeur de glisser-déposer utilise [Contenu](#content) et [Lignes](#rows) co
     </tr>
     <tr>
         <td style="text-align: center;">
-            <img src="{% image_buster /assets/img/dnd/dnd_content.png %}" alt="L&apos;onglet &quot;rangées&quot; comprend différentes combinaisons structurelles pour la mise en page de votre e-mail." style="max-width: 100%; height: auto;">
+            <img src="{% image_buster /assets/img/dnd/dnd_content.png %}" alt="L&apos;onglet « Lignes » qui comprend différentes combinaisons structurelles pour la mise en page de votre e-mail." style="max-width: 100%; height: auto;">
         </td>
         <td style="text-align: center;">
-            <img src="{% image_buster /assets/img/dnd/dnd_rows.png %}" alt="L&apos;onglet &quot;Contenu&quot; qui comprend les blocs de base, les médias et les blocs avancés." style="max-width: 100%; height: auto;">
+            <img src="{% image_buster /assets/img/dnd/dnd_rows.png %}" alt="L&apos;onglet « Contenu » qui comprend les blocs de contenu, les médias et les options avancées." style="max-width: 100%; height: auto;">
         </td>
     </tr>
 </table>
@@ -71,18 +71,18 @@ Bien que l'éditeur par glisser-déposer simplifie votre flux de travail avec ce
 
 Le **style de carte** est une propriété de ligne qui vous permet d'ajouter de l'espace entre les colonnes et d'arrondir leurs angles. Grâce à la mise en forme sous forme de carte, vous pouvez créer des mises en page plus attrayantes pour mettre en valeur vos contenus les plus importants, tels que les fonctionnalités des nouveaux produits, les témoignages, les offres spéciales, les mises à jour, etc.
 
-## Utiliser l'éditeur par glisser-déposer
+## Utilisation de l'éditeur par glisser-déposer
 
-Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
+Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont plus adaptées aux campagnes de communication uniques et avec ciblage, tandis que les canevas conviennent mieux aux parcours utilisateur en plusieurs étapes.
 
-Une fois que vous avez choisi l'endroit où créer votre message, passons aux étapes de la création d'un e-mail par glisser-déposer.
+Une fois que vous avez sélectionné l'emplacement où vous souhaitez créer votre message, passons aux étapes de création d'un e-mail par glisser-déposer.
 
 ### Étape 1 : Sélectionnez votre modèle
 
 Après avoir sélectionné l'éditeur par glisser-déposer comme votre expérience d'édition, vous pouvez choisir de :
 
 - Commencez avec un modèle vierge.
-- Utilisez un modèle d'e-mail prédéfini à glisser-déposer de Braze.
+- Veuillez utiliser un modèle d'e-mail prédéfini de Braze, accessible par glisser-déposer.
 - Utilisez un modèle d'e-mail par glisser-déposer enregistré.
 
 {% alert note %}
@@ -93,15 +93,15 @@ Vous pouvez également accéder à tous les modèles depuis la section **Modèle
 
 Après avoir sélectionné votre modèle, vous verrez un aperçu de votre e-mail sous **Variantes d'e-mails** qui inclut les informations d'envoi et le corps de l'e-mail. 
 
-Ensuite, sélectionnez **Modifier le corps de l'e-mail** pour commencer à concevoir la structure de l'e-mail dans l'éditeur par glisser-déposer. 
+Ensuite, veuillez sélectionner **Modifier le corps de l'e-mail** pour commencer à concevoir la structure de l'e-mail dans l'éditeur par glisser-déposer. 
 
-![La section "Variantes d'e-mail" avec un exemple de corps d'e-mail.]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
+![La section « Variantes d'e-mails » avec un exemple de corps d'e-mail.]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
 
 ### Étape 2 : Créez votre e-mail
 
-L'expérience d'édition par glisser-déposer est divisée en trois sections : **Paramètres d'envoi**, **contenu** et **aperçu & Test**. La magie de la création de votre corps d’e-mail se produit dans la section **Contenu**. Avant de créer votre e-mail, il est important de comprendre les principaux composants de votre expérience de création d’e-mail. Si vous avez besoin d'une révision, consultez la rubrique [À propos de l'éditeur.](#about-the-editor)
+L'expérience d'édition par glisser-déposer est divisée en trois sections : **Envoi des paramètres**, **du contenu** et **de l'aperçu&**. La magie de la création de votre corps d’e-mail se produit dans la section **Contenu**. Avant de créer votre e-mail, il est important de comprendre les principaux composants de votre expérience de création d’e-mail. Si vous avez besoin de revoir, veuillez consulter [la section À propos de l'éditeur](#about-the-editor).
 
-Lorsque vous êtes prêt, utilisez les blocs de contenu à glisser-déposer pour créer votre e-mail.
+Lorsque vous êtes prêt, veuillez utiliser les blocs de contenu glisser-déposer pour créer votre e-mail.
 
 1. Sélectionnez le panneau des **lignes**. Faites glisser et déposez les configurations de ligne dans l'éditeur principal. Cela permettra de définir la mise en page du contenu de votre e-mail.
 - Notez que les nouvelles configurations doivent être déplacées vers le haut ou le bas d'une section existante.
@@ -110,14 +110,14 @@ Lorsque vous êtes prêt, utilisez les blocs de contenu à glisser-déposer pour
 - Vous pouvez également faire glisser n'importe laquelle des tuiles de **Contenu** dans l'éditeur principal. Cela crée une ligne pour la tuile.
 - Vous pouvez affiner davantage la tuile en sélectionnant la tuile et en ajustant les champs dans **Propriétés du contenu** et **Options de bloc**. Cela inclut l’espacement des lettres, la marge intérieure, la hauteur de ligne, etc.
 
-Consultez la rubrique [Autres personnalisations](#other-customizations) pour découvrir d'autres moyens de personnaliser davantage votre e-mail par glisser-déposer.
+Veuillez consulter la section [Autres personnalisations](#other-customizations) pour découvrir d'autres moyens de personnaliser davantage votre e-mail par glisser-déposer.
 
 Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre communication par e-mail recherchera vos groupes d’utilisateurs. Cela vérifiera que votre contenu est réactif et vous pourrez apporter les ajustements nécessaires en cours de route.
 
 {% alert tip %}
 Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Saisissez le nom ou la description d'un produit, et l'intelligence artificielle générera un texte marketing semblable à celui d'un humain, que vous pourrez utiliser dans vos messages.
 
-![Le bouton Copywriter, situé dans le panneau Contenu à côté de Style Settings dans l'éditeur par glisser-déposer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![Bouton Rédacteur, situé dans le panneau Contenu à côté des Paramètres de style dans l'éditeur par glisser-déposer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Étape 3 : Ajoutez vos informations d'envoi
@@ -169,11 +169,11 @@ Vous pouvez également sélectionner **Copier le lien de prévisualisation** pou
 
 Notez que toute modification apportée à un modèle d'e-mail ne se reflétera pas dans un lien généré précédemment. Vous devrez générer un nouvel aperçu du lien pour voir les modifications.
 
-![Aperçu de l'e-mail avec un bouton permettant de "Copier le lien d'aperçu" et de copier le lien généré.]({% image_buster /assets/img/dnd_email_link_preview.png %})
+![Aperçu de l'e-mail avec un bouton « Copier le lien d'aperçu » et copier le lien généré.]({% image_buster /assets/img/dnd_email_link_preview.png %})
 
 #### Utiliser Inbox Vision
 
-Inbox Vision vous permet de voir vos campagnes d'e-mails du point de vue des clients de messagerie et des appareils mobiles. Pour tester votre message e-mail à l'aide de Inbox Vision, sélectionnez **Inbox Vision** dans la section **Preview & Test** et sélectionnez **Run Inbox Vision.**
+Inbox Vision vous permet de voir vos campagnes d'e-mails du point de vue des clients de messagerie et des appareils mobiles. Pour tester votre message d'e-mail à l'aide d'Inbox Vision, veuillez sélectionner **Inbox Vision** dans la section **&Aperçu/Test**, puis sélectionner **Exécuter Inbox Vision**.
 
 {% alert tip %}
 Les images d’arrière-plan dans les envois de messages par e-mail peuvent parfois entraîner l’apparition de lignes blanches ou de déconnexions entre les images. Il est donc important de tester et de vérifier les plus petits détails de votre message par e-mail.
@@ -223,11 +223,11 @@ Pour ajuster le remplissage, faites défiler vers le bas jusqu'à **Options de b
 
 Vous pouvez ajouter une image d’arrière-plan pour votre configuration de ligne, ce qui vous permet d’incorporer plus d’esthétique et de contenu visuel dans votre campagne e-mail.
 
-### Attribut linguistique
+### Attribut de langue
 
 Vous pouvez définir l'attribut linguistique en accédant à l'onglet **Paramètres** et en sélectionnant la langue souhaitée. Vous pouvez également cibler l'attribut utilisateur {%raw%} `{{${language}}}` {%endraw%} si le message est destiné à des utilisateurs ayant des valeurs linguistiques dynamiques.
 
-![Réglage de la valeur "Langue" d'un e-mail.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
+![Définition de la valeur « Langue » pour un e-mail.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
 
 ### Personnalisation
 
@@ -244,10 +244,10 @@ La personnalisation liquide n'est pas prise en charge pour les blocs d'images et
 
 #### Images dynamiques
 
-Vous pouvez choisir d'inclure des images dynamiques dans votre envoi de messages e-mail en incluant [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) ou [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) dans l'attribut source de votre image. Par exemple, au lieu d'une image statique, vous pouvez insérer {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} comme URL de l'image pour inclure le prénom d'un utilisateur dans l'image. Ceci vous aide à personnaliser vos e-mails pour chaque utilisateur.
+Vous pouvez choisir d'inclure des images dynamiques dans vos messages d'e-mail en ajoutant [le contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) ou [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) dans l'attribut source de votre image. Par exemple, au lieu d'une image statique, vous pouvez insérer {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} comme URL de l'image pour inclure le prénom d'un utilisateur dans l'image. Ceci vous aide à personnaliser vos e-mails pour chaque utilisateur.
 
 {% alert important %}
-L'URL de votre image doit commencer par `https://`. L'utilisation de `http://` fait planter votre application.
+L'URL de votre image doit débuter par `https://`. L'utilisation de`http://`  provoque le plantage de votre application.
 {% endalert %}
 
 ### Sens du texte
@@ -262,7 +262,7 @@ L'aspect final des messages de droite à gauche dépend largement de la manière
 
 #### Attributs HTML pour les liens
 
-![La section "Attributs" avec l'attribut "clicktracking" désactivé pour un lien.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![La section « Attributs » avec l'attribut « clicktracking » désactivé pour un lien.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Lors de l'utilisation de liens, de boutons, d'images et de vidéos dans l'éditeur de glisser-déposer, sélectionnez **Ajouter un nouvel attribut** sous **Attributs** dans la section **Contenu** pour ajouter des informations supplémentaires aux balises HTML dans les e-mails. Ceci peut être particulièrement utile dans le cadre de la personnalisation, de la segmentation et de la mise en page de messages.
 
@@ -282,41 +282,41 @@ Vous pouvez également vous intégrer à l'un de nos partenaires d'attribution, 
 
 Enfin, des attributs prédéfinis sont disponibles pour faciliter l'accessibilité de votre message. Pour en savoir plus, consultez notre article dédié [Créer des messages accessibles dans Braze]({{site.baseurl}}/help/accessibility).
 
-#### Étiquettes personnalisées
+#### Balises d'en-tête personnalisées
 
-Utilisez les étiquettes `<head>` pour ajouter des CSS et des métadonnées dans votre message e-mail. Par exemple, vous pouvez utiliser ces étiquettes pour ajouter une feuille de style ou un favicon. Liquid est pris en charge dans les étiquettes `<head>`.
+Veuillez utiliser`<head>`les tags pour ajouter du CSS et des métadonnées à votre message d'e-mail. Par exemple, vous pouvez utiliser ces tags pour ajouter une feuille de style ou une favicon. Le liquide est pris en charge dans`<head>`les tags.
 
-Tout ce qui est ajouté en dehors des tags `<head>` sera ajouté après l'étiquette `<body>` dans votre e-mail. Cela signifie que le contenu ajouté s'affichera dans l'e-mail.
+Tout élément ajouté en dehors des`<head>`tags sera inséré après la`<body>`tag dans votre e-mail. Cela signifie que le contenu ajouté s'affichera dans l'e-mail.
 
 ##### Tags et attributs autorisés par étiquette
 
 | Nom de l'étiquette | Description | Exemple |
 | --- | --- | --- |
-| `base` | Spécifie l'URL de base pour tous les URL relatifs dans le message. | `<base href="https://example.com" target="_blank">` |
+| `base` | Spécifie l'URL de base pour toutes les URL relatives dans le message. | `<base href="https://example.com" target="_blank">` |
 | `link`| Définit les relations entre le message et les ressources externes. | `<link href="styles.css" rel="stylesheet" type="text/css">` |
 | `meta` | Fournit des métadonnées telles que la description de la page ou des mots-clés. | `<meta name="description" content="Free Web tutorials">` |
-| `style` | Incorpore des styles CSS internes. | `<style type="text/css" media="screen">body { font-size: 16px; }</style>` |
+| `style` | Intègre les styles CSS internes. | `<style type="text/css" media="screen">body { font-size: 16px; }</style>` |
 | `title` | Définit le titre du document affiché dans les onglets du navigateur. | `<title>StyleRyde</title>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 | Balise | Attribut | Description | Exemple |
 | --- | --- | --- | --- |
-| `base` | `href` | URL de base à utiliser pour les URL relatifs. | ```<base href="https://braze.com">``` |
+| `base` | `href` | URL de base à utiliser pour les URL relatives. | ```<base href="https://braze.com">``` |
 | `base` | `target`| Cible par défaut pour tous les hyperliens et formulaires. | ```<base target="_blank">``` |
-| `link` | `href` | URL de la ressource externe. | ```<link href="style.css">``` |
+| `link` | `href` | URL vers la ressource externe. | ```<link href="style.css">``` |
 | `link` | `rel` | Définit les relations entre le message actuel et le message lié. | ```<link rel="stylesheet">``` |
-| `link` | `type` | Type de ressource liée. | ```<link type="text/css">``` |
-| `link` | `sizes` | Spécifie la taille des icônes. | ```<link rel="icon" sizes="32x32" href="favicon-32.png">``` |
-| `link` | `media` | Spécifie le support ou l'appareil pour lequel les styles s'appliquent. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
+| `link` | `type` | Type de ressource associée. | ```<link type="text/css">``` |
+| `link` | `sizes` | Indique les dimensions des icônes. | ```<link rel="icon" sizes="32x32" href="favicon-32.png">``` |
+| `link` | `media` | Spécifie le support ou l'appareil auquel les styles s'appliquent. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
 | `meta` | `name` | Définit le titre du document affiché dans les onglets du navigateur. | ```<meta name="viewport" content="width=device-width, initial-scale=1">``` |
 | `meta` | `content` | Définit le titre du document affiché dans les onglets du navigateur. | ```<meta name="description" content="Page about our newest products">``` |
-| `meta` | `charset` | Déclare l'encodage des caractères. | ```<meta charset="UTF-8">``` |
+| `meta` | `charset` | Déclare le codage des caractères. | ```<meta charset="UTF-8">``` |
 | `meta` | `property` | Définit le titre du document affiché dans les onglets du navigateur. | ```<meta property="og:title" content="Website title">``` |
 | `style` | `type` | Type MIME du contenu du style. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
-| `style` | `media` | Spécifie le support ou l'appareil pour lequel les styles s'appliquent. | ```<style media="print">body { font-size: 12pt; }</style>``` |
-| `title` | Aucun attribut | L'étiquette `title` n'accepte aucun attribut. | ```<title>Kitchenerie</title>``` |
+| `style` | `media` | Spécifie le support ou l'appareil auquel les styles s'appliquent. | ```<style media="print">body { font-size: 12pt; }</style>``` |
+| `title` | Aucun attribut | L'étiquette`title` n'accepte aucun attribut. | ```<title>Kitchenerie</title>``` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Les noms de liens peuvent contenir jusqu'à 63 octets et sont automatiquement tronqués s'ils dépassent cette limite.
+Les noms des liens peuvent comporter jusqu'à 63 octets et sont automatiquement tronqués s'ils dépassent cette limite.
 {% endalert %}

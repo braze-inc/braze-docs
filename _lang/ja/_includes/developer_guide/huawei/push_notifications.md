@@ -85,13 +85,13 @@ class CustomPushService: HmsMessageService() {
 
 ### ステップ 4: フォアグラウンド通知を処理する
 
-デフォルトでは、アプリがフォアグラウンドにあるときにプッシュ通知が届くと、ファーウェイは自動的にそれを表示する。Brazeにプッシュ通知ペイロードを処理させるには（分析追跡、ディープリンク処理、カスタム処理のため）、`HmsMessageService.onMessageReceived` メソッド内部で、受信プッシュデータをBrazeにルーティングする。
+デフォルトでは、アプリがフォアグラウンドにあるときにプッシュ通知が届くと、Huaweiは自動的にそれを表示する。プッシュ通知のペイロードをBrazeで処理させる場合（分析トラッキング、ディープリンク処理、カスタム処理のため）、メソッド`HmsMessageService.onMessageReceived`内で受信したプッシュデータをBrazeにルーティングする。
 
-`BrazeHuaweiPushHandler.handleHmsRemoteMessageData` を呼び出すと、BrazeはペイロードがBrazeプッシュ通知であるかどうかを判断し、プッシュ通知であれば、通知を作成して表示する。詳細については、Androidプッシュ通知ドキュメントの[Handling foreground notificationsを]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications)参照のこと。
+呼び出すと`BrazeHuaweiPushHandler.handleHmsRemoteMessageData`、BrazeはペイロードがBrazeプッシュ通知かどうかを判断し、該当する場合は通知を作成して表示する。詳細については、Android プッシュ通知のドキュメントにある[「フォアグラウンド通知の処理」]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications)を参照せよ。
 
-完全な例については、Braze Android SDKドキュメントの[Huaweiハンドラリファレンスを](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html)参照のこと。
+完全な例については、Braze Android SDKドキュメントの[Huaweiハンドラーリファレンス](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html)を参照せよ。
 
-### ステップ 5: プッシュ通知をテストする（オプション）
+### ステップ 5: プッシュ通知をテストする（任意）
 
 ここまでで、Braze ダッシュボードに新しい Huawei Android アプリを作成し、Huawei 開発者の認証情報を使用して設定し、Braze および Huawei SDK をアプリに統合しました。
 
@@ -115,7 +115,7 @@ class CustomPushService: HmsMessageService() {
 
 この時点で、Braze から Huawei (HMS) デバイスにテストプッシュ通知が届くはずです。
 
-#### ステップ 5.3:ファーウェイのセグメンテーションを設定する（オプション）
+#### ステップ 5.3:Huaweiセグメンテーションを設定する（任意）
 
 Braze ダッシュボードの Huawei アプリは Android プッシュプラットフォーム上に構築されているため、すべての Android ユーザー (Firebase Cloud Messaging および Huawei Mobile Services) にプッシュを送信するか、キャンペーンオーディエンスを特定のアプリにセグメント化するかを柔軟に選択できます。
 

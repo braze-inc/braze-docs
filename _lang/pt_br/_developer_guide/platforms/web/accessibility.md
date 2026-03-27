@@ -4,52 +4,52 @@ article_title: Acessibilidade
 platform: Web
 page_order: 22
 page_type: reference
-description: "Este artigo descreve como o Braze oferece suporte à acessibilidade."
+description: "Este artigo descreve como o Braze suporta acessibilidade."
 
 ---
 
 # Acessibilidade
 
-> Este artigo fornece uma visão geral de como o Braze oferece suporte à acessibilidade em sua integração.
+> Este artigo fornece uma visão geral de como o Braze suporta acessibilidade dentro da sua integração.
 
-O Braze Web SDK suporta os padrões fornecidos pelas [Diretrizes de Acessibilidade de Conteúdo da Web (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). Mantemos uma [pontuação de farol de 100/100](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) para cartões de conteúdo e mensagens no app em todas as nossas novas construções para manter nosso padrão de acessibilidade.
+O SDK Web do Braze suporta os padrões fornecidos pelas [Diretrizes de Acessibilidade para Conteúdo da Web (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). Mantemos uma [pontuação de 100/100 no Lighthouse](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) para cartões de conteúdo e mensagens no aplicativo em todas as nossas novas versões para manter nosso padrão de acessibilidade.
 
 ## Pré-requisitos
 
-A versão mínima do SDK que atende às WCAG 2.1 está próxima da v3.4.0. No entanto, recomendamos fazer upgrade para, pelo menos, a versão 6.0.0 para obter as principais correções de tag de imagem.
+A versão mínima do SDK que atende à WCAG 2.1 é próxima da v3.4.0. No entanto, recomendamos a atualização para pelo menos a v6.0.0 para correções importantes de tags de imagem.
 
-### Correções de acessibilidade notáveis
+### Correções notáveis de acessibilidade
 
 | versão | Tipo | Principais mudanças |
 |---------|------|-------------|
-| **6.0.0** | **Maior** | Imagens como tags `<img>`, campos `imageAltText` ou `language`, melhorias gerais na acessibilidade da interface do usuário |
-| **3.5.0** | Leve | Melhorias na acessibilidade do texto de rolagem |
-| **3.4.0** | Consertar | Cartões de conteúdo `article` correção de função |
+| **6.0.0** | **Importante** | Imagens como `<img>` tags, `imageAltText` ou `language` campos, melhorias gerais de acessibilidade da interface do usuário |
+| **3.5.0** | Leve | Melhorias de acessibilidade de texto rolável |
+| **3.4.0** | Consertar | Correção de papel `article` para Cartões de Conteúdo |
 | **3.2.0** | Leve | Alvos de toque mínimos de 45x45px para botões |
 | **3.1.2** | Leve | Texto alternativo padrão para imagens |
-| **2.4.1** | **Maior** | HTML semântico (`h1` ou `button`), atribuições ARIA, navegação de teclado, gerenciamento de foco |
-| **2.0.5** | Leve | Gerenciamento de foco, navegação pelo teclado, rótulos |
+| **2.4.1** | **Importante** | HTML semântico (`h1` ou `button`), atributos ARIA, navegação por teclado, gerenciamento de foco |
+| **2.0.5** | Leve | Gerenciamento de foco, navegação por teclado, rótulos |
 {: .reset-td-br-1, .reset-td-br-2 role="presentation" }
 
 ## Recursos de acessibilidade suportados
 
-Oferecemos suporte a esses recursos para cartões de conteúdo e mensagens no app:
+Suportamos esses recursos para cartões de conteúdo e mensagens no aplicativo:
 
 - Funções e rótulos ARIA
-- Suporte à navegação pelo teclado
+- Suporte à navegação por teclado
 - Gerenciamento de foco
-- Anúncios de leitores de tela
+- Anúncios para leitores de tela
 - Suporte a texto alternativo para imagens
 
 ## Diretrizes de acessibilidade para integrações de SDK
 
-Consulte a seção [Criando mensagens acessíveis no Braze]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/accessibility) para obter diretrizes gerais de acessibilidade. Este guia fornece dicas e práticas recomendadas para obter o máximo de acessibilidade ao integrar o Braze Web SDK em seu aplicativo da Web.
+Consulte [Construindo mensagens acessíveis no Braze]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/accessibility) para diretrizes gerais de acessibilidade. Este guia fornece dicas e melhores práticas para máxima acessibilidade ao integrar o SDK Web do Braze em sua aplicação web.
 
 ### Cartões de conteúdo
 
-#### Definição de uma altura máxima
+#### Definindo uma altura máxima
 
-Para evitar que os cartões de conteúdo ocupem muito espaço vertical e melhorar a acessibilidade, você pode definir uma altura máxima no contêiner do feed, como neste exemplo:
+Para evitar que os Cartões de Conteúdo ocupem muito espaço vertical e melhorar a acessibilidade, você pode definir uma altura máxima no contêiner de feed, como neste exemplo:
 
 {% raw %}
 ```css
@@ -67,9 +67,9 @@ Para evitar que os cartões de conteúdo ocupem muito espaço vertical e melhora
 ```
 {% endraw %}
 
-#### Considerações sobre a janela de visualização
+#### Considerações sobre a área de visualização
 
-Para os cartões de conteúdo que são exibidos em linha, considere as restrições de visualização, como neste exemplo.
+Para Cartões de Conteúdo que são exibidos em linha, considere as restrições da área de visualização, como neste exemplo.
 
 {% raw %}
 ```css
@@ -85,14 +85,14 @@ Para os cartões de conteúdo que são exibidos em linha, considere as restriç�
 ### Mensagem no app
 
 {% alert warning %}
-Não coloque informações importantes em mensagens no app que deslizam para cima, pois elas não são acessíveis para leitores de tela.
+Não coloque informações importantes dentro de mensagens no aplicativo que deslizam para cima, pois não são acessíveis para leitores de tela.
 {% endalert %}
 
-### Considerações sobre dispositivos móveis
+### Considerações para dispositivos móveis
 
 #### Design responsivo
 
-O SDK inclui pontos de interrupção responsivos. Confirme se suas personalizações funcionam em todos os tamanhos de tela, como neste exemplo:
+O SDK inclui pontos de interrupção responsivos. Confirme que suas personalizações funcionam em diferentes tamanhos de tela, como neste exemplo:
 
 {% raw %}
 ```css
@@ -111,28 +111,28 @@ O SDK inclui pontos de interrupção responsivos. Confirme se suas personalizaç
 ```
 {% endraw %}
 
-### Teste de acessibilidade
+### Testando acessibilidade
 
 #### Lista de verificação de teste manual
 
-Teste manualmente sua acessibilidade realizando estas tarefas:
+Teste manualmente sua acessibilidade completando estas tarefas:
 
-- Navegue pelos cartões de conteúdo e mensagens no app apenas com o teclado (guia, Enter, espaço)
+- Navegue pelos Cartões de Conteúdo e mensagens no aplicativo apenas com o teclado (Tab, Enter, Espaço)
 - Teste com leitor de tela (NVDA, JAWS, VoiceOver)
 - Verifique se todas as imagens têm texto alternativo
-- Verifique as taxas de contraste das cores (use ferramentas como o WebAIM Contrast Checker)
+- Verifique as proporções de contraste de cores (use ferramentas como o WebAIM Contrast Checker)
 - Teste em dispositivos móveis com toque
-- Verificar se os indicadores de foco estão visíveis
-- Teste o envio de mensagens modais com foco
-- Verifique se todos os elementos interativos podem ser acessados por um teclado
+- Verifique se os indicadores de foco estão visíveis
+- Teste a captura de foco de mensagens modais
+- Verifique se todos os elementos interativos são acessíveis pelo teclado
 
 ### Problemas comuns de acessibilidade
 
 Para evitar problemas comuns de acessibilidade, faça o seguinte:
 
-1. **Mantenha os estilos de foco:** Os indicadores de foco do SDK são essenciais para os usuários de teclado.
-2. **Use apenas `display: none` em elementos não interativos:** Use `visibility: hidden` ou `opacity: 0` para ocultar elementos interativos.
-3. **Não substitua as atribuições ARIA:** O SDK define funções e rótulos ARIA apropriados.
-4. **Use as atribuições do site `tabindex`:** Eles controlam a ordem de navegação do teclado.
-5. **Forneça uma rolagem se você definir `overflow: hidden`:** Confirme se o conteúdo de rolagem permanece acessível.
-6. **Não interfira nos manipuladores de teclado incorporados:** Confirme se a navegação existente no teclado funciona.
+1. ** Mantenha estilos de foco:** Os indicadores de foco do SDK são essenciais para usuários de teclado.
+2. ** Use `display: none` apenas em elementos não interativos:** Use `visibility: hidden` ou `opacity: 0` para ocultar elementos interativos.
+3. ** Não substitua atributos ARIA:** O SDK define papéis e rótulos ARIA apropriados.
+4. **Use `tabindex` atributos:** Esses controlam a ordem de navegação pelo teclado.
+5. **Forneça uma rolagem se você definir `overflow: hidden`:** Confirme que o conteúdo rolável permanece acessível.
+6. **Não interfira com os manipuladores de teclado embutidos:** Confirme que a navegação existente pelo teclado funciona.

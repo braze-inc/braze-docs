@@ -2,28 +2,29 @@
 nav_title: Objets et filtres
 article_title: Objets et filtres
 page_order: 1.5
-description: "Cette page d’accueil répertorie les objets et filtres d’API Braze utilisés dans vos appels d’API Braze."
+description: "Cette page répertorie les objets et filtres de l'API Braze utilisés dans vos appels API Braze."
 
 ---
 
 # Objets et filtres
 
-> Cette page répertorie les objets et filtres d’API Braze utilisés dans vos appels d’API Braze.
+> Cette page répertorie les objets et filtres de l'API Braze utilisés dans vos appels API Braze.
 
 ## Objets et filtres
 
-- [Objet Propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [Le filtre d'audience connecté & objet]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Objet de contexte Canvas]({{site.baseurl}}/api/objects_filters/context_object)
+- [Filtre et objet d'audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Objet Événement]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objet Achat]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/)
-- [Objet Alias d’identification]({{site.baseurl}}/api/objects_filters/aliases_to_identify)
+- [Objet Alias d'identification]({{site.baseurl}}/api/objects_filters/aliases_to_identify)
 - [Objet Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object)
-- [Objet Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object)
+- [Objet Alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object)
 - [Objet Attribut utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object)
 - [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/)
+- [Objet Sélection de Catalogue]({{site.baseurl}}/api/objects_filters/catalog_selection_object/)
 
-### Objets Messagerie
+### Objets d'envoi de messages
   - [Objet Android]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
   - [Objet Apple]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)
   - [Objet Carte de contenu]({{site.baseurl}}/api/objects_filters/messaging/content_cards_object)

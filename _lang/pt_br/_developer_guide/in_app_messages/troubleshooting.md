@@ -1,8 +1,8 @@
 ---
 nav_title: Solução de problemas
-article_title: Solucionar problemas de mensagens no aplicativo para o SDK Braze
+article_title: Solucione mensagens no aplicativo para o SDK do Braze
 page_order: 50
-description: "Precisa de ajuda para solucionar problemas de mensagens no aplicativo para o SDK Braze? Comece aqui!"
+description: "Precisa de ajuda para solucionar mensagens no aplicativo para o SDK do Braze? Comece aqui!"
 channel:
   - in-app messages
 
@@ -10,7 +10,7 @@ channel:
 
 # Solução de problemas
 
-> Precisa de ajuda para solucionar problemas de mensagens no aplicativo para o SDK Braze? Comece aqui!
+> Precisa de ajuda para solucionar mensagens no aplicativo para o SDK do Braze? Comece aqui!
 
 {% sdktabs %}
 {% sdktab web %}

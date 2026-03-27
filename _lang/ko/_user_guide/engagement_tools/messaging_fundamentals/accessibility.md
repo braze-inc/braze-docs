@@ -1,16 +1,16 @@
 ---
 nav_title: 접근성
-article_title: Braze에서 접근성 있는 메시지 구축하기
+article_title: Braze에서 접근성 높은 메시지 구축하기
 page_order: 0.5
 page_type: reference
 description: "이 참고 문서에서는 마케팅 콘텐츠에서 접근성을 고려하는 것이 중요한 이유와 Braze에서 접근성 메시지를 작성하는 방법을 설명합니다."
 ---
 
-# Braze에서 접근 가능한 메시지 구축하기
+# Braze에서 접근성 있는 메시지 구축하기
 
 > 마케팅 콘텐츠에서 접근성을 고려하는 것이 중요한 이유와 Braze에서 접근성 메시지를 작성하는 방법을 알아보세요. 자세한 지침은 Braze 학습에서 [접근성 메시징 기초](https://learning.braze.com/accessible-messaging-foundations) 과정을 확인하세요.
 
-의도하지 않았더라도 장애인을 배제하는 마케팅 콘텐츠는 수백만 명의 사람들이 브랜드와 소통하지 못하게 만들 수 있습니다. 마케팅에서 접근성이란 모든 사람이 마케팅을 경험하고, 커뮤니케이션을 이해하고, 제품, 서비스 또는 브랜드에 투자하거나 팬이 될 수 있는 기회를 가질 수 있도록 인에이블먼트하는 것을 말합니다. 
+의도하지 않았더라도 장애인을 배제하는 마케팅 콘텐츠는 수백만 명의 사람들이 브랜드와 소통하지 못하게 만들 수 있습니다. 마케팅에서의 접근성은 모든 사람이 귀사의 마케팅을 경험하고, 커뮤니케이션을 이해하며, 귀사의 제품, 서비스 또는 브랜드에 투자하거나 팬이 될 기회를 가질 수 있도록 하는 것입니다. 
 
 메시징을 디자인할 때는 모든 고객이 디자인에 액세스할 수 있도록 하는 방법을 고려하는 데 시간을 할애하세요.
 
@@ -96,7 +96,7 @@ description: "이 참고 문서에서는 마케팅 콘텐츠에서 접근성을 
 
 {% alert note %}
 - 미국인 5명 중 1명은 학습 및 주의력 장애가 있습니다( [LDA](https://ldaamerica.org/lda_today/the-state-of-learning-disabilities-today/#:~:text=LD%20Today,have%20learning%20and%20attention%20issues.) 참조).
-- 전 세계 인구의 약 10~20%가 신경 발산적 성향으로 간주됩니다( [딜로이트](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html) 참조).
+- 전 세계 인구의 약 10~20%가 신경다양성으로 간주됩니다([Deloitte](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html) 참조).
 - 전 세계 어린이 100명 중 약 1명이 자폐증을 앓고 있습니다( [WHO](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders) 참조).
 {% endalert %}
 
@@ -241,7 +241,7 @@ Braze 드래그 앤 드롭 편집기는 기본적으로 시맨틱 HTML을 출력
 터치 타겟이 너무 작거나 너무 가까우면 거동이 불편하거나 손재주가 없는 사용자가 메시지와 상호작용하는 데 불편함을 느끼거나 불가능할 수 있습니다. 이를 개선하면 오류를 줄이고 모두에게 더 원활한 환경을 제공할 수 있습니다.
 
 유의해야 할 사항은 다음과 같습니다:
-- **적절한 터치 타겟팅 크기를 사용합니다.** 최소 터치 타겟 크기는 44 x 44픽셀을 목표로 합니다. 이는 [터치 대상](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) 및 일반적인 모바일 사용성 표준에 대한 WCAG 2.2 가이드라인과 일치합니다.
+- **적절한 터치 대상 크기를 사용하십시오.** 최소 터치 타겟 크기는 44 x 44픽셀을 목표로 합니다. 이는 [터치 대상](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) 및 일반적인 모바일 사용성 표준에 대한 WCAG 2.2 가이드라인과 일치합니다.
 - **각 대상에게 숨 쉴 공간을 주세요.** 스택 링크나 촘촘하게 그룹화된 버튼처럼 탭 대상이 서로 너무 가까이 있으면 놓치거나 잘못된 대상을 탭하기 쉬울 수 있습니다. 이를 방지하기 위해 요소 사이에 간격을 두거나 패딩을 추가합니다.
 - **시각적 효과에만 의존하지 마세요.** 작은 아이콘도 여분의 패딩을 추가하여 레이아웃을 변경하지 않고도 최소 크기 요건을 충족할 수 있도록 하여 사용성을 높일 수 있습니다.
 - **모바일에서 미리 보기.** 다양한 화면 크기에서 메시지를 테스트하고 대화형 요소가 사용하기 쉬운지 확인하세요.

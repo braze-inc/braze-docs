@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: SDK-Authentifizierungsschlüssel auflisten"
+nav_title: "GET: Liste der SDK-Authentifizierungsschlüssel"
 article_title: "GET: SDK-Authentifizierungsschlüssel auflisten"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 1
 layout: api_page
 page_type: reference
@@ -33,7 +33,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Beispiel Anfrage
 
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication/keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```

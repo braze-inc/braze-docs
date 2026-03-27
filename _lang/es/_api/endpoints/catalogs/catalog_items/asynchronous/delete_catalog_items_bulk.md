@@ -1,7 +1,7 @@
 ---
 nav_title: "DELETE: Eliminar varios elementos del catálogo"
 article_title: "DELETE: Eliminar varios elementos del catálogo"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 1
 
 layout: api_page
@@ -86,7 +86,7 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
       "parameter_values": []
     }
   ],
-  "message": "Invalid Request",
+  "message": "Invalid Request"
 }
 ```
 

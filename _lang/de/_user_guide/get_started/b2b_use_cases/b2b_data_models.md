@@ -1,5 +1,5 @@
 ---
-nav_title: Daten Modelle
+nav_title: Datenmodelle
 article_title: Erstellen Sie ein B2B-Datenmodell
 page_order: 0
 page_type: reference
@@ -96,7 +96,7 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
 
 ##### Beispieltabelle der zugeordneten Kontofelder
 
-![Tabelle der Salesforce-Konten mit den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![Tabelle mit Salesforce-Konten und den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
 {% endsubtab %}
 {% subtab Opportunity catalog %}
@@ -135,7 +135,7 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
 
 ##### Beispieltabelle der zugeordneten Opportunity-Felder
 
-![Tabelle der Salesforce Opportunities mit den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![Tabelle mit Salesforce-Opportunities und den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -144,7 +144,7 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
 
 ### Option 2: Nutzen Sie verknüpfte Quellen für Accounts und Opportunities
 
-Angeschlossene Datenquellen sind Datentabellen, die von Ihnen in Ihrem eigenen Data Warehouse gehostet werden und von Braze [CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) abgefragt werden. Im Gegensatz zu Katalogen würden Sie Ihre Geschäftsobjekte (Konten und Opportunities) nicht in Braze duplizieren, sondern in Ihrem Data Warehouse aufbewahren und Ihr Warehouse als Quelle der Wahrheit nutzen.
+Verbundene Quellen sind Datentabellen, die von Ihnen in Ihrem eigenen Data Warehouse gehostet und von Braze [CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) abgefragt werden. Im Gegensatz zu Katalogen würden Sie Ihre Geschäftsobjekte (Konten und Opportunities) nicht in Braze duplizieren, sondern in Ihrem Data Warehouse aufbewahren und Ihr Warehouse als Quelle der Wahrheit nutzen.
 
 Wie Sie angeschlossene Quellen einrichten, erfahren Sie unter [Einbindung angeschlossener Quellen]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 

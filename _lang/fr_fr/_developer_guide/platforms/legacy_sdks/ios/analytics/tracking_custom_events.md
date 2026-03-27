@@ -1,5 +1,5 @@
 ---
-nav_title: Suivi des événements personnalisés
+nav_title: Suivre les custom events
 article_title: Suivi des événements personnalisés pour iOS
 platform: iOS
 page_order: 2
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Suivi des événements personnalisés pour iOS
+# Suivre les événements personnalisés pour iOS
 
 Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions sur le tableau de bord.
 

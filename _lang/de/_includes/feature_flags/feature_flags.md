@@ -16,26 +16,26 @@ Dies sind die SDK-Versionen, die Sie mindestens benötigen, um Feature-Flags ver
 
 ### Schrittweise Einführungen
 
-Verwenden Sie Feature-Flags, um Features schrittweise für eine Stichprobenpopulation zu aktivieren. Sie können zum Beispiel ein neues Feature zuerst für Ihre VIP Nutzer:innen einführen. Diese Strategie mindert die Risiken, die mit der gleichzeitigen Bereitstellung neuer Features für alle verbunden sind, und hilft, Fehler frühzeitig zu erkennen.
+Verwenden Sie Feature-Flags, um Features schrittweise für eine Stichprobenpopulation zu aktivieren. Sie können zum Beispiel ein neues Feature zuerst für Ihre VIP-Nutzer:innen einführen. Diese Strategie mindert die Risiken, die mit der gleichzeitigen Bereitstellung neuer Features für alle verbunden sind, und hilft, Fehler frühzeitig zu erkennen.
 
-![Bewegtes Bild des Rollout-Traffic-Schiebereglers, der von 0% auf 100% geht.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
+![Bewegtes Bild eines Rollout-Verkehrsreglers, der von 0 % auf 100 % läuft.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
 
-Nehmen wir zum Beispiel an, wir haben beschlossen, unserer App einen neuen Link "Live Chat Support" hinzuzufügen, um den Dienst für unsere Kund:in zu beschleunigen. Wir könnten dieses Feature für alle Kund:innen auf einmal freigeben. Eine breite Veröffentlichung birgt jedoch Risiken, wie z.B.: 
+Nehmen wir zum Beispiel an, wir haben beschlossen, unserer App einen neuen Link „Live Chat Support" hinzuzufügen, um den Dienst für unsere Kund:innen zu beschleunigen. Wir könnten dieses Feature für alle Kund:innen auf einmal freigeben. Eine breite Veröffentlichung birgt jedoch Risiken, wie z. B.: 
 
-* Unser Support-Team ist noch in der Ausbildung und Kund:innen können nach der Veröffentlichung Support-Tickets starten. Das gibt uns keinen Spielraum, falls das Support Team mehr Zeit benötigt.
-* Wir wissen nicht, wie viele neue Support-Fälle wir tatsächlich erhalten werden, so dass wir möglicherweise nicht ausreichend mit Personal ausgestattet sind.
-* Wenn unser Support Team überfordert ist, haben wir keine Strategie, dieses Feature schnell wieder abzuschalten.
-* Es könnte sein, dass das Chat-Widget Fehler enthält, und wir möchten nicht, dass Kunden:in ein negatives Erlebnis haben.
+* Unser Support-Team ist noch in der Ausbildung und Kund:innen können nach der Veröffentlichung Support-Tickets erstellen. Das gibt uns keinen Spielraum, falls das Support-Team mehr Zeit benötigt.
+* Wir wissen nicht, wie viele neue Support-Fälle wir tatsächlich erhalten werden, sodass wir möglicherweise nicht ausreichend mit Personal ausgestattet sind.
+* Wenn unser Support-Team überfordert ist, haben wir keine Strategie, dieses Feature schnell wieder abzuschalten.
+* Es könnte sein, dass das Chat-Widget Fehler enthält, und wir möchten nicht, dass Kund:innen ein negatives Erlebnis haben.
 
-Mit den Feature-Flags von Braze können wir das Feature stattdessen schrittweise einführen und diese Risiken abmildern:
+Mit den Feature-Flags von Braze können wir das Feature stattdessen schrittweise einführen und all diese Risiken abmildern:
 
-* Wir werden das Feature "Live-Chat-Support" einschalten, sobald das Team des Supports sich bereit erklärt.
-* Wir werden dieses neue Feature nur für 10 % der Nutzer:innen aktivieren, um festzustellen, ob wir angemessen besetzt sind.
+* Wir werden das Feature „Live-Chat-Support" einschalten, sobald das Support-Team sich bereit erklärt.
+* Wir werden dieses neue Feature nur für 10 % der Nutzer:innen aktivieren, um festzustellen, ob wir angemessen besetzt sind.
 * Wenn es Fehler gibt, können wir das Feature schnell deaktivieren, anstatt überstürzt eine neue Version zu veröffentlichen.
 
-Um dieses Feature schrittweise einzuführen, [erstellen Sie ein Feature-Flag]({{site.baseurl}}/developer_guide/feature_flags/create/) namens "Live Chat Widget".
+Um dieses Feature schrittweise einzuführen, können wir [ein Feature-Flag erstellen]({{site.baseurl}}/developer_guide/feature_flags/create/) namens „Live Chat Widget".
 
-![Feature-Flag-Details für ein Beispiel mit dem Namen "Live Chat Widget". Die ID lautet enable_live_chat.. Die Beschreibung dieses Feature-Flags besagt, dass das Live-Chat-Widget auf der Support-Seite angezeigt wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
+![Feature-Flag-Details für ein Beispiel mit dem Namen „Live Chat Widget". Die ID lautet enable_live_chat. Diese Feature-Flag-Beschreibung besagt, dass das Live-Chat-Widget auf der Support-Seite angezeigt wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 In unserem Code für die App wird der Button **Start Live Chat** nur angezeigt, wenn das Feature-Flag von Braze aktiviert ist:
 
@@ -132,15 +132,15 @@ liveChatView.isHidden = !liveChatEnabled
 
 ### App-Variablen aus der Ferne steuern
 
-Verwenden Sie Feature-Flags, um die Funktionalität Ihrer App in der Produktion zu ändern. Dies kann besonders wichtig für mobile Apps sein, bei denen die Genehmigung des App Store eine schnelle Einführung von Änderungen für alle Nutzer:innen verhindert.
+Verwenden Sie Feature-Flags, um die Funktionalität Ihrer App in der Produktion zu ändern. Dies kann besonders wichtig für mobile Apps sein, bei denen die Genehmigung des App Shops eine schnelle Einführung von Änderungen für alle Nutzer:innen verhindert.
 
-Nehmen wir zum Beispiel an, dass unser Marketing Team unsere aktuellen Verkäufe und Aktionen in der Navigation unserer App auflisten möchte. Normalerweise benötigen unsere Techniker eine Woche Vorlaufzeit für alle Änderungen und drei Tage für eine Überprüfung im App Shop. Aber mit Thanksgiving, Black Friday, Cyber Monday, Chanukka, Weihnachten und Neujahr, die alle innerhalb von zwei Monaten stattfinden, werden wir diese engen Fristen nicht einhalten können.
+Nehmen wir zum Beispiel an, dass unser Marketing-Team unsere aktuellen Verkäufe und Aktionen in der Navigation unserer App auflisten möchte. Normalerweise benötigen unsere Entwickler:innen eine Woche Vorlaufzeit für alle Änderungen und drei Tage für eine Überprüfung im App Shop. Aber mit Thanksgiving, Black Friday, Cyber Monday, Chanukka, Weihnachten und Neujahr, die alle innerhalb von zwei Monaten stattfinden, werden wir diese engen Fristen nicht einhalten können.
 
-Mit Feature-Flags können wir Braze den Inhalt unseres App-Navigationslinks bestimmen lassen, so dass unser Marketing Manager:in Minuten statt in Tagen Änderungen vornehmen kann.
+Mit Feature-Flags können wir Braze den Inhalt unseres App-Navigationslinks bestimmen lassen, sodass unser Marketing-Manager:in Änderungen in Minuten statt in Tagen vornehmen kann.
 
 Um dieses Feature remote zu konfigurieren, erstellen wir ein neues Feature-Flag namens `navigation_promo_link` und definieren die folgenden anfänglichen Eigenschaften:
 
-![Feature-Flag mit Link- und Texteigenschaften, die auf eine generische Verkaufsseite verweisen.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
+![Feature-Flag mit Link- und Texteigenschaften, die zu einer allgemeinen Verkaufsseite führen.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 In unserer App werden wir Getter-Methoden von Braze verwenden, um die Eigenschaften dieses Feature-Flags abzurufen und die Navigationslinks auf der Grundlage dieser Werte zu erstellen:
 
@@ -221,23 +221,23 @@ Jetzt, am Tag vor Thanksgiving, müssen wir nur noch die Werte dieser Eigenschaf
 
 ![Feature-Flag mit Link- und Texteigenschaften, die zu einer Thanksgiving-Verkaufsseite führen.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
 
-Das nächste Mal, wenn jemand die App lädt, sieht er die neuen Thanksgiving-Angebote.
+Wenn nun das nächste Mal jemand die App lädt, werden die neuen Thanksgiving-Angebote angezeigt.
 
 ### Nachrichtenkoordination
 
-Verwenden Sie Feature-Flags, um das Rollout eines Features und die Nachrichten zu synchronisieren. Dies erlaubt es Ihnen, Braze als Quelle der Wahrheit sowohl für Ihre Nutzer:innen als auch für die entsprechenden Nachrichten zu nutzen. Um dies zu erreichen, richten Sie das neue Feature auf ein bestimmtes Segment oder einen gefilterten Teil Ihrer Zielgruppe aus. Erstellen Sie dann eine Kampagne oder ein Canvas, das nur auf dieses Segment abzielt. 
+Verwenden Sie Feature-Flags, um das Rollout eines Features und das Messaging zu synchronisieren und die Zusammenarbeit zwischen Produkt- und Marketing-Teams zu stärken. Durch die Koordination von Feature-Releases und Messaging über Feature-Flags können beide Teams ihre Strategien aufeinander abstimmen und konsistente Nutzer:innen-Erlebnisse schaffen.
 
-Nehmen wir an, dass wir ein neues Kundenbindungs-Programm für unsere Nutzer:innen einführen wollen. Für Marketing- und Produkt-Teams kann es schwierig sein, das Messaging für Werbeaktionen mit der Einführung eines Features perfekt zu koordinieren. Mit Feature-Flags in Canvas können Sie eine ausgeklügelte Logik anwenden, um ein Feature für eine ausgewählte Zielgruppe zu aktivieren und die damit verbundenen Nachrichten für dieselben Nutzer:innen zu steuern.
+Nehmen wir zum Beispiel an, dass wir ein neues Kundenbindungs-Programm für unsere Nutzer:innen einführen wollen. Für Marketing- und Produkt-Teams kann es schwierig sein, das Timing von Werbe-Messaging mit der Einführung eines Features perfekt zu koordinieren. Mit Feature-Flags in Canvas kann unser Produkt-Team jedoch eine ausgeklügelte Logik anwenden, um ein Feature für eine bestimmte Zielgruppe zu aktivieren, während unser Marketing-Team das zugehörige Messaging an dieselben Nutzer:innen steuert.
 
-Um die Einführung von Features und Messaging effektiv zu koordinieren, erstellen wir ein neues Feature-Flag namens `show_loyalty_program`. In der ersten Phase der Veröffentlichung werden wir Canvas die Kontrolle darüber überlassen, wann und für wen das Feature-Flag aktiviert wird. Für den Moment belassen wir den Rollout-Prozentsatz bei 0 % und wählen keine Targeting-Segmente aus.
+Um die Einführung von Features und Messaging effektiv zu koordinieren, erstellen wir ein neues Feature-Flag namens `show_loyalty_program`. Für unsere anfängliche stufenweise Veröffentlichung werden wir Canvas die Kontrolle darüber überlassen, wann und für wen das Feature-Flag aktiviert wird. Für den Moment belassen wir den Rollout-Prozentsatz bei 0 % und wählen keine Targeting-Segmente aus.
 
-![Ein Feature-Flag mit dem Namen Loyalty Rewards Program. Die ID lautet show_loyalty_program, und die Beschreibung, dass damit das neue Kundenbindungs-Programm auf dem Startbildschirm und der Profil-Seite angezeigt wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
+![Ein Feature-Flag mit dem Namen Loyalty Rewards Program. Die ID lautet show_loyalty_program, und die Beschreibung besagt, dass dies das neue Kundenbindungs-Programm auf dem Startbildschirm und der Profilseite anzeigt.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
-Anschließend erstellen wir in Canvas einen [Feature-Flag-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/), der das Feature-Flag `show_loyalty_program` für unser Segment "Hochwertige Kunden" aktiviert:
+Anschließend erstellen wir in Canvas einen [Feature-Flag-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/), der das `show_loyalty_program`-Feature-Flag für unser Segment „High Value Customers" aktiviert:
 
-![Ein Beispiel für ein Canvas mit einem Audience Split-Schritt, bei dem das Segment der hochwertigen Kund:in das Feature-Flag show_loyalty_program aktiviert wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
+![Ein Beispiel für ein Canvas mit einem Schritt zur Segmentierung der Zielgruppen, bei dem das Segment der hochwertigen Kund:innen das show_loyalty_program-Feature-Flag aktiviert.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
-Die Nutzer:innen dieses Segments werden nun das neue Kundenbindungs-Programm sehen, und nach dessen Aktivierung werden automatisch eine E-Mail und eine Umfrage verschickt, damit unser Team Feedback einholen kann.
+Die Nutzer:innen dieses Segments werden nun das neue Kundenbindungs-Programm sehen, und nach dessen Aktivierung werden automatisch eine E-Mail und eine Umfrage verschickt, damit unsere Teams Feedback einholen können.
 
 ### Experimentieren mit Features
 
@@ -245,9 +245,9 @@ Verwenden Sie Feature-Flags, um zu experimentieren und Ihre Hypothesen über Ihr
 
 Ein [A/B-Test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) ist ein leistungsstarkes Instrument, das die Reaktionen der Nutzer:innen auf mehrere Versionen einer Variable vergleicht.
 
-In diesem Beispiel hat unser Team einen neuen Checkout-Flow für unsere E-Commerce App erstellt. Obwohl wir sicher sind, dass es das Nutzer:innen-Erlebnis verbessert, möchten wir einen A/B-Test durchführen, um die Auswirkungen auf den Umsatz unserer App zu messen.
+In diesem Beispiel hat unser Team einen neuen Checkout-Flow für unsere E-Commerce-App erstellt. Obwohl wir sicher sind, dass er das Nutzer:innen-Erlebnis verbessert, möchten wir einen A/B-Test durchführen, um die Auswirkungen auf den Umsatz unserer App zu messen.
 
-Zunächst erstellen wir ein neues Feature-Flag namens `enable_checkout_v2`. Wir fügen keine Zielgruppen oder Rollout-Prozente hinzu. Stattdessen verwenden wir ein Feature-Flag-Experiment, um den Datenverkehr aufzuteilen, das Feature zu aktivieren und das Ergebnis zu messen.
+Zunächst erstellen wir ein neues Feature-Flag namens `enable_checkout_v2`. Wir fügen keine Zielgruppe und keinen Rollout-Prozentsatz hinzu. Stattdessen verwenden wir ein Feature-Flag-Experiment, um den Datenverkehr aufzuteilen, das Feature zu aktivieren und das Ergebnis zu messen.
 
 In unserer App prüfen wir, ob das Feature-Flag aktiviert ist oder nicht, und ändern den Checkout-Flow entsprechend der Antwort:
 
@@ -310,22 +310,22 @@ if let featureFlag, featureFlag.enabled {
 
 Wir werden unseren A/B-Test in einem [Feature-Flag-Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/) einrichten.
 
-Jetzt werden 50 % der Nutzer:innen das alte Erlebnis sehen, während die anderen 50 % das neue Erlebnis sehen werden. Wir können dann die beiden Varianten analysieren, um festzustellen, welcher Checkout-Flow zu einer höheren Konversionsrate geführt hat. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
+Jetzt werden 50 % der Nutzer:innen das alte Erlebnis sehen, während die anderen 50 % das neue Erlebnis sehen werden. Anschließend können wir die beiden Varianten analysieren, um festzustellen, welcher Checkout-Ablauf zu einer höheren Konversionsrate geführt hat. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
-![Ein Feature-Flag Experiment, bei dem der Verkehr in zwei 50-Prozent-Gruppen aufgeteilt wird.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
+![Ein Feature-Flag-Experiment, bei dem der Datenverkehr in zwei Gruppen zu je 50 Prozent aufgeteilt wird.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
-Sobald wir den Gewinner ermittelt haben, können wir diese Kampagne stoppen und den Prozentsatz für die Einführung des Feature-Flags auf 100% für alle Nutzer:innen erhöhen, während unser Entwicklerteam dies in unsere nächste App-Version fest einkodiert.
+Sobald wir den Gewinner ermittelt haben, können wir diese Kampagne stoppen und den Rollout-Prozentsatz des Feature-Flags auf 100 % für alle Nutzer:innen erhöhen, während unser Entwicklerteam dies in unsere nächste App-Version fest einkodiert.
 
 ### Segmentierung
 
-Verwenden Sie den Filter **Feature-Flag**, um ein Segment zu erstellen oder Messaging an Nutzer:innen zu richten, je nachdem, ob sie ein Feature-Flag aktiviert haben. Nehmen wir zum Beispiel an, wir haben ein Feature-Flag, das Premium-Inhalte in unserer App kontrolliert. Wir könnten ein Segment erstellen, das nach Nutzer:innen filtert, die das Feature-Flag nicht aktiviert haben, und diesem Segment dann eine Nachricht schicken, in der sie aufgefordert werden, ihr Konto zu upgraden, um Premium-Inhalte zu sehen.
+Verwenden Sie den Filter **Feature-Flag**, um ein Segment zu erstellen oder Messaging an Nutzer:innen zu richten, je nachdem, ob bei ihnen ein Feature-Flag aktiviert ist. Nehmen wir zum Beispiel an, wir haben ein Feature-Flag, das Premium-Inhalte in unserer App steuert. Wir könnten ein Segment erstellen, das nach Nutzer:innen filtert, bei denen das Feature-Flag nicht aktiviert ist, und diesem Segment dann eine Nachricht schicken, in der sie aufgefordert werden, ihr Konto zu upgraden, um Premium-Inhalte zu sehen.
 
 ![]({% image_buster /assets/img/feature_flags/feature_flag_segmentation_filter.png %})
 
 Weitere Informationen zum Filtern nach Segmenten finden Sie unter [Erstellen eines Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 {% alert note %}
-Um rekursive Segmente zu vermeiden, ist es nicht möglich, ein Segment zu erstellen, das auf andere Feature-Flags referenziert.
+Um rekursive Segmente zu vermeiden, ist es nicht möglich, ein Segment zu erstellen, das auf andere Feature-Flags verweist.
 {% endalert %}
 
 ## Beschränkungen je Tarif
@@ -341,12 +341,12 @@ Dies sind die Feature-Flag-Beschränkungen für den kostenlosen und den kostenpf
 
 Ein Feature-Flag gilt als aktiv und wird auf Ihr Limit angerechnet, wenn einer der folgenden Punkte zutrifft:
 
-- Rollout ist mehr als 0 %
+- Rollout ist mehr als 0 %
 - In einem aktiven Canvas verwendet
 - In einem aktiven Experiment verwendet
 
-Selbst wenn dasselbe Feature-Flag mehrere Kriterien erfüllt, z. B. wenn es in einem Canvas verwendet wird und der Rollout 50 % beträgt, zählt es nur als 1 aktives Feature-Flag für Ihr Limit.
+Selbst wenn dasselbe Feature-Flag mehrere Kriterien erfüllt, z. B. wenn es in einem Canvas verwendet wird und der Rollout 50 % beträgt, zählt es nur als 1 aktives Feature-Flag für Ihr Limit.
 
 {% alert note %}
-Wenn Sie die kostenpflichtige Version der Feature-Flags erwerben möchten, wenden Sie sich an Ihren Braze-Konto Manager, oder fragen Sie im Braze-Dashboard nach einem Upgrade.
+Wenn Sie die kostenpflichtige Version der Feature-Flags erwerben möchten, wenden Sie sich an Ihren Braze Account Manager oder fordern Sie ein Upgrade im Braze-Dashboard an.
 {% endalert %}

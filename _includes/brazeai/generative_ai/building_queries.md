@@ -112,6 +112,22 @@ Reports that take longer than six minutes to run will time out. If this is the f
 
 If your report continues to time out after multiple attempts, [contact Support]({{site.baseurl}}/help/support#braze-support).
 
+## Querying abort reasons
+
+You can query the `ABORT_TYPE` column on any `USERS_MESSAGES_*_ABORT_SHARED` table to analyze why messages were not sent. The `ABORT_TYPE` field contains a string value describing the specific reason for the abort, and the companion `ABORT_LOG` field contains additional details (such as the frequency capping rule that was triggered).
+
+For example, to count email aborts by type in the last 30 days:
+
+```sql
+SELECT ABORT_TYPE, COUNT(*) as abort_count
+FROM USERS_MESSAGES_EMAIL_ABORT_SHARED
+WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('day', -30, CURRENT_DATE())
+GROUP BY ABORT_TYPE
+ORDER BY abort_count DESC
+```
+
+For the full list of `ABORT_TYPE` values and their descriptions, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
+
 ## Data and results
 
 All queries surface data from the last 60 days. When you export your results, it will only contain up to 1,000 rows. For reports that require larger amounts of data, you can use tools such as [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) or the [export API endpoint]({{site.baseurl}}/api/endpoints/export).

@@ -4,7 +4,7 @@ nav_title: Home
 article_title: Braze API-Leitfaden
 layout: api_glossary
 glossary_top_header: "Braze API-Leitfaden"
-glossary_top_text: "Braze bietet eine leistungsstarke REST API, mit der Sie Nutzer:innen verfolgen, Nachrichten versenden, Daten exportieren und vieles mehr können. Auf dieser Seite finden Sie eine Liste der verfügbaren Braze API Endpunkte und deren Verwendung."
+glossary_top_text: "Braze bietet eine leistungsstarke REST API, mit der Sie Nutzer:innen verfolgen, Nachrichten versenden, Daten exportieren und vieles mehr können. Auf dieser Seite sind die verfügbaren Braze-API-Endpunkte und ihre Verwendungszwecke aufgeführt."
 page_type: glossary
 description: "Diese Landing Page listet die verfügbaren Braze API Endpunkte und ihre Verwendung auf."
 glossary_tag_name: Endpoint Type
@@ -42,6 +42,7 @@ glossary_tags:
   - name: E-Mail-Liste
   - name: E-Mail-Templates
   - name: KPI
+  - name: Medienbibliothek
   - name: Käufe
   - name: Präferenzzentrum
   - name: Zeitplan Nachrichten
@@ -109,7 +110,7 @@ glossaries:
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>"
-    description: "Erstellen Sie IDs zum programmgesteuerten Versenden von Nachrichten und zum Tracking der Nachrichten-Performance, ohne für jede Sendung eine Kampagne erstellen zu müssen."
+    description: "Erstellen Sie Sende-IDs, die Sie zum Versenden von Nachrichten und zum programmgesteuerten Tracking der Performance der Nachrichten verwenden können, ohne für jeden Versand eine Kampagne erstellen zu müssen."
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campagnen/{CAMPAIGN_ID}/send</a>"
@@ -149,7 +150,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/triggern/zeitplan/update</a>"
-    description: "Aktualisieren Sie geplante, durch APIs getriggerte Canvase, die Sie im Dashboard erstellt haben."
+    description: "Bitte aktualisieren Sie die von Ihnen im Dashboard erstellten, API-gesteuerten Canvases."
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/nachrichten/geplante_ausstrahlungen</a>"
@@ -225,7 +226,7 @@ glossaries:
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaigns/'>/kampagnen/liste</a>"
-    description: "Exportieren Sie eine Liste von Kampagnen, die jeweils den Namen, den API-Bezeichner der Kampagne, die Angabe, ob es sich um eine API-Kampagne handelt, und die mit der Kampagne verbundenen Tags enthält."
+    description: "Exportieren Sie eine Liste der Kampagnen, die jeweils den Namen, den Bezeichner der Kampagne, die Angabe, ob es sich um eine API-Kampagne handelt, sowie die mit der Kampagne verbundenen Tags enthält."
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_send_analytics/'>/sends/data_series</a>"
@@ -257,11 +258,11 @@ glossaries:
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/segments/get_segment/'>/segmente/liste</a>"
-    description: "Exportieren Sie eine Liste von Segmenten, die jeweils den Namen, den Bezeichner der Segment API und die Angabe, ob das Analytics Tracking aktiviert ist, enthalten."
+    description: "Exportieren Sie eine Liste von Segmenten, die jeweils den Namen, den Segment-API-Bezeichner und die Angabe enthalten, ob das Analytics-Tracking aktiviert ist."
     tags:
       - Segments
-  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/segment/cancel</a>"
-    description: Brechen Sie die Exporte für die angegebene Segment ID ab.
+  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/Segment/abbrechen</a>"
+    description: Bitte stornieren Sie die Exporte für die angegebene Segment-ID.
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/sessions/get_sessions_analytics/'>/sessions/data_series</a>"
@@ -317,11 +318,11 @@ glossaries:
     tags:
       - KPI
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
-    description: "Entfernen Sie \"ungültige\" Telefonnummern aus der Liste der ungültigen Nummern in Braze. Verwenden Sie dies, um Telefonnummern erneut zu validieren, nachdem Braze sie als ungültig markiert hat."
+    description: "Entfernen Sie \"ungültige\" Telefonnummern aus der Liste der ungültigen Nummern in Braze. Verwenden Sie diese Funktion, um Telefonnummern erneut zu validieren, nachdem sie von Braze als ungültig markiert wurden."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/sms/get_query_invalid_numbers/'>/sms/invalid_phone_numbers</a>"
-    description: "Ziehen Sie eine Liste der Telefonnummern, die Braze innerhalb eines bestimmten Zeitraums als \"ungültig\" markiert hat."
+    description: "Bitte erstellen Sie eine Liste mit Telefonnummern, die Braze innerhalb eines bestimmten Zeitraums als „ungültig“ markiert hat."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/export/purchases/get_list_product_id/'>/Einkäufe/Produkt_liste</a>"
@@ -345,7 +346,7 @@ glossaries:
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
-    description: "Sehen Sie sich die Details zu Ihrem Einstellungszentrum an, einschließlich des Zeitpunkts, zu dem es erstellt und aktualisiert wurde."
+    description: "Bitte überprüfen Sie die Details Ihres Präferenzzentrums, einschließlich des Erstellungsdatums und des Updates."
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/präferenz_zentrum/v1</a>"
@@ -472,4 +473,8 @@ glossaries:
     description: Löschen Sie einen SDK-Authentifizierungsschlüssel für Ihre App.
     tags:
       - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/media_library/manage_assets/create/'>/medienbibliothek/erstellen</a>"
+    description: Bitte laden Sie eine Datei in die Medienbibliothek hoch.
+    tags:
+      - Media Library
 ---

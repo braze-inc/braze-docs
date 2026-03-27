@@ -1,53 +1,55 @@
 ---
 nav_title: Revisar ações
-article_title: Revisar ações do BrazeAI Operator<sup>TM</sup>
+article_title: Revisando ações do BrazeAI Operator<sup>TM</sup>
 page_order: 2
-description: "Saiba como revisar e aprovar ações quando o BrazeAI Operator sugere alterações no dashboard."
+description: "Aprenda como revisar e aprovar ações quando o BrazeAI Operator propõe mudanças no dashboard."
 ---
 
-# Revisar ações do BrazeAI Operator
+# Revisando ações do BrazeAI Operator
 
-> Saiba como revisar e aprovar ações quando o BrazeAI Operator<sup>TM</sup> sugere alterações no dashboard.
+> Aprenda como revisar e aprovar ações quando o BrazeAI Operator<sup>TM</sup> propõe mudanças no dashboard.
 
-![O Operator exibe cartões de ação sugeridos para revisão.]({% image_buster /assets/img/operator/suggested_actions.png %}){: style="max-width:40%; border:none; float:right; margin-left:15px;"}
+![Operator apresentando cartões de ação sugeridos para revisão.]({% image_buster /assets/img/operator/suggested_actions.png %}){: style="max-width:40%; border:none; float:right; margin-left:15px;"}
 
 ## Como funcionam os cartões de ação
 
-Quando o Operator sugere alterações no dashboard (por exemplo, preencher campos de formulário, ajustar configurações ou gerar imagens), cada alteração é exibida como um cartão de ação para revisão.
+Quando o Operator propõe mudanças no dashboard (como preencher campos de formulário, atualizar configurações ou gerar imagens), ele apresenta cada mudança como um cartão de ação para revisão.
 
-1. **O Operator resume o plano:** O Operator explica o que fará antes dos cartões de ação.
-2. **Cartões de ação individuais aparecem:** Cada alteração sugerida é exibida em seu próprio cartão. Para alterações em valores existentes, o valor antigo e o novo aparecem lado a lado.
-3. **Revisar e aprovar:** Revise cada cartão e aprove ou rejeite.
-4. **Ação é executada:** Ações aprovadas são executadas na Braze. Ações rejeitadas não são aplicadas.
+1. **O Operator resume o plano:** o Operator explica o que planeja fazer antes de mostrar os cartões de ação.
+2. **Cartões de ação individuais aparecem:** cada mudança proposta é apresentada como um cartão separado que mostra o que o Operator deseja alterar ou fazer no dashboard. Para mudanças em valores existentes, tanto o valor anterior quanto o valor proposto são mostrados lado a lado para comparação.
+3. **Revisar e aprovar:** revise cada cartão e aprove ou recuse.
+4. **Ação executada:** ações aprovadas são executadas na Braze. Ações recusadas não são aplicadas.
 
-Se uma ação falhar após aprovação, o Operator informa com detalhes do erro.
+Se uma ação falhar após a aprovação, o Operator vai notificar você com detalhes sobre a falha.
 
 ### Disponibilidade
 
-Os cartões de ação são suportados nos seguintes editores:
+Os cartões de ação são compatíveis com os seguintes editores e páginas.
 
-- Mensagens in-app (apenas editor clássico)
-- Content Cards
-- E-mail (apenas editor HTML)
-- Notificações push
-- SMS/MMS/RCS
-- Webhooks
+- **Editores de mensagem:**
+    - Mensagens no app (apenas editor tradicional)
+    - Cartões de conteúdo
+    - E-mail (apenas editor de HTML)
+    - Notificações por push
+    - SMS/MMS/RCS
+    - Webhooks
+- Página [Criar agente personalizado]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
+ 
+Em outras páginas, o Operator fornece uma lista de etapas a seguir na interface em vez de tomar a ação por conta própria. A funcionalidade do Operator está sendo aprimorada regularmente, e a expectativa é que a cobertura para ferramentas de criação seja expandida.
 
-Em outras páginas, o Operator fornece uma lista de etapas para executar na interface em vez de executar ações diretamente. A funcionalidade do Operator está em expansão contínua; maior cobertura das ferramentas de criação está planejada.
+## Modificar um plano
 
-## Ajustar um plano
+Para modificar o plano do Operator, primeiro aprove ou rejeite as ações pendentes. Em seguida, descreva a alteração desejada em uma nova mensagem de chat.
 
-Para alterar o plano do Operator, primeiro aprove ou rejeite as ações pendentes. Em seguida, descreva a alteração desejada em uma nova mensagem no chat.
+Ações aprovadas não podem ser desfeitas pelo Operator. Descreva a nova alteração ao Operator ou faça as mudanças manualmente no dashboard.
 
-Ações aprovadas não podem ser desfeitas pelo Operator. Descreva a nova alteração ao Operator ou faça as alterações manualmente no dashboard.
+## Aprovação automática de ações
 
-## Aprovar ações automaticamente
+O botão **Aprovação automática de ações** está localizado no painel de chat do Operator.
 
-O interruptor **Aprovar ações automaticamente** fica no painel de chat do Operator.
+- **Ativado:** as ações sugeridas pelo Operator são executadas imediatamente sem exigir aprovação manual. Algumas ações ainda requerem aprovação explícita por segurança, como gerar imagens ou fazer modificações nas configurações do espaço de trabalho.
+- **Desativado (padrão):** todas as ações propostas seguem o processo de revisão manual descrito.
 
-- **Ligado:** As ações sugeridas pelo Operator são executadas imediatamente, sem aprovação manual. Por segurança, algumas ações ainda exigem aprovação explícita, por exemplo geração de imagens ou alterações em nível de espaço de trabalho.
-- **Desligado (padrão):** Todas as ações sugeridas passam pelo processo de revisão manual descrito.
+![O botão de aprovação automática e o modal de confirmação no painel de chat do Operator.]({% image_buster /assets/img/operator/auto-approval_toggle.png %}){: style="max-width:50%;"}
 
-![O interruptor de aprovação automática e a caixa de confirmação no painel de chat do Operator.]({% image_buster /assets/img/operator/auto-approval_toggle.png %}){: style="max-width:50%;"}
-
-A aprovação automática é redefinida quando você atualiza a página, abre uma nova aba ou faz logout e login novamente. Navegar entre páginas no dashboard não a redefine. Você pode desligar a aprovação automática a qualquer momento.
+A aprovação automática é redefinida quando você atualiza a página, abre uma nova guia ou faz logout e login novamente. Navegar entre páginas no dashboard não a redefine. A aprovação automática pode ser desativada a qualquer momento.

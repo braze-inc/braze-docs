@@ -9,7 +9,7 @@
 {% if include.alert == 'Custom Attributes time attribute' %}
 
 {% alert note %}
-"12-1-2021" 또는 "12/1/2021"과 같은 날짜 문자열은 날짜/시간 개체로 변환되어 [시간 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time)으로 처리됩니다.
+"12-1-2021" 또는 "12/1/2021"과 같은 날짜 문자열은 날짜/시간 오브젝트로 변환되어 [시간 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time)으로 처리됩니다.
 {% endalert %}
 
 {% endif %}
@@ -26,6 +26,14 @@
 
 {% alert note %}
 Braze는 사용자가 앱을 처음 사용할 때까지 프로필을 생성하지 않으므로 아직 앱을 열지 않은 사용자를 타겟팅할 수 없습니다.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Shopify attributes REST API' %}
+
+{% alert note %}
+모든 속성의 소스는 Braze REST API입니다.
 {% endalert %}
 
 {% endif %}

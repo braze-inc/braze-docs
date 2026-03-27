@@ -78,6 +78,24 @@ Check that you're using the correct type of push notification. For example, if y
 
 When testing push sends with internal users, make sure that the user who you want to receive the push notification is currently logged into the relevant app. This can lead to the user either not receiving a push or receiving a push you believe they aren't segmented for.
 
+## Clicking a push notification doesn't open the app
+
+If clicking a push notification doesn't open your app, check the following based on your platform.
+
+### Android
+
+1. **Verify on-click behavior:** Confirm that the campaign is configured to open the app when clicked.
+2. **Check deep link handling:** In your `braze.xml` file, check whether `com_braze_handle_push_deep_links_automatically` is set to `true` or `false`.
+   - If set to `true`, the Braze SDK handles deep links directly and the app should open as expected.
+   - If set to `false`, your app needs a broadcast receiver to listen for and handle push received and opened intents. Verify that this receiver is implemented correctly.
+3. **Collect verbose logs:** [Enable verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduce the issue, and provide the logs along with your `braze.xml` and `AndroidManifest.xml` to Braze Support.
+
+### iOS
+
+1. **Verify on-click behavior:** Confirm that the campaign is configured to open the app when clicked.
+2. **Check push integration:** Deep linking from a push into the app is automatically handled by the Braze [standard push integration]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift). Confirm that the integration is implemented correctly, including any custom delegate handling.
+3. **Collect verbose logs:** [Enable verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduce the issue, and provide the logs to Braze Support.
+
 ## Push clicks unexpectedly open in app
 
 If you're experiencing issues with links in push notifications unexpectedly opening in your app instead of your web browser, there may be an issue with your campaign configuration or SDK implementation. Refer to these steps for help.
@@ -100,6 +118,23 @@ If links in your push notifications are opening in the app unexpectedly, it migh
 2. **Inspect custom link handling:** Check if the app includes custom handling for all `https://` links. Custom configurations might override default behaviors. Collaborate with your development team to review and adjust these settings if necessary.
 3. **Verify iOS push registration:** For iOS, revisit step 1 of the push integration guide on [registering push notifications with APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns). Ensure your delegate object is assigned synchronously before the app finishes launching. This step should be completed in the `application:didFinishLaunchingWithOptions:` method.
 4. **Test your integration:** After making adjustments, test the push notification behavior on both iOS and Android devices to confirm the issue is resolved.
+
+## Push title is cut off on iOS but displays correctly on Android
+
+If your push notification title contains Liquid personalization and appears complete on Android but truncated on iOS, this is caused by how each platform handles newline characters (`\n`) in the title string.
+
+Android automatically strips whitespace, tabs, and newlines from push title strings. iOS does not, so if a Liquid variable resolves to a value that contains a trailing newline, iOS treats the newline as the end of the title and cuts off the remaining text.
+
+For example, a title like `Regarding your flight from {% raw %}{{${city_from}}}{% endraw %} to {% raw %}{{${city_to}}}{% endraw %}` might display `Regarding your flight from` on iOS if the `city_from` variable includes a trailing newline.
+
+To fix this, apply the `strip_newlines` Liquid filter and wrap the entire title in a `capture` block:
+
+{% raw %}
+```liquid
+{% capture title %}Regarding your flight from {{${city_from}}} to {{${city_to}}}{% endcapture %}
+{{ title | strip_newlines }}
+```
+{% endraw %}
 
 ## Web push notifications aren't behaving as expected
 
@@ -190,6 +225,10 @@ Your push permissions are now reset. Open a new tab to your site and try it out.
 
 {% endtab %}
 {% endtabs %}
+
+## Push error messages
+
+For detailed information about common push error messages (such as `DEVICE_UNREGISTERED`, `Unregistered`, `NotRegistered`, and others), refer to [Common push error messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

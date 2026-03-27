@@ -17,7 +17,7 @@ local_redirect:
 
 ## フィーチャー・フラッグを作成する
 
-![ライブチャットボタン機能のフィーチャーフラグステップの例。]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![ライブチャットボタン機能の例となるフィーチャーフラグステップ。]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 フィーチャーフラグコンポーネントを作成するには、まずキャンバスにステップを追加します。サイドバーからコンポーネントをドラッグ＆ドロップするか、ステップの下にある <i class="fas fa-plus-circle"></i> プラスのボタンをクリックし、[**フィーチャーフラグ**] を選択します。次に、ドロップダウンからフィーチャーフラグを選択します。ここにはアーカイブされていないフィーチャーフラグが表示されます。
 
@@ -33,7 +33,7 @@ local_redirect:
 
 フィーチャーフラグを作成するとき、デフォルトのプロパティを指定します。フィーチャーフラグのキャンバスステップを設定する際は、デフォルト値を維持するか、このステップに入るユーザー用に値を上書きすることができます。
 
-![フィーチャーフラグ「ユーザー設定センター」は、プロパティとして "String"、プロパティキーとして "url"、そして値を持つ。]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+![プロパティが「String」、プロパティキーが「url」、値を持つ「ユーザー設定センター」というフィーチャーフラグ。]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 [**メッセージング**] > [**フィーチャーフラグ**] に移動して、追加のプロパティを編集、追加、または削除します。
 

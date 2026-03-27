@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: 소프트웨어 개발 키트 인증 키 만들기"
+nav_title: "POST: SDK 인증 키 생성"
 article_title: "POST: SDK 인증 키 생성"
 search_tag: Endpoint
 page_order: 0
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 예시 요청
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

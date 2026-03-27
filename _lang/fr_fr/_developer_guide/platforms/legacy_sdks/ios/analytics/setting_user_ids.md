@@ -1,6 +1,6 @@
 ---
-nav_title: Définir les ID des utilisateurs
-article_title: Définir les ID des utilisateurs pour iOS
+nav_title: "Définir les ID d'utilisateur"
+article_title: Définir les ID d’utilisateur pour iOS
 platform: iOS
 page_order: 1
 description: "Cet article de référence explique comment définir des ID utilisateur dans votre application iOS, propose des conventions de dénomination d’ID utilisateur et quelques bonnes pratiques."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Définir les ID des utilisateurs pour iOS
+# Définir les ID d’utilisateur pour iOS
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
