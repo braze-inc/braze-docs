@@ -57,9 +57,12 @@ An email feedback loop (FBL) allows senders to monitor their reputation by ident
 
 Users will be prevented from entering the Canvas, and no further messages will be sent out. For email campaigns and Canvases, the stop button does not immediately stop the send. This is because when the send requests are sent, they cannot be stopped from being delivered to the user.
 
-### Why am I seeing more email clicks than opens?
+### Why am I seeing more _Total Clicks_ than _Total Opens_ in my email analytics?
+
+_Total Opens_ is the count of how many times the email was opened by users, whereas _Total Clicks_ is the count of how many times users clicked within the delivered email, including any type of clicks such as link clicks. It can be expected that _Total Clicks_ is higher than _Total Opens_.
 
 You may be seeing more clicks than opens for any of the following reasons:
+
 - Users are performing multiple clicks on the body of the email within a single open.
 - Users click on some email links within the preview pane of their phones. In this case, Braze logs this email as being clicked but not opened.
 - Users reopen an email that they previewed earlier.
