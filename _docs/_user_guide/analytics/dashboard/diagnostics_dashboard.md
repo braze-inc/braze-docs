@@ -94,7 +94,7 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 | ---- | ---- |
 | Content Card expired | The Content Card expired before the user saw it. |
 | Content Card invalid | The Content Card had errors and was not sent to the user. Some common reasons for this include: {::nomarkdown}<ul><li> Maximum size exceeded (2 KB) </li><li> Expiration date is invalid </li><li> Message contains invalid characters </li></ul>{:/} |
-| Connected Content failed | Braze tried to send the message, but Connected Content failed after the maximum number of retries (default is five). |
+| Connected Content failed | Braze tried to send the message, but Connected Content failed after the maximum number of retries (default is five). **Note:** This count represents the number of messages aborted due to reaching the maximum number of retries, not the total number of failed Connected Content requests. |
 | In-app-message rendering timeout | After multiple attempts to retry, the Liquid could not be rendered and timed out. |
 | Liquid abort | The [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) Liquid tag was called, so the send was canceled. |
 | Liquid rendering timeout | It took too long to render the Liquid template. Most likely to occur for Banners, in-app messages, and email. |
@@ -160,6 +160,10 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 A "pre-check" refers to a high-speed, bundled validation check that runs at the very beginning of a pipeline stage (such as a message being triggered or the sending of a Canvas Message step). Think of it as an early exit designed for maximum speed. Instead of running many separate, resource-intensive checks (like validating every detail of a user's profile), Braze bundles several basic validations into one "first pass".
 
 If a user fails this single bundled check, they are dropped immediately. This bundled approach allows Braze to process massive volumes of messages at high speed and can contribute to faster, more stable performance for your campaigns and Canvases by reducing processing latency for each message.
+
+### What does an "other" abort outcome mean?
+
+These are aborts that didn’t fall into any of the pre-existing Braze categories. If you notice a large proportion of aborts with this outcome, contact [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support) for further assistance.
 
 ### Why is the sum of _Total Aborts_ and _Message Sends_ lower than my expected audience size?
 

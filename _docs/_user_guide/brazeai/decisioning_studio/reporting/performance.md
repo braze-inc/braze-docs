@@ -25,11 +25,11 @@ Nothing in the dashboard creates new data. It visualizes stored daily results ba
 
 At the top of the dashboard, you choose:
 
-- **Date range**: The time period for the report.
-- **Comparison groups**: The groups being compared (such as Decisioning Studio versus Business as Usual).
-- **Aggregation**: The chart aggregation setting (Daily, 7-day rolling, or 30-day rolling).
-- **Segments**: Any applied segments. These are custom-configured with your AI Expert Services team.
-- **Timeline events**: Whether to overlay configured timeline events on the chart to help you understand changes or events that could impact performance.
+- **Date range:** The time period for the report.
+- **Comparison groups:** The groups being compared (such as Decisioning Studio versus Business as Usual).
+- **Aggregation:** The chart aggregation setting (Daily, 7-day rolling, or 30-day rolling).
+- **Segments:** Any applied segments. These are custom-configured with your AI Expert Services team.
+- **Timeline events:** Whether to overlay configured timeline events on the chart to help you understand changes or events that could impact performance.
 
 ![Performance report showing the comparison groups, aggregation, segments, and timeline events filters at the top, along with the date range selector in the upper right.]({% image_buster /assets/img/decisioning_studio/reporting_performance_date_range.png %})
 

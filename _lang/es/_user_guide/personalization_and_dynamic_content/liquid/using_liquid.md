@@ -6,7 +6,7 @@ description: "Este artículo de referencia ofrece una visión general de los cas
 search_rank: 2
 ---
 
-# [![](https://learning.braze.com/path/dynamic-personalization-with-liquid)Curso []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}de [Braze Learning:](https://learning.braze.com/path/dynamic-personalization-with-liquid) Uso de Liquid
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Uso de Liquid
 
 > Este artículo muestra cómo puedes utilizar diversos atributos de usuario para insertar de forma dinámica información personal en tu mensajería.
 

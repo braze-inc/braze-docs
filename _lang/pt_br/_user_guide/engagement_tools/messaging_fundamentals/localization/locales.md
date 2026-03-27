@@ -15,21 +15,21 @@ description: "Este artigo fornece etapas sobre como usar locais em suas mensagen
 
 ## Uso de localidades
 
-### Etapa 1: Configure locais em seu espaço de trabalho {#workspace-setup}
+### Etapa 1: Configure locais no seu espaço de trabalho {#workspace-setup}
 
 Antes de usar locais e tags de tradução, você deve primeiro [adicionar locais ao seu espaço de trabalho]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings).
 
-### Etapa 2: Adicione tags de tradução liquid à sua mensagem {#add-translation-tags}
+### Etapa 2: Adicione Liquid tags de tradução à sua mensagem {#add-translation-tags}
 
-Adicione tags de tradução {% raw %}`{% translation your_id_here %}` e `{% endtranslation %}`{% endraw %} para envolver todo texto, imagem ou URLs de links que você irá traduzir.
+Adicione as tags de tradução {% raw %}`{% translation your_id_here %}` e `{% endtranslation %}`{% endraw %} para envolver todo texto, imagem ou URLs de links que você irá traduzir.
 
-Cada tradução deve ter um `id` único. Por exemplo, ao traduzir uma saudação simples, você pode nomear o ID como "saudação":
+Cada tradução deve ter um `id` único. Por exemplo, ao traduzir uma saudação simples, você pode nomear o ID como "greeting":
 
-{% raw %}`{% translation greeting %}Hello!{% endtranslation}`{% endraw %}
+{% raw %}`{% translation greeting %}Hello!{% endtranslation %}`{% endraw %}
 
 #### Localizando blocos HTML
 
-Um parágrafo mais complicado pode ter múltiplas tags de tradução ("offer_text" e "offer_amount"):
+Um parágrafo mais complexo pode ter múltiplas tags de tradução ("offer_text" e "offer_amount"):
 
 {% raw %}
 ```
@@ -42,7 +42,7 @@ Um parágrafo mais complicado pode ter múltiplas tags de tradução ("offer_tex
 Envolver grandes blocos HTML em tags de tradução pode causar problemas de estilo ou de folha de estilo. Envolva as menores seções de texto possíveis.
 {% endalert %}
 
-#### Localizando Links
+#### Localizando links
 
 Para localizar links de tags de âncora, certifique-se de envolver **apenas as partes específicas do idioma** e não todo o atributo de URL `href`. Se você envolver toda a URL, a modelagem de links pode não funcionar corretamente.
 
@@ -64,7 +64,7 @@ Para localizar links de tags de âncora, certifique-se de envolver **apenas as p
 
 ### Etapa 3: Escolha os locais da mensagem {#choose-locales}
 
-Após seus tags de tradução estarem na mensagem, acesse as configurações de múltiplos idiomas da mensagem e selecione um ou mais locais para traduzir esta mensagem.
+Após inserir as tags de tradução na mensagem, acesse as configurações de múltiplos idiomas da mensagem e selecione um ou mais locais para traduzir esta mensagem.
 
 ![Configurações de múltiplos idiomas com um campo suspenso para selecionar locais.]({% image_buster /assets/img/multi-language_support/manage_language_dropdown.png %}){: style="max-width:80%;"}
 
@@ -83,15 +83,15 @@ Selecione **Gerenciar Idiomas** ao editar sua mensagem.
 
 {% endtab %}
 
-{% tab In-app message %}
+{% tab Mensagem no app %}
 {% subtabs %}
-{% subtab Drag-and-Drop Editor %}
+{% subtab Editor de arrastar e soltar %}
 Selecione **Gerenciar Idiomas** na parte inferior da seção **Construir**.
 
 ![Configurações de múltiplos idiomas para mensagens de arrastar e soltar no app.]({% image_buster /assets/img/multi-language_support/iam_dnd_manage_languages.png %}){: style="max-width:45%;"}
 
 {% endsubtab %}
-{% subtab Traditional editor %}
+{% subtab Editor tradicional %}
 
 Selecione **Gerenciar Idiomas** ao editar sua mensagem.
 
@@ -108,31 +108,31 @@ Selecione **Gerenciar Idiomas** ao editar sua mensagem.
 
 {% endtab %}
 
-{% tab Content Block %}
-Selecione **Gerenciar Idiomas** ao editar seu Bloco de Conteúdo.
+{% tab Bloco de conteúdo %}
+Selecione **Gerenciar Idiomas** ao editar seu bloco de conteúdo.
 
 {% alert important %}
-Blocos de Conteúdo que têm traduções associadas carregadas não podem ser sobrescritos por uma campanha individual ou mensagem de Canvas.
+Blocos de conteúdo que têm traduções associadas carregadas não podem ser sobrescritos por uma campanha individual ou mensagem de Canvas.
 {% endalert %}
 
-![Configurações de múltiplos idiomas para Blocos de Conteúdo.]({% image_buster /assets/img/multi-language_support/content_block_manage_languages.png %})
+![Configurações de múltiplos idiomas para blocos de conteúdo.]({% image_buster /assets/img/multi-language_support/content_block_manage_languages.png %})
 
 {% endtab %}
 {% endtabs %}
 
 ### Etapa 4: Baixar modelo CSV {#download-csv}
 
-Após selecionar seus locais, selecione **Baixar modelo** para baixar um modelo CSV contendo uma matriz de seus IDs de tradução selecionados e locais.
+Após selecionar seus locais, selecione **Baixar modelo** para baixar um modelo CSV contendo uma matriz dos seus IDs de tradução selecionados e locais.
 
 ![Exemplo de CSV para locais en, fr e es.]({% image_buster /assets/img/multi-language_support/example_translation_csv.png %}){: style="max-width:70%;"}
 
 ### Etapa 5: Fazer upload de um CSV completo {#upload-csv}
 
 {% alert important %}
-Quaisquer alterações nas IDs ou localizações no arquivo CSV não serão atualizadas automaticamente em sua mensagem. Para atualizar as traduções, atualize o arquivo CSV e faça upload do arquivo novamente.
+Quaisquer alterações nos IDs ou locais no arquivo CSV não serão atualizadas automaticamente na sua mensagem. Para atualizar as traduções, atualize o arquivo CSV e faça upload do arquivo novamente.
 {% endalert %}
 
-Aqui está o formato para um exemplo de CSV completo:
+Aqui está o formato de um exemplo de CSV completo:
 
 ```
 Variant1,,,,
@@ -147,15 +147,15 @@ cta,CHECK OUT NOW,CHECK OUT NOW,VERIFICAR AHORA,VÉRIFIER MAINTENANT
 
 Ao visualizar sua mensagem, selecione a opção **Multi-Language User** no menu suspenso **Preview as User**. Isso permite que você alterne entre diferentes definições de localidade para visualizar todas as traduções da sua mensagem.
 
-![Visualizações de localidade]({% image_buster /assets/img/multi-language_support/multi_language_user_preview.png %})
+![Prévias de localidade]({% image_buster /assets/img/multi-language_support/multi_language_user_preview.png %})
 
 {% alert tip %}
-Confira nossa [API de tradução]({{site.baseurl}}/api/endpoints/translations) para gerenciar e atualizar traduções em suas campanhas e canvas.
+Confira nossa [API de tradução]({{site.baseurl}}/api/endpoints/translations) para gerenciar e atualizar traduções nas suas campanhas e canvas.
 {% endalert %}
 
 ## Mensagens da direita para a esquerda
 
-Ao preencher o arquivo de tradução para idiomas que são escritos da direita para a esquerda (como o árabe), envolva a tradução com `span` para que ela seja formatada corretamente:
+Ao preencher o arquivo de tradução para idiomas escritos da direita para a esquerda (como o árabe), envolva a tradução com `span` para que ela seja formatada corretamente:
 
 {% raw %}
 ```
@@ -165,28 +165,28 @@ Ao preencher o arquivo de tradução para idiomas que são escritos da direita p
 
 ## Gerenciando traduções
 
-### Editando traduções para campanhas lançadas e Canvases
+### Editando traduções para campanhas e canvas lançados
 
-Após uma campanha ou Canvas ter sido lançada, você ainda pode modificar traduções quando estiver no modo de rascunho. Isso se aplica se você estiver editando traduções diretamente no criador, por upload de CSV ou através da API. 
+Após uma campanha ou Canvas ter sido lançado, você ainda pode modificar traduções quando estiver no modo de rascunho. Isso se aplica tanto para edições feitas diretamente no criador quanto por upload de CSV ou pela API. 
 
-Para mais detalhes sobre como gerenciar campanhas e Canvases após o lançamento, consulte [Editing launched campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) e [Canvas drafts and post-launch editing]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
+Para mais detalhes sobre como gerenciar campanhas e canvas após o lançamento, consulte [Editando campanhas lançadas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) e [Rascunhos de Canvas e edição pós-lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
 
-### Duplicando etapas do Canvas ou campanhas, e traduções
+### Duplicando etapas do canva ou campanhas, e traduções
 
-As traduções são copiadas junto com uma etapa do canvas, campanha ou variação de campanha. Isso também é verdade ao copiar entre espaços de trabalho, desde que as localidades estejam definidas nesse espaço de trabalho de destino. Certifique-se de revisar e atualizar as traduções de acordo ao fazer modificações no seu Canvas ou campanha.
+As traduções são copiadas junto com uma etapa do canva, campanha ou variação de campanha. Isso também vale ao copiar entre espaços de trabalho, desde que os locais estejam definidos nesse espaço de trabalho de destino. Certifique-se de revisar e atualizar as traduções ao fazer modificações no seu Canvas ou campanha.
 
-### Usando a API Multi-Language com Canvases
+### Usando a API Multi-Language com canvas
 
-Para usar a [Multi-Language API with Canvases]({{site.baseurl}}/api/endpoints/translations/), você deve incluir o `workflow_id`, `step_id` e `message_variation_id` na lista de parâmetros.
+Para usar a [API Multi-Language com canvas]({{site.baseurl}}/api/endpoints/translations/), você deve incluir o `workflow_id`, `step_id` e `message_variation_id` na lista de parâmetros.
 
-#### Etapas do Canvas adicionadas a rascunhos pós-lançamento
+#### Etapas do canva adicionadas a rascunhos pós-lançamento
 
-Ao usar a API Multi-Language com etapas do Canvas que foram criadas após o lançamento do Canvas, o `message_variation_id` que você passar para a API estará vazio ou em branco.
+Ao usar a API Multi-Language com etapas do canva que foram criadas após o lançamento do Canvas, o `message_variation_id` que você passar para a API estará vazio ou em branco.
 
 ## Perguntas frequentes
 
-#### Posso fazer uma alteração na cópia traduzida em uma das minhas localidades?
-Sim. Primeiro, faça a edição no CSV, depois faça o upload do arquivo novamente para fazer uma alteração na cópia traduzida.
+#### Posso fazer uma alteração no texto traduzido em uma das minhas localidades?
+Sim. Primeiro, faça a edição no CSV, depois faça o upload do arquivo novamente para aplicar a alteração no texto traduzido.
 
 #### Posso aninhar tags de tradução?
 Não.
@@ -195,16 +195,16 @@ Não.
 Sim, mas certifique-se de que a estilização HTML não seja traduzida junto com o conteúdo.
 
 #### Posso envolver mensagens HTML inteiras em uma tag de tradução?
-Não, suas tags de tradução devem ser o menor possível para evitar limitações de desempenho ou tamanho.
+Não, suas tags de tradução devem ser o menor possível para evitar limitações de performance ou tamanho.
 
-#### Que validações ou verificações extras o Braze faz?
+#### Que validações ou verificações extras a Braze faz?
 
-| Cenário                                                                                                                                                 | Validação em Braze                                                                                            |
+| Cenário                                                                                                                                                 | Validação na Braze                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Um arquivo de tradução não tem localidades associadas à mensagem atual.                                                                               | Esse arquivo de tradução não será carregado.                                                                       |
-| Um arquivo de tradução está sem alguns blocos de texto, como um texto dentro de tags de tradução Liquid, da mensagem de e-mail atual.                                | Esse arquivo de tradução não será carregado.                                                                       |
-| O arquivo de tradução inclui o texto padrão que não corresponde aos blocos de texto da mensagem de e-mail atual.                                          | Esse arquivo de tradução não será carregado. Corrija isso em seu CSV antes de tentar fazer upload novamente.               |
-| O arquivo de tradução inclui localizações que não existem nas configurações **do Suporte multilíngue**.                                                           | Essas localizações não serão salvas no Braze.                                                                      |
-| O arquivo de tradução inclui blocos de texto que não existem na mensagem atual (como o rascunho atual no momento em que as traduções são feitas upload). | Os blocos de texto que não existirem em sua mensagem atual não serão salvos do arquivo de tradução para o Braze. |
-| Remoção de uma localização da mensagem depois que essa localização já tiver sido carregada para a mensagem como parte do arquivo de tradução.                           | A remoção da localidade removerá todas as traduções associadas à localidade em sua mensagem.                   |
+| Um arquivo de tradução não tem locais associados à mensagem atual.                                                                               | Esse arquivo de tradução não será carregado.                                                                       |
+| Um arquivo de tradução está sem blocos de texto, como texto dentro de Liquid tags de tradução, da mensagem de e-mail atual.                                | Esse arquivo de tradução não será carregado.                                                                       |
+| O arquivo de tradução inclui o texto padrão que não corresponde aos blocos de texto da mensagem de e-mail atual.                                          | Esse arquivo de tradução não será carregado. Corrija isso no seu CSV antes de tentar fazer upload novamente.               |
+| O arquivo de tradução inclui locais que não existem nas configurações de **Suporte multilíngue**.                                                       | Esses locais não serão salvos na Braze.                                                                      |
+| O arquivo de tradução inclui blocos de texto que não existem na mensagem atual (como o rascunho atual no momento em que as traduções são carregadas). | Os blocos de texto que não existirem na sua mensagem atual não serão salvos do arquivo de tradução para a Braze. |
+| Remoção de um local da mensagem depois que esse local já tiver sido carregado para a mensagem como parte do arquivo de tradução.                           | A remoção do local removerá todas as traduções associadas ao local na sua mensagem.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
