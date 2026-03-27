@@ -121,7 +121,7 @@ You can reference the **Subscription Group Timeseries** graph in the **Subscript
 
 ![An example "Subscription Group Timeseries" graph dated from December 2nd through 11th. The graph shows a ~10 million increase in the number of users from the 6th to the 7th.]({% image_buster /assets/img_archive/subscription_group_graph.png %})
 
-If the timeseries count diverges sharply from a segment using **Email Subscription Status is Unsubscribed**, remember the graph counts membership in that **subscription group**, while that filter reflects **global** email subscription state—users can be globally subscribed but unsubscribed from a specific group (or the reverse).
+If the timeseries count diverges sharply from a segment using **Email Subscription Status is Unsubscribed**, remember the graph counts membership in that **subscription group**, while that filter reflects **global** email subscription state—for example, users can be globally subscribed but unsubscribed from a specific group.
 
 #### Viewing subscription groups in campaign analytics
 
@@ -170,10 +170,10 @@ To use a custom landing page instead:
 
 Include a resubscribe link (for example {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) so users can undo an accidental unsubscribe.
 
-You can also send users to your site and update status with the Braze REST API (for example link with {% raw %}`?user_id={{${user_id}}}`{% endraw %} and then call [`/email/status`]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/)).
+You can also send users to your site and update status with the Braze REST API (for example link with {% raw %}`?user_id={{${user_id}}}`{% endraw %} and then call [`/email/status`]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/).
 
 {% alert note %}
-If you use the dashboard footer (not only an HTML Content Block), the template must still contain {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} to save. To use a different unsubscribe URL temporarily, you can comment out the default tag, for example {% raw %}`<!-- {{${set_user_to_unsubscribed_url}}} -->`{% endraw %}.
+If you use the dashboard footer instead of only an HTML Content Block, the template must still contain {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} to save. To use a different unsubscribe URL temporarily, you can comment out the default tag, for example {% raw %}`<!-- {{${set_user_to_unsubscribed_url}}} -->`{% endraw %}.
 {% endalert %}
 
 ![Custom unsubscribe page with a preview "Sorry to see you go!".]({% image_buster /assets/img/custom_unsubscribe.png %})

@@ -29,7 +29,7 @@ Your company has a limit on how many emails you can preview with Inbox Vision. Y
 Include a subject line and a valid sending domain to view previews. Be mindful of desktop versus mobile rendering differences. Use the previews to confirm the email appears as intended.
 
 {% alert note %}
-If previewing a campaign shows a permission error, clear cache and cookies, or try incognito—browser extensions sometimes block the preview.
+If previewing a campaign shows a permission error, clear your cache and cookies, or try an incognito window. Browser extensions sometimes block the preview.
 {% endalert %}
 
 To test your email message in Inbox Vision:
