@@ -129,6 +129,18 @@ Granular permissions are in early access. When migration is planned for your com
 
 {% endif %}
 
+{% if include.alert == 'WhatsApp audio and documents' %}
+
+{% alert note %}
+The [Braze media library]({{site.baseurl}}/media_library/) supports images and video only. Audio files and documents must be referenced through a hosted URL.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Meta MP4 video issue' %}
+
+{% alert important %}
+Meta has a known issue that can prevent some MP4 videos from playing on Android devices due to specific encoding or container settings. Until a permanent fix is available, reformatting the MP4 file resolves the issue for most senders. Test all videos on Android devices to confirm correct deliverability. <br><br>You can reformat the MP4 file by MP4 using a web tool, such as [CloudConvert](https://cloudconvert.com/mp4-converter). Upload your MP4 file into the tool, convert it to MP4 again, and then download the converted file.
 {% if include.alert == 'Shopify cart token alias' %}
 
 {% alert important %}

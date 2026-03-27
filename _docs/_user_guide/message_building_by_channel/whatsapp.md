@@ -28,6 +28,9 @@ guide_featured_list:
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "WhatsApp Message and Media Specifications"
+  link: /docs/whatsapp_media_specifications/
+  image: /assets/img/braze_icons/image-03.svg
 - name: "WhatsApp Template Builder"
   link: /docs/whatsapp_template_builder/
   image: /assets/img/braze_icons/layout-alt-04.svg
@@ -40,8 +43,9 @@ guide_featured_list:
 - name: "Messaging Users"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
   image: /assets/img/braze_icons/message-chat-circle.svg
-- name: "Handling Unknown Phone Numbers"
+- name: "Handle Unknown Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "WhatsApp Marketing Experiment"
   link: /docs/user_guide/message_building_by_channel/whatsapp/meta_resources/#faq
   image: /assets/img/braze_icons/beaker-02.svg
