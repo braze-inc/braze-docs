@@ -46,6 +46,12 @@ If you want the push token reassigned to the original user:
 1. Have the original user log into the profile with the missing push token.
 2. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
 
+### Why does "Open web URL inside mobile app" always open the app when I'm testing a draft campaign?
+
+When a campaign is still in **Draft** status, and you send a test push, tapping the notification always opens the app first, regardless of whether the **Open web URL inside mobile app** option is selected or cleared. When the campaign is **Live**, the on-click behavior works as configured.
+
+If you selected **Open web URL** without the **Inside App** option, the link opens directly in the device's default browser. If you selected **Open web URL inside mobile app**, the link opens in an in-app web view.
+
 ### What is the difference between "Send to Production" and "Send to Development" for iOS push certificates?
 
 When adding an Apple Push Certificate in Braze, the **Send to Production** and **Send to Development** options determine which APNs (Apple Push Notification service) gateway Braze uses to deliver push notifications:
