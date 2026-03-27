@@ -1,7 +1,7 @@
 {% if include.alert == 'Content Cards frequency capping' %}
 
 {% alert note %}
-La limitación de frecuencia no se aplica a las tarjetas de contenido.
+La limitación de frecuencia no se aplica a las Tarjetas de contenido.
 {% endalert %}
 
 {% endif %}
@@ -26,6 +26,14 @@ Todos los datos de los perfiles de usuario (eventos personalizados, atributos pe
 
 {% alert note %}
 Braze no genera perfiles para los usuarios hasta que han utilizado la aplicación por primera vez, por lo que no puedes dirigirte a usuarios que aún no han abierto tu aplicación.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Shopify attributes REST API' %}
+
+{% alert note %}
+Todos los atributos provienen de la API REST de Braze.
 {% endalert %}
 
 {% endif %}

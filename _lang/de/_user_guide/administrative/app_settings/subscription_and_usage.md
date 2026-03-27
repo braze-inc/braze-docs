@@ -23,11 +23,11 @@ Die Seite **Abrechnung** enthält die folgenden Registerkarten:
 
 ## Abos und Nutzung
 
-Die Registerkarte **Abonnements und Nutzung** enthält Nutzungsdiagramme und Ihre Vertragsdetails. Die Daten auf dieser Seite werden täglich um 10:00 PM Eastern Time (ET) aktualisiert. Sie spiegelt nicht die Realtime-Aktivität wider.
+Die Registerkarte **Abonnements und Nutzung** enthält Nutzungsdiagramme und Ihre Vertragsdetails. Die Daten auf dieser Seite werden täglich um 22:00 Uhr Eastern Time (ET) aktualisiert. Es spiegelt keine Realtime-Aktivitäten wider.
 
 ### Diagramme zur Nutzung
 
-Hier finden Sie Nutzungsdiagramme, die sich auf Ihre Workspaces beziehen. Sie werden feststellen, dass Ihr eigenes Dashboard je nach den von Ihnen erworbenen Produkten unterschiedliche Nutzungskennzahlen anzeigt. 
+Hier finden Sie Nutzungsdiagramme, die für Ihre Workspaces relevant sind. Sie werden feststellen, dass Ihr eigenes Dashboard je nach den von Ihnen erworbenen Produkten unterschiedliche Nutzungskennzahlen anzeigt. 
 
 ![Nutzungsdiagramm mit monatlichen eindeutigen Besuchern]({% image_buster /assets/img/subscription_and_billing4.png %}){: style="max-width:90%;"}
 
@@ -39,36 +39,40 @@ Unter Vertragsdetails finden Sie das Anfangs- und Enddatum Ihres aktuellen Vertr
 
 #### Überlegungen
 
-Wenn Ihr Vertrag monatlich eindeutige Besucher (MUV) verwendet und Sie zu einem Vertrag wechseln, der nur monatlich aktive Nutzer:in (MAU) verwendet, erscheinen Ihre historischen Daten weiterhin im MUV-Diagramm und Ihre neuen Daten nur im MAU-Diagramm. Wenn Ihr Vertrag zum Beispiel im Oktober endet, zeigt das MUV-Diagramm Daten bis Ende September an.
+Wenn Ihr Vertrag monatliche Unique Visitors (MUV) verwendet und Sie zu einem Vertrag wechseln, der nur monatlich aktive:r Nutzer:in (MAU) verwendet, werden Ihre historischen Daten weiterhin im MUV-Diagramm angezeigt, während Ihre neuen Daten nur im MAU-Diagramm erscheinen. Wenn Ihr Vertrag beispielsweise im Oktober endet, zeigt das MUV-Diagramm die Daten bis Ende September an.
 
 ## Meistgenutzte Events und Attribute nach App
 
-Unter **Meistgenutzte Events und -Attribute nach App** können Sie die Treiber für die Nutzung Ihrer Attribute und angepassten Events-Datenpunkte überprüfen. 
+Unter **„meistgenutzte Events und Attribute nach App**“ können Sie die Treiber Ihrer Attribut- und angepassten Event-Datenpunkt-Nutzung überprüfen. 
 
 ![Meistgenutzte Events und Attribute nach App]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
 Für jede App können Sie die Option **Aufschlüsselung anzeigen** wählen, um eine geschätzte Anzahl jedes spezifischen benutzerdefinierten Attributs, Profilattributs und benutzerdefinierten Ereignisses für den ausgewählten Zeitraum sowie den prozentualen Anteil der Attribut- und Ereignisaktualisierungen dieser App anzuzeigen, der auf dieses Attribut oder Ereignis zurückzuführen ist. 
 
-![Meistgenutzte Events und Attribute nach App Aufschlüsselung Tab]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
+![Die meistgenutzten Events und Attribute nach App-Aufschlüsselung]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
 
 Aufschlüsselungen wie diese können Ihnen helfen zu verstehen, welche Datenpunkte einen großen Teil Ihres Kontingents beanspruchen. Wir empfehlen Ihnen, diese Informationen von Zeit zu Zeit zu überprüfen, um sicherzustellen, dass Sie keine Datenpunkte auf unbeabsichtigte und unnötige Weise ausgeben. Ihr Kundenerfolgsmanager kann Sie dabei unterstützen, das Beste aus Ihrem aktuellen Plan herauszuholen, oder Ihnen Optionen für mehr Flexibilität anbieten. 
 
 ## Dashboard für Gesamtdatenpunkte
 
-Der Tab **Datenpunkt-Nutzung insgesamt** bietet einen detaillierten Einblick in Ihre Datenpunkt-Nutzung. Sie können alle Daten in diesem Bereich entweder nach Wochen oder Monaten aggregiert anzeigen.
+Die Tab-Seite **„Gesamt-Datenpunkt-Nutzung“** bietet einen detaillierten Überblick über Ihre Datenpunkt-Nutzung. Sie können alle Daten in diesem Bereich entweder nach Wochen oder Monaten aggregiert anzeigen.
+
+{% alert note %}
+Die Datenpunkte werden alle 24 Stunden zwischengespeichert.
+{% endalert %}
 
 ![Filtern der Datenpunktverwendung nach Wochen]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### Vertragsdetails
 
-Hier finden Sie Informationen darüber, wann Ihr aktueller Braze-Vertrag beginnt und endet, sowie die zugeteilten Datenpunkte und eine Summe aller Datenpunkte, die bisher in Ihrem aktuellen Vertrag verwendet wurden.
+Hier finden Sie Informationen zum Beginn und Ende Ihres aktuellen Braze-Vertrags sowie zu den zugewiesenen Datenpunkten und der Summe aller Datenpunkte, die bisher im Rahmen Ihres aktuellen Vertrags verwendet wurden.
 
 Die Felder in diesem Abschnitt sind wie folgt definiert:
 
 - **Art des Vertrags:** Struktur der Abrechnungsperiode, entweder jährlich oder mehrjährig.
 - **Start- und Enddatum des Vertrags:** Anfangs- und Enddatum des gesamten Vertrags.
 - **Datenpunkte-Kontingent:** Die Anzahl der Datenpunkte, die der Vertrag pro Abrechnungszeitraum vorsieht.
-- **Datenpunktnutzung gemäß Vertrag:** Eine kumulative Summe aller Datenpunkte, die während der Lifetime des Vertrags protokolliert wurden und in der nächsten Abrechnungsperiode nicht zurückgesetzt werden.
+- **Datenpunktnutzung gemäß Vertrag:** Die kumulierte Summe aller Datenpunkte, die während der Vertragslaufzeit protokolliert wurden, und die in der nächsten Abrechnungsperiode nicht zurückgesetzt wird.
 
 ![Abschnitt "Vertragsdetails" auf dem Tab "Datenpunkt-Nutzung insgesamt"]({% image_buster /assets/img/contract_details.png %})
 

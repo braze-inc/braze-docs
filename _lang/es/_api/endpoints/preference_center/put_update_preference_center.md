@@ -1,36 +1,36 @@
 ---
-nav_title: "COLOCAR: Actualizar el centro de preferencias"
-article_title: "COLOCAR: Actualizar el Centro de Preferencias"
+nav_title: "PUT: Actualizar centro de preferencias"
+article_title: "PUT: Actualizar centro de preferencias"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Actualizar un centro de preferencias de Braze."
+description: "En este artículo se describen los detalles del punto de conexión Actualizar un centro de preferencias de Braze."
 
 ---
 {% api %}
-# Actualizar el centro de preferencias
+# Actualizar centro de preferencias
 {% apimethod put %}
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-> Utiliza este punto final para actualizar un centro de preferencias.
+> Utiliza este punto de conexión para actualizar un centro de preferencias.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#bf1b43db-3f1b-461f-ad9a-2fbe35b804d7 {% endapiref %}
 
 ## Requisitos previos
 
-Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `preference_center.update`.
+Para utilizar este punto de conexión, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `preference_center.update`.
 
 ## Límite de velocidad
 
-Este punto final tiene un límite de velocidad de 10 solicitudes por minuto, por espacio de trabajo.
+{% multi_lang_include rate_limits.md endpoint='post or put preference center' %}
 
-## Parámetros de la ruta
+## Parámetros de ruta
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Obligatoria | Cadena | El ID de su centro de preferencias. |
+|`preferenceCenterExternalID`| Obligatoria | Cadena | El ID de tu centro de preferencias. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
@@ -69,7 +69,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
 |`preference_center_page_html`| Obligatoria | Cadena | El HTML de la página del centro de preferencias. |
-|`preference_center_title`| Opcional | Cadena | El título para el centro de preferencias y las páginas de confirmación. Si no se especifica un título, el título de las páginas será predeterminado "Centro de preferencias". |
+|`preference_center_title`| Opcional | Cadena | El título del centro de preferencias y las páginas de confirmación. Si no se especifica un título, el de las páginas será por defecto "Preference Center". |
 |`confirmation_page_html`| Obligatoria | Cadena | El HTML de la página de confirmación. |
 |`state` | Opcional | Cadena | Elige `active` o `draft`.|
 |`options` | Opcional | Objeto | Atributos: <br>`meta-viewport-content`: Cuando esté presente, se añadirá una metaetiqueta `viewport` a la página con `content= <value of attribute>`.<br><br> `link-tags`: Establece un favicon para la página. Cuando se establece, se añade a la página una etiqueta `<link>` con un atributo rel.  |

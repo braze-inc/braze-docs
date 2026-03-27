@@ -1,7 +1,7 @@
 ---
 page_order: 4
 nav_title: プッシュ通知ストーリー
-article_title: Braze SDKのプッシュストーリーの設定
+article_title: Braze SDKのプッシュ通知を設定する
 channel:
   - push notifications
 ---

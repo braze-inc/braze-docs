@@ -1,30 +1,30 @@
 ---
-nav_title: "GET: 선호 센터 목록"
-article_title: "GET: 목록 환경 설정 센터"
+nav_title: "GET: 환경 설정 센터 목록"
+article_title: "GET: 환경 설정 센터 목록"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "이 기사는 Braze 엔드포인트에 대한 목록 기본 설정 센터의 세부 정보를 설명합니다."
+description: "이 문서에서는 환경 설정 센터 목록 Braze 엔드포인트에 대한 세부 정보를 설명합니다."
 
 ---
 {% api %}
-# 선호 센터 목록
+# 환경 설정 센터 목록
 {% apimethod get %}
 /preference_center/v1/list
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 사용 가능한 환경 설정 센터를 나열하십시오.
+> 이 엔드포인트를 사용하여 사용 가능한 환경 설정 센터를 나열할 수 있습니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dd8f6667-5eba-4e19-a29e-ba74644c0b8e {% endapiref %}
 
-## Prerequisites
+## 필수 조건
 
 이 엔드포인트를 사용하려면 `preference_center.list` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
 ## 사용량 제한
 
-이 엔드포인트는 작업 공간당 분당 1,000개의 요청에 대한 속도 제한이 있습니다.
+{% multi_lang_include rate_limits.md endpoint='get preference center' %}
 
 ## 경로 및 요청 매개변수
 

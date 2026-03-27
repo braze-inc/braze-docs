@@ -1,6 +1,6 @@
 ## À propos des GIF
 
-Braze offre la possibilité d'utiliser une bibliothèque d'images personnalisée pour afficher des GIF animés. Bien que l’exemple ci-dessous utilise [Glide](https://bumptech.github.io/glide/), toute bibliothèque d’images prenant en charge les GIF est compatible.
+Braze permet d'utiliser une bibliothèque d'images personnalisée pour afficher des GIF animés. Bien que l’exemple ci-dessous utilise [Glide](https://bumptech.github.io/glide/), toute bibliothèque d’images prenant en charge les GIF est compatible.
 
 ## Intégration d'une bibliothèque d'images personnalisée
 
@@ -163,7 +163,7 @@ class GlideIntegrationApplication : Application() {
 
 ## Chargement d'images personnalisé avec Jetpack Compose
 
-Pour remplacer le chargement d'images avec Jetpack Compose, vous pouvez passer une valeur à [`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721). Cette fonction prend une `Card` et restitue l'image et les modificateurs nécessaires. Vous pouvez également utiliser le `customCardComposer` de `ContentCardsList` pour générer l'ensemble de la carte.
+Pour remplacer le chargement des images avec Jetpack Compose, vous pouvez transmettre une valeur à [`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721). Cette fonction prend une `Card` et restitue l'image et les modificateurs nécessaires. Vous pouvez également utiliser le `customCardComposer` de `ContentCardsList` pour générer l'ensemble de la carte.
 
 Dans l'exemple suivant, la bibliothèque Compose de Glide est utilisée pour les cartes énumérées dans la fonction `imageComposable`:
 

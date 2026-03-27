@@ -12,7 +12,7 @@ description: "Este artículo ofrece un resumen de las distintas formas en que pu
 En Braze, puedes enviar mensajes a través de una [campaña](#campaigns) o de un [Canvas](#canvas).
 
 - Para enviar un único mensaje dirigido a un grupo de usuarios, elija una campaña. Una campaña es un paso de mensaje único para conectar con sus usuarios en varios canales de mensajería.
-- Para enviar una serie de mensajes continuos en un recorrido del cliente global, elige Canvas, nuestra herramienta de orquestación de recorridos. Mientras que las campañas son buenas para enviar mensajes sencillos y específicos, en los lienzos es donde puede llevar sus relaciones con los clientes al siguiente nivel.
+- Para enviar una serie de mensajes continuos en un recorrido global del cliente, elige Canvas, nuestra herramienta de orquestación de recorridos. Mientras que las campañas son buenas para enviar mensajes sencillos y específicos, en los lienzos es donde puede llevar sus relaciones con los clientes al siguiente nivel.
 
 ## Campañas
 
@@ -50,7 +50,7 @@ Cuando se crea un Canvas, se siguen muchos de los mismos pasos que para configur
 
 Tu lienzo puede tener cualquier combinación de [mensajes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [retrasos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), etc. Puede enviar en cualquier canal de mensajería compatible, e incluso [integrarse con plataformas sociales y publicitarias]({{site.baseurl}}/partners/canvas_audience_sync/overview/) como Facebook, Google o TikTok.
 
-Consulta estos recursos adicionales para saber más sobre Canvas:
+Echa un vistazo a estos recursos adicionales para obtener más información sobre Canvas:
 
 - Braze Learning: [Orquestación de recorridos con Canvas Flow](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
 - [Crear un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
@@ -70,13 +70,13 @@ En la tabla siguiente se describen los canales que admitimos.
 | [Notificaciones push móvil]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | Envíe mensajes directamente a los dispositivos móviles de los usuarios en forma de notificaciones.                                                                                   |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Envíe notificaciones a los navegadores de los usuarios, incluso cuando no estén activos en su sitio web.                                                         |
 | [Mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | Muestre mensajes dentro de su aplicación móvil mientras los usuarios la utilizan activamente.                                                                             |
-| [SMS, MMS y RCS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/).                   | Enviar mensajes de texto a los teléfonos móviles de los usuarios.                                                                                                            |
+| [SMS, MMS y RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/)*                   | Enviar mensajes de texto a los teléfonos móviles de los usuarios.                                                                                                            |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)              | Envía mensajes a través de la popular plataforma de mensajería, WhatsApp, para llegar a tus usuarios e interactuar con ellos.                                                   |
-| [Pancartas]({{site.baseurl}}/user_guide/message_building_by_channel/banners/)       | Incrusta mensajes directamente en tu aplicación o sitio web. |
+| [Banners*]({{site.baseurl}}/user_guide/message_building_by_channel/banners/)       | Incrustar mensajes directamente en tu aplicación o sitio web. |
 | [Tarjetas de contenido*]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)       | Proporcione una bandeja de entrada dentro de su aplicación o sitio web donde los usuarios puedan recibir mensajes e interactuar con ellos, o muestre los mensajes en un carrusel, como un banner, etc. |
 | [TV conectada]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Interactúe con los usuarios en plataformas de televisión conectadas.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Habilite la comunicación en tiempo real y la integración con sistemas externos mediante retrollamadas HTTP personalizadas.                                                    |
-| [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/) | Relaciónate con los usuarios de LINE, la aplicación de mensajería más popular de Japón.                                                    |
+| [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/) | Interactúa con los usuarios en LINE, la aplicación de mensajería más popular de Japón.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>\*\*Disponible como característica adicional\*.</sup>

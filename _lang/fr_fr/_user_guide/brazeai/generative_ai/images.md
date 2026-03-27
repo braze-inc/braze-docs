@@ -5,7 +5,7 @@ page_order: 10
 description: "Découvrez comment générer des images pour votre bibliothèque multimédia à l'aide de DALL-E 3, un système d'intelligence artificielle d'OpenAI et un fournisseur tiers de Braze."
 ---
 
-# Générer des images avec <sup>BrazeAITM</sup>
+# Générer des images avec BrazeAI
 
 > {% multi_lang_include brazeai/generative_ai/about_images.md %}
 

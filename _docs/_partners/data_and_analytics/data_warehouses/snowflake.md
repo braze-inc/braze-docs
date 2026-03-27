@@ -2,35 +2,41 @@
 nav_title: Snowflake
 article_title: Snowflake
 alias: /partners/snowflake/
-description: "This reference article outlines the partnership between Braze and Snowflake, a purpose-built SQL cloud data warehouse for all of your data and users."
+description: "This article outlines the partnership between Braze and Snowflake, covering both Data Sharing (Braze to Snowflake) and Cloud Data Ingestion (Snowflake to Braze)."
 page_type: partner
 search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is a purpose-built SQL cloud data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings. With Snowflake's unique and patented architecture, it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
-Personalized and relevant marketing campaigns require in-the-moment access to data. That's why Braze teamed up with Snowflake to launch data sharing. This joint offering enables marketers to unlock the potential of their customer engagement and campaign data faster than ever before.
+Braze offers two integrations with Snowflake. Together, they provide a complete, bidirectional data pipeline between your Braze and Snowflake environments.
 
-The [Braze and Snowflake integration](https://www.braze.com/perspectives/article/snowflake-partner-announcement) leverages Snowflake's data exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
+## Choosing an integration
 
-{% alert tip %}
-**Interested in having access to Snowflake-level data without the need for a Snowflake account?**<br>Check out [Snowflake Reader Accounts]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts). With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled entirely by Braze.
-{% endalert %}
+### Data Sharing (Braze to Snowflake)
 
-## What is Data Sharing?
+Snowflake [Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_sharing/) gives you secure, real-time access to Braze engagement and campaign data directly in your Snowflake instance. No data is copied or transferred between accounts—all sharing is accomplished through Snowflake's unique services layer and metadata store.
 
-Snowflake's [Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) functionality allows Braze to give you secure access to data on our Snowflake portal without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships. Data sharing can be set up through the following integration or through [Snowflake Reader Accounts]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts).
+**Use Data Sharing when you want to:**
+- Query Braze event and campaign data using Snowflake SQL
+- Create complex reports and perform attribution modeling
+- Join Braze data with other data in your Snowflake warehouse
+- Benchmark your engagement data across channels, industries, and device platforms
 
-- **Reduce time to insights**<br>Say goodbye to ETL processes that take weeks to build out. Braze and Snowflake's unique architectures make all customer engagement and campaign data immediately accessible and queryable from the instant it arrives in the data lake. No data is copied or moved, so you can deliver customer experiences based on only the most relevant, up-to-date information.
-- **Break down data silos**<br>Create a holistic view of your customers across channels and platforms. Data sharing makes joining your Braze customer engagement data with all of your other Snowflake data easier than ever—creating richer insights across a single, reliable source of truth.
-- **See how your engagement stacks up**<br>Optimize your customer engagement strategies with Braze Benchmarks. This interactive tool, powered by Braze and Snowflake, allows you to compare your brand's engagement data to benchmarks across channels, industry, and device platforms.
+For setup instructions, see [Snowflake Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_sharing/).
 
-With data sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake's unique services layer and metadata store. This is an important concept because shared data does not take up any storage in a consumer account and, therefore, does not contribute to the consumer's monthly data storage charges. The **only** charges to consumers are for the computing resources (such as virtual warehouses) used to query the shared data.
+### Cloud Data Ingestion (Snowflake to Braze)
 
-Additionally, using Snowflake's built-in roles and permissions capabilities, access to data shared from Braze can be controlled and governed using the access controls already in place for your Snowflake account and the data therein. Access can be restricted and monitored the same way as your own data.
+[Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) lets you sync data from your Snowflake instance directly into Braze. This allows you to keep user attributes, events, and purchases in Braze up to date with your source-of-truth data warehouse.
+
+**Use Cloud Data Ingestion when you want to:**
+- Sync user attributes from Snowflake to Braze user profiles
+- Send event or purchase data from Snowflake into Braze
+- Keep Braze in sync with data transformations happening in your warehouse
+- Avoid building and maintaining custom ETL pipelines from Snowflake to Braze
 
 To learn more about Snowflake's data sharing, see [Introduction to Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
 
@@ -81,7 +87,9 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 - Map raw event or user data to a CRM (like Salesforce)
 - And more
 
-[Download the raw table schemas here.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
+For a full list of available tables and columns, refer to the [SQL table reference]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/). Snowflake Data Sharing includes all tables in that reference, plus additional Snowflake-exclusive tables for snapshots, campaign and Canvas changelogs, agent console events, and message retry events.
+
+You can also [download the raw table schemas]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %}) as a text file.
 
 ### User ID schema
 
@@ -140,3 +148,4 @@ The speed, performance, and cost of any query run on top of the data are determi
 
 > For a set of example queries to reference when setting up snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/) examples.
 
+For setup instructions, see [Cloud Data Ingestion: Data warehouse integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/).

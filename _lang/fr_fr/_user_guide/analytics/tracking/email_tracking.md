@@ -13,7 +13,7 @@ description: "Cet article de référence explique comment implémenter le suivi 
 
 ## Activation du pixel ouvert ou du suivi des clics
 
-Lors de l'importation ou de la mise à jour d'un profil utilisateur via [API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields), [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) ou [Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/), vous pouvez modifier deux champs :
+Lors de l'importation ou de la mise à jour d'un profil utilisateur via [l'API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields), [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) ou [Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/), deux champs sont disponibles pour modification :
 
 - `email_open_tracking_disabled` : Accepte `true` ou `false`. Définir sur `false` pour ajouter le pixel de suivi des ouvertures à tous les futurs e-mails envoyés à cet utilisateur. Disponible uniquement pour SparkPost et SendGrid.
 - `email_click_tracking_disabled` : Accepte `true` ou `false`. Définissez ce champ sur `false` pour ajouter le suivi des clics à tous les liens contenus dans un prochain e-mail envoyé à cet utilisateur. Disponible uniquement pour SparkPost et SendGrid.

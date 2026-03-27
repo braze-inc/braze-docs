@@ -9,8 +9,8 @@ Use permission sets to bundle permissions related to specific subject areas or a
 |Name|Permissions|
 |-----------|----------------|
 |Developers|"View API Keys", "Edit API Keys", "View Internal Groups", "Edit Internal Groups", "View Message Activity Log", "View Event User Log", "View API identifiers", "View API Usage Dashboard", "View API Limits", "View API Usage Alerts", "Edit API Usage Alerts", "View SDK Debugger", "Edit SDK Debugger".|
-|Marketers|"View Campaigns", "Edit Campaigns", "Archive Campaigns", "View Canvases", "Edit Canvases", "Archive Canvases", "View Frequency Capping Rules", "Edit Frequency Capping Rules", "View Message Prioritization", "Edit Message Prioritization", "View Content Blocks", "View Feature Flags", "Edit Feature Flags", "Archive Feature Flags", "View Segments", "Edit Segments", "Edit Global Control Group", "View IAM Templates", "Edit IAM Templates", "Archive IAM Templates", "View Email Templates", "Edit Email Templates", "Archive Email Templates", "View Webhook Templates", "Edit Webhook Templates", "Archive Webhook Templates", "View Link Templates", "Edit Link Templates", "View Media Library Assets", "View Locations", "Edit Locations", "Archive Locations", "View Promotion Codes", "Edit Promotion Codes", "Export Promotion Codes", "View Preference Centers", "Edit Preference Centers", "Edit Reports", "View Banner Templates", "View Multi Language Settings", "Use Operator", "View Decisioning Studio Agents", "View Decisioning Studio Conversion Event".|
-|User Management|"View Dashboard Users", "Edit Dashboard Users", "View Teams", "Edit Teams", "Archive Teams".|
+|Marketers|"View Campaigns", "Edit Campaigns", "Archive Campaigns", "View Canvases", "Edit Canvases", "Archive Canvases", "View Frequency Capping Rules", "Edit Frequency Capping Rules", "View Message Prioritization", "Edit Message Prioritization", "View Content Blocks", "View Feature Flags", "Edit Feature Flags", "Archive Feature Flags", "View Segments", "Edit Segments", "Edit Global Control Group", "View IAM Templates", "Edit IAM Templates", "Archive IAM Templates", "View Email Templates", "Edit Email Templates", "Archive Email Templates", "View Webhook Templates", "Edit Webhook Templates", "Archive Webhook Templates", "View Email Link Templates", "Edit Email Link Templates", "View Media Library Assets", "View Locations", "Edit Locations", "Archive Locations", "View Promotion Codes", "Edit Promotion Codes", "Export Promotion Codes", "View Preference Centers", "Edit Preference Centers", "Edit Dashboard Reports", "View Banner Templates", "View Localization Settings", "Use Operator", "View Decisioning Studio Agents", "View Decisioning Studio Conversion Event".|
+|User Management|"Edit Dashboard Users", "View Teams", "Edit Teams", "Archive Teams".|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -25,7 +25,7 @@ Roles allow for more structure by bundling together your individual custom permi
 ----------- | ----------- | ---------
 | Marketer - Fashion Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand {:/} | "View Campaigns", "Edit Campaigns", "Archive Campaigns", "View Canvases", "Edit Canvases", "Archive Canvases", "View Content Blocks", "Edit Content Blocks", "Archive Content Blocks", "Launch Content Blocks", "View Feature Flags", "Edit Feature Flags", "Archive Feature Flags", "View Segments", "Edit Segments", "View Banner Templates", "Edit Banner Templates", "View Email Templates", "Edit Email Templates", "View Media Library Assets", "Edit Media Library Assets", "Delete Media Library Assets", "View Locations", "Edit Locations", "Archive Locations", "View Promotion Codes", "Edit Promotion Codes", "Export Promotion Codes", "View Preference Centers", "Edit Preference Centers". |
 | Marketer - Skincare Brands | {::nomarkdown}[DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} |"View Campaigns", "Edit Campaigns", "Archive Campaigns", "View Canvases", "Edit Canvases", "Archive Canvases", "View Content Blocks", "Edit Content Blocks", "Archive Content Blocks", "Launch Content Blocks", "View Feature Flags", "Edit Feature Flags", "Archive Feature Flags", "View Segments", "Edit Segments", "View Banner Templates", "Edit Banner Templates", "View Email Templates", "Edit Email Templates", "View Media Library Assets", "Edit Media Library Assets", "Delete Media Library Assets", "View Locations", "Edit Locations", "Archive Locations", "View Promotion Codes", "Edit Promotion Codes", "Export Promotion Codes", "View Preference Centers", "Edit Preference Centers".|
-| User Management - All Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | "View Dashboard Users", "Edit Dashboard Users", "View Teams", "Edit Teams", "Archive Teams"|
+| User Management - All Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | "Edit Dashboard Users", "View Teams", "Edit Teams", "Archive Teams"|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -46,9 +46,9 @@ Limited users have specific permissions that allow them to manage certain aspect
 
 | Scope | Description |
 | --- | --- |
-| Permissions | Limited users can edit the permissions of other limited users if they have the "View Dashboard Users" and "Edit Dashboard Users" permissions. They can also create new limited users and modify their permission sets. However, they can't create or manage company admin accounts. |
-| Role limitations | If a limited user has all permissions except "Workspace Admin", they will still have access to all other permissions typically granted to an workspace admin. |
-| Visibility of permissions | If a limited user has "View Dashboard Users" and "Edit Dashboard Users" permissions for one workspace (such as Dev) but not for another (such as Prod), they won't see the Prod workspace permissions in their dashboard users detail page. |
+| Permissions | Limited users can edit the permissions of other limited users if they have the "Edit Dashboard Users" permission. They can also create new limited users and modify their permission sets. However, they can't create or manage company admin accounts. |
+| Role limitations | If a limited user has all permissions except "Workspace Admin", they will still have access to all other permissions typically granted to a workspace admin. |
+| Visibility of permissions | If a limited user has the "Edit Dashboard Users" permission for one workspace (such as Dev) but not for another (such as Prod), they won't see the Prod workspace permissions in their dashboard users detail page. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Comparing limited users
@@ -158,34 +158,32 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View Billing Details                            | View billing details |
 | View Custom Attributes Marked as PII            | View custom attributes marked as PII |
 | View PII                                        | View PII |
-| View User Profiles PII Compliant                | Access user search and view user profiles with redacted PII |
+| View User Profiles (PII Redacted)               | Access user search and view user profiles with redacted PII |
 | View Usage Data                                 | View usage data |
-| Merge Duplicate Users                           | Combine duplicate users into one user. Duplicates are removed after merging. |
-| Preview Duplicate Users                         | Preview which user profiles are duplicates |
+| Merge Duplicate Users                           | Preview and combine duplicate users into one user. Duplicates are removed after merging. |
 | View Canvas Templates                           | View Canvas templates |
 | Archive Canvas Templates                        | Move Canvas templates to archive |
 | Launch Content Blocks                           | Launch Content Blocks |
 | Launch Preference Centers                       | Launch preference centers |
-| Export User Data                                | Download users from the dashboard |
 | Edit Currents Integrations                      | Create, update, and delete Currents integrations |
 | View Currents Integration                       | View Currents integrations |
 | View Campaigns                                  | View campaigns |
 | Edit Campaigns                                  | Create and update campaigns |
 | Archive Campaigns                               | Move campaigns to archive |
-| Send Campaigns                                  | Start, stop, pause, or resume campaigns | 
-| Send Canvases                         		  | Start, stop, pause, or resume Canvases |
+| Launch Campaigns                                | Start, stop, pause, or resume existing campaigns |
 | View Frequency Capping Rules                    | View Frequency Capping Rules |
 | Edit Frequency Capping Rules                    | Create and update Frequency Capping Rules |
 | View Canvases                                   | View Canvases |
 | Edit Canvases                                   | Create and update Canvases |
 | Archive Canvases                                | Move Canvases to archive |
+| Launch Canvases                                 | Start, stop, pause, or resume existing Canvases |
 | View Content Blocks                             | View Content Blocks |
 | Edit Content Blocks                             | Create and update Content Blocks |
 | Archive Content Blocks                          | Move Content Blocks to archive |
 | View Feature Flags                              | View feature flags |
 | Edit Feature Flags                              | Create and update feature flags |
 | Archive Feature Flags                           | Move feature flags to archive |
-|  View WhatsApp Message Templates                | Allows users to view [WhatsApp message templates]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message). |
+| View WhatsApp Message Templates                 | Allows users to view [WhatsApp message templates]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message). |
 | Edit WhatsApp Message Templates | Allows users to create WhatsApp message templates in the template builder. This feature is currently in early access. |
 | View Segments                                   | View segments . Users must have the “View Segments” permission to have the “Edit Segments” or “Archive Segments” permission. |
 | Archive Segments                                | Archive and un-archive segments. Users with the “Archive Segments” permission must also be granted the “View Segments” permission. |
@@ -198,8 +196,8 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View Email Templates                            | View email templates |
 | Edit Email Templates                            | Create and update email templates |
 | Archive Email Templates                         | Move email templates to archive |
-| View Link Templates   	                      | View link templates |
-| Edit Link Templates	                          | Create and update link templates |
+| View Email Link Templates   	                  | View link templates without making changes |
+| Edit Email Link Templates	                      | Create and update link templates |
 | Publish Landing Pages                           | Make a draft landing page active |
 | Edit Landing Page Drafts                        | Create and save landing page drafts |
 | View Landing Pages			                  | View landing pages |
@@ -222,6 +220,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Edit API Keys                                   | Create and update API keys |
 | View Internal Groups                            | View internal groups |
 | Edit Internal Groups                            | Create and update internal groups |
+| Delete Internal Groups                          | Delete internal groups |
 | View Message Activity Log                       | View message activity logs |
 | View Event User Log                             | View event user logs |
 | View API identifiers                            | View API identifiers and other identifiers |
@@ -237,8 +236,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Edit Catalogs                                   | Create and update catalogs and selections |
 | Export Catalogs                                 | Download catalogs from the dashboard |
 | Delete Catalogs                                 | Permanently delete catalogs |
-| View Dashboard Users                            | View Company Users |
-| Edit Dashboard Users                            | Create and update company users 
+| Edit Dashboard Users                            | View, create, and edit company users |
 | View Email Settings                             | View Email Preferences |
 | Edit Email Settings                             | Enable and update Email Preferences | 
 | Edit Identifier Field-Level Encryption            | Enable and update Field-Level Encryption settings |
@@ -259,9 +257,9 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Edit Purchase Property Segmentation             | Enable and disable segmentation for purchase event properties |
 | Edit Technology Partners                        | Create and update technology partners |
 | Edit Cloud Data Ingestion                       | Create, update, and delete sources and syncs |
-| View Multi Language Settings                    | View multi-language settings |
-| Create Multi Language Locale Settings           | Create and update multi-language locale settings |
-| Delete Multi Language Locale Settings           | Permanently delete multi-language locale settings |
+| View Localization Settings                      | View Multi Language locale settings page |
+| Edit Localization Settings                      | Create Multi Language locales |
+| Delete Localization Settings                    | Delete Multi Language locale |
 | Edit Subscriptions                              | Create and update subscription groups |
 | View Tags                                       | View tags |
 | Edit Tags                                       | Create and update tags |
@@ -271,8 +269,6 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Archive Teams                                   | Move teams to archive |
 | View Data Transformation                        | View data transformations |
 | Edit Data Transformation                        | Create and update data transformations |
-| Launch Campaigns                                | Start, stop, pause, or resume existing campaigns |
-| Launch Canvases                                 | Start, stop, pause, or resume existing Canvases |
 | Edit Canvas Templates                           | Create and update Canvas templates |
 | Approve Campaigns                               | Approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access. |
 | Approve Canvases                                | Approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access. |
@@ -281,13 +277,12 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Archive Placements                              | Move Banner placements to archive |
 | View Push Settings                              | View Push settings |
 | Edit Push Settings                              | Create and update Push settings |
-| Edit Reports                                    | Create and update reports |
-| View Import Users                               | View CSV user imports |
+| Edit Dashboard Reports                          | Create and update reports |
+| View Import Users                               | View CSV user imports without making changes |
 | Import Users                                    | Upload users to the dashboard |
+| Export User Data                                | Download users from the dashboard |
 | Edit User Data                                  | Create and update user data |
 | View Merge Users                                | View a list of user merge records |
-| View User Deletion Records	            	  | View user deletion records |
-| Delete Users From Dashboard	                  | Permanently delete users from the dashboard individually or in bulk. |      
 | View Custom AI Agents                           | Allows users to view custom AI agents. |
 | Edit Custom AI Agents                           | Allows users to create and update custom AI agents. |
 | Archive Custom AI Agents                        | Allows users to archive custom AI agents. |

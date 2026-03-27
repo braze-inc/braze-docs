@@ -32,10 +32,13 @@ When a phone number is updated on a user profile, the new phone number inherits 
 
 For example, if User A has a phone number that is subscribed to several subscription groups and that phone number then gets added to User B, User B will be subscribed to the same subscription groups. To prevent a user from inheriting the existing subscriptions, you can reset the subscription groups of the old number through the Braze REST API whenever a user changes their number. If multiple users share this phone number, they will all be unsubscribed.
 
+Additionally, the subscription state of a former user's phone number can be inherited—even if that phone number is currently not associated with a user profile. For example, if a user has phone number `123-456-7890`, subscribes to a subscription group, and then has their phone number deleted, the subscription state associated with `123-456-7890` persists and is applied when the number is later assigned again.
+
 To set a user's subscription group state, use one of the following methods:
 
 - **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) by using the Braze REST API.
 - **SDK Integration** Users can be added to an email or SMS and RCS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)), or [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup).
+- **Phone Number Capture IAM Form:** User phone numbers can be collected through the phone number capture template in the in-app message drag-and-drop editor.
 - **Automatically handled upon user opt-in/opt-out:** By users texting a default opt-in or opt-out [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), Braze automatically sets and updates users' subscription state.
 - **User import**: Users can be added into email or SMS and RCS subscription groups through **Import Users**. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
 
@@ -137,3 +140,29 @@ We highly recommend [testing your Canvas]({{site.baseurl}}/user_guide/engagement
 After you have successfully tested your Canvas, go ahead and launch it for your subset of users!
 
 To confirm that your users were successfully migrated, we recommend checking a few individual user profiles that were updated. In the **Engagement** tab, look for **Contact Settings** and scroll to view the subscription groups the user is subscribed to. The RCS subscription group toggle should now be on.
+
+## Best practices
+
+### Designate separate subscription groups
+
+- **Messaging type:** Create distinct subscription groups for each type of messaging, such as Transactional and Marketing.
+- **Workspace:** Create distinct subscription groups for each workspace to maintain clarity and organization.
+
+Consider the following example with four subscription groups across two workspaces:
+
+- **Production workspace**
+  - Marketing - PROD for SMS
+  - Transactional - PROD for SMS
+- **Development Workspace (for testing)**
+  - Marketing - DEV for SMS
+  - Transactional - DEV for SMS
+
+### Use clear naming conventions
+
+Choose descriptive and clear subscription group names so that the correct group is selected when creating SMS campaigns.
+
+### Separate groups by country
+
+SMS regulations vary by country. We suggest separating SMS subscription groups by country. This helps you meet compliance standards in all regions where you send messages.
+
+For example, in Brazil, sending marketing messages outside the hours of 9 am and 9 pm local time is prohibited, and the country spans three time zones. To comply with these regulations, you might set up separate groups for sending messages to Brazil and the United States. This prevents users in Brazil from receiving marketing messages during prohibited hours.

@@ -16,6 +16,7 @@ Before you start, you'll need the following:
 
 - [Permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to access the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
 - Permission to create and edit custom AI Agents.
+- An [AI model provider]({{site.baseurl}}/partners/ai_model_providers) integrated with Braze.
 - An idea of what you want the agent to accomplish. Braze Agents can support the following actions:  
    - **Messaging:** Generate subject lines, headlines, in-product copy, or other content.  
    - **Decisioning:** Route users in Canvas based on behavior, preferences, or custom attributes.  
@@ -51,9 +52,10 @@ Next, set up the details for your agent:
 1. Enter a name and description to help your team understand its purpose.
 2. (optional) Add tags to filter your agent.
 3. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) for your agent to use.
-4. Select the model's thinking level. You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
+4. If you're not using the **Braze Auto** model, select the model's [thinking level]({{site.baseurl}}/user_guide/brazeai/agents/reference/#thinking-levels). You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
+5. Set a daily execution limit. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
 
-![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
+![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model, and setting a daily execution limit.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
 
 ### Step 3: Write the instructions {#agent-instructions}
 
@@ -65,9 +67,9 @@ Refer to the [Writing instructions]({{site.baseurl}}/user_guide/brazeai/agents/r
 For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters the step.
 {% endalert %}
 
-#### Step 3.1: Add context
+#### Step 3.1: Add resources
 
-Select **Add context** to choose what your agent can reference. This includes:
+Select **Add resources** to choose what your agent can reference. This includes:
 
 - [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
 - [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to five segments.
@@ -78,76 +80,15 @@ Select **Add context** to choose what your agent can reference. This includes:
 
 In the **Optional settings**, you can adjust the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
 
-You can also set the daily execution limit for your agent. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
-
 ### Step 4: Select the output {#select-output}
 
-In the **Output** section, you can organize and define the agent's output by basic schemas or advanced schemas.
+In the **Output** section, you can organize and define the agent's [output]({{site.baseurl}}/user_guide/brazeai/agents/reference/#outputs) by basic schemas or advanced schemas.
 
 For best results, make sure that what you specify in the **Output** section matches any agent instructions you entered in [Step 3](#agent-instructions). For example, if you mentioned in the agent instructions that you want an object with two strings, make sure you specify an object with two strings in the **Output** section. If your agent instructions don't align with your specified output, the agent may get confused, time out, or generate undesired outputs.
 
-#### Basic schemas
-
-Basic schemas are a simple output that an agent returns. This can be a string, a number, a boolean, an array of strings, or array of numbers.
-
-For example, if you want to collect user sentiment scores from a simple feedback survey to determine how satisfied your customers are after receiving a product, you can select **Number** as a basic schema to structure the output format.
-
-{% alert important %}
-Arrays are only available for Canvas agents, not catalog agents.
+{% alert tip %}
+When you use an [advanced output schema]({{site.baseurl}}/user_guide/brazeai/agents/reference/#advanced-schemas), add a string field named `explanation` if you want the agent to return its rationale in addition to its other outputs. Tell the agent in your [instructions](#agent-instructions) to populate `explanation` when that helps you review or debug responses.
 {% endalert %}
-
-![Agent Console with number selected as a basic schema.]({% image_buster /assets/img/ai_agent/basic_schema.png %}){: style="max-width:85%;"}
-
-#### Advanced schemas
-
-Advanced schema options include manually structuring fields or using JSON.
-
-- **Fields:** A no-code way to enforce an agent output that you can use consistently.
-- **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema. Only available for Canvas agents, not catalog agents.
-
-We recommend using advanced schemas when you want the agent to return a data structure with multiple values defined in a structured manner, rather than a single-value output. This allows the output to be better formatted as a consistent context variable.
-
-For example, you may use an output format within an agent that is intended to create a sample travel itinerary for a user based on a form they submitted. The output format allows you to define that every agent response should come back with values for `tripStartDate`, `tripEndDate`, and `destination` values. Each of these values can be extracted from context variables and placed in a Message step for personalization using Liquid.
-
-{% tabs %}
-{% tab Fields %}
-
-If you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor, you can set up the following fields to structure the output format:
-
-| Field name | Value |
-| --- | --- |
-| **likelihood_score** | Number |
-| **explanation** | String |
-| **confidence_score** | Number |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]({% image_buster /assets/img/ai_agent/output_format_fields.png %}){: style="max-width:85%;"}
-
-{% endtab %}
-{% tab JSON schema %}
-
-If you want to collect user feedback for their most recent dining experience at your restaurant chain, you can select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
-
-```json
-{
-  "type": "object",
-  "properties": {
-    "sentiment": {
-      "type": "string"
-    },
-    "reasoning": {
-      "type": "string"
-    }
-  },
-  "required": [
-    "sentiment",
-    "reasoning"
-  ]
-}
-```
-
-{% endtab %}
-{% endtabs %}
 
 ### Step 5: Test and create the agent
 
@@ -155,7 +96,11 @@ The **Preview** pane is an instance of the agent that shows up as a side-by-side
 
 1. In the **Test your agent** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle.
 2. Preview the agent's response for a random user, existing user, or custom user.
-3. Select **Simulate response**. The agent will execute based on your configuration and display its response. Test runs count toward your daily execution limit.
+3. Select **Simulate response**. The agent will execute based on your configuration and display its response.
+
+{% alert note %}
+Test runs count toward your daily execution limit.
+{% endalert %}
 
 ![Agent Console showing the Preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]({% image_buster /assets/img/ai_agent/custom_agent_test.png %})
 

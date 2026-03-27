@@ -175,7 +175,7 @@
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>1次コンバージョン（A）</i>または<i>1次コンバージョンイベントとは</i>、Brazeキャンペーンからのメッセージを受信または閲覧した後、定義されたイベントを実行したユニークユーザーの数である。このイベントはキャンペーンの設定時に選択され、レポートと最適化のための主要な成功指標として使用される。
+<i>1次コンバージョン（A）</i>または<i>1次コンバージョンイベント</i>とは、Brazeキャンペーンからのメッセージを受信または閲覧した後、定義されたコンバージョンイベントを実行したユニークユーザーの数である。このイベントはキャンペーン設定時に選択するものであり、レポート作成や最適化の主要な成功指標として使用される。
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -251,12 +251,12 @@
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>ユニーククリック数とは</i>、メッセージ内のリンクを一度でもクリックした受信者の数であり、以下の方法で測定される。 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>ユニーククリックとは</i>、メッセージ内のリンクを少なくとも一度クリックした受信者の固有数を指し、によって測定される<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>。
 {% endif %}
 
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 {% if include.metric == "Unique Clicks No Dispatch ID" %}
-<i>ユニーククリック数とは</i>、メッセージ内のリンクを一度でもクリックした受信者の数である。
+<i>ユニーククリックとは、</i>メッセージ内のリンクを少なくとも一度クリックした受信者の固有の数を指す。
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

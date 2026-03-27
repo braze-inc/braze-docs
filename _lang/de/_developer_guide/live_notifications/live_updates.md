@@ -1,5 +1,5 @@
 ---
-nav_title: Live Updates für Android
+nav_title: Live-Updates für Android
 article_title: Live Updates für das Android Braze SDK
 page_order: 0.1
 description: "Erfahren Sie, wie Sie Live Updates für das Android Braze SDK einrichten."
@@ -21,7 +21,7 @@ Sie können über die [`IBrazeNotificationFactory`](https://braze-inc.github.io/
 
 In diesem Abschnitt werden Sie Partner von Superb Owl, dem Moderator einer neuen Spielshow, in der Teams zur Rettung von Wildtieren gegeneinander antreten, um zu sehen, wer die meisten Eulen retten kann. Sie möchten Live Updates in ihrer Android App nutzen, um den Status eines laufenden Spiels anzuzeigen und dynamische Updates der Benachrichtigung in Echtzeit vorzunehmen.
 
-![Ein Beispiel für ein Live Update von Android]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
+![Ein Beispiel für ein Live-Update von Android]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 

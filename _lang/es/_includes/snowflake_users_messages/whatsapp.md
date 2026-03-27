@@ -231,7 +231,7 @@ erDiagram
 ```
 
 - `PK` = clave primaria
-- `FK` = clave ajena
+- `FK` = clave foránea
 
 ## Tablas de relaciones
 
@@ -266,7 +266,7 @@ erDiagram
         "TIME": "UNIX timestamp at which the event happened",
         "TO_PHONE_NUMBER": "[PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
         "TIMEZONE": "Time zone of the user",
-        "ABORT_TYPE": "Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']",
+        "ABORT_TYPE": "Type of abort. Refer to the abort types reference for a full list of values.",
         "ABORT_LOG": "[PII] Log message describing abort details (up to 128 chars)",
         "SF_CREATED_AT": "when this event was picked up by the Snowpipe"
     }

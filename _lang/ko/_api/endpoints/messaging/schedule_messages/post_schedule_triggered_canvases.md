@@ -10,13 +10,15 @@ description: "이 문서에서는 스케줄 API로 트리거되는 캔버스 브
 ---
 {% api %}
 # API 트리거 캔버스 예약하기
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
 > 이 엔드포인트를 사용하면 API 트리거 배달을 통해 Canvas 메시지를 예약하여 어떤 작업을 트리거하여 메시지를 전송할지 결정할 수 있습니다.
 
-Canvas의 첫 번째 단계에서 전송되는 메시지에 템플릿이 지정된 `canvas_entry_properties` 을 전달할 수 있습니다.
+Canvas의 첫 번째 단계에서 전송되는 메시지에 템플릿이 지정된 `context` 을 전달할 수 있습니다.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 이 엔드포인트로 메시지를 보내려면 캔버스를 만들 때 생성한 [캔버스 ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier)가 있어야 합니다.
 
@@ -49,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
+  "context": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
@@ -66,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `recipients` | 선택 사항 | 수신자 객체 배열 | 수신자 객체를 참조하십시오. |
 | `audience` | 선택 사항 | 연결된 오디언스 객체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)을 참조하십시오. |
 |`broadcast`| 선택 사항 | 부울 | 전체 세그먼트에 캠페인 또는 캔버스가 타겟팅하는 메시지를 보낼 때 `broadcast`을(를) true로 설정해야 합니다. 이 매개변수는 기본적으로 false로 설정됩니다 (2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 `broadcast: true`을 설정할 때 주의하십시오. 이 플래그를 의도치 않게 설정하면 메시지를 예상보다 더 많은 오디언스에게 보낼 수 있습니다. |
-| `canvas_entry_properties` | 선택 사항 | 객체 | 이 전송의 모든 사용자에 대한 개인화 키-값 쌍입니다. [캔버스 항목 속성 개체를]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object) 참조하십시오. |
+| `context` | 선택 사항 | 객체 | 이 전송의 모든 사용자에 대한 개인화 키-값 쌍입니다. [캔버스 컨텍스트 객체를]({{site.baseurl}}/api/objects_filters/context_object) 참조하십시오. |
 | `schedule` | 필수 | 스케줄 객체 | [일정 개체를]({{site.baseurl}}/api/objects_filters/schedule_object/) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -81,7 +83,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     {
       "user_alias": "example_alias",
       "external_user_id": "external_user_identifier",
-      "canvas_entry_properties": {}
+      "context": {}
     }
   ],
   "audience": {
@@ -132,7 +134,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     ]
   },
   "broadcast": false,
-  "canvas_entry_properties": {},
+  "context": {},
   "schedule": {
     "time": "",
     "in_local_time": false,

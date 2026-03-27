@@ -20,6 +20,12 @@ When a push token is reassigned, the change is reflected in the user profile's *
 
 ![The "Push Changelog" in the "Contact Settings" section.]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
+### When I send a test push, does it go to all of my devices?
+
+Yes. The test push is sent to every push-enabled device associated with the selected user profile. If you have multiple phones or tablets logged in with the same user, each device with a valid push token receives the notification.
+
+To send the test push to only one device, you can remove push tokens for the other devices from the user profile before testing. Alternatively, if you're sending with the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/), set `send_to_most_recent_device_only` to `true` in the `apple_push` or `android_push` object so that only the most recently active device receives the push.
+
 ### What does “Error sending push because the payload was invalid” mean?
 
 This message indicates that APNs rejected the push request due to an invalid payload (for example, an empty payload or a payload that’s too large).
@@ -42,7 +48,15 @@ If you want the push token reassigned to the original user:
 
 ### Why does "Open Web URL Inside App" always open the app when I'm testing a draft campaign?
 
-When a campaign is still in **Draft** status and you send a test push, tapping the notification will always open the app first — regardless of whether the **Open Web URL Inside App** option is checked or unchecked. This is expected behavior for test sends from draft campaigns.
+When a campaign is still in **Draft** status and you send a test push, tapping the notification always opens the app first, regardless of whether the **Open Web URL Inside App** option is checked or unchecked. This is expected behavior for test sends from draft campaigns. When the campaign is **Live**, the on-click behavior works as configured.
 
-Once the campaign is **Live**, the on-click behavior will work as configured. If you selected **Open Web URL** without the **Inside App** option, the link will open directly in the device's default browser. If you selected **Open Web URL Inside App**, the link will open in an in-app web view.
+If you selected **Open Web URL** without the **Inside App** option, the link opens directly in the device's default browser. If you selected **Open Web URL Inside App**, the link opens in an in-app web view.
 
+### What is the difference between "Send to Production" and "Send to Development" for iOS push certificates?
+
+When adding an Apple Push Certificate in Braze, the **Send to Production** and **Send to Development** options determine which APNs (Apple Push Notification service) gateway Braze uses to deliver push notifications:
+
+- **Send to Development:** Select this if the app was built in development mode in Xcode and signed with a development provisioning profile. Push notifications are routed through Apple's development (sandbox) gateway.
+- **Send to Production:** Select this if the app is distributed via Apple's TestFlight, App Store, or enterprise distribution. Push notifications are routed through Apple's production gateway.
+
+If the wrong option is selected, push notifications silently fail because the push token type does not match the gateway. Typically, apps distributed through TestFlight or the App Store should use **Send to Production**.
