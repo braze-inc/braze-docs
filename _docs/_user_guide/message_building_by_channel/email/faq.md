@@ -15,7 +15,7 @@ channel: email
 
 If multiple users with matching emails are all in a segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, ensuring that the email doesn't hit the same email address multiple times.
 
-There are three scenarios that can make it seem like a user received an email twice:
+The following scenarios that can make it seem like a user received an email twice:
 
 - **An error occurred during campaign or Canvas creation:** The user may not receive the literal same send twice, but may receive two separate emails with the same subject line. When a campaign or Canvas is duplicated, check email configuration details such as images or subject lines. You can also refer to changelogs to see if the campaign or Canvas was modified after launch—a duplicate may share the same subject line as the original when the user received it.
 - **Multiple user profiles have email forwarding:** If a user has multiple accounts in a given app but one account forwards mail, the user receives the campaign once per inbox; mail can appear twice in the inbox where messages are forwarded. Only some providers indicate when an email was forwarded from another account.

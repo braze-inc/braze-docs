@@ -401,9 +401,9 @@ Here are some key email-specific metrics that you won't see in other channels. T
     </tbody>
 </table>
 
-#### Deliveries and bounces
+##### Deliveries and bounces
 
-The dashboard highlights _Hard Bounces_; some _Bounces_ may be soft bounces and won't match that count alone. You can approximate soft bounces with:
+The dashboard highlights _Hard Bounces_. Some _Bounces_ may be soft bounces and won't match that count alone. You can approximate soft bounces with this formula:
 
 _Sends − (Deliveries + Hard Bounces) ≈ Soft Bounces_
 
@@ -411,7 +411,7 @@ _Deliveries_ can rise during the first 72 hours as retries succeed, while _Sends
 
 ##### Clicks without an open event
 
-A click can be logged without an open when the open pixel never loads—for example, the message is clipped in Gmail, or the user disabled images (the open pixel is usually at the footer). Some clients proxy images (for example Apple Mail), so the open may log when the server first fetches the pixel, not when the user reads the mail. Corporate domains often block images by default.
+A click can be logged without an open when the open pixel never loads. For example, the message is clipped in Gmail, or the user has disabled images (the open pixel is usually at the footer). Some clients proxy images (such as Apple Mail), so the open may log when the server first fetches the pixel, not when the user reads the mail. Corporate domains often block images by default.
 
 A click and open can also land on different days: a user might click on May 16 with images off (no open), then open in webmail on May 17 (open logged then).
 
