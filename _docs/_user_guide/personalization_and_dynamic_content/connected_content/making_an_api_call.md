@@ -268,3 +268,7 @@ Caching can help reduce duplicate Connected Content calls but isn't guaranteed t
 {% multi_lang_include connected_content.md section='default behavior' %}
 
 {% multi_lang_include connected_content.md section='http post' %}
+
+### If I use the same Connected Content call in multiple places, what will happen?
+
+Braze makes a separate call for each Connected Content call, even if they are identical calls.
