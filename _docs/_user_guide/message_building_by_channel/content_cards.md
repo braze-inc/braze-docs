@@ -60,7 +60,7 @@ Now let’s get a little technical. Behind the scenes, there are three main part
 - **View:** What the card looks like
 - **Controller:** How the user interacts with the card
 
-For a default implementation, you add the card content—the model—either from the dashboard or through APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen.
+For a default implementation, you add the card content—the model—either from the dashboard or through APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen. For more details, see [Things to know]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#things-to-know) about Content Cards.
 
 {% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
@@ -170,10 +170,6 @@ Carousels display multiple pieces of content in a single space that your custome
 When a user is eligible for a card, it will appear in a carousel on whichever page of your app the carousel is added to. Users can swipe horizontally to view additional featured cards.
 
 Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, image only, and captioned image cards aren't supported with this implementation.
-
-## Content Card expiration longer than 30 days
-
-By default, Content Cards can have a custom expiration time of up to 30 days. If you need Content Cards to persist longer than 30 days, a workaround is available. For the current workaround and steps, contact your Braze account manager or Braze Support, or refer to the Braze Knowledge Base.
 
 ## Integrating Content Cards
 
