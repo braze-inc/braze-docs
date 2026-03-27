@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Fullstory
 
-Fullstory’s behavioral data platform helps technology leaders make better, more informed decisions. By injecting digital behavioral data into their analytics stack, Fullstory's patented technology unlocks the power of quality behavioral data at scale–transforming every digital visit into actionable insights. 
+> [Fullstory’s](https://www.fullstory.com/) behavioral data platform helps technology leaders make better, more informed decisions. By injecting digital behavioral data into their analytics stack, Fullstory's patented technology unlocks the power of quality behavioral data at scale–transforming every digital visit into actionable insights. 
 
 *This integration is maintained by Fullstory*
 
