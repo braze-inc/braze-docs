@@ -47,7 +47,7 @@ In your site's code, push an event to the data layer wherever you want to trigge
 Add Braze code snippets in your GTM container as follows:
 
 - **Initialization:** Create a tag with tag type **Custom HTML**, paste the Braze SDK initialization script in the HTML field, and set the trigger to fire on the appropriate page view (for example, **All Pages** or a specific page path).
-- **Custom events and user attributes:** Create a **Custom HTML** tag, paste the snippet that calls `window.braze.logCustomEvent()` or `getUser().setCustomUserAttribute()` in the HTML field, and attach the trigger you created for the relevant data layer event or custom event.
+- **Custom events and user attributes:** Create a **Custom HTML** tag, paste the snippet that calls `window.braze.logCustomEvent()` or `window.braze.getUser().setCustomUserAttribute()` in the HTML field, and attach the trigger you created for the relevant data layer event or custom event.
 
 #### Testing the integration
 
