@@ -32,6 +32,15 @@ To view your eCommerce revenue dashboard, go to **Analytics** > **Dashboard Buil
 
 The **eCommerce Revenue - Last Touch Attribution** dashboard uses last-touch attribution. This means revenue is attributed to the most recent Braze campaign or Canvas a user engaged with prior to placing an order.
 
+The following message interactions qualify as touch events for attribution:
+
+- Email click
+- Push open
+- Content Card click
+- In-app message click
+- SMS short link click
+- WhatsApp short link click
+
 {% alert important %}
 Message interactions must have occurred within the selected conversion window. Orders without an eligible message interaction within the conversion window are not attributed.
 {% endalert %}
