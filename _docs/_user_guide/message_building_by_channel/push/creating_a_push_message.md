@@ -249,7 +249,7 @@ Next, check out [Push reporting]({{site.baseurl}}/user_guide/message_building_by
 
 #### On-click behavior
 
-If the on-click behavior is set to the default (**Open Web URL Inside App** is unselected), and selecting a push notification with a web URL opens in the app instead of in a web browser, check the following integration guides to determine push notification handling:
+If you're using the default on-click behavior for your SDK version and selecting a push notification with a web URL opens in the app instead of in a web browser, check the following integration guides to determine push notification handling:
 
 - [Swift]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#swift_step-2-enable-push-capabilities)
 - [Android]({{site.baseurl}}/developer_guide/push_notifications#android_step-1-register-braze-firebase-messaging-service)
