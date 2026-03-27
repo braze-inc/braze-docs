@@ -272,7 +272,7 @@ After creating your webhook, you can do a test send to check the webhook respons
 
 There are a few situations where test messages don't behave the same way as campaigns or Canvases sent to real users. In these instances, to validate this behavior, you should launch the campaign or Canvas to a limited set of test users.
 
-- Viewing the Braze preference center from Test Messages will cause the submit button to be grayed out.
+- Viewing the Braze preference center from test messages will cause the **Save Preferences** button to be grayed out.
 - For testing in-app messages and Content Cards, the target user must have a push token for the target device.
 - For testing unsubscribe links in emails, make sure your test user's email address is in the respective workspace.
 - The list-unsubscribe header is not included in emails sent by the test message functionality.
