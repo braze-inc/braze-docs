@@ -1,12 +1,12 @@
 ## Über GIFs
 
-Braze bietet die Möglichkeit, eine angepasste Bibliothek zu verwenden, um animierte GIFs anzuzeigen. Obwohl das folgende Beispiel [Glide](https://bumptech.github.io/glide/) verwendet, ist jede Bildbibliothek, die GIFs unterstützt, kompatibel.
+Braze bietet die Möglichkeit, eine angepasste Bildbibliothek zu verwenden, um animierte GIFs anzuzeigen. Obwohl das folgende Beispiel [Glide](https://bumptech.github.io/glide/) verwendet, ist jede Bildbibliothek kompatibel, die GIFs unterstützt.
 
-## Eigene Bilderbibliotheken einbinden
+## Integration einer angepassten Bildbibliothek
 
-### Schritt 1: Erstellen des Image Loader Delegaten
+### 1. Schritt: Erstellen des Image-Loader-Delegaten
 
-Der Image Loader-Delegat muss die folgenden Methoden implementieren:
+Der Image-Loader-Delegat muss die folgenden Methoden implementieren:
 
 * [`getInAppMessageBitmapFromUrl()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-in-app-message-bitmap-from-url.html)
 * [`getPushBitmapFromUrl()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-push-bitmap-from-url.html)
@@ -20,6 +20,8 @@ Das folgende Integrationsbeispiel stammt aus der [Glide-Integrationsbeispiel-App
 {% tab JAVA %}
 
 ```java
+import com.braze.support.BrazeLogger;
+
 public class GlideBrazeImageLoader implements IBrazeImageLoader {
   private static final String TAG = GlideBrazeImageLoader.class.getName();
 
@@ -27,12 +29,12 @@ public class GlideBrazeImageLoader implements IBrazeImageLoader {
 
   @Override
   public void renderUrlIntoCardView(Context context, Card card, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
-    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+    renderUrlIntoView(context, imageUrl, imageView);
   }
 
   @Override
   public void renderUrlIntoInAppMessageView(Context context, IInAppMessage inAppMessage, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
-    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+    renderUrlIntoView(context, imageUrl, imageView);
   }
 
   @Override
@@ -45,11 +47,17 @@ public class GlideBrazeImageLoader implements IBrazeImageLoader {
     return getBitmapFromUrl(context, imageUrl, viewBounds);
   }
 
-  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
-    Glide.with(context)
-        .load(imageUrl)
-        .apply(mRequestOptions)
-        .into(imageView);
+  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView) {
+    imageView.post(() -> {
+      try {
+        Glide.with(context)
+            .load(imageUrl)
+            .apply(mRequestOptions)
+            .into(imageView);
+      } catch (Exception e) {
+        BrazeLogger.e(TAG, "Failed to render URL into view: " + imageUrl, e);
+      }
+    });
   }
 
   private Bitmap getBitmapFromUrl(Context context, String imageUrl, BrazeViewBounds viewBounds) {
@@ -76,6 +84,8 @@ public class GlideBrazeImageLoader implements IBrazeImageLoader {
 {% tab KOTLIN %}
 
 ```kotlin
+import com.braze.support.BrazeLogger
+
 class GlideBrazeImageLoader : IBrazeImageLoader {
   companion object {
     private val TAG = GlideBrazeImageLoader::class.qualifiedName
@@ -84,11 +94,11 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
   private var mRequestOptions = RequestOptions()
 
   override fun renderUrlIntoCardView(context: Context, card: Card, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
-    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+    renderUrlIntoView(context, imageUrl, imageView)
   }
 
   override fun renderUrlIntoInAppMessageView(context: Context, inAppMessage: IInAppMessage, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
-    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+    renderUrlIntoView(context, imageUrl, imageView)
   }
 
   override fun getPushBitmapFromUrl(context: Context, extras: Bundle, imageUrl: String, viewBounds: BrazeViewBounds): Bitmap? {
@@ -99,11 +109,17 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
     return getBitmapFromUrl(context, imageUrl, viewBounds)
   }
 
-  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
-    Glide.with(context)
-        .load(imageUrl)
-        .apply(mRequestOptions)
-        .into(imageView)
+  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView) {
+    imageView.post {
+      try {
+        Glide.with(context)
+            .load(imageUrl)
+            .apply(mRequestOptions)
+            .into(imageView)
+      } catch (e: Exception) {
+        BrazeLogger.e(TAG, "Failed to render URL into view: $imageUrl", e)
+      }
+    }
   }
 
   private fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: BrazeViewBounds): Bitmap? {
@@ -129,9 +145,9 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 {% endtab %}
 {% endtabs %}
 
-### Schritt 2: Einstellen des Delegaten für den Bildlader
+### 2. Schritt: Festlegen des Image-Loader-Delegaten
 
-Das Braze SDK verwendet jeden angepassten Bildlader, der mit [`IBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html) angegeben wird. Wir empfehlen, den angepassten Bildlader in einer angepassten Anwendungsunterklasse festzulegen:
+Das Braze SDK verwendet jeden angepassten Image Loader, der mit [`IBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html) festgelegt wird. Wir empfehlen, den angepassten Image Loader in einer angepassten Application-Unterklasse zu konfigurieren:
 
 {% tabs %}
 {% tab JAVA %}
@@ -161,9 +177,9 @@ class GlideIntegrationApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-## Benutzerdefiniertes Laden von Bildern mit Jetpack Compose
+## Angepasstes Laden von Bildern mit Jetpack Compose
 
-Um das Laden von Bildern mit Jetpack Compose außer Kraft zu setzen, können Sie einen Wert an [`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721). Diese Funktion nimmt eine `Card` und rendert das Bild und die benötigten Modifikatoren. Alternativ können Sie auch `customCardComposer` von `ContentCardsList` verwenden, um die gesamte Karte zu rendern.
+Um das Laden von Bildern mit Jetpack Compose zu überschreiben, können Sie einen Wert an [`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721) übergeben. Diese Funktion nimmt eine `Card` entgegen und rendert das Bild sowie die benötigten Modifier. Alternativ können Sie auch `customCardComposer` von `ContentCardsList` verwenden, um die gesamte Karte zu rendern.
 
 Im folgenden Beispiel wird die Compose-Bibliothek von Glide für die in der Funktion `imageComposable` aufgeführten Karten verwendet:
 

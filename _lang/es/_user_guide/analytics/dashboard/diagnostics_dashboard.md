@@ -94,7 +94,7 @@ Las siguientes definiciones explican los resultados de cancelaciones que se mues
 | ---- | ---- |
 | Tarjeta de contenido caducada | La tarjeta de contenido caducó antes de que el usuario la viera. |
 | Tarjeta de contenido no válida | La tarjeta de contenido tenía errores y no se envió al usuario. Algunas razones comunes incluyen: {::nomarkdown}<ul><li> Se superó el tamaño máximo (2 KB) </li><li> La fecha de caducidad no es válida </li><li> El mensaje contiene caracteres no válidos </li></ul>{:/} |
-| Contenido conectado fallido | Braze intentó enviar el mensaje, pero el contenido conectado falló tras alcanzar el número máximo de reintentos (el valor predeterminado es cinco). |
+| Contenido conectado fallido | Braze intentó enviar el mensaje, pero el contenido conectado falló tras alcanzar el número máximo de reintentos (el valor predeterminado es cinco). **Nota:** Este recuento representa el número de mensajes cancelados por haber alcanzado el número máximo de reintentos, no el número total de solicitudes de contenido conectado fallidas. |
 | Tiempo de espera en la renderización de mensajes dentro de la aplicación | Tras múltiples intentos de reintento, no se pudo renderizar Liquid y se agotó el tiempo de espera. |
 | Cancelación por Liquid | Se llamó a la etiqueta de Liquid [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages), por lo que se canceló el envío. |
 | Tiempo de espera en la renderización de Liquid | La plantilla Liquid tardó demasiado en renderizarse. Es más probable que ocurra en banners, mensajes dentro de la aplicación y correos electrónicos. |

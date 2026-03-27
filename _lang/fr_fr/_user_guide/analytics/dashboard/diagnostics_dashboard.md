@@ -63,7 +63,7 @@ Le tableau de bord n'affiche que les données des 7 derniers jours.
 
 En haut de la page, des vignettes récapitulatives pour la période sélectionnée indiquent :
 
-- **Nombre total d'abandons :** Le nombre total de messages qui ont été abandonnés. Cela inclut les membres de l'audience du Canvas qui n'y sont pas entrés ou qui en sont sortis en raison d'un échec à une étape, ou parce qu'ils répondaient aux critères de sortie lors de la réalisation d'un événement de sortie.
+- **Nombre total d'abandons :** Le nombre total de messages qui ont été abandonnés. Cela inclut les membres de l'audience du canvas qui n'y sont pas entrés ou qui en sont sortis en raison d'un échec à une étape, ou parce qu'ils répondaient aux critères de sortie lors de la réalisation d'un événement de sortie.
 - **Envois de messages :** Le nombre total de messages que Braze a traités et envoyés avec succès. 
   - **E-mail, SMS/MMS/RCS, WhatsApp, LINE et notifications push :** Le message a été transmis avec succès à un partenaire d'envoi.  
   - **Webhooks :** La requête webhook a été effectuée avec succès et a renvoyé une réponse `2xx`.  
@@ -72,7 +72,7 @@ En haut de la page, des vignettes récapitulatives pour la période sélectionn�
 
 ### Résultats des messages au fil du temps
 
-Ce graphique chronologique présente une ventilation quotidienne des différentes raisons pour lesquelles un message a été abandonné ou un utilisateur a été exclu d'un Canvas. Ce graphique n'affiche pas le nombre d'envois.  
+Ce graphique chronologique présente une ventilation quotidienne des différentes raisons pour lesquelles un message a été abandonné ou un utilisateur a été exclu d'un canvas. Ce graphique n'affiche pas le nombre d'envois.  
 
 {% alert note %}
 Pour garder le graphique lisible, toute raison d'abandon ou d'exclusion n'ayant eu aucune occurrence dans la période sélectionnée n'apparaît pas.
@@ -94,22 +94,22 @@ Les définitions suivantes expliquent les résultats d'abandon affichés sur le 
 | ---- | ---- |
 | La carte de contenu a expiré | La carte de contenu a expiré avant que l'utilisateur ne puisse la consulter. |
 | Carte de contenu non valide | La carte de contenu comportait des erreurs et n'a pas été envoyée à l'utilisateur. Parmi les raisons courantes : {::nomarkdown}<ul><li> Taille maximale dépassée (2 Ko) </li><li> La date d'expiration n'est pas valide </li><li> Le message contient des caractères non valides </li></ul>{:/} |
-| Échec du contenu connecté | Braze a tenté d'envoyer le message, mais le contenu connecté a échoué après le nombre maximal de tentatives (cinq par défaut). |
+| Échec du contenu connecté | Braze a tenté d'envoyer le message, mais le contenu connecté a échoué après le nombre maximal de tentatives (cinq par défaut). **Remarque :** Ce nombre représente le nombre de messages abandonnés après avoir atteint le nombre maximal de tentatives, et non le nombre total de requêtes de contenu connecté ayant échoué. |
 | Délai d'attente pour le rendu des messages in-app | Après plusieurs tentatives, le rendu du Liquid n'a pas pu être effectué et le délai d'attente a expiré. |
 | Abandon Liquid | L'étiquette Liquid [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) a été appelée, l'envoi a donc été annulé. |
 | Délai d'attente pour le rendu Liquid | Le rendu du modèle Liquid a pris trop de temps. Cela se produit le plus souvent pour les bannières, les messages in-app et les e-mails. |
 | Erreur de syntaxe Liquid | Le modèle Liquid a rencontré une erreur d'analyse, le message a donc été annulé. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### État de la campagne et du Canvas
+#### État de la campagne et du canvas
 
 | Résultat de l'abandon | Explication |
 | ---- | ---- |
-| Échec de l'étape de délai | L'[étape de délai]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) a échoué, ce qui a conduit l'utilisateur à quitter le Canvas. Cet échec peut survenir lorsque : {::nomarkdown}<ul><li> La variable fournie à l'étape de délai personnalisé était vide ou de type non valide </li><li> Le délai dépasse la durée maximale autorisée dans le Canvas</li></ul>{:/} |
-| Événement d'exception ou de sortie | L'utilisateur était auparavant éligible pour recevoir le message, mais soit {::nomarkdown}<ul><li> a effectué un <a href="/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-3-select-exception-events">événement d'exception</a> pour une campagne basée sur une action, de sorte que le message a été abandonné, soit </li><li> répondait aux <a href="/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#setting-up-exit-criteria">critères de sortie</a> du Canvas et a donc été exclu en cours de parcours.</li></ul>{:/} |
+| Échec de l'étape de délai | L'[étape de délai]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) a échoué, ce qui a conduit l'utilisateur à quitter le canvas. Cet échec peut survenir lorsque : {::nomarkdown}<ul><li> La variable fournie à l'étape de délai personnalisé était vide ou de type non valide </li><li> Le délai dépasse la durée maximale autorisée dans le canvas</li></ul>{:/} |
+| Événement d'exception ou de sortie | L'utilisateur était auparavant éligible pour recevoir le message, mais soit {::nomarkdown}<ul><li> a effectué un <a href="/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-3-select-exception-events">événement d'exception</a> pour une campagne basée sur une action, de sorte que le message a été abandonné, soit </li><li> répondait aux <a href="/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#setting-up-exit-criteria">critères de sortie</a> du canvas et a donc été exclu en cours de parcours.</li></ul>{:/} |
 | Campagne inactive | La campagne a été arrêtée alors que le message était en cours d'envoi, il a donc été abandonné. |
-| Canvas inactif | Le Canvas a été arrêté avant que l'utilisateur n'entame son parcours. |
-| Étape du Canvas inactive | Cela peut se produire dans le Canvas si : {::nomarkdown}<ul><li> L'étape du Canvas a été supprimée </li> <li>Le Canvas a été arrêté, ce qui a entraîné la désactivation de toutes les étapes </li></ul>{:/} |
+| Canvas inactif | Le canvas a été arrêté avant que l'utilisateur n'entame son parcours. |
+| Étape du canvas inactive | Cela peut se produire dans le canvas si : {::nomarkdown}<ul><li> L'étape du canvas a été supprimée </li> <li>Le canvas a été arrêté, ce qui a entraîné la désactivation de toutes les étapes </li></ul>{:/} |
 | Volume limité | La campagne a atteint la limite de volume définie, l'envoi a donc été annulé. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -118,7 +118,7 @@ Les définitions suivantes expliquent les résultats d'abandon affichés sur le 
 | Résultat de l'abandon | Explication |
 | ---- | ---- |
 | Limite de fréquence atteinte | L'utilisateur a déjà reçu le nombre maximal de messages autorisé par les règles de [limite de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#about-frequency-capping) de votre espace de travail, l'envoi a donc été annulé. |
-| Abandon pour heures calmes | La fonctionnalité « Heures calmes » était activée pour la campagne ou l'étape du Canvas, avec le paramètre de repli défini sur **Abandonner le message**. L'utilisateur a déclenché la campagne ou est entré dans l'étape Message du Canvas pendant les heures calmes, ce qui a entraîné l'abandon du message. Cependant, cela n'exclut pas l'utilisateur du Canvas. |
+| Abandon pour heures calmes | La fonctionnalité « Heures calmes » était activée pour la campagne ou l'étape du canvas, avec le paramètre de repli défini sur **Abandonner le message**. L'utilisateur a déclenché la campagne ou est entré dans l'étape Message du canvas pendant les heures calmes, ce qui a entraîné l'abandon du message. Cependant, cela n'exclut pas l'utilisateur du canvas. |
 | Limite de débit dépassée sur 72 heures | Le message a été bloqué pendant plus de 72 heures en raison des [limites de débit de distribution]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting), l'envoi a donc été abandonné. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -129,10 +129,10 @@ Les définitions suivantes expliquent les résultats d'abandon affichés sur le 
 | Identifiant utilisateur en double | Plusieurs utilisateurs présentant un identifiant correspondant (tel qu'un ID externe, une adresse e-mail ou un numéro de téléphone) étaient éligibles pour recevoir ce message. Afin d'éviter tout envoi en double au même utilisateur, ce message a été abandonné. |
 | L'utilisateur n'a pas réussi la pré-vérification pour l'étape Message | Cette pré-vérification est effectuée avant les validations de distribution. Dans ce cas, l'utilisateur n'a pas satisfait aux conditions préalables requises pour cette étape Message (utilisateur introuvable ou non éligible pour le canal de l'étape Message). **Remarque :** Pour une étape Message multicanal, cela signifie que l'utilisateur n'a pas été trouvé ; l'éligibilité du canal n'est vérifiée ici que pour les étapes Message monocanal. |
 | L'utilisateur n'a pas réussi la pré-vérification pour le message déclenché | Pour un message déclenché, Braze effectue une première série de vérifications préliminaires concernant l'éligibilité de l'audience, la rééligibilité et l'éligibilité du canal avant de créer un message à envoyer à partir de ce déclencheur. |
-| Utilisateur n'étant plus éligible | L'utilisateur faisait initialement partie de l'audience cible, mais ne répondait plus aux critères d'audience avant que Braze n'envoie le message ou n'inscrive l'utilisateur dans le Canvas. Le délai entre le moment où l'utilisateur répond initialement aux critères d'audience et celui où il n'y répond plus peut être dû à : {::nomarkdown}<ul><li>Timing intelligent</li><li>Heures calmes</li><li>Heure locale</li><li>Limites de débit de distribution (non applicable pour les entrées Canvas)</li><li>Retards dans le pipeline d'envoi de messages</li></ul>{:/} |
-| Utilisateur non éligible pour cette étape | L'utilisateur a quitté le Canvas parce qu'il ne répondait pas aux [validations de distribution]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#delivery-validations) définies pour l'étape Message ou parce qu'il figurait sur une [liste de suppression]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists). |
-| Utilisateur non rééligible | L'utilisateur était autorisé à recevoir le message ou à entrer dans le Canvas, mais l'envoi a été annulé en raison des paramètres de rééligibilité ou de réentrée. Cela peut se produire si l'utilisateur a déjà reçu la campagne ou est entré dans le Canvas trop récemment, si un autre envoi pour la même campagne est déjà en cours pour cet utilisateur, ou si la rééligibilité ou la réentrée est désactivée. |
-| Profil utilisateur introuvable | L'utilisateur n'a jamais existé ou n'existe plus dans Braze. Voici quelques cas courants : {::nomarkdown}<ul><li> L'utilisateur a été ciblé via l'envoi de messages par API, mais n'a jamais existé dans Braze. </li><li>L'utilisateur a été supprimé avant l'envoi du message ou l'exécution de l'étape du Canvas. </li><li>L'utilisateur a été fusionné avec un autre profil avant l'envoi du message.</li></ul>{:/} |
+| Utilisateur n'étant plus éligible | L'utilisateur faisait initialement partie de l'audience cible, mais ne répondait plus aux critères d'audience avant que Braze n'envoie le message ou n'inscrive l'utilisateur dans le canvas. Le délai entre le moment où l'utilisateur répond initialement aux critères d'audience et celui où il n'y répond plus peut être dû à : {::nomarkdown}<ul><li>Timing intelligent</li><li>Heures calmes</li><li>Heure locale</li><li>Limites de débit de distribution (non applicable pour les entrées dans le canvas)</li><li>Retards dans le pipeline d'envoi de messages</li></ul>{:/} |
+| Utilisateur non éligible pour cette étape | L'utilisateur a quitté le canvas parce qu'il ne répondait pas aux [validations de distribution]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#delivery-validations) définies pour l'étape Message ou parce qu'il figurait sur une [liste de suppression]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists). |
+| Utilisateur non rééligible | L'utilisateur était autorisé à recevoir le message ou à entrer dans le canvas, mais l'envoi a été annulé en raison des paramètres de rééligibilité ou de réentrée. Cela peut se produire si l'utilisateur a déjà reçu la campagne ou est entré dans le canvas trop récemment, si un autre envoi pour la même campagne est déjà en cours pour cet utilisateur, ou si la rééligibilité ou la réentrée est désactivée. |
+| Profil utilisateur introuvable | L'utilisateur n'a jamais existé ou n'existe plus dans Braze. Voici quelques cas courants : {::nomarkdown}<ul><li> L'utilisateur a été ciblé via l'envoi de messages par API, mais n'a jamais existé dans Braze. </li><li>L'utilisateur a été supprimé avant l'envoi du message ou l'exécution de l'étape du canvas. </li><li>L'utilisateur a été fusionné avec un autre profil avant l'envoi du message.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Canal et distribution
@@ -157,7 +157,7 @@ Les définitions suivantes expliquent les résultats d'abandon affichés sur le 
 
 ### Que signifie un échec de « pré-vérification » ?
 
-Une « pré-vérification » désigne une vérification de validation groupée à grande vitesse qui s'exécute au tout début d'une étape du pipeline (par exemple, le déclenchement d'un message ou l'envoi d'une étape Message du Canvas). Considérez cela comme une sortie anticipée conçue pour une vitesse maximale. Au lieu d'effectuer de nombreuses vérifications distinctes et gourmandes en ressources (comme la validation de chaque détail du profil utilisateur), Braze regroupe plusieurs validations de base en une seule « première passe ».
+Une « pré-vérification » désigne une vérification de validation groupée à grande vitesse qui s'exécute au tout début d'une étape du pipeline (par exemple, le déclenchement d'un message ou l'envoi d'une étape Message du canvas). Considérez cela comme une sortie anticipée conçue pour une vitesse maximale. Au lieu d'effectuer de nombreuses vérifications distinctes et gourmandes en ressources (comme la validation de chaque détail du profil utilisateur), Braze regroupe plusieurs validations de base en une seule « première passe ».
 
 Si un utilisateur échoue à cette vérification groupée, il est immédiatement exclu. Cette approche groupée permet à Braze de traiter des volumes considérables de messages à grande vitesse et contribue à améliorer la rapidité et la stabilité de vos campagnes et Canvas en réduisant le temps de traitement de chaque message.
 
@@ -169,16 +169,16 @@ Il s'agit d'abandons qui ne correspondent à aucune des catégories prédéfinie
 
 Cela peut se produire pour plusieurs raisons :
 
-- **Critères d'audience :** Il est possible que moins d'utilisateurs que prévu aient répondu aux critères d'audience (par exemple, ils n'appartenaient pas au segment ou ne présentaient pas les attributs requis) lors du lancement de la campagne ou du Canvas.
-- **Traitement en cours :** Les messages sont peut-être encore en cours de traitement. Des utilisateurs peuvent se trouver encore dans les premières étapes du Canvas et ne pas avoir atteint les étapes Message.
-- **Actualité des données :** Les données du tableau de bord sont mises à jour environ toutes les 15 minutes, mais cela n'est pas garanti. Les données les plus récentes pour cette campagne ou ce Canvas n'ont peut-être pas encore été transmises au tableau de bord.
+- **Critères d'audience :** Il est possible que moins d'utilisateurs que prévu aient répondu aux critères d'audience (par exemple, ils n'appartenaient pas au segment ou ne présentaient pas les attributs requis) lors du lancement de la campagne ou du canvas.
+- **Traitement en cours :** Les messages sont peut-être encore en cours de traitement. Des utilisateurs peuvent se trouver encore dans les premières étapes du canvas et ne pas avoir atteint les étapes Message.
+- **Actualité des données :** Les données du tableau de bord sont mises à jour environ toutes les 15 minutes, mais cela n'est pas garanti. Les données les plus récentes pour cette campagne ou ce canvas n'ont peut-être pas encore été transmises au tableau de bord.
 - **Cas limites :** Il est possible que vous rencontriez un cas particulier qui n'est pas pris en compte dans ce tableau de bord pour le moment. Si vous pensez que c'est le cas, contactez l'[assistance Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support).
 
-### Pourquoi la somme du _nombre total d'abandons_ et des _envois de messages_ est-elle supérieure à l'audience d'une campagne ou d'un Canvas ?
+### Pourquoi la somme du _nombre total d'abandons_ et des _envois de messages_ est-elle supérieure à l'audience d'une campagne ou d'un canvas ?
 
 Cela peut se produire pour les raisons suivantes :
 
-- **Messages multicanaux :** La campagne ou l'étape du Canvas a été configurée pour envoyer sur plusieurs canaux (tels que les SMS et les e-mails). Un même utilisateur peut recevoir un résultat « envoyé » pour un canal (tel que l'e-mail) et un résultat « abandonné » pour un autre (tel que « Utilisateur non activé pour les SMS/MMS/RCS »). Dans ce cas, cet utilisateur serait compté deux fois dans le graphique : une fois comme « envoyé » et une fois comme « abandonné ».
+- **Messages multicanaux :** La campagne ou l'étape du canvas a été configurée pour envoyer sur plusieurs canaux (tels que les SMS et les e-mails). Un même utilisateur peut recevoir un résultat « envoyé » pour un canal (tel que l'e-mail) et un résultat « abandonné » pour un autre (tel que « Utilisateur non activé pour les SMS/MMS/RCS »). Dans ce cas, cet utilisateur serait compté deux fois dans le graphique : une fois comme « envoyé » et une fois comme « abandonné ».
   - **Exemple :** Vous envoyez une campagne push à 100 utilisateurs, ciblant à la fois iOS et Android. Si un utilisateur ne dispose que d'un appareil iOS, il reçoit la notification push iOS (« envoyée »), mais déclenche également un abandon pour la notification push Android (« Utilisateur non activé pour les notifications push Android, l'application ou l'appareil »).
-- **Étapes Message multiples (Canvas uniquement) :** Votre Canvas peut comporter plusieurs étapes Message dans un parcours donné. Ce tableau de bord regroupe tous les résultats, de sorte qu'un même utilisateur peut être compté plusieurs fois s'il passe par plusieurs étapes Message au cours de la période sélectionnée.
+- **Étapes Message multiples (Canvas uniquement) :** Votre canvas peut comporter plusieurs étapes Message dans un parcours donné. Ce tableau de bord regroupe tous les résultats, de sorte qu'un même utilisateur peut être compté plusieurs fois s'il passe par plusieurs étapes Message au cours de la période sélectionnée.
 - **Messages de test :** L'envoi de tests (comptabilisé dans le tableau de bord) fait augmenter le total par rapport à la taille de l'audience.

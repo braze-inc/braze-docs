@@ -94,7 +94,7 @@ As definições a seguir explicam os resultados de aborto mostrados no dashboard
 | ---- | ---- |
 | Cartão de conteúdo expirado | O cartão de conteúdo expirou antes que o usuário o visse. |
 | Cartão de conteúdo inválido | O cartão de conteúdo teve erros e não foi enviado ao usuário. Algumas razões comuns para isso incluem: {::nomarkdown}<ul><li> Tamanho máximo excedido (2 KB) </li><li> A data de expiração é inválida </li><li> A mensagem contém caracteres inválidos </li></ul>{:/} |
-| Conteúdo conectado falhou | A Braze tentou enviar a mensagem, mas o Conteúdo conectado falhou após o número máximo de tentativas (o padrão é cinco). |
+| Conteúdo conectado falhou | A Braze tentou enviar a mensagem, mas o Conteúdo conectado falhou após o número máximo de tentativas (o padrão é cinco). **Nota:** Esta contagem representa o número de mensagens abortadas por atingir o número máximo de tentativas, não o número total de solicitações de Conteúdo conectado que falharam. |
 | Tempo limite de renderização de mensagem no app | Após várias tentativas, o Liquid não pôde ser renderizado e atingiu o tempo limite. |
 | Aborto do Liquid | A Liquid tag [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) foi chamada, então o envio foi cancelado. |
 | Tempo limite de renderização do Liquid | Demorou muito para renderizar o modelo Liquid. Mais provável de ocorrer para Banners, mensagens no app e e-mail. |
@@ -106,8 +106,8 @@ As definições a seguir explicam os resultados de aborto mostrados no dashboard
 | Resultado de aborto | Explicação |
 | ---- | ---- |
 | Falha na etapa de postergação | A [etapa de postergação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) falhou, fazendo com que o usuário saísse do Canvas. Essa falha pode ocorrer quando: {::nomarkdown}<ul><li> A variável fornecida para a etapa de postergação personalizada estava vazia ou era de um tipo inválido </li><li> A postergação ultrapassou a duração máxima permitida dentro do Canvas</li></ul>{:/} |
-| Exceção ou evento de saída | O usuário estava anteriormente elegível para receber a mensagem, mas {::nomarkdown}<ul><li> realizou um <a href="/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-3-select-exception-events">evento de exceção</a> para uma campanha baseada em ação, então a mensagem foi abortada, ou </li><li> atendeu aos <a href="/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#setting-up-exit-criteria">critérios de saída</a> do Canvas, então foi descartado no meio da jornada.</li></ul>{:/} |
-| Campanha inativa | A campanha foi interrompida enquanto a mensagem estava em andamento, então foi abortada. |
+| Exceção ou evento de saída | O usuário estava anteriormente elegível para receber a mensagem, mas {::nomarkdown}<ul><li> realizou um <a href="/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-3-select-exception-events">evento de exceção</a> para uma campanha baseada em ação, então a mensagem foi abortada, ou </li><li> atendeu aos <a href="/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#setting-up-exit-criteria">critérios de saída</a> do Canvas, então foi removido no meio da jornada.</li></ul>{:/} |
+| Campanha inativa | A campanha foi interrompida enquanto a mensagem estava em trânsito, então foi abortada. |
 | Canvas inativo | O Canvas foi interrompido antes que o usuário entrasse na jornada. |
 | Etapa do Canvas inativa | Isso pode ocorrer no Canvas se: {::nomarkdown}<ul><li> A etapa do Canvas foi excluída </li> <li>O Canvas foi interrompido, o que faz com que todas as etapas se tornem inativas </li></ul>{:/} |
 | Limite de volume atingido | A campanha atingiu o limite de volume de envios definido, então o envio foi cancelado. |
