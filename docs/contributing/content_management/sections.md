@@ -3,9 +3,11 @@
 
 > Learn how to create and order sections on Braze Docs. To create, modify, or delete an individual page instead, see [Pages](pages.md). For general information about sections, see [About content management](../content_management.md#sections).
 
+<!--
 ## Prerequisites
 
-<!-- If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo. -->
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+-->
 
 
 ## Creating a section
@@ -51,7 +53,7 @@ When you create a new section, you can configure it with or without a landing pa
 - **With landing page:** Use this method if your section needs a dedicated overview, such as a landing page for a "Getting started" section listing prerequisites and outlining the user journey.
 - **Without landing page:** Use this method if your section does not need a dedicated overview. As stated in the [Braze Docs Style Guide](../style_guide.md), content should always be useful, so avoid adding a landing page if it offers little useful content.
 
-### with landing page
+### With landing page
 
 Open your new Markdown file and add the following template. For more templates, see [Templates](../content_types.md).
 
@@ -87,7 +89,7 @@ Replace the following:
 
 ---
 
-### without landing page
+### Without landing page
 
 Open your subsection's Markdown file and add the following metadata to set your page's navigation title and disable the landing page.
 

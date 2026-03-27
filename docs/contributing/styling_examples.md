@@ -566,7 +566,7 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 
 ---
 
-### swift
+### Swift
 
 If you are integrating the Braze SDK with CocoaPods or Carthage, add the following line of code to your `AppDelegate.swift` file:
 
@@ -592,13 +592,13 @@ Enclose individual **tab** with the Liquid code and name of the tab `{% tab [Tab
 >  For example, if one set of tabs has `C++`,`C-Sharp` and `JS`, and another set of tabs has `C-Sharp` and `JS`,
 > then when somebody clicks on `C++`, the other section will show nothing. See the following local tabs option for a workaround.
 ```liquid
-### objective-c
+### Objective-C
 
 Content of objective-c
 
 ---
 
-### swift
+### Swift
 
 Content of swift
 

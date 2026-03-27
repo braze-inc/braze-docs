@@ -5,9 +5,11 @@
 
 Content reuse in Jekyll is accomplished using includes. Includes are stored in the `_includes` directory as a regular Markdown file. Although, unlike the Markdown files in the `_docs` directory, these files don't need YAML front matter.
 
+<!--
 ## Prerequisites
 
-<!-- If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo. -->
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+-->
 
 
 ## Creating an include
@@ -69,7 +71,7 @@ braze-docs
 
 The reference would be similar to the following:
 
-### example input
+### Example input
 
 ```markdown
 # Pages
@@ -81,6 +83,6 @@ The reference would be similar to the following:
 
 ---
 
-### example output
+### Example output
 
 ![Content reuse example on Braze Docs.](../../../assets/img/contributing/styling_examples/includes.png)

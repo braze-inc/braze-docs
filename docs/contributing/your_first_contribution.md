@@ -11,9 +11,11 @@ When you're finished with this tutorial, you'll be able to:
 - Preview your changes in a test site
 - Request a review from the Braze Docs team
 
+<!--
 ## Prerequisites
 
-<!-- If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo. -->
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+-->
 
 
 ## Making your first contribution
@@ -36,7 +38,7 @@ You'll make your change using the [same method you chose previously](README.md#s
 |Local environment|For complex or multi-document changes.|Before you can use this method, you'll need to [set up your local environment](local_environment.md).|
 
 
-### github
+### GitHub
 
 #### Step 2.1: Find the page on GitHub
 
@@ -68,7 +70,7 @@ After confirming, select **Propose changes**.
 
 ---
 
-### local environment
+### Local environment
 
 #### Step 2.1: Get the latest changes
 
@@ -214,7 +216,7 @@ These comments will guide you through your PR description. When you're finished,
 
 Create your content by following the [Braze Docs Style Guide](style_guide.md) and reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
-### github
+### GitHub
 
 In a PR comment, tag `@braze-inc/docs-team` to request a site preview.
 
@@ -224,7 +226,7 @@ In a PR comment, tag `@braze-inc/docs-team` to request a site preview.
 
 ---
 
-### local environment
+### Local environment
 
 In the terminal, use the `rake` command start a local server.
 
@@ -272,7 +274,7 @@ Approved contributions will be deployed on the next Tuesday or Thursday.
 
 After you or a member of the Braze Docs team reviews your work, you may need to make additional changes to your PR. You can do so using your local environment or GitHub.
 
-### github
+### GitHub
 
 In your PR, select **Files changed**, then locate the file you'd like to update and select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Edit file**.
 
@@ -288,7 +290,7 @@ Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where
 
 ---
 
-### local environment
+### Local environment
 
 In your PR, select <i class="fa-regular fa-clone"></i> **Copy** next to your branch name.
 

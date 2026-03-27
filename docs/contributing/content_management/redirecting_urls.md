@@ -9,16 +9,18 @@ Page URLs always match the directory structure of the Braze Docs repository. Whe
 
 By setting up URL redirects, you'll help prevent user bookmarks from breaking.
 
+<!--
 ## Prerequisites
 
-<!-- If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo. -->
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+-->
 
 
 ## Redirecting a page
 
 You can choose to redirect a page's URL to the Braze Docs home page or a new location.
 
-### home page
+### Home page
 
 Open the relevant Markdown file and add the following key-value pair to the YAML front matter. If there's already a `layout` key, replace the existing key with the new one.
 
@@ -41,7 +43,7 @@ page_order: 3
 
 ---
 
-### new location
+### New location
 
 Move or rename the relevant Markdown file, then navigate to the `assets/js/` directory and open the global redirect file.
 
@@ -119,7 +121,7 @@ local_redirect:
 
 You can use [`bdocs`](../bdocs.md) to lists all of the old URLs you set up using a base URL of your choice.
 
-### usage example
+### Usage example
 
 The following example uses the [Sage AI rebrand PR](https://github.com/braze-inc/braze-docs/pull/8040).
 

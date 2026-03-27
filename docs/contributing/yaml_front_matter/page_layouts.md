@@ -25,7 +25,7 @@ layout: api_page
 ---
 ```
 
-### example output
+### Example output
 
 ![An example page using the 'api_page' layout.](../../../assets/img/contributing/styling_examples/layouts/api_page.png)
 
@@ -41,7 +41,7 @@ layout: dev_guide
 ---
 ```
 
-### example output
+### Example output
 
 ![An example page using the 'dev_guide' layout.](../../../assets/img/contributing/styling_examples/layouts/dev_guide.png)
 
@@ -57,7 +57,7 @@ layout: featured
 ---
 ```
 
-### example output
+### Example output
 
 ![An example page using the 'featured' layout.](../../../assets/img/contributing/styling_examples/layouts/featured.png)
 
@@ -73,7 +73,7 @@ layout: glossary_page
 ---
 ```
 
-### example output
+### Example output
 
 ![An example page using the 'glossary_page' layout.](../../../assets/img/contributing/styling_examples/layouts/glossary_page.png)
 
@@ -101,7 +101,7 @@ config_only: true
 ---
 ```
 
-### example output
+### Example output
 
 ![The left-side navigation for the Contributing section on Braze Docs. The "YAML Front Matter" page is selected, but the page content shows the previously selected page still.](../../../assets/img/contributing/styling_examples/layouts/blank_config.png)
 

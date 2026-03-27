@@ -50,7 +50,7 @@ Replace the following.
 | `CONTENT`        | The page's content written in Markdown syntax.                                                                                           |
 
 
-### example input
+### Example input
 
 ```markdown
 ---
@@ -68,7 +68,7 @@ search_tag: Contributing
 
 ---
 
-### example output
+### Example output
 
 ![Example page on Braze Docs.](../../assets/img/contributing/styling_examples/page.png)
 
@@ -189,7 +189,7 @@ braze-docs
 
 The landing page for each primary section is a standard Markdown file with the `page_order:` key set to `0`.
 
-### example input
+### Example input
 
 ```markdown
 ---
@@ -203,7 +203,7 @@ user_top_header: "Braze User Guide"
 
 ---
 
-### example output
+### Example output
 
 ![An example landing page on Braze Docs.](../../assets/img/contributing/styling_examples/primary_section.png)
 
@@ -236,7 +236,7 @@ braze-docs
 
 In the `_primary_section` directory, `subsection_a` is not configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page.
 
-### example input
+### Example input
 
 ```markdown
 ---
@@ -248,7 +248,7 @@ config_only: true
 
 ---
 
-### example output
+### Example output
 
 ![The left-side navigation on Braze Docs, showing an example of an expanded section without a landing page.](../../assets/img/contributing/styling_examples/subsection_config_only.png)
 
@@ -256,7 +256,7 @@ config_only: true
 
 However, `subsection_b.md` doesn't use the `config_only:` key, so this page _is_ rendered as a landing page.
 
-### example input
+### Example input
 
 ```markdown
 ---
@@ -267,7 +267,7 @@ page_order: 0
 
 ---
 
-### example output
+### Example output
 
 ![The left-side navigation on Braze Docs, showing an example of an expanded section with a landing page.](../../assets/img/contributing/styling_examples/subsection_landing_page.png)
 
@@ -317,7 +317,7 @@ Replace the following:
 | `FILE`          | The name of the file including the file extension.                                                                                                                                                                      |
 
 
-### example input
+### Example input
 
 ```markdown
 # Pages
@@ -329,7 +329,7 @@ Replace the following:
 
 ---
 
-### example output
+### Example output
 
 ![Content reuse example on Braze Docs.](../../assets/img/contributing/styling_examples/includes.png)
 
@@ -352,7 +352,7 @@ layout: LAYOUT_VALUE
 
 Replace `LAYOUT_VALUE` with the name of the layout file and the file extension removed.
 
-### example input
+### Example input
 
 **File tree**
 
@@ -372,7 +372,7 @@ layout: api_page
 
 ---
 
-### example output
+### Example output
 
 ![API glossary layout example on Braze Docs.](../../assets/img/contributing/styling_examples/layouts/api_page.png)
 
@@ -411,7 +411,7 @@ braze-docs
         └── subsection_b.md # configured as a landing page  
 ```
 
-### subsection a
+### Subsection a
 
 **Example landing page**
 
@@ -435,7 +435,7 @@ Page B URL: https://www.braze.com/docs/primary_section/subsection_a/page_b
 
 ---
 
-### subsection b
+### Subsection b
 
 **Example landing page**
 

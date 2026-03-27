@@ -3,9 +3,11 @@
 
 > Learn how to set up your local Braze Docs environment, so you can make complex or multi-page changes.
 
+<!--
 ## Prerequisites
 
-<!-- If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo. -->
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+-->
 
 
 ## Setting up your local environment

@@ -3,9 +3,11 @@
 
 > [`bdocs`](https://github.com/braze-inc/braze-docs/blob/develop/bdocs) is a wrapper script located in the root of the Braze Docs repository that helps you replace links, generate redirect URLs, create deployment descriptions, and more.
 
+<!--
 ## Prerequisites
 
-<!-- If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo. -->
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+-->
 
 
 ## Using `bdocs`
@@ -53,7 +55,7 @@ If you're on MacOS, you can copy the output of `bdocs` directly to your clipboar
 
 This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` but not `main` and then listing them in the proper Markdown format.
 
-### usage example
+### Usage example
 
 ```bash
 $ ./bdocs deploy
@@ -69,7 +71,7 @@ $ ./bdocs deploy
 
 This command creates the pull request description for monthly releases by comparing which pull requests have been merged into `main` since the last release and then listing them in the proper Markdown format.
 
-### usage example
+### Usage example
 
 ```bash
 $ ./bdocs release
@@ -100,7 +102,7 @@ Reference-style links are not supported within Liquid `{% tab %}` tags. `tlinks`
 
 
 
-### usage example
+### Usage example
 
 #### Example command
 
@@ -131,7 +133,7 @@ Before continuing, [create your SSH token](https://www.braze.com/docs/developer_
 
 
 
-### usage example
+### Usage example
 
 #### Example command
 
@@ -155,7 +157,7 @@ Before continuing, [create your SSH token](https://www.braze.com/docs/developer_
 
 `ulinks` (short for "update links") takes a file or directory and updates any old links listed on [`broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js) with the newest possible link. For example, if link `one` redirects to link `two`, and link `two` redirects to link `three`, `ulinks` will replace both link `one` and link `two` with link `three`. This command only updates links starting with `https://www.braze.com/docs`.
 
-### usage example
+### Usage example
 
 #### Example command
 
@@ -195,7 +197,7 @@ Because it relies on `git diff` to check for renamed files, redirects are only c
 |The file was moved to a new directory.|Moving `_docs/developer_guide/home.md` into `_docs/developer_guide/getting_started/`|
 
 
-### usage example
+### Usage example
 
 #### Example command
 
@@ -231,7 +233,7 @@ brew install node yarn
 yarn install
 ```
 
-### usage example
+### Usage example
 
 #### Example command
 
@@ -266,7 +268,7 @@ File,Broken Link,Path to Broken Link
 
 
 
-### usage example
+### Usage example
 
 The following example uses the [Sage AI rebrand PR](https://github.com/braze-inc/braze-docs/pull/8040).
 
@@ -296,7 +298,7 @@ https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive
 1. You no longer need to leave your text-editor to verify the syntax of a unique Braze Markdown implementation.
 2. Even if you're offline, you can easily review the unique Braze Docs syntax&#8212;making it easier when working on airplane mode.
 
-### usage example
+### Usage example
 <pre style="font-family: 'Roboto Mono', monospace; font-size: 14px; line-height: 16px; background-color: #f4f4f7; color: #666666; padding: 10px; overflow-x: auto; white-space: pre; word-break: inherit; word-wrap: inherit; min-height: 36px;">
 $ ./bdocs syntax
 This is all of the unique Markdown syntax supported by Braze Docs.

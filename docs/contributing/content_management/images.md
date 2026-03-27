@@ -3,9 +3,11 @@
 
 > Learn how to add, modify, and remove images on Braze Docs. For general information about images, see [About content management](../content_management.md#images).
 
+<!--
 ## Prerequisites
 
-<!-- If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo. -->
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+-->
 
 
 ## Adding a new image
@@ -87,7 +89,7 @@ When updating an existing image, you can either add a new image file or replace 
 - **Overwrite existing file (recommended):** Use this method if the original image depicts accurate content, but is visually out-of-date, such as an image depicting old branding. This method reduces the total number of images stored in the Braze Docs repository.
 - **Add new file:** Use this method if the original image depicts completely out-of-date content, such as an image depicting a deprecated feature or workflow.
 
-### overwrite existing file
+### Overwrite existing file
 
 Rename your new image to match the name of the original image. In the following example, see how the image file names are identical.
 
@@ -106,7 +108,7 @@ braze-docs
 
 ---
 
-### add new file
+### Add new file
 
 Generally, your new image should be added to the same directory as the other images on this page, however you may use your best judgment. When you're ready, add the PNG file to the relevant location in `assets/img/`.
 

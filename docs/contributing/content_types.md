@@ -34,7 +34,7 @@ Read HTML comments like the following to learn more about each section in a temp
 
 There are two kinds of how-tos: generic and technology partner. Only use the technology partner template when adding new content to [Technology Partners](https://www.braze.com/docs/partners/home).
 
-### generic
+### Generic
 
 How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card](https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/create/).
 
@@ -42,7 +42,7 @@ How-to guides are action-based, chronological steps that show users how to compl
 
 ---
 
-### technology partner
+### Technology partner
 
 *Included in the site build from [`_includes/contributing/templates/technology_partner.md`](../../_includes/contributing/templates/technology_partner.md).*
 
@@ -95,7 +95,7 @@ rake
 
 There are two kinds of tutorials: use cases and generic. In most scenarios, you'll want to write a use case.
 
-### use cases
+### Use cases
 
 Use cases are a type of tutorial that provides a learning experience through practical, hands-on activities without overloading readers with background theory&#8212;unlike generic tutorials which may use hypothetical scenarios to illustrate some functionality. What makes use cases special is their ability to illustrate the _real-world value_ that Braze offers marketers.
 
@@ -121,7 +121,7 @@ Each use of the words "Use case" in a header should have a description following
 
 ---
 
-### generic
+### Generic
 
 Generic tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations](https://www.braze.com/docs/user_guide/brazeai/recommendations/rules_based_recommendations/):
 
@@ -172,7 +172,7 @@ Topmost should be nouns. For example, [Editor blocks](https://www.braze.com/docs
 
 Explanations are understanding-oriented content. They focus on improving the user’s conceptual understanding. For an example, see [Getting started: Braze overview](https://www.braze.com/docs/user_guide/getting_started/overview/).
 
-### explanation template
+### Explanation template
 
 *Included in the site build from [`_includes/contributing/templates/explanation.md`](../../_includes/contributing/templates/explanation.md).*
 
@@ -216,7 +216,7 @@ Release notes are a monthly compilation of product updates in Braze. Each update
 
 You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release](https://www.braze.com/docs/help/release_notes/2024/1_9_24/).
 
-### release note template
+### Release note template
 
 *Included in the site build from [`_includes/contributing/templates/release_notes.md`](../../_includes/contributing/templates/release_notes.md).*
 

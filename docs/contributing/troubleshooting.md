@@ -96,7 +96,7 @@ If you find this string in the URL, one or more of your cross-reference links ar
 
 Move these tags so that they're only surrounding the Liquid content you want to display as raw.
 
-### before
+### Before
 
 <code>
 &#123;% raw %} Learn how to use Liquid's <code>&#123;&#123; page_title }} tag. For more information, see [Liquid tags](&#123;&#123;site.baseurl}}/contributing/liquid/). &#123;% endraw %}
@@ -104,7 +104,7 @@ Move these tags so that they're only surrounding the Liquid content you want to 
 
 ---
 
-### after
+### After
 
 <code>
 Learn how to use Liquid's &#123;% raw %} &#123;&#123; page_title }} &#123;% endraw %} tag. For more information, see [Liquid tags](&#123;&#123;site.baseurl}}/contributing/liquid/).

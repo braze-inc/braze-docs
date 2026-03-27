@@ -41,7 +41,7 @@ If you're new to Braze Docs or docs-as-code, start with our tutorial.
 
 The `article_title` key is used to set the page title for online search results and the end-user's browser tab. This key accepts any `string` value. For naming conventions, see the [Braze Docs Style Guide](../style_guide.md).
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -55,7 +55,7 @@ article_title: Getting started with Braze Docs
 
 The `description` key is used to set the page description in online search results. This key accepts any `string` value under 150 characters that's surrounded by double quotes.
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -69,7 +69,7 @@ description: "If you're new to Braze Docs, start with this step-by-step tutorial
 
 The `nav_title` key is used to set the page title on the left-side navigation bar on Braze Docs. This key accepts any `string` less than 30 characters. If the [`hidden`](#hide-page-from-navigation) key is set to `true`, `nav_title` is not required.
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -87,7 +87,7 @@ The `alias` key is used to create an alternate URL path for a page. This is usef
 
 In the following example, visiting `www.braze.com/docs/brazeai/liquid` will point to the real page path instead: `www.braze.com/docs/user_guide/brazeai/generative_ai/liquid`.
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -117,7 +117,7 @@ The `channel` key is used to set a page's related messaging channels. This key a
 - `sms`
 - `webhooks`
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -133,7 +133,7 @@ channel:
 
 The `config_only` key is used to hide a page's content without hiding it on left-side navigation bar. Use this key when [creating a section without a landing page](../content_management/sections.md#step-2-configure-your-section). This key accepts the boolean values `true` or `false`.
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -147,7 +147,7 @@ config_only: true
 
 The `hidden` key is used to hide a page from the left-side navigation on Braze Docs. This key accepts the boolean values `true` or `false`.
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -161,7 +161,7 @@ hidden: true
 
 The `hide_toc` key is used to hide the in-page table of contents (TOC) on the right side of the page. This key accepts the boolean values `true` or `false`.
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -183,7 +183,7 @@ The `layout` key is used to set the layout for a page. If `layout` is not set, t
 - `blank_config`
 - `redirect`
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -197,7 +197,7 @@ page_layout: glossary_page
 
 The `noindex` key is used to hide a page from internal and external search results (such as Braze Docs and Google Search). This key accepts the boolean values `true` or `false`.
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -211,7 +211,7 @@ noindex: true
 
 The `page_order` key is used to [order sections](../content_management/sections.md#ordering-a-section) on the left-side navigation bar. This key accepts any non-negative number (such as `0`, `20`, or `5.5`).
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -235,7 +235,7 @@ The `page_type` key is used to set formatting of a page. This key accepts any of
 
 For more information about each value, see [Page types](page_layouts.md).
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -254,7 +254,7 @@ The `permalink` key is used with the [`hidden`](#hide-page-from-navigation) key 
 - "Directories" are separated by forward slashes (`/`)
 - All other special characters are removed
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -269,7 +269,7 @@ permalink: /support_contact/docs_team/
 
 The `platform` key is used to set the page's related platforms. This key accepts one or more [Braze SDKs](https://www.braze.com/docs/developer_guide/home/) as a `string` value in a list.
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -293,7 +293,7 @@ This key accepts the following string values:
 - `h3`
 - `h4`
 
-### usage example
+### Usage example
 
 ```markdown
 ---
@@ -318,7 +318,7 @@ The `tool` key is used to set the page's related engagement tools. This key acce
 - `segments`
 - `templates`
 
-### usage example
+### Usage example
 
 ```markdown
 ---
