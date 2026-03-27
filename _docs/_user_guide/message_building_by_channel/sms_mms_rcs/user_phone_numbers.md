@@ -53,7 +53,7 @@ When a phone number is deemed invalid, Braze will mark the user's phone number a
 A phone number is considered invalid for the following reasons:
 
 - **Provider Error**: a permanent error was received from the SMS and RCS provider. This indicates that the phone number supplied is incorrectly formatted or permanently unable to receive SMS or RCS messages.
-- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier (and may eventually be recycled and assigned to a new user).
+- **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier (and may eventually be recycled and assigned to a new user). A deactivated phone number can be invalid even if you have not sent it any SMS or RCS messages.
 
 These invalid phone numbers can be managed using [SMS and RCS endpoints]({{site.baseurl}}/api/endpoints/sms/). 
 
