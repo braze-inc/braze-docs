@@ -216,8 +216,11 @@ The scanner runs automatically on custom HTML messages and evaluates your entire
 {% endtab %}
 {% tab Push %}
 
-{% alert warning %}
-If you see the error "None of the selected users have matching push tokens for iOS/Android Push," the test user doesn't have a valid push token registered for the selected platform. For a user to have a push token, they must have started a session in your app **and** enabled push notifications for the app on their device. You can verify a user's push tokens in the **Engagement** tab of their user profile under **Contact Settings**.
+{% alert note %}
+If you see the error "None of the selected users have matching push tokens for iOS/Android Push":
+- The test user doesn't have a valid push token registered for the selected platform.
+- To receive a push token, the user must start a session in your app and enable push notifications for the app on their device.
+- You can verify a user's push tokens in the **Engagement** tab of their user profile under **Contact Settings**.
 {% endalert %}
 
 #### Mobile push
