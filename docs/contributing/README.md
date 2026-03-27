@@ -1,7 +1,7 @@
 
 # Contributing to Braze Docs
 
-> Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we merge community contributions and deploy them to Braze Docs. Use this guide to get your changes merged during our next deployment.
+> Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we deploy contributions to Braze Docs. Use this guide to get your changes merged during our next deployment.
 
 ## Prerequisites
 
@@ -18,21 +18,7 @@ Some understanding of Git is required to contribute to Braze Docs. If you're new
 
 If you don't have a GitHub account, [create one now](https://github.com/signup). Otherwise, continue to the next step.
 
-### Step 2: Sign the CLA
-
-Everyone that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla). If you don't sign the CLA, the `@cla-bot` on GitHub will automatically block your pull request.
-
-### Step 3: Fork the repository
-
-Go to the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork**.
-
-![The Braze Docs GitHub repository showing "Fork".](../../assets/img/contributing/github/fork_the_repository.png)
-
-Keep the default settings, then select **Create fork**.
-
-![The Braze Docs GitHub repository showing "Create fork".](../../assets/img/contributing/github/create_a_new_fork.png)
-
-### Step 4: Choose how to contribute
+### Step 2: Choose how to contribute
 
 You can contribute to Braze Docs using either of the following methods. Choose the one that's best for you:
 

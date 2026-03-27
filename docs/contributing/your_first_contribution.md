@@ -64,16 +64,7 @@ In the next window, choose **Create a new branch for this commit and start a pul
 
 After confirming, select **Propose changes**.
 
-![The "Propose changes" window after selecting "Commit changes" in GitHub.](../../assets/img/contributing/github/propose_changes.png)In the next window, select **compare across forks**.
-
-![The "Comparing changes" window with "compare across forks" highlighted.](../../assets/img/contributing/github/compare_across_forks.png)
-
-From the base repository dropdown, choose **braze-inc/braze-docs**, then select **Create pull request**. You'll learn how to fill out the draft in the next step.
-
-![The "Comparing changes" window with "braze-inc/braze-docs" highlighted in the base repository dropdown list.](../../assets/img/contributing/github/choose_base_repository.png)
-
-> **Important:**
-> If `braze-inc/braze-docs` is missing from the list of available base branches, there may be an issue with the origin of your forked repository. For detailed information, see [Troubleshooting](troubleshooting.md#missing-base-repository).
+![The "Propose changes" window after selecting "Commit changes" in GitHub.](../../assets/img/contributing/github/propose_changes.png)Select **Create pull request**. You'll learn how to fill out the draft in the next step.
 
 ---
 
@@ -275,7 +266,7 @@ If you're ready for a member of the Braze Docs team to review your work, select 
 
 ![An example pull request with "docs-team" added as the reviewer.](../../assets/img/contributing/github/add_docs_team_as_reviewers.png)If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). Otherwise, the docs team will approve and merge your changes.
 
-Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out Braze Docs to see your hard work. Thanks for contributing!
+Approved contributions will be deployed on the next Tuesday or Thursday.
 
 ### Step 6: Make additional changes (optional)
 

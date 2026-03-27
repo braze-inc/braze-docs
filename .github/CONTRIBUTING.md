@@ -20,10 +20,9 @@ Editorial standards (voice, formatting, alerts, API docs) live in the in-repo st
 - Use branches and pull requests as your team’s process defines (for example, feature branches off the default integration branch).
 - For customer-facing documentation content, follow the [in-repo style guide](../docs/contributing/style_guide.md).
 
-## Issues
+## Requests
 
-- [Report an issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=)
-- [Request a feature](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=enhancement&projects=&template=request_a_feature.md&title=)
+- [Submit a request](https://www.braze.com/docs/request) or ask in [#ask-docs](https://braze.enterprise.slack.com/archives/C0D10FTGQ) on Slack
 
 ## License
 

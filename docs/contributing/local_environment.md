@@ -84,7 +84,7 @@ table td {
 
 
 > **Note:**
-> As of writing, all software is free of cost. If you find that a product is no longer free, [please let us know](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
+> As of writing, all software is free of cost. If you find that a product is no longer free, ask in [#ask-docs](https://braze.enterprise.slack.com/archives/C0D10FTGQ) on Slack.
 
 
 
@@ -92,42 +92,16 @@ table td {
 
 Next, [create an SSH key](https://docs.github.com/en/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for your GitHub account. Note that if you're using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), be sure to follow the Linux instructions to create your SSH key.
 
-### Step 3: Clone your forked repository
+### Step 3: Clone the repository
 
-> **Important:**
-> Double-check that you [forked the repository](README.md#step-3-fork-the-repository), before trying to clone it locally.
-
-
-
-In GitHub, open your forked repository, then select **Code** > **SSH** > <i class="fa-regular fa-clone"></i> **Copy**.
-
-![An example forked repository with the "Code" dropdown open showing the "Copy" option.](../../assets/img/contributing/github/clone_the_fork.png)In your terminal, open your home directory, then clone the Braze Docs repository.
+In your terminal, open your home directory, then clone the Braze Docs repository.
 
 ```bash
 cd ~
-git clone git@github.com:YOUR-USERNAME/braze-docs.git
+git clone git@github.com:braze-inc/braze-docs.git
 ```
 
-### Step 4: Add a remote for `braze-inc/braze-docs`
-
-To ensure that your changes are pushed to the official Braze Docs repository, instead of your fork, you'll need to set up a new remote in Git.
-
-```bash
-cd ~/braze-docs
-git remote add upstream git@github.com:braze-inc/braze-docs.git
-```
-
-To verify that your new `upstream` remote was added successfully, list your remotes using the `remote` command's `-v` option.
-
-```bash
-$ git remote -v
-origin    git@github.com:YOUR-USERNAME/braze-docs.git (fetch)
-origin    git@github.com:YOUR-USERNAME/braze-docs.git (push)
-upstream  git@github.com:braze-inc/braze-docs.git (fetch)
-upstream  git@github.com:braze-inc/braze-docs.git (push)
-```
-
-### Step 5: Install Ruby
+### Step 4: Install Ruby
 
 To [generate a local site preview](generating_a_preview.md), you'll need Ruby version `3.3.0` installed. In the terminal, open `braze-docs` and check for Ruby version `3.3.0`.
 
@@ -142,7 +116,7 @@ If this version isn't installed, use a [supported version manager](https://www.r
 rbenv install 3.3.0
 ```
 
-### Step 6: Install dependencies {#install-dependencies}
+### Step 5: Install dependencies {#install-dependencies}
 
 If you have multiple versions of Node.js installed, use `asdf` for version management.
 
@@ -166,7 +140,7 @@ Next, install the dependencies for Braze Docs. These dependencies are small prog
 bundle install && asdf install
 ```
 
-### Step 7: Start your local server
+### Step 6: Start your local server
 
 To verify your installation and start your local docs server on localhost `http://127.0.0.1:4000`, run:
 

@@ -1,7 +1,7 @@
 
 # Git and GitHub
 
-> Learn how to use Git and GitHub, so you can contribute to Braze Docs. Approved contributions will be deployed on the following Tuesday or Thursday. Be sure to check out Braze Docs so you can celebrate your hard work. Thanks for contributing!
+> Learn how to use Git and GitHub, so you can contribute to Braze Docs.
 
 > **Tip:**
 > If you're new to Git or the command-line, start with our tutorial instead: [Your first contribution](your_first_contribution.md).
@@ -54,32 +54,16 @@ $ git commit -m "Fixing a typo in the recommended software doc
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-Push your changes to the Braze Docs GitHub repository. Replace `BRANCH_NAME` with the name of your branch.
-
-### forked repository
-
-If you [previously forked the Braze Docs repository](README.md#step-3-fork-the-repository), use `upstream` as your remote. External contributors typically fork the repository.
-
-```bash
-git push -u upstream BRANCH_NAME
-```
-
----
-
-### cloned repository
-
-If you previously cloned the Braze Docs repository, use `origin` as your remote. Internal contributors typically clone the repository.
+Push your changes to the Braze Docs repository. Replace `BRANCH_NAME` with the name of your branch.
 
 ```bash
 git push -u origin BRANCH_NAME
 ```
 
-
-
 The output is similar to the following:
 
 ```bash
-$ git push -u upstream fixing-typo-in-recommended-software
+$ git push -u origin fixing-typo-in-recommended-software
 Enumerating objects: 14, done.
 ...
 To github.com:braze-inc/braze-docs.git
@@ -111,4 +95,4 @@ To request a PR review from a member of the Braze Docs team, go to the [PR you p
 
 ![An example pull request with "docs-team" added as the reviewer.](../../assets/img/contributing/github/add_docs_team_as_reviewers.png)If the Braze Docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). If no changes are required, the team will approve and merge your changes.
 
-Approved contributions will be deployed on the following Tuesday or Thursday. Be sure to check out Braze Docs so you can celebrate your hard work. Thanks for contributing!
+Approved contributions will be deployed on the following Tuesday or Thursday.

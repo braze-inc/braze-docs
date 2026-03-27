@@ -63,7 +63,7 @@ search_tag: Contributing
 
 # Contributing to Braze Docs
 
-> Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we merge community contributions and deploy them to Braze Docs. Use this guide to get your changes merged during our next deployment.
+> Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we deploy contributions to Braze Docs. Use this guide to get your changes merged during our next deployment.
 ```
 
 ---
