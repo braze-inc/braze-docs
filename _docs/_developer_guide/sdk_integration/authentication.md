@@ -836,5 +836,3 @@ No. SDK authentication requires an `external_id`. You can't set it up when only 
 #### Does enabling SDK authentication block unauthenticated activity collection? {#faq-unauthenticated-collection}
 
 No. SDK authentication does not block legitimate anonymous activity collection. It only applies after a profile is identified with `changeUser`.
-
-If an identified user logs out, their previously issued JWT can remain valid until it expires. During that time, requests for that identified profile can still be accepted.
