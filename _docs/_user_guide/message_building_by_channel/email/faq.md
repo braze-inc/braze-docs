@@ -88,7 +88,7 @@ Braze tracks unsubscribe links if the following Liquid is used within emails: {%
 
 If there are more _Unsubscribes_ than users who clicked the unsubscribe link in the email body, list-unsubscribe header actions often explain the gap—a click on the list-unsubscribe header counts as an _Unsubscribe_ but not as a _Click_ on the body link.
 
-If more users clicked the body unsubscribe link than the number of _Unsubscribes_, users may have clicked the link more than once.
+If the total number of clicks on the body unsubscribe link is greater than the number of _Unsubscribes_, users may have clicked the link more than once.
 
 ### Can I add a "view this email in a browser" link to my emails?
 
@@ -132,7 +132,7 @@ When deferred messages are delivered on a different calendar day than the send d
 
 This warning can persist for campaigns duplicated from a campaign that did not have an unsubscribe link. To clear it:
 
-- For HTML emails, open **Plaintext editor**, then **Regenerate from HTML**.
+- For HTML emails, go to the **Plaintext** tab, then select **Regenerate from HTML**.
 - After duplicating, duplicate the variant, then remove the original variant. **Do not** select the original variant, or the warning can carry over.
 
 ### What are reasons why my user hasn't received an email campaign?
