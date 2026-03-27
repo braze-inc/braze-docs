@@ -134,7 +134,7 @@ If we want to launch a campaign, we create a campaign in Braze that generates a 
 
 ### iOS
 
-Check for device eligibility using Liquid. For example, you could set a custom attribute for the device's identifier for vendors (IDFV) on the user profile. Then, use Liquid logic in the iOS push campaign to see if the targeted device matches the IDFV custom attribute. If it matches, abort the push so it is not sent, and clear the value when the user logs in.
+Check for device eligibility using Liquid. For example, you could set a custom attribute for the device's identifier for vendor (IDFV) on the user profile. Then, use Liquid logic in the iOS push campaign to see if the targeted device matches the IDFV custom attribute. If it matches, abort the push so it is not sent, and clear the value when the user logs in.
 
 Another approach is to unregister the push token when a user logs out. This uses the Apple method `unregisterForRemoteNotifications`, which unregisters the device for notifications received via APNs. You can call this on logout. When Braze attempts to send a push message to a device that has been unregistered, Braze will update the token's status to invalid and will no longer attempt to send push on subsequent sends. The user can re-register for remote notifications when they log back in.
 
