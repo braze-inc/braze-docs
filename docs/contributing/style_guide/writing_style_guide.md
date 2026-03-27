@@ -1808,7 +1808,7 @@ For article titles, when possible, avoid gerunds (verbs ending in *-ing*) in fav
 
 For article headings, be concise and consistent across heading titles. For example, if the article’s Heading 1 style defines each step (ex. **Step 1: Create a new push campaign**), then keep this format across the article headings for consistency.
 
-For styling help in Braze Docs, refer to the Contributing page for [Styling examples](../styling_examples.md). 
+For styling help in Braze Docs, refer to the Contributing page for [Styling examples](https://www.braze.com/docs/hidden/styling_examples). 
 
 ##### Numeric subtasks
 

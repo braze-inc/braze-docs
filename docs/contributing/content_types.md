@@ -150,7 +150,7 @@ File in GitHub: [`reference.md`](../../_includes/contributing/templates/referenc
 - Create technical descriptions or information that are necessary to complete a task.
 - Organize the information alphabetically, categorically, or hierarchically.
 - Put references in their respective articles unless they're longer than seems appropriate for a single article or will be referenced by multiple articles. 
-    - If they're only referenced by a single how-to guide and long enough to disrupt the flow of the steps, you can [make them collapsible](styling_examples.md#collapsible-content-test).
+    - If they're only referenced by a single how-to guide and long enough to disrupt the flow of the steps, you can [make them collapsible](https://www.braze.com/docs/hidden/styling_examples#collapsible-content).
 
 ##### Header syntax
 

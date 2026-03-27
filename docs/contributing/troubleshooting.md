@@ -62,7 +62,7 @@ Content for tab two.
 ```
 
 > [!TIP]
-> For more Liquid tag examples, see [Styling examples](styling_examples.md).
+> For more Liquid tag examples, see [Styling examples](https://www.braze.com/docs/hidden/styling_examples).
 
 ### Raw tags
 
