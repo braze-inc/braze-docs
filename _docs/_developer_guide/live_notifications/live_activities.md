@@ -59,7 +59,7 @@ sequenceDiagram
   end
   Note over Server, APNS: Ending a Live Activity
   Server ->> BrazeAPI: POST /messages/live_activity/update
-  Note right of BrazeAPI: Activity can be ended via:<br> - User manually dismisses<br>- Times out after 12 hours<br>- `dismissal_date` is now in the past<br>- Setting `end_activity: true`
+  Note right of BrazeAPI: Activity can be ended via:<br> - User manually dismisses<br>- Times out after 12 hours<br>- Setting `end_activity: true` on `/messages/live_activity/update`
   APNS ->> Device: Live activity is dismissed
 ```
 {% enddetails %}
@@ -309,12 +309,20 @@ See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoin
 
 ### Step 5: End the activity {#end-the-activity}
 
-When a Live Activity is active, it is shown on both a user's lock screen and Dynamic Island. There are a few different ways for a Live Activity to end and be removed from a user's UI. 
+When a Live Activity is active, it is shown on both a user's lock screen and Dynamic Island. To end it through Braze, use the [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) endpoint with `end_activity` set to `true`.
+
+To improve reliability when ending a Live Activity:
+
+1. Send a `/messages/live_activity/update` request with `end_activity` set to `true`.
+2. Optionally include `dismissal_date` in that same `update` request to suggest when iOS should remove the Live Activity UI.
+3. Verify delivery outcomes in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+
+Note that dismissal timing is controlled by iOS. Even after you send a valid end request, removal from the lock screen or Dynamic Island can be delayed or behave differently based on OS-level conditions.
+
+A Live Activity can also end outside of Braze:
 
 * **User dismissal**: A user can manually dismiss a Live Activity.
-* **Time out**: After a default time of 8 hours, iOS will remove the Live Activity from the user's Dynamic Island. After a default time of 12 hours, iOS will remove the Live Activity from the user's lock screen. 
-* **Dismissal date**: You can provide a datetime for a Live Activity to be removed from a user's UI prior to time out. This is defined either in the Activity's `ActivityUIDismissalPolicy` or using the `dismissal_date` parameter in requests to the `/messages/live_activity/update` endpoint.
-* **End activity**: You can set `end_activity` to `true` in a request to the `/messages/live_activity/update` endpoint to immediately end a Live Activity.
+* **Time out**: After a default time of 8 hours, iOS will remove the Live Activity from the user's Dynamic Island. After a default time of 12 hours, iOS will remove the Live Activity from the user's lock screen.
 
 See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) article for full details.
 
