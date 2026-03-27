@@ -140,7 +140,7 @@ A valid role object is a JSON object with the following key value pairs:
 | Archive Placements | `archive_placements` |
 | View Banner Templates | `view_banner_templates` |
 | View Multi Language Settings | `view_multi_language_settings` |
-| Use Operator | `use_operator` |
+| Use BrazeAI Operator<sup>TM</sup> | `use_operator` |
 | View Decisioning Studio Agents | `view_decisioning_studio_agents` |
 | View Decisioning Studio Audience |`view_decisioning_studio_audience` |
 | View Decisioning Studio Conversion Event | `view_decisioning_studio_conversion_event` |
@@ -252,7 +252,7 @@ A valid role object is a JSON object with the following key value pairs:
 | Edit Reports | `edit_reports` |
 | View Banner Templates | `view_banner_templates` |
 | View Multi Language Settings | `view_multi_language_settings` |
-| Use Operator | `use_operator` |
+| Use BrazeAI Operator<sup>TM</sup> | `use_operator` |
 | View Decisioning Studio Agents | `view_decisioning_studio_agents` |
 | View Decisioning Studio Conversion Event | `view_decisioning_studio_conversion_event` |
 | Launch Campaigns | `launch_campaigns` |
