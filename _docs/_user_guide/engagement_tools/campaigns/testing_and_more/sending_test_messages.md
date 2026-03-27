@@ -139,7 +139,7 @@ From there, you can review your message settings and content to drill down and d
 
 ![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
-If your email campaign includes a large image and isn't displaying as expected in Outlook, consider decreasing the size of your image with an image resizing tool instead of using CSS or HTML.
+If your email campaign includes a large image and isn't displaying as expected in Outlook, consider reducing the actual file dimensions of the image with an image editing or resizing tool instead of only scaling it with CSS or HTML.
 
 {% endtab %}
 {% tab In-app message %}
