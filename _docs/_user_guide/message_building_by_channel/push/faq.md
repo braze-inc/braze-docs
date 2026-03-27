@@ -48,7 +48,7 @@ If you want the push token reassigned to the original user:
 
 ### Why does "Open web URL inside mobile app" always open the app when I'm testing a draft campaign?
 
-When a campaign is still in **Draft** status, and you send a test push, tapping the notification always opens the app first, regardless of whether the **Open web URL inside mobile app** option is selected or cleared. This is expected behavior for test sends from draft campaigns. When the campaign is **Live**, the on-click behavior works as configured.
+When a campaign is still in **Draft** status, and you send a test push, tapping the notification always opens the app first, regardless of whether the **Open web URL inside mobile app** option is selected or cleared. When the campaign is **Live**, the on-click behavior works as configured.
 
 If you selected **Open web URL** without the **Inside App** option, the link opens directly in the device's default browser. If you selected **Open web URL inside mobile app**, the link opens in an in-app web view.
 
