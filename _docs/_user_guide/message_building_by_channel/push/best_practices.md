@@ -106,9 +106,11 @@ Additionally, if a user profile has no valid or registered push token for any ot
 When building segments or targeting push campaigns, you can filter by **Push Enabled** or **Background Push Enabled**. Understanding the difference helps you target the right users:
 
 - **Push Enabled (foreground):** The user has a valid push token and can receive push notifications that are displayed when the app is in the foreground or background. This is the typical case for users who have granted notification permission and have not disabled push at the device level. Use this filter when you want to reach users who can see and interact with push notifications.
-- **Background Push Enabled:** The user has a valid background (silent) push token but may not have a valid foreground push token. Background push is used for non-display purposes such as uninstall tracking, syncing data, or waking the app. Users who have turned off visible notifications at the device level may still be "Background Push Enabled" if your app supports silent push. Use this filter when you need to reach devices for background-only use cases (for example, uninstall tracking) or when you want to exclude users who have no push capability at all.
+- **Background Push Enabled:** The user has a valid background (silent) push token, but may not have a valid foreground push token. Background push is used for non-display purposes such as uninstall tracking, syncing data, or waking the app. Users who have turned off visible notifications at the device level may still be "Background Push Enabled" if your app supports silent push. Use this filter when you need to reach devices for background-only use cases (for example, uninstall tracking) or when you want to exclude users who have no push capability at all.
 
-In segmentation, **Push Enabled** corresponds to users who can receive displayable push notifications. **Background Push Enabled** includes those users and may also include users who only have background/silent push capability. Choose the filter that matches your campaign goal: use Push Enabled for campaigns that display a notification, and Background Push Enabled when you need to include devices that support only silent push.
+In segmentation, **Push Enabled** corresponds to users who can receive displayable push notifications. **Background Push Enabled** includes those users and may also include users who only have background/silent push capability. 
+
+Choose the filter that matches your campaign goal: use **Push Enabled** for campaigns that display a notification, and **Background Push Enabled** to include devices that support only silent push.
 
 ## Implement a sunset policy for unresponsive users
 
