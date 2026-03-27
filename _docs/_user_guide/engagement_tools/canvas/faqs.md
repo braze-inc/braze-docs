@@ -5,6 +5,7 @@ page_order: 8
 alias: "/canvas_v2_101/"
 description: "This article provides answers to frequently asked questions about Canvas."
 tool: Canvas
+toc_headers: h2 
 
 ---
 
@@ -12,15 +13,15 @@ tool: Canvas
 
 > This article provides answers to some frequently asked questions about Canvas.
 
+## Building and editing Canvas
+
 ### How many steps I can include in a Canvas?
 
 You can add up to 200 steps in a Canvas.
 
-### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
+### What's the difference between a component and a step?
 
-We enqueue a job for each step—they run at around the same time, and one of them "wins". In practice, this may be sorted somewhat evenly, but it's likely to have at least a slight bias toward the step that was created first. 
-
-Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) filter.
+A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
 
 ### Can I launch a Canvas with disconnected steps?
 
@@ -31,6 +32,26 @@ Yes. You can also save Canvases post-launch with disconnected steps.
 If a user is in a disconnected step of your Canvas workflow, they will advance to the subsequent step if there is one, and the step's setting will dictate how the user should advance. This is intended to allow users to make changes to steps without having to directly connect them to the rest of the Canvas. This also gives you some room for testing before going live immediately, effectively allowing for saving a draft.
 
 We recommend checking the analytics view for users pending in a Canvas step before disconnecting a step.
+
+### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
+
+We enqueue a job for each step—they run at around the same time, and one of them "wins". In practice, this may be sorted somewhat evenly, but it's likely to have at least a slight bias toward the step that was created first. 
+
+Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) filter.
+
+### How are Canvas audiences evaluated? 
+
+By default, filters and segments for full steps in the Canvas are checked at send time. The Decision Split step performs an evaluation right after receiving a previous step (or before a delay).
+
+### When does an exception event trigger?
+
+Exception events only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger. If you want to exclude users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
+
+### How does editing a Canvas affect users already in the Canvas?
+
+If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaluated for the step yet.
+
+For more information on what you can edit after launch, refer to [Changing your Canvas after launch]({{site.baseurl}}/post-launch_edits/).
 
 ### What happens when you stop a Canvas?
 
@@ -44,6 +65,8 @@ When you stop a Canvas, the following applies:
 
 Depending on what you’re looking to accomplish with your Canvas, you may need different approaches in how you build your user journey. The flexibility of Canvas allows you to map user journeys for any stage of the user lifecycle. Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) for several examples of streamlined approaches to creating effective user journeys.
 
+## Messages and delivery
+
 ### When are in-app messages in Canvas sent?
 
 In-app messages are sent upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they'll still receive the in-app message upon their next session start as long as the in-app message hasn't expired yet.
@@ -54,15 +77,13 @@ It's possible for a user to start a session before the Canvas is stopped, but no
 Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they'll receive it (unless the time they should've been sent the message has passed, then they won't receive it).
 {% endalert %}
 
-### When does an exception event trigger?
+### Why may a Canvas show zero Sends even though impressions are logged?
 
-Exception events only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger. If you want to exclude users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
+If _Messages sent_ are always zero for a Canvas containing an in-app message step, this is because in-app message delivery works differently from other messaging channels.
 
-### How does editing a Canvas affect users already in the Canvas?
+In-app messages are "pulled" by the SDK, rather than "pushed" from Braze. In-app messages for eligible users are delivered automatically on session start and "wait" for the trigger event before displaying. Because eligible users receive the message when they start a session, Braze doesn't report this as a send event. When users perform the trigger event, the message displays and Braze logs an impression and marks the Canvas step (or campaign) as received on the user profile. Consequently, the _Sends_ total will be zero for in-app messages.
 
-If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaluated for the step yet.
-
-For more information on what you can edit after launch, refer to [Changing your Canvas after launch]({{site.baseurl}}/post-launch_edits/).
+## Analytics and conversions
 
 ### How are user conversions tracked in a Canvas?
 
@@ -105,9 +126,9 @@ There is a one-step Canvas with Quiet Hours enabled:
 - Variant conversion rate or summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message, as an aggregate total. 
 - Step conversion rate reflects how many individuals received that message step and completed any of the outlined conversion events.
 
-### What's the difference between a component and a step?
+### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
 
-A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
+It's common for a Canvas variant's conversion total to be greater than the sum of its step total. This occurs because a user can perform a conversion event for a variant as soon as they enter the variant. However, this same conversion event doesn't count toward a Canvas step. So, any user who enters the Canvas, and performs the conversion event before receiving the first Canvas step, will be counted toward the variant conversion total, and not toward the step total. The same is true for a user who enters the Canvas but exits the Canvas before receiving any step.
 
 ### How can I view analytics for each of my Canvas components?
 
@@ -125,17 +146,11 @@ The number of users entering a Canvas may differ from your expected number becau
 
 While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate a report of these metrics.
 
-### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
-
-It's common for a Canvas variant's conversion total to be greater than the sum of its step total. This occurs because a user can perform a conversion event for a variant as soon as they enter the variant. However, this same conversion event doesn't count toward a Canvas step. So, any user who enters the Canvas, and performs the conversion event before receiving the first Canvas step, will be counted  the variant conversion total, and not toward the step total. The same is true for a user who enters the Canvas but exits the Canvas before receiving any step.
-
-### How are Canvas audiences evaluated? 
-
-By default, filters and segments for full steps in the Canvas are checked at send time. The Decision Split step performs an evaluation right after receiving a previous step (or before a delay).
-
 {% alert tip %}
 For further assistance with Canvas troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
 {% endalert %}
+
+## Segmentation
 
 ### What is the difference between "Has not entered Canvas variation" and "Is not in Canvas control group"?
 
@@ -150,6 +165,8 @@ The user never entered a variation path of a specific Canvas. All users who aren
 The user entered the Canvas, but isn't in the control group and consequently received a variation. This only includes users who entered the Canvas.
 
 Note that variation assignment occurs at Canvas entry. If a user hasn't entered a Canvas, they won't be assigned any variant. In other words, they won't be in the control group or a variant.
+
+## Original Canvas editor
 
 {% details Expand for original Canvas editor FAQs %}
 

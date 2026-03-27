@@ -54,3 +54,15 @@ To prevent this, during your campaign setup, select **Re-evaluate campaign eligi
 ### How does Braze calculate an in-app message expiration set to "after 1 day(s)"?
 
 Braze calculates an expiration time of one day as 24 hours after users are eligible to receive a message.
+
+### How can in-app messages be dismissed, and what are the associated click events?
+
+Assuming there are no customizations, these are the different ways a user can dismiss an in-app message and the associated click events.
+
+| Dismissal | Click event |
+| - | - |
+| Outside tap dismissals (iOS) | If the user taps outside of the message (and outside tap dismissals are enabled), the dismissal is only registered as an impression, not a body click. |
+| App is closed upon receiving the message (iOS or Android) | This registers as an impression, not a body click. |
+| Tap "X" to close the message (iOS or Android) | This registers as an impression, not a body click. |
+| Tap on the message body (iOS or Android) | This registers as an impression and body click. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

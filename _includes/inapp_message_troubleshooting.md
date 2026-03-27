@@ -23,6 +23,7 @@
 2. Was a different, higher priority in-app message displayed in place of the expected message?
 3. Are you on a recent version of the SDK? Some in-app message types have SDK version requirements.
 4. Have sessions been integrated properly in your integration? Are session analytics working for this app?
+5. Are you using a customized components library, which may interfere with how in-app messages display?
 
 ### My in-app message took a lot of time to appear
 
@@ -46,6 +47,15 @@ If you have set an in-app message delegate to manually handle message display or
 If you have set an in-app message delegate to manually handle message display or click actions, you must manually log clicks and impressions on the in-app message.
 {% endif %}
 
+### _Impressions_ are greater than _Unique Impressions_
+
+This is expected behavior and can happen when:
+
+- Even if re-eligibility is turned off, users who received the campaign may have more than one device. The campaign trigger updates on the next session start, so a device won't know if another device has already triggered the campaign until the user starts a new session.
+- If your in-app message has a scheduled delay for a few minutes after the trigger event occurs, users may have received the message more than once.
+
+For more information on re-eligibility, see [Re-eligibility for campaigns and Canvas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
+
 ### Impressions are lower than expected
 
 1. Triggers take time to sync to the device on session start, so there can be a race condition if users log an event or purchase right after they start a session. One potential workaround could be changing the campaign to trigger off of session start, then segmenting off the intended event or purchase. Note that this would deliver the in-app message on the next session start after the event has occurred.
@@ -54,12 +64,19 @@ If you have set an in-app message delegate to manually handle message display or
 
 ![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period]({% image_buster /assets/img_archive/trouble5.png %})
 
+Other reasons include:
+
+- Users haven't viewed the in-app message, so impressions aren't logged.
+- Multiple in-app messages are intercepting each other (such as multiple high-priority messages).
+- If the message is in a Canvas, users may be entering a Delay step that is longer than the session timeout before receiving the in-app message.
+
 ### Impressions are lower than they used to be
 
 1. Ensure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
 ![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign]({% image_buster /assets/img_archive/trouble4.png %})
 
+{: start="2"}
 2. Ensure you didn't reuse your trigger event in a separate in-app message campaign with a higher priority.
 
 ## Advanced Troubleshooting {#troubleshooting-in-app-advanced}

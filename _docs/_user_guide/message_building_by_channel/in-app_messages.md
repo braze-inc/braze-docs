@@ -67,20 +67,7 @@ In addition to these default message templates, you can also further customize y
 
 ## Templated in-app messages
 
-In-app messages are delivered as templated in-app messages when **Re-evaluate campaign eligibility before displaying** is selected or if any of the following Liquid tags exist in the message:
-
-- `canvas_entry_properties`
-- `connected_content`
-- SMS variables such as {% raw %}`{sms.${*}}`{% endraw %}
-- `catalog_items`
-- `catalog_selection_items`
-- `event_properties`
-
-This means that during session start, the device will receive the trigger of that in-app message instead of the entire message. When the user triggers the in-app message, the user's device will make a network request to fetch the actual message.
-
-{% alert note %}
-The message will not be delivered if the device doesn't have access to the internet. The message might not be delivered if the Liquid logic takes too long to resolve.
-{% endalert %}
+{% multi_lang_include in-app_messages/templated_iams.md %}
 
 ## Abort behavior
 
@@ -132,5 +119,7 @@ This table compares the in-app message flows that Sam experienced:
 ## More resources
 
 Before you get started with creating your own in-app message campaigns—or using in-app messages in a multi-channel campaign—we highly recommend that you check out our [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). This guide covers targeting, content, and conversion questions you should consider when building in-app messages.
+
+To chain two in-app messages in one session (for example, session start then a second message after a button press), see [Chaining two in-app messages in one session]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/#chaining-two-in-app-messages-in-one-session) in the developer guide.
 
 {% multi_lang_include alerts/important_alerts.md alert='network dependency' %}

@@ -44,6 +44,10 @@ For apps built with wrapper frameworks (for example, Flutter or Cordova), Braze 
 
 UTM tags can be embedded into both regular HTTP (web) links and deep links and tracked using Google Analytics.
 
+#### UTM tag calculations
+
+Braze reports _Total Clicks_ for all links in a campaign or Canvas step, which can include links that don't have UTM tags. This means you may see a different (often lower) result in your Google Analytics campaign tracking links compared to the _Total Clicks_ displayed in your campaign performance or Report Builder.
+
 ### Using UTM tags with Braze
 
 If you want to use UTM tags with regular HTTP (web) links (for example, to do campaign attribution for your email campaigns) and your organization already uses Google Analytics, you can use [Google's URL builder](https://ga-dev-tools.google/ga4/campaign-url-builder/) to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
