@@ -78,6 +78,8 @@ Certain fields might take longer to display their most recent state after a camp
 If complete consistency is required, we recommend waiting an hour from the last update to these fields before sending out your messaging to your users.
 {% endalert %}
 
+In some cases, `campaign_id` and `canvas_id` (and their name fields) may be omitted from a message engagement event—for example, when the event is not tied to a specific campaign or Canvas step. If you don't see these fields in a given event, the event type or context may not include them.
+
 {% api %}
 ## Agent executed events {#agent-executed-events}
 
