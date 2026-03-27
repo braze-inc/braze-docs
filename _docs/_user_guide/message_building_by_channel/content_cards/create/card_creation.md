@@ -113,6 +113,10 @@ This section describes the main differences between card creation at campaign la
 
 ## Considerations
 
+### Using Canvas context properties
+
+When personalizing Content Cards with [Canvas context properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/), use the `${...}` syntax (for example, {%raw%}`{{context.${property_name}}}`{%endraw%}). Dot notation without the syntax (for example, {%raw%}`{{context.property_name}}`{%endraw%}) may not resolve correctly in Content Cards, even if it works in other channels like push and email.
+
 ### Changing card creation after launch
 
 Braze recommends not changing how cards are created after a campaign has launched. Due to the differences in how Messages Sent is calculated between the two card creation types, changing how cards are created after the campaign has launched can affect the accuracy of your send volume.
