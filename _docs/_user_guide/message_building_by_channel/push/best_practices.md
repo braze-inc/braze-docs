@@ -101,7 +101,7 @@ If a user doesn't have a valid foreground push token for an app (that is, they t
 
 Additionally, if a user profile has no valid or registered push token for any other apps, their `Foreground Push Enabled` filter in segmentation will also be false.
 
-### Push Enabled versus Background Push Enabled
+### Push enabled versus background push enabled
 
 When building segments or targeting push campaigns, you can filter by **Push Enabled** or **Background Push Enabled**. Understanding the difference helps you target the right users:
 
