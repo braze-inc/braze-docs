@@ -61,7 +61,11 @@ An email feedback loop (FBL) allows senders to monitor their reputation by ident
 
 ### What happens when an email campaign or Canvas is stopped?
 
-Users will be prevented from entering the Canvas, and no further messages will be sent out. For email campaigns and Canvases, the stop button does not immediately stop the send. This is because when the send requests are sent, they cannot be stopped from being delivered to the user. While Braze won't send further requests once the campaign or Canvas is stopped, analytics may still increase while the ESP finishes processing requests already in flight.
+Users are prevented from entering the Canvas, and no further messages are sent out. 
+
+For email campaigns and Canvases, the stop button does not immediately stop the send. When the send requests are sent, they cannot be stopped from being delivered to the user, which may happen after some delay. 
+
+While Braze won't send further requests once the campaign or Canvas is stopped, analytics may still increase while the ESP finishes processing requests already in flight.
 
 ### Why am I seeing more email clicks than opens?
 
