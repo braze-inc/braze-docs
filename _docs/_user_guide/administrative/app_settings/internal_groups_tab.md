@@ -93,11 +93,7 @@ Seed Groups aren't available for API campaigns, but you can include Seed Groups 
 
 After creating an internal group and tagging it to be used as a Seed Group, select it from the **Target Audiences** step of the campaign editor, or on the **Send Settings** step in a Canvas.
 
-{% alert note %}
-Seed emails have `[SEED]` prepended to the subject line.
-{% endalert %}
-
-Note that seed emails **do not**:
+Seed emails have `[SEED]` prepended to the subject line. Note that seed emails **do not**:
 
 - Increment sends in the dashboard analytics.
 - Impact email analytics or retargeting. 
