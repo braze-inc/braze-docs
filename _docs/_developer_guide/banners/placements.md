@@ -31,7 +31,7 @@ These are the minimum SDK versions needed to create Banner placements:
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-Placements can be refreshed by calling the refresh methods described below. These placements will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
+Placements can be refreshed by calling the refresh methods described below. If `subscribeToBannersUpdates` is active, the SDK automatically re-requests your cached placement IDs at the start of each new session and when you call `changeUser`. This automatic refresh does not consume a rate limiting token.
 
 {% alert tip %}
 Refresh placements as soon as possible to avoid delays in downloading or displaying Banners.
