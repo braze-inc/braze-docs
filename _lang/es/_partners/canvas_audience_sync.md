@@ -4,8 +4,8 @@ article_title: Canvas Audience Sync
 page_order: 8
 
 guide_top_header: "Sincronización de audiencias en Canvas"
-guide_top_text: "La característica Braze Audience Sync amplía el alcance de tus campañas a muchas de las principales tecnologías sociales y publicitarias. Esta página de destino es donde los desarrolladores y especialistas en marketing pueden encontrar recursos sobre los socios de sincronización de Canvas disponibles."
-description: "Esta página de destino es donde los desarrolladores y especialistas en marketing pueden encontrar recursos sobre los socios de sincronización de Canvas disponibles."
+guide_top_text: "La característica Braze Audience Sync amplía el alcance de tus campañas a muchas de las principales tecnologías sociales y publicitarias. En esta página de inicio, los desarrolladores y especialistas en marketing pueden encontrar recursos sobre los socios de sincronización de Canvas disponibles."
+description: "En esta página de inicio, los desarrolladores y especialistas en marketing pueden encontrar recursos sobre los socios de sincronización de Canvas disponibles."
 
 layout: dev_guide
 
@@ -18,7 +18,7 @@ guide_featured_list:
     link: /docs/partners/audience_sync_faq/
     image: /assets/img/braze_icons/annotation-question.svg
 
-guide_menu_title: "Available sync partners"
+guide_menu_title: "Socios de sincronización disponibles"
 guide_menu_list:
   - name: Criteo Audience Sync
     link: /docs/audience_sync_criteo/
@@ -29,7 +29,7 @@ guide_menu_list:
   - name: Google Audience Sync
     link: /docs/google_audience_sync/
     image: /assets/img/braze_icons/google.svg
-  - name: Sincronización de audiencias de LinkedIn
+  - name: LinkedIn Audience Sync
     link: /docs/linkedin_audience_sync/
     image: /assets/img/braze_icons/linkedin.svg
   - name: Pinterest Audience Sync
@@ -38,6 +38,9 @@ guide_menu_list:
   - name: Snapchat Audience Sync
     link: /docs/audience_sync_snapchat/
     image: /assets/img/braze_icons/snapchat.svg
+  - name: The Trade Desk Audience Sync
+    link: /docs/trade_desk_audience_sync/
+    image: /assets/img/braze_icons/the_trade_desk.svg
   - name: TikTok Audience Sync
     link: /docs/tiktok_audience_sync/
     image: /assets/img/braze_icons/tiktok.svg
@@ -45,5 +48,5 @@ guide_menu_list:
 ---
 
 {% alert important %}
-La disponibilidad de las sincronizaciones de audiencia Braze con Criteo, Pinterest, Snapchat y TikTok depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.
+La disponibilidad de las sincronizaciones de audiencia de Braze con Criteo, Pinterest, Snapchat y TikTok depende de tu paquete de Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.
 {% endalert %}

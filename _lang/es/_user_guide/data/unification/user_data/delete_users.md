@@ -5,7 +5,6 @@ page_order: 4.2
 toc_headers: h2
 description: "Aprende a eliminar un usuario individual o un segmento de usuarios directamente a través del panel de Braze."
 alias: /delete_users/
-hidden: true
 ---
 
 # Borrar usuarios
@@ -13,12 +12,12 @@ hidden: true
 > Aprende a eliminar un usuario individual o un segmento de usuarios directamente a través del panel de Braze.
 
 {% alert important %}
-El acceso anticipado a esta característica está temporalmente cerrado. Ponte en contacto con tu administrador del éxito del cliente para obtener más detalles.
+La eliminación de usuarios se encuentra actualmente en acceso anticipado. Ponte en contacto con tu administrador del éxito del cliente si te interesa participar.
 {% endalert %}
 
 ## Requisitos previos
 
-Debes ser administrador para eliminar usuarios.
+Para eliminar usuarios, debes ser administrador o tener permisos de **Delete User**.
 
 ## Acerca de la eliminación de usuarios
 
@@ -37,7 +36,7 @@ Puedes eliminar un [usuario individual](#delete-individual) o un [segmento de us
 
 ### Eliminar a una persona {#delete-individual}
 
-Para eliminar un usuario individual de Braze, ve a **Audiencia** > **Búsqueda **de **usuarios**, luego busca y selecciona un usuario. Si vas a eliminar un perfil de usuario duplicado, comprueba que has seleccionado el correcto.
+Para eliminar un usuario individual de Braze, ve a **Audiencia** > **Buscar usuarios**, luego busca y selecciona un usuario. Si vas a eliminar un perfil de usuario duplicado, comprueba que has seleccionado el correcto.
 
 ![La página «Buscar usuarios» en Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
 
@@ -45,7 +44,7 @@ Para eliminar un usuario individual de Braze, ve a **Audiencia** > **Búsqueda *
 Las eliminaciones de usuarios individuales son permanentes: los perfiles no se pueden recuperar una vez eliminados.  
 {% endalert %}
 
-En la página de perfil, selecciona<i class="fa-solid fa-ellipsis-vertical"></i>**Mostrar opciones** > **Eliminar usuario**. Ten en cuenta que pueden pasar unos minutos hasta que el usuario se elimine por completo de Braze.
+En la página de perfil, selecciona <i class="fa-solid fa-ellipsis-vertical"></i> **Mostrar opciones** > **Eliminar usuario**. Ten en cuenta que pueden pasar unos minutos hasta que el usuario se elimine por completo de Braze.
 
 ![Un usuario en Braze con el menú de puntos suspensivos verticales abierto, que muestra la opción para eliminar al usuario.]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
 
@@ -55,7 +54,7 @@ Si aún no lo has hecho, [crea un segmento]({{site.baseurl}}/user_guide/engageme
 
 En Braze, ve a **Audiencia** > **Administrar audiencia** y, a continuación, selecciona la pestaña **Eliminar usuarios**.
 
-![La pestaña «Eliminar usuarios» en la sección «Gestionar audiencia» del panel de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![La pestaña «Eliminar usuarios» en la sección «Administrar audiencia» del panel de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
 Selecciona **Eliminar usuarios**, elige el segmento que deseas eliminar y, a continuación, selecciona **Siguiente**.
 
@@ -68,7 +67,7 @@ Escribe **DELETE** para confirmar tu solicitud y, a continuación, selecciona **
 Los usuarios de este segmento no se eliminarán inmediatamente. En su lugar, se marcarán como pendientes de eliminación durante los próximos 7 días. Pasado este tiempo, se eliminarán y te enviaremos un correo electrónico para informarte.
 
 {% alert tip %}
-Para garantizar que estos usuarios concretos se eliminen independientemente de los cambios en los segmentos, se crea automáticamente un filtro de segmento denominado **«Pendiente de eliminación**». Puedes [utilizar este filtro]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) para comprobar el estado de las eliminaciones pendientes.
+Para garantizar que estos usuarios concretos se eliminen independientemente de los cambios en los segmentos, se crea automáticamente un filtro de segmento denominado **Pendiente de eliminación**. Puedes [utilizar este filtro]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) para comprobar el estado de las eliminaciones pendientes.
 {% endalert %}
 
 ## Confirmación de eliminaciones de segmentos
@@ -83,15 +82,15 @@ Si no confirmas dentro del plazo indicado en el correo electrónico, la solicitu
 
 Tienes 7 días para cancelar las eliminaciones de segmentos pendientes. Para cancelar, ve a **Audiencia** > **Administrar audiencia** y, a continuación, selecciona la pestaña **Eliminar usuarios**.
 
-![La pestaña «Eliminar usuarios» en la sección «Gestionar audiencia» del panel de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![La pestaña «Eliminar usuarios» en la sección «Administrar audiencia» del panel de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
-Junto a una eliminación de segmento pendiente, selecciona<i class="fa-solid fa-eye"></i>  para abrir los detalles del registro de eliminación.
+Junto a una eliminación de segmento pendiente, selecciona <i class="fa-solid fa-eye"></i> para abrir los detalles del registro de eliminación.
 
 ![Una eliminación de segmento pendiente en la pestaña «Eliminar usuarios».]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
 En los detalles del registro de eliminación, selecciona **Cancelar eliminación**.
 
-![La ventana «Detalles de eliminación de registro» en la pestaña «Eliminar usuarios».]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
+![La ventana «Detalles del registro de eliminación» en la pestaña «Eliminar usuarios».]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
 
 {% alert tip %}
 Cuando se está realizando una eliminación masiva de usuarios, puedes cancelarla en cualquier momento. Sin embargo, los usuarios que ya hayan sido eliminados antes de la cancelación no podrán ser restaurados.
@@ -99,41 +98,41 @@ Cuando se está realizando una eliminación masiva de usuarios, puedes cancelarl
 
 ## Comprobación del estado de eliminación {#status}
 
-Puedes comprobar el estado de una eliminación utilizando [filtros de segmentos](#segment-filters), la página [de gestión de audiencias](#manage-audience) o [los informes de eventos de seguridad](#security-event-report).
+Puedes comprobar el estado de una eliminación utilizando [filtros de segmentos](#segment-filters), la página de [administrar audiencia](#manage-audience) o los [informes de eventos de seguridad](#security-event-report).
 
 ### Filtros de segmentos
 
-Cuando solicitas que se elimine un segmento de usuarios, se crea automáticamente un [filtro de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) denominado **«Pendiente de eliminación**». Puedes utilizarlo para:
+Cuando solicitas que se elimine un segmento de usuarios, se crea automáticamente un [filtro de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) denominado **Pendiente de eliminación**. Puedes utilizarlo para:
 
 - Ver el conjunto exacto de usuarios vinculados a una fecha de ejecución de eliminación específica.
-- Excluye a esos usuarios de las campañas para que no reciban mensajes antes de su eliminación.
-- Exporta la lista si la necesitas para fines de cumplimiento normativo o mantenimiento de registros.
+- Excluir a esos usuarios de las campañas para que no reciban mensajes antes de su eliminación.
+- Exportar la lista si la necesitas para fines de cumplimiento normativo o mantenimiento de registros.
 
-### Administrar la audiencia
+### Administrar audiencia
 
 {% alert note %}
-Para obtener la lista exacta de usuarios que se eliminarán, utiliza el [filtro del segmento de Eliminación pendiente](#segment-filters).
+Para obtener la lista exacta de usuarios que se eliminarán, utiliza el [filtro del segmento Pendiente de eliminación](#segment-filters).
 {% endalert %}
 
 Ve a **Audiencia** > **Administrar audiencia** y, a continuación, selecciona la pestaña **Eliminar usuarios**.
 
-![La pestaña «Eliminar usuarios» en la sección «Gestionar audiencia» del panel de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![La pestaña «Eliminar usuarios» en la sección «Administrar audiencia» del panel de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
 En esta página, puedes encontrar la siguiente información general sobre todas las eliminaciones actuales y pendientes:
 
 | Campo | Descripción |
 |-------|-------------|
-| Fecha de la solicitud | La fecha en que se realizó la solicitud originalmente. Úsalo para filtrar los perfiles pendientes de eliminación con el filtro **Eliminación pendiente**. |
+| Fecha de la solicitud | La fecha en que se realizó la solicitud originalmente. Úsala con el filtro **Pendiente de eliminación** para obtener la lista de perfiles pendientes de eliminación. |
 | Solicitante | El usuario que inició la solicitud de eliminación. |
 | Nombre del segmento | El nombre del segmento utilizado para seleccionar los usuarios pendientes de eliminación. |
 | Estado | Muestra si la solicitud de eliminación está pendiente, en curso o completada. |  
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-Para obtener más detalles sobre una solicitud específica, selecciona<i class="fa-solid fa-eye"></i>  para mostrar los detalles del registro de eliminación. Aquí también puedes [cancelar las eliminaciones de segmentos pendientes](#cancel).
+Para obtener más detalles sobre una solicitud específica, selecciona <i class="fa-solid fa-eye"></i> para mostrar los detalles del registro de eliminación. Aquí también puedes [cancelar las eliminaciones de segmentos pendientes](#cancel).
 
 ![Una eliminación de segmento pendiente en la pestaña «Eliminar usuarios».]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
-### Informe de sucesos de seguridad
+### Informe de eventos de seguridad
 
 También puedes consultar el estado de las eliminaciones anteriores descargando un informe de eventos de seguridad. Para obtener más información, consulta [Configuración de seguridad]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#security-event-report).
 
@@ -141,29 +140,29 @@ También puedes consultar el estado de las eliminaciones anteriores descargando 
 
 ### ¿Puedo eliminar segmentos con más de 100 millones de usuarios?
 
-No. No puedes eliminar segmentos con más de 100 millones de usuarios. Si necesitas ayuda para eliminar un segmento de este tamaño, ponte en contacto con [support@braze.com](mailto:support@braze.com).
+No. No puedes eliminar segmentos con más de 100 millones de usuarios. Si necesitas ayuda para eliminar un segmento de este tamaño, ponte en contacto con [soporte de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support).
 
-### Parece que no puedo eliminar 100 millones de usuarios y solo puedo eliminar 10 millones. ¿Es esto un error?
+### Parece que no puedo eliminar 100 millones de usuarios y solo puedo eliminar 10 millones. ¿Es un error?
 
-No, esto no es un error. Algunos clientes tienen un límite en el número de usuarios que pueden eliminar durante el programa de acceso anticipado (EA).
+No, no es un error. Algunos clientes tienen un límite en el número de usuarios que pueden eliminar durante el programa de acceso anticipado (EA).
 
 A medida que avanza el programa EA, esta capacidad está diseñada para aumentar hasta que todos los clientes puedan eliminar hasta 100 millones de usuarios.
 
 Si deseas aumentar esta capacidad, ponte en contacto con tu director de cuentas de Braze. Las solicitudes se conceden a discreción del equipo de producto.
 
-### ¿La automatización de la fusión de usuarios afecta a la eliminación de usuarios?
+### ¿La fusión automatizada de usuarios afecta a la eliminación de usuarios?
 
-Si una fusión programada incluye perfiles de usuario pendientes de eliminación, Braze omite esos perfiles y no los fusiona. Para fusionar estos perfiles, debes eliminarlos de la lista de eliminación.
+Si una fusión programada incluye perfiles de usuario pendientes de eliminación, Braze omite esos perfiles y no los fusiona. Para fusionar estos perfiles, debes quitarlos de la lista de eliminación.
 
 ### ¿Qué ocurre con los datos enviados a los usuarios pendientes de eliminación?
 
 Los datos enviados desde sistemas externos o SDK siguen siendo aceptados, pero los usuarios serán eliminados según lo previsto, independientemente de su actividad.
 
-### ¿Desencadenarán los lienzos y las campañas para los usuarios pendientes de eliminación?
+### ¿Se desencadenan Canvas y campañas para los usuarios pendientes de eliminación?
 
-Sí. Sin embargo, puedes añadir un filtro de inclusión de segmento para excluir a todos los usuarios con el [filtro de segmento](#segment-filters) **Eliminación pendiente**.
+Sí. Sin embargo, puedes añadir un filtro de inclusión de segmento para excluir a todos los usuarios con el [filtro de segmento](#segment-filters) **Pendiente de eliminación**.
 
-### ¿Puedes recuperar perfiles de usuario eliminados?
+### ¿Puedo recuperar perfiles de usuario eliminados?
 
 La eliminación de usuarios individuales es permanente.
 

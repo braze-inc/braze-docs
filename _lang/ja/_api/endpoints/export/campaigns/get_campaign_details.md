@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:キャンペーンのエクスポートの詳細"
+nav_title: "取得:キャンペーンの詳細のエクスポート"
 article_title: "取得:キャンペーンの詳細のエクスポート"
 search_tag: エンドポイント
 page_order: 4
@@ -9,7 +9,7 @@ description: "この記事では、「キャンペーンの詳細のエクスポ
 
 ---
 {% api %}
-# キャンペーンのエクスポートの詳細
+# キャンペーンの詳細のエクスポート
 {% apimethod get %}
 /campaigns/details
 {% endapimethod %}
@@ -22,7 +22,7 @@ description: "この記事では、「キャンペーンの詳細のエクスポ
 
 ## 前提条件
 
-このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.details`の権限が必要です。
+このエンドポイントを使用するには、`campaigns.details` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
 
 ## レート制限
 
@@ -30,13 +30,14 @@ description: "この記事では、「キャンペーンの詳細のエクスポ
 
 ## リクエストパラメーター
 
-| パラメーター | 必須かどうか | データ型 | 説明 |
+| パラメーター | 必須 | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | 必須かどうか | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンリストのエクスポート」エンドポイント](#campaign-list-endpoint)を使用することもできます。 |
-| `post_launch_draft_version` | オプション | ブール値 | 開始後の下書きがあるメッセージの場合、これを`true` に設定すると、利用可能な下書きの変更が表示されます。デフォルトは `false` です |
+| `campaign_id` | 必須 | 文字列 | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンリストのエクスポート」エンドポイント](#campaign-list-endpoint)を使用することもできます。 |
+| `post_launch_draft_version` | オプション | ブール値 | 開始後の下書きがあるメッセージの場合、これを `true` に設定すると、利用可能な下書きの変更が表示されます。デフォルトは `false` です。 |
+| `include_has_translatable_content` | オプション | ブール値 | `true` に設定すると、API レスポンスに各メッセージの `has_translatable_content` フィールドが含まれます。デフォルトは `false` です。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 例のリクエスト
+## リクエスト例
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
@@ -44,7 +45,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ```
 {% endraw %}
 
-## 回答
+## 応答
 
 ```json
 {
@@ -65,8 +66,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
     "teams" : (array) the names of the Teams associated with the campaign,
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
-            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_cards, trigger_in_app_message, or sms,
-            "name": (string) the name of the message in the dashboard (eg., "Variation 1")
+            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
+            "name": (string) the name of the message in the dashboard (for example, "Variation 1"),
+            "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
             ... channel-specific fields for this message, see the following messages section ...
         }
     },
@@ -113,6 +115,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 
 {% endtab %}
 {% tab In-app messages %}
+
+レスポンスの形式は、アプリ内メッセージのタイプによって異なります。アンケートのアプリ内メッセージは `type` と `data` フィールドを返します。その他のアプリ内メッセージタイプ (スライドアップ、モーダル、フルスクリーン) は `name`、`message`、`extras` フィールドを返します。
 
 #### アンケート
 
@@ -242,9 +246,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 {% endtabs %}
 
 
-### 変換動作
+### コンバージョン動作
 
-`conversion_behaviors` 配列には、キャンペーンに設定されたコンバージョンイベントの動作に関する情報が含まれます。これらの動作は、キャンペーンによって設定された順序で行われます。たとえば、変換イベントA は配列の最初の項目、変換イベントB は2 番目の項目、というようになります。以下に、コンバージョンイベント ビヘイビアのレスポンスの例を示します。
+`conversion_behaviors` 配列には、キャンペーンに設定された各コンバージョンイベントの動作に関する情報が含まれます。これらの動作は、キャンペーンで設定された順序で並んでいます。たとえば、コンバージョンイベント A は配列の最初の項目、コンバージョンイベント B は2番目の項目、というようになります。以下に、コンバージョンイベント動作のレスポンスの例を示します。
 
 
 {% tabs %}

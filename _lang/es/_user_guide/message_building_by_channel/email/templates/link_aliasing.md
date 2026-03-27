@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![C](https://learning.braze.com/link-aliasing)urso [de Braze ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}[Learning:](https://learning.braze.com/link-aliasing) aliasing de enlaces
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Aliasing de enlaces
  
 > Utilice alias de enlaces para crear nombres reconocibles, generados por el usuario, para identificar los enlaces enviados en mensajes de correo electrónico desde Braze. Estos enlaces están disponibles para reorientar la segmentación, desencadenar acciones y realizar análisis de enlaces.
 

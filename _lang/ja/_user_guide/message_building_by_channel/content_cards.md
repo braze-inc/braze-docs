@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [![Brazeラーニングコースコンテンツカード](https://learning.braze.com/content-cards)を使用する[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"}利点
+## [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} コンテンツカードを使用する利点
 
 開発者がアプリにコンテンツを組み込むのと比較して、コンテンツカードを使用するメリットをいくつか挙げてみよう：
 
