@@ -6,7 +6,7 @@ Braze permet d'utiliser une bibliothèque d'images personnalisée pour afficher 
 
 ### Étape 1 : Créer le délégué de chargement d'images
 
-Le délégué de chargement d'images (Image Loader delegate) doit implémenter les méthodes suivantes :
+Le délégué de chargement d'images doit implémenter les méthodes suivantes :
 
 * [`getInAppMessageBitmapFromUrl()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-in-app-message-bitmap-from-url.html)
 * [`getPushBitmapFromUrl()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-push-bitmap-from-url.html)
