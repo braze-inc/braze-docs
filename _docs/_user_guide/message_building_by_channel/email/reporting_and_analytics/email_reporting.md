@@ -14,6 +14,8 @@ channel:
 
 > This article covers the different components of your email reporting and where it can be found in the dashboard.
 
+{% multi_lang_include analytics/campaign_analytics.md channel="email" %}
+
 ## Troubleshooting
 
 ### Bounced emails
@@ -23,11 +25,8 @@ channel:
 
 ### Invalid domains
 
-Errors like `unable to get mx info` often mean many targets use bad domains (for example typos). Segment, export, correct, and re-import those profiles.
+Errors like `unable to get mx info` often mean many targets use bad domains (for example, typos). Segment, export, correct, and re-import those profiles.
 
 ### Throttled IPs
 
 If a recipient server throttles your IP, reduce volume to that domain, improve engagement, and work with deliverability support if throttling persists.
-
-{% multi_lang_include analytics/campaign_analytics.md channel="email" %}
-
