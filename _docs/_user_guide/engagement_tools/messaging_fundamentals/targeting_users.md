@@ -90,7 +90,15 @@ For more information and best practices, refer to [Multivariate & A/B Testing]({
 
 #### Audience statistics
 
-Braze provides detailed audience statistics of the targeted channels in the footer. The larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. The number of reachable users may decrease if you use a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) or set up message eligibility. 
+Braze provides detailed audience statistics of the targeted channels in the footer. Depending on how large your workspace is, the footer labels this figure _Estimated Audience_ or _Current Audience_. The larger your user base is, the more likely the _Reachable Users_ amount is a rough estimate.
+
+| Metric | When it is used |
+| --- | --- |
+| _Estimated Audience_ | Braze does not run a full-database count by default. Audience size is estimated from a sample and extrapolated, similar to the _Reachable Users_ range in the segment builder. Margins of error are expected, especially for large workspaces or small segments as a share of the workspace. |
+| _Current Audience_ | Braze can compute the default statistic with a full scan of workspace profiles, so the displayed audience size is a current, unsampled count (still subject to channel reachability, subscription rules, and other targeting options). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+The number of reachable users may decrease if you use a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) or set up message eligibility. 
 
 - To determine an accurate number for your reachable users, select [Calculate exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics), as this will search through every user in your user base.
 - To see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, select **Show Additional Statistics**.
