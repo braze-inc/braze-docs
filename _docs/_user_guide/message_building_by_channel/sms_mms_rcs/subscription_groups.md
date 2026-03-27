@@ -49,6 +49,12 @@ To check a user's subscription group, use one of the following methods:
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting **User Search** from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's SMS and RCS subscription groups. 
 - **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) by using the Braze REST API. 
 
+### Updating subscription groups in Canvas
+
+When updating a user's subscription group status as part of a Canvas flow, use a [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) step instead of a webhook. The User Update step waits for processing to complete before advancing the user to the next step, so any subsequent messaging step can rely on the updated subscription status.
+
+If you use a webhook to update subscription groups, the user advances as soon as the webhook is sent — not when the subscription change finishes processing. This can create a race condition where a follow-up SMS step executes before the user is subscribed, causing the message to fail for a portion of users. If you must use a webhook, add a Delay step of at least one minute before the next messaging step.
+
 ## Sending messages with a subscription group
 
 To launch an SMS or RCS campaign through Braze, select a subscription group from the **SMS/MMS/RCS Variants** dropdown. After it's selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected subscription group are in the target audience.
