@@ -19,7 +19,7 @@ IP warming is designed to help you establish a positive reputation with internet
 
 **Delivery** is the share of emails that were accepted and did not hard bounce. **Deliverability** is whether mail reaches the inbox rather than spam—mailbox providers don't expose that as a single metric.
 
-A healthy delivery rate is often around **99%** delivered with a bounce rate **no higher than about 1%**. Rates can look strong on paper and still hide problems (for example, many bounces from one domain, or mail delivered but filtered to spam). Watch opens and clicks, not only delivery; even a small reported spam rate can warrant deeper review.
+A healthy delivery rate is often around 99% delivered with a bounce rate no higher than about 1%. Rates can look strong on paper and still hide problems (for example, many bounces from one domain, or mail delivered but filtered to spam). Watch opens and clicks, not only delivery. Even a small reported spam rate can warrant deeper review.
 
 ### Recommendations before IP warming
 
