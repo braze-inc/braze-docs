@@ -60,7 +60,7 @@ Now let’s get a little technical. Behind the scenes, there are three main part
 - **View:** What the card looks like
 - **Controller:** How the user interacts with the card
 
-For a default implementation, you add the card content—the model—either from the dashboard or through APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen.
+For a default implementation, you add the card content—the model—either from the dashboard or through APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen. For more details, see [Things to know]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#things-to-know) about Content Cards.
 
 {% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
