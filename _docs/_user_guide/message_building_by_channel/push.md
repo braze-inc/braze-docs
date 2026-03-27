@@ -1,7 +1,7 @@
 ---
 nav_title: Push
 article_title: Push
-page_order: 4
+page_order: 6
 layout: dev_guide
 guide_top_header: "Push"
 guide_top_text: "Push notifications are a tried-and-true way to send time-sensitive calls to action through mobile or web, as well as re-engage users who haven't come into the app in a while. They drive the user directly to content and demonstrate the value of your application. Push notifications are useful for driving users to a specific place, but you should use them wisely. <br><br> Read any of the following articles or check out our [Push Braze Learning course](https://learning.braze.com/messaging-channels-push) to learn who you can send a push to, how to send it, and what advanced push capabilities Braze offers. For examples of push notifications, check out our [customer stories](https://www.braze.com/customers)."

@@ -114,6 +114,7 @@ The **Message Activity Log** shows test logs for these messaging channels:
 - SMS
 - WhatsApp
 - LINE
+- KakaoTalk
 - Webhook
 
 Test send logs are not available for the following channels: email, Content Cards, in-app messages, and push.
