@@ -275,7 +275,7 @@ There are a few situations where test messages don't behave the same way as camp
 - Viewing the Braze preference center from test messages will cause the **Save Preferences** button to be grayed out.
 - For testing in-app messages and Content Cards, the target user must have a push token for the target device.
 - For testing unsubscribe links in emails, make sure your test user's email address is in the respective workspace.
-- The list-unsubscribe header is not included in emails sent by the test message functionality.
+- The `List-Unsubscribe` header is not included in emails sent by the test message functionality.
 
 ## Testing personalized campaigns 
 
