@@ -83,7 +83,9 @@ If you make any edits to an existing template, those changes will not be reflect
 
 ### Managing your templates
 
-As you create more email templates, you can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#duplicate-templates) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#archive-templates) email templates. Learn more about creating and managing your library of templates and creative content in [Templates and Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can view email templates at **Templates** > **Email Templates**, filtering by status, type, or tags, or searching by name. You need the **Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers** permission (or the equivalent granular permission, such as **View Email Templates**) to view these templates. For more details, see [User permissions]({{site.baseurl}}/user_guide/administrative/access_braze/user_permissions/).
+
+As you create more email templates, you can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#duplicate-templates) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#archive-templates) email templates. Learn more in [Templates and Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ### Using your templates in API campaigns
 
