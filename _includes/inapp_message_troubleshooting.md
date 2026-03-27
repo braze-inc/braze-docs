@@ -140,15 +140,16 @@ You can test in-app messages and Content Cards triggered on session start direct
     ```
     If logging is already enabled, running this command disables it.
 
-4. To force a new session and trigger session-start messages, call `braze.changeUser()` with your test user's external ID:
+4. To force a new session and trigger session-start messages, clear the browser's local storage to reset the SDK's session state, then reload the page:
 
     ```javascript
-    braze.changeUser("YOUR_TEST_USER_ID");
+    localStorage.clear();
+    location.reload();
     ```
 
 5. Check the console output for Braze SDK logs indicating whether in-app messages or Content Cards were delivered. If the message still doesn't display, review the logs for errors or eligibility issues.
 
 {% alert warning %}
-Do not use `braze.changeUser()` on a production site to force sessions outside of testing. This method is intended for debugging only.
+Clearing `localStorage` removes all data stored in the browser for your site—not just Braze data. Don't run this command on a production site, as it may log users out or clear their stored preferences.
 {% endalert %}
 {% endif %}
