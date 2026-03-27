@@ -259,7 +259,7 @@ Count, Percentage
 Count, Percentage
 {% endapitags %}
 
-_Unsubscribes_ reflect Braze's standard unsubscribe link. Custom unsubscribe pages won't increment this metric unless you update users via API—**Subscription Group Timeseries** still reflects API-driven changes.
+_Unsubscribes_ reflect the standard unsubscribe link for Braze. Custom unsubscribe pages won't increment this metric unless you update users using the API. **Subscription Group Timeseries** still reflects API-driven changes.
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
 

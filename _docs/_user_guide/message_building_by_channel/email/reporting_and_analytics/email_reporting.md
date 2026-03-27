@@ -18,8 +18,8 @@ channel:
 
 ### Bounced emails
 
-- **554 5.7.1 [internal] recipient address was suppressed due to customer policy** — Try another address, re-engage on another channel, or—for your own test addresses only—remove the address from the suppression list (avoid removing real user suppressions; that can hurt reputation).
-- **Mailbox full / invalid account** — Often a list-quality signal. Prioritize users who recently opened or clicked (for example last 30–60 days) while you clean inactive or bad addresses.
+- **554 5.7.1 [internal] recipient address was suppressed due to customer policy:** Try another address, re-engage on another channel, or—for your own test addresses only—remove the address from the suppression list (avoid removing real user suppressions; that can hurt reputation).
+- **Mailbox full / invalid account:** Often a list-quality signal. Prioritize users who recently opened or clicked (for example, the last 30–60 days) while you clean inactive or bad addresses.
 
 ### Invalid domains
 

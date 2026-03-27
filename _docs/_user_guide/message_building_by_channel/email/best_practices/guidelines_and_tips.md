@@ -21,7 +21,7 @@ Here are some quick tips to keep in mind while building your content:
 - `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Avoid using JavaScript because it does not work with any ESP.
 - Braze improves load times by using a global CDN to host all email images.
-- On mobile, image columns are narrow (~100px each)—size containers so multi-image rows still fit (for example four images ≈ four usable columns).
+- On mobile, image columns are narrow (~100px each), so multi-image rows still fit (for example, four images ≈ four usable columns).
 
 ### Implementing alternative text
 
@@ -49,11 +49,22 @@ Unicode encoding is not supported in "from" addresses.
 
 ## Layout (drag-and-drop and custom HTML)
 
-Layout breaks when Braze-generated HTML/CSS conflicts with custom HTML. Try removing custom HTML/CSS first, validate custom fonts load correctly in preview, check row/column padding, prefer table-based layouts, and stay within the editor width. Content Blocks that pull in HTML from outside the editor can also break layout.
+Layout can break when Braze-generated HTML/CSS conflicts with custom HTML. If this occurs, do the following:
+
+- Remove custom HTML/CSS first
+- Validate custom fonts load correctly in preview
+- Check row and column padding
+- Prefer table-based layouts, and stay within the editor's width. 
+
+Content Blocks that pull in HTML from outside the editor can also break the layout.
 
 ## Using UTM parameters in email URLs
 
-UTM parameters tag URLs for analytics. You can build them with Liquid and custom attributes—use only **one** `?` in the final URL (additional `?` characters can break requests). Avoid spaces and special characters in values (use `_` or `-`). Confirm your analytics tool ingests UTMs; trim trailing spaces inside Liquid `capture` blocks. UTMs are case-sensitive.
+UTM parameters tag URLs for analytics. You can build them with Liquid and custom attributes. 
+
+- Use only one question mark `?` in the final URL (additional `?` characters can break requests). 
+- Avoid spaces and special characters in values (use `_` or `-`). 
+- Confirm your analytics tool ingests UTMs. Trim trailing spaces inside Liquid `capture` blocks. UTMs are case-sensitive.
 
 ### Checking HTML details
 

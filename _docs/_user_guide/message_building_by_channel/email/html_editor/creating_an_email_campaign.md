@@ -106,7 +106,7 @@ A preview in the right-hand panel will populate with the sending information you
 
 #### Advanced
 
-Under **Sending Settings** > **Advanced**, turn on **inline CSS** for widest client support. If messages clip or images stretch to row height, try turning inline CSS **off** temporarily—some templates behave better without inlining.
+Under **Sending Settings** > **Advanced**, turn on **inline CSS** for the widest client support. If messages clip or images stretch to row height, try turning inline CSS **off** temporarily. Some templates behave better without inlining.
 
 You can also add personalization for email headers and email extras to send additional data back to other email service providers.
 
