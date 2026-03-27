@@ -25,6 +25,10 @@ You must opt in to uninstall tracking on your Braze dashboard. This feature is a
 
 Braze automatically collects a base level of uninstall information from your regular push campaigns. However, because the frequency with which different users receive push campaigns may vary, we offer uninstall tracking to provide a more accurate snapshot of uninstall activity among your users.
 
+When Braze detects an uninstall, the user is tagged as having uninstalled. If you use the **Has Not Uninstalled** filter in a campaign, these tagged users are excluded. If a user reinstalls the app but does not open it, the uninstall tag remains on their profile. The tag is removed only once the user starts a new session in the reinstalled app. This means a user who reinstalls but never opens the app will continue to appear as uninstalled.
+
+For more on using uninstall tracking, see our blog post [Uninstall Tracking: An Industry Look at its Strengths and Limitations](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
+
 ## Turning on uninstall tracking
 
 You can turn on uninstall tracking on the **App Settings** page, under **Settings**, for each app you want to track.
@@ -70,8 +74,6 @@ Braze tracks uninstalls by observing when push messages sent to users' devices r
 * If a user receives three campaigns in a 24-hour period and then uninstalls, we increment the count of "uninstalls" for all three campaigns.
 
 FCM and APNs place restrictions on uninstall tracking. Braze increments only the uninstall count when FCM or APNs tell us that a user has uninstalled, but these third-party systems can notify us of uninstalls at any point. Use uninstall tracking to detect directional trends rather than precise statistics.
-
-For more on using uninstall tracking, see our blog post [Uninstall Tracking: An Industry Look at its Strengths and Limitations](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
 ## Troubleshooting
 
