@@ -87,7 +87,7 @@ While you should handle CDN configuration, certificates, and proxy issues with y
 
 ##### Low email open rates
 
-If you're suddenly experiencing low email open rates, confirm that your SSL certificate is up-to-date. If it's expired, you'll need to renew your SSL certificate.
+If you're suddenly experiencing low email open rates, confirm that the SSL certificate is up-to-date. If it's expired, you must renew that SSL certificate with your CDN or certificate provider.
 
 ##### Domain registry issues
 
