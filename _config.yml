@@ -103,9 +103,6 @@ collections:
   help:
     output: true
     default_nav_url: home/
-  contributing:
-    output: true
-    default_nav_url: contributing/
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
     output: true
@@ -169,11 +166,6 @@ defaults:
       nav_level: 1
   - scope:
       path: ""
-      type: "contributing"
-    values:
-      nav_level: 1
-  - scope:
-      path: ""
       type: "hidden"
     values:
       hide_feedback: true
@@ -229,7 +221,7 @@ exclude:
     ".vscode",
     "system.properties",
     "CODE_OF_CONDUCT.md",
-    "CONTRIBUTING.md",
+    "docs",
     "LICENSE.md",
     "_site",
     "vercel.json",

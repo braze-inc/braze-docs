@@ -12,11 +12,11 @@ All documentation must follow the Braze Docs Style Guide. When drafting or revie
 
 | Path | Use for |
 |------|---------|
-| `_docs/_contributing/style_guide.md` | Parent index — start here |
-| `_docs/_contributing/style_guide/writing_style_guide.md` | Writing style, voice, tone, grammar, punctuation, formatting |
-| `_docs/_contributing/style_guide/image_style_guide.md` | Image styling, cropping, alt text, screenshots |
-| `_docs/_contributing/style_guide/alerts.md` | Important, Note, Tip, Warning alerts — when and how to use |
-| `_docs/_contributing/style_guide/api_endpoint_guidelines.md` | API endpoint article structure and formatting |
+| `docs/contributing/style_guide.md` | Parent index — start here |
+| `docs/contributing/style_guide/writing_style_guide.md` | Writing style, voice, tone, grammar, punctuation, formatting |
+| `docs/contributing/style_guide/image_style_guide.md` | Image styling, cropping, alt text, screenshots |
+| `docs/contributing/style_guide/alerts.md` | Important, Note, Tip, Warning alerts — when and how to use |
+| `docs/contributing/style_guide/api_endpoint_guidelines.md` | API endpoint article structure and formatting |
 
 When the full style guide has specific guidance on a topic, defer to the source file over this summary.
 

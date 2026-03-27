@@ -8,6 +8,9 @@ _algolia_api_key
 .ruby-version
 jekyll-algolia-*
 **/.asset_pipeline
+.documentation_asset_pipeline/
+# Nested accidental clone of this repo (directory named braze-docs at repo root)
+/braze-docs/
 .jekyll-cache
 .vscode
 .jekyll-metadata

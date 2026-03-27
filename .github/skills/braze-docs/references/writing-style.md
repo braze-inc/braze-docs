@@ -1,7 +1,7 @@
 # Writing Style Reference
 
 Detailed writing and formatting rules for Braze documentation. For the
-canonical source of truth, consult `_docs/_contributing/style_guide/writing_style_guide.md`.
+canonical source of truth, consult `docs/contributing/style_guide/writing_style_guide.md`.
 
 ## Voice and tone
 

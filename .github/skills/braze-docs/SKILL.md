@@ -24,11 +24,11 @@ For the canonical source of truth, consult the full style guide files listed bel
 
 | Path | Use for |
 |------|---------|
-| `_docs/_contributing/style_guide.md` | Parent index — start here |
-| `_docs/_contributing/style_guide/writing_style_guide.md` | Writing style, voice, tone, grammar, punctuation, formatting |
-| `_docs/_contributing/style_guide/image_style_guide.md` | Image styling, cropping, alt text, screenshots |
-| `_docs/_contributing/style_guide/alerts.md` | Important, Note, Tip, Warning alerts — when and how to use |
-| `_docs/_contributing/style_guide/api_endpoint_guidelines.md` | API endpoint article structure and formatting |
+| `docs/contributing/style_guide.md` | Parent index — start here |
+| `docs/contributing/style_guide/writing_style_guide.md` | Writing style, voice, tone, grammar, punctuation, formatting |
+| `docs/contributing/style_guide/image_style_guide.md` | Image styling, cropping, alt text, screenshots |
+| `docs/contributing/style_guide/alerts.md` | Important, Note, Tip, Warning alerts — when and how to use |
+| `docs/contributing/style_guide/api_endpoint_guidelines.md` | API endpoint article structure and formatting |
 
 When the full style guide has specific guidance on a topic, defer to the source file over this summary.
 
@@ -60,7 +60,8 @@ Jekyll site. Collections dir: `_docs/`. Base URL: `/docs`.
 | partners | `_partners/` | Technology partner integrations |
 | releases | `_releases/` | Release notes |
 | help | `_help/` | Troubleshooting and support |
-| contributing | `_contributing/` | Docs contribution guides |
+
+Contributor handbook (not a Jekyll collection): `docs/contributing/` in this repository.
 
 Permalink pattern: `./:collection/:path/` (pretty URLs, trailing slash).
 

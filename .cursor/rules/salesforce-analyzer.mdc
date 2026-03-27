@@ -231,7 +231,7 @@ For each ticket where article content is available (from CSV or user):
    - **Internal notes** (e.g., "Support should escalate to #team-channel") — omit these
    - **Internal workflows** (e.g., "CSM needs to confirm pricing") — generalize to "contact your customer success manager"
    - **Customer-facing content** (resolution steps, UI instructions, error explanations) — include this
-4. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
+4. Draft changes following conventions in the codebase based on the style guides in `docs/contributing/style_guide/*`
 5. Keep additions concise and scannable (bullets, tables, code blocks)
 6. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
 7. Do NOT include any content flagged as sensitive in the ticket or marked as internal in the SF article
