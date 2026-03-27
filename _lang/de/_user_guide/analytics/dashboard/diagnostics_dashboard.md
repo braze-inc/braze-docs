@@ -28,7 +28,7 @@ Wenn Braze eine Nachricht „versendet", kann die endgültige Zustellung von ext
 | Kanal | Beispiel für die endgültige Zustellung |
 | --- | --- |
 | Content-Cards | Die Karte wurde versendet und kann eingesehen werden. |
-| E-Mail | Braze übermittelt die Nachricht an einen E-Mail-Anbieter (ESP). Der ESP ist dann für die endgültige Zustellung verantwortlich. Dieser ESP kann beispielsweise einen „Bounce" melden, wenn die E-Mail-Adresse ungültig ist oder der Posteingang voll ist. |
+| E-Mail | Braze übermittelt die Nachricht an einen E-Mail-Anbieter (ESP). Der ESP ist dann für die endgültige Zustellung verantwortlich. Dieser ESP kann beispielsweise einen „Bounce" (Absprung) melden, wenn die E-Mail-Adresse ungültig ist oder der Posteingang voll ist. |
 | In-App-Nachrichten | Die Nachricht wurde den Nutzer:innen angezeigt. |
 | LINE | Die Nachricht wurde erfolgreich an einen Versandpartner übergeben. |
 | Push | Braze übermittelt die Nachricht an den entsprechenden Dienst für Push-Benachrichtigungen (wie beispielsweise den Apple Push Notification Service für iOS oder Firebase Cloud Messaging für Android). Dieser Dienst ist für die endgültige Zustellung der Benachrichtigung an das Gerät verantwortlich. |
@@ -63,7 +63,7 @@ Das Dashboard zeigt nur die Daten der letzten 7 Tage an.
 
 Am oberen Rand der Seite befinden sich wichtige Zusammenfassungskacheln für den ausgewählten Zeitraum, die Folgendes anzeigen:
 
-- **Gesamtzahl der Abbrüche:** Die Gesamtzahl der Nachrichten, die abgebrochen wurden. Dies schließt Canvas-Zielgruppenmitglieder ein, die Canvas nicht betreten oder Canvas verlassen haben, weil bei einem Schritt ein Fehler aufgetreten ist oder sie die Ausstiegskriterien erfüllt haben, während sie ein Ausstiegsereignis ausgeführt haben.
+- **Gesamtzahl der Abbrüche:** Die Gesamtzahl der Nachrichten, die abgebrochen wurden. Dies schließt Canvas-Zielgruppenmitglieder ein, die das Canvas nicht betreten oder das Canvas verlassen haben, weil bei einem Schritt ein Fehler aufgetreten ist oder sie die Ausstiegskriterien erfüllt haben, während sie ein Ausstiegsereignis ausgeführt haben.
 - **Nachrichtenversand:** Die Gesamtzahl der Nachrichten, die Braze erfolgreich verarbeitet und versendet hat. 
   - **E-Mail, SMS/MMS/RCS, WhatsApp, LINE und Push:** Die Nachricht wurde erfolgreich an einen Versandpartner übergeben.  
   - **Webhooks:** Die Webhook-Anfrage wurde erfolgreich durchgeführt und hat eine `2xx`-Antwort zurückgegeben.  
@@ -94,7 +94,7 @@ Die folgenden Definitionen erläutern die im Dashboard angezeigten Abbruch-Ergeb
 | ---- | ---- |
 | Content-Card abgelaufen | Die Content-Card ist abgelaufen, bevor die Nutzer:innen sie sehen konnten. |
 | Content-Card ungültig | Die Content-Card wies Fehler auf und wurde nicht an die Nutzer:innen gesendet. Einige häufige Gründe hierfür sind: {::nomarkdown}<ul><li> Die maximale Größe wurde überschritten (2 KB). </li><li> Das Ablaufdatum ist ungültig. </li><li> Die Nachricht enthält ungültige Zeichen. </li></ul>{:/} |
-| Connected-Content fehlgeschlagen | Braze hat versucht, die Nachricht zu senden, jedoch ist Connected-Content nach Erreichen der maximalen Anzahl an Wiederholungsversuchen (Standardwert ist fünf) fehlgeschlagen. |
+| Connected-Content fehlgeschlagen | Braze hat versucht, die Nachricht zu senden, jedoch ist Connected-Content nach Erreichen der maximalen Anzahl an Wiederholungsversuchen (Standardwert ist fünf) fehlgeschlagen. **Hinweis:** Diese Zahl gibt die Anzahl der Nachrichten an, die aufgrund des Erreichens der maximalen Wiederholungsversuche abgebrochen wurden, nicht die Gesamtzahl der fehlgeschlagenen Connected-Content-Anfragen. |
 | Zeitüberschreitung beim Rendern von In-App-Nachrichten | Nach mehreren Wiederholungsversuchen konnte Liquid nicht gerendert werden und es kam zu einer Zeitüberschreitung. |
 | Liquid-Abbruch | Der [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages)-Liquid-Tag wurde aufgerufen, daher wurde der Versand abgebrochen. |
 | Zeitüberschreitung beim Liquid-Rendering | Das Rendern des Liquid-Templates hat zu lange gedauert. Tritt am häufigsten bei Bannern, In-App-Nachrichten und E-Mails auf. |
@@ -105,11 +105,11 @@ Die folgenden Definitionen erläutern die im Dashboard angezeigten Abbruch-Ergeb
 
 | Abbruch-Ergebnis | Erklärung |
 | ---- | ---- |
-| Verzögerungsschritt fehlgeschlagen | Der [Verzögerungsschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) ist fehlgeschlagen, was dazu führte, dass die Nutzer:innen Canvas verlassen mussten. Dieser Fehler kann auftreten, wenn: {::nomarkdown}<ul><li> Die Variable, die dem personalisierten Verzögerungsschritt übergeben wurde, leer war oder einen ungültigen Typ hatte. </li><li> Die Verzögerung die maximal zulässige Dauer innerhalb von Canvas überschreitet.</li></ul>{:/} |
+| Verzögerungsschritt fehlgeschlagen | Der [Verzögerungsschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) ist fehlgeschlagen, was dazu führte, dass die Nutzer:innen das Canvas verlassen mussten. Dieser Fehler kann auftreten, wenn: {::nomarkdown}<ul><li> Die Variable, die dem personalisierten Verzögerungsschritt übergeben wurde, leer war oder einen ungültigen Typ hatte. </li><li> Die Verzögerung die maximal zulässige Dauer innerhalb des Canvas überschreitet.</li></ul>{:/} |
 | Ausnahme-Event oder Ausstiegsereignis | Die Nutzer:innen waren zuvor berechtigt, die Nachricht zu empfangen, haben jedoch entweder {::nomarkdown}<ul><li> ein <a href="/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-3-select-exception-events">Ausnahme-Event</a> für eine aktionsbasierte Kampagne ausgeführt, sodass die Nachricht abgebrochen wurde, oder </li><li> die Canvas-<a href="/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#setting-up-exit-criteria">Ausstiegskriterien</a> erfüllt, sodass sie während der Journey ausgeschlossen wurden.</li></ul>{:/} |
 | Inaktive Kampagne | Die Kampagne wurde gestoppt, während die Nachricht noch in der Übermittlung war, und daher abgebrochen. |
-| Inaktives Canvas | Canvas wurde beendet, bevor die Nutzer:innen die Journey begonnen haben. |
-| Inaktiver Canvas-Schritt | Dies kann in Canvas auftreten, wenn: {::nomarkdown}<ul><li> Der Canvas-Schritt gelöscht wurde. </li> <li>Canvas angehalten wurde, wodurch alle Schritte inaktiv werden. </li></ul>{:/} |
+| Inaktives Canvas | Das Canvas wurde beendet, bevor die Nutzer:innen die Journey begonnen haben. |
+| Inaktiver Canvas-Schritt | Dies kann im Canvas auftreten, wenn: {::nomarkdown}<ul><li> Der Canvas-Schritt gelöscht wurde. </li> <li>Das Canvas angehalten wurde, wodurch alle Schritte inaktiv werden. </li></ul>{:/} |
 | Volumenlimit erreicht | Die Kampagne hat das festgelegte Volumenlimit erreicht, daher wurde der Versand abgebrochen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -118,7 +118,7 @@ Die folgenden Definitionen erläutern die im Dashboard angezeigten Abbruch-Ergeb
 | Abbruch-Ergebnis | Erklärung |
 | ---- | ---- |
 | Frequency-Capping | Die Nutzer:innen haben bereits die maximale Anzahl an Nachrichten erhalten, die gemäß den [Frequency-Capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#about-frequency-capping)-Regeln Ihres Workspaces zulässig ist, daher wurde der Versand abgebrochen. |
-| Ruhezeiten-Abbruch | Für die Kampagne oder den Canvas-Schritt waren Ruhezeiten aktiviert, wobei als Fallback **Nachricht abbrechen** festgelegt war. Die Nutzer:innen haben die Kampagne während der Ruhezeiten getriggert oder den Canvas-Nachrichtenschritt aufgerufen, sodass die Nachricht abgebrochen wurde. Dies führt jedoch nicht dazu, dass die Nutzer:innen Canvas verlassen. |
+| Ruhezeiten-Abbruch | Für die Kampagne oder den Canvas-Schritt waren Ruhezeiten aktiviert, wobei als Fallback **Nachricht abbrechen** festgelegt war. Die Nutzer:innen haben die Kampagne während der Ruhezeiten getriggert oder den Canvas-Nachrichtenschritt aufgerufen, sodass die Nachricht abgebrochen wurde. Dies führt jedoch nicht dazu, dass die Nutzer:innen das Canvas verlassen. |
 | Rate-Limiting über 72 Stunden | Die Nachricht wurde aufgrund von [Rate-Limits bei der Zustellgeschwindigkeit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting) länger als 72 Stunden zurückgehalten, sodass der Versand abgebrochen wurde. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -129,9 +129,9 @@ Die folgenden Definitionen erläutern die im Dashboard angezeigten Abbruch-Ergeb
 | Doppelter Nutzerbezeichner | Mehrere Nutzer:innen mit einem übereinstimmenden Bezeichner (z. B. externe ID, E-Mail-Adresse, Telefonnummer) waren berechtigt, diese Nachricht zu erhalten. Um doppelte Sendungen an dieselben Nutzer:innen zu vermeiden, wurde diese Nachricht abgebrochen. |
 | Nutzer:in hat die Vorabprüfung für den Nachrichtenschritt nicht bestanden | Diese Vorabprüfung wird vor den Zustellvalidierungen durchgeführt. In diesem Fall haben die Nutzer:innen die grundlegende Vorabprüfung für diesen Nachrichtenschritt nicht bestanden (Nutzer:in nicht gefunden oder für den Kanal des Nachrichtenschritts nicht berechtigt). **Hinweis:** Bei einem Mehrkanal-Nachrichtenschritt bedeutet dies, dass die Nutzer:innen nicht gefunden wurden; die Kanalberechtigung wird hier nur für Einzelkanal-Nachrichtenschritte überprüft. |
 | Nutzer:in hat die Vorabprüfung für die getriggerte Nachricht nicht bestanden | Bei einer getriggerten Nachricht führt Braze zunächst eine Reihe grundlegender Vorabprüfungen hinsichtlich der Zielgruppenberechtigung, der erneuten Berechtigung und der Kanalberechtigung durch, bevor eine Nachricht erstellt wird, die aufgrund dieses Triggers versendet wird. |
-| Nutzer:in ist nicht mehr berechtigt | Die Nutzer:innen gehörten ursprünglich zur Zielgruppe, entsprachen jedoch nicht mehr den Zielgruppenkriterien, bevor Braze die Nachricht versandte oder die Nutzer:innen in Canvas eintrug. Der Zeitraum zwischen dem erstmaligen Erfüllen der Zielgruppenkriterien und dem Herausfallen aus der Zielgruppe kann auf Verzögerungen durch folgende Faktoren zurückzuführen sein: {::nomarkdown}<ul><li>Intelligentes Timing</li><li>Ruhezeiten</li><li>Ortszeit</li><li>Rate-Limits für die Zustellgeschwindigkeit (gilt nicht für Canvas-Eintritte)</li><li>Verzögerungen in der Messaging-Pipeline</li></ul>{:/} |
-| Nutzer:in ist nicht für diesen Schritt berechtigt | Die Nutzer:innen haben Canvas verlassen, weil sie die festgelegten [Zustellvalidierungen]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#delivery-validations) für den Nachrichtenschritt nicht erfüllt haben oder weil sie Teil einer [Unterdrückungsliste]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists) waren. |
-| Nutzer:in ist nicht erneut berechtigt | Die Nutzer:innen waren berechtigt, die Nachricht zu empfangen oder Canvas aufzurufen, jedoch wurde der Versand aufgrund von Einstellungen zur erneuten Berechtigung oder zum erneuten Eintritt abgebrochen. Dies kann auftreten, wenn die Nutzer:innen die Kampagne bereits erhalten haben oder Canvas erst kürzlich aufgerufen haben, wenn für diese Nutzer:innen bereits eine weitere Sendung für dieselbe Kampagne läuft oder wenn die erneute Berechtigung oder der erneute Eintritt deaktiviert ist. |
+| Nutzer:in ist nicht mehr berechtigt | Die Nutzer:innen gehörten ursprünglich zur Zielgruppe, entsprachen jedoch nicht mehr den Zielgruppenkriterien, bevor Braze die Nachricht versandte oder die Nutzer:innen in das Canvas eintrug. Der Zeitraum zwischen dem erstmaligen Erfüllen der Zielgruppenkriterien und dem Herausfallen aus der Zielgruppe kann auf Verzögerungen durch folgende Faktoren zurückzuführen sein: {::nomarkdown}<ul><li>Intelligentes Timing</li><li>Ruhezeiten</li><li>Ortszeit</li><li>Rate-Limits für die Zustellgeschwindigkeit (gilt nicht für Canvas-Eintritte)</li><li>Verzögerungen in der Messaging-Pipeline</li></ul>{:/} |
+| Nutzer:in ist nicht für diesen Schritt berechtigt | Die Nutzer:innen haben das Canvas verlassen, weil sie die festgelegten [Zustellvalidierungen]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#delivery-validations) für den Nachrichtenschritt nicht erfüllt haben oder weil sie Teil einer [Unterdrückungsliste]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists) waren. |
+| Nutzer:in ist nicht erneut berechtigt | Die Nutzer:innen waren berechtigt, die Nachricht zu empfangen oder das Canvas aufzurufen, jedoch wurde der Versand aufgrund von Einstellungen zur erneuten Berechtigung oder zum erneuten Eintritt abgebrochen. Dies kann auftreten, wenn die Nutzer:innen die Kampagne bereits erhalten haben oder das Canvas erst kürzlich aufgerufen haben, wenn für diese Nutzer:innen bereits eine weitere Sendung für dieselbe Kampagne läuft oder wenn die erneute Berechtigung oder der erneute Eintritt deaktiviert ist. |
 | Nutzerprofil nicht gefunden | Die Nutzer:innen haben entweder nie existiert oder sind nicht mehr in Braze vorhanden. Einige häufige Fälle sind: {::nomarkdown}<ul><li> Die Nutzer:innen wurden über API-Messaging angesprochen, waren jedoch nie in Braze registriert. </li><li>Die Nutzer:innen wurden gelöscht, bevor die Nachricht gesendet oder der Canvas-Schritt ausgeführt wurde. </li><li>Die Nutzer:innen wurden vor dem Senden der Nachricht mit einem anderen Profil zusammengeführt.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -165,16 +165,16 @@ Wenn Nutzer:innen diese gebündelte Überprüfung nicht bestehen, werden sie sof
 
 Hierbei handelt es sich um Abbrüche, die keiner der bestehenden Braze-Kategorien zugeordnet werden konnten. Wenn Sie einen großen Anteil an Abbrüchen mit diesem Ergebnis feststellen, wenden Sie sich an den [Braze-Support]({{site.baseurl}}/user_guide/administrative/access_braze/support) für weitere Unterstützung.
 
-### Warum ist die Summe aus _Total Aborts_ und _Message Sends_ geringer als die erwartete Zielgruppengröße?
+### Warum ist die Summe aus _Gesamtzahl der Abbrüche_ und _Nachrichtenversand_ geringer als die erwartete Zielgruppengröße?
 
 Dafür kann es mehrere Gründe geben:
 
-- **Zielgruppenkriterien:** Möglicherweise haben weniger Nutzer:innen als erwartet die Zielgruppenkriterien erfüllt (z. B. weil sie nicht zum Segment gehörten oder nicht über die erforderlichen Attribute verfügten), als die Kampagne oder Canvas gestartet wurde.
-- **Verarbeitung läuft:** Nachrichten werden möglicherweise noch aktiv verarbeitet. Nutzer:innen befinden sich möglicherweise noch in früheren Schritten von Canvas und haben noch keine Nachrichtenschritte erreicht.
-- **Aktualität der Daten:** Die Daten im Dashboard werden etwa alle 15 Minuten aktualisiert, dies kann jedoch nicht garantiert werden. Die neuesten Daten für diese Kampagne oder Canvas sind möglicherweise noch nicht im Dashboard verfügbar.
+- **Zielgruppenkriterien:** Möglicherweise haben weniger Nutzer:innen als erwartet die Zielgruppenkriterien erfüllt (z. B. weil sie nicht zum Segment gehörten oder nicht über die erforderlichen Attribute verfügten), als die Kampagne oder das Canvas gestartet wurde.
+- **Verarbeitung läuft:** Nachrichten werden möglicherweise noch aktiv verarbeitet. Nutzer:innen befinden sich möglicherweise noch in früheren Schritten des Canvas und haben noch keine Nachrichtenschritte erreicht.
+- **Aktualität der Daten:** Die Daten im Dashboard werden etwa alle 15 Minuten aktualisiert, dies kann jedoch nicht garantiert werden. Die neuesten Daten für diese Kampagne oder dieses Canvas sind möglicherweise noch nicht im Dashboard verfügbar.
 - **Grenzfälle:** Es besteht eine geringe Wahrscheinlichkeit, dass Sie auf einen Sonderfall stoßen, der derzeit in diesem Dashboard nicht erfasst ist. Sollten Sie den Verdacht haben, dass dies der Fall ist, wenden Sie sich an den [Braze-Support]({{site.baseurl}}/user_guide/administrative/access_braze/support).
 
-### Warum ist die Summe aus _Total Aborts_ und _Message Sends_ größer als die Zielgruppe einer Kampagne oder eines Canvas?
+### Warum ist die Summe aus _Gesamtzahl der Abbrüche_ und _Nachrichtenversand_ größer als die Zielgruppe einer Kampagne oder eines Canvas?
 
 Dies kann aus folgenden Gründen auftreten:
 
