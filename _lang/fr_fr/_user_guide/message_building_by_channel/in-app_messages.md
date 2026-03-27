@@ -9,7 +9,7 @@ channel:
 search_rank: 5
 ---
 
-# [![Cours d'apprentissage ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}[Braze](https://learning.braze.com/messaging-channels-in-app-in-browser) Messages in-app
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Messages in-app
 
 > Les messages in-app vous permettent de transmettre du contenu à vos utilisateurs sans les interrompre avec une notification push, car ces messages ne sont pas diffusés en dehors de l'application et n'apparaissent pas sur leur écran d'accueil. 
 

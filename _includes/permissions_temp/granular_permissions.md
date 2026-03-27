@@ -158,10 +158,9 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View Billing Details                            | View billing details |
 | View Custom Attributes Marked as PII            | View custom attributes marked as PII |
 | View PII                                        | View PII |
-| View User Profiles PII Compliant                | Access user search and view user profiles with redacted PII |
+| View User Profiles (PII Redacted)               | Access user search and view user profiles with redacted PII |
 | View Usage Data                                 | View usage data |
-| Merge Duplicate Users                           | Combine duplicate users into one user. Duplicates are removed after merging. |
-| Preview Duplicate Users                         | Preview which user profiles are duplicates |
+| Merge Duplicate Users                           | Preview and combine duplicate users into one user. Duplicates are removed after merging. |
 | View Canvas Templates                           | View Canvas templates |
 | Archive Canvas Templates                        | Move Canvas templates to archive |
 | Launch Content Blocks                           | Launch Content Blocks |
@@ -284,8 +283,6 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Export User Data                                | Download users from the dashboard |
 | Edit User Data                                  | Create and update user data |
 | View Merge Users                                | View a list of user merge records |
-| View User Deletion Records	            	  | View user deletion records |
-| Delete Users From Dashboard	                  | Permanently delete users from the dashboard individually or in bulk. |      
 | View Custom AI Agents                           | Allows users to view custom AI agents. |
 | Edit Custom AI Agents                           | Allows users to create and update custom AI agents. |
 | Archive Custom AI Agents                        | Allows users to archive custom AI agents. |

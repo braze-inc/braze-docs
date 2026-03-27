@@ -9,7 +9,7 @@ channel:
 search_rank: 5
 ---
 
-# [![Brazeラーニング](https://learning.braze.com/messaging-channels-in-app-in-browser)コースアプリ内[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}メッセージ
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} アプリ内メッセージ
 
 > アプリ内メッセージは、プッシュ通知でユーザーの日常を妨げることなくコンテンツを届けられる。これらのメッセージはユーザーのアプリ外に配信されず、ホーム画面に表示されることもないからだ。 
 

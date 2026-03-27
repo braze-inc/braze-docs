@@ -194,6 +194,16 @@ API-triggered and server-triggered campaigns are ideal for handling more advance
 | • Does not log data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads with the **Message Activity Log**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+### What should I include when submitting a support ticket for a "Request Timed Out" error?
+
+If you encounter a "Request Timed Out" error while creating or editing a campaign or Canvas and need to contact [Braze Support]({{site.baseurl}}/braze_support/), include the following information to help speed up resolution:
+
+- **Screen recording:** A recording of the steps you took before seeing the error, including any page transitions.
+- **Timestamp and time zone:** The exact time the error occurred and your time zone.
+- **Browser and version:** The browser you're using (for example, Chrome 120, Safari 17) and whether you've tried reproducing the error in a different browser.
+- **Steps to reproduce:** A clear description of the actions that trigger the error, including any specific campaign or Canvas settings involved.
+- **Network logs (optional):** Open your browser developer tools (**Network** tab), reproduce the error, and export the network log as a HAR (HTTP Archive) log. This helps the support team identify which API call is timing out.
+
 ### Why don't my send analytics match the maximum recipient limit I set?
 
 If you add or change a maximum recipient limit on an active campaign, the limit may not be reflected in your send analytics for the following reasons:
@@ -203,4 +213,14 @@ If you add or change a maximum recipient limit on an active campaign, the limit 
 - **Recurring campaigns:** For recurring campaigns, each scheduled send evaluates the maximum recipient limit independently. Changing the limit between sends does not retroactively adjust previous send counts.
 
 To avoid misalignment, set the maximum recipient limit before launching the campaign and avoid modifying it while sends are in progress.
+
+### Why are sends lower than the estimated audience size?
+
+Several factors can cause the number of sends to be lower than the estimated audience size:
+
+- **Segment re-evaluation:** For action-based or scheduled campaigns that re-evaluate at send time, users who were in the segment when the campaign was enqueued may no longer qualify when the message is actually sent.
+- **Control groups:** If a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) or campaign-level control group is in use, a portion of the audience is withheld from delivery.
+- **Delivery timing and windows:** For local time zone or scheduled campaigns, users must qualify at both entry and send time; users in certain time zones may fall outside the delivery window.
+- **Rate limiting:** If rate limiting is applied, messages are distributed over time and some sends may be deferred or not yet reflected in the count.
+
 

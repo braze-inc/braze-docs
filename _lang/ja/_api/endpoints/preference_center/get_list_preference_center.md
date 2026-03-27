@@ -1,6 +1,6 @@
 ---
-nav_title: "取得:ユーザー設定センターのリスト"
-article_title: "取得:ユーザー設定センターのリスト"
+nav_title: "GET:ユーザー設定センターのリスト"
+article_title: "GET:ユーザー設定センターのリスト"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
@@ -20,17 +20,17 @@ description: "この記事では、「ユーザー設定センターのリスト
 
 ## 前提条件
 
-このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`preference_center.list`の権限が必要です。
+このエンドポイントを使用するには、`preference_center.list` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
 
 ## レート制限
 
-このエンドポイントには、1 分あたり、ワークスペース あたり、レート制限 1,000 のリクエストがあります。
+{% multi_lang_include rate_limits.md endpoint='get preference center' %}
 
-## パスとリクエストのパラメータ
+## パスとリクエストのパラメーター
 
-このエンドポイントには、パスまたはリクエストパラメータはありません。
+このエンドポイントには、パスまたはリクエストパラメーターはありません。
 
-## 例のリクエスト
+## リクエスト例
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/list \

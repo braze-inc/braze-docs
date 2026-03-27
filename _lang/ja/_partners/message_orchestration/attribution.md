@@ -1,4 +1,4 @@
 ---
-nav_title: ディープリンク ＆ アトリビューション
+nav_title: ディープリンクとアトリビューション
 config_only: true
 ---

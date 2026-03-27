@@ -5,7 +5,7 @@ description: "Cette article de référence d’onboarding fournit un aperçu tec
 page_order: 0
 ---
 
-# [![Cours Braze ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}[Learning](https://learning.braze.com/path/developer/sdk-integration-basics) \- Aperçu du SDK pour les développeurs
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Aperçu du SDK pour les développeurs
 
 > Avant de commencer à intégrer les SDK Braze, vous vous demandez peut-être exactement ce que vous concevez et intégrez. Vous pourriez être curieux de savoir comment le SDK peut être personnalisé afin de mieux répondre à vos besoins. Cet article peut vous aider à répondre à toutes vos questions concernant SDK. 
 

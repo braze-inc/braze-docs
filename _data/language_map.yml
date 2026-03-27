@@ -1,0 +1,8 @@
+# Maps site.language config values to the folder/data-file suffix
+# used in _data/sitemap_<key>.json and _lang/<key>/.
+#
+# Only languages whose site.language value differs from their
+# folder name need an entry here. Languages not listed fall back
+# to site.language with hyphens replaced by underscores.
+fr: fr_fr
+pt-br: pt_br
