@@ -346,7 +346,7 @@ valid_partner_list:
   url: /docs/partners/tapcart/
 - name: Mention Me
   url: /docs/partners/mention_me/
-- name: Just Words
+- name: JustAI
   url: /docs/partners/just_words/
 - name: Eagle Eye
   url: /docs/partners/eagle_eye/

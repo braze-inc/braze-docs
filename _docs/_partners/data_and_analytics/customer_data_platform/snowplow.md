@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Snowplow
 
-> [Snowplow](https://snowplowanalytics.com) is a scalable platform for rich, high-quality, low-latency data collection. Snowplow is designed to collect high-quality, complete behavioral data for enterprise businesses.
+> [Snowplow](https://snowplow.io) is a scalable open-source platform for rich, high-quality, low-latency data collection. It is designed to collect high-quality, complete behavioral data for enterprise businesses.
 
 _This integration is maintained by Snowplow._
 

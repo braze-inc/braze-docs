@@ -75,8 +75,8 @@ valid_partner_list:
   url: /docs/partners/future_anthem
 - name: SEEN
   url: /docs/partners/seen
-- name: Just Words
-  url: /docs/partners/just_words/
+- name: JustAI
+  url: /docs/partners/just_ai/
 - name: Transifex
   url: /docs/partners/transifex/
 - name: AccuWeather
