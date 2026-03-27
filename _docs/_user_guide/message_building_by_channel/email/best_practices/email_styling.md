@@ -92,8 +92,8 @@ Keep payloads small: roughly under **25&nbsp;KB** for text-only or **60&nbsp;KB*
 
 To reduce clipping risk:
 
-- Shorten copy and links; reduce image dimensions or file size.
-- Inline critical CSS where needed; remove extra whitespace in HTML.
+- Shorten copy and links.
+- Inline critical CSS where needed. Remove extra whitespace in HTML.
 - Compress images and HTML assets.
 
 {% alert note %}
