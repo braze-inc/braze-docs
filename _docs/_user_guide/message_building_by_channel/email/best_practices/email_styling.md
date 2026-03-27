@@ -102,9 +102,9 @@ To save your email campaign or template, make sure your email body does not exce
 
 ## Dark Mode
 
-Many clients invert colors in Dark Mode. Transparent images, outlined text on images, and off-white / gray-black backgrounds often survive inversion better than pure white (`#FFFFFF`) or pure black (`#000000`) with layered images—otherwise you can get low-contrast or invisible text.
+Many clients invert colors in Dark Mode. Transparent images, outlined text on images, and off-white or gray-black backgrounds often have better results with inversion than pure white (`#FFFFFF`) or pure black (`#000000`) with layered images. Otherwise, you can get low-contrast or invisible text.
 
-For HTML editor messages you can set a solid background with a single-stop gradient (for example `background-image: linear-gradient(#FFFFFF, #FFFFFF)` on `<td>` / `<th>`) to limit unwanted inversion, and use the `prefers-color-scheme` media query when appropriate.
+For HTML editor messages, you can set a solid background with a single-stop gradient (for example, `background-image: linear-gradient(#FFFFFF, #FFFFFF)` on `<td>` / `<th>`) to limit unwanted inversion, and use the `prefers-color-scheme` media query when appropriate.
 
 See [Building accessible messages in Braze]({{site.baseurl}}/help/accessibility/) for contrast guidance.
 
