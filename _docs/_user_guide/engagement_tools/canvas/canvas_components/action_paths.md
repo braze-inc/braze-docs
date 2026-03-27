@@ -79,7 +79,7 @@ In each action group setting, you also have the option to select the checkbox **
 
 If users enter an action path multiple times and have multiple entries in the action path at the same time, the expected behavior varies depending on the **Ranking** status.
 
-| Ranking Status | Action Path Behavior |
+| Ranking status | Action path behavior |
 |---|--------------|
 | **Off** | When a relevant action is performed, Braze deduplicates entries and immediately advances the earliest entry through the relevant action group. <br><br> When a relevant action is not performed, all entries advance at the end of the relevant evaluation window. No deduplication occurs. |
 | **On** | All entries advance at the end of the relevant evaluation window. No deduplication occurs. |
