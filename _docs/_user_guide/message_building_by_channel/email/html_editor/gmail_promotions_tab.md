@@ -107,9 +107,9 @@ The Promotions script only appears if your email lands in the Gmail Promotions t
 
 ## Best practices
 
-Follow [Gmail's Promotions tab best practices](https://developers.google.com/gmail/promotab/best-practices). Google decides when and to whom the card is shown—there's no guarantee every recipient sees it.
+In general, follow [Gmail's Promotions tab best practices](https://developers.google.com/gmail/promotab/best-practices).
 
-As you build your card, ask:
+As you build your card, consider the following questions:
 
 - Is the annotation script valid? [Preview with Google](https://developers.google.com/workspace/gmail/promotab/preview).
 - Does **Show original** in Gmail show the script in the raw message?
