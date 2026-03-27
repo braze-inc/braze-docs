@@ -175,6 +175,11 @@ Learn how to [log analytics](https://www.braze.com/docs/developer_guides/android
 ```markdown
 Learn how to [log analytics](https://www.braze.com/docs/developer_guides/content_cards/analytics/) for your custom Content Cards.
 ```
+> [!TIP]
+> To manually verify `ulinks` is working, run it against the test fixture at [`docs/contributing/update_old_links.md`](update_old_links.md).
+
+
+
 #### Why you should update old links
 
 Ideally, redirects added to [`assets/js/broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js) should only be used to:
