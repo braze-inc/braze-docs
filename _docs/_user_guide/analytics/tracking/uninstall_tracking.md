@@ -83,6 +83,20 @@ If you see a spike in app uninstalls, it may be due to Firebase Cloud Messaging 
 For privacy reasons, Braze’s push providers may revoke tokens at irregular intervals, meaning uninstall counts can sometimes spike in a given time period.<br><br>To validate these changes, monitor uninstall tracking alongside a user-action metric, such as direct push open rate. If uninstalls increase sharply but direct push opens remain stable, the spike likely reflects a partner revoking old tokens rather than actual user behavior.
 {% endalert %}
 
+### How do I determine if a specific campaign caused uninstalls?
+
+Check the analytics for the campaigns that sent messages around the same time the uninstall spike occurred. If a particular message correlates with a rise in uninstalls, it may be influencing users to uninstall. 
+
+To view uninstalls by segment:
+1. Go to the **Home** page of the dashboard.
+2. In the **Performance Over Time** section, select **Uninstalls** for **Statistics For** and **By Segment** for **Breakdown**.
+
+If you have a segment tracking lapsing users with [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) enabled, compare its uninstall trend to the overall app trend.
+
+### How do I confirm uninstalls are genuine?
+
+Check user profiles for the `BadDeviceToken` push error. If you see this error in bulk around the same time frame as the uninstall spike, the uninstalls are likely genuine. `BadDeviceToken` indicates the device's push token is no longer valid, which typically happens when the app is uninstalled.
+
 ### Why are the number of app uninstalls different from what's in APNs?
 
 The difference is expected. 
