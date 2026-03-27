@@ -1,7 +1,7 @@
 
 #  Page layouts
 
-> These are the page layouts that can be assigned to the [`page_layout`](metadata.md#page-layout) key in a page's YAML front matter. Most `page_layout` keys will visually modify the page&#8212;however, some only modify how the page functions. For more general information, see [About content management](../content_management.md#layouts).
+> These are the page layouts that can be assigned to the [`page_layout`](metadata.md#page-layout) key in a page's YAML front matter. Most `page_layout` keys will visually modify the page—however, some only modify how the page functions. For more general information, see [About content management](../content_management.md#layouts).
 
 ## Applying a layout
 
@@ -79,7 +79,7 @@ layout: glossary_page
 
 
 
-> **Tip:**
+> [!TIP]
 > In certain layouts, a value like `"guide_top_text:"` might benefit from having Markdown formatting. You can use Markdown formatting for certain YAML values. To do so, add `>` as the YAML value, and indent the text afterwards. For example:<br><br>
 > <code>
 > guide_top_text: ><br>
@@ -111,7 +111,7 @@ config_only: true
 
 The `redirect` layout is used to redirect an existing page from its current URL to a different URL of your choice.
 
-> **Warning:**
+> [!WARNING]
 > Do not use this method if you also plan on moving the file, renaming the file, or renaming any of its parent directories. Instead, [create a redirect in the `broken_redirect_list.js` file](../content_management/redirecting_urls.md#redirecting-a-heading).
 
 

@@ -24,7 +24,7 @@ As a contributor, you'll primarily work within the following directories.
 | [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in the `_docs` or `_includes` directory can link to this directory to display an image on its page.                                                                                                                                                                         |
 
 
-> **Tip:**
+> [!TIP]
 > For a full walkthrough, see [Generating a preview](generating_a_preview.md).
 
 
@@ -74,7 +74,7 @@ search_tag: Contributing
 
 
 
-> **Tip:**
+> [!TIP]
 > For a full walkthrough, see [Creating a page](content_management/pages.md#creating-a-page).
 
 
@@ -99,7 +99,7 @@ Your in-line image should be similar to the following:
 ```markdown
 ![The form for creating a new pull request on GitHub.](../../assets/img/contributing/getting_started/github_pull_request.png)
 ```
-> **Tip:**
+> [!TIP]
 > For a full walkthrough, see [Adding a new image](content_management/images.md#adding-a-new-image).
 
 
@@ -229,7 +229,7 @@ braze-docs
         └── subsection_b.md # configured as a landing page  
 ```
 
-> **Tip:**
+> [!TIP]
 > For a full walkthrough, see [Creating a section](content_management/sections.md#creating-a-section).
 
 
@@ -273,7 +273,7 @@ page_order: 0
 
 
 
-> **Note:**
+> [!NOTE]
 > While a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in the URLs for pages in that subsection. For more information, see [URLs](#urls).
 
 
@@ -296,7 +296,7 @@ Your cross-reference link should be similar to the following:
 ```markdown
 Before continuing, [create your SSH token](https://www.braze.com/docs/dev_guide/auth).
 ```
-> **Tip:**
+> [!TIP]
 > For a full walkthrough, see [Cross-referencing](content_management/cross_referencing.md).
 
 
@@ -335,7 +335,7 @@ Replace the following:
 
 
 
-> **Tip:**
+> [!TIP]
 > For a full walkthrough, see [Reusing content](content_management/reusing_content.md).
 
 
@@ -378,7 +378,7 @@ layout: api_page
 
 
 
-> **Tip:**
+> [!TIP]
 > For more information, see [Page layouts](yaml_front_matter/page_layouts.md).
 
 

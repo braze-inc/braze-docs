@@ -54,7 +54,7 @@ braze-docs
         └── broken_redirect_list.js
 ```
 
-> **Tip:**
+> [!TIP]
 > If you don't plan on moving or renaming the file, you can also set up the redirect directly in your file's YAML front matter with [`layout: redirect`](../yaml_front_matter/page_layouts.md#redirect), instead of creating a new one in the global redirect file.
 
 
@@ -73,7 +73,7 @@ Replace the following:
 | `REDIRECT_TO`   | The URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.   |
 
 
-> **Warning:**
+> [!WARNING]
 > URL strings for redirects cannot contain uppercase characters—even if the corresponding filename is uppercase.
 
 
@@ -102,7 +102,7 @@ Replace the following:
 | `NEW_HEADING_URL` | The new heading URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.                                      |
 
 
-> **Warning:**
+> [!WARNING]
 > URL strings for redirects cannot contain uppercase characters—even if the corresponding filename is uppercase.
 
 
@@ -143,7 +143,7 @@ https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive
 
 
 
-> **Tip:**
+> [!TIP]
 > If you're using VS Code, hold **CMD** while right-clicking a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
 
 

@@ -14,7 +14,7 @@ If you haven't already, review [Documentation feedback](https://www.braze.com/do
 
 ## Creating an include
 
-Create a new Markdown file with a `.md` extension in the `_includes` directory. While include files can be stored anywhere in this directory, it's best to keep related content together using subdirectories. Your file tree should like similar to the following:
+Create a new Markdown file with a `.md` extension in the `_includes` directory. While include files can be stored anywhere in this directory, it's best to keep related content together using subdirectories. Your file tree should be similar to the following:
 
 ```bash
 braze-docs
@@ -44,7 +44,7 @@ As a contributor, you'll primarily work within the following directories.
 
 ```
 
-> **Tip:**
+> [!TIP]
 > For a full walkthrough, see [Writing Content](pages.md#writing-content).
 
 

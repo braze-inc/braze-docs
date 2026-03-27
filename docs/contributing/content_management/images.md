@@ -44,7 +44,7 @@ braze-docs
 
 ### Step 2: Link to the image
 
-> **Important:**
+> [!IMPORTANT]
 > Since Liquid's `{% tab %}` tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
 
 
@@ -112,7 +112,7 @@ braze-docs
 
 Generally, your new image should be added to the same directory as the other images on this page, however you may use your best judgment. When you're ready, add the PNG file to the relevant location in `assets/img/`.
 
-> **Warning:**
+> [!WARNING]
 > Do not delete the old image file when you add your new one.
 
 
@@ -151,7 +151,7 @@ After your image is added to the relevant directory, you can link to this image 
 
 To remove an image, open the relevant Markdown file and remove the [in-line](images.md#step-2-link-to-the-image) or [reference-style](images.md#step-2-link-to-the-image) image link. Do not delete the image file from the repository.
 
-> **Warning:**
+> [!WARNING]
 > When an image file is deleted, that image will break for other Braze Docs language translations.
 
 

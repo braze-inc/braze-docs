@@ -1,25 +1,17 @@
 
 # Image copy style guide
 
-<style>
-.style-guide-table td {
-  overflow-wrap: break-word;
-  word-break: break-word;
-  min-width: 0;
-}
-</style>
-
 ## Optimize placement and sizing
 
 Whenever possible, place images near relevant text and be mindful to use image styling markdown to resize larger images. For some content, this should be done by [anchoring text to the left or right side of the page](https://www.braze.com/docs/home/styling_test_page/#image-test) depending on the image and the space available. 
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/optimize_placement_do.png" alt="Example of correctly optimizing image placement."></td><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/optimize_placement_dont.png" alt="Example of incorrectly optimizing image placement."></td></tr>
+<tr><td><img src="../../../assets/img/contributing/style_guide/optimize_placement_do.png" alt="Example of correctly optimizing image placement."></td><td><img src="../../../assets/img/contributing/style_guide/optimize_placement_dont.png" alt="Example of incorrectly optimizing image placement."></td></tr>
 </tbody>
 </table>
 
@@ -29,13 +21,13 @@ Whenever possible, place images near relevant text and be mindful to use image s
 Crop relevant sections closely. Unless necessary, do not include the left navigation bar and instead include navigation directions in the article. This limits the number of images that need to be changed when UI changes occur. 
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/cropping_do_1.png" alt="Example of a properly cropped image."></td><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/cropping_dont_1.png" alt="Example of an incorrectly cropped image."></td></tr>
-<tr><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/cropping_do_2.png" alt="Example of a properly cropped image."></td><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/cropping_dont_2.png" alt="Example of an incorrectly cropped image."></td></tr>
+<tr><td><img src="../../../assets/img/contributing/style_guide/cropping_do_1.png" alt="Example of a properly cropped image."></td><td><img src="../../../assets/img/contributing/style_guide/cropping_dont_1.png" alt="Example of an incorrectly cropped image."></td></tr>
+<tr><td><img src="../../../assets/img/contributing/style_guide/cropping_do_2.png" alt="Example of a properly cropped image."></td><td><img src="../../../assets/img/contributing/style_guide/cropping_dont_2.png" alt="Example of an incorrectly cropped image."></td></tr>
 </tbody>
 </table>
 
@@ -56,12 +48,12 @@ Because Braze docs already add a border to each image, omit borders in a section
 Blur any personal identifiable information (PII) like names, emails, and API keys.
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/censorship_do.png" alt="Example of correct blurring."></td><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/censorship_dont.png" alt="Example of incorrect blurring."></td></tr>
+<tr><td><img src="../../../assets/img/contributing/style_guide/censorship_do.png" alt="Example of correct blurring."></td><td><img src="../../../assets/img/contributing/style_guide/censorship_dont.png" alt="Example of incorrect blurring."></td></tr>
 </tbody>
 </table>
 
@@ -71,12 +63,12 @@ Blur any personal identifiable information (PII) like names, emails, and API key
 Avoid embedding text inside images as not all users can read English text (and page translation tools do not translate images). This text should be provided in the article. Provide alt text for images for maximum accessibility for users.
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/embed_text_do.png" alt="Example of correctly not embedding text in an image."></td><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/embed_text_dont.png" alt="Example of incorrectly embedding text in an image."></td></tr>
+<tr><td><img src="../../../assets/img/contributing/style_guide/embed_text_do.png" alt="Example of correctly not embedding text in an image."></td><td><img src="../../../assets/img/contributing/style_guide/embed_text_dont.png" alt="Example of incorrectly embedding text in an image."></td></tr>
 </tbody>
 </table>
 
@@ -86,13 +78,13 @@ Avoid embedding text inside images as not all users can read English text (and p
 Do not emphasize components of images unless necessary. Use blue squares (the most accessible option) with a thin-medium thickness to highlight different components of images. Make sure the "highlighted sections" do not obstruct the normal UI.
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/emphasis_do_1.png" alt="Example of correctly emphasizing components in an image."></td><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/emphasis_dont_1.png" alt="Example of incorrectly emphasizing components in an image."></td></tr>
-<tr><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/emphasis_do_2.png" alt="Example of correctly emphasizing components in an image."></td><td style="width: 50%;"><img src="../../../assets/img/contributing/style_guide/emphasis_dont_2.png" alt="Example of incorrectly emphasizing components in an image."></td></tr>
+<tr><td><img src="../../../assets/img/contributing/style_guide/emphasis_do_1.png" alt="Example of correctly emphasizing components in an image."></td><td><img src="../../../assets/img/contributing/style_guide/emphasis_dont_1.png" alt="Example of incorrectly emphasizing components in an image."></td></tr>
+<tr><td><img src="../../../assets/img/contributing/style_guide/emphasis_do_2.png" alt="Example of correctly emphasizing components in an image."></td><td><img src="../../../assets/img/contributing/style_guide/emphasis_dont_2.png" alt="Example of incorrectly emphasizing components in an image."></td></tr>
 </tbody>
 </table>
 

@@ -12,7 +12,7 @@ If you haven't already, review [Documentation feedback](https://www.braze.com/do
 
 ## Create a cross-reference
 
-> **Important:**
+> [!IMPORTANT]
 > Because Liquid's `{% tab %}` tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
 
 

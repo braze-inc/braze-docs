@@ -78,7 +78,7 @@ Most modern text editors (such as [VS Code](https://code.visualstudio.com/Downlo
 
 ![Intellij IDEA with the in-app terminal open.](../../assets/img/contributing/text_editor_with_terminal.png)
 
-> **Tip:**
+> [!TIP]
 > If you're having trouble, you can use a stand-alone terminal instead.
 
 
@@ -102,7 +102,7 @@ pwd
 git status
 ```
 
-> **Tip:**
+> [!TIP]
 > `git status` displays the current status of your Git directory. If you're new to Git, you can run this command after every step to help visualize the Git workflow. For more information, see [`git status`](https://git-scm.com/docs/git-status).
 
 
@@ -133,7 +133,7 @@ Switched to a new branch 'fixing-typo-in-metadata'
 
 In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
-> **Tip:**
+> [!TIP]
 > URLs on Braze Docs always match the directory structure within the docs repository. Reference the URL on Braze Docs to help find your way around.
 
 
@@ -178,13 +178,13 @@ $ git commit -m "Fixing a typo in the recommended software doc"
 Finally, push your changes to the Braze Docs GitHub repository.
 
 ```bash
-git push -u upstream BRANCH_NAME
+git push -u origin BRANCH_NAME
 ```
 
 Replace `BRANCH_NAME` with the name of your branch. The output is similar to the following:
 
 ```bash
-$ git push -u upstream fixing-typo-in-recommended-software
+$ git push -u origin fixing-typo-in-recommended-software
 Enumerating objects: 14, done.
 ...
 To github.com:braze-inc/braze-docs.git
@@ -255,7 +255,7 @@ By default, your site preview will be generated on localhost [`http://127.0.0.1:
 
 To stop your local server, reopen the terminal and press <kbd>Control</kbd> + <kbd>C</kbd>.
 
-> **Tip:**
+> [!TIP]
 > For a full walkthrough, see [Generating a preview](generating_a_preview.md)
 
 
@@ -276,7 +276,7 @@ After you or a member of the Braze Docs team reviews your work, you may need to 
 
 ### GitHub
 
-In your PR, select **Files changed**, then locate the file you'd like to update and select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Edit file**.
+In your PR, select **Files changed**, then locate the file you'd like to update and select (**...**) **Show options** > **Edit file**.
 
 ![The "Files changed" section in an example pull request showing "Edit file".](../../assets/img/contributing/github/edit_from_pr.png)
 
@@ -292,7 +292,7 @@ Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where
 
 ### Local environment
 
-In your PR, select <i class="fa-regular fa-clone"></i> **Copy** next to your branch name.
+In your PR, select **Copy** next to your branch name.
 
 ![An example pull request with the "Copy" icon shown next to the branch name.](../../assets/img/contributing/github/clone_the_fork.png)
 
@@ -310,6 +310,6 @@ Switched to branch 'fixing-typo-in-metadata'
 Your branch is up to date with 'origin/fixing-typo-in-metadata'.
 ```
 
-In your text editor, open the document you want to change, then repeat the repeat the steps you completed earlier during [Step 2: Make a change](#step-2-make-a-change).
+In your text editor, open the document you want to change, then repeat the steps you completed earlier during [Step 2: Make a change](#step-2-make-a-change).
 
 

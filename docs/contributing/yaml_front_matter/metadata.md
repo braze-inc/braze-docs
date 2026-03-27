@@ -100,7 +100,7 @@ alias: "/brazeai/liquid"
 
 
 
-> **Important:**
+> [!IMPORTANT]
 > Because the `alias` key must be unique across all URLs, it should only be used sparingly so it doesn't conflict with any existing or future URLs.
 
 

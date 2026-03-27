@@ -84,8 +84,8 @@ Replace the following:
 | `CONTENT`            | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 
 
-> **Tip:**
-> This template is only to get you started&#8212;add [additional metadata](../yaml_front_matter/metadata.md) and headings as needed.
+> [!TIP]
+> This template is only to get you started—add [additional metadata](../yaml_front_matter/metadata.md) and headings as needed.
 
 ---
 
@@ -100,8 +100,8 @@ config_only: true
 ---
 ```
 
-> **Tip:**
-> This template is only to get you started&#8212;add [additional metadata](../yaml_front_matter/metadata.md) and headings as needed.
+> [!TIP]
+> This template is only to get you started—add [additional metadata](../yaml_front_matter/metadata.md) and headings as needed.
 
 
 
@@ -135,7 +135,7 @@ braze-docs
 
 When you're finished adding content to each page, continue to [Ordering a section](#ordering-a-section).
 
-> **Tip:**
+> [!TIP]
 > For a full walkthrough on adding content to your page, see [Pages](pages.md#writing-content).
 
 

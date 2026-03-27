@@ -1,14 +1,6 @@
 
 # API endpoint documentation guidelines
 
-<style>
-.style-guide-table td {
-  overflow-wrap: break-word;
-  word-break: break-word;
-  min-width: 0;
-}
-</style>
-
 > In general, documentation for API endpoints should follow the guidelines indicated in the [General guidelines](writing_style_guide.md#general-guidelines). However, there are niche topics that may require different content guidelines listed in this document. 
 
 Braze supports the following REST API methods:
@@ -38,13 +30,13 @@ There are instances where an endpoint is referred to as an API. For example, thi
 Don't put quotation marks around the endpoint name. Don't use plain text when referring to the path.
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Use the Generate preference center URL endpoint to complete the next steps.</td><td style="width: 50%;">Use <code>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</code> to complete the next steps.</td></tr>
-<tr><td style="width: 50%;">Use the <code>/users/track</code> endpoint.</td><td style="width: 50%;">Use the "Users Track" API endpoint.</td></tr>
+<tr><td>Use the Generate preference center URL endpoint to complete the next steps.</td><td>Use <code>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</code> to complete the next steps.</td></tr>
+<tr><td>Use the <code>/users/track</code> endpoint.</td><td>Use the "Users Track" API endpoint.</td></tr>
 </tbody>
 </table>
 
@@ -54,13 +46,13 @@ Don't put quotation marks around the endpoint name. Don't use plain text when re
 When referencing endpoint articles, be sure to use [meaningful link text](writing_style_guide.md#writing-links) that can make sense out of context. If you're using the endpoint's path as a link, be sure to provide details in the surrounding text as the path may not clearly communicate the endpoint's function.    
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Delete user profiles using the Braze <a href="https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/">Delete user endpoint</a>.</td><td style="width: 50%;">Delete user profiles using the Braze <a href="https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/">Delete user</a> endpoint.</td></tr>
-<tr><td style="width: 50%;"><a href="https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code> endpoint</a></td><td style="width: 50%;"><a href="https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code></a> endpoint</td></tr>
+<tr><td>Delete user profiles using the Braze <a href="https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/">Delete user endpoint</a>.</td><td>Delete user profiles using the Braze <a href="https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/">Delete user</a> endpoint.</td></tr>
+<tr><td><a href="https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code> endpoint</a></td><td><a href="https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code></a> endpoint</td></tr>
 </tbody>
 </table>
 
@@ -107,13 +99,13 @@ Start each endpoint name with an active verb after its method. This lets users k
 Don't use the API method as the leading verb for the endpoint name.
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">POST: Create new user alias</td><td style="width: 50%;">POST: New user alias</td></tr>
-<tr><td style="width: 50%;">GET: Look up an existing dashboard user account</td><td style="width: 50%;">GET: Existing dashboard user account</td></tr>
+<tr><td>POST: Create new user alias</td><td>POST: New user alias</td></tr>
+<tr><td>GET: Look up an existing dashboard user account</td><td>GET: Existing dashboard user account</td></tr>
 </tbody>
 </table>
 
@@ -158,13 +150,13 @@ For placeholder text, use curly brackets with a brief description of what the us
 For API key placeholders, use `YOUR_REST_API_KEY`, not `YOUR-REST-API-KEY`.
 
 
-<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<table>
 <thead>
-<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+<tr><th>Do</th><th>Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;"><code>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</code></td><td style="width: 50%;"><code>/preference_center/v1/[preferenceCenterExternalId]</code></td></tr>
-<tr><td style="width: 50%;"><code>/scim/v2/Users/{userId}</code></td><td style="width: 50%;"><code>/url/[userId]/scim/v2/Users/userID</code></td></tr>
+<tr><td><code>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</code></td><td><code>/preference_center/v1/[preferenceCenterExternalId]</code></td></tr>
+<tr><td><code>/scim/v2/Users/{userId}</code></td><td><code>/url/[userId]/scim/v2/Users/userID</code></td></tr>
 </tbody>
 </table>
 

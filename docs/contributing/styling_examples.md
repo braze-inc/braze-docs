@@ -364,22 +364,22 @@ class Foo:
 
 ### Styling
 
-> **Tip:**
+> [!TIP]
 > This is a tip
 
 
 
-> **Note:**
+> [!NOTE]
 > This is a note
 
 
 
-> **Important:**
+> [!IMPORTANT]
 > This is a important alert
 
 
 
-> **Warning:**
+> [!WARNING]
 > This is a warning
 
 
@@ -390,22 +390,22 @@ class Foo:
 
 ### Markdown
 ```
-> **Tip:**
+> [!TIP]
 > This is a tip
 
 
 
-> **Note:**
+> [!NOTE]
 > This is a note
 
 
 
-> **Important:**
+> [!IMPORTANT]
 > This is a important alert
 
 
 
-> **Warning:**
+> [!WARNING]
 > This is a warning
 
 
@@ -525,7 +525,7 @@ video_source: youtube
 
 
 
-## Collapsible Content Test {#collapsible-content}
+## Collapsible Content Test
 ### Styling
 
 {% details Click me to Expand %}
@@ -587,7 +587,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 #### Usage
 Enclose **tabs** in a `` and ``
 Enclose individual **tab** with the Liquid code and name of the tab `{% tab [Tab name] %}` and `{% endtab %}`
-> **Important:**
+> [!IMPORTANT]
 > Note number of tabs on the page should be consistent, otherwise tab content might be hidden.
 >  For example, if one set of tabs has `C++`,`C-Sharp` and `JS`, and another set of tabs has `C-Sharp` and `JS`,
 > then when somebody clicks on `C++`, the other section will show nothing. See the following local tabs option for a workaround.

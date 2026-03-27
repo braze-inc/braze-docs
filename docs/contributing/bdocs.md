@@ -95,9 +95,9 @@ $ ./bdocs release
 
 ### `tlinks`
 
-Reference-style links are not supported within Liquid `{% tab %}` tags. `tlinks` (short for "transform links") transforms all the reference-style links on a file into [in-line links](content_management/cross_referencing.md)&#8212;whether it be a normal URL, a `https://www.braze.com/docs` URL, an image, or other link. This command takes a single file or an entire directory as an argument.
+Reference-style links are not supported within Liquid `{% tab %}` tags. `tlinks` (short for "transform links") transforms all the reference-style links on a file into [in-line links](content_management/cross_referencing.md)—whether it be a normal URL, a `https://www.braze.com/docs` URL, an image, or other link. This command takes a single file or an entire directory as an argument.
 
-> **Note:**
+> [!NOTE]
 > After you run `tlinks`, [`rlinks`](#rlinks) will be automatically run against the same file or directory.
 
 
@@ -128,7 +128,7 @@ Before continuing, [create your SSH token](https://www.braze.com/docs/developer_
 
 `rlinks` (short for "remove links") removes any unused reference links from the bottom of a Markdown file. This command takes a single file or an entire directory as an argument.
 
-> **Note:**
+> [!NOTE]
 > After you run `tlinks`, `rlinks` will be automatically run against the same file or directory.
 
 
@@ -243,7 +243,7 @@ $ ./bdocs fblinks
   /Users/Alex.Lee/braze-docs/scripts/temp/broken-links.csv
 ```
 
-> **Tip:**
+> [!TIP]
 > If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> the link to open the CSV file in a new tab.
 
 
@@ -263,7 +263,7 @@ File,Broken Link,Path to Broken Link
 
 `lredirects` (short for "list redirects") checks if any new redirects have been added to [`broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js), then lists all of the old URLs using a base URL of your choice. For more general information, see [Redirecting URLs](content_management/redirecting_urls.md).
 
-> **Tip:**
+> [!TIP]
 > If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
 
 
@@ -296,7 +296,7 @@ https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive
 `syntax` prints all the unique Braze Docs syntax to the terminal. Keep in mind, this doesn't include any standard Markdown syntax, only _unique_ syntax. This is helpful for two reasons:
 
 1. You no longer need to leave your text-editor to verify the syntax of a unique Braze Markdown implementation.
-2. Even if you're offline, you can easily review the unique Braze Docs syntax&#8212;making it easier when working on airplane mode.
+2. Even if you're offline, you can easily review the unique Braze Docs syntax—making it easier when working on airplane mode.
 
 ### Usage example
 <pre style="font-family: 'Roboto Mono', monospace; font-size: 14px; line-height: 16px; background-color: #f4f4f7; color: #666666; padding: 10px; overflow-x: auto; white-space: pre; word-break: inherit; word-wrap: inherit; min-height: 36px;">
@@ -339,5 +339,3 @@ SUBTABS
 TABLE WORD-BREAK
   
 </pre>
-{% endtab %}
-{% endtabs %}

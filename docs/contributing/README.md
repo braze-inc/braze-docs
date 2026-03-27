@@ -7,7 +7,7 @@
 
 Some understanding of Git is required to contribute to Braze Docs. If you're new to Git and don't know where to start, see [Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). If you just need a refresher, see [Git and GitHub](git_and_github.md).
 
-> **Note:**
+> [!NOTE]
 > We can only accept contributions in English. English serves as the base translation for our other supported languages.
 
 

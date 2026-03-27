@@ -25,7 +25,7 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
 
-> **Tip:**
+> [!TIP]
 > URLs on Braze Docs always match the directory structure within the docs repository. Reference the URL on Braze Docs to help find your way around.
 
 
@@ -35,13 +35,13 @@ Copy and paste one of the following templates into your Markdown file, and then 
 
 ### Basic template
 
-*Included in the site build from [`_includes/contributing/templates/basic.md`](../../../_includes/contributing/templates/basic.md).*
+File in GitHub: [`basic.md`](../../../_includes/contributing/templates/basic.md)
 
 ---
 
 ### Technology partner template
 
-*Included in the site build from [`_includes/contributing/templates/technology_partner.md`](../../../_includes/contributing/templates/technology_partner.md).*
+File in GitHub: [`technology_partner.md`](../../../_includes/contributing/templates/technology_partner.md)
 
 
 
@@ -62,7 +62,7 @@ To cross-reference a page hosted on Braze Docs, use the following Braze-specific
 ```markdown
 [LINK_TEXT](https://www.braze.com/docs/SHORT_URL)
 ```
-> **Note:**
+> [!NOTE]
 > For a full walkthrough, see [Cross-referencing](cross_referencing.md).
 
 
@@ -73,7 +73,7 @@ To add images, place the image's PNG file inside the relevant location within `a
 ```markdown
 ![ALT_TEXT.](../../../assets/img/DIRECTORY/IMAGE.png)
 ```
-> **Note:**
+> [!NOTE]
 > For a full walkthrough, see [Adding a new image](images.md).
 
 

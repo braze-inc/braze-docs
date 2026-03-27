@@ -16,11 +16,6 @@ If you haven't already, review [Documentation feedback](https://www.braze.com/do
 
 At a minimum, you need a terminal, a text editor, and a ruby version manager. If you're not sure where to start, see the following.
 
-<style>
-table td {
-    word-break: break-word;
-}
-</style>
 <table>
 <thead>
     <tr>
@@ -53,7 +48,7 @@ table td {
      <tr>
         <td>Tool manager</td>
         <td><a href="https://asdf-vm.com/guide/getting-started.html">asdf</a></td>
-        <td>A tool manager for installing and switching between multiple versions of Node.js. You can install this <a href="#install-dependencies">during set up later</a>.</td>
+        <td>A tool manager for installing and switching between multiple versions of Node.js. You can install this <a href="#step-5-install-dependencies">during set up later</a>.</td>
     </tr>
     <tr>
         <td>Ruby version manager</td>
@@ -85,7 +80,7 @@ table td {
 </table>
 
 
-> **Note:**
+> [!NOTE]
 > As of writing, all software is free of cost. If you find that a product is no longer free, ask in [#ask-docs](https://braze.enterprise.slack.com/archives/C0D10FTGQ) on Slack.
 
 
@@ -118,7 +113,7 @@ If this version isn't installed, use a [supported version manager](https://www.r
 rbenv install 3.3.0
 ```
 
-### Step 5: Install dependencies {#install-dependencies}
+### Step 5: Install dependencies
 
 If you have multiple versions of Node.js installed, use `asdf` for version management.
 

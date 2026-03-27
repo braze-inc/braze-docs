@@ -3,7 +3,7 @@
 
 > Learn how to create a Jekyll collection to add a new primary section on Braze Docs. For more information, see [Jekyll Collections](https://jekyllrb.com/docs/collections/).
 
-> **Important:**
+> [!IMPORTANT]
 > It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where you should store your content, ask in [#ask-docs](https://braze.enterprise.slack.com/archives/C0D10FTGQ) on Slack.
 
 
@@ -93,7 +93,7 @@ braze-docs
         └── home.md
 ```
 
-> **Important:**
+> [!IMPORTANT]
 > The directory name for a collection must start with an underscore.
 
 

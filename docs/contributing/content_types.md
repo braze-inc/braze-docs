@@ -23,7 +23,7 @@ Read HTML comments like the following to learn more about each section in a temp
 <!-- Here's an HTML comment! -->
 ```
 
-> **Important:**
+> [!IMPORTANT]
 > You can keep these comments in your file while writing, but you'll need to remove them before publishing.
 
 
@@ -38,20 +38,20 @@ There are two kinds of how-tos: generic and technology partner. Only use the tec
 
 How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card](https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/create/).
 
-*Included in the site build from [`_includes/contributing/templates/how_to_guide.md`](../../_includes/contributing/templates/how_to_guide.md).*
+File in GitHub: [`how_to_guide.md`](../../_includes/contributing/templates/how_to_guide.md)
 
 ---
 
 ### Technology partner
 
-*Included in the site build from [`_includes/contributing/templates/technology_partner.md`](../../_includes/contributing/templates/technology_partner.md).*
+File in GitHub: [`technology_partner.md`](../../_includes/contributing/templates/technology_partner.md)
 
 
 
 ![Screenshot of the "Creating a Content Card" page.](../../assets/img/contributing/content_types/how_to_guide_example.png)#### Guidelines
 
 - Cover only what the user needs to know to take action. 
-- Only cover the best or recommended way to complete the task. Do not give document alternative methods.
+- Only cover the best or recommended way to complete the task. Do not document alternative methods.
 - Only include [reference material](#references) that's vital to the end-user's goal, such as a list of options a user can select during a step.
 - Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters](https://www.braze.com/docs/user_guide/engagement_tools/segments/segmentation_filters/).
 - Avoid providing troubleshooting steps. Instead, you can include this information in a another section on this page or a separate article.
@@ -97,13 +97,9 @@ There are two kinds of tutorials: use cases and generic. In most scenarios, you'
 
 ### Use cases
 
-Use cases are a type of tutorial that provides a learning experience through practical, hands-on activities without overloading readers with background theory&#8212;unlike generic tutorials which may use hypothetical scenarios to illustrate some functionality. What makes use cases special is their ability to illustrate the _real-world value_ that Braze offers marketers.
+Use cases are a type of tutorial that provides a learning experience through practical, hands-on activities without overloading readers with background theory—unlike generic tutorials which may use hypothetical scenarios to illustrate some functionality. What makes use cases special is their ability to illustrate the _real-world value_ that Braze offers marketers.
 
-{% subtabs local %}
-{% subtab use case template %}
-*Included in the site build from [`_includes/contributing/templates/use_case.md`](../../_includes/contributing/templates/use_case.md).*
-{% endsubtab %}
-{% endsubtabs %}
+File in GitHub: [`use_case.md`](../../_includes/contributing/templates/use_case.md)
 
 #### Guidelines
 
@@ -125,18 +121,14 @@ Each use of the words "Use case" in a header should have a description following
 
 Generic tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations](https://www.braze.com/docs/user_guide/brazeai/recommendations/rules_based_recommendations/):
 
-{% subtabs local %}
-{% subtab tutorial template %}
-*Included in the site build from [`_includes/contributing/templates/tutorial.md`](../../_includes/contributing/templates/tutorial.md).*
-{% endsubtab %}
-{% endsubtabs %}
+File in GitHub: [`tutorial.md`](../../_includes/contributing/templates/tutorial.md)
 
 ![Screenshot of the "Rules-based recommendations page.](../../assets/img/contributing/content_types/tutorial_example.png)#### Guidelines
 
 - Create a guided step-by-step activity or scenario for the user to follow or roleplay. 
 - Assume that the user has little to no familiarity with the platforms, tools, or workflows used during the activity.
 
-> **Tip:**
+> [!TIP]
 > Provide ready-made assets for the user to input that aren't the key focus of your tutorial. For example, you could provide photos, messaging, and Liquid coding for a tutorial that teaches users how to use a variety of features when creating a campaign.
 
 
@@ -151,18 +143,14 @@ The title header should be prepended with `Tutorial:` and generally describe wha
 
 References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events/) (events glossary).
 
-{% subtabs local %}
-{% subtab reference template %}
-*Included in the site build from [`_includes/contributing/templates/reference.md`](../../_includes/contributing/templates/reference.md).*
-{% endsubtab %}
-{% endsubtabs %}
+File in GitHub: [`reference.md`](../../_includes/contributing/templates/reference.md)
 
 ![Screenshot of the "Message engagement events" page.](../../assets/img/contributing/content_types/reference_example.png)#### Guidelines
 
 - Create technical descriptions or information that are necessary to complete a task.
 - Organize the information alphabetically, categorically, or hierarchically.
 - Put references in their respective articles unless they're longer than seems appropriate for a single article or will be referenced by multiple articles. 
-    - If they're only referenced by a single how-to guide and long enough to disrupt the flow of the steps, you can [make them collapsible](styling_examples.md#collapsible-content).
+    - If they're only referenced by a single how-to guide and long enough to disrupt the flow of the steps, you can [make them collapsible](styling_examples.md#collapsible-content-test).
 
 ##### Header syntax
 
@@ -174,7 +162,7 @@ Explanations are understanding-oriented content. They focus on improving the use
 
 ### Explanation template
 
-*Included in the site build from [`_includes/contributing/templates/explanation.md`](../../_includes/contributing/templates/explanation.md).*
+File in GitHub: [`explanation.md`](../../_includes/contributing/templates/explanation.md)
 
 
 
@@ -185,7 +173,7 @@ Explanations are understanding-oriented content. They focus on improving the use
 - Place explanations in the most relevant article. For example, a basic feature article might have an explanation called "How it works" that describes that feature's workflow. 
 - Consider placing explanations that are too broad to fit into only one article onto a landing page for a general topic, such as [Campaigns](https://www.braze.com/docs/user_guide/engagement_tools/campaigns).
 
-> **Tip:**
+> [!TIP]
 > Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to achieve a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
 
 
@@ -218,6 +206,6 @@ You can use this template to create release notes for Braze Docs. For an example
 
 ### Release note template
 
-*Included in the site build from [`_includes/contributing/templates/release_notes.md`](../../_includes/contributing/templates/release_notes.md).*
+File in GitHub: [`release_notes.md`](../../_includes/contributing/templates/release_notes.md)
 
 
