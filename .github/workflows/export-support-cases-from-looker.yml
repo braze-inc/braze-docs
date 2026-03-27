@@ -1,0 +1,54 @@
+# Support analyzer – weekly export step.
+#
+# Exports Support Cases from Looker to _data/support_cases_latest.csv and pushes to the
+# support-analyzer-data branch. This action does not run the full analyzer (triage, draft
+# updates, PRs); run the support-analyzer Cursor rule on that CSV to complete the workflow.
+#
+# Add LOOKER_CLIENT_ID and LOOKER_CLIENT_SECRET as repository secrets (Settings → Secrets and variables → Actions).
+name: Support analyzer
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'   # Every Monday at 14:00 UTC (9am Eastern)
+  workflow_dispatch:
+
+permissions:
+  contents: write   # push CSV to branch
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout braze-docs
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up data branch
+        run: |
+          git fetch origin support-analyzer-data 2>/dev/null || true
+          git checkout -B support-analyzer-data origin/support-analyzer-data 2>/dev/null || git checkout -b support-analyzer-data
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Export Support Cases from Looker
+        env:
+          LOOKER_CLIENT_ID: ${{ secrets.LOOKER_CLIENT_ID }}
+          LOOKER_CLIENT_SECRET: ${{ secrets.LOOKER_CLIENT_SECRET }}
+          SUPPORT_ANALYZER_OUTPUT: _data/support_cases_latest.csv
+        run: python scripts/export_support_cases_from_looker.py
+
+      - name: Commit and push CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/support_cases_latest.csv
+          git diff --staged --quiet && echo "No changes to commit" || (git commit -m "chore: weekly Support Cases export from Looker" && git push origin support-analyzer-data)
