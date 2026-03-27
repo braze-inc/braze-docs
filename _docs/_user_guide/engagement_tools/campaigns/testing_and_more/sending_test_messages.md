@@ -270,7 +270,7 @@ After creating your webhook, you can do a test send to check the webhook respons
 
 ## Test limitations
 
-There are a few situations where test messages don't have complete feature parity with launching a campaign or Canvas to a real set of users. In these instances, to validate this behavior, you should launch the campaign or Canvas to a limited set of test users.
+There are a few situations where test messages don't behave the same way as campaigns or Canvases sent to real users. In these instances, to validate this behavior, you should launch the campaign or Canvas to a limited set of test users.
 
 - Viewing the Braze preference center from Test Messages will cause the submit button to be grayed out.
 - For testing in-app messages and Content Cards, the target user must have a push token for the target device.
