@@ -152,9 +152,7 @@ The **Banner Performance** panel outlines how well your message has performed ac
 {% elsif include.channel == "KakaoTalk" %}
 ### KakaoTalk Performance
 
-The **KakaoTalk Performance** panel outlines how well your message has performed across various dimensions. This section helps you understand how many of your messages were successfully sent to KakaoTalk and how many failures or errors you have. 
-
-Because we are not ingesting delivery status events in the initial version of KakaoTalk, it is recommended that you set a conversion event so you can better understand how your KakaoTalk messages have performed. 
+The **KakaoTalk Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 {% elsif include.channel == "webhook" %}
 ### Webhook Performance
@@ -516,14 +514,16 @@ Reporting for _Button 1 Clicks_ and _Button 2 Clicks_ only works when you specif
 
 ### KakaoTalk metrics
 
-Here are some key KakaoTalk metrics you may see in your analytics. For more details, see the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Here are some key KakaoTalk metrics you may see in your analytics. For more details, see the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Term | Definition |
 | --- | --- |
 | Audience | _Audience_ is the percentage of users who received a particular message. <br><br>_(Number of recipients in variant) / (Unique Recipients)_ |
-| Unique Recipients | _Unique Recipients_ is the number of unique daily recipients, or users who received a new message in a day. For this count to increment for a user more than once, the user must receive a new message on a different day. This number is based on the `user_id`. For more details, see [Unique Recipients in the Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-recipients). |
-| Sends | The total number of messages sent in a campaign. This doesn’t mean the message was received or delivered to a device, only that the message was sent.|
-| Errors | _Errors_ is the number of errors returned by the Kakao provider (incremented during the sending process). |
+| Unique Recipients | _Unique Recipients_ is the number of unique daily recipients, or users who received a new message in a day. For this count to increment for a user more than once, the user must receive a new message on a different day. This number is based on the `user_id`. For more details, see [Unique Recipients in the Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/#unique-recipients). |
+| Sends | The total number of messages sent in a campaign. This doesn’t mean the message was received or delivered to a device, only that the message was sent. |
+| Unique Clicks | The total number of KakaoTalk messages sent that were clicked by users. |
+| Total Clicks | The total number of times that the KakaoTalk messages sent were clicked by users. |
+| Errors | _Errors_ is the number of errors returned by the KakaoTalk provider (incremented during the sending process). |
 | Revenue | _Revenue_ is the revenue in dollars from campaign recipients within the set primary conversion window. |
 | Primary Conversions | _Primary Conversions_ is the number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by you when building the campaign. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -811,13 +811,7 @@ The **Conversion Correlation** panel gives you insight into what user attributes
 
 ## Report Builder
 
-You can also use [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) to build custom reports for your KakaoTalk campaigns. KakaoTalk messages share the same reporting metrics as Braze webhooks, so Braze automatically applies a tag to any KakaoTalk campaign, which allows you to separate KakaoTalk metrics from webhooks.
-
-When creating a report, select your KakaoTalk campaigns by doing the following:
-- Under **Select campaigns**, choose **Add automatically**.
-- Under **Tags**, select **kakao**.
-
-This includes only KakaoTalk campaigns within your report, properly separating the metrics from the webhook channel.
+You can also use [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) to build custom reports for your KakaoTalk campaigns. When creating a report, you can filter to include only KakaoTalk campaigns by selecting **KakaoTalk** under **Channels**, or by filtering by any tags you've applied to your KakaoTalk campaigns.
 
 {% endif %}
 
