@@ -78,6 +78,24 @@ Verifique se está usando o tipo correto de notificação por push. Por exemplo,
 
 Ao testar envios de push com usuários internos, certifique-se de que o usuário que você deseja que receba a notificação por push esteja atualmente logado no app relevante. Isso pode fazer com que o usuário não receba um push ou receba um push para o qual você acredita que ele não está segmentado.
 
+## Clicar em uma notificação por push não abre o app
+
+Se clicar em uma notificação por push não abre o seu app, verifique o seguinte com base na sua plataforma.
+
+### Android
+
+1. **Verifique o comportamento ao clicar:** Confirme que a campanha está configurada para abrir o app quando clicada.
+2. **Verifique o tratamento de deep links:** No seu arquivo `braze.xml`, verifique se `com_braze_handle_push_deep_links_automatically` está definido como `true` ou `false`.
+   - Se definido como `true`, o SDK da Braze trata os deep links diretamente e o app deve abrir conforme esperado.
+   - Se definido como `false`, seu app precisa de um broadcast receiver para escutar e tratar os intents de push recebidos e abertos. Verifique se esse receiver está implementado corretamente.
+3. **Colete registros detalhados:** [Ative o registro detalhado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduza o problema e forneça os registros junto com seus arquivos `braze.xml` e `AndroidManifest.xml` ao suporte da Braze.
+
+### iOS
+
+1. **Verifique o comportamento ao clicar:** Confirme que a campanha está configurada para abrir o app quando clicada.
+2. **Verifique a integração de push:** O deep linking a partir de um push para o app é tratado automaticamente pela [integração padrão de push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) da Braze. Confirme que a integração está implementada corretamente, incluindo qualquer tratamento de delegate personalizado.
+3. **Colete registros detalhados:** [Ative o registro detalhado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduza o problema e forneça os registros ao suporte da Braze.
+
 ## Cliques em push abrem inesperadamente no app
 
 Se você está enfrentando problemas com links em notificações por push abrindo inesperadamente no seu app em vez do navegador, pode haver um problema com a configuração da sua campanha ou implementação do SDK. Consulte estas etapas para obter ajuda.
@@ -96,7 +114,7 @@ Se este não for o problema, pode haver um problema com a sua implementação de
 
 Se links em suas notificações por push estão abrindo no app inesperadamente, pode ser devido a problemas com a sua integração ou configurações de personalização de notificações por push. Siga estas etapas para solucionar o problema:
 
-1. **Revise a implementação do delegado de push:** Certifique-se de que o delegado de push da Braze está implementado corretamente. Para instruções detalhadas, consulte o guia de integração para notificações por push para sua [plataforma]({{site.baseurl}}/developer_guide/home/).
+1. **Revise a implementação do delegate de push:** Certifique-se de que o delegate de push da Braze está implementado corretamente. Para instruções detalhadas, consulte o guia de integração para notificações por push para sua [plataforma]({{site.baseurl}}/developer_guide/home/).
 2. **Inspecione o tratamento de links personalizados:** Verifique se o app inclui tratamento personalizado para todos os links `https://`. Configurações personalizadas podem substituir comportamentos padrão. Colabore com sua equipe de desenvolvimento para revisar e ajustar essas configurações, se necessário.
 3. **Verifique o registro de push do iOS:** Para iOS, revise a etapa 1 do guia de integração de push em [registrando notificações por push com APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns). Certifique-se de que seu objeto delegate seja atribuído de forma síncrona antes que o app termine de iniciar. Esta etapa deve ser concluída no método `application:didFinishLaunchingWithOptions:`.
 4. **Teste sua integração:** Após fazer ajustes, teste o comportamento da notificação por push em dispositivos iOS e Android para confirmar que o problema foi resolvido.

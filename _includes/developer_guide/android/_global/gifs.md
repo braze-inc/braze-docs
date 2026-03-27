@@ -20,6 +20,8 @@ The integration example below is taken from the [Glide integration sample app](h
 {% tab JAVA %}
 
 ```java
+import com.braze.support.BrazeLogger;
+
 public class GlideBrazeImageLoader implements IBrazeImageLoader {
   private static final String TAG = GlideBrazeImageLoader.class.getName();
 
@@ -27,12 +29,12 @@ public class GlideBrazeImageLoader implements IBrazeImageLoader {
 
   @Override
   public void renderUrlIntoCardView(Context context, Card card, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
-    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+    renderUrlIntoView(context, imageUrl, imageView);
   }
 
   @Override
   public void renderUrlIntoInAppMessageView(Context context, IInAppMessage inAppMessage, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
-    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+    renderUrlIntoView(context, imageUrl, imageView);
   }
 
   @Override
@@ -45,11 +47,17 @@ public class GlideBrazeImageLoader implements IBrazeImageLoader {
     return getBitmapFromUrl(context, imageUrl, viewBounds);
   }
 
-  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
-    Glide.with(context)
-        .load(imageUrl)
-        .apply(mRequestOptions)
-        .into(imageView);
+  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView) {
+    imageView.post(() -> {
+      try {
+        Glide.with(context)
+            .load(imageUrl)
+            .apply(mRequestOptions)
+            .into(imageView);
+      } catch (Exception e) {
+        BrazeLogger.e(TAG, "Failed to render URL into view: " + imageUrl, e);
+      }
+    });
   }
 
   private Bitmap getBitmapFromUrl(Context context, String imageUrl, BrazeViewBounds viewBounds) {
@@ -76,6 +84,8 @@ public class GlideBrazeImageLoader implements IBrazeImageLoader {
 {% tab KOTLIN %}
 
 ```kotlin
+import com.braze.support.BrazeLogger
+
 class GlideBrazeImageLoader : IBrazeImageLoader {
   companion object {
     private val TAG = GlideBrazeImageLoader::class.qualifiedName
@@ -84,11 +94,11 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
   private var mRequestOptions = RequestOptions()
 
   override fun renderUrlIntoCardView(context: Context, card: Card, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
-    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+    renderUrlIntoView(context, imageUrl, imageView)
   }
 
   override fun renderUrlIntoInAppMessageView(context: Context, inAppMessage: IInAppMessage, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
-    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+    renderUrlIntoView(context, imageUrl, imageView)
   }
 
   override fun getPushBitmapFromUrl(context: Context, extras: Bundle, imageUrl: String, viewBounds: BrazeViewBounds): Bitmap? {
@@ -99,11 +109,17 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
     return getBitmapFromUrl(context, imageUrl, viewBounds)
   }
 
-  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
-    Glide.with(context)
-        .load(imageUrl)
-        .apply(mRequestOptions)
-        .into(imageView)
+  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView) {
+    imageView.post {
+      try {
+        Glide.with(context)
+            .load(imageUrl)
+            .apply(mRequestOptions)
+            .into(imageView)
+      } catch (e: Exception) {
+        BrazeLogger.e(TAG, "Failed to render URL into view: $imageUrl", e)
+      }
+    }
   }
 
   private fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: BrazeViewBounds): Bitmap? {

@@ -977,7 +977,7 @@ validurls['/docs/developer_guide/platform_integration_guides/swift/content_cards
 validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration?tab=objective-c#automatic-push-integration';
 validurls['/docs/developer_guide/platform_wide/platform_features/'] = '/docs/developer_guide/getting_started/platform_overview/';
 validurls['/docs/developer_guide/platform_wide/tv_and_ott/'] = '/docs/developer_guide/platform_integration_guides/tv_and_ott/';
-validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/';
@@ -3347,4 +3347,8 @@ validurls['/docs/user_guide/brazeai/predictive_churn/messaging_users/'] = '/docs
 
 // BrazeAI > Operator
 validurls['/docs/user_guide/brazeai/operator/getting_started/'] = '/docs/user_guide/brazeai/operator/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/#timestamps-for-triggers';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/';
+
 // validurls['OLD'] = 'NEW';

@@ -1068,6 +1068,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer in eine Kontrollvariante einer multiv
 {% endapi %}
 
 {% api %}
+
 ## Canvas-Konversions-Events {#canvas-conversion-events}
 
 {% apitags %}
@@ -1693,14 +1694,13 @@ Dieses Ereignis tritt ein, wenn ein Nutzer einen Canvas durch die Ausführung ei
 {% endapi %}
 
 {% api %}
-
-## Experiment Schritt Konversions-Events {#experiment-step-conversion-events}
+## Experiment-Schritt-Konversions-Events {#experiment-step-conversion-events}
 
 {% apitags %}
 Canvas
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Nutzer:in einen Canvas-Experiment-Schritt konvertiert.
+Dieses Ereignis tritt ein, wenn ein Nutzer bei einem Canvas-Experiment-Schritt konvertiert.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1863,13 +1863,13 @@ Dieses Ereignis tritt ein, wenn eine Nutzer:in einen Canvas-Experiment-Schritt k
 {% endapi %}
 
 {% api %}
-## Experiment Split Entry-Events {#experiment-split-entry-events}
+## Experiment-Split-Entry-Events {#experiment-split-entry-events}
 
 {% apitags %}
 Canvas
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Nutzer:in einen Canvas-Experiment-Schritt-Pfad betritt.
+Dieses Ereignis tritt ein, wenn ein Nutzer einen Canvas-Experiment-Schritt-Pfad betritt.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -2023,6 +2023,7 @@ Dieses Ereignis tritt ein, wenn eine Nutzer:in einen Canvas-Experiment-Schritt-P
 {% endapi %}
 
 {% api %}
+
 ## Canvas-Schrittfortschrittsereignisse {#canvas-step-progression-events}
 
 {% apitags %}
@@ -2406,6 +2407,7 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante Bannernachricht aus 
 
 #### Eigenschaftsdetails
 
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 Banner messages every 1 week`
 {% endapi %}
@@ -2810,6 +2812,7 @@ Dieses Ereignis tritt ein, wenn eine Nutzer:in ein Banner sieht.
 {% endapi %}
 
 {% api %}
+
 ## Content-Card-Abbruchereignisse {#content-card-abort-events}
 
 {% apitags %}
@@ -3004,19 +3007,19 @@ Dieses Ereignis tritt ein, wenn eine Content-Card-Nachricht aufgrund von Liquid-
 #### Eigenschaftsdetails
 
 - `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Absprung und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 Content Card messages every 1 week`
 {% endapi %}
 
 {% api %}
-
 ## Content-Card-Klickereignisse {#content-card-click-events}
 
 {% apitags %}
 Content Cards, Clicks
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
+Dieses Ereignis tritt ein, wenn eine Nutzerin oder ein Nutzer auf eine Content Card klickt.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -3232,9 +3235,9 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
 {% endtab %}
 {% endtabs %}
 
-#### Merkmale der Eigenschaft
+#### Eigenschaftsdetails
 
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS IDFA und die Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)-Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
@@ -3245,7 +3248,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
 Content Cards, Dismissal
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
+Dieses Ereignis tritt ein, wenn eine Nutzerin oder ein Nutzer eine Content Card schließt.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -3461,9 +3464,9 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
 {% endtab %}
 {% endtabs %}
 
-#### Merkmale der Eigenschaft
+#### Eigenschaftsdetails
 
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS IDFA und die Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)-Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
@@ -3474,7 +3477,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
 Content Cards, Impressions
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
+Dieses Ereignis tritt ein, wenn eine Nutzerin oder ein Nutzer eine Content Card ansieht.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -3690,13 +3693,14 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
 {% endtab %}
 {% endtabs %}
 
-#### Merkmale der Eigenschaft
+#### Eigenschaftsdetails
 
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS IDFA und die Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)-Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 {% endapi %}
 
 {% api %}
+
 ## Content-Card-Sendeereignisse {#content-card-send-events}
 
 {% apitags %}
@@ -4097,6 +4101,7 @@ Dieses Ereignis tritt ein, wenn eine E-Mail-Nachricht aufgrund von Liquid-Abbrü
 #### Merkmale der Eigenschaft
 
 - `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` wird `frequency_capped` angezeigt, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 email messages every 1 week`
 {% endapi %}
@@ -5015,6 +5020,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang
 {% endapi %}
 
 {% api %}
+
 ## E-Mail als Spam markieren {#email-mark-as-spam-events}
 
 {% apitags %}
@@ -5689,13 +5695,13 @@ Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency
 
 {% api %}
 
-## E-Mail-Versand von Veranstaltungen {#email-send-events}
+## E-Mail-Versand-Ereignisse {#email-send-events}
 
 {% apitags %}
 Email, Sends
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich zwischen Braze und SendGrid übermittelt wurde. Dies bedeutet jedoch nicht, dass die E-Mail im Posteingang des Nutzers eingegangen ist. Braze protokolliert keine Ereignisse in Nutzerprofilen oder Currents-Zielen (wie Snowflake), wenn das Ereignis nicht sowohl mit der E-Mail-Adresse als auch mit der Nutzer-ID, die mit dem E-Mail-Ereignis verknüpft ist, abgeglichen werden kann.
+Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich zwischen Braze und SendGrid übermittelt wurde. Dies bedeutet jedoch nicht, dass die E-Mail im Posteingang der Nutzer:in eingegangen ist. Braze protokolliert keine Ereignisse in Nutzerprofilen oder Currents-Zielen (wie Snowflake), wenn das Ereignis nicht sowohl mit der E-Mail-Adresse als auch mit der Nutzer-ID, die mit dem E-Mail-Ereignis verknüpft ist, abgeglichen werden kann.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -6523,6 +6529,7 @@ Feature-Flag-Impressionen werden nur einmal pro Sitzung protokolliert.
 {% endapi %}
 
 {% api %}
+
 ## In-App-Nachrichtenabbruchereignisse {#in-app-message-abort-events}
 
 {% apitags %}
@@ -6761,6 +6768,7 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante In-App-Nachricht abg
 
 #### Merkmale der Eigenschaft
 
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 in-app messages every 1 week`
 {% endapi %}
@@ -7004,7 +7012,6 @@ Bei In-App-Nachrichten gibt `dispatch_id` den Wert `null` zurück.
 {% endapi %}
 
 {% api %}
-
 ## In-App-Nachrichten-Impressionen-Ereignisse {#in-app-message-impression-events}
 
 {% apitags %}
@@ -7248,6 +7255,7 @@ Bei In-App-Nachrichten gibt `dispatch_id` den Wert `null` zurück.
 {% endapi %}
 
 {% api %}
+
 ## LINE-Abbruchereignisse {#line-abort-events}
 
 {% apitags %}
@@ -7448,6 +7456,7 @@ Dieses Ereignis tritt ein, wenn eine geplante LINE-Nachricht nicht zugestellt we
 #### Merkmale der Eigenschaft
 
 - `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z. B. den Versand einer Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus der Push-Nachricht für diesen Versand (z. B. Senden, Absprung und Öffnung) gruppieren und korrelieren.
+- Das Feld `abort_type` beschreibt den Grund für den Abbruch der Nachricht. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel: `Frequency cap rule: 5 LINE messages every 1 week`
 {% endapi %}
@@ -8068,6 +8077,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency
 {% endapi %}
 
 {% api %}
+
 ## LINE-Sendeereignisse {#line-send-events}
 
 {% apitags %}
@@ -8416,14 +8426,13 @@ Dieses Ereignis tritt ein, wenn Braze eine Antwort von einem Drittanbieter (z. B
 {% endapi %}
 
 {% api %}
-
-## Live-Aktivität-Sendeereignisse {#live-activity-send-events}
+## Live-Activity-Sendeereignisse {#live-activity-send-events}
 
 {% apitags %}
 Live Activity, Sends
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage bezüglich Live-Aktivitäten an seinen Anbieter stellt.
+Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage bezüglich Live Activity an seinen Anbieter stellt.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -8766,6 +8775,7 @@ Dieses Ereignis tritt ein, wenn eine Push-Benachrichtigung aufgrund von Liquid-A
 #### Eigenschaftsdetails
 
 - `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z. B. den Versand einer Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus der Push-Nachricht für diesen Versand (z. B. Senden, Absprung und Öffnung) gruppieren und korrelieren.
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequency-Capping-Regel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel: `Frequency cap rule: 5 push messages every 1 week`
 {% endapi %}
@@ -8992,6 +9002,7 @@ Dieses Ereignis tritt ein, wenn ein Fehler vom Apple Push Notification Service o
 {% endapi %}
 
 {% api %}
+
 ## Push-Benachrichtigung: iOS-Vordergrund-Öffnungsereignisse {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
@@ -9604,14 +9615,13 @@ Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency
 {% endapi %}
 
 {% api %}
-
-## Push-Benachrichtigung Sende-Ereignisse {#push-notification-send-events}
+## Push-Benachrichtigung: Sende-Ereignisse {#push-notification-send-events}
 
 {% apitags %}
 Push, Sends
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für eine Nutzer:in verarbeitet und diese an den Apple Push Notification Service oder Fire Cloud Messaging weiterleitet. Das bedeutet nicht, dass der Push an das Gerät zugestellt wurde, sondern nur, dass eine Nachricht gesendet wurde.
+Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für eine Nutzerin oder einen Nutzer verarbeitet und diese an den Apple Push Notification Service oder Fire Cloud Messaging weiterleitet. Das bedeutet nicht, dass der Push an das Gerät zugestellt wurde, sondern nur, dass eine Nachricht gesendet wurde.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -9831,13 +9841,14 @@ Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für eine Nutzer:in ve
 
 #### Eigenschaftsdetails
 
-- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS IDFA und die Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)-Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
+- Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS-IDFA und die Android Google Advertising ID explizit über die nativen SDKs erfassen. Mehr über diese Einrichtung erfahren Sie für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- Wenn Sie Kafka zum Importieren von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)-Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 - `message_extras` ermöglicht es Ihnen, Ihre Sende-Ereignisse mit dynamischen Daten aus Connected Content, angepassten Attributen (z. B. Sprache, Land) und Canvas-Eingangs-Eigenschaften zu versehen. Weitere Informationen finden Sie unter [Nachrichten-Extras]({{site.baseurl}}/message_extras_tag/).
-- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zu demselben Versand gehören. So können Sie den Lebenszyklus der Push-Nachricht für diesen Versand (z. B. Senden, Absprung und Öffnung) gruppieren und korrelieren.
+- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z. B. den Versand einer Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus der Push-Nachricht für diesen Versand (z. B. Senden, Absprung und Öffnung) gruppieren und korrelieren.
 {% endapi %}
 
 {% api %}
+
 ## RCS-Abbruchereignisse {#rcs-abort-events}
 
 {% apitags %}
@@ -10013,6 +10024,7 @@ Dieses Ereignis wird ausgelöst, wenn ein RCS-Versand aufgrund eines in Braze er
 
 #### Eigenschaftsdetails
 
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel: `Frequency cap rule: 5 RCS messages every 1 week`
 {% endapi %}
@@ -10636,6 +10648,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS-Nachricht empfängt, die von 
 {% endapi %}
 
 {% api %}
+
 ## RCS-Leseereignisse {#rcs-read-events}
 
 {% apitags %}
@@ -11014,7 +11027,6 @@ Ein Ereignis, das ausgelöst wird, wenn eine RCS-Nachricht aufgrund einer Interv
 {% endapi %}
 
 {% api %}
-
 ## RCS-Sendeereignisse {#rcs-send-events}
 
 {% apitags %}
@@ -11403,11 +11415,13 @@ Dieses Ereignis tritt ein, wenn eine SMS-Nachricht aufgrund von Liquid-Abbrüche
 
 #### Eigenschaftsdetails
 
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 SMS messages every 1 week`
 {% endapi %}
 
 {% api %}
+
 ## SMS-Carrier-Send-Ereignisse {#sms-carrier-send-events}
 
 {% apitags %}
@@ -13044,6 +13058,7 @@ Dieses Ereignis tritt ein, wenn eine Nutzerin oder ein Nutzer auf einen SMS-Kurz
 {% endapi %}
 
 {% api %}
+
 ## Webhook-Abbruchereignisse {#webhook-abort-events}
 
 {% apitags %}
@@ -13238,6 +13253,7 @@ Dieses Ereignis tritt ein, wenn eine Webhook-Nachricht aufgrund von Liquid-Abbr�
 #### Merkmale der Eigenschaft
 
 - `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 webhook messages every 1 week`
 {% endapi %}
@@ -13472,7 +13488,6 @@ Dieses Ereignis tritt ein, wenn eine Webhook-Nachricht zugestellt wurde, aber mi
 {% endapi %}
 
 {% api %}
-
 ## Webhook-Wiederholungsereignisse {#webhook-retry-events}
 
 {% apitags %}
@@ -13862,6 +13877,7 @@ Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Web
 {% endapi %}
 
 {% api %}
+
 ## WhatsApp-Abbruchereignisse {#whatsapp-abort-events}
 
 {% apitags %}
@@ -14063,6 +14079,7 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp-Nachricht aufgrund von Liquid-Abbr
 #### Merkmale der Eigenschaft
 
 - `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- Das Feld `abort_type` beschreibt den Grund, warum die Nachricht abgebrochen wurde. Eine vollständige Liste der Werte finden Sie unter [Abbruchtypen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` hat den Wert `frequency_capped`, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
 - `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 WhatsApp messages every 1 week`
 {% endapi %}
@@ -14719,7 +14736,7 @@ Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht nicht an die Nutzer:innen
 WhatsApp, Inbound Received
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht an eine Rufnummer in einer Ihrer Abo-Gruppen von Braze WhatsApp sendet.
+Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp-Nachricht an eine Rufnummer in einer Ihrer Braze WhatsApp-Abo-Gruppen sendet.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -15374,6 +15391,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency
 {% endapi %}
 
 {% api %}
+
 ## WhatsApp-Sendeereignisse {#whatsapp-send-events}
 
 {% apitags %}

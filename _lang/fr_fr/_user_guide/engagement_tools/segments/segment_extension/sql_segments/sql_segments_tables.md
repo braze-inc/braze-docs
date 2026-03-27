@@ -48,8 +48,8 @@ Table | Description
 [USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | Lorsqu'un utilisateur consulte le fil d'actualité
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | Lorsqu'un utilisateur termine une session sur une application
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | Lorsqu'un utilisateur commence une session sur une application
-[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | Lorsqu'un utilisateur déclenche une zone de géorepérage (par exemple, lorsqu'il entre ou sort d'un géorepérage). Cet événement a été regroupé avec d'autres événements et reçu via l'endpoint d'événements standard ; il est donc possible qu'il n'ait pas été reçu par l'endpoint en temps réel.
-[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | Lorsqu'un utilisateur déclenche une zone de géorepérage (par exemple, lorsqu'il entre ou sort d'un géorepérage). Cet événement a été reçu via l'endpoint dédié au géorepérage et est donc reçu en temps réel dès que l'appareil de l'utilisateur détecte qu'il a déclenché un géorepérage. <br><br>De plus, en raison de la limite de débit sur l'endpoint de géorepérage, il est possible que certains événements de géorepérage ne soient pas reflétés en tant que RecordEvent. Cependant, tous les événements de géorepérage sont représentés par DataEvent (mais potentiellement avec un certain délai dû au regroupement).
+[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | Lorsqu'un utilisateur déclenche une zone de géorepérage (par exemple, lorsqu'il entre ou sort d'un géorepérage). Cet événement a été regroupé avec d'autres événements et reçu via l'endpoint d'événements standard, et peut donc ne pas avoir été reçu par l'endpoint en temps réel.
+[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | Lorsqu'un utilisateur déclenche une zone de géorepérage (par exemple, lorsqu'il entre ou sort d'un géorepérage). Cet événement a été reçu via l'endpoint dédié au géorepérage et est donc reçu en temps réel dès que l'appareil de l'utilisateur détecte qu'il a déclenché un géorepérage. <br><br>De plus, en raison de la limite de débit sur l'endpoint de géorepérage, il est possible que certains événements de géorepérage ne soient pas reflétés en tant que RecordEvent. Cependant, tous les événements de géorepérage sont représentés par un DataEvent (mais potentiellement avec un certain délai dû au regroupement).
 [USERS_BEHAVIORS_LIVEACTIVITY_PUSHTOSTARTTOKENCHANGE_SHARED](#USERS_BEHAVIORS_LIVEACTIVITY_PUSHTOSTARTTOKENCHANGE_SHARED) | Lorsqu'un jeton push-to-start de Live Activity change
 [USERS_BEHAVIORS_LIVEACTIVITY_UPDATETOKENCHANGE_SHARED](#USERS_BEHAVIORS_LIVEACTIVITY_UPDATETOKENCHANGE_SHARED) | Lorsqu'un jeton de mise à jour de Live Activity change
 [USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED](#USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED) | Lorsque l'état d'un jeton de notification push change
@@ -62,7 +62,7 @@ Table | Description
 [USERS_CANVASSTEP_PROGRESSION_SHARED](#USERS_CANVASSTEP_PROGRESSION_SHARED) | Lorsqu'un utilisateur progresse vers une étape du Canvas
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | Lorsqu'un utilisateur convertit pour un événement de conversion Canvas
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | Lorsqu'un utilisateur entre dans un Canvas
-[USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | Lorsqu'un utilisateur quitte un Canvas parce qu'il correspond aux critères de sortie de l'audience
+[USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | Lorsqu'un utilisateur quitte un Canvas parce qu'il correspond aux critères de sortie d'audience
 [USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED](#USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED) | Lorsqu'un utilisateur quitte un Canvas parce qu'il a effectué un événement d'exception
 [USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED](#USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED) | Lorsqu'un utilisateur convertit pour une étape d'expérience Canvas
 [USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED](#USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED) | Lorsqu'un utilisateur entre dans un chemin d'étape d'expérience
@@ -77,7 +77,7 @@ Table | Description
 [USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED](#USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED) | Lorsqu'un utilisateur visualise une Content Card
 [USERS_MESSAGES_CONTENTCARD_SEND_SHARED](#USERS_MESSAGES_CONTENTCARD_SEND_SHARED) | Lorsque nous envoyons une Content Card à un utilisateur
 [USERS_MESSAGES_EMAIL_ABORT_SHARED](#USERS_MESSAGES_EMAIL_ABORT_SHARED) | Un e-mail initialement planifié a été abandonné pour une raison quelconque.
-[USERS_MESSAGES_EMAIL_BOUNCE_SHARED](#USERS_MESSAGES_EMAIL_BOUNCE_SHARED) | Un fournisseur de services d'e-mailing a renvoyé un échec d'envoi définitif. Un échec d'envoi définitif indique un problème permanent de livrabilité.
+[USERS_MESSAGES_EMAIL_BOUNCE_SHARED](#USERS_MESSAGES_EMAIL_BOUNCE_SHARED) | Un fournisseur de services d'e-mailing a renvoyé un échec d'envoi définitif. Un échec d'envoi définitif indique un problème de livrabilité permanent.
 [USERS_MESSAGES_EMAIL_CLICK_SHARED](#USERS_MESSAGES_EMAIL_CLICK_SHARED) | Lorsqu'un utilisateur clique sur un lien dans un e-mail
 [USERS_MESSAGES_EMAIL_DEFERRAL_SHARED](#USERS_MESSAGES_EMAIL_DEFERRAL_SHARED) | Lorsqu'un e-mail est différé
 [USERS_MESSAGES_EMAIL_DELIVERY_SHARED](#USERS_MESSAGES_EMAIL_DELIVERY_SHARED) | Lorsqu'un e-mail est distribué
@@ -98,21 +98,21 @@ Table | Description
 [USERS_MESSAGES_LINE_RETRY_SHARED](#USERS_MESSAGES_LINE_RETRY_SHARED) | Lorsqu'un message LINE est réessayé après avoir été dépriorisé ou limité en fréquence (**Snowflake Data Sharing uniquement**)
 [USERS_MESSAGES_LIVEACTIVITY_OUTCOME_SHARED](#USERS_MESSAGES_LIVEACTIVITY_OUTCOME_SHARED) | Lorsqu'une Live Activity a un événement de résultat
 [USERS_MESSAGES_LIVEACTIVITY_SEND_SHARED](#USERS_MESSAGES_LIVEACTIVITY_SEND_SHARED) | Lorsqu'un message Live Activity est envoyé
-[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | Une carte de fil d'actualité initialement planifiée a été abandonnée pour une raison quelconque
+[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | Un message de carte de fil d'actualité initialement planifié a été abandonné pour une raison quelconque
 [USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED) | Lorsqu'un utilisateur clique sur une carte de fil d'actualité
 [USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED) | Lorsqu'un utilisateur visualise une carte de fil d'actualité
 [USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | Une notification push initialement planifiée a été abandonnée pour une raison quelconque.
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | Lorsqu'une notification push fait l'objet d'un rebond
-[USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | Lorsqu'un utilisateur ouvre l'application après avoir reçu une notification sans cliquer dessus
+[USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | Lorsqu'un utilisateur ouvre l'application après avoir reçu une notification sans cliquer sur celle-ci
 [USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | Lorsqu'un utilisateur reçoit une notification push alors que l'application est ouverte. <br><br>Cet événement n'est pas pris en charge par le [SDK Swift](https://github.com/braze-inc/braze-swift-sdk) et est obsolète dans le [SDK Obj-C](https://github.com/Appboy/appboy-ios-sdk).
-[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | Lorsqu'un utilisateur ouvre une notification push ou clique sur un bouton de notification push (y compris un bouton FERMER qui n'ouvre PAS l'application). <br><br> Les actions des boutons push ont plusieurs résultats possibles. Les actions Non, Refuser et Annuler sont des « clics », et les actions Accepter sont des « ouvertures ». Les deux sont représentés dans cette table, mais ils peuvent être distingués dans la colonne **BUTTON_ACTION_TYPE**. Par exemple, une requête peut être utilisée pour regrouper par `BUTTON_ACTION_TYPE` qui n'est pas Non, Refuser ou Annuler.
+[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | Lorsqu'un utilisateur ouvre une notification push ou clique sur un bouton de notification push (y compris un bouton FERMER qui n'ouvre PAS l'application). <br><br> Les actions des boutons push ont plusieurs résultats possibles. Les actions Non, Refuser et Annuler sont des « clics », et les actions Accepter sont des « ouvertures ». Les deux sont représentés dans cette table, mais peuvent être distingués dans la colonne **BUTTON_ACTION_TYPE**. Par exemple, une requête peut être utilisée pour regrouper par `BUTTON_ACTION_TYPE` qui n'est pas Non, Refuser ou Annuler.
 [USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | Lorsque nous envoyons une notification push à un utilisateur
 [USERS_MESSAGES_RCS_ABORT_SHARED](#USERS_MESSAGES_RCS_ABORT_SHARED) | Lorsqu'un envoi RCS est interrompu en raison d'une erreur détectée dans Braze et que le message est abandonné
 [USERS_MESSAGES_RCS_CLICK_SHARED](#USERS_MESSAGES_RCS_CLICK_SHARED) | Lorsque l'utilisateur final interagit avec un message RCS en appuyant ou en cliquant sur un élément de l'interface
 [USERS_MESSAGES_RCS_DELIVERY_SHARED](#USERS_MESSAGES_RCS_DELIVERY_SHARED) | Lorsqu'un message RCS est distribué avec succès sur l'appareil mobile de l'utilisateur final
 [USERS_MESSAGES_RCS_INBOUNDRECEIVE_SHARED](#USERS_MESSAGES_RCS_INBOUNDRECEIVE_SHARED) | Lorsque Braze reçoit un message RCS provenant de l'utilisateur final
 [USERS_MESSAGES_RCS_READ_SHARED](#USERS_MESSAGES_RCS_READ_SHARED) | Lorsque l'utilisateur final ouvre un message RCS sur son appareil
-[USERS_MESSAGES_RCS_REJECTION_SHARED](#USERS_MESSAGES_RCS_REJECTION_SHARED) | Lorsqu'un message RCS n'a pas pu être distribué en raison d'une intervention de l'opérateur
+[USERS_MESSAGES_RCS_REJECTION_SHARED](#USERS_MESSAGES_RCS_REJECTION_SHARED) | Lorsqu'un message RCS n'est pas distribué en raison d'une intervention de l'opérateur
 [USERS_MESSAGES_RCS_SEND_SHARED](#USERS_MESSAGES_RCS_SEND_SHARED) | Lorsqu'un message RCS est envoyé depuis les systèmes de Braze vers les partenaires de distribution finale
 [USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | Un SMS initialement planifié a été abandonné pour une raison quelconque.
 [USERS_MESSAGES_SMS_CARRIERSEND_SHARED](#USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | Lorsqu'un SMS est envoyé à l'opérateur
@@ -419,7 +419,7 @@ Champ | Type | Description
 `timezone` | `null,`&nbsp;`string` | Fuseau horaire de l'utilisateur
 `language` | `null,`&nbsp;`string` | [PII] Langue de l'utilisateur
 `device_id` | `null,`&nbsp;`string` | ID de l'appareil sur lequel la session a eu lieu
-`sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée pendant la session
+`sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée lors de la session
 `platform` | `null,`&nbsp;`string` | Plateforme de l'appareil
 `os_version` | `null,`&nbsp;`string` | Version du système d'exploitation de l'appareil
 `device_model` | `null,`&nbsp;`string` | Modèle de l'appareil
@@ -460,7 +460,7 @@ Champ | Type | Description
 `duration` | `null, float` | Durée de la session en secondes
 `session_id` | `string` | UUID de la session
 `device_id` | `null,`&nbsp;`string` | ID de l'appareil sur lequel la session a eu lieu
-`sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée pendant la session
+`sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée lors de la session
 `platform` | `null,`&nbsp;`string` | Plateforme de l'appareil
 `os_version` | `null,`&nbsp;`string` | Version du système d'exploitation de l'appareil
 `device_model` | `null,`&nbsp;`string` | Modèle de l'appareil
@@ -480,7 +480,7 @@ Champ | Type | Description
 `time` | `int` | Horodatage Unix auquel la session a commencé
 `session_id` | `string` | UUID de la session
 `device_id` | `null,`&nbsp;`string` | ID de l'appareil sur lequel la session a eu lieu
-`sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée pendant la session
+`sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée lors de la session
 `platform` | `null,`&nbsp;`string` | Plateforme de l'appareil
 `os_version` | `null,`&nbsp;`string` | Version du système d'exploitation de l'appareil
 `device_model` | `null,`&nbsp;`string` | Modèle de l'appareil
@@ -546,8 +546,8 @@ Champ | Type | Description
 `push_to_start_token` | `null,`&nbsp;`string` | Jeton push-to-start de Live Activity
 `device_id` | `null,`&nbsp;`string` | ID de l'appareil sur lequel l'événement s'est produit
 `sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée lors de l'événement
-`ios_push_token_apns_gateway` | `null, int` | Passerelle APNS du jeton push, s'applique uniquement aux jetons push iOS, 1 pour le développement, 2 pour la production
-`push_token_state_change_type` | `null,`&nbsp;`string` | Description du type de changement d'état du jeton push
+`ios_push_token_apns_gateway` | `null, int` | Passerelle APN du jeton de notification push, s'applique uniquement aux jetons push iOS, 1 pour le développement, 2 pour la production
+`push_token_state_change_type` | `null,`&nbsp;`string` | Description du type de changement d'état du jeton de notification push
 `app_group_api_id` | `null,`&nbsp;`string` | ID de l'API du groupe d'applications auquel cet utilisateur appartient
 `app_api_id` | `null,`&nbsp;`string` | ID de l'API de l'application sur laquelle cet événement s'est produit
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date à laquelle cet événement a été récupéré par le Snowpipe
@@ -567,8 +567,8 @@ Champ | Type | Description
 `update_token` | `null,`&nbsp;`string` | Jeton de mise à jour de Live Activity
 `device_id` | `null,`&nbsp;`string` | ID de l'appareil sur lequel l'événement s'est produit
 `sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée lors de l'événement
-`ios_push_token_apns_gateway` | `null, int` | Passerelle APNS du jeton push, s'applique uniquement aux jetons push iOS, 1 pour le développement, 2 pour la production
-`push_token_state_change_type` | `null,`&nbsp;`string` | Description du type de changement d'état du jeton push
+`ios_push_token_apns_gateway` | `null, int` | Passerelle APN du jeton de notification push, s'applique uniquement aux jetons push iOS, 1 pour le développement, 2 pour la production
+`push_token_state_change_type` | `null,`&nbsp;`string` | Description du type de changement d'état du jeton de notification push
 `app_group_api_id` | `null,`&nbsp;`string` | ID de l'API du groupe d'applications auquel cet utilisateur appartient
 `app_api_id` | `null,`&nbsp;`string` | ID de l'API de l'application sur laquelle cet événement s'est produit
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date à laquelle cet événement a été récupéré par le Snowpipe
@@ -587,17 +587,17 @@ Champ | Type | Description
 `sdk_version` | `null,`&nbsp;`string` | Version du SDK Braze utilisée lors de l'événement
 `platform` | `null,`&nbsp;`string` | Plateforme de l'appareil
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel cet utilisateur appartient
-`push_token` | `null,`&nbsp;`string` | Jeton push de l'événement
-`push_token_created_at` | `null, int` | Horodatage UNIX auquel le jeton push a été créé
-`push_token_updated_at` | `null, int` | Horodatage UNIX auquel le jeton push a été mis à jour pour la dernière fois
-`push_token_foreground_push_disabled` | `null, boolean` | Indicateur de désactivation du push au premier plan pour le jeton push
-`push_token_device_id` | `null,`&nbsp;`string` | ID de l'appareil du jeton push
-`push_token_provisionally_opted_in` | `null, boolean` | Indicateur d'abonnement provisoire du jeton push
-`ios_push_token_apns_gateway` | `null, int` | Passerelle APNS du jeton push, s'applique uniquement aux jetons push iOS, 1 pour le développement, 2 pour la production
-`web_push_token_public_key` | `null,`&nbsp;`string` | Clé publique du jeton push, s'applique uniquement aux jetons push web
-`web_push_token_user_auth` | `null,`&nbsp;`string` | Authentification utilisateur du jeton push, s'applique uniquement aux jetons push web
-`web_push_token_vapid_public_key` | `null,`&nbsp;`string` | Clé publique VAPID du jeton push, s'applique uniquement aux jetons push web
-`push_token_state_change_type` | `null,`&nbsp;`string` | Description du type de changement d'état du jeton push
+`push_token` | `null,`&nbsp;`string` | Jeton de notification push de l'événement
+`push_token_created_at` | `null, int` | Horodatage UNIX auquel le jeton de notification push a été créé
+`push_token_updated_at` | `null, int` | Horodatage UNIX auquel le jeton de notification push a été mis à jour pour la dernière fois
+`push_token_foreground_push_disabled` | `null, boolean` | Indicateur de désactivation des notifications push au premier plan pour le jeton de notification push
+`push_token_device_id` | `null,`&nbsp;`string` | ID de l'appareil du jeton de notification push
+`push_token_provisionally_opted_in` | `null, boolean` | Indicateur d'abonnement provisoire du jeton de notification push
+`ios_push_token_apns_gateway` | `null, int` | Passerelle APN du jeton de notification push, s'applique uniquement aux jetons push iOS, 1 pour le développement, 2 pour la production
+`web_push_token_public_key` | `null,`&nbsp;`string` | Clé publique du jeton de notification push, s'applique uniquement aux jetons push web
+`web_push_token_user_auth` | `null,`&nbsp;`string` | Authentification utilisateur du jeton de notification push, s'applique uniquement aux jetons push web
+`web_push_token_vapid_public_key` | `null,`&nbsp;`string` | Clé publique VAPID du jeton de notification push, s'applique uniquement aux jetons push web
+`push_token_state_change_type` | `null,`&nbsp;`string` | Description du type de changement d'état du jeton de notification push
 `app_group_api_id` | `null,`&nbsp;`string` | ID de l'API du groupe d'applications auquel cet utilisateur appartient
 `app_api_id` | `null,`&nbsp;`string` | ID de l'API de l'application sur laquelle cet événement s'est produit
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date à laquelle cet événement a été récupéré par le Snowpipe
@@ -625,7 +625,7 @@ Champ | Type | Description
 `canvas_api_id` | `null,`&nbsp;`string` | ID de l'API du Canvas auquel cet événement appartient
 `canvas_variation_api_id` | `null,`&nbsp;`string` | ID de l'API de la variation Canvas à laquelle cet événement appartient
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID de l'API de l'étape du Canvas à laquelle cet événement appartient
-`send_id` | `null,`&nbsp;`string` | ID d'envoi du message à l'origine de ce changement d'état d'abonnement
+`send_id` | `null,`&nbsp;`string` | ID d'envoi du message à l'origine de cette action de changement d'état d'abonnement
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel cet utilisateur appartient
 `channel_identifier` | `null,`&nbsp;`string` | [PII] Identifiant de l'utilisateur sur le canal concerné par l'événement.
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date à laquelle cet événement a été récupéré par le Snowpipe
@@ -655,7 +655,7 @@ Champ | Type | Description
 `subscription_status` | `string` | État de l'abonnement : « Subscribed », « Unsubscribed » ou « Opted In »
 `time` | `int` | Horodatage Unix auquel l'état de l'abonnement a changé
 `timezone` | `null,`&nbsp;`string` | Fuseau horaire de l'utilisateur
-`send_id` | `null,`&nbsp;`string` | ID d'envoi du message à l'origine de ce changement d'état d'abonnement
+`send_id` | `null,`&nbsp;`string` | ID d'envoi du message à l'origine de cette action de changement d'état d'abonnement
 `state_change_source` | `null,`&nbsp;`string` | Source du changement d'état (REST, SDK, tableau de bord, etc.)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel cet utilisateur appartient
 `dispatch_id` | `null,`&nbsp;`string` | ID de la distribution à laquelle ce message appartient
@@ -993,7 +993,7 @@ Champ | Type | Description
 `ad_id` | `null,`&nbsp;`string` | [PII] Identifiant publicitaire
 `ad_id_type` | `null,`&nbsp;`string` | L'un des ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']
 `ad_tracking_enabled` | `null, boolean` | Si le suivi publicitaire est activé pour l'appareil ou non
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (jusqu'à 128 caractères)
 `banner_placement_id` | `null,`&nbsp;`string` | ID de l'emplacement de la bannière spécifié par le client
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe
@@ -1092,7 +1092,7 @@ Champ | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] Pays de l'utilisateur
 `timezone` | `null,`&nbsp;`string` | Fuseau horaire de l'utilisateur
 `language` | `null,`&nbsp;`string` | [PII] Langue de l'utilisateur
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (maximum de 2 000 caractères)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel appartient cet utilisateur
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe
@@ -1274,7 +1274,7 @@ Champ | Type | Description
 `language` | `null,`&nbsp;`string` | [PII] Langue de l'utilisateur
 `email_address` | `string` | [PII] Adresse e-mail de l'utilisateur
 `ip_pool` | `null,`&nbsp;`string` | Pool d'adresses IP à partir duquel l'e-mail a été envoyé
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (maximum de 2 000 caractères)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel appartient cet utilisateur
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe
@@ -1695,7 +1695,7 @@ Champ | Type | Description
 `ad_id` | `null,`&nbsp;`string` | [PII] Identifiant publicitaire
 `ad_id_type` | `null,`&nbsp;`string` | Un parmi `ios_idfa`, `google_ad_id`, `windows_ad_id` OU `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Si le suivi publicitaire est activé pour l'appareil ou non
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (maximum de 2 000 caractères)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel appartient cet utilisateur
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe
@@ -1796,7 +1796,7 @@ Champ | Type | Description
 `time` | `int` | Horodatage unix auquel l'événement s'est produit
 `user_id` | `string` | ID Braze de l'utilisateur ayant effectué cet événement
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (jusqu'à 128 caractères)
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `campaign_api_id` | `null,`&nbsp;`string` | ID API de la campagne à laquelle appartient cet événement
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID API de l'étape de Canvas à laquelle appartient cet événement
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID API de la variation de message de l'étape de Canvas que l'utilisateur a reçue
@@ -2016,7 +2016,7 @@ Champ | Type | Description
 `resolution` | `null,`&nbsp;`string` | Résolution de l'appareil
 `carrier` | `null,`&nbsp;`string` | Opérateur de l'appareil
 `browser` | `null,`&nbsp;`string` | Navigateur de l'appareil - extrait de user_agent - sur lequel l'ouverture s'est produite
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (jusqu'à 128 caractères)
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -2103,7 +2103,7 @@ Champ | Type | Description
 `timezone` | `null,`&nbsp;`string` | Fuseau horaire de l'utilisateur
 `language` | `null,`&nbsp;`string` | [PII] Langue de l'utilisateur
 `platform` | `string` | Plateforme de l'appareil
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (maximum de 2 000 caractères)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel appartient cet utilisateur
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe
@@ -2314,7 +2314,7 @@ Champ | Type | Description
 `time` | `int` | Horodatage unix auquel l'événement s'est produit
 `user_id` | `string` | ID Braze de l'utilisateur ayant effectué cet événement
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (jusqu'à 128 caractères)
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `campaign_name` | `null,`&nbsp;`string` | Nom de la campagne
 `canvas_id` | `null,`&nbsp;`string` | ID BSON du Canvas auquel cet événement est associé
 `canvas_name` | `null,`&nbsp;`string` | Nom du Canvas
@@ -2541,7 +2541,7 @@ Champ | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID API de l'étape de Canvas à laquelle appartient cet événement
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID API de la variation de message de l'étape de Canvas que l'utilisateur a reçue
 `subscription_group_api_id` | `null,`&nbsp;`string` | ID externe du groupe d'abonnement
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (maximum de 2 000 caractères)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel appartient cet utilisateur
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe
@@ -2820,7 +2820,7 @@ Champ | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] Pays de l'utilisateur
 `timezone` | `null,`&nbsp;`string` | Fuseau horaire de l'utilisateur
 `language` | `null,`&nbsp;`string` | [PII] Langue de l'utilisateur
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (maximum de 2 000 caractères)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON du groupe d'applications auquel appartient cet utilisateur
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe
@@ -2953,7 +2953,7 @@ Champ | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID API de l'étape de Canvas à laquelle appartient cet événement
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID API de la variation de message de l'étape de Canvas que l'utilisateur a reçue
 `dispatch_id` | `null,`&nbsp;`string` | ID de l'envoi auquel appartient ce message
-`abort_type` | `null,`&nbsp;`string` | Type d'abandon, l'un des ['liquid_abort_message', 'quiet_hours', 'rate_limit']
+`abort_type` | `null,`&nbsp;`string` | Type d'abandon. Pour obtenir la liste des valeurs, consultez [Types d'abandon](#abort-types).
 `abort_log` | `null,`&nbsp;`string` | [PII] Message de journal décrivant les détails de l'abandon (maximum de 2 000 caractères)
 `sf_created_at` | `timestamp`,&nbsp;`null` | Date et heure de récupération de cet événement par le Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -3306,3 +3306,7 @@ Champ | Type | Description
 `conversion_behaviors` | `null,`&nbsp;`string` | Comportements de conversion pour cette étape
 `name` | `null,`&nbsp;`string` | Nom de l'étape d'expérience
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+## Types d'abandon
+
+{% include abort_types_reference.md %}

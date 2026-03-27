@@ -62,7 +62,7 @@ Los usuarios limitados tienen permisos específicos que les permiten gestionar d
 
 ### Error de acceso limitado
 
-Los usuarios pueden encontrar mensajes como «Necesitas permisos para "Ver páginas de inicio" para acceder a esta página». En tales casos, el usuario y el administrador de la cuenta deben verificar que se hayan concedido los permisos necesarios. Si es así, intenta resolver el problema desactivando y volviendo a habilitar los permisos del usuario. 
+Los usuarios pueden encontrar mensajes como «Necesitas el permiso "Ver páginas de inicio" para acceder a esta página». En tales casos, el usuario y el administrador de la cuenta deben verificar que se hayan concedido los permisos necesarios. Si es así, intenta resolver el problema desactivando y volviendo a habilitar los permisos del usuario. 
 
 {% alert note %}
 No es posible fusionar o importar permisos de usuario de un usuario del dashboard a otro.
@@ -158,10 +158,9 @@ Para descargar una lista de tus usuarios y sus permisos, ve a **Configuración**
 | Ver datos de facturación                            | Ver detalles de facturación |
 | Ver atributos personalizados marcados como PII            | Ver atributos personalizados marcados como PII |
 | Ver PII                                        | Ver PII |
-| Ver perfiles de usuario con cumplimiento de PII                | Acceder a la búsqueda de usuarios y ver perfiles de usuario con PII censurada |
+| Ver perfiles de usuario con PII censurada               | Acceder a la búsqueda de usuarios y ver perfiles de usuario con PII censurada |
 | Ver datos de uso                                 | Ver datos de uso |
-| Fusionar usuarios duplicados                           | Combinar usuarios duplicados en un solo usuario. Los duplicados se eliminan después de la fusión. |
-| Vista previa de usuarios duplicados                         | Previsualizar qué perfiles de usuario son duplicados |
+| Fusionar usuarios duplicados                           | Previsualizar y combinar usuarios duplicados en un solo usuario. Los duplicados se eliminan después de la fusión. |
 | Ver plantillas de Canvas                           | Ver plantillas de Canvas |
 | Archivar plantillas de Canvas                        | Mover plantillas de Canvas al archivo |
 | Lanzar bloques de contenido                           | Lanzar bloques de contenido |
@@ -284,8 +283,6 @@ Para descargar una lista de tus usuarios y sus permisos, ve a **Configuración**
 | Exportar datos de usuario                                | Descargar usuarios desde el dashboard |
 | Editar datos de usuario                                  | Crear y actualizar datos de usuario |
 | Ver fusión de usuarios                                | Ver una lista de registros de fusión de usuarios |
-| Ver registros de eliminación de usuarios	            	  | Ver registros de eliminación de usuarios |
-| Eliminar usuarios del dashboard	                  | Eliminar permanentemente usuarios del dashboard de forma individual o masiva. |      
 | Ver agentes de IA personalizados                           | Permite a los usuarios ver agentes de IA personalizados. |
 | Editar agentes de IA personalizados                           | Permite a los usuarios crear y actualizar agentes de IA personalizados. |
 | Archivar agentes de IA personalizados                        | Permite a los usuarios archivar agentes de IA personalizados. |

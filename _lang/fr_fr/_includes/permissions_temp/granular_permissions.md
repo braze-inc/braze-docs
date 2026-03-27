@@ -9,7 +9,7 @@ Utilisez les ensembles d'autorisations pour regrouper les autorisations liées �
 |Nom|Autorisations|
 |-----------|----------------|
 |Développeurs|« Afficher les clés API », « Modifier les clés API », « Afficher les groupes internes », « Modifier les groupes internes », « Afficher le journal d'activité des messages », « Afficher le journal des événements utilisateurs », « Afficher les identifiants API », « Afficher le tableau de bord d'utilisation de l'API », « Afficher les limites de l'API », « Afficher les alertes d'utilisation de l'API », « Modifier les alertes d'utilisation de l'API », « Afficher le débogueur SDK », « Modifier le débogueur SDK ».|
-|Marketeurs|« Afficher les campagnes », « Modifier les campagnes », « Archiver les campagnes », « Afficher les Canvas », « Modifier les Canvas », « Archiver les Canvas », « Afficher les règles de limite de fréquence », « Modifier les règles de limite de fréquence », « Afficher la hiérarchisation des messages », « Modifier la priorisation des messages », « Afficher les blocs de contenu », « Afficher les indicateurs de fonctionnalité », « Modifier les indicateurs de fonctionnalité », « Archiver les indicateurs de fonctionnalité », « Afficher les segments », « Modifier les segments », « Modifier le groupe de contrôle global », « Afficher les modèles IAM », « Modifier les modèles IAM », « Archiver les modèles IAM », « Afficher les modèles d'e-mail », « Modifier les modèles d'e-mail », « Archiver les modèles d'e-mail », « Afficher les modèles de webhook », « Modifier les modèles de webhook », « Archiver les modèles de webhook », « Afficher les modèles de liens », « Modifier les modèles de liens », « Afficher les ressources de la bibliothèque multimédia », « Afficher les emplacements », « Modifier les emplacements », « Archiver les emplacements », « Afficher les codes de promotion », « Modifier les codes de promotion », « Exporter les codes de promotion », « Afficher les centres de préférences », « Modifier les centres de préférences », « Modifier les rapports », « Afficher les modèles de bannières », « Afficher les paramètres multilingues », « Utiliser l'opérateur », « Afficher les agents Decisioning Studio », « Afficher l'événement de conversion Decisioning Studio ».|
+|Marketeurs|« Afficher les campagnes », « Modifier les campagnes », « Archiver les campagnes », « Afficher les Canvas », « Modifier les Canvas », « Archiver les Canvas », « Afficher les règles de limite de fréquence », « Modifier les règles de limite de fréquence », « Afficher la priorisation des messages », « Modifier la priorisation des messages », « Afficher les blocs de contenu », « Afficher les indicateurs de fonctionnalité », « Modifier les indicateurs de fonctionnalité », « Archiver les indicateurs de fonctionnalité », « Afficher les segments », « Modifier les segments », « Modifier le groupe de contrôle global », « Afficher les modèles IAM », « Modifier les modèles IAM », « Archiver les modèles IAM », « Afficher les modèles d'e-mail », « Modifier les modèles d'e-mail », « Archiver les modèles d'e-mail », « Afficher les modèles de webhook », « Modifier les modèles de webhook », « Archiver les modèles de webhook », « Afficher les modèles de liens », « Modifier les modèles de liens », « Afficher les ressources de la bibliothèque multimédia », « Afficher les emplacements », « Modifier les emplacements », « Archiver les emplacements », « Afficher les codes de promotion », « Modifier les codes de promotion », « Exporter les codes de promotion », « Afficher les centres de préférences », « Modifier les centres de préférences », « Modifier les rapports », « Afficher les modèles de bannières », « Afficher les paramètres multilingues », « Utiliser l'opérateur », « Afficher les agents Decisioning Studio », « Afficher l'événement de conversion Decisioning Studio ».|
 |Gestion des utilisateurs|« Modifier les utilisateurs du tableau de bord », « Afficher les équipes », « Modifier les équipes », « Archiver les équipes ».|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
@@ -62,7 +62,7 @@ Les utilisateurs limités disposent d'autorisations spécifiques qui leur permet
 
 ### Erreur d'accès restreint
 
-Les utilisateurs peuvent rencontrer des messages tels que « Vous devez disposer de l'autorisation "Afficher les pages d'accueil" pour accéder à cette page ». Dans ce cas, l'utilisateur et l'administrateur du compte doivent vérifier que les autorisations requises sont bien accordées. Si c'est le cas, essayez de résoudre le problème en désactivant puis en réactivant les autorisations de l'utilisateur. 
+Les utilisateurs peuvent rencontrer des messages tels que « Vous devez disposer de l'autorisation "Afficher les Landing Pages" pour accéder à cette page ». Dans ce cas, l'utilisateur et l'administrateur du compte doivent vérifier que les autorisations requises sont bien accordées. Si c'est le cas, essayez de résoudre le problème en désactivant puis en réactivant les autorisations de l'utilisateur. 
 
 {% alert note %}
 Il n'est pas possible de fusionner ou d'importer les autorisations d'un utilisateur du tableau de bord vers un autre.
@@ -158,10 +158,9 @@ Pour télécharger la liste de vos utilisateurs et de leurs autorisations, accé
 | Afficher les détails de facturation                            | Consulter les détails de facturation |
 | Afficher les attributs personnalisés marqués comme PII            | Afficher les attributs personnalisés marqués comme données personnelles identifiables (PII) |
 | Afficher les PII                                        | Afficher les données personnelles identifiables |
-| Voir les profils utilisateur conformes PII                | Accéder à la recherche d'utilisateurs et consulter les profils utilisateurs avec les PII expurgées |
+| Voir les profils utilisateur (PII expurgées)               | Accéder à la recherche d'utilisateurs et consulter les profils utilisateurs avec les PII expurgées |
 | Afficher les données d'utilisation                                 | Consulter les données d'utilisation |
-| Fusionner les utilisateurs en double                           | Fusionner les utilisateurs en double en un seul utilisateur. Les doublons sont supprimés après la fusion. |
-| Prévisualiser les utilisateurs en double                         | Examiner quels profils utilisateurs sont des doublons |
+| Fusionner les utilisateurs en double                           | Prévisualiser et combiner les utilisateurs en double en un seul utilisateur. Les doublons sont supprimés après la fusion. |
 | Afficher les modèles Canvas                           | Afficher les modèles Canvas |
 | Archiver les modèles Canvas                        | Déplacer les modèles Canvas vers les archives |
 | Lancer des blocs de contenu                           | Lancer des blocs de contenu |
@@ -199,12 +198,12 @@ Pour télécharger la liste de vos utilisateurs et de leurs autorisations, accé
 | Archiver les modèles d'e-mail                         | Déplacer les modèles d'e-mail vers les archives |
 | Afficher les modèles de liens   	                  | Consulter les modèles de liens sans apporter de modifications |
 | Modifier les modèles de liens	                      | Créer et mettre à jour des modèles de liens |
-| Publier les pages d'accueil                           | Rendre active une page d'accueil en brouillon |
-| Modifier les brouillons de pages d'accueil                        | Créer et enregistrer des brouillons de pages d'accueil |
-| Afficher les pages d'accueil			                  | Afficher les pages d'accueil |
-| Modifier les modèles de pages d'accueil	                  | Créer et mettre à jour des modèles de pages d'accueil |
-| Afficher les modèles de pages d'accueil	                  | Consulter les modèles de pages d'accueil |
-| Archiver les modèles de pages d'accueil 	              | Déplacer les modèles de pages d'accueil vers les archives |
+| Publier les Landing Pages                           | Rendre active une Landing Page en brouillon |
+| Modifier les brouillons de Landing Pages                        | Créer et enregistrer des brouillons de Landing Pages |
+| Afficher les Landing Pages			                  | Afficher les Landing Pages |
+| Modifier les modèles de Landing Pages	                  | Créer et mettre à jour des modèles de Landing Pages |
+| Afficher les modèles de Landing Pages	                  | Consulter les modèles de Landing Pages |
+| Archiver les modèles de Landing Pages 	              | Déplacer les modèles de Landing Pages vers les archives |
 | Afficher les ressources de la bibliothèque multimédia                       | Consulter les ressources de la bibliothèque multimédia |
 | Modifier les ressources de la bibliothèque multimédia                       | Créer et mettre à jour les ressources de la bibliothèque multimédia |
 | Supprimer les ressources de la bibliothèque multimédia                     | Supprimer définitivement les ressources de la bibliothèque multimédia |
@@ -284,8 +283,6 @@ Pour télécharger la liste de vos utilisateurs et de leurs autorisations, accé
 | Exporter les données utilisateur                                | Télécharger les utilisateurs depuis le tableau de bord |
 | Modifier les données utilisateur                                  | Créer et mettre à jour les données utilisateur |
 | Afficher la fusion des utilisateurs                                | Consulter la liste des enregistrements de fusion d'utilisateurs |
-| Afficher les enregistrements de suppression d'utilisateurs	            	  | Afficher les enregistrements de suppression d'utilisateurs |
-| Supprimer des utilisateurs du tableau de bord	                  | Supprimer définitivement des utilisateurs du tableau de bord, individuellement ou en masse. |      
 | Afficher les agents d'intelligence artificielle personnalisés                           | Permet aux utilisateurs de visualiser les agents d'intelligence artificielle personnalisés. |
 | Modifier les agents d'intelligence artificielle personnalisés                           | Permet aux utilisateurs de créer et de mettre à jour des agents d'intelligence artificielle personnalisés. |
 | Archiver les agents d'intelligence artificielle personnalisés                        | Permet aux utilisateurs d'archiver des agents d'intelligence artificielle personnalisés. |

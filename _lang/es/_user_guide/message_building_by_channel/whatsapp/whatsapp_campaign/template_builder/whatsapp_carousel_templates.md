@@ -18,23 +18,9 @@ Las plantillas de carrusel de WhatsApp están en acceso anticipado. Ponte en con
 
 ## Requisitos previos
 
-Antes de crear plantillas de carrusel, necesitas:
-- Una cuenta de WhatsApp Business (WABA) activa conectada a Braze
-- Grupos de suscripción apropiados configurados dentro de tu WABA
-- Activos multimedia (imágenes o videos) listos para cargar
-- Permisos de Braze para usuarios no administradores
-    - Para que los usuarios creen nuevas plantillas en el constructor de plantillas:
-        - "View WhatsApp Message Templates"
-        - "Edit WhatsApp Message Templates"
-    - Para que los usuarios redacten campañas o Canvas con plantillas de carrusel:
-        - "View WhatsApp Message Templates"
-- Conocimiento de plantillas Liquid (opcional, para contenido dinámico)
+{% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
-{% alert important %}
-Todos los números de teléfono y grupos de suscripción dentro de la misma cuenta de WhatsApp Business (WABA) comparten plantillas. Si tienes múltiples grupos de suscripción dentro de una WABA, todos pueden acceder a las mismas plantillas de carrusel; sin embargo, las plantillas no se comparten entre diferentes WABAs.
-{% endalert %}
-
-## Crear una plantilla de carrusel
+## Crear una plantilla de carrusel {#create-a-carousel-template}
 
 Puedes crear plantillas de carrusel dentro de Braze con el constructor de plantillas de WhatsApp. Cuando creas plantillas, Braze valida tu contenido para cumplir con los criterios de Meta.
 

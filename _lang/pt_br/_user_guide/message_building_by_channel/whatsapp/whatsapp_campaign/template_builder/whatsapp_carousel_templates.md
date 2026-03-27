@@ -18,23 +18,9 @@ Os modelos de carrossel do WhatsApp estão em acesso antecipado. Fale com o seu 
 
 ## Pré-requisitos
 
-Antes de criar modelos de carrossel, você precisa de:
-- Uma conta ativa do WhatsApp Business (WABA) conectada à Braze
-- Grupos de inscrições apropriados configurados na sua WABA
-- Ativos de mídia (imagens ou vídeos) prontos para upload
-- Permissões da Braze para usuários não administradores
-    - Para que os usuários criem novos modelos no construtor de modelos:
-        - "View WhatsApp Message Templates"
-        - "Edit WhatsApp Message Templates"
-    - Para que os usuários criem campanhas ou canvas com modelos de carrossel:
-        - "View WhatsApp Message Templates"
-- Conhecimento de Liquid (opcional, para conteúdo dinâmico)
+{% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
-{% alert important %}
-Todos os números de telefone e grupos de inscrições dentro da mesma conta do WhatsApp Business (WABA) compartilham modelos. Se você tiver vários grupos de inscrições em uma WABA, todos podem acessar os mesmos modelos de carrossel; no entanto, os modelos não são compartilhados entre WABAs diferentes.
-{% endalert %}
-
-## Criar um modelo de carrossel
+## Criar um modelo de carrossel {#create-a-carousel-template}
 
 Você pode criar modelos de carrossel na Braze com o construtor de modelos do WhatsApp. Quando você cria modelos, a Braze valida seu conteúdo para atender aos critérios da Meta.
 
