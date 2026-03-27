@@ -46,7 +46,7 @@ If you want the push token reassigned to the original user:
 1. Have the original user log into the profile with the missing push token.
 2. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
 
-### Why does "Open Web URL Inside App" always open the app when I'm testing a draft campaign?
+### Why does “Open Web URL Inside App” always open the app when I'm testing a draft campaign?
 
 When a campaign is still in **Draft** status and you send a test push, tapping the notification always opens the app first, regardless of whether the **Open Web URL Inside App** option is checked or unchecked. This is expected behavior for test sends from draft campaigns. When the campaign is **Live**, the on-click behavior works as configured.
 
