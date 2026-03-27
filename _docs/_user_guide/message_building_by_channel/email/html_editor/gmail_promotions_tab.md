@@ -119,10 +119,17 @@ Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 
 
 ## Best practices
 
-In general, adhere to these [best practices recommended by Gmail](https://developers.google.com/gmail/promotab/best-practices). 
+In general, follow [Gmail's Promotions tab best practices](https://developers.google.com/gmail/promotab/best-practices).
+
+As you build your card, consider the following questions:
+
+- Is the annotation script valid? [Preview with Google](https://developers.google.com/workspace/gmail/promotab/preview).
+- Does **Show original** in Gmail show the script in the raw message?
+- Is mail landing in **Promotions**? Cards only apply there.
+- Have you tested desktop and mobile?
 
 {% alert tip %}
-While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
+While Liquid in the script is supported, we recommend thoroughly testing to avoid errors.
 {% endalert %}
 
 ### Preview your annotation
@@ -148,8 +155,11 @@ Gmail recommends avoiding:
 
 For your annotations to render correctly, confirm that the submitted domains are registered with DMARC and all policies are enabled.
 
-
 ## Frequently asked questions
+
+### How do I add a sender logo?
+
+Use [Google Annotations](https://developers.google.com/workspace/gmail/promotab/overview) to add your logo and promo card in the Gmail app. Rendering is controlled by Gmail, not Braze.
 
 ### Why is my promotional message not displaying the promotion card or product carousel in the end user's inbox?
 
@@ -174,3 +184,7 @@ Gmail determines when and who to display the card to, so there isn't a guarantee
 Annotations aren't supported for Google Workspace. To preview annotations, you can create a personal email address with Gmail.
 
 Note that annotations don't render in the **Primary** tab or in any other tab in the Gmail mobile app. Annotations won't display after a user opens an email or if you're using the `DiscountOffer` annotation type and the time and date have already expired.
+
+{% alert tip %}
+For more troubleshooting, see [Google's troubleshooting guide for email promotions](https://developers.google.com/workspace/gmail/promotab/troubleshooting).
+{% endalert %}

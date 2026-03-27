@@ -15,6 +15,20 @@ local_redirect:
 
 IP warming is designed to help you establish a positive reputation with internet service providers (ISPs). Every time a new IP address is used to send an email, ISPs programmatically monitor those emails to verify that it isn't being used to send spam to users. Think of your IP and domain reputation like a credit score—ISPs use this reputation to determine whether your mail lands in the inbox or the spam folder. Much like a credit score, it takes time to build a positive reputation and even longer to rebuild a poor one.
 
+## Email delivery and deliverability
+
+**Delivery** is the share of emails that were accepted and did not hard bounce. **Deliverability** is whether mail reaches the inbox rather than spam—mailbox providers don't expose that as a single metric.
+
+A healthy delivery rate is often around 99% delivered with a bounce rate no higher than about 1%. Rates can look strong on paper and still hide problems (for example, many bounces from one domain, or mail delivered but filtered to spam). Watch opens and clicks, not only delivery. Even a small reported spam rate can warrant deeper review.
+
+### Recommendations before IP warming
+
+Before you start IP warming:
+
+1. In **Settings** > **Email Preferences**, set your default sending domain, add a valid unsubscribe link in your [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/), turn on the [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header), and consider custom unsubscribe/opt-in pages where needed.
+2. Configure [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/frequency_capping/) for email.
+3. Upload required templates under **Templates** > **Email Templates**.
+
 ## What if I don't have time to warm IPs?
 
 **IP warming is required.** If you don't warm IPs appropriately, and the pattern of your email causes any suspicion, your email delivery speed could be significantly throttled or slowed. Your domain or IP could also be blocked by the ISPs, which can result in your emails going directly to the spam folder of your user's inbox instead. As such, it's important to warm your IPs properly.
