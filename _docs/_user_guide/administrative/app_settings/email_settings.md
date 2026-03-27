@@ -124,6 +124,10 @@ After you save, Braze sends special instructions to the ESP to place the open tr
 SSL enablement wraps the URL of the tracking pixel with HTTPS instead of HTTP. If your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
 
+{% alert important %}
+Click tracking applies only to links that start with `http://` or `https://`. `mailto:` links (for example `mailto:support@example.com`) are not rewritten for tracking.
+{% endalert %}
+
 ## List-unsubscribe header {#list-unsubscribe}
 
 {% alert note %}
@@ -131,6 +135,8 @@ Since February 15, 2024, new companies have the list-unsubscribe header (with on
 {% endalert %}
 
 Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and not the message body.
+
+Test sends typically **do not** include list-unsubscribe headers. Whether the live header appears is up to the mailbox provider and is reputation-based—stronger sender reputation usually improves visibility.
 
 ![]({% image_buster /assets/img_archive/list_unsub_img1.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
 

@@ -26,7 +26,14 @@ The following table describes how users can use each editor block type.
 |Icons| Inserts an icon. You can upload custom images. Braze uses an oversized placeholder icon until you upload an image. |
 |HTML| Inserts raw HTML. Recommended for [Liquid]({{site.baseurl}}/liquid/), such as Connected Content or conditional statements. | 
 |Menu| Creates a flexible menu for the message you're designing. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### Personalization in email (Liquid and Connected Content)
+
+**Liquid:** Under **Content** > **Personalization**, pick an attribute, copy the snippet, and paste it into a text block (basic Liquid) or HTML block (advanced Liquid). In general, while you can use basic Liquid in text blocks, we recommend using HTML blocks for heavier logic to avoid layout issues. Note that Liquid isn't supported in image blocks or in button URL fields.
+
+**Connected Content:** Add an **HTML** block and place your `{% connected_content %}` call there.
+
 
 ## Properties
 

@@ -24,6 +24,10 @@ Here's an example of the standard Liquid tag format for `message_extras`:
 
 You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values shouldn't exceed 1&nbsp;KB. In Currents and Snowflake Data Sharing, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field.
 
+## How message extras data is sent using Currents
+
+**Message extras** are key-value pairs attached at send time. Configuration depends on the channel—for email they are added via headers; for iOS push, they are included in the push payload. All supported send events surface the same `message_extras` field in Currents (and Snowflake) once the message is sent.
+
 ## Supported channels
 
 The `message_extras` tag is supported for all message types with a send event, along with in-app message impression events. Using `message_extras` with in-app messages requires certain [minimum SDK versions](#iam-sdk) to be met.
@@ -63,7 +67,7 @@ Any other input that doesn't match the tag standard discussed above may fail to 
 - If your key-values exceed 1&nbsp;KB, they'll truncate. 
 - Whitespace will count toward the character count. Note that Braze omits the leading and trailing whitespaces.
 - The resulting JSON will output only string values.
-- You can include Liquid variables as a key or value, but you can't use other Liquid tags within `message_extras`.
+- You can include Liquid variables as a key or value, but you can't nest additional Liquid tags inside `message_extras`.
   - For example, you could use the following Liquid: {% raw %}```{% assign value = '123' %} {% assign key = 'test' %} {% message_extras :key {{key}} :value {{value}} %}```{% endraw %}
 
 ## Frequently asked questions

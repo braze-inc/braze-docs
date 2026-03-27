@@ -59,6 +59,10 @@ When you preview your email messaging, the Liquid snippet will display as the dr
 When a Content Block is added into the email editor with Liquid, this Content Block is linked to the original Content Block created in **Templates & Media**. This means the Content Block will be updated to reflect any changes to the original Content Block template.
 {% endalert %}
 
+{% alert tip %}
+If a block is missing in **Preview & Test Send**, confirm every HTML and Liquid tag is closed in the block. Connected Content calls that use HTML-encoded ampersands (`&amp;`) can also break the preview. Use a raw `&` in the URL or a Liquid `replace` filter so the request URL is valid.
+{% endalert %}
+
 ## Updating Content Blocks
 
 To update an existing Content Block, you can either edit the original Content Block from the **Content Blocks** page, or copy the HTML from the original message to your new one. Updates to a Content Block template will update in all email messages where the Content Block is added via Liquid.

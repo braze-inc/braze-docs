@@ -10,7 +10,11 @@ channel: email
 
 # Email authentication
 
-> Email authentication is a collection of techniques that equip your emails with verifiable information about its origin.<br><br>Proper authentication is crucial for internet service providers (ISPs) to recognize you as a sender of desirable emails and deliver your mail immediately. Without authentication, your outreach is presumed to be fraudulent. 
+> Email authentication is a collection of techniques that equip your emails with verifiable information about its origin.<br><br>Proper authentication is crucial for internet service providers (ISPs) to recognize you as a sender of desirable emails and deliver your mail immediately. Without authentication, your outreach is presumed to be fraudulent.
+
+{% alert note %}
+No special coordination with Braze is required for **BIMI** (Brand Indicators for Message Identification). Required DNS records and certificates are managed on your side.
+{% endalert %}
 
 ## Methods of authentication
 

@@ -175,9 +175,7 @@ Note that any edits made to an email template won't reflect in a previously gene
 
 Inbox Vision allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and select **Run Inbox Vision**.
 
-{% alert tip %}
-Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
-{% endalert %}
+It's important to test and check the finer details of your email message. For example, background images in email messaging may sometimes cause white lines or disconnects to appear between images, or clients such as Windows Outlook may not show background images. Using Inbox Vision can help identify these discrepancies between clients. In this scenario, set a fallback background color so that these images can render as expected.
 
 After using the drag-and-drop editor to design and create your email message, continue to [build]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) the remainder of your campaign or Canvas.
 
