@@ -1,6 +1,6 @@
 ---
-nav_title: ユーザーIDを設定する
-article_title: iOSのユーザーIDを設定する
+nav_title: ユーザー IDを設定する
+article_title: iOSのユーザー ID を設定する
 platform: iOS
 page_order: 1
 description: "このリファレンス記事では、iOS アプリでユーザー ID を設定する方法、推奨されるユーザー ID の命名規則、およびベストプラクティスをいくつか示します。"
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOSのユーザーIDを設定する
+# iOSのユーザー ID を設定する
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

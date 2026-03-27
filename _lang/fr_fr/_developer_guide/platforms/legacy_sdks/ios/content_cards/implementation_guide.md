@@ -1,5 +1,5 @@
 ---
-nav_title: Mise en œuvre avancée (facultatif)
+nav_title: Mise en œuvre avancée (facultative)
 article_title: Guide d’implémentation de la carte de contenu pour iOS (facultatif) 
 platform: iOS
 page_order: 7
@@ -14,7 +14,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration de base du développeur de carte de contenu ? Trouvez-le [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
+Vous recherchez le guide d’intégration de base du développeur de carte de contenu ? Veuillez trouver [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
 {% endalert %}
 
 # Guide d’implémentation de carte de contenu
@@ -444,7 +444,7 @@ L’exemple à droite montre un `UICollectionView` avec une liste hybride d’é
 
 Cette carte de contenu est livrée par une campagne déclenchée par API avec des paires clé-valeurs déclenchées par API. Cette option est idéale pour les campagnes où les valeurs de la carte dépendent des facteurs externes pour déterminer le contenu à afficher à l’utilisateur. Notez que `class_type` doit être connu au moment de la configuration.
 
-![Les paires clé-valeur pour le cas d’usage des cartes de contenu supplémentaires. Dans cet exemple, différents aspects de la carte tels que "tile_id", "tile_deeplink", et "tile_title" sont définis à l'aide de Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Les paires clé-valeur pour le cas d’usage des cartes de contenu supplémentaires. Dans cet exemple, différents aspects de la carte, tels que  "tile_id","tile_deeplink", et  ,"tile_title" sont définis à l'aide de Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ##### Prêt à enregistrer l’analyse ?
 Consultez la [section suivante](#logging-impressions-clicks-and-dismissals) pour mieux comprendre à quoi doit ressembler le flux de données.

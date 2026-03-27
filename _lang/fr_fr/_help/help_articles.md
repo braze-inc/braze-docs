@@ -1,13 +1,13 @@
 ---
-nav_title: Articles d’aide
-article_title: Articles d’aide
+nav_title: Articles d'aide
+article_title: Articles d'aide
 page_order: 1
 layout: dev_guide
-guide_top_header: "Articles d’aide"
-guide_top_text: "Nous avons de nombreux articles qui peuvent vous aider à résoudre les problèmes et à révéler les dépendances dans vos campagnes. Si vous avez une suggestion pour un nouvel article d’assistance, laissez un commentaire au bas de cette page ou sur un autre article.  Vous pouvez également apprendre à rédiger vous-même un article en consultant le <a href='https://www.braze.com/docs/contributing/home'>Guide du contributeur de Braze</a>. <br> <br>Choisissez parmi les thèmes populaires suivants ou consultez les autres articles listés dans le panneau de navigation."
+guide_top_header: "Articles d'aide"
+guide_top_text: "Nous mettons à votre disposition de nombreux articles d'aide pour vous accompagner dans la résolution de problèmes et l'identification des dépendances dans vos campagnes. Si vous souhaitez suggérer un nouvel article d'aide, laissez un commentaire en bas de cette page ou de toute autre page d'article d'aide. <br> <br>Choisissez parmi les sujets populaires ci-dessous ou consultez les autres articles dans le panneau de navigation."
 
 page_type: landing
-description: "Cette page d’accueil contient des articles qui peuvent vous aider à résoudre les problèmes et à révéler les dépendances lorsque vous utilisez Braze."
+description: "Cette page de destination regroupe des articles d'aide pour vous accompagner dans la résolution de problèmes et l'identification des dépendances lors de votre utilisation de Braze."
 
 guide_featured_title: "Sujets"
 guide_featured_list:
@@ -23,7 +23,7 @@ guide_featured_list:
   - name: Cartes de contenu
     link: /docs/help/help_articles/content_cards/
     image: /assets/img/braze_icons/sticker-square.svg
-  - name: Data
+  - name: Données
     link: /docs/help/help_articles/data/
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Documentation
@@ -39,4 +39,3 @@ guide_featured_list:
     link: /docs/help/help_articles/segments/
     image: /assets/img/braze_icons/users-01.svg
 ---
-

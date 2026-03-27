@@ -1,6 +1,6 @@
 ---
 nav_title: Atualizar o feed
-article_title: Atualizar o feed do cartão de conteúdo para iOS
+article_title: Atualize o Feed do Cartão de Conteúdo para iOS
 platform: iOS
 page_order: 4
 description: "Este artigo de referência aborda a implementação de atualizações de cartões de conteúdo em seu app para iOS."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Atualizar o feed
+# Atualize o feed
 
 ## Atualizando os cartões de conteúdo
 

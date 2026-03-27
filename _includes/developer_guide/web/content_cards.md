@@ -51,6 +51,17 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 
 [See the SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
 
+## Testing Content Cards on the web
+
+You can test your Content Cards integration using your browser's developer tools.
+
+1. Create a Content Card campaign and target your test user.
+2. Log in to the website that has your Web SDK integration.
+3. Open your browser console. For Chrome, right-click the page, select **Inspect**, then select the **Console** tab.
+4. Run these commands in the console:
+   - `window.braze.getCachedContentCards()`
+   - `window.braze.toggleContentCards()`
+
 ## Card types and properties
 
 The Content Cards data model is available in the Web SDK and offers the following Content Card types: [ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html), and [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html). Each type inherits common properties from a base model [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) and has the following additional properties.
@@ -138,19 +149,130 @@ To determine if a Content Card is in the Control group for an A/B test, check th
 
 ## Card methods
 
+### Default feed methods
+
+Use these methods when displaying Content Cards using the Braze default feed UI:
+
 |Method | Description |
 |---|---|
-|[`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)| Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.|
-|[`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)| Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.| 
-|[`showContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)| Display the user's Content Cards. |
-|[`hideContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)| Hide any Braze Content Cards currently showing. | 
-|[`toggleContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)| Display the user's Content Cards. | 
-|[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)|Get all currently available cards from the last Content Cards refresh.|
-|[`subscribeToContentCardsUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. | 
-|[`dismissCard`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismisscard)|Dismiss the card programmatically (available in v2.4.1).|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+|[`showContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)| Displays the default Content Cards feed. Renders cards into a provided `parentNode` HTML element, or as a fixed-position sidebar on the right side of the page if no element is given. Accepts an optional `filterFunction` to sort or filter cards before display. |
+|[`hideContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)| Hides the default Content Cards feed if it is currently showing. |
+|[`toggleContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)| Shows the default Content Cards feed if it is hidden, or hides it if it is visible. If you need to display multiple Content Card feeds simultaneously, use `showContentCards` and `hideContentCards` instead. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more details, refer to the [SDK reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
+### Custom feed methods
+
+Use these methods when building your own Content Card UI:
+
+|Method | Description |
+|---|---|
+|[`subscribeToContentCardsUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)| Registers a callback function that is invoked whenever Content Cards are updated for the current user, such as on session start. Use this as the primary way to receive card data for your custom feed. Must be called before `openSession()` to receive updates on the initial session. |
+|[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)| Returns all currently available cards from the most recent Content Cards refresh. Use this to immediately display cards on page load without waiting for a new server request, such as when the user returns to a page during an active session. |
+|[`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh)| Requests an immediate refresh of Content Cards from Braze servers. By default, cards refresh on session start and when the default feed is reopened. Use this to force a refresh at other times, such as after a specific user action. Be aware of [rate limits]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/#rate-limit). |
+|[`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)| Logs impression events for an array of cards. Call this when cards are rendered and visible to the user. Required for accurate campaign reporting when using a custom UI, as impressions are not tracked automatically outside the default feed. |
+|[`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)| Logs a click event for a single card. Call this when a user interacts with a card in your custom UI. Required for accurate campaign reporting, as clicks are not tracked automatically outside the default feed. |
+|[`handleBrazeAction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#handlebrazeaction)| Processes a card's URL and executes the configured on-click action, including Braze actions (`brazeActions://` URLs) and standard URL navigation. Call this in your card click handler to ensure on-click behaviors configured in the Braze dashboard are executed. |
+|[`dismissCard`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismisscard)| Programmatically dismisses a card, removing it from the user's feed. Use this to allow users to dismiss cards in your custom UI. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+For more details, refer to the [SDK reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
+
+## Best practices
+
+### Call methods in the correct order
+
+For custom feeds, Content Cards refresh only on session start if `subscribeToContentCardsUpdates()` is called before `openSession()`. Call your Braze methods in this order:
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+// Step 1: Initialize the SDK
+braze.initialize("YOUR-API-KEY", { baseUrl: "YOUR-SDK-ENDPOINT" });
+
+// Step 2: Subscribe to card updates
+braze.subscribeToContentCardsUpdates((updates) => {
+  const cards = updates.cards;
+  renderCards(cards);
+});
+
+// Step 3: Identify the user
+braze.changeUser("USER_ID");
+
+// Step 4: Start the session
+braze.openSession();
+```
+
+### Use cached cards to persist content across page loads
+
+Because `subscribeToContentCardsUpdates()` invokes only its callback when there are new updates (such as on session start), cards can disappear from your custom feed if a user refreshes the page mid-session. To prevent this, use `getCachedContentCards()` to immediately render cards from the local cache, alongside your subscription for new updates:
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+function renderCards(cards) {
+  const container = document.getElementById("content-cards");
+  container.textContent = "";
+  const displayedCards = [];
+
+  cards.forEach(card => {
+    if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
+      const cardElement = document.createElement("div");
+
+      const h3 = document.createElement("h3");
+      h3.textContent = card.title || "";
+      cardElement.appendChild(h3);
+
+      const p = document.createElement("p");
+      p.textContent = card.description || "";
+      cardElement.appendChild(p);
+
+      if (card.imageUrl) {
+        const img = document.createElement("img");
+        img.src = card.imageUrl;
+        img.alt = card.title || "";
+        cardElement.appendChild(img);
+      }
+
+      if (card.url) {
+        cardElement.addEventListener("click", () => {
+          braze.logContentCardClick(card);
+          braze.handleBrazeAction(card.url);
+        });
+      }
+
+      container.appendChild(cardElement);
+      displayedCards.push(card);
+    }
+  });
+
+  if (displayedCards.length > 0) {
+    braze.logContentCardImpressions(displayedCards);
+  }
+}
+
+// Display cached cards immediately
+const cached = braze.getCachedContentCards();
+if (cached && cached.cards.length > 0) {
+  renderCards(cached.cards);
+}
+
+// Subscribe to future updates
+braze.subscribeToContentCardsUpdates((updates) => {
+  renderCards(updates.cards);
+});
+```
+
+### Log analytics for custom feeds
+
+When using a custom UI, impressions, clicks, and dismissals are not tracked automatically. You must log each event manually:
+
+- **Impressions:** Call `logContentCardImpressions([card1, card2, ...])` with an array of card objects when cards become visible to the user.
+- **Clicks:** Call `logContentCardClick(card)` when a user interacts with a card.
+- **On-click behavior:** Call `handleBrazeAction(card.url)` to execute the card's configured on-click action (such as navigating to a URL or logging a custom event).
+
+{% alert warning %}
+The argument passed to `logContentCardClick()` must be an original Braze `Card` object. If you transform or reconstruct the card data (for example, by serializing and deserializing), clicks are not logged and you see the error: "card must be a Card object."
+{% endalert %}
 
 ## Using Google Tag Manager
 
@@ -218,9 +340,19 @@ This will help identify what values are being sent from your web page's data lay
 
 ![The Braze Initialization Tag summary page provides an overview of the tag, including information on which tags were triggered.]({% image_buster /assets/img/web-gtm/gtm-debug-mode.png %})
 
+#### Verify tag sequencing for custom events {#tag-sequencing}
+
+If custom events or other actions aren't logging in Braze, a common cause is a race condition where an action tag (such as **Custom Event** or **Purchase**) fires before the **Braze Initialization** tag has completed. To fix this, configure [tag sequencing](https://support.google.com/tagmanager/answer/6238868) in GTM:
+
+1. Open the action tag that isn't logging correctly.
+2. Under **Advanced Settings** > **Tag Sequencing**, select **A tag that fires before \[this tag\]**.
+3. Choose your **Braze Initialization** tag as the setup tag.
+
+This ensures the SDK is fully initialized before any action tags attempt to send data to Braze.
+
 #### Enable verbose logging
 
-To allow Braze technical support to access logs while testing, you can enable verbose logging on your Google Tag Manager integration. These logs will appear in the **Console** tab of your browser's [developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+To capture detailed logs for troubleshooting, you can enable verbose logging on your Google Tag Manager integration. These logs will appear in the **Console** tab of your browser's [developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
 In your Google Tag Manager integration, navigate to your Braze Initialization Tag and select **Enable Web SDK Logging**.
 

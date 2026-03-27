@@ -1,6 +1,6 @@
 ---
-nav_title: "Email lists & addresses"
-article_title: Email Lists & Addresses Endpoints
+nav_title: "Email lists and addresses"
+article_title: Email Lists and Addresses Endpoints
 search_tag: Endpoint
 page_order: 1
 layout: dev_guide

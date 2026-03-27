@@ -96,7 +96,7 @@ En este caso de uso, Salesforce es el sistema CRM de ejemplo. Puedes mapear sobr
 
 ##### Ejemplo de tabla de campos de cuenta mapeados
 
-![Tabla de cuentas de Salesforce con la información correspondiente, como la dirección de facturación y el propietario de la cuenta.]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![Tabla de cuentas de Salesforce con la información correspondiente, como la dirección de facturación y el titular de la cuenta.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
 {% endsubtab %}
 {% subtab Opportunity catalog %}
@@ -135,7 +135,7 @@ En este caso de uso, Salesforce es el sistema CRM de ejemplo. Puedes mapear sobr
 
 ##### Ejemplo de tabla de campos de oportunidad mapeados
 
-![Tabla de oportunidades de Salesforce con la información correspondiente, como la dirección de facturación y el propietario de la cuenta.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![Tabla de oportunidades de Salesforce con la información correspondiente, como la dirección de facturación y el titular de la cuenta.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -144,7 +144,7 @@ En este caso de uso, Salesforce es el sistema CRM de ejemplo. Puedes mapear sobr
 
 ### Opción 2: Utiliza fuentes conectadas para cuentas y oportunidades
 
-Los orígenes conectados son tablas de datos alojadas por ti en tu propio almacén de datos y consultadas por [las extensiones de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) Braze [CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). A diferencia de los catálogos, en lugar de duplicar tus objetos de negocio (cuentas y oportunidades) en Braze, los mantendrías en tu almacén de datos y utilizarías tu almacén como fuente de verdad.
+Las fuentes conectadas son tablas de datos alojadas por ti en tu propio almacén de datos y objeto de consultas por [las extensiones de segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) de Braze. A diferencia de los catálogos, en lugar de duplicar tus objetos de negocio (cuentas y oportunidades) en Braze, los mantendrías en tu almacén de datos y utilizarías tu almacén como fuente de verdad.
 
 Para configurar las fuentes conectadas, consulta [Integrar fuentes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 
@@ -180,7 +180,7 @@ Una vez sincronizados tus ID, tienes que relacionar tus perfiles de usuario Braz
 {% tabs %}
 {% tab Catalogs %}
 
-#### Opción 1: Cuando utilices catálogos
+#### Opción 1: Al utilizar catálogos
 
 Ahora que tus detalles de oportunidad y de cuenta se contabilizan como catálogos Braze, tienes que crear una relación entre esos catálogos y los perfiles de usuario a los que quieres enviar mensajes. Actualmente, esto requiere dos pasos:
 

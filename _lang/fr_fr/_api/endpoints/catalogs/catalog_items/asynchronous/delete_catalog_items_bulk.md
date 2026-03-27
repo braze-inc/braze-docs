@@ -86,7 +86,7 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
       "parameter_values": []
     }
   ],
-  "message": "Invalid Request",
+  "message": "Invalid Request"
 }
 ```
 

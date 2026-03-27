@@ -1,12 +1,12 @@
 ---
 nav_title: Salesforce Sales Cloud
-article_title: Gérer les prospects avec Salesforce Sales Cloud
+article_title: Gestion des prospects avec Salesforce Sales Cloud
 page_order: 3
 page_type: reference
 description: "Découvrez comment utiliser les webhooks de Braze pour créer et mettre à jour des leads dans Salesforce Sales Cloud via l'endpoint Salesforce sobjects/Lead."
 ---
 
-# Gérer les prospects avec Salesforce Sales Cloud
+# Gestion des prospects avec Salesforce Sales Cloud
 
 > [Salesforce](https://www.salesforce.com/) est l'une des principales plateformes de gestion de la relation client (CRM) basées sur le cloud, conçue pour aider les entreprises à gérer l'ensemble de leur processus de vente, notamment la génération de leads, le suivi des opportunités et la gestion des comptes.<br><br>Cette page montre comment utiliser les webhooks Braze pour créer et mettre à jour des leads dans Salesforce Sales Cloud via une intégration soumise par la communauté.
 
@@ -48,7 +48,7 @@ En tant que plateforme d'engagement client, Braze peut générer de nouveaux pro
 
 ### Étape 2 : Configurez votre modèle de webhook
 
-Utilisez des modèles pour réutiliser rapidement ce webhook à travers la plateforme Braze. 
+Veuillez utiliser des modèles pour réutiliser rapidement ce webhook sur la plateforme Braze. 
 
 1. Dans Braze, allez dans **Modèles**, sélectionnez **Modèles de webhook**, puis **\+ Créer un modèle de webhook**.
 2. Donnez un nom au modèle, par exemple "Salesforce Sales Cloud > Créer une piste".

@@ -86,3 +86,35 @@ Por exemplo, digamos que você tenha um catálogo chamado "Jogos" que tem uma se
 {% endraw %}
 
 Uma vez que as condições estabelecidas sejam atendidas, sua mensagem pode prosseguir. Usar essa lógica é uma maneira útil de economizar tempo, em vez de repetir blocos de Liquid para diferentes condições.
+
+### Por que há espaçamento extra em mensagens que usam Blocos de Conteúdo?
+
+Se você notar espaçamento extra em mensagens enviadas que usam Blocos de Conteúdo com Liquid, pode haver parágrafos ou quebras de linha desnecessárias dentro de suas declarações condicionais. Escreva suas declarações condicionais em uma única linha em vez de várias linhas.
+
+#### Exemplo
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${has_discount}}} == true %}Discounted Item{% elsif {{custom_attribute.${is_new_arrival}}} == true %}New Arrival{% else %}Regular Item{% endif %}
+{% endraw %}
+
+### When should I use `assign` versus `capture`?
+
+Both `assign` and `capture` create Liquid variables, but they serve different purposes:
+
+- `assign` is for simple variables that store a single value, such as a boolean, number, or simple string. You can also apply a single filter in the same line.
+- `capture` is for storing a block of text that may include multiple variables, strings, or complex expressions. Use `capture` when the value is too complex for a single `assign` statement, such as URLs that utilize other Liquid variables or custom attributes as parameters. `capture` is also preferred when implementing Liquid variables in the body of Connected Content calls.
+
+#### Examples
+
+{% raw %}
+```liquid
+{% comment %} Valid assign usage {% endcomment %}
+{% assign name = {{custom_attribute.${first_name}}} %}
+{% assign price = {{custom_attribute.${price}}} | plus: 0 %}
+
+{% comment %} Use capture for complex strings {% endcomment %}
+{% capture greeting %}Hello, {{custom_attribute.${first_name}}}! Your order #{{custom_attribute.${order_id}}} is ready.{% endcapture %}
+{{ greeting }}
+```
+{% endraw %}

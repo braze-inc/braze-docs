@@ -1,27 +1,27 @@
 ---
-nav_title: Wörterbuch der Daten
-article_title: Wörterbuch für Braze Pilot
+nav_title: Datenwörterbuch
+article_title: Datenwörterbuch für Braze Pilot
 page_order: 3
 page_type: reference
 description: "Dieser Artikel beschreibt die erforderlichen Integrationsschritte für Ihre Entwicklerabteilung."
 ---
 
-# Wörterbuch der Daten
+# Datenwörterbuch
 
-> Jede App-Simulation in Braze Pilot ist so instrumentiert, dass sie eine Vielzahl von Ereignissen und Attributen sammelt, die auf der Aktivität des Nutzers in der App basieren. 
+> Jede App-Simulation in Braze Pilot ist so konfiguriert, dass sie verschiedene Ereignisse und Attribute basierend auf den Aktivitäten der Nutzer:innen in der App erfasst. 
 
 ## Der Umgang mit Daten
 
-Die App protokolliert angepasste Attribute und Events, die typisch für die Branche sind, die von der fiktiven Marke vertreten wird. Sie können diese Attribute verwenden, um Demos für eine Vielzahl gängiger Anwendungsfälle zu erstellen.
-Im Allgemeinen wird allen Ereignissen und Attributen ein Shortcode vorangestellt, der der für die Daten verantwortlichen App-Simulation entspricht. Zum Beispiel:
+Die App protokolliert benutzerdefinierte Attribute und Ereignisse, die für die Branche, die durch die fiktive Marke repräsentiert wird, typisch sind. Sie können diese Attribute verwenden, um Demos für eine Vielzahl gängiger Anwendungsfälle zu erstellen.
+Im Allgemeinen werden alle Ereignisse und Attribute mit einem Shortcode vorangestellt, der der für die Daten verantwortlichen App-Simulation entspricht. Zum Beispiel:
 
-- Allen Daten, die von der Steppington App Simulation aufgezeichnet werden, wird ein Präfix vorangestellt `st_`
-- Allen Daten, die von der PantsLabyrinth App Simulation aufgezeichnet werden, wird ein Präfix vorangestellt `pl_`
-- Allen Daten, die von der MovieCanon App Simulation aufgezeichnet werden, wird ein Präfix vorangestellt `mc_`
+- Alle von der Steppington-App-Simulation protokollierten Daten sind mit einem Präfix versehen. `st_`
+- Alle von der PantsLabyrinth-App-Simulation protokollierten Daten sind mit einem Präfix versehen. `pl_`
+- Alle von der MovieCanon-App-Simulation protokollierten Daten sind mit dem Präfix `mc_`
 
 ## Liste der protokollierten Ereignisse und Attribute
 
-In der folgenden Tabelle sind die von Braze Pilot protokollierten Ereignisse und Attribute aufgeführt.
+Die folgende Tabelle listet die von Braze Pilot protokollierten Ereignisse und Attribute auf.
 
 <style>
 table td {
@@ -57,66 +57,66 @@ th:nth-child(5), td:nth-child(5) {
     <tbody>
         <tr>
             <td><code>mc_entered_app</code></td>
-            <td>MovieCanon</td>
+            <td>Filmkanon</td>
             <td>Event</td>
             <td></td>
-            <td>Wenn der Nutzer:innen die MovieCanon App betritt</td>
+            <td>Wenn der Nutzer:in die MovieCanon-App öffnet</td>
         </tr>
         <tr>
             <td><code>mc_watched_movie</code></td>
-            <td>MovieCanon</td>
+            <td>Filmkanon</td>
             <td>Event</td>
             <td><code>title: string</code></td>
-            <td>Wenn der Nutzer:innen ein Video zu Ende angesehen hat</td>
+            <td>Wenn die Nutzer:innen das Video angesehen haben</td>
         </tr>
         <tr>
             <td><code>mc_viewed_movie_page</code></td>
-            <td>MovieCanon</td>
+            <td>Filmkanon</td>
             <td>Event</td>
             <td><code>title: string</code></td>
-            <td>Wenn der Nutzer:in eine Filmseite blickt</td>
+            <td>Wenn die Nutzer:in eine Filmseite aufruft</td>
         </tr>
         <tr>
             <td><code>pl_viewed_item</code></td>
-            <td>HosenLabyrinth</td>
+            <td>Hosenlabyrinth</td>
             <td>Event</td>
             <td><code>item_name: string</code></td>
-            <td>Wenn der Nutzer:innen eine Produktseite aufruft</td>
+            <td>Wenn die Nutzer:in eine Produktseite aufruft</td>
         </tr>
         <tr>
             <td><code>pl_entered_app</code></td>
-            <td>HosenLabyrinth</td>
+            <td>Hosenlabyrinth</td>
             <td>Event</td>
             <td></td>
-            <td>Wenn der Nutzer:innen die App PantsLabyrinth betritt</td>
+            <td>Wenn die Nutzer:innen die PantsLabyrinth-App öffnen</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_wishlist</code></td>
-            <td>HosenLabyrinth</td>
+            <td>Hosenlabyrinth</td>
             <td>Event</td>
             <td><code>item_name: string</code></td>
-            <td>Wenn der Nutzer:innen einen Artikel zu seinem Wunschzettel hinzufügt</td>
+            <td>Wenn die Nutzer:in einen Artikel zu ihrer Wunschliste hinzufügt</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_cart</code></td>
-            <td>HosenLabyrinth</td>
+            <td>Hosenlabyrinth</td>
             <td>Event</td>
             <td><code>item_name: string</code></td>
-            <td>Wenn der Nutzer:innen einen Artikel in den Warenkorb legt</td>
+            <td>Wenn der Nutzer:in einen Artikel in seinen Warenkorb legt</td>
         </tr>
         <tr>
             <td><code>&lt;purchase_event&gt;</code></td>
-            <td>HosenLabyrinth</td>
+            <td>Hosenlabyrinth</td>
             <td>Event</td>
             <td><code>name: string</code><br><code>price: number</code></td>
-            <td>Wenn der Nutzer:innen einen Kauf abschließt</td>
+            <td>Wenn die Nutzer:in einen Kauf abschließt</td>
         </tr>
         <tr>
             <td><code>st_entered_app</code></td>
             <td>Steppington</td>
             <td>Event</td>
             <td></td>
-            <td>Wenn der Nutzer:innen die Steppington App betritt</td>
+            <td>Wenn die Nutzer:in die Steppington-App öffnet</td>
         </tr>
         <tr>
             <td><code>st_completed_class</code></td>
@@ -130,14 +130,14 @@ th:nth-child(5), td:nth-child(5) {
             <td>Steppington</td>
             <td>Event</td>
             <td><code>benefit_type: string</code></td>
-            <td>Wenn der Nutzer:innen den Tab Steppington+ besucht (wenn er mit dem Feature-Flag aktiviert ist)</td>
+            <td>Wenn der Nutzer:in die Registerkarte „Steppington+“ aufruft (sofern diese mit dem Feature-Flag aktiviert ist)</td>
         </tr>
         <tr>
             <td><code>st_viewed_class</code></td>
             <td>Steppington</td>
             <td>Event</td>
             <td><code>class_type: string</code></td>
-            <td>Wenn der Nutzer:innen eine Trainingsseite besucht</td>
+            <td>Wenn die Nutzer:in eine Trainingsseite aufruft</td>
         </tr>
         <tr>
             <td><code>st_completed_class</code></td>
@@ -158,28 +158,28 @@ th:nth-child(5), td:nth-child(5) {
             <td>Steppington</td>
             <td>Event</td>
             <td><code>class_type: string</code></td>
-            <td>Wenn der Nutzer:innen eine Klasse favorisiert</td>
+            <td>Wenn die Nutzer:in eine Klasse als Favorit speichert</td>
         </tr>
         <tr>
             <td><code>st_unfavorited_class</code></td>
             <td>Steppington</td>
             <td>Event</td>
             <td><code>class_type: string</code></td>
-            <td>Wenn der Nutzer:innen eine Klasse ablehnt</td>
+            <td>Wenn die Nutzer:in eine Klasse aus den Favoriten entfernt</td>
         </tr>
         <tr>
             <td><code>st_started_free_trial</code></td>
             <td>Steppington</td>
             <td>Event</td>
             <td></td>
-            <td>Wenn der Nutzer:innen den Button <strong>Kostenlose Demo starten</strong> auswählt</td>
+            <td>Wenn die Nutzer:in den Button <strong>„Kostenlose Demo starten“</strong> auswählt</td>
         </tr>
         <tr>
             <td><code>st_set_goal</code></td>
             <td>Steppington</td>
             <td>Event</td>
             <td><code>goal_name: string</code><br><code>goal: number</code><br><code>units: string</code></td>
-            <td>Wenn der Nutzer:innen den Button <strong>Kostenlose Demo starten</strong> auswählt.</td>
+            <td>Wenn der Nutzer:in den Button <strong>„Kostenlose Demo starten“</strong> auswählt.</td>
         </tr>
     </tbody>
 </table>

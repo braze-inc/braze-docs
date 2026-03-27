@@ -1,6 +1,6 @@
 ---
-nav_title: Googleタグマネージャー
-article_title: Braze SDKを使用したGoogleタグマネージャー
+nav_title: Google Tag Manager
+article_title: Google Tag Managerと Braze SDK
 platform: 
   - Android
   - FireOS
@@ -10,9 +10,9 @@ description: "Runtime の初期化、遅延初期化、Google Tag Manager など
 
 ---
 
-# Braze SDKを使用したGoogleタグマネージャー
+# Google Tag Managerと Braze SDK
 
-> [Google Tag Manager (GTM)](https://developers.google.com/tag-platform/tag-manager)とBraze SDKの使用方法を学習することで、コードの変更やアプリの新規リリースをすることなく、Brazeのイベントトラッキングやユーザー属性の更新をリモートでコントロールすることができる。
+> [Google Tag Manager（GTM）](https://developers.google.com/tag-platform/tag-manager)とBraze SDKの連携方法を学べば、コード変更やアプリの新バージョンリリースを必要とせずに、Brazeのイベントトラッキングやユーザー属性の更新を遠隔でコントロールできる。
 
 {% sdktabs %}
 {% sdktab web %}

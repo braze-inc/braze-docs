@@ -1,5 +1,5 @@
 ---
-nav_title: Solicitação de revisão personalizada da loja de aplicativos
+nav_title: Prompt de revisão de loja de aplicativos personalizado
 article_title: Solicitação de revisão personalizada da App Store
 platform: iOS
 page_order: 4

@@ -8,14 +8,14 @@ description: "Le présent article de référence couvre brièvement les étapes 
 
 # Dictionnaire de données
 
-> Chaque simulation d'app dans Braze Pilot est instrumentée pour collecter une variété d'événements et d'attributs basés sur l'activité de l'utilisateur dans l'app. 
+> Chaque simulation d'application dans Braze Pilot est conçue pour collecter divers événements et attributs en fonction de l'activité des utilisateurs dans l'application. 
 
 ## L'approche des données
 
-L'appli enregistre les attributs et les événements personnalisés typiques du secteur d'activité représenté par la marque fictive. Vous pouvez utiliser ces attributs pour réaliser des démonstrations dans divers cas d'utilisation courants.
-En général, tous les événements et attributs sont précédés d'un code court qui correspond à la simulation d'application responsable des données. Par exemple :
+L'application enregistre les attributs personnalisés et les événements caractéristiques du secteur représenté par la marque fictive. Vous pouvez utiliser ces attributs pour alimenter des démonstrations dans divers cas d'utilisation courants.
+En règle générale, tous les événements et attributs sont précédés d'un code court correspondant à la simulation d'application responsable des données. Par exemple :
 
-- Toutes les données enregistrées par l'application de simulation Steppington sont précédées du préfixe `st_`
+- Toutes les données enregistrées par la simulation de l'application Steppington sont précédées du préfixe `st_`
 - Toutes les données enregistrées par la simulation de l'application PantsLabyrinth sont précédées du préfixe `pl_`
 - Toutes les données enregistrées par la simulation de l'application MovieCanon sont précédées du préfixe `mc_`
 
@@ -60,14 +60,14 @@ th:nth-child(5), td:nth-child(5) {
             <td>MovieCanon</td>
             <td>Événement</td>
             <td></td>
-            <td>Lorsque l'utilisateur entre dans l'application MovieCanon</td>
+            <td>Lorsque l'utilisateur accède à l'application MovieCanon,</td>
         </tr>
         <tr>
             <td><code>mc_watched_movie</code></td>
             <td>MovieCanon</td>
             <td>Événement</td>
             <td><code>title: string</code></td>
-            <td>Lorsque l'utilisateur a fini de regarder une vidéo</td>
+            <td>Lorsque l'utilisateur a terminé de visionner une vidéo</td>
         </tr>
         <tr>
             <td><code>mc_viewed_movie_page</code></td>
@@ -81,14 +81,14 @@ th:nth-child(5), td:nth-child(5) {
             <td>PantsLabyrinth</td>
             <td>Événement</td>
             <td><code>item_name: string</code></td>
-            <td>Lorsque l'utilisateur consulte une page produit</td>
+            <td>Lorsque l'utilisateur consulte une page de produit</td>
         </tr>
         <tr>
             <td><code>pl_entered_app</code></td>
             <td>PantsLabyrinth</td>
             <td>Événement</td>
             <td></td>
-            <td>Lorsque l'utilisateur entre dans l'application PantsLabyrinth</td>
+            <td>Lorsque l'utilisateur accède à l'application PantsLabyrinth</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_wishlist</code></td>
@@ -109,14 +109,14 @@ th:nth-child(5), td:nth-child(5) {
             <td>PantsLabyrinth</td>
             <td>Événement</td>
             <td><code>name: string</code><br><code>price: number</code></td>
-            <td>Lorsque l'utilisateur effectue un achat</td>
+            <td>Lorsque l'utilisateur finalise un achat</td>
         </tr>
         <tr>
             <td><code>st_entered_app</code></td>
             <td>Steppington</td>
             <td>Événement</td>
             <td></td>
-            <td>Lorsque l'utilisateur entre dans l'application Steppington</td>
+            <td>Lorsque l'utilisateur accède à l'application Steppington,</td>
         </tr>
         <tr>
             <td><code>st_completed_class</code></td>
@@ -130,14 +130,14 @@ th:nth-child(5), td:nth-child(5) {
             <td>Steppington</td>
             <td>Événement</td>
             <td><code>benefit_type: string</code></td>
-            <td>Lorsque l'utilisateur visite l'onglet Steppington+ (s'il est activé avec le drapeau de fonctionnalité)</td>
+            <td>Lorsque l'utilisateur consulte l'onglet Steppington+ (s'il est activé avec l'indicateur de fonctionnalité)</td>
         </tr>
         <tr>
             <td><code>st_viewed_class</code></td>
             <td>Steppington</td>
             <td>Événement</td>
             <td><code>class_type: string</code></td>
-            <td>Lorsque l'utilisateur visite une page d'entraînement</td>
+            <td>Lorsque l'utilisateur consulte une page d'entraînement</td>
         </tr>
         <tr>
             <td><code>st_completed_class</code></td>
@@ -158,28 +158,28 @@ th:nth-child(5), td:nth-child(5) {
             <td>Steppington</td>
             <td>Événement</td>
             <td><code>class_type: string</code></td>
-            <td>Lorsque l'utilisateur privilégie une classe</td>
+            <td>Lorsque l'utilisateur ajoute une classe à ses favoris</td>
         </tr>
         <tr>
             <td><code>st_unfavorited_class</code></td>
             <td>Steppington</td>
             <td>Événement</td>
             <td><code>class_type: string</code></td>
-            <td>Lorsque l'utilisateur désapprouve une classe</td>
+            <td>Lorsque l'utilisateur supprime une classe de ses favoris</td>
         </tr>
         <tr>
             <td><code>st_started_free_trial</code></td>
             <td>Steppington</td>
             <td>Événement</td>
             <td></td>
-            <td>Lorsque l'utilisateur sélectionne le bouton <strong>Démarrer l'essai gratuit</strong> </td>
+            <td>Lorsque l'utilisateur clique sur le bouton <strong>« Commencer l'essai gratuit »</strong></td>
         </tr>
         <tr>
             <td><code>st_set_goal</code></td>
             <td>Steppington</td>
             <td>Événement</td>
             <td><code>goal_name: string</code><br><code>goal: number</code><br><code>units: string</code></td>
-            <td>Lorsque l'utilisateur sélectionne le bouton <strong>Démarrer l'essai gratuit</strong>.</td>
+            <td>Lorsque l'utilisateur clique sur le bouton <strong>« Commencer l'essai gratuit</strong> ».</td>
         </tr>
     </tbody>
 </table>

@@ -1,5 +1,5 @@
 ---
-nav_title: メッセージスタイルのカスタマイズ
+nav_title: メッセージのスタイルをカスタマイズする
 article_title: "チュートリアル: キーと値のペアを使用したスタイルのカスタマイズ"
 description: ""
 page_order: 1
@@ -12,7 +12,7 @@ layout: scrolly
 
 {% sdktabs %}
 {% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} ただし、追加のセットアップは必要ありません。
+{% multi_lang_include developer_guide/prerequisites/web.md %} ただし、追加の設定は不要だ。
 
 ## Web のキーと値のペアを使用したメッセージスタイルのカスタマイズ
 
@@ -82,7 +82,7 @@ lines-index.js=19
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} また、[Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) のアプリ内メッセージs を有効にする必要があります。
+{% multi_lang_include developer_guide/prerequisites/android.md %} [Androidではアプリ内メッセージをイネーブルメント]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages)する必要がある。
 
 ## Android のキーと値のペアを使用したメッセージスタイルのカスタマイズ
 
@@ -222,7 +222,7 @@ lines-MainApplication.kt=33-34
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} また、[Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages)のアプリ内メッセージsを有効にする必要があります。
+{% multi_lang_include developer_guide/prerequisites/swift.md %} [SWIFTのアプリ内メッセージ機能]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages)も[イネーブルメント]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages)する必要がある。
 
 ## Swift のキーと値のペアを使用したメッセージスタイルのカスタマイズ
 

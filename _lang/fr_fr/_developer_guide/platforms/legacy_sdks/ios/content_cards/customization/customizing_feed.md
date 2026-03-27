@@ -1,5 +1,5 @@
 ---
-nav_title: Personnaliser le flux
+nav_title: Flux personnalisé
 article_title: Personnalisation du flux de cartes de contenu pour iOS
 platform: iOS
 page_order: 2
@@ -102,9 +102,9 @@ override func setUpUI() {
 
 Des interfaces personnalisées peuvent être fournies en enregistrant des classes personnalisées pour tous les types de cartes souhaités. 
 
-![Une bannière Content Card. Une carte de contenu type bannière montre une image à droite de la bannière avec le texte "Merci d'avoir téléchargé la démo Braze !".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![Une carte de contenu avec une image légendée. Une carte de contenu légendée montre une image de Braze avec la légende superposée en bas "Merci d'avoir téléchargé la démo de Braze !". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
-![Une Classic Content Card. Une carte de contenu classique présente une image au centre de la carte avec les mots "Merci d'avoir téléchargé la démo de Braze" en dessous.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
+![Une bannière Content Card. Une carte de contenu de type bannière affiche une image à droite de la bannière avec le texte « Merci d'avoir téléchargé la démo Braze ! ».]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![Une carte de contenu avec une image légendée. Une carte de contenu de type image légendée affiche une image Braze avec la légende superposée en bas « Merci d'avoir téléchargé la démo Braze ! ». ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![Une Classic Content Card. Une carte de contenu classique affiche une image au centre de la carte, accompagnée de la mention « Merci d'avoir téléchargé la démo Braze » en dessous.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze propose trois types de modèles de cartes de contenu : (bannière, image légendée et classique). Sinon, si vous souhaitez fournir vos propres interfaces personnalisées, référez-vous aux extraits de code suivants :
 

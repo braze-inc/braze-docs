@@ -1,4 +1,4 @@
-## Comprendre le processus de poussée de Braze
+## Comprendre le flux de travail de Braze
 
 Le service Firebase Cloud Messaging (FCM) est l’infrastructure Google pour les notifications push envoyées aux applications Android. Voici la structure simplifiée de la manière dont les notifications push sont activées pour les appareils de vos utilisateurs et la façon dont Braze peut leur envoyer des notifications push :
 
@@ -76,7 +76,7 @@ Il se peut que vos messages push ne soient pas envoyés en raison des situations
 - Vos informations d'identification n'ont pas la bonne portée de permission.
 - Vous avez téléchargé des informations d'identification erronées dans le mauvais espace de travail de Braze (mauvais ID de l'expéditeur).
 
-Pour d'autres problèmes susceptibles de vous empêcher d'envoyer un message push, reportez-vous à [User Guide : Résolution des problèmes des notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
+Pour toute autre question susceptible de vous empêcher d'envoyer un message push, veuillez consulter le guide[ d'utilisation : Résolution des problèmes pour les notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
 
 ### Aucun utilisateur « Push Registered » (Enregistré pour les notifications push) ne s’affiche dans le tableau de bord de Braze (avant l’envoi de messages)
 

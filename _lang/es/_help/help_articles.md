@@ -4,7 +4,7 @@ article_title: Artículos de ayuda
 page_order: 1
 layout: dev_guide
 guide_top_header: "Artículos de ayuda"
-guide_top_text: "Tenemos muchos artículos de ayuda que pueden ayudarte a resolver problemas y revelar dependencias en tus campañas. Si tienes alguna sugerencia para un nuevo artículo de ayuda, deja tus comentarios al final de ésta o de cualquier página de artículos de ayuda. También puedes aprender a escribir un artículo tú mismo en la <a href='https://www.braze.com/docs/contributing/home'>Guía del Colaborador de Braze</a>. <br> <br>Elige entre los siguientes temas populares o consulta otros artículos que aparecen en el panel de navegación."
+guide_top_text: "Tenemos muchos artículos de ayuda que pueden ayudarte a resolver problemas y revelar dependencias en tus campañas. Si tienes alguna sugerencia para un nuevo artículo de ayuda, deja tus comentarios al final de esta o de cualquier página de artículos de ayuda. <br> <br>Elige entre los siguientes temas populares o consulta otros artículos que aparecen en el panel de navegación."
 
 page_type: landing
 description: "En esta página encontrarás artículos de ayuda que pueden ayudarte a resolver problemas y revelar dependencias al utilizar Braze."
@@ -39,4 +39,3 @@ guide_featured_list:
     link: /docs/help/help_articles/segments/
     image: /assets/img/braze_icons/users-01.svg
 ---
-

@@ -36,8 +36,26 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 | Paramètre   | Requis | Type de données | Description                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `selection` | Requis | Objet    | Un objet qui contient des critères de sélection. Les objets de sélection peuvent contenir `name`, `description`, `filters`, `results_limit`, `sort_field`, et `sort_order`. |
+| `selection` | Requis | Objet    | Un objet qui contient des critères de sélection. Veuillez consulter [l'objet de sélection du catalogue]({{site.baseurl}}/api/objects_filters/catalog_selection_object/) pour obtenir une description complète de l'objet et de ses champs. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+### Paramètres de l'objet de sélection
+
+| Paramètre        | Requis | Type de données | Description                                                                                                                                                        |
+| ---------------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`           | Requis | Chaîne de caractères    | Le nom de la sélection du catalogue. |
+| `description`    | Facultatif | Chaîne de caractères    | Une description de la sélection du catalogue. |
+| `external_id`    | Requis | Chaîne de caractères    | Identifiant unique pour la sélection. |
+| `source`         | Requis | Chaîne de caractères    | La source des données du catalogue. Pour les catalogues Shopify, veuillez utiliser `"Shopify"`. Pour les catalogues personnalisés, veuillez utiliser `"custom"`. |
+| `filters`        | Facultatif | Tableau    | Un ensemble d'objets filtres à appliquer aux éléments du catalogue. Vous pouvez définir jusqu'à quatre filtres par requête. Si aucun filtre n'est spécifié, tous les articles du catalogue sont inclus. |
+| `results_limit`  | Facultatif | Entier   | Le nombre maximal de résultats à renvoyer. Il est nécessaire d'indiquer un nombre compris entre 1 et 50. |
+| `sort_field`     | Facultatif | Chaîne de caractères    | Le champ selon lequel trier les résultats. Il est nécessaire de l'associer à `sort_order`. Si ni`sort_field`  ni  ne`sort_order` sont présents, les résultats sont aléatoires. |
+| `sort_order`     | Facultatif | Chaîne de caractères    | L'ordre de tri des résultats. Les valeurs acceptées sont`"asc"`(ascendant) ou`"desc"`(descendant). Il est nécessaire de l'associer à `sort_field`. Si ni`sort_field`  ni  ne`sort_order` sont présents, les résultats sont aléatoires. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+Les paramètres`sort_field``sort_order` et doivent être utilisés conjointement. Si vous fournissez l'un sans l'autre, ou si vous omettez les deux paramètres, les résultats de la sélection sont renvoyés dans un ordre aléatoire.
+{% endalert %}
 
 ## Exemple de demande
 
@@ -49,6 +67,8 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
   "selection": {
     "name": "favorite-restaurants",
     "description": "Favorite restaurants in NYC",
+    "external_id": "favorite-nyc-restaurants",
+    "source": "custom",
     "filters": [
       {
         "field": "City",
@@ -60,7 +80,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
         "operator": "greater than",
         "value": 7
       }
-    ]
+    ],
+    "results_limit": 10,
+    "sort_field": "Rating",
+    "sort_order": "desc"
   }
 }'
 ```
@@ -75,6 +98,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `time`     | `before`, `after`                                       |
 | `array`    | `includes value`, `does not include value`              |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert note %}
+L'API prend en charge un maximum de quatre filtres par requête de sélection. Dans le tableau de bord de Braze, il est possible d'ajouter jusqu'à 10 filtres par sélection. Les filtres sont appliqués dans l'ordre dans lequel ils apparaissent dans le tableau.
+{% endalert %}
 
 ## Réponse
 

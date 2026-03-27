@@ -1,9 +1,9 @@
 ---
-nav_title: Visión general de Braze
+nav_title: Comenzar
 article_title: "Cómo empezar: Visión general de Braze"
 page_order: 1
 page_type: reference
-description: "Familiarízate con los conceptos básicos que necesitarás conocer cuando trabajes en Braze."
+description: "Familiarízate con los conceptos básicos que necesitarás conocer para trabajar con Braze."
 
 ---
 
@@ -78,7 +78,7 @@ Este es el marco de Braze para estimar la duración de su integración basándos
 ¿Necesita ayuda con su migración? Nuestros [socios Braze certificados](https://www.braze.com/partners/solutions-partners) pueden ayudarle.
 {% endalert %}
 
-- **Volumen de correo electrónico:** Para enviar correos electrónicos, tendrás que calentar tus IP. [El calentamiento de IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) es el proceso de construir la reputación del remitente con tus direcciones IP recién asignadas. Si envías menos de 2-3 millones de correos electrónicos al día, tu calentamiento de IP debería durar 30 días o menos. Ten en cuenta tu pico de envío. Es decir, si normalmente envías 2 millones de correos electrónicos al día, pero tienes previsto enviar 7 millones durante un período estacional, ese "pico" de envíos es el que debes calentar. Los remitentes de gran volumen pueden utilizar varias IP para acelerar el proceso de calentamiento.
+- **Volumen de correo electrónico:** Para enviar correos electrónicos, tendrás que calentar tus IP. [El calentamiento de IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) es el proceso de construir la reputación del remitente con tus direcciones IP recién asignadas. Si envías menos de 2-3 millones de correos electrónicos al día, el calentamiento de tu IP debería tardar 30 días o menos. Ten en cuenta tu pico de envío. Es decir, si normalmente envías 2 millones de correos electrónicos al día, pero tienes previsto enviar 7 millones durante un período estacional, ese "pico" de envíos es el que debes calentar. Los remitentes de gran volumen pueden utilizar varias IP para acelerar el proceso de calentamiento.
 - **Complejidad organizativa:** Nuestro proceso de incorporación puede adaptarse a las necesidades de su empresa. Tanto si se trata de una única unidad de negocio, como si tiene un Centro de Excelencia, varias unidades independientes o utiliza agencias para aumentar sus equipos, Braze tiene experiencia trabajando en todos los escenarios.
 - **Sofisticación de la infraestructura de datos:** Si solo estás implementando el SDK de Braze o ya tienes una Plataforma de Datos de los Clientes (CDP), es posible tenerlo todo configurado en solo 30 días. El uso de un CDP moderno puede acelerar el proceso. Pero si tiene muchos sistemas backend, herramientas o bases de datos que conectar con Braze, puede llevar más tiempo y necesitar más recursos dedicados para terminar la configuración.
 

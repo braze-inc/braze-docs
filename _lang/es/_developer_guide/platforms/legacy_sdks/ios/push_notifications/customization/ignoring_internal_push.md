@@ -1,5 +1,5 @@
 ---
-nav_title: Ignorar el push interno
+nav_title: Ignorar la presión interna
 article_title: Ignorar las notificaciones push internas de Braze para iOS
 platform: iOS
 page_order: 4

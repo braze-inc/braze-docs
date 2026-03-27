@@ -2,16 +2,20 @@
 page_order: 1.3
 nav_title: Fehlersuche
 article_title: Fehlersuche im Braze SDK 
-description: "Erfahren Sie, wie Sie den Braze SDK-Debugger verwenden, damit Sie Fehlerbehebungen für Ihre SDK-gesteuerten Kanäle vornehmen können, ohne die ausführliche Protokollierung in Ihrer App manuell zu aktivieren."
+description: "Erfahren Sie, wie Sie den Braze SDK-Debugger verwenden, damit Sie Probleme in Ihren SDK-gestützten Kanälen beheben können, ohne die ausführliche Protokollierung in Ihrer App manuell aktivieren zu müssen."
 ---
 
 # Fehlersuche im Braze SDK
 
-> Lernen Sie, wie Sie den integrierten Debugger des Braze SDK verwenden, damit Sie Fehlerbehebungen für Ihre SDK-gestützten Kanäle durchführen können, ohne die ausführliche Protokollierung in Ihrer App aktivieren zu müssen.
+> Erfahren Sie, wie Sie den integrierten Debugger des Braze SDK verwenden, damit Sie Probleme in Ihren SDK-gestützten Kanälen beheben können, ohne die ausführliche Protokollierung in Ihrer App aktivieren zu müssen.
+
+{% alert tip %}
+Für eine eingehendere Untersuchung können Sie auch [die ausführliche Protokollierung aktivieren]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), um detaillierte SDK-Ausgaben zu erfassen, und [erfahren, wie Sie ausführliche Protokolle lesen]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs) – für bestimmte Kanäle.
+{% endalert %}
 
 ## Voraussetzungen
 
-Um den Braze SDK Debugger zu verwenden, benötigen Sie die Berechtigungen "PII anzeigen" und "Nutzerprofile PII-konform anzeigen". Um Ihre Debugging-Sitzungsprotokolle herunterzuladen, benötigen Sie außerdem die Berechtigung "Nutzerdaten exportieren". Außerdem muss Ihr Braze SDK die folgenden Mindestversionen erfüllen oder auf diese verweisen: 
+Um den Braze SDK-Debugger nutzen zu können, benötigen Sie die granularen Berechtigungen „PII anzeigen" und „Nutzerprofile anzeigen (PII geschwärzt)" (oder die Legacy-Berechtigung „Nutzerprofile PII-konform anzeigen"). Um Ihre Debugging-Sitzungsprotokolle herunterzuladen, benötigen Sie außerdem die Berechtigung „Nutzerdaten exportieren". Darüber hinaus muss Ihr Braze SDK die folgenden Mindestversionen erfüllen oder darauf verweisen: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -21,50 +25,50 @@ Um den Braze SDK Debugger zu verwenden, benötigen Sie die Berechtigungen "PII a
 Um das Debugging für das Braze Web SDK zu aktivieren, können Sie [einen URL-Parameter verwenden]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging).
 {% endalert %}
 
-### Schritt 1: Schließen Sie Ihre App
+### 1. Schritt: Schließen Sie Ihre App
 
 Bevor Sie mit der Fehlersuche beginnen, schließen Sie die App, bei der gerade ein Problem auftritt. Sie können die App zu Beginn Ihrer Sitzung neu starten.
 
-### Schritt 2: Erstellen Sie eine Debugging-Sitzung
+### 2. Schritt: Erstellen Sie eine Debugging-Sitzung
 
-Gehen Sie in Braze zu **Einstellungen** und wählen Sie dann unter **Einrichtung und Testen** **SDK Debugger** aus.
+Gehen Sie in Braze zu **Einstellungen** und wählen Sie dann unter **Einrichtung und Testen** die Option **SDK Debugger** aus.
 
-![Der Abschnitt "Einrichtung und Tests" mit der Markierung "SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
+![Der Abschnitt „Einrichtung und Testen" mit hervorgehobenem „SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 Wählen Sie **Debugging-Sitzung erstellen**.
 
-![Die Seite "SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
+![Die Seite „SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
-### Schritt 3: Wählen Sie einen Nutzer aus
+### 3. Schritt: Nutzer:in auswählen
 
-Suchen Sie nach einem Nutzer über die E-Mail Adresse, `external_id`, Nutzer-Alias oder Push-Token. Wenn Sie bereit sind, Ihre Sitzung zu starten, wählen Sie **Nutzer auswählen**.
+Suchen Sie nach einer Nutzer:in anhand der E-Mail-Adresse, `external_id`, des Nutzer-Alias oder des Push-Tokens. Wenn Sie bereit sind, Ihre Sitzung zu starten, wählen Sie **Nutzer:in auswählen**.
 
-![Die Debugging-Seite für den ausgewählten Nutzer:in.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
+![Die Debugging-Seite für die ausgewählte Nutzer:in.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
-### Schritt 4: App neu starten
+### 4. Schritt: App neu starten
 
-Starten Sie zunächst die App und bestätigen Sie, dass Ihr Gerät gekoppelt ist. Wenn das Pairing erfolgreich war, starten Sie Ihre App neu. So stellen Sie sicher, dass die Initialisierungsprotokolle der App vollständig erfasst werden.
+Starten Sie zunächst die App und bestätigen Sie, dass Ihr Gerät gekoppelt ist. Wenn die Kopplung erfolgreich war, starten Sie Ihre App neu&#8212;so stellen Sie sicher, dass die Initialisierungsprotokolle der App vollständig erfasst werden.
 
-### Schritt 5: Schließen Sie die Reproduktionsschritte ab
+### 5. Schritt: Führen Sie die Reproduktionsschritte durch
 
 Nachdem Sie Ihre App neu gestartet haben, folgen Sie den Schritten, um den Fehler zu reproduzieren.
 
 {% alert tip %}
-Achten Sie bei der Reproduktion des Fehlers darauf, dass Sie die Reproduktionsschritte so genau wie möglich befolgen, damit Sie [hochwertige Protokolle](#step-6-export-your-session-logs-optional) erstellen können.
+Achten Sie bei der Reproduktion des Fehlers darauf, die Reproduktionsschritte so genau wie möglich zu befolgen, damit Sie [hochwertige Protokolle](#step-6-export-your-session-logs-optional) erstellen können.
 {% endalert %}
 
-### Schritt 6: Beenden Sie die Sitzung
+### 6. Schritt: Beenden Sie die Sitzung
 
 Wenn Sie mit Ihren Reproduktionsschritten fertig sind, wählen Sie **Sitzung beenden** > **Schließen**.
 
-![Die Debugging-Sitzung zeigt den Button "Sitzung beenden" an.]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
+![Die Debugging-Sitzung mit dem Button „Sitzung beenden".]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
 
 {% alert note %}
-Es kann einige Minuten dauern, bis die Protokolle erstellt sind, je nach Länge der Sitzung und der Qualität der Netzwerkverbindung.
+Es kann einige Minuten dauern, bis die Protokolle generiert sind – je nach Länge der Sitzung und der Qualität der Netzwerkverbindung.
 {% endalert %}
 
-### Schritt 7: Teilen oder exportieren Sie die Sitzung (optional)
+### 7. Schritt: Sitzung teilen oder exportieren (optional)
 
-Nach der Sitzung können Sie Ihre Sitzungsprotokolle als CSV-Datei exportieren. Außerdem können andere Personen Ihre **Sitzungs-ID** verwenden, um nach Ihrer Debug-Sitzung zu suchen, sodass Sie ihnen Ihre Protokolle nicht direkt schicken müssen.
+Nach der Sitzung können Sie Ihre Sitzungsprotokolle als CSV-Datei exportieren. Außerdem können andere Personen Ihre **Sitzungs-ID** verwenden, um nach Ihrer Debug-Sitzung zu suchen, sodass Sie ihnen Ihre Protokolle nicht direkt senden müssen.
 
-![Die Debugging-Seite mit "Protokolle exportieren" und "Sitzungs-ID kopieren" wird nach der Sitzung angezeigt.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+![Die Debugging-Seite mit den Optionen „Protokolle exportieren" und „Sitzungs-ID kopieren", die nach der Sitzung angezeigt werden.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})

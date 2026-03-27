@@ -1,67 +1,67 @@
 ---
 page_order: 2.0
 nav_title: Limites de taxa
-article_title: Limites de frequência do Braze SDK
-description: "Saiba mais sobre o limite de frequência inteligente no lado do cliente do Braze SDK, que otimiza a vida útil da bateria, reduz o uso da largura de banda e garante o fornecimento confiável de dados."
+article_title: Limites de taxa do SDK da Braze
+description: "Saiba mais sobre a limitação de taxa inteligente e do lado do cliente do SDK da Braze que otimiza a vida útil da bateria, reduz o uso de largura de banda e garante a entrega confiável de dados."
 ---
 
-# Limites de frequência do Braze SDK
+# Limites de taxa do SDK da Braze
 
-> Saiba mais sobre o limite de frequência inteligente no lado do cliente do Braze SDK, que otimiza a vida útil da bateria, reduz o uso da largura de banda e garante o fornecimento confiável de dados.
+> Saiba mais sobre a limitação de taxa inteligente e do lado do cliente do SDK da Braze que otimiza a vida útil da bateria, reduz o uso de largura de banda e garante a entrega confiável de dados.
 
-## Compreensão dos limites de frequência do SDK
+## Entendendo os limites de taxa do SDK
 
-O limite de frequência do Braze SDK usa os seguintes recursos para otimizar a performance, minimizar o consumo de bateria, reduzir o uso de dados e garantir o fornecimento confiável de dados:
+A limitação de taxa do SDK da Braze utiliza os seguintes recursos para otimizar a performance, minimizar o consumo de bateria, reduzir o uso de dados e garantir a entrega confiável de dados:
 
 ### Processamento assíncrono
 
-O SDK do Braze usa um algoritmo de token bucket para limite de frequência. Essa abordagem permite explosões de atividade e, ao mesmo tempo, mantém o controle da taxa de longo prazo. Em vez de processar solicitações em uma fila rígida, o token bucket opera de forma assíncrona:
+O SDK da Braze usa um algoritmo de token bucket para limitação de taxa. Essa abordagem permite picos de atividade enquanto mantém o controle de taxa a longo prazo. Em vez de processar solicitações em uma fila rígida, o token bucket opera de forma assíncrona:
 
-- **Geração de tokens**: As fichas são reabastecidas em um ritmo constante no balde.
-- **Tratamento de solicitações**: Qualquer chamada do SDK que chegue quando um token estiver disponível prossegue imediatamente, independentemente de quando outras chamadas chegaram.
-- **Não há pedidos rigorosos**: As solicitações não aguardam na fila; várias chamadas podem competir pelo próximo token disponível.
-- **Manuseio de explosões**: Pequenas explosões de atividade são permitidas se houver tokens suficientes disponíveis no momento das solicitações.
-- **Controle de taxa**: A taxa de transferência de longo prazo é limitada pela taxa de reposição constante de tokens.
+- **Geração de tokens**: Os tokens são reabastecidos a uma taxa constante no bucket.
+- **Tratamento de solicitações**: Qualquer chamada do SDK que chega quando um token está disponível prossegue imediatamente, independentemente de quando outras chamadas chegaram.
+- **Sem ordenação rígida**: As solicitações não esperam na fila; várias chamadas podem competir pelo próximo token disponível.
+- **Tratamento de picos**: Picos curtos de atividade são permitidos se houver tokens suficientes disponíveis no momento das solicitações.
+- **Controle de taxa**: A taxa de transferência a longo prazo é limitada pela taxa constante de reabastecimento de tokens.
 
-Esse fluxo assíncrono ajuda o SDK a responder rapidamente à capacidade de rede disponível, mantendo níveis gerais de tráfego com previsão.
+Esse fluxo assíncrono ajuda o SDK a responder rapidamente à capacidade de rede disponível enquanto mantém níveis de tráfego geral previsíveis.
 
-### Limite de frequência adaptável
+### Limitação de taxa adaptativa
 
-O SDK do Braze pode ajustar os limites de frequência em tempo real para proteger a infraestrutura de rede e manter o desempenho ideal. Essa abordagem:
+O SDK da Braze pode ajustar os limites de taxa em tempo real para proteger a infraestrutura da rede e manter uma performance ideal. Essa abordagem:
 
-- **Evita a sobrecarga**: Ajusta os limites para evitar o congestionamento da rede.
-- **Otimiza a performance**: Mantém a operação tranquila do SDK em condições variáveis.
-- **Responde às condições**: Adapta-se com base na rede atual e nos padrões de uso.
+- **Previne sobrecarga**: Ajusta limites para evitar congestionamento na rede.
+- **Otimiza a performance**: Mantém a operação suave do SDK sob condições variadas.
+- **Responde às condições**: Adapta-se com base nos padrões atuais de rede e uso.
 
 {% alert note %}
-Como os limites se adaptam em tempo real, não são fornecidos tamanhos exatos de baldes e valores estáticos. Elas podem mudar dependendo das condições e do uso da rede.
+Como os limites se adaptam em tempo real, tamanhos exatos de buckets e valores estáticos não são fornecidos. Eles podem mudar dependendo das condições da rede e do uso.
 {% endalert %}
 
 ### Otimizações de rede
 
-O SDK do Braze inclui vários comportamentos incorporados para melhorar a eficiência, reduzir o uso da bateria e lidar com condições de rede variáveis:
+O SDK da Braze inclui vários comportamentos integrados para melhorar a eficiência, reduzir o uso da bateria e lidar com condições de rede variadas:
 
-- **Dosagem automática**: Enfileira eventos e os envia em lotes eficientes.
-- **Comportamento consciente da rede**: Ajusta as taxas de descarga com base na qualidade da conectividade.
-- **Otimização da bateria**: Minimiza o despertar do rádio e as chamadas de rede.
-- **Degradação graciosa**: Mantém a funcionalidade durante condições de rede ruins.
-- **Consciência do plano de fundo/plano de fundo**: Otimiza o comportamento à medida que o ciclo de vida do app muda.
+- **Agrupamento automático**: Coloca eventos em fila e os envia em lotes eficientes.
+- **Comportamento ciente da rede**: Ajusta as taxas de envio com base na qualidade da conectividade.
+- **Otimização da bateria**: Minimiza ativações do rádio e chamadas de rede.
+- **Degradação suave**: Mantém a funcionalidade durante condições de rede ruins.
+- **Consciência de segundo plano/primeiro plano**: Otimiza o comportamento à medida que o ciclo de vida do app muda.
 
 ## Melhores práticas
 
-Siga estas práticas recomendadas para ajudar a evitar problemas de limite de frequência:
+Siga estas melhores práticas para ajudar a evitar problemas de limite de taxa:
 
-| Faça isso | Não é isso |
+| Faça isso | Não faça isso |
 | --- | --- |
-| Rastreamento de ações e marcos significativos do usuário | Rastreamento de cada interação menor ou evento da interface do usuário |
-| Atualizar o conteúdo somente quando necessário | Atualizar o conteúdo em cada ação do usuário (como eventos de rolagem) |
-| Permita que o SDK lide com a formação de lotes automaticamente | Forçar a transmissão imediata de dados (a menos que seja absolutamente necessário) |
-| Concentre-se em eventos que agreguem valor à análise de dados | Chamar métodos SDK em rápida sucessão sem considerar a frequência |
+| Rastreie ações e marcos significativos do usuário | Rastreie cada interação menor ou evento de UI |
+| Atualize o conteúdo apenas quando necessário | Atualize o conteúdo em cada ação do usuário (como eventos de rolagem) |
+| Deixe o SDK lidar com o agrupamento automaticamente | Force a transmissão imediata de dados (a menos que absolutamente necessário) |
+| Concentre-se em eventos que agregam valor à análise de dados | Chame métodos do SDK em rápida sucessão sem considerar a frequência |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Obter ajuda
+## Obtendo ajuda
 
-Se estiver tendo problemas com o limite de frequência do SDK, examine os seguintes métodos de rede:
+Se você está enfrentando problemas de limite de taxa do SDK, revise os seguintes métodos de rede:
 
 - `requestImmediateDataFlush()`
 - `requestContentCardsRefresh()`
@@ -69,7 +69,7 @@ Se estiver tendo problemas com o limite de frequência do SDK, examine os seguin
 - `logCustomEvent()`
 - `logPurchase()`
 
-Ao entrar em contato com [support@braze.com](mailto:support@braze.com), inclua os seguintes detalhes para cada um dos métodos do SDK de rede que você usa:
+Ao entrar em contato com o [suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support), inclua os seguintes detalhes para cada um dos métodos de rede do SDK que você usa:
 
 ```plaintext
 Method name:

@@ -123,8 +123,8 @@ A valid role object is a JSON object with the following key value pairs:
 | View Webhook Templates | `view_webhook_templates` |
 | Edit Webhook Templates | `edit_webhook_templates` |
 | Archive Webhook Templates | `archive_webhook_templates` |
-| View Link Templates | `view_link_templates` |
-| Edit Link Templates | `edit_link_templates` |
+| View Email Link Templates | `view_link_templates` |
+| Edit Email Link Templates | `edit_link_templates` |
 | View Media Library Assets | `view_media_library_assets` |
 | View Locations | `view_locations` |
 | Edit Locations | `edit_locations` |
@@ -236,8 +236,8 @@ A valid role object is a JSON object with the following key value pairs:
 | View Webhook Templates | `view_webhook_templates` |
 | Edit Webhook Templates | `edit_webhook_templates` |
 | Archive Webhook Templates | `archive_webhook_templates` |
-| View Link Templates | `view_link_templates` |
-| Edit Link Templates | `edit_link_templates` |
+| View Email Link Templates | `view_link_templates` |
+| Edit Email Link Templates | `edit_link_templates` |
 | View Media Library Assets | `view_media_library_assets` |
 | View Locations | `view_locations` |
 | Edit Locations | `edit_locations` |

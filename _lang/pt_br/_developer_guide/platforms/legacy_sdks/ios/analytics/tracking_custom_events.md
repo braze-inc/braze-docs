@@ -1,6 +1,6 @@
 ---
 nav_title: Rastrear eventos personalizados
-article_title: Rastrear eventos personalizados para iOS
+article_title: Rastrear Eventos Personalizados para iOS
 platform: iOS
 page_order: 2
 description: "Este artigo de referência aborda como adicionar e rastrear eventos personalizados para seu aplicativo iOS."

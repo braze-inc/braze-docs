@@ -30,7 +30,7 @@ guide_featured_list:
     link: /docs/user_guide/data/field_level_encryption/
     image: /assets/img/braze_icons/mail-01.svg
 
-guide_menu_title: "Workspace settings"
+guide_menu_title: "워크스페이스 설정"
 guide_menu_list:
   - name: 태그
     link: /docs/user_guide/administrative/app_settings/tags/
@@ -38,17 +38,20 @@ guide_menu_list:
   - name: 이메일 환경설정
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Push Settings
+  - name: 푸시 설정
     link: /docs/user_guide/administrative/app_settings/push_settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: 다국어 설정
     link: /docs/multi_language_support/
     image: /assets/img/braze_icons/list.svg
-  - name: Brand Guidelines
+  - name: 브랜드 가이드라인
     link: /docs/user_guide/administrative/app_settings/brand_guidelines/
     image: /assets/img/braze_icons/edit-05.svg
+  - name: 메시징 사용량 제한
+    link: /docs/user_guide/administrative/app_settings/messaging_rate_limits/
+    image: /assets/img/braze_icons/mail-01.svg
 
-guide_menu_title2: "Company settings"
+guide_menu_title2: "회사 설정"
 guide_menu_list2:
   - name: 관리자 설정
     link: /docs/user_guide/administrative/app_settings/company_settings/
@@ -56,16 +59,16 @@ guide_menu_list2:
   - name: 회사 사용자
     link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/
     image: /assets/img/braze_icons/users-01.svg
-  - name: 청구서
+  - name: 결제
     link: /docs/user_guide/administrative/app_settings/subscription_and_usage/
     image: /assets/img/braze_icons/bank-note-02.svg
     
-guide_menu_title3: "Data settings"
+guide_menu_title3: "데이터 설정"
 guide_menu_list3:
-  - name: 사용자 지정 데이터
+  - name: 커스텀 데이터
     link: /docs/user_guide/data/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Export Logs
+  - name: 내보내기 로그
     link: /docs/user_guide/administrative/app_settings/exports_log/
     image: /assets/img/braze_icons/file-download-02.svg
 
