@@ -3,10 +3,6 @@
 Welcome to Braze Docs!
 ===
 
-[![GitHub Release](https://img.shields.io/github/v/release/braze-inc/braze-docs)](https://github.com/braze-inc/braze-docs/releases)
-[![GitHub branch status](https://img.shields.io/github/checks-status/braze-inc/braze-docs/main)](https://github.com/braze-inc/braze-docs/deployments)
-[![Static Badge](https://img.shields.io/badge/License-Creative_Commons-lightgrey)](/LICENSE.md)
-[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/braze)](https://x.com/braze)
 
 This repository contains the source files for [Braze Docs](http://www.braze.com/docs), which hosts all user, developer, partner, and API documentation for the Braze customer engagement platform.
 
@@ -91,4 +87,3 @@ Braze Docs is licensed under a Creative Commons Attribution-NonCommercial-ShareA
 
 At Braze, we expect respectful behavior from both administrators and contributors. For more information, see [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
