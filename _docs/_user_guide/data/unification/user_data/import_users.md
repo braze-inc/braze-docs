@@ -47,6 +47,12 @@ You can use CSV import to record and update the following user attributes and cu
 |Custom Events|Events unique to your business that represent user actions.|`trip_booked`|50 MB|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
+### Constructing your CSV {#constructing-your-csv}
+
+Braze accepts user data in standard CSV format. Default and custom attribute imports support files up to 500 MB; custom event imports support files up to 50 MB. For identifiers, column headers, validation rules, and examples, see [CSV import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/csv_import).
+
+When you upload a large CSV through **Import Users** in the dashboard, the page may appear unresponsive or respond slowly while Braze receives the file and runs the calculation step. Let the upload and calculation finish—total time ranges from a few minutes to a few hours depending on file size, and larger files take longer to calculate.
+
 ### Lambda user CSV import
 
 You can use our serverless S3 Lambda CSV import script to upload user attributes to Braze. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts upload it through our API.
