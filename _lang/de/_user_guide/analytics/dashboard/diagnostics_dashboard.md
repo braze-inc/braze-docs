@@ -28,7 +28,7 @@ Wenn Braze eine Nachricht „versendet", kann die endgültige Zustellung von ext
 | Kanal | Beispiel für die endgültige Zustellung |
 | --- | --- |
 | Content-Cards | Die Karte wurde versendet und kann eingesehen werden. |
-| E-Mail | Braze übermittelt die Nachricht an einen E-Mail-Anbieter (ESP). Der ESP ist dann für die endgültige Zustellung verantwortlich. Dieser ESP kann beispielsweise einen „Absprung" melden, wenn die E-Mail-Adresse ungültig ist oder der Posteingang voll ist. |
+| E-Mail | Braze übermittelt die Nachricht an einen E-Mail-Anbieter (ESP). Der ESP ist dann für die endgültige Zustellung verantwortlich. Dieser ESP kann beispielsweise einen „Bounce" (Absprung) melden, wenn die E-Mail-Adresse ungültig ist oder der Posteingang voll ist. |
 | In-App-Nachrichten | Die Nachricht wurde den Nutzer:innen angezeigt. |
 | LINE | Die Nachricht wurde erfolgreich an einen Versandpartner übergeben. |
 | Push | Braze übermittelt die Nachricht an den entsprechenden Dienst für Push-Benachrichtigungen (wie beispielsweise den Apple Push Notification Service für iOS oder Firebase Cloud Messaging für Android). Dieser Dienst ist für die endgültige Zustellung der Benachrichtigung an das Gerät verantwortlich. |
