@@ -269,7 +269,7 @@ You can then template the URL into the URL field of the button, for example:
 {{url}}?
 ```
 
-## Considerations for turning off link alias
+## Considerations for turning off link aliasing
 
 If you decide to turn off link aliasing, note the following:
 
