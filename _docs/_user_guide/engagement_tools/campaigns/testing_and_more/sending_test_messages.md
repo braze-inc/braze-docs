@@ -146,6 +146,8 @@ From there, you can review your message settings and content to drill down and d
 
 ![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
+If your email campaign includes a large image and isn't displaying as expected in Outlook, consider reducing the actual file dimensions of the image with an image editing or resizing tool instead of only scaling it with CSS or HTML.
+
 {% endtab %}
 {% tab In-app message %}
 
@@ -273,7 +275,7 @@ After creating your webhook, you can do a test send to check the webhook respons
 {% endtab %}
 {% endtabs %}
 
-## Testing personalized campaigns 
+## Test personalized campaigns 
 
 If you are testing campaigns that populate user data or use custom event properties, you'll need to take additional or different steps.
 
@@ -365,6 +367,15 @@ You can test custom event properties by manually inputting values with Liquid.
 
 {% endtab %}
 {% endtabs %}
+
+## Limitations
+
+There are a few situations where test messages don't behave the same way as campaigns or Canvases sent to real users. In these instances, consider launching the campaign or Canvas to a limited set of test users to validate this behavior.
+
+- Viewing the Braze preference center from test messages will cause the **Save Preferences** button to be grayed out.
+- For testing in-app messages and Content Cards, the target user must have a push token for the target device.
+- For testing unsubscribe links in emails, make sure your test user's email address is in the respective workspace.
+- The `List-Unsubscribe` header is not included in emails sent by the test message functionality.
 
 ## Troubleshooting
 

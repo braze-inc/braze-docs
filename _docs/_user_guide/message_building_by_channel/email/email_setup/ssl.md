@@ -100,6 +100,10 @@ When you configure your CDN's click-tracking domain, enable the `X-Forwarded-Hos
 
 While you should handle CDN configuration, certificates, and proxy issues with your CDN, use these tips to identify common SSL click tracking issues.
 
+##### Low email open rates
+
+If you're suddenly experiencing low email open rates, confirm that the SSL certificate is up-to-date. If it's expired, you must renew that SSL certificate with your CDN or certificate provider.
+
 ##### Domain registry issues
 
 Run a dig command to confirm you point link tracking at the CDN. In your terminal run `dig CNAME link_tracking_subdomain`. Under `ANSWER SECTION`, it lists where your CNAME points. If it points to the email service provider (SendGrid or SparkPost) and not your CDN, reconfigure your domain registry to point to your CDN.
@@ -107,6 +111,8 @@ Run a dig command to confirm you point link tracking at the CDN. In your termina
 ##### CDN issues
 
 If live email links break during setup, you likely pointed DNS toward your CDN before proper configuration. This can appear as a "wrong link" error. Contact your CDN provider and review their documentation to troubleshoot configuration.
+
+If you see an error message that your connection isn't private, this can indicate that your SSL or CDN isn't configured correctly. Run a `dig` command in your terminal (for example, `dig CNAME your_link_tracking_subdomain`). In the `ANSWER SECTION`, if the result points to your ESP (SendGrid/sendgrid.net or SparkPost/spgo.io) instead of your CDN, the issue is a misconfiguration. For Braze SSL click tracking to work, the CNAME should point to your CDN. Coordinate with the team that manages your SSL and CDN configuration for further assistance.
 
 ##### SSL enablement status
 
