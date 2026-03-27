@@ -35,7 +35,7 @@ The Braze Customer Success and Deliverability teams can help make sure you're fo
 
 ## Improving deliverability
 
-> A mailbox provider (MBP) will consider the reputation of a sending domain when determining whether a message is accepted or bounced. However, in some cases, the email may be accepted by the MBP, but it will not be delivered to the user's inbox. In these instances, the message may be diverted to a spam folder where a user is unlikely to view it. Consider the following high-level guidance for sending messages with the optimal chance of reaching your users' inboxes.
+A mailbox provider (MBP) considers the reputation of a sending domain when determining whether a message is accepted or bounced. However, in some cases, the email may be accepted by the MBP, but it does not deliver to the user's inbox. In these instances, the message may be diverted to a spam folder where a user is unlikely to view it. Consider the following high-level guidance for sending messages with the optimal chance of reaching your users' inboxes.
 
 ### Sending patterns
 
@@ -72,11 +72,11 @@ MBPs will act quickly on user reports. Consider that the MBP has access to a hug
 
 It is very rare for Microsoft to unblock a sender who is having trouble delivering to the free email domains (Hotmail, Live, MSN, Outlook). Instead, we recommend that senders aggressively reduce their volumes to those domains and send only to recently engaged contacts, or even stop sending to those domains altogether if they're unable to identify a core group of engaged recipients.
 
-An example free email domain block message is: `550 5.7.1 Unfortunately, messages from [xx.xx.xx.xx] weren't sent. Please contact your Internet service provider since part of their network is on our block list (S3150). You can also refer your provider to: http://mail.live.com/mail/troubleshooting.aspx#errors.`
+An example free email domain block message is: 
 
-By targeting only engaged recipients, Microsoft will receive signals of positive engagement that indicate the sender's mail is wanted and expected by recipients.
+`550 5.7.1 Unfortunately, messages from [xx.xx.xx.xx] weren't sent. Please contact your Internet service provider since part of their network is on our block list (S3150). You can also refer your provider to: http://mail.live.com/mail/troubleshooting.aspx#errors.`
 
-You can slowly add more volume similar to during the initial warming period, paying close attention to metrics. There's often a root cause of the deliverability issues to identify and resolve. Generally, this is a lack of proper permission having been obtained, a lack of ongoing list hygiene, or a combination of those factors.
+You can slowly add more volume similar to during the initial warming period, paying close attention to metrics. There's often a root cause of the deliverability issues to identify and resolve. In general, this is a lack of proper permission, a lack of ongoing list hygiene, or a combination of those factors.
 
 ## Removing an email address from your bounce or spam list
 
