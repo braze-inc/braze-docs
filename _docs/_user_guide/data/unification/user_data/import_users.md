@@ -47,6 +47,10 @@ You can use CSV import to record and update the following user attributes and cu
 |Custom Events|Events unique to your business that represent user actions.|`trip_booked`|50 MB|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
+{% alert note %}
+When importing custom events with properties, you must use dot notation in your CSV column headers. For more information about formatting custom events, refer to [Understanding custom event formatting]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/?tab=custom%20events#understanding-custom-event-formatting).
+{% endalert %}
+
 ### Lambda user CSV import
 
 You can use our serverless S3 Lambda CSV import script to upload user attributes to Braze. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts upload it through our API.
