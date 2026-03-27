@@ -150,7 +150,7 @@ To avoid unexpected behavior, include an Audience Path step after the Context st
 
 ### Produce appropriate copy
 
-By creating an [Agent step]({{site.baseurl}}/docs/user_guide/brazeai/agents/creating_agents) in a Canvas triggered by Fullstory, and including the Context step outlined above, you can reference Fullstory’s session summary data in the agent. 
+By creating an [Agent step]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents) in a Canvas triggered by Fullstory, and including the Context step outlined above, you can reference Fullstory’s session summary data in the agent. 
 
 In this example, we use this data to allow the Braze agent to generate appropriate message copy for use in a Content Card, which can encourage the user to return to their abandoned basket.
 
@@ -158,7 +158,7 @@ In this example, we use this data to allow the Braze agent to generate appropria
 
 Use the same name for the Context Liquid tag created in this step as the context Liquid tag used in the AI Agent step created earlier. 
 
-The prompt required for your use case varies, but for our best practices for creating effective agent prompts, see [Writing Instructions]({{site.baseurl}}/docs/user_guide/brazeai/agents/creating_agents/#writing-instructions). 
+The prompt required for your use case varies, but for our best practices for creating effective agent prompts, see [Writing Instructions]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions). 
 
 In your Canvas, select an Agent step and then select the **Session Context** agent. Save the output as a variable (in this case, "message"). Then, create a Message step that leverages the agent-created copy by using the Liquid tag {% raw %}`{{context.${message}.message}}`{% endraw %}.
 
