@@ -135,7 +135,8 @@ A KakaoTalk Item List message is designed to present a list of content items in 
 List item messages consist of a header, an item list section, and an optional button area.
 
 #### Specifications
-
+| Component | Details |
+| --- | --- |
 | Item count | Requires at least 2 or 3 items |
 | Buttons | Up to 5 optional buttons |
 | Header | Up to 250 characters |
