@@ -28,14 +28,11 @@ In Amplitude, navigate to **Sources & Destinations** > **[project name]** > **De
 
 ### Step 3: Export an Amplitude cohort to Braze
 
-First, to export users from Amplitude to Braze, create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Amplitude can sync cohorts to Braze using the following identifiers:
-- User Alias
+First, to export users from Amplitude to Braze, create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Then, to capture identified and anonymous users, set up two syncs for that cohort with these identifier mapping properties: 
+- User ID (External ID) 
 - Device ID
-- User ID (External ID)
 
-Amplitude supports multiple identifier mapping properties in priority order. You can configure a primary, secondary, and tertiary identifier mapping. During sync, if a user is missing the primary, Amplitude uses the next available one. This improves sync coverage, reduces dropped users, and includes more anonymous and partially identified users in your sync. 
-
-Once you have created a cohort, click **Sync to...** to export these users to Braze.
+After creating the cohort and setting up the syncs, select **Sync to...** for each sync to export these users to Braze.
 
 {% alert important %}
 Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
