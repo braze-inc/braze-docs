@@ -102,6 +102,8 @@ You can choose one of three ways in which users can enter your Canvas.
     In this example, based on the time-based options, users enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
+
+    When using local time zone delivery, Braze evaluates entry eligibility twice: first at Samoa time (UTC+13 or UTC+14 during Daylight Saving Time) on the scheduled day, and again at the user's local time. A user must be eligible for both checks to enter the Canvas. If your entry filters use relative time windows (for example, "more than 0 days ago"), the 24-hour period may not have elapsed at the time of the first check, causing users to enter one day late. To avoid this, use a broader time window, such as at least two days. For more details, see [When does Braze evaluate users for local time zone delivery?]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#when-does-braze-evaluate-users-for-local-time-zone-delivery)
   {% endtab %}
   {% tab Action-Based Delivery %}
     With action-based delivery, users will enter the Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
