@@ -233,7 +233,7 @@ The scanner runs automatically on custom HTML messages and evaluates your entire
 
 ![Test web push]({% image_buster /assets/img_archive/testwebpush.png %})
 
-If you have already accepted push messages from the Braze dashboard, the push displays in the corner of your screen. Otherwise, select **Allow** when prompted, and the message displays.
+If you have already accepted push messages from the Braze dashboard, the message displays in the corner of your screen. Otherwise, select **Allow** when prompted, and the message displays.
 
 If you see the error "None of the selected users have matching push tokens for iOS/Android Push", verify the test user has a valid push token registered for the selected platform. To receive a push token, the user must start a session in your app and enable push notifications for the app on their device. You can verify a user's push tokens in the **Engagement** tab of their user profile under **Contact Settings**.
 
