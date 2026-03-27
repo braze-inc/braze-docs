@@ -233,7 +233,7 @@ erDiagram
 - `PK` = 기본 키
 - `FK` = 외래 키
 
-## Relationship tables
+## 관계 테이블
 
 ### `ABORT_SHARED`
 
@@ -269,7 +269,7 @@ erDiagram
         "LANGUAGE": "[PII] Language of the user",
         "EMAIL_ADDRESS": "[PII] Email address of the user",
         "IP_POOL": "IP pool from which the email send was made",
-        "ABORT_TYPE": "Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']",
+        "ABORT_TYPE": "Type of abort. Refer to the abort types reference for a full list of values.",
         "ABORT_LOG": "[PII] Log message describing abort details (up to 128 chars)",
         "SF_CREATED_AT": "when this event was picked up by the Snowpipe",
         "SEND_ID": "Message send ID this message belongs to"

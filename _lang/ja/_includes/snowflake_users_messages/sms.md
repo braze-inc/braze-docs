@@ -230,8 +230,8 @@ erDiagram
     GROUP_6 ||--o{ EVENT : joins
 ```
 
-- `PK` 主キー
-- `FK` 外部キー
+- `PK` = 主キー
+- `FK` = 外部キー
 
 ## リレーションシップテーブル
 
@@ -262,7 +262,7 @@ erDiagram
     },
     "native_keys": {
         "TIME": "UNIX timestamp at which the event happened",
-        "ABORT_TYPE": "Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']",
+        "ABORT_TYPE": "Type of abort. Refer to the abort types reference for a full list of values.",
         "ABORT_LOG": "[PII] Log message describing abort details (up to 128 chars)",
         "SF_CREATED_AT": "when this event was picked up by the Snowpipe"
     }

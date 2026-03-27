@@ -13,13 +13,13 @@ description: "Problèmes courants et solutions pour BrazeAI Operator<sup>TM</sup
 
 | Problème | Résolution des problèmes |
 | --- | --- |
-| Aucune réponse | Veuillez actualiser la page et rouvrir le panneau Opérateur. |
-| Réponses hors sujet | Veuillez reformuler la question de manière plus précise. Veuillez mentionner la fonctionnalité ou le flux de travail faisant l'objet de la demande. |
-| Messages d'erreur | Si l'opérateur ne parvient pas à diffuser le contenu, un message « Veuillez réessayer » peut s'afficher. Il est possible que l'opérateur soit temporairement indisponible ou que la connexion ait été interrompue. Veuillez réessayer dans quelques minutes. |
-| Dépassement de la limite d'utilisation quotidienne | La limite d'utilisation pour l'ensemble de l'entreprise a été atteinte. Veuillez patienter jusqu'à ce que la limite soit réinitialisée (réinitialisation toutes les 24 heures). |
+| Aucune réponse | Essayez d'actualiser la page et de rouvrir le panneau Operator. |
+| Réponses hors sujet | Reformulez votre question de manière plus précise. Mentionnez la fonctionnalité ou le flux de travail concerné. |
+| Messages d'erreur | Si Operator ne parvient pas à diffuser le contenu, un message « Réessayer » peut s'afficher. Operator est peut-être temporairement indisponible ou la connexion a été interrompue. Réessayez après quelques minutes. |
+| Dépassement de la limite d'utilisation quotidienne | La limite d'utilisation à l'échelle de la société a été atteinte. Attendez que la limite se réinitialise (réinitialisation toutes les 24 heures). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Restrictions
+## Limitations
 
-- **Accès aux données :** L'opérateur peut visualiser le contenu de la page active. Il est également possible de consulter certaines données spécifiques à l'entreprise, telles que les campagnes passées, les catalogues et les attributs personnalisés. Cependant, il n'est actuellement pas en mesure de générer de nouveaux rapports ni d'exécuter des requêtes de reporting.
-- **Limites d'utilisation :** L'opérateur dispose d'une limite d'utilisation quotidienne à l'échelle de l'entreprise qui se réinitialise toutes les 24 heures. Si la limite est atteinte, une bannière « Limite d'utilisation quotidienne dépassée » apparaîtra dans le chat, et aucune autre demande ne pourra être effectuée jusqu'à ce que la limite soit réinitialisée.
+- **Accès aux données :** Operator peut voir le contenu de la page active, à l'exception du contenu présent dans les éditeurs par glisser-déposer. Il peut également consulter certaines données propres à votre société, telles que les campagnes passées, les catalogues et les attributs personnalisés. En revanche, il n'est pas en mesure actuellement de générer de nouveaux rapports ni d'exécuter des requêtes de reporting.
+- **Limites d'utilisation :** Operator dispose d'une limite d'utilisation quotidienne à l'échelle de la société, qui se réinitialise toutes les 24 heures. Si cette limite est atteinte, une bannière « Limite d'utilisation quotidienne dépassée » apparaît dans le chat et aucune nouvelle demande ne peut être envoyée tant que la limite n'est pas réinitialisée.

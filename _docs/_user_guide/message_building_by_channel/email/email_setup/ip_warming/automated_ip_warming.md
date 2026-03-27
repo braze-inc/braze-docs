@@ -82,7 +82,7 @@ The system monitors your health based on the following industry benchmarks:
 - Delivery rate drops less than or equal to 90%
 - Open rate less than 10%
 - Bounces greater than 5%
-- Spam complaint rates greater than 0.1%
+- Spam complaint rates greater than 0.04%
 
 If stats are below our benchmarks, the system holds volume the next day rather than increasing the volume to mitigate risk to your sender reputation.
 

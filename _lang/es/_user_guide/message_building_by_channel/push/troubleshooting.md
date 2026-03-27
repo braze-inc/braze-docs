@@ -3,21 +3,21 @@ nav_title: Solución de problemas
 article_title: Solución de problemas Push
 page_order: 24
 page_type: reference
-description: "Esta página contiene pasos para la solución de problemas relacionados con el canal de mensajería Push."
+description: "Esta página contiene pasos para la solución de problemas relacionados con el canal de mensajería push."
 channel: push
 ---
 
 # Solución de problemas de push
 
-> Utiliza esta página para la solución de problemas relacionados con el canal de mensajería Push.
+> Utiliza esta página para la solución de problemas relacionados con el canal de mensajería push.
 
 ## Faltan notificaciones push
 
-¿Tienes problemas de entrega con las notificaciones push? Hay una serie de pasos que puedes dar para solucionar este problema, comprobando el:
+¿Tienes problemas de entrega con las notificaciones push? Hay una serie de pasos que puedes dar para solucionar este problema comprobando:
 
 - [Estado de la suscripción push](#push-subscription-status)
 - [Segmento](#segment)
-- [Límites de la notificación push](#push-notification-caps)
+- [Límites de notificaciones push](#push-notification-caps)
 - [Límites de velocidad](#rate-limits)
 - [Estado del grupo de control](#control-group-status)
 - [Token de notificaciones push válido](#valid-push-token)
@@ -26,15 +26,15 @@ channel: push
 
 #### Estado de la suscripción push
 
-Las pushs solo se pueden enviar a usuarios suscriptos o que hayan dado su adhesión voluntaria. Comprueba tu perfil de usuario en la pestaña [Interacción]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de la sección **Perfil de usuario** para confirmar si estás registrado activamente para recibir notificaciones push del espacio de trabajo que estás probando. Si estás registrado en varias aplicaciones, las encontrarás enumeradas en el campo **«Push Registered For» (Registrado para)**:
+Las notificaciones push solo se pueden enviar a usuarios suscritos o que hayan dado su adhesión voluntaria. Comprueba tu perfil de usuario en la pestaña [Interacción]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de la sección **Perfil de usuario** para confirmar si estás registrado activamente para recibir notificaciones push del espacio de trabajo que estás probando. Si estás registrado en varias aplicaciones, las encontrarás enumeradas en el campo **Push Registered For**:
 
-![Push Registrado Para]({% image_buster /assets/img_archive/trouble1.png %})
+![Push Registered For]({% image_buster /assets/img_archive/trouble1.png %})
 
-También puedes exportar los perfiles de usuario utilizando los puntos finales de exportación Braze:
+También puedes exportar los perfiles de usuario utilizando los puntos finales de exportación de Braze:
 - [Usuarios por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)
 - [Usuarios por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment)
 
-Cualquiera de los dos puntos finales devolverá un objeto token de notificaciones push que incluye información de habilitación push por dispositivo.
+Cualquiera de los dos puntos finales devolverá un objeto de token de notificaciones push que incluye información de habilitación push por dispositivo.
 
 #### Segmento
 
@@ -42,28 +42,28 @@ Asegúrate de que entras en el segmento al que te diriges (si se trata de una ca
 
 ![Lista de segmentos]({% image_buster /assets/img_archive/trouble2.png %})
 
-También puedes confirmar que el usuario forma parte del segmento utilizando **la función Búsqueda de usuarios** al crear un segmento.
+También puedes confirmar que el usuario forma parte del segmento utilizando **Búsqueda de usuarios** al crear un segmento.
 
 ![Sección de búsqueda de usuarios con un campo de búsqueda.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
-#### Límites de la notificación push
+#### Límites de notificaciones push
 
-Comprueba los límites globales de frecuencia. Es posible que no recibieras la notificación push porque tu espacio de trabajo tiene establecida una limitación de frecuencia global y ya has alcanzado tu límite de notificaciones push para el periodo de tiempo especificado.
+Comprueba los límites globales de frecuencia. Es posible que no hayas recibido la notificación push porque tu espacio de trabajo tiene establecida una limitación de frecuencia global y ya has alcanzado tu límite de notificaciones push para el periodo de tiempo especificado.
 
-Para ello, comprueba [la limitación de frecuencia global]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over) en el panel. Si la campaña está configurada para cumplir las normas de limitación de frecuencia, habrá una serie de usuarios afectados por esta configuración
+Para ello, comprueba la [limitación de frecuencia global]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over) en el dashboard. Si la campaña está configurada para cumplir las normas de limitación de frecuencia, habrá una serie de usuarios afectados por esta configuración.
 
 ![Detalles de la campaña]({% image_buster /assets/img_archive/trouble3.png %})
 
 #### Límites de velocidad
 
-Si tienes configurado un límite de velocidad para tu campaña o Canvas, es posible que dejes de recibir mensajería por superar este límite. Para obtener más información, consulta [Limite]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting) de [velocidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting).
+Si tienes configurado un límite de velocidad para tu campaña o Canvas, es posible que dejes de recibir mensajes por superar este límite. Para obtener más información, consulta [Límite de velocidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting).
 
 #### Estado del grupo de control
 
 Si se trata de una campaña de un solo canal o de un Canvas con un grupo de control, es posible que estés cayendo en el grupo de control.
 
   1. Comprueba la [distribución de variantes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#step-5-distribute-users-among-your-variants) para ver si hay un grupo de control.
-  2. Si es así, crea un segmento que filtre [el grupo de control de la campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#in-campaign-control-group-filter), [exporta el segmento]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv) y comprueba si tu ID de usuario aparece en esta lista.
+  2. Si es así, crea un segmento que filtre por [grupo de control de la campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#in-campaign-control-group-filter), [exporta el segmento]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv) y comprueba si tu ID de usuario aparece en esta lista.
 
 #### Token de notificaciones push válido
 Un token de notificaciones push es un identificador que los remitentes utilizan para dirigirse a dispositivos específicos con una notificación push. Por tanto, si el dispositivo no tiene un token de notificaciones push válido, no hay forma de enviarle una notificación push. 
@@ -72,43 +72,78 @@ Un token de notificaciones push es un identificador que los remitentes utilizan 
 
 Comprueba que estás utilizando el tipo correcto de notificación push. Por ejemplo, si quieres dirigirte a un FireTV, entonces utilizarías una notificación push de Kindle, no una campaña push de Android. Del mismo modo, si deseas dirigirte a un dispositivo Android, utiliza una notificación push para Android y no una campaña push para iOS. Consulta los siguientes artículos para obtener más información sobre el flujo de trabajo de Braze:
 - [Notificación push de Apple]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=swift)
-- [Mensajería en la nube Firebase]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android)
+- [Firebase Cloud Messaging]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android)
 
 #### Aplicación actual
 
-Cuando pruebes los envíos push con usuarios internos, asegúrate de que el usuario que deseas que reciba la notificación push esté conectado a la aplicación correspondiente. Esto puede provocar que el usuario no reciba una notificación push o que reciba una notificación push para la que crees que no está sujeto a la segmentación.
+Cuando pruebes los envíos push con usuarios internos, asegúrate de que el usuario que deseas que reciba la notificación push esté conectado a la aplicación correspondiente. Esto puede provocar que el usuario no reciba una notificación push o que reciba una notificación push para la que crees que no está segmentado.
 
-## Los clics se abren inesperadamente en la aplicación.
+## Al hacer clic en una notificación push no se abre la aplicación
+
+Si al hacer clic en una notificación push no se abre tu aplicación, comprueba lo siguiente según tu plataforma.
+
+### Android
+
+1. **Verifica el comportamiento al hacer clic:** Confirma que la campaña está configurada para abrir la aplicación al hacer clic.
+2. **Comprueba el manejo de vínculos profundos:** En tu archivo `braze.xml`, comprueba si `com_braze_handle_push_deep_links_automatically` está configurado como `true` o `false`.
+   - Si está configurado como `true`, el SDK de Braze maneja los vínculos profundos directamente y la aplicación debería abrirse como se espera.
+   - Si está configurado como `false`, tu aplicación necesita un receptor de difusión para escuchar y manejar las intenciones de push recibidas y abiertas. Verifica que este receptor esté implementado correctamente.
+3. **Recopila registros detallados:** [Habilita el registro detallado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduce el problema y proporciona los registros junto con tu `braze.xml` y `AndroidManifest.xml` al soporte de Braze.
+
+### iOS
+
+1. **Verifica el comportamiento al hacer clic:** Confirma que la campaña está configurada para abrir la aplicación al hacer clic.
+2. **Comprueba la integración push:** La vinculación en profundidad desde una notificación push hacia la aplicación se maneja automáticamente mediante la [integración push estándar]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) de Braze. Confirma que la integración esté implementada correctamente, incluyendo cualquier manejo de delegado personalizado.
+3. **Recopila registros detallados:** [Habilita el registro detallado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduce el problema y proporciona los registros al soporte de Braze.
+
+## Los clics push se abren inesperadamente en la aplicación
 
 Si tienes problemas con enlaces en notificaciones push que se abren inesperadamente en tu aplicación en lugar de en tu navegador web, es posible que haya un problema con la configuración de tu campaña o la implementación del SDK. Consulta estos pasos para obtener ayuda.
 
 ### Verificar el comportamiento al hacer clic
 
-En tu campaña o paso en Canvas, comprueba que **la opción Abrir URL web dentro de la aplicación móvil** no esté seleccionada. Si es así, desmarca la selección y vuelve a iniciar el programa. 
+En tu campaña o paso en Canvas, comprueba que la opción **Abrir URL web dentro de la aplicación móvil** no esté seleccionada. Si lo está, desmarca la selección y vuelve a lanzar. 
 
-![Campo «Comportamiento al hacer clic» de la configuración de un conjunto de notificaciones push establecido en «Abrir URL web» con la opción «Abrir URL web dentro de la aplicación móvil» desmarcada.]({% image_buster /assets/img/push_on_click.png %})
+![Campo «Comportamiento al hacer clic» de la configuración de una notificación push establecido en «Abrir URL web» con la opción «Abrir URL web dentro de la aplicación móvil» desmarcada.]({% image_buster /assets/img/push_on_click.png %})
 
-La interacción predeterminada para el comportamiento al hacer clic «Abrir URL Web» varía según la versión del SDK. Para las versiones SDK iOS 2.29.0 y Android 2.0.0 y superiores, esta opción está seleccionada de forma predeterminada y las URL web se abrirán en una vista Web dentro de la aplicación. Antes de estas versiones, esta opción está desactivada de forma predeterminada y las direcciones URL web se abren en el navegador web predeterminado del dispositivo.
+La interacción predeterminada para el comportamiento al hacer clic «Abrir URL web» varía según la versión del SDK. Para las versiones del SDK iOS 2.29.0 y Android 2.0.0 y superiores, esta opción está seleccionada de forma predeterminada y las URL web se abrirán en una vista web dentro de la aplicación. Antes de estas versiones, esta opción está desactivada de forma predeterminada y las URL web se abren en el navegador web predeterminado del dispositivo.
 
 Si este no es el problema, es posible que haya un problema con la implementación de push. 
 
-### Comprueba dos veces la integración push.
+### Comprueba dos veces la integración push
 
 Si los enlaces de tus notificaciones push se abren inesperadamente en la aplicación, puede que se deba a problemas con la integración de las notificaciones push o con la configuración personalizada. Sigue estos pasos para la solución de problemas:
 
 1. **Revisa la implementación del delegado push:** Asegúrate de que el delegado push de Braze se haya implementado correctamente. Para obtener instrucciones detalladas, consulta la guía de integración de notificaciones push para tu [plataforma]({{site.baseurl}}/developer_guide/home/).
-2. **Inspecciona el manejo de enlaces personalizados:** Comprueba si la aplicación incluye un manejo personalizado para todos`https://`los enlaces. Las configuraciones personalizadas pueden anular los comportamientos predeterminados. Colabora con tu equipo de desarrollo para revisar y ajustar esta configuración si es necesario.
-3. **Verificar el registro de notificaciones push de iOS:** Para iOS, vuelve al paso 1 de la guía de integración de notificaciones push sobre [el registro de notificaciones push con APN]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns). Asegúrate de que tu objeto delegado se asigne de forma sincrónica antes de que la aplicación termine de iniciarse. Este paso debe completarse en el`application:didFinishLaunchingWithOptions:`método.
+2. **Inspecciona el manejo de enlaces personalizados:** Comprueba si la aplicación incluye un manejo personalizado para todos los enlaces `https://`. Las configuraciones personalizadas pueden anular los comportamientos predeterminados. Colabora con tu equipo de desarrollo para revisar y ajustar esta configuración si es necesario.
+3. **Verifica el registro de notificaciones push en iOS:** Para iOS, vuelve al paso 1 de la guía de integración de notificaciones push sobre [el registro de notificaciones push con APN]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns). Asegúrate de que tu objeto delegado se asigne de forma sincrónica antes de que la aplicación termine de iniciarse. Este paso debe completarse en el método `application:didFinishLaunchingWithOptions:`.
 4. **Prueba tu integración:** Después de realizar los ajustes, comprueba el funcionamiento de las notificaciones push en dispositivos iOS y Android para confirmar que el problema se ha resuelto.
 
-## Las notificaciones push web no funcionan como se esperaba.
+## El título push se corta en iOS pero se muestra correctamente en Android
+
+Si el título de tu notificación push contiene personalización con Liquid y aparece completo en Android pero truncado en iOS, esto se debe a cómo cada plataforma maneja los caracteres de nueva línea (`\n`) en la cadena del título.
+
+Android elimina automáticamente los espacios en blanco, tabulaciones y saltos de línea de las cadenas del título push. iOS no lo hace, por lo que si una variable Liquid se resuelve con un valor que contiene un salto de línea al final, iOS trata el salto de línea como el final del título y corta el texto restante.
+
+Por ejemplo, un título como `Regarding your flight from {% raw %}{{${city_from}}}{% endraw %} to {% raw %}{{${city_to}}}{% endraw %}` podría mostrar `Regarding your flight from` en iOS si la variable `city_from` incluye un salto de línea al final.
+
+Para solucionar esto, aplica el filtro Liquid `strip_newlines` y envuelve todo el título en un bloque `capture`:
+
+{% raw %}
+```liquid
+{% capture title %}Regarding your flight from {{${city_from}}} to {{${city_to}}}{% endcapture %}
+{{ title | strip_newlines }}
+```
+{% endraw %}
+
+## Las notificaciones push web no funcionan como se esperaba
 
 Si tienes problemas con las notificaciones push en tu navegador, es posible que tengas que restablecer los permisos de notificación de tu sitio y borrar el almacenamiento del mismo. Consulta estos pasos para obtener ayuda.
 
 {% tabs %}
 {% tab Chrome %}
 
-### Reiniciar Chrome en el escritorio
+### Restablecer Chrome en el escritorio
 
 1. Junto a tu URL en el navegador Chrome, selecciona el icono deslizante **Ver información del sitio**.
 2. En **Notificaciones**, selecciona **Restablecer permiso**.
@@ -127,54 +162,54 @@ table {
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {:start="4"}
-4\. En DevTools, ve a la pestaña **Aplicación**.
-5\. En la barra lateral, selecciona **Almacenamiento**.
-6\. Selecciona **Borrar datos del sitio**.
-7\. Chrome te pedirá que vuelvas a cargar la página para aplicar la configuración actualizada. Selecciona **Recargar**.
+4. En DevTools, ve a la pestaña **Application**.
+5. En la barra lateral, selecciona **Storage**.
+6. Selecciona **Clear site data**.
+7. Chrome te pedirá que vuelvas a cargar la página para aplicar la configuración actualizada. Selecciona **Reload**.
 
 Tus permisos push se han restablecido. Abre una pestaña nueva en tu sitio y pruébalo.
 
-### Reiniciar Chrome en Android
+### Restablecer Chrome en Android
 
 Si tienes una notificación de tu sitio visible en el cajón de notificaciones de tu Android:
 
 1. Desde la notificación push, pulsa <i class="fas fa-cog" title="Configuración"></i> y selecciona **Configuración del sitio**.
-2. En **la configuración del sitio**, pulsa **Borrar&  Restablecer**.
+2. En **Configuración del sitio**, pulsa **Borrar y restablecer**.
 
 Si no tienes una notificación de tu sitio abierta:
 
 1. Abre Chrome en Android.
 2. Pulsa en el menú <i class="fas fa-ellipsis-vertical"></i>.
 3. Ve a **Configuración** > **Configuración del sitio** > **Notificaciones**.
-4. Verifica la configuración de las notificaciones para que estén configuradas para **Preguntar antes de enviar (recomendado)**.
+4. Verifica que las notificaciones estén configuradas para **Preguntar antes de enviar (recomendado)**.
 5. Encuentra tu sitio en la lista.
-6. Selecciona la entrada y pulsa **Borrar y Restablecer**.
+6. Selecciona la entrada y pulsa **Borrar y restablecer**.
 
 Tus permisos push se han restablecido. Abre una pestaña nueva en tu sitio y pruébalo.
 
 {% endtab %}
 {% tab Firefox %}
 
-### Reiniciar Firefox en el escritorio
+### Restablecer Firefox en el escritorio
 
-1. Junto a la URL de tu sitio, selecciona<i class="fa-solid fa-circle-info" alt="info icon"></i>  o <i class="fas fa-lock" alt="lock icon"></i>.
+1. Junto a la URL de tu sitio, selecciona <i class="fa-solid fa-circle-info" alt="info icon"></i> o <i class="fas fa-lock" alt="lock icon"></i>.
 2. En **Permisos**, junto a **Recibir notificaciones**, selecciona <i class="fa-solid fa-circle-xmark" title="Borrar este permiso y volver a preguntar"></i> para borrar los permisos de notificación.
 3. En el mismo menú, selecciona **Borrar cookies y datos del sitio**.
 4. En el cuadro de diálogo para confirmar tu elección, selecciona **Aceptar**.
 
 Tus permisos push se han restablecido. Abre una pestaña nueva en tu sitio y pruébalo.
 
-### Reiniciar Firefox en Android
+### Restablecer Firefox en Android
 
 Para restablecer los permisos push en Android, consulta este [artículo de soporte de Mozilla](https://support.mozilla.org/en-US/kb/clear-your-browsing-history-and-other-personal-data#w_clear-specific-items-from-your-browser).
 
 {% endtab %}
 {% tab Safari %}
 
-### Reiniciar Safari en macOS
+### Restablecer Safari en macOS
 
 {% alert note %}
-Estos pasos son solo para MacOS, ya que Apple no admite la notificación push web para Safari en Windows.
+Estos pasos son solo para macOS, ya que Apple no admite la notificación push web para Safari en Windows.
 {% endalert %}
 
 1. Abre Safari.
@@ -191,5 +226,8 @@ Tus permisos push se han restablecido. Abre una pestaña nueva en tu sitio y pru
 {% endtab %}
 {% endtabs %}
 
-¿Aún necesitas ayuda? Abre un [ticket de soporte]({{site.baseurl}}/braze_support/).
+## Mensajes de error push
 
+Para obtener información detallada sobre los mensajes de error push más comunes (como `DEVICE_UNREGISTERED`, `Unregistered`, `NotRegistered` y otros), consulta [Mensajes de error push comunes]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
+
+¿Aún necesitas ayuda? Abre un [ticket de soporte]({{site.baseurl}}/braze_support/).

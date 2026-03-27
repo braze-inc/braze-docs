@@ -1,6 +1,6 @@
 > When building a custom UI for Content Cards, you must manually log analytics like impressions, clicks, and dismissals, as this is only handled automatically for default card models. Logging these events is a standard part of a Content Card integration and is essential for accurate campaign reporting and billing. To do this, populate your custom UI with data from the Braze data models and then manually log the events. Once you understand how to log analytics, you can see common ways Braze customers [create custom Content Cards]({{site.baseurl}}/developer_guide/content_cards/creating_cards/). 
 
-## Listening for card updates
+## Logging analytics
 
 When implementing your custom Content Cards, you can parse the Content Card objects and extract their payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI. 
 
@@ -102,14 +102,14 @@ Next, add the following code to subscribe to Content Card updates from Braze, ty
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
-Braze.getInstance(context).requestContentCardsRefresh()
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+contentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all Content Cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
 Braze.getInstance(context).requestContentCardsRefresh(true)
 ```
 
@@ -358,6 +358,51 @@ Log dismissal events when a user dismisses a card:
 ```javascript
 Braze.logContentCardDismissed(card.id);
 ```
+
+{% endtab %}
+{% endtabs %}
+
+## Handling on-click behavior
+
+{% tabs %}
+{% tab web %}
+
+When a user clicks a Content Card in a custom feed, the on-click behavior (such as navigating to a URL, deep linking, or logging a custom event) is not handled automatically. Use [`handleBrazeAction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#handlebrazeaction) to process the card's URL and execute the configured on-click action, including Braze actions (`brazeActions://` URLs).
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+// In your card click handler
+function onCardClick(card) {
+  // Log the click
+  braze.logContentCardClick(card);
+
+  // Handle the on-click behavior
+  if (card.url) {
+    braze.handleBrazeAction(card.url);
+  }
+}
+```
+
+| Parameter | Description |
+|---|---|
+| `url` | A valid URL, or a valid Braze action URL with the scheme `brazeActions://`. |
+| `openLinkInNewTab` | (Optional) Whether the URL should open in a new tab. Defaults to `false`. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert important %}
+If you don't call `handleBrazeAction()`, on-click behaviors configured in the Braze dashboard (such as "Log Custom Event" or "Navigate to URL") won't execute for cards displayed in a custom feed.
+{% endalert %}
+
+{% endtab %}
+{% tab android %}
+
+On-click behavior is handled automatically by the default Content Cards UI. For custom implementations, use the [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) interface described in the [Logging analytics](#logging-analytics) section above.
+
+{% endtab %}
+{% tab swift %}
+
+On-click behavior is handled automatically by the default Content Cards UI. For custom implementations, use the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol described in the [Logging analytics](#logging-analytics) section above.
 
 {% endtab %}
 {% endtabs %}

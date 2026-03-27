@@ -25,7 +25,15 @@ Toutes les données des profils utilisateurs (événements personnalisés, attri
 {% if include.alert == 'Segment profiles first app use' %}
 
 {% alert note %}
-Braze ne crée pas de profils pour les utilisateurs tant qu’ils n’ont pas utilisé l’application une première fois, ce qui signifie que vous ne pouvez pas cibler des utilisateurs qui n’ont pas encore ouvert votre application.
+Braze ne crée pas de profils pour les utilisateurs tant qu'ils n'ont pas utilisé l'application une première fois, ce qui signifie que vous ne pouvez pas cibler des utilisateurs qui n'ont pas encore ouvert votre application.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Shopify attributes REST API' %}
+
+{% alert note %}
+Tous les attributs proviennent de l'API REST de Braze.
 {% endalert %}
 
 {% endif %}

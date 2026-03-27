@@ -33,7 +33,11 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 
 {: start="6"} 
 6. Select an RCS-enabled [subscription group]({{site.baseurl}}/sms_rcs_subscription_groups/). When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target users.
-- **SMS fallback**: Braze strongly recommends that every subscription group that contains an RCS sender also includes at least one SMS code for fallback. This is important for deliverability in cases RCS messages fail to deliver. Some reasons for this may include user device incompatibility and incomplete carrier coverage in a given country or region. By enabling SMS fallback, your message will still deliver to your user and that you never miss that opportunity to connect with them.   
+- **SMS fallback:** Braze strongly recommends that every subscription group that contains an RCS sender also includes at least one SMS code for fallback. This is important for deliverability in cases RCS messages fail to deliver. Some reasons for this may include user device incompatibility and incomplete carrier coverage in a given country or region. By enabling SMS fallback, your RCS message can still deliver through SMS when RCS cannot, so you don't miss that opportunity to connect with them.
+
+{% alert note %}
+MMS fallback isn't supported.
+{% endalert %}
 
 {: start="7"}
 7. Choose between SMS and RCS. Before composing RCS messages, choose the channel you send with. We generally recommend using RCS wherever possible as there are significant user engagement benefits over SMS; however, we always provide the option of sending with SMS so that you have maximum flexibility and control. 
@@ -81,10 +85,11 @@ As the name implies, RCS text messages focus on text as a medium. If you type up
 
 #### Considerations
 
-- For character limits on text, you may write up to 160 characters for a text-only (basic) RCS message or up to 3072 for a rich (single) RCS message. 
-- For button limits, you can add up to five buttons per message. These buttons can be either suggested actions or suggested replies.
-- Longer text blocks and too many buttons can frustrate users, so wherever possible, we recommend leaning into simplicity. 
-- In some cases, it can be more cost-effective to send longer text-only messages through RCS than with SMS. This is because longer SMS messages are broken down into multiple segments, each of which is billable, whereas RCS messages are instead billed per message. Contact your Braze account manager for more details and guidance. 
+- For character limits, you may write up to 160 characters for a basic RCS message or up to 3,072 characters for a rich (single) RCS message when rich elements or longer copy apply.
+- Android and iOS can truncate differently: Android shows full rich message text, while iOS truncates after the third line.
+- You can add up to five buttons per message. These can be either suggested actions or suggested replies.
+- Longer text blocks and many buttons can overwhelm recipients; favor simplicity when you can.
+- In some cases, it can be more cost-effective to send longer text-only messages through RCS than with SMS, because longer SMS messages are broken into multiple billable segments, whereas RCS messages are billed per message.
 {% endtab %}
 
 {% tab Media %}
@@ -186,7 +191,7 @@ Need help creating engaging copy? Try using the [AI copywriting assistant]({{sit
 
 ### Create conversational message workflows
 
-Conversational message workflows let you respond dynamically to users, creating a back-and-forth messaging experience. To build a workflow, create a Canvas and then combine suggested replies with [Action Paths]({{site.baseurl}}/action_paths/) to direct your workflow based on which reply a user selects.
+Conversational message workflows let you respond dynamically to users, creating a back-and-forth messaging experience. To build a workflow, create a Canvas and then combine suggested replies with [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) to direct your workflow based on which reply a user selects.
 
 1. In the Canvas builder, create an RCS message step with multiple suggested replies.
 

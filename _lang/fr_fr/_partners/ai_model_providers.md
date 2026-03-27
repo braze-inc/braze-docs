@@ -4,17 +4,17 @@ article_title: "Fournisseurs de modèles d'intelligence artificielle"
 page_order: 11
 
 page_type: landing
-description: "Cette page d'atterrissage répertorie les fournisseurs de modèles d'intelligence artificielle que vous pouvez intégrer à Braze pour les utiliser avec des agents d'intelligence personnalisés."
+description: "Cette page d'accueil répertorie les fournisseurs de modèles d'intelligence artificielle que vous pouvez intégrer à Braze pour les utiliser avec des agents d'intelligence artificielle personnalisés."
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "AI Model Providers"
+partner_top_header: "Fournisseurs de modèles d'intelligence artificielle"
 
 valid_partner_list:
 - name: OpenAI
   url: /docs/partners/openai/
 - name: Google Gemini
-  url: /docs/partners/google_gemini/
-- name: Anthropique
+  url: /docs/partners/gemini/
+- name: Anthropic
   url: /docs/partners/anthropic/
 ---

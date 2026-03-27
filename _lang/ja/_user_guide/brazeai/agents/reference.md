@@ -1,70 +1,85 @@
 ---
-nav_title: 参考
-article_title: エージェント sのリファレンス
-description: "Braze Agent のリファレンスキーについて説明します。"
+nav_title: リファレンス
+article_title: エージェントのリファレンス
+description: "Braze エージェントの主要な詳細について説明します。"
 page_order: 3
 ---
 
-# エージェント sのリファレンス
+# エージェントのリファレンス
 
-> カスタムエージェントs を作成する際、手順や出力スキーマなどのキー設定の詳細については、この記事を参照してください。概要については、[Brazeエージェント]({{site.baseurl}}/user_guide/brazeai/agents/)を参照してください。
+> カスタムエージェントを作成する際、インストラクションや出力スキーマなどの主要な設定の詳細については、この記事を参照してください。概要については、[Braze エージェント]({{site.baseurl}}/user_guide/brazeai/agents/)を参照してください。
 
 ## モデル
 
-エージェントを設定するときに、レスポンスを生成するために使用するモデルを選択できます。Brazeパワーモデルの使用と、独自のAPI キーの持ち込みの2つの選択肢があります。
+エージェントを設定するときに、レスポンスの生成に使用するモデルを選択できます。Braze パワードモデルの使用と、独自の API キーの持ち込みの2つのオプションがあります。
 
 {% alert important %}
-Braze-powered **Auto**モデルは、カタログ検索やセグメントメンバーシップなどの作業を実行するのに充分な思考能力を持つモデルに最適化されています。他の機種をご使用の際は、ご使用のユースケースに合った機種であることを確認するためのテストをお勧めします。さまざまなスピードと能力を持つ機種に、さまざまな細部やステップ的な思考を与えるために、[命令](#writing-instructions)を調整する必要があるかもしれません。
+Braze パワードの **Auto** モデルは、カタログ検索やセグメントメンバーシップなどのタスクを実行するのに十分な思考能力を持つモデルに最適化されています。他のモデルを使用する場合は、ご利用のユースケースに適しているかどうかをテストで確認することをお勧めします。速度や能力が異なるモデルに対して、さまざまなレベルの詳細やステップバイステップの思考を与えるために、[インストラクション](#writing-instructions)を調整する必要がある場合があります。
 {% endalert %}
 
-### オプション 1: Braze駆動の機種を使用する
+### オプション 1: Braze パワードモデルを使用する
 
-これは最も単純なオプションで、追加のセットアップは必要ありません。Braze は、ラージ・ランゲージ・モデル(LLM) を直接的に利用できます。このオプションを使用するには、Gemini モデルを使用する**Auto** を選択します。
+これは最もシンプルなオプションで、追加のセットアップは不要です。Braze は大規模言語モデル（LLM）への直接アクセスを提供します。このオプションを使用するには、Gemini モデルを使用する **Auto** を選択します。
 
 {% alert important %}
-** Braze Auto** が、エージェントの作成時に **Model** ドロップダウンに表示されない場合は、顧客 のサクセスマネージャーに連絡して、Braze Auto モデルの使用資格を取得してください。
+エージェント作成時に**モデル**ドロップダウンに **Braze Auto** が表示されない場合は、カスタマーサクセスマネージャーに連絡して、Braze Auto モデルの使用資格を取得する方法をご確認ください。
 {% endalert %}
 
-### オプション 2: 自分のAPI キーを持ってくる
+### オプション 2: 独自の API キーを持ち込む
 
-この機能を使用すると、OpenAI、Anthropic、Google Gemini などのプロバイダーにBraze アカウントを接続できます。LLMプロバイダーから独自のAPI キーを取得した場合、トークン費用はBrazeではなくプロバイダーを通じて直接請求されます。
+このオプションでは、OpenAI、Anthropic、Google Gemini などのプロバイダーに Braze アカウントを接続できます。LLM プロバイダーから独自の API キーを持ち込む場合、トークンコストは Braze ではなくプロバイダーを通じて直接請求されます。
+
+レガシーモデルは数か月後に廃止または非推奨になる可能性があるため、最新のモデルを定期的にテストすることをお勧めします。
+
+設定方法:
+
+1. **パートナー連携** > **テクノロジーパートナー**に移動し、プロバイダーを見つけます。
+2. プロバイダーから取得した API キーを入力します。
+3. **保存**を選択します。
+
+その後、エージェントに戻ってモデルを選択できます。
+
+Braze 提供の LLM を使用する場合、そのモデルのプロバイダーは、お客様と Braze 間のデータ処理補遺（DPA）の条件に従い、Braze のサブプロセッサーとして機能します。独自の API キーを持ち込むことを選択した場合、LLM サブスクリプションのプロバイダーは、お客様と Braze 間の契約に基づくサードパーティプロバイダーと見なされます。
+
+#### 思考レベル
+
+一部の LLM プロバイダーでは、選択したモデルの思考レベルを調整できます。思考レベルは、モデルが回答する前に使用する思考の範囲を定義します。素早く直接的なレスポンスから、より長い推論の連鎖まで対応します。これはレスポンスの品質、レイテンシー、トークン使用量に影響します。
+
+| レベル | 使用するタイミング |
+|-------|-------------|
+| **Minimal** | シンプルで明確に定義されたタスク（カタログ検索、単純な分類など）。最速のレスポンスで最低コストです。 |
+| **Low** | もう少し推論が必要だが、深い分析は不要なタスク。 |
+| **Medium** | 複数ステップまたはニュアンスのあるタスク（複数の入力を分析してアクションを推奨するなど）。 |
+| **High** | 複雑な推論、エッジケース、またはモデルにステップを踏んで回答させたい場合。 |
+
+まず **Minimal** から始めて、エージェントのレスポンスをテストすることをお勧めします。エージェントが正確な回答を提供するのに苦労している場合は、思考レベルを **Low** または **Medium** に調整できます。まれに **High** の思考レベルが必要になることがありますが、このレベルを使用するとトークンコストが高くなり、レスポンス時間が長くなったり、タイムアウトエラーのリスクが高くなったりする可能性があります。エージェントが複数ステップの推論と妥当なレスポンス時間のバランスに苦労している場合は、ユースケースを複数のエージェントに分割し、Canvas やカタログで連携させることを検討してください。
+
+Braze は、コネクテッドコンテンツと同じ IP 範囲をアウトバウンド LLM コールに使用します。範囲は[コネクテッドコンテンツ IP 許可リスト]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#connected-content-ip-allowlisting)に記載されています。プロバイダーが IP 許可リストをサポートしている場合、Braze のみがキーを使用できるようにこれらの範囲に制限できます。
 
 {% alert important %}
-レガシーモデルは数カ月後に廃止または廃止される可能性があるため、最新のモデルを定期的にテストすることをお勧めします。
+Braze 提供の LLM を使用する場合、そのモデルのプロバイダーは、お客様と Braze 間のデータ処理補遺（DPA）の条件に従い、Braze のサブプロセッサーとして機能します。独自の API キーを持ち込むことを選択した場合、LLM サブスクリプションのプロバイダーは、お客様と Braze 間の契約に基づくサードパーティプロバイダーと見なされます。  
 {% endalert %}
 
-これを設定するには:
+## インストラクションの記述
 
-1. **Partner Integrations**> **Technology Partners**に移動し、プロバイダを見つけます。
-2. プロバイダーからAPI キーを入力します。
-3. [**保存**] を選択します。
+インストラクションは、エージェントに与えるルールまたはガイドライン（システムプロンプト）です。エージェントが実行されるたびにどのように動作するかを定義します。システムインストラクションは最大 25 KB です。
 
-その後、エージェントに戻り、機種を選択できます。
+プロンプト作成を始めるための一般的なベストプラクティスを以下に示します。
 
-{% alert important %}
-Braze提供のLLMを使用する場合、そのようなモデルのプロバイダーは、お客様とBrazeの間のデータプロセッシングアドオンダム(DPA)の条件に従い、Brazeサブプロセッサとして機能します。独自のAPI キーを取得することを選択した場合、LLM サブスクリプションのプロバイダーは、お客様とBraze 間の契約に基づくサードパーティプロバイダーと見なされます。  
-{% endalert %}
-
-## 命令の記述
-
-指示は、エージェントに指定する規則または指針です(システムプロンプト)。これらは、エージェントが実行されるたびにどのように動作するかを定義します。システム命令は最大25KB です。
-
-プロンプトを開始するための一般的なベストプラクティスを次に示します。
-
-1. 最後を念頭に置いて始めましょう。まず目標を述べよ。
-2. モデルにロールまたはペルソナを指定します("You are ...")。
-3. クリアコンテキストとコンストレーニングts(オーディエンス、長さ、トーン、形式)を設定します。
-4. 構造を確認します("JSON/箇条書きリスト/table...")。
-5. 見せろ、言わないで。質の高い例をいくつか挙げてください。
-6. 複雑な作業を順序付けられたステップに分割(" ステップ 1...)ステップ2...")
-7. 推論を促す("ステップで考えてみよう s 内部 ly、簡潔な最終回答"または"判断とクォートを簡単に説明する;)。
-8. パイロット、検査、および反復。微調整は、大きな品質向上につながります。
-9. エッジケースの取り扱い、ガードレールの追加、拒否指示の追加。
-10. 再利用と拡大・縮小のために内部機能するものを測定し、文書化する。
+1. ゴールを念頭に置いて始めましょう。まず目標を述べます。
+2. モデルにロールまたはペルソナを与えます（「You are a ...」）。
+3. 明確なコンテキストと制約を設定します（オーディエンス、長さ、トーン、フォーマット）。
+4. 構造を求めます（「Return JSON/bullet list/table...」）。
+5. 説明するのではなく、示しましょう。質の高い例をいくつか含めます。
+6. 複雑なタスクを順序付けられたステップに分割します（「ステップ 1... ステップ 2...」）。
+7. 推論を促します（「内部的にステップを考え、簡潔な最終回答を提供してください」または「判断を簡潔に説明してください」）。
+8. パイロット、検査、反復を行います。小さな調整が大きな品質向上につながります。
+9. エッジケースを処理し、ガードレールを追加し、拒否のインストラクションを追加します。
+10. 再利用とスケーリングのために、うまくいったことを測定し文書化します。
 
 ### Liquid の使用
 
-エージェントの指示に[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) を含めると、レスポンスに追加のパーソナライゼーションレイヤーを追加できます。エージェントが取得するリキッド変数を指定し、プロンプトのコンテキストに含めることができます。たとえば、"名" を明示的に記述する代わりに、Liquid スニペット{% raw %}`{{${first_name}}}`{% endraw %} を使用できます。
+エージェントのインストラクションに [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) を含めると、レスポンスにパーソナライゼーションのレイヤーを追加できます。エージェントが取得する正確な Liquid 変数を指定し、プロンプトのコンテキストに含めることができます。たとえば、「名」を明示的に記述する代わりに、Liquid スニペット {% raw %}`{{${first_name}}}`{% endraw %} を使用できます。
 
 {% raw %}
 ```
@@ -72,16 +87,17 @@ Tell a one-paragraph short story about this user, integrating their {{${first_na
 ```
 {% endraw %}
 
-**Logs**セクションの**エージェントコンソール**では、エージェントの入出力の詳細を確認して、リキッドからどのような値が表示されるかを理解することができます。
+**エージェントコンソール**の**ログ**セクションで、エージェントの入出力の詳細を確認し、Liquid からどのような値がレンダリングされるかを理解できます。
 
-![指示にリキッドが含まれているエージェントの詳細。]({% image_buster /assets/img/ai_agent/using_liquid_example.png %}){: style="max-width:50%;"}
+![インストラクションに Liquid を含むエージェントの詳細。]({% image_buster /assets/img/ai_agent/using_liquid_example.png %}){: style="max-width:50%;"}
 
-### 例
+### Canvas エージェントの例
 
-旅行ブランド、UponVoyageの一部であるとしよう。目標は、顧客 フィードバックを分析し、パーソナライズされたを書き、自由サブスクライバーsのコンバージョン率を決定することである。次に、定義された目標に基づいたさまざまな命令の例を示します。
+旅行ブランド UponVoyage の一員であるとしましょう。目標は、顧客フィードバックの分析、パーソナライズされたメッセージの作成、無料サブスクライバーのコンバージョン率の判定です。以下は、定義された目標に基づくさまざまなインストラクションの例です。
 
 {% tabs %}
-{% tab Personalized message copywriter agent %}
+{% tab メッセージコピーライター %}
+
 {% raw %}
 ```
 Role: 
@@ -129,8 +145,10 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 </output_example>
 ```
 {% endraw %}
+
 {% endtab %}
-{% tab Customer feedback analysis agent %}
+{% tab フィードバック分析 %}
+
 {% raw %}
 ```
 Role:
@@ -171,7 +189,8 @@ Input & Output Example:
 ```
 {% endraw %}
 {% endtab %}
-{% tab Trial conversion and strategy agent %}
+{% tab トライアルコンバージョン %}
+
 {% raw %}
 ```
 Role:
@@ -224,51 +243,149 @@ The user IS in the segment: "Has Valid Payment Method on File".
 (Rationale: The user is very active [15 searches], so they like the app. But they haven't touched a single Premium feature [0 uses], meaning they don't yet understand why they should pay for the subscription. They are "Medium" risk and need education, not just a generic nudge.)
 ```
 {% endraw %}
+
 {% endtab %}
 {% endtabs %}
 
-ベストプラクティスのプロンプトの詳細については、次のモデルプロバイダのガイドを参照してください。
+### カタログエージェントの例
+
+オンデマンドのライドシェアブランド StyleRyde の一員であるとしましょう。目標は、移動手段のマーケティング向けサマリーの作成と、地域で使用されている言語に基づくモバイルアプリの翻訳の提供です。以下は、定義された目標に基づくさまざまなインストラクションの例です。
+
+{% tabs %}
+{% tab 目的地の説明 %}
+
+{% raw %}
+```
+Role:
+You are an expert Travel Copywriter for StyleRyde. Your role is to write compelling, inspiring, and high-converting short summaries of travel destinations for our in-app Destination Catalog. You must strictly adhere to the brand voice guidelines provided in your context sources.
+
+Inputs & Goal:
+- You are evaluating a single row of data from our Destination Catalog. Your goal is to generate a "Short Description" that will be saved to a new column in this catalog.
+- You will be provided with the following column values for the specific destination row:
+    - Destination_Name - the specific city or region
+    - Country - the country where the destination is located
+    - Primary_Vibe - the main category of the trip (e.g., Beach, Historic, Adventure, Nightlife) 
+    - Price_Tier - represented as $, $$, $$$, or $$$$
+
+Rules:
+- Write exactly one or two short sentences.
+- Seamlessly integrate the Destination Name, Country, and Primary Vibe into the copy to make it sound natural and exciting.
+- Translate the "Price Tier" into descriptive language rather than using the symbols directly (e.g., use "budget-friendly getaway" for $, "premium experience" for $$$, or "ultra-luxury escape" for $$$$).
+- Keep the description skimmable and inspiring.
+- Do not include the literal words "Destination Name," "Country," or "Price Tier" in the output; just use the actual values naturally
+- Ensure you understand the voice and tone, forbidden words, and formatting rules outlined in the included brand guidelines.
+- Avoid spammy phrasing (ALL CAPS, excessive punctuation) and emojis.
+- Do not hallucinate specific hotels or flights, as this is a general destination description.
+- If any input fields are missing, write the best description possible with the available data
+
+Final Output Specification:
+You must return ONLY the plain text string of the description. Do not wrap the output in quotes, do not use markdown formatting, and do not return a JSON object. The text you output will be injected directly into a cell in the catalog spreadsheet. Maximum length is 150 characters.
+Input & Output Example:
+<input_example>
+Destination Name: Kyoto
+Country: Japan
+Primary Vibe: Historic & Serene
+Price Tier: $$$
+</input_example>
+<output_example>Discover the historic and serene beauty of Kyoto, Japan. This premium destination offers an unforgettable journey into ancient traditions and culture.</output_example>
+```
+{% endraw %}
+
+{% endtab %}
+{% tab ローカライゼーション %}
+
+{% raw %}
+```
+Role:
+You are an expert AI Localization Specialist for StyleRyde. Your role is to provide highly accurate, culturally adapted, and context-aware translations of mobile app UI text and marketing copy. You ensure our app feels native and natural to users around the world.
+
+Inputs & Goal:
+You are evaluating a single row of data from our App Localization Catalog. Your goal is to translate the English source text into the requested target language, which will be saved to a specific localized column in this catalog.
+
+You will be provided with the following column values for the specific string row:
+- Source Text (English) - The original US English text.
+- Target Language Code - The locale code to translate into (e.g., es-MX, fr-FR, ja-JP, pt-BR).
+- UI Category - Where this text lives in the app (e.g., Tab_Bar, CTA_Button, Screen_Title, Push_Notification).
+- Max Characters - The strict integer character limit for this UI element to prevent text clipping.
+
+Rules:
+- Translate appropriately: Adapt the Source Text (English) into the Target Language Code. Use local spelling norms (e.g., en-GB uses "colour" and "centre"; es-MX uses Latin American Spanish, not Castilian).
+- Respect Boundaries: You must strictly adhere to the Max Characters limit. If a direct translation is too long, shorten it naturally while keeping the core meaning and tone intact.
+
+Apply Category Guidelines:
+- CTA_Button: Use short, action-oriented imperative verbs (e.g., "Book", "Search"). Capitalize words if natural for the locale.
+- Tab_Bar: Maximum 1-2 words. Extremely concise.
+- Screen_Title: Emphasize the core feature.
+- Error_Message: Be polite, clear, and reassuring.
+- Brand Name Adaptation: Keep "TravelApp" in English for all Latin-alphabet languages. Adapt it for the following scripts:
+    - Japanese → トラベルアプリ
+    - Korean → 트래블앱
+    - Arabic → ترافل آب
+    - Chinese (Simplified) → 旅游应用
+
+Fallback Logic: If the source text is empty, if you do not understand the translation, or if it is impossible to translate within the character limit, output exactly: ERROR_MANUAL_REVIEW_NEEDED. Do not attempt a broken translation.
+
+Final Output Specification:
+You must return ONLY the plain text string of the localized translation. Do not wrap the output in quotes, do not include pronunciation guides, do not add notes. The text you output will be injected directly into a cell in the catalog spreadsheet.
+
+Input & Output Example:
+<input_example>
+Source Text (English): Search Flights
+Target Language Code: es-MX
+UI Category: CTA_Button
+Max Characters: 20
+</input_example>
+<output_example>
+Buscar Vuelos
+</output_example>
+```
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
+プロンプトのベストプラクティスの詳細については、以下のモデルプロバイダーのガイドを参照してください。
 
 - [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
 - [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [ジェミニ](https://support.google.com/a/users/answer/14200040?hl=en)
+- [Gemini](https://support.google.com/a/users/answer/14200040?hl=en)
 
-## カタログおよびフィールド
+## カタログとフィールド
 
-エージェントの具体的なカタログsを選んで、あなたの商品や、関連する場合には他の非ユーザーデータを理解するために必要な文脈をあなたのエージェントに伝えましょう。エージェントはツールを使用して関連項目のみを検索し、トークンの使用を最小限に抑えるためにLLM に送信します。
+エージェントが参照する特定のカタログを選択し、製品やその他の関連する非ユーザーデータを理解するために必要なコンテキストをエージェントに提供します。エージェントはツールを使用して関連するアイテムのみを検索し、トークン使用量を最小限に抑えるためにそれらのみを LLM に送信します。
 
-!["restaurants" カタログ および"Loyalty_Program" 列が、検索するエージェントに対して選択されます。]({% image_buster /assets/img/ai_agent/search_catalog.png %}){: style="max-width:75%;"}
+![エージェントが検索するために選択された「restaurants」カタログと「Loyalty_Program」列。]({% image_buster /assets/img/ai_agent/search_catalog.png %}){: style="max-width:75%;"}
 
-## セグメント・メンバーシップのコンテキスト
+## セグメントメンバーシップのコンテキスト
 
-セグメントは、エージェントがキャンバスで使用されているときに、それぞれのユーザーのセグメントメンバーシップを相互参照するために、最大5 つまで選択できます。たとえば、あなたのエージェントが、"Loyalty Users" セグメントに対して選択されたセグメントメンバーシップを持っており、そのエージェントがキャンバスで使用されているとします。ユーザー s がエージェント ステップを入力すると、各ユーザーがエージェントコンソールで指定した各セグメントのメンバであり、LLM のコンテキストとして各ユーザーのメンバシップ(または非メンバシップ) を使用する場合、エージェントは相互参照できます。
+エージェントが Canvas で使用されている場合に、各ユーザーのセグメントメンバーシップを相互参照するためのセグメントを最大5つまで選択できます。たとえば、エージェントが「Loyalty Users」セグメントのセグメントメンバーシップを選択しており、そのエージェントが Canvas で使用されているとします。ユーザーがエージェントステップに入ると、エージェントは各ユーザーがエージェントコンソールで指定した各セグメントのメンバーであるかどうかを相互参照し、各ユーザーのメンバーシップ（または非メンバーシップ）を LLM のコンテキストとして使用できます。
 
-!["Loyalty Users"エージェントメンバーシップアクセス用に選択されたセグメント。]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:75%;"}
+![エージェントメンバーシップアクセス用に選択された「Loyalty Users」セグメント。]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:75%;"}
 
-## ブランド・ガイドライン
+## ブランドガイドライン
 
-エージェントが対応に従うように、[ブランドガイドライン]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines)を選択できます。たとえば、エージェントがSMSコピーを生成して、ユーザーがジムのメンバーシップに登録することを奨励する場合、このフィールドを使用して、事前定義された大胆なモチベーションガイドラインを参照できます。
+エージェントがレスポンスで遵守する[ブランドガイドライン]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines)を選択できます。たとえば、エージェントがジムのメンバーシップへの登録を促す SMS コピーを生成する場合、このフィールドを使用して、事前定義された大胆でモチベーショナルなガイドラインを参照できます。
 
 ## 温度
 
-エージェントを使用してコピーを生成し、ユーザーが携帯アプリにログインできるようにするには、エージェントをよりクリエイティブに設定し、コンテキスト変数のニュアンスを使用します。センチメントスコアを生成するためにエージェントを使用している場合は、低温に設定することがアイデアな場合があります。これは、負の調査レスポンスに対するエージェントの推測を回避するためです。この設定をテストし、シナリオに合わせてエージェントで生成されたアウトプットを確認することをお勧めします。
+エージェントを使用してモバイルアプリへのログインを促すコピーを生成する場合、エージェントの温度を高く設定することで、よりクリエイティブにコンテキスト変数のニュアンスを活用できます。センチメントスコアの生成にエージェントを使用している場合は、ネガティブなアンケートレスポンスに対するエージェントの推測を避けるために、低い温度に設定するのが理想的です。この設定をテストし、シナリオに合わせてエージェントの生成出力を確認することをお勧めします。
 
 {% alert note %}
-OpenAI で使用するための温度は現在サポートされていません。
+現在、OpenAI での使用では温度はサポートされていません。
 {% endalert %}
 
-## 重複エージェント
+## エージェントの複製
 
-エージェントの改良や反復を検証するには、エージェントを複製し、ly の変更をアプリして元のものと比較します。また、複製エージェントをバージョンコントロールとして扱って、エージェントの細部の変化やメッセージングへの影響を追跡することもできます。エージェントを複製するには
+エージェントの改善や反復をテストするには、エージェントを複製してから変更を適用し、オリジナルと比較できます。また、エージェントの複製をバージョン管理として扱い、エージェントの詳細の変化やメッセージングへの影響を追跡することもできます。エージェントを複製するには:
 
-1. エージェントの行にカーソルを合わせ、<i class="fas fa-ellipsis-vertical"></i>を選択します。
-2. [**複製**] を選択します。
+1. エージェントの行にカーソルを合わせ、<i class="fas fa-ellipsis-vertical"></i> メニューを選択します。
+2. **複製**を選択します。
 
 ## エージェントのアーカイブ
 
-カスタムエージェントs をさらに作成すると、アクティブに使用されていないエージェントをアーカイブすることで、** エージェント管理** ページを編成できます。エージェントをアーカイブするには
+カスタムエージェントをさらに作成すると、アクティブに使用されていないエージェントをアーカイブすることで**エージェント管理**ページを整理できます。エージェントをアーカイブするには:
 
-1. エージェントの行にカーソルを合わせ、<i class="fas fa-ellipsis-vertical"></i>を選択します。
-2. [**アーカイブ**] を選択します。
+1. エージェントの行にカーソルを合わせ、<i class="fas fa-ellipsis-vertical"></i> メニューを選択します。
+2. **アーカイブ**を選択します。
 
-![アーカイブされたエージェントを含むエージェントマネジメントページ。]({% image_buster /assets/img/ai_agent/archived_agents.png %})
+![アーカイブされたエージェントを含むエージェント管理ページ。]({% image_buster /assets/img/ai_agent/archived_agents.png %})
