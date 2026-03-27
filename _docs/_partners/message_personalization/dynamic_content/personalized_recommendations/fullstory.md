@@ -22,7 +22,7 @@ In the following example, Canvas Context data is leveraged in an Agent AI Canvas
 
 ## Use cases
 
-![Diagram showing Fullstory integration use cases with Braze]({% image_buster /assets/img/fullstory/1.png %})
+![Diagram showing Fullstory integration use cases with Braze]({% image_buster /assets/img/fullstory/1.png %}){: style="max-width:80%;"}
 
 ## Prerequisites
 
