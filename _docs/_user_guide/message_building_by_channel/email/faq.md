@@ -154,9 +154,7 @@ Outlook often uses Microsoft Word–style rendering, which can add a border arou
 
 ### Can I use SVG or WEBP images in my email messages?
 
-SVG images won't render in Gmail web or Gmail iOS. WEBP is not consistently supported across clients.
-
-Use widely supported formats such as PNG or JPEG so images render reliably.
+SVG images won't render in Gmail web or Gmail iOS. WEBP is not consistently supported across clients. Instead, use widely supported formats such as PNG or JPEG so images render reliably.
 
 ### Can Liquid variables assigned in one part of the message composer be used in another?
 
