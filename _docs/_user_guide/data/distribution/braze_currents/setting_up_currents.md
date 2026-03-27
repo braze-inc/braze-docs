@@ -21,7 +21,7 @@ If you see "You do not have any remaining Currents integrations" when adding a n
 - No Currents entitlement has been purchased for this workspace.
 - The Currents entitlement is available in a different workspace in your company.
 
-Contact your Braze representative or Customer Success Manager to purchase an entitlement or confirm which workspace has access.
+Contact your Braze account manager to request an entitlement or adjust your configuration.
 
 ## Requirements
 

@@ -84,7 +84,7 @@ If your storage bucket is unavailable at the time of data transfer, that data is
 
 ### Why do I see "You do not have any remaining Customer Behavior Events entitlements" when editing my Currents integration?
 
-This message can appear when you update an existing Currents integration and your workspace has reached its entitlement limit for Customer Behavior Events. Resolution is handled by your Customer Success Manager (CSM)—contact them to request an entitlement or adjust your configuration.
+This message can appear when you update an existing Currents integration, and your workspace has reached its entitlement limit for customer behavior events. Contact your Braze account manager to request an entitlement or adjust your configuration.
 
 ### How often does the schema ID update?
 
