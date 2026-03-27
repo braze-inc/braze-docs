@@ -117,7 +117,7 @@ As you build your card, ask:
 - Have you tested desktop and mobile?
 
 {% alert tip %}
-Liquid in the script is supported—test thoroughly to avoid errors.
+While Liquid in the script is supported, we recommend thoroughly testing to avoid errors.
 {% endalert %}
 
 ## Measuring Gmail Cards
