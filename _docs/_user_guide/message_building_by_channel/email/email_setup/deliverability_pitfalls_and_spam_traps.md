@@ -35,7 +35,7 @@ The Braze Customer Success and Deliverability teams can help make sure you're fo
 
 ## Improving deliverability
 
-> A mailbox provider (MBP) will consider the reputation of a sending domain when determining whether a message is accepted or bounced. However, in some cases the email may be accepted by the MBP, but it will not be delivered to the user's inbox. In these instances, the message may be diverted to a spam folder where a user is unlikely to view it. This article outlines some high-level guidance that should enable you to send messages with the optimal chance of reaching your users' inboxes.
+> A mailbox provider (MBP) will consider the reputation of a sending domain when determining whether a message is accepted or bounced. However, in some cases, the email may be accepted by the MBP, but it will not be delivered to the user's inbox. In these instances, the message may be diverted to a spam folder where a user is unlikely to view it. Consider the following high-level guidance for sending messages with the optimal chance of reaching your users' inboxes.
 
 ### Sending patterns
 
