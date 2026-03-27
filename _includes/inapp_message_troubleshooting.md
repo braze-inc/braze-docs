@@ -51,7 +51,7 @@ If you have set an in-app message delegate to manually handle message display or
 
 This is expected behavior and can happen when:
 
-- If re-eligibility isn't turned on, users who received the campaign may have more than one device.
+- Even if re-eligibility is turned off, users who received the campaign may have more than one device. The campaign trigger updates on the next session start, so a device won't know if another device has already triggered the campaign until the user starts a new session.
 - If your in-app message has a scheduled delay for a few minutes after the trigger event occurs, users may have received the message more than once.
 
 For more information on re-eligibility, see [Re-eligibility for campaigns and Canvas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).

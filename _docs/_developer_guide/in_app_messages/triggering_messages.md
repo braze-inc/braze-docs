@@ -28,21 +28,15 @@ In-app messages can't be triggered through the API or by API events&#8212;only c
 
 Braze sends two types of in-app messages to user devices upon session start: `inapp` and `templated_iam`. As a dashboard user, you won't see the different types, but Braze handles them differently depending on the setup and content.
 
-### `inapp`
+### `inapp` (standard)
 
-An `inapp` in-app message is already templated with the necessary information, such as custom attributes that Braze already knows. Generally, once the in-app message downloads to the device, the trigger event causes the SDK to display the `inapp` in-app message even when the device is offline or on airplane mode.
+An `inapp` (or "[standard]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/#standard-message-types)") in-app message is already templated with the necessary information, such as custom attributes that Braze already knows. Generally, once the in-app message downloads to the device, the trigger event causes the SDK to display the `inapp` in-app message even when the device is offline or on airplane mode.
 
-### `templated_iam`
+### `templated_iam` (templated)
 
-A `templated_iam` in-app message isn't yet templated with the necessary information. Braze needs to make another request to pull in the information before the message can display.
+A `templated_iam` (or "templated") in-app message isn't yet templated with the necessary information. Braze needs to make another request to pull in the information before the message can display.
 
-In-app messages that contain the following are `templated_iam`:
-
-- Event properties
-- Canvas entry properties
-- Connected Content tags
-- SMS properties (if the `sms_inbound_response_handling` feature flipper is on)
-- **Re-evaluate campaign eligibility before displaying** is checked on the **Target Audiences** step (including HTML in-app messages with assets)
+{% multi_lang_include in-app_messages/templated_iams.md %}
 
 ## Key-value pairs
 
@@ -198,7 +192,7 @@ The initial in-app message display operation can be set in Braze config using th
 
 ## Chaining two in-app messages in one session
 
-You can trigger an in-app message from session start, then trigger a second in-app message after a button is pressed in the first. To do this, build a JavaScript bridge to log a button click event that triggers the second message. The trigger for the second message must occur on the device side (the Braze SDK won't pick up custom attribute changes that occur on Braze servers). The default 30-second cooldown between in-app message triggers must be altered to show multiple in-app messages in quick succession. For platform-specific configuration, see the next section.
+You can trigger an in-app message from session start, then trigger a second in-app message after a button is pressed in the first. To do this, log a custom event for the button click that will trigger the second message. The trigger for the second message must already be on the device (the user must already be eligible for the second message), and occur on the device side (the Braze SDK won't pick up custom attribute changes that occur on Braze servers). The default 30-second cooldown between in-app message triggers must be altered to show multiple in-app messages in quick succession. For platform-specific configuration, see the next section.
 
 ## Overriding the default rate limit
 

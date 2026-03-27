@@ -380,6 +380,12 @@ Enabling this option will result in a slight delay (< 100ms) between when a user
 Do not use this option for messages that can be triggered while a user is offline or when eligibility and Liquid re-evaluation are not required.
 {% endalert %}
 
+##### Use data added by REST API in a message
+
+User data that the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) adds in the same session can sometimes be used in that user's in-app message. For example, if a user is in the audience for an in-app message that is waiting on a trigger, starts a session, and in that same session the REST API updates their profile, that new data can appear in the in-app message when **Re-evaluate campaign eligibility before displaying** is selected. Braze won't template the in-app message until it's time to render.
+
+If one trigger both sends data to Braze and fires the in-app message, the message can't use that newly updated profile data, even with a scheduled delay. Use two separate triggers instead: one to send the data, and one to trigger the in-app message.
+
 #### Choose conversion events
 
 Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
