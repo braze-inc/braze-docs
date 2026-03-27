@@ -410,4 +410,6 @@ valid_partner_list:
   url: /docs/partners/figma/
 - name: Poq
   url: /docs/partners/poq/
+- name: VideoSmart
+  url: /docs/partners/videosmart/
 ---
