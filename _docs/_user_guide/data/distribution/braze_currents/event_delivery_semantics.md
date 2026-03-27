@@ -53,12 +53,20 @@ The Braze Currents data storage integrations output data in the `.avro` format. 
 Currents will create a file for each event type using the following format:
 
 ```
-<your-bucket-prefix>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>/event_type=<event-type>/date=<date>/<schema-id>/<zone>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>+<partition>+<offset>.avro
+<your-bucket-prefix>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>/event_type=<event-type>/date=<date>/version=<currents_version>/<environment>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>+<partition>+<offset>.avro
 ```
 
 {% alert tip %}
 Can't see the code because of the scroll bar? Learn how to fix that [here]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
 {% endalert %}
+
+For example, a push send event path can look like:
+
+```
+<your-bucket-prefix>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>/event_type=users.messages.pushnotification.Send/date=2025-04-01-17/version=6/<environment>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>+<partition>+<offset>.avro
+```
+
+The `version` path segment is a simple integer Currents version value, such as `version=6`.
 
 |Filename Segment |Definition|
 |---|---|
@@ -68,8 +76,8 @@ Can't see the code because of the scroll bar? Learn how to fix that [here]({{sit
 | `<integration-id>` | The unique ID for this Currents integration. |
 | `<event-type>` | The type of the event in the file. |
 | `<date>` | The hour that events are queued in our system for processing in the UTC time zone. Formatted YYYY-MM-DD-HH. |
-| `<schema-id>` | Used to version `.avro` schemas for backward-compatibility and schema evolution. Integer. |
-| `<zone>` | For internal use by Braze. |
+| `version=<currents_version>` | The Currents version for the pipeline path. This value is a simple integer such as `6`. |
+| `<environment>` | For internal use by Braze. |
 | `<partition>` | For internal use by Braze. Integer. |
 | `<offset>`| For internal use by Braze. Integer. Note that different files sent within the same hour will have a different `<offset>` parameter. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -88,7 +96,7 @@ Currents will never write empty files.
 
 ### Avro schema changes
 
-From time to time, Braze may make changes to the Avro schema when fields are added, changed, or removed. For our purposes here, there are two types of changes: breaking and non-breaking. In all cases, the `<schema-id>` will be advanced to indicate the schema was updated. Currents events written to Azure Blob Storage, Google Cloud Storage, and Amazon S3 will write the `<schema-id>` in the path. For example `<your-bucket-name0>/<currents-integration-id>/<event-type>/<date-of-event>/<schema-id>/<environment>/<avro-file>`.
+From time to time, Braze may make changes to the Avro schema when fields are added, changed, or removed. For our purposes here, there are two types of changes: breaking and non-breaking. In all cases, the Currents path version advances to indicate the schema was updated. Currents events written to Azure Blob Storage, Google Cloud Storage, and Amazon S3 write this as `version=<currents_version>` in the path. For example: `<your-bucket-prefix>/.../event_type=<event-type>/date=<date>/version=6/<environment>/...`.
 
 #### Non-breaking changes
 
