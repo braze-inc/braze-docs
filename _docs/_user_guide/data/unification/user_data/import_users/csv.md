@@ -231,7 +231,7 @@ For example, the custom event `trip_booked` may have the properties `destination
 
 To upload your file, select **Attributes** or **Events**, click **Browse Files**, and upload your CSV. Braze displays a preview of the first few rows and a summary of the detected fields.
 
-For large files (up to 500 MB for user attributes and custom attributes, or 50 MB for custom events), the dashboard may appear unresponsive or take longer than you expect while the file uploads and Braze calculates the import. Let this step complete. For more context on file limits and timing, see [Constructing your CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/#constructing-your-csv).
+For large files (up to 500 MB for default attributes and custom attributes, or 50 MB for custom events), the dashboard may appear temporarily unresponsive while the file uploads and Braze calculates the import. These uploads and calculations can take longer to complete than they do for smaller files. Let this step complete. For more context on file limits and timing, see [Constructing your CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/#constructing-your-csv).
 
 ![The upload completed modal showing a file preview, import name field, targeting preferences, and file validation checkbox.]({% image_buster /assets/img/csv_import/upload_completed.png %})
 
@@ -287,7 +287,7 @@ You can also choose from the following targeting preferences. If you don't need 
 
 ### Step 7: Start your CSV import
 
-When you're ready, select **Start import**. You can track the current progress on the **Import Users** page, which automatically refreshes every 5 seconds. Processing can take from a few minutes to a few hours depending on how large your CSV is. During this time, the dashboard may appear idle.
+When you're ready, select **Start import**. You can track the current progress on the **Import Users** page, which automatically refreshes every 5 seconds. Processing can take from a few minutes to a few hours depending on how large your CSV is. During this time, the dashboard may appear unresponsive or respond slowly, but the import is still running.
 
 {% alert note %}
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
