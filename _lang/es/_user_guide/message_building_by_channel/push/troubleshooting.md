@@ -3,7 +3,7 @@ nav_title: Solución de problemas
 article_title: Solución de problemas Push
 page_order: 24
 page_type: reference
-description: "Esta página contiene pasos para la solución de problemas relacionados con el canal de mensajería Push."
+description: "Esta página contiene pasos para la solución de problemas relacionados con el canal de mensajería push."
 channel: push
 ---
 
@@ -78,13 +78,31 @@ Comprueba que estás utilizando el tipo correcto de notificación push. Por ejem
 
 Cuando pruebes los envíos push con usuarios internos, asegúrate de que el usuario que deseas que reciba la notificación push esté conectado a la aplicación correspondiente. Esto puede provocar que el usuario no reciba una notificación push o que reciba una notificación push para la que crees que no está segmentado.
 
+## Al hacer clic en una notificación push no se abre la aplicación
+
+Si al hacer clic en una notificación push no se abre tu aplicación, comprueba lo siguiente según tu plataforma.
+
+### Android
+
+1. **Verifica el comportamiento al hacer clic:** Confirma que la campaña está configurada para abrir la aplicación al hacer clic.
+2. **Comprueba el manejo de vínculos profundos:** En tu archivo `braze.xml`, comprueba si `com_braze_handle_push_deep_links_automatically` está configurado como `true` o `false`.
+   - Si está configurado como `true`, el SDK de Braze maneja los vínculos profundos directamente y la aplicación debería abrirse como se espera.
+   - Si está configurado como `false`, tu aplicación necesita un receptor de difusión para escuchar y manejar las intenciones de push recibidas y abiertas. Verifica que este receptor esté implementado correctamente.
+3. **Recopila registros detallados:** [Habilita el registro detallado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduce el problema y proporciona los registros junto con tu `braze.xml` y `AndroidManifest.xml` al soporte de Braze.
+
+### iOS
+
+1. **Verifica el comportamiento al hacer clic:** Confirma que la campaña está configurada para abrir la aplicación al hacer clic.
+2. **Comprueba la integración push:** La vinculación en profundidad desde una notificación push hacia la aplicación se maneja automáticamente mediante la [integración push estándar]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) de Braze. Confirma que la integración esté implementada correctamente, incluyendo cualquier manejo de delegado personalizado.
+3. **Recopila registros detallados:** [Habilita el registro detallado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduce el problema y proporciona los registros al soporte de Braze.
+
 ## Los clics push se abren inesperadamente en la aplicación
 
 Si tienes problemas con enlaces en notificaciones push que se abren inesperadamente en tu aplicación en lugar de en tu navegador web, es posible que haya un problema con la configuración de tu campaña o la implementación del SDK. Consulta estos pasos para obtener ayuda.
 
 ### Verificar el comportamiento al hacer clic
 
-En tu campaña o paso en Canvas, comprueba que la opción **Abrir URL web dentro de la aplicación móvil** no esté seleccionada. Si es así, desmarca la selección y vuelve a lanzar. 
+En tu campaña o paso en Canvas, comprueba que la opción **Abrir URL web dentro de la aplicación móvil** no esté seleccionada. Si lo está, desmarca la selección y vuelve a lanzar. 
 
 ![Campo «Comportamiento al hacer clic» de la configuración de una notificación push establecido en «Abrir URL web» con la opción «Abrir URL web dentro de la aplicación móvil» desmarcada.]({% image_buster /assets/img/push_on_click.png %})
 

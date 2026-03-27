@@ -11,11 +11,17 @@ search_rank: 3
 
 > Diese Seite befasst sich mit Kauf-Events und Eigenschaften, ihrer Verwendung, Segmentierung, wo Sie relevante Analytics einsehen können und mehr.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 Kauf-Events sind Kaufaktionen Ihrer Nutzer:innen und werden verwendet, um In-App-Käufe zu erfassen und den Lifetime-Value (LTV) für jedes Nutzerprofil zu ermitteln. Diese Events müssen von Ihrem Team eingerichtet werden. Die Protokollierung von Kauf-Events ermöglicht es Ihnen, Eigenschaften wie Menge und Typ hinzuzufügen, sodass Sie Ihre Nutzer:innen auf der Grundlage dieser Eigenschaften noch gezielter ansprechen können.
 
 ## Kauf-Events protokollieren
 
 Sie können Käufe protokollieren, indem Sie ein [Kauf-Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/) über den [`/users/track`-Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) übermitteln oder eine unserer unten aufgeführten SDK-Bibliotheken verwenden.
+
+{% alert note %}
+Kauf-Event-Eigenschaften verwenden dieselben Datentypen wie [angepasste Event-Eigenschaften]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#expected-format).
+{% endalert %}
 
 Im Folgenden finden Sie eine Liste der Methoden, die auf verschiedenen Plattformen zur Protokollierung von Käufen verwendet werden. Auf diesen Seiten finden Sie auch eine Dokumentation darüber, wie Sie Eigenschaften und Mengen zu Ihrem Kauf-Event hinzufügen können. Sie können Ihre Nutzer:innen auf der Grundlage dieser Eigenschaften gezielter ansprechen.
 
@@ -109,7 +115,7 @@ Neben dem Tracking von Kaufmetriken für die Segmentierung erfasst Braze auch di
 
 Sie finden diese Daten auf der Seite [Umsatzbericht]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
-### Umsatzberechnungen verstehen
+### Umsatzberechnungen
 
 <style>
     .no-split {
