@@ -10,7 +10,7 @@ Banners availability depends on your Braze package. Contact your account manager
 
 ## Why use Banners?
 
-Banners allow marketing and product teams to personalize app or website content dynamically, reflecting real-time user eligibility and behavior. They persistently display messages inline, providing non-intrusive, contextually relevant experiences that update automatically at the start of each user session.
+Banners allow marketing and product teams to personalize app or website content dynamically, reflecting real-time user eligibility and behavior. They persistently display messages inline, providing non-intrusive, contextually relevant experiences that can be refreshed at the start of a session or mid-session when your app or website explicitly requests it.
 
 After Banners are integrated into an app or website, marketers can design and launch Banners using a simple drag-and-drop editor, eliminating the need for ongoing developer assistance, reducing complexity, and improving efficiency.
 
@@ -28,7 +28,7 @@ Features for Banners include:
 
 - **Easy content building:** Create and preview your Banner using a visual, drag-and-drop editor with support for images, text, buttons, email capture forms, custom code, and more.
 - **Flexible placements:** Define multiple locations within your application or website where Banners can appear, enabling precise targeting to specific contexts or user experiences.
-- **Dynamic personalization:** Banners dynamically refresh with every new user session, ensuring content stays current and personalized using Braze’s built-in personalization tools and Liquid logic.
+- **Dynamic personalization:** Banners can only be refreshed at the start of a new session or mid-session if a customer explicitly requests the refresh. Banners don’t update automatically on a new session. If a customer doesn't request the refresh, the Banner won't update.  
 - **Native prioritization:** Set the display priority for when multiple Banners target the same placement, ensuring the right message reaches users at the right time.
 - **Custom Code editor block:** Use the Custom Code editor block to add custom HTML for advanced customization or seamless integration with your existing web styles.
 
