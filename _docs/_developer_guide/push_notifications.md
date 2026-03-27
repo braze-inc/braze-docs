@@ -9,6 +9,10 @@ description: "This landing page is home to all things push notifications."
 
 > [Push notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) allow you to send out notifications from your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. They are also more efficient than background fetch, as your application only launches when necessary.
 
+{% alert note %}
+If you set **Redirect to web URL** with **Open web URL inside app** cleared, but the link still opens inside the app, the app may be handling the URL (for example, with universal links on iOS or App Links on Android). To open the link in the browser instead, confirm your app delegates the URL to the system browser when the user taps the notification, or adjust your app's URL handling so that the click action matches the Braze dashboard setting. See your platform's push documentation for how click actions and URL handling are configured.
+{% endalert %}
+
 {% sdktabs %}
 {% sdktab web %}
 {% multi_lang_include developer_guide/web/push_notifications.md %}
