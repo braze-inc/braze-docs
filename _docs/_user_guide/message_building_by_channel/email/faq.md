@@ -143,10 +143,13 @@ This warning can persist for campaigns duplicated from a campaign that did not h
 
 ### What are reasons why my user hasn't received an email campaign?
 
-- The message may be in Spam—ask the user to check.
-- They weren't eligible to receive email.
-- The address is invalid or doesn't exist.
+
+Reasons why a user hasn't received an email campaign include:
+
+- They weren't eligible to receive the email.
+- Their email address is invalid or doesn't exist.
 - They may have missed or deleted the message.
+- The message may be in their spam folder.
 
 ### How can I optimize images in Outlook?
 
