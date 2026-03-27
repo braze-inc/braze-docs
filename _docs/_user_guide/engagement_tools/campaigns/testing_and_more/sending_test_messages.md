@@ -61,7 +61,7 @@ Keep in mind, your preview may not be identical to the final render on a user's 
 {% endtab %}
 {% tab Content Card %}
 
-{% alert warning %}
+{% alert important %}
 To send a test to either [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices with valid push tokens registered for the test user before sending. For iOS users, you must tap the push notification sent by Braze in order to view the test Content Card. This behavior only applies to test Content Cards.
 {% endalert %}
 
@@ -216,13 +216,6 @@ The scanner runs automatically on custom HTML messages and evaluates your entire
 {% endtab %}
 {% tab Push %}
 
-{% alert note %}
-If you see the error "None of the selected users have matching push tokens for iOS/Android Push":
-- The test user doesn't have a valid push token registered for the selected platform.
-- To receive a push token, the user must start a session in your app and enable push notifications for the app on their device.
-- You can verify a user's push tokens in the **Engagement** tab of their user profile under **Contact Settings**.
-{% endalert %}
-
 #### Mobile push
 
 1. Draft your mobile push.
@@ -240,7 +233,9 @@ If you see the error "None of the selected users have matching push tokens for i
 
 ![Test web push]({% image_buster /assets/img_archive/testwebpush.png %})
 
-If you have already accepted push messages from the Braze dashboard, the push will come through in the corner of your screen. Otherwise, click **Allow** when prompted, and the message will appear.
+If you have already accepted push messages from the Braze dashboard, the push displays in the corner of your screen. Otherwise, select **Allow** when prompted, and the message displays.
+
+If you see the error "None of the selected users have matching push tokens for iOS/Android Push", verify the test user has a valid push token registered for the selected platform. To receive a push token, the user must start a session in your app and enable push notifications for the app on their device. You can verify a user's push tokens in the **Engagement** tab of their user profile under **Contact Settings**.
 
 {% endtab %}
 {% tab SMS/MMS and RCS %}
