@@ -113,7 +113,7 @@ The **Content Card Performance** panel outlines how well your message has perfor
 {% elsif include.channel == "email" %}
 ### Email Performance
 
-The **Email Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
+The **Email Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can select the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
 ![Email message performance analytics]({% image_buster /assets/img_archive/email_message_performance.png %})
 
@@ -167,7 +167,11 @@ If you want to simplify your view, click <i class="fas fa-plus"></i> **Add/Remov
 
 #### Heatmaps
 
-Using heatmaps, you can see how successful different links in a single email campaign. From the **Message Analytics** section, go to the **Email Performance** panel. Select **Preview & Heatmap** to view a preview of your email campaign and the heatmap. Alternatively, you can select the hyperlink in the variant name to view the heatmap.
+Using heatmaps, you can see how successful different links in a single email campaign are. From the **Message Analytics** section, go to the **Email Performance** panel. Select **Preview & Heatmap** to view a preview of your email campaign and the heatmap. Alternatively, you can select the hyperlink in the variant name to view the heatmap.
+
+{% alert note %}
+When link aliasing is disabled, Braze tracks up to 100 unique links per variant, including any query parameters in the URL. When link aliasing is enabled, Braze tracks normalized URLs, which remove query parameters from the URL. As a result, the expandable URL-specific click analytics in the dashboard may omit some full URLs for a given campaign if there are already 100 unique URLs collected for clicks.
+{% endalert %}
 
 In this view, you can use the **Show Heatmap** toggle to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. In the **Link Table by Total Clicks** panel, you can view all of the links in your email campaign and sort by total clicks. This can provide additional insight on where your users navigate. To save a copy of the heatmap for reference, select the download button.
 
