@@ -50,6 +50,17 @@ There are two ways you can remove custom attributes from user profiles:
 * Select the custom attribute name to be removed in a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#removing-custom-attributes).
 * Set the `null` value in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
+#### Setting the `null` value
+
+{% alert important %}
+Setting an attribute to `null` and setting it to `""` (empty string) are not the same.
+{% endalert %}
+
+- `null` removes the attribute from the user profile entirely. It will not appear in the profile or match any **IS NOT BLANK** filter. 
+- `""` sets the attribute to an empty string value. The attribute will appear on the profile with no value and match **IS NOT BLANK** filters.
+
+Additionally, `""` is only valid for string-type attributes. If the attribute's data type is set to a non-string type (such as boolean, number, or time) in the dashboard, sending `""` will not clear the value—use `null` instead.
+
 ### Exporting data
 
 To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
