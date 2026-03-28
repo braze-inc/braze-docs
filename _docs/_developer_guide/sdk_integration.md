@@ -9,6 +9,10 @@ page_order: 2.0
 
 > Learn how to integrate the Braze SDK. Each SDK is hosted in its own public GitHub repository, which includes fully-buildable sample apps you can use to test Braze features or implement alongside your own applications. To learn more, see [References, Repositories, and Sample Apps]({{site.baseurl}}/developer_guide/references/). For more general information about the SDK, see [Getting started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
+{% alert note %}
+**Cursor and Claude Agent users:** A Braze SDK integration skill is available for sample repos and local development. The skill (in `.cursor/skills/braze-sdk-integration/`) guides initial setup, platform-specific configuration, standard analytics, and troubleshooting. It includes a `scripts/validate_setup.py` utility that validates your API key and SDK endpoint format and generates a boilerplate config file (e.g. `braze.xml` for Android or `BrazeConfig.ts` for Web). Upload or copy this skill into your app repo to get in-context guidance when working with Braze.
+{% endalert %}
+
 {% alert tip %}
 After integrating the SDK, you can enable [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) to add an additional layer of security by preventing unauthorized SDK requests. SDK Authentication is available for Web, Android, Swift, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin), and Expo.
 {% endalert %}
