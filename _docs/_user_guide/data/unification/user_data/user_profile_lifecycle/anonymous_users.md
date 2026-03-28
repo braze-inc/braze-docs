@@ -33,6 +33,20 @@ You can do the following with captured anonymous users:
 
 Sometimes anonymous user profiles are duplicates that have the same phone number or email address as other user profiles. One of the duplicates may even be an identified user profile. These duplicates can be merged into one user profile by using the [POST: Merge Users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) or one of the merge tools on the Braze platform, such as [rules-based merging]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
 
+## Looking up an anonymous user
+
+Because anonymous users don't have an `external_id`, you can look them up by their device ID. To find the device ID for a Web SDK user:
+
+1. Open your browser's developer tools (for example, in Chrome, press **Command + Option + J** on Mac or **Ctrl + Shift + I** on Windows).
+2. In the **Console** tab, run the following:
+
+```javascript
+braze.getDeviceId(function(deviceId) { console.log(deviceId); });
+```
+
+{:start="3"}
+3. Search for the returned device ID in the Braze dashboard using [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) to find the anonymous user's profile.
+
 ## Use cases
 
 ### Target anonymous users in your segment
