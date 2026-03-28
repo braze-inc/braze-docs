@@ -85,7 +85,7 @@ This table contains the data that will be initially loaded through the backfill.
 | {::nomarkdown}<ul><li>Order placed</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-As your Shopify customer records are loaded into Braze, the Shopify customer ID will be used as the Braze external ID. 
+As your Shopify customer records are loaded into Braze, your Shopify external ID is used as the Braze external ID. If your Shopify external ID is an email or hashed email (and not a Shopify customer ID), refer to the alert warning in [step 4]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4). 
 
 {% alert note %}
 If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify data features]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) for more details. 
