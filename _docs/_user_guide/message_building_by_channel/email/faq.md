@@ -80,6 +80,36 @@ For best practices on how to handle these responses, refer to [Handling increase
 
 Braze tracks unsubscribe links if the following Liquid is used within emails: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}
 
+### Why didn't a user receive my email?
+
+There are several reasons why a user might not receive an email that you expected them to get. Use the following checklist to narrow down the cause.
+
+#### The email wasn't sent
+
+| Possible cause | What to check |
+|---|---|
+| The user wasn't eligible for the campaign or Canvas | Check the **Target Audiences** (for campaigns) or **Target Audience** (for Canvas) [settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) to confirm the user met all audience filters, segment criteria, and delivery rules at the time of send. |
+| The message was aborted | Check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) for abort reasons, such as Liquid errors or missing required fields. |
+| The user's email address was invalid or missing | In **User Search**, check the user's profile to verify that a valid email address was on file at the time of send. |
+| The user's email address previously hard bounced | A hard bounce marks the email address as invalid and prevents future sends to that address. Check the user's **Engagement** tab in their profile. For more details, refer to [Bounces]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#bounces). |
+| The user is unsubscribed from email | Check the user's subscription status under **Contact Settings** on the **Engagement** tab. Braze won't send marketing emails to users who are unsubscribed. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### The email was sent, but didn't arrive in their inbox
+
+| Possible cause | What to check |
+|---|---|
+| The mailbox provider (MBP) was unreachable | A temporary issue prevented the email from reaching the recipient's MBP. This typically resolves itself with retries. Braze retries soft bounces for up to 72 hours. |
+| The MBP bounced the email | The recipient's mail server rejected the email. Review the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) for bounce details. |
+| The MBP silently dropped the email | The MBP accepted the email but didn't display it to the user and didn't return a bounce. This is outside of Braze's control and cannot be detected in Braze logs. |
+| The email went to the spam folder | The MBP identified the message as spam and routed it to the user's spam or junk folder. Ask the user to check their spam folder. |
+| The recipient has custom mail filtering | The user or their IT administrator may have configured mailbox rules that filter, redirect, or delete incoming messages. Ask the user to check with their mailbox administrator or IT team. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert tip %}
+A delivery event in Braze means the email was accepted by the mailbox provider's server. However, this does not guarantee that the message appears in the user's inbox. The MBP may route the message to spam or, in rare cases, silently prevent display of the message.
+{% endalert %}
+
 ### Can I add a "view this email in a browser" link to my emails?
 
 No. Braze does not offer this functionality. This is because a growing majority of email is opened on mobile devices and in modern email clients, which render images and content without issues.
