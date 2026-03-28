@@ -4,6 +4,10 @@
 
 Before you can use Content Cards, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) into your app. However, no additional setup is required. To build your own UI instead, see [Content Card Customization Guide]({{site.baseurl}}/developer_guide/content_cards/).
 
+{% alert note %}
+Some ad blockers and browser privacy extensions can block Braze SDK endpoint requests, which prevents Content Cards from loading. If you're using the CDN integration method, consider switching to the [NPM integration method]({{site.baseurl}}/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web), which stores SDK libraries on your domain and provides immunity from most ad-blocker extensions.
+{% endalert %}
+
 ## Standard feed UI
 
 To use the included Content Cards UI, you'll need to specify where to show the feed on your website. 
