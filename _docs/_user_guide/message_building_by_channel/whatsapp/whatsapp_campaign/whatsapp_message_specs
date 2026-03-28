@@ -1,0 +1,258 @@
+# WhatsApp Message & Media Specifications
+
+> **Audience:** Braze customers building WhatsApp campaigns
+> **Purpose:** Reference guide for message structure, component limits, and media asset requirements — covering what you need to know before designing assets or submitting templates to Meta for approval.
+> **Last reviewed:** March 2026
+
+---
+
+## Overview
+
+WhatsApp messages in Braze fall into two categories:
+
+| Type | When it's used | Requires Meta approval? |
+|---|---|---|
+| **Template messages** | Business-initiated outreach; sent any time | Yes — submitted and approved before sending |
+| **Response messages** | Replies to user-initiated messages; within 24-hour conversation window only | No |
+
+Template messages must be submitted to Meta for approval, which can take up to 24 hours. Once approved, they can be sent at any time. Response messages (called "session messages" in Meta's documentation) can only be sent while an active conversation window is open — within 24 hours of the last inbound message from the user.
+
+---
+
+## Template Messages
+
+Template messages are pre-approved message formats used for business-initiated outreach. In Braze, they are built from components you define before submitting to Meta. All template messages are category-based: **Marketing**, **Utility**, or **Authentication**.
+
+> This guide focuses on **Marketing** templates, which are the most common type used in Braze.
+
+### Custom Marketing Templates
+
+Custom marketing templates consist of up to four component types:
+
+| Component | Required? | Notes |
+|---|---|---|
+| Header | No | Supports text, image, video, document, or location |
+| Body | Yes | The main message content |
+| Footer | No | Supplementary text displayed below the body |
+| Buttons | No | Up to 10 buttons; all types supported |
+
+**Character limits**
+
+| Component | Limit |
+|---|---|
+| Body | 1,024 characters |
+| Footer | 60 characters |
+| Button label (URL, phone, quick reply) | 25 characters |
+| Phone number (in phone button) | 20 characters |
+| Template name | 512 characters (lowercase, alphanumeric, and underscores only) |
+
+**Button types**
+
+| Button type | What it does |
+|---|---|
+| Quick reply | Sends the button label text as a reply in the conversation |
+| URL | Opens a URL in the user's default browser; supports 1 variable appended to the end of the URL (max 2,000 characters) |
+| Phone number | Initiates a call to the specified phone number |
+| Copy coupon code | Copies a coupon code to the user's clipboard; **always requires Meta approval** |
+
+**Supported header media types:** image, video, document, or location. See [Media Specifications](#media-specifications) for file type, size, and dimension requirements.
+
+**Parameter formatting**
+
+Template variables can use either named parameters (e.g., `{{first_name}}`) or positional parameters (e.g., `{{1}}`). In Braze, variables can be replaced with Liquid or plain text. Always include default values for Liquid variables — messages with missing variable values will not be sent.
+
+---
+
+### Media Card Carousel Templates
+
+Carousel templates display a message body followed by 2–10 horizontally scrollable product cards, each with its own media asset and buttons.
+
+> Carousel templates are only available for **Marketing** template messages.
+
+**Top-level message**
+
+| Component | Required? | Limit |
+|---|---|---|
+| Body text | Yes | 1,024 characters; supports variables |
+| Cards | Yes | Minimum 2, maximum 10 |
+
+**Per-card specs**
+
+| Component | Required? | Notes |
+|---|---|---|
+| Header (image or video) | Yes | All cards must use the same format (all image or all video) |
+| Body text | No | If any card includes body text, all cards must include it |
+| Buttons | No | Maximum 2 buttons per card |
+
+**Per-card limits**
+
+| Component | Limit |
+|---|---|
+| Card body text | 160 characters |
+| Button label | 25 characters |
+| Phone number (in phone button) | 20 characters |
+| URL (in URL button) | 2,000 characters; supports 1 variable appended to end |
+
+**Important constraints**
+- Card count is **fixed at template creation** — an approved carousel template can only be sent with the exact number of cards defined during creation.
+- All cards must use the **same component structure**. You cannot mix cards with and without body text or buttons.
+- Card header assets are automatically cropped to a wide ratio based on the recipient's device.
+- URL buttons open in the user's default browser, taking them outside WhatsApp. No order or conversion webhooks are triggered from that point.
+
+---
+
+## Response Messages
+
+Response messages (referred to as "session messages" in Meta's documentation) can only be sent within the **24-hour conversation window** — opened when a user sends your business a message, and reset each time they do.
+
+In Braze, response messages are composed directly in the campaign or Canvas editor and do not require Meta approval.
+
+**Braze supports seven response message layouts:**
+
+| Layout | Description |
+|---|---|
+| Text | Plain message body text |
+| Media | Message with an image, video, audio, or document attachment |
+| Quick reply | Message with up to 3 tappable reply buttons |
+| Call-to-action (CTA) button | Message with a URL button or phone number button |
+| List message | Message with a structured, scrollable list of selectable options |
+| Flow message | Prompts users to complete a form or interactive task in WhatsApp, with the output returning to Braze|
+| Meta Product message | Message with that highlights a single product, multiple produts or an entire catalog from a connected Meta catalog |
+
+**List message limits**
+
+| Component | Limit |
+|---|---|
+| Body text | 4,096 characters |
+| Button label (to open list) | 20 characters |
+| Number of sections | Up to 10 |
+| Number of rows per section | Up to 10 |
+| Section title | 24 characters |
+| Row title | 24 characters |
+| Row description | 72 characters |
+
+**Quick reply limits**
+- Maximum **3 buttons**
+- Button label: **20 characters** each
+
+---
+
+## Media Specifications
+
+The following specs apply to all media sent via WhatsApp — in template headers, response messages, or standalone media messages. Specs are noted by message type where they differ.
+
+> **Braze media library note:** The Braze media library supports **images and videos only**. Audio files and documents must be referenced via URL. See the callout below for URL requirements.
+
+---
+
+### Images
+
+**Applies to:** Template headers, response media messages, image messages
+
+| Property | Spec |
+|---|---|
+| Supported formats | JPEG, PNG |
+| Max file size | 5 MB |
+| Color mode | 8-bit, RGB or RGBA |
+| Caption (image messages only) | Optional; max 1,024 characters |
+| Recommended dimensions | 1,125 × 600 px |
+| Recommended aspect ratio | 1.91:1 (wide) |
+
+**Notes**
+- Meta only officially supports JPEG and PNG for image messages. WEBP is supported for **stickers only** (not standard image messages).
+- Square (1:1) and wide (16:9) formats are also accepted, but images may be cropped or enlarged depending on the recipient's device.
+- For carousel cards, header images are automatically cropped to a wide ratio by WhatsApp, unless there is no body text, in which case it renders as a square.
+
+> **Recommendation:** Stick to JPEG or PNG at 1,125 × 600 px (1.91:1) to ensure consistent rendering across devices and compliance with Meta's requirements.
+
+---
+
+### Video
+
+**Applies to:** Template headers, response media messages, video messages, carousel card headers
+
+| Property | Spec |
+|---|---|
+| Supported formats | MP4, 3GPP |
+| Max file size | 16 MB |
+| Video codec | H.264 only |
+| Audio codec | AAC only |
+| Audio streams | Single audio stream or no audio stream |
+| Caption (video messages only) | Optional; max 1,024 characters |
+| Recommended aspect ratio | 1.91:1 (wide) |
+
+**Android compatibility note**
+H.264 "High" profile encoded with B-frames is **not supported on Android WhatsApp clients**. Use H.264 **"Main" profile without B-frames** or **"Baseline" profile** for the broadest compatibility. If re-encoding with ffmpeg, use the `-movflags faststart` flag to place `moov` boxes before `mdat` boxes.
+
+**Behavior:** Video messages display as a thumbnail preview. The user taps to load and play the full video.
+
+---
+
+### Audio
+
+**Applies to:** Response media messages, audio messages
+
+Meta distinguishes between two audio message types with different behaviors:
+
+#### Voice messages
+A voice message functions like a recorded voice note, with playback controls and transcription support.
+
+| Property | Spec |
+|---|---|
+| Required format | OGG only |
+| Required codec | OPUS only (mono input) |
+| Max file size | 16 MB |
+| Play icon appears | Only if file is **≤ 512 KB**; larger files show a download icon |
+| Transcription | Displayed automatically if user has enabled WhatsApp voice transcripts |
+
+#### Basic audio messages
+Standard audio file sharing (music clips, audio ads, sound files).
+
+| Format | Extension | Max Size |
+|---|---|---|
+| AAC | .aac | 16 MB |
+| AMR | .amr | 16 MB |
+| MP3 | .mp3 | 16 MB |
+| MP4 Audio | .m4a | 16 MB |
+| OGG (OPUS codec) | .ogg | 16 MB |
+
+**Notes**
+- OGG files **must** use the OPUS codec. Base `audio/ogg` without OPUS is not supported.
+- OGG/OPUS files sent as basic audio messages will display a microphone icon (same as voice messages) rather than a music icon.
+- No caption support for audio messages of either type.
+- A common error is mismatched MIME types — verify your file's MIME type matches its extension before sending.
+
+> **Braze note:** Audio files cannot be uploaded to the Braze media library. They must be referenced via a hosted URL. ⚠️ *[Internal: Add specific URL requirements/constraints here before publishing — e.g., URL must be publicly accessible, MIME type must match, HTTPS required, etc.]*
+
+---
+
+### Documents
+
+**Applies to:** Template headers (document format), response media messages, document messages
+
+| Document type | Extension | Max size |
+|---|---|---|
+| PDF | .pdf | 100 MB |
+| Microsoft Word | .doc, .docx | 100 MB |
+| Microsoft Excel | .xls, .xlsx | 100 MB |
+| Microsoft PowerPoint | .ppt, .pptx | 100 MB |
+| Plain text | .txt | 100 MB |
+
+**Notes**
+- Caption: optional, max **1,024 characters**
+- Filename: optional — WhatsApp uses the file extension to determine which document icon to display in the conversation
+- Only the formats listed above are officially supported. Other file types may send but are not guaranteed to render correctly in the WhatsApp client.
+
+> **Braze note:** Documents cannot be uploaded to the Braze media library. They must be referenced via a hosted URL. 
+
+---
+
+## Quick Reference: Media Limits
+
+| Media type | Formats | Max size | Caption? |
+|---|---|---|---|
+| Image | JPEG, PNG | 5 MB | Yes (1,024 chars) |
+| Video | MP4, 3GPP | 16 MB | Yes (1,024 chars) |
+| Audio (voice) | OGG (OPUS) | 16 MB | No |
+| Audio (basic) | AAC, AMR, MP3, M4A, OGG | 16 MB | No |
+| Document | PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, TXT | 100 MB | Yes (1,024 chars) |
