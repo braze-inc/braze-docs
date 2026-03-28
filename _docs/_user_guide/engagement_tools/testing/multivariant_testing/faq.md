@@ -43,7 +43,11 @@ For recurring, action-based, and API-triggered campaigns, you can use Intelligen
 
 Users are randomly assigned to a particular variant before receiving the campaign for the first time. Each successive time the campaign is received (or the user re-enters a Canvas variant), they will receive the same variant unless the variant percentages are modified. If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Users will only be redistributed for the variants that were edited.
 
-For example, let’s say we have a campaign or Canvas with three variants. If only Variant A and Variant B are changed or updated, then users in Variant C won’t be redistributed because Variant C's variant percentage wasn't changed. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages can’t enter the control group on a later send, nor can any user in the control group ever receive a message.
+For example, let’s say we have a campaign or Canvas with three variants. If only Variant A and Variant B are changed or updated, then users in Variant C won’t be redistributed because Variant C's variant percentage wasn't changed. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages can’t enter the control group on a later send, nor can any user in the control group ever receive a message. 
+
+{% alert note %}
+A user can be marked as having "received" a message if they share a channel identifier (such as an email or phone number) with someone who received, opened, or clicked the message.
+{% endalert %}
 
 #### What about Experiment Paths?
 

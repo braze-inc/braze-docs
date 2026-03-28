@@ -147,7 +147,7 @@ Any of these things will prevent a user who has completed the trigger event from
 - Liquid [`abort_message` logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages)  was used and the message was aborted based on the `abort_message` logic or rules.
 - The time delay caused the user to become qualified to receive the campaign after the duration has ended.
 - The time delay caused the user to become qualified to receive the campaign outside of the specified portion of the day.
-- The user has already received the campaign, and users do not become re-eligible.
+- The user has already received the campaign (including attribution through shared channel identifiers—for example, if they share an email with someone who received, opened, or clicked it), and users do not become re-eligible.
 - While users are re-eligible to receive the campaign, they can only re-trigger it after a certain period of time, and that period of time has not yet elapsed.
 
 [Segmenting]({{site.baseurl}}/user_guide/engagement_tools/segments/) a triggered campaign on user data recorded at the time of the event may cause a [race condition]({{site.baseurl}}/help/best_practices/race_conditions/#race-conditions). This happens when the user attribute on which the campaign is segmented gets changed, but the change hasn't been processed for the user when the campaign is sent. Since campaigns check for segment membership on entry, this can lead to the user not receiving the campaign.

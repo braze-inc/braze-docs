@@ -74,12 +74,12 @@ The **Engagement** tab contains information about a user's interactions with the
 | Engagement category | Contains |
 | --- | --- |
 | Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
-| Campaigns received | Campaigns received are marked when the user receives the campaign, or when we first detect interaction data for a user. Select a campaign from the list to view it. |
+| Campaigns received | Campaigns received are marked when the user receives the campaign, or when we first detect interaction data for a user. When a message is delivered, opened, or clicked, Braze also updates this data for all profiles that share the same channel identifier (for example, email or phone number), so a user can appear as having received a campaign they were not originally sent.<br><br> Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user last received messages from you from each channel. |
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/). |
-| Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
+| Canvas messages received | Canvas messages this user has received and when. When a message is delivered, opened, or clicked, Braze also updates this data for all profiles that share the same channel identifier (for example, email or phone number), so a user can appear as having received a Canvas message they were not originally sent.<br><br> Select a message from the list to view it. |
 | Predictions | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_events/) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -90,7 +90,7 @@ The **Engagement** tab contains information about a user's interactions with the
 The **Message History** tab of the user profile shows recent messaging-related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. 
 
 {% alert note %}
-The data in this tab isn't updated after a user is merged. Additionally, any events associated with messages sent through API (for example, the [/messages/send endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#creating-new-users-with-api-sends) will not appear in this tab if there is no campaign ID specified in those sends.
+The data in this tab isn't updated after a user is merged. Additionally, any events associated with messages sent through API (for example, the [/messages/send endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#creating-new-users-with-api-sends)) will not appear in this tab if there is no campaign ID specified in those sends.
 {% endalert %}
 
 ![The Messaging History tab showing which campaigns and Canvases a user has received.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
