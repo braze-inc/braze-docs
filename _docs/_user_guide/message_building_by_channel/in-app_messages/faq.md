@@ -51,6 +51,14 @@ This can occur for users who met the segment criteria when the in-app message ca
 
 To prevent this, during your campaign setup, select **Re-evaluate campaign eligibility before displaying**. 
 
+### Can multiple in-app messages display in the same session?
+
+Only one in-app message can display per trigger event. If multiple in-app message campaigns share the same trigger (for example, session start), only the highest-priority message displays in that session. The user must start a new session to see the next message in the priority order.
+
+When multiple messages share the same priority level, the most recently created message displays first. In subsequent sessions, the next most recent message displays, and so on.
+
+To control the display order within a priority bucket, go to the delivery settings for any of the campaigns and select **Set Exact Priority**, then drag and drop campaigns into the desired order. For more details, refer to [Choose a priority]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/#choose-a-priority).
+
 ### How does Braze calculate an in-app message expiration set to "after 1 day(s)"?
 
 Braze calculates an expiration time of one day as 24 hours after users are eligible to receive a message.
