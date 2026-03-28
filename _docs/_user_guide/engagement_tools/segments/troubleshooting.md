@@ -30,7 +30,7 @@ Your dashboard will display an error when a campaign, Canvas, or segment exceeds
 You can also [contact Support]({{site.baseurl}}/braze_support/) for further assistance with filter optimization.
 
 {% alert note %}
-We began limiting character counts in April 2025. Campaigns and Canvases that launched before April 2025 were grandfathered, which means they can continue exceeding the limit, whereas newly created campaigns and Canvases can't exceed the limit. If you edit or clone a grandfathered campaign or Canvas, you **will not** be able to launch it until the audience is updated to be below the limit.
+We began limiting character counts in April 2025. Campaigns and Canvases that launched before April 2025 were exempt, which means they can continue exceeding the limit, whereas newly created campaigns and Canvases can't exceed the limit. If you edit or clone an exempt campaign or Canvas, you **will not** be able to launch it until the audience is updated to be below the limit.
 {% endalert %}
 
 ### X active or stopped campaigns or Canvases exceed the audience complexity threshold
