@@ -47,8 +47,8 @@ guide_featured_list:
 - name: "Billing Calculators"
   link: /docs/sms_rcs_billing_calculators/
   image: /assets/img/braze_icons/calculator.svg
-- name: "Message Usage Dashboard"
-  link: /docs/message_usage_dashboard/
+- name: "Credits Usage Dashboard"
+  link: /docs/credits_usage_dashboard/
   image: /assets/img/braze_icons/file-07.svg
 
 guide_menu_title: "SMS"
