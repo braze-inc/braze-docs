@@ -247,6 +247,7 @@ $(document).ready(function() {
 
     {% include ai_translation_banner.html %}
     {% multi_lang_include layouts/report_metrics_intro.html %}
+    {% include last_updated.html reposition=true %}
 
     <div id="api_filter">
         <input id="api_search" type="search" placeholder="Search" aria-label="Search glossary" />

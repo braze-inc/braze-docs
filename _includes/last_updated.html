@@ -1,0 +1,56 @@
+{%- comment -%}
+  Renders "Last updated: Month Day, Year" for pages that have an entry in the
+  language-specific sitemap JSON file.
+
+  Parameters:
+    reposition (bool, optional): When true, includes JavaScript to reposition
+      the element directly after the first h1 or h2 inside the page's main
+      content container. Use this for layouts where the page title is rendered
+      as part of {{ content }} or a multi_lang_include rather than as explicit
+      HTML in the layout template itself.
+    bottom (bool, optional): When true, adds a modifier class so layouts can
+      place the "Last updated" text at the bottom of the main content area.
+      Use this for layouts that expect the timestamp near other footer-style
+      metadata instead of near the page title.
+{%- endcomment -%}
+
+{%- comment -%} Map language code to sitemap data file key {%- endcomment -%}
+{%- assign _language_map_entry = site.data.language_map[site.language] -%}
+{%- if _language_map_entry and _language_map_entry.sitemap_suffix -%}
+  {%- assign _sitemap_suffix = _language_map_entry.sitemap_suffix -%}
+{%- else -%}
+  {%- assign _sitemap_suffix = site.language | replace: '-', '_' -%}
+{%- endif -%}
+{%- assign _sitemap_key = "sitemap_" | append: _sitemap_suffix -%}
+
+{%- assign _last_modified_ts = site.data[_sitemap_key][page.relative_path] -%}
+{%- if _last_modified_ts -%}
+  {%- assign _last_updated_label = site.data.i18n[site.language].last_updated | default: "Last updated" -%}
+<p id="page-last-updated" class="page-last-updated{% if include.bottom %} page-last-updated--bottom{% endif %}">{{ _last_updated_label }}: {{ _last_modified_ts | date: "%B %-d, %Y" }}</p>
+{%- if include.reposition -%}
+<script>
+(function () {
+  function positionLastUpdated() {
+    var el = document.getElementById('page-last-updated');
+    if (!el) return;
+    var containerIds = ['article-main', 'api-main', 'featured_video'];
+    var container = null;
+    for (var i = 0; i < containerIds.length; i++) {
+      container = document.getElementById(containerIds[i]);
+      if (container) break;
+    }
+    if (!container) return;
+    var heading = container.querySelector('h1, h2');
+    if (heading && heading.parentNode) {
+      heading.parentNode.insertBefore(el, heading.nextSibling);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', positionLastUpdated);
+  } else {
+    positionLastUpdated();
+  }
+})();
+</script>
+{%- endif -%}
+{%- endif -%}

@@ -49,6 +49,7 @@ layout: default
     </div -->
     {%- endunless -%}
     {% include video.html id=page.video_id source=video_source type="static" %}
+    {% include last_updated.html reposition=true %}
 
     {{ content }}
 
