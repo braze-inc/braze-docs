@@ -23,10 +23,10 @@ Use AI item recommendations to calculate the most popular products or create per
 
 ### Prerequisites
 
-Before you start, you'll need to complete the following:
+Before you start, you must have the following:
 
-- You must have at least one [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) to use any of the recommendation types described below.
-- You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
+- At least one [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) to use any of the recommendation types described below.
+- Purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 ### Step 1: Create a new recommendation
 
@@ -54,7 +54,7 @@ Give your recommendation a name and optional description.
 Select a recommendation type. Each type uses the last six months of item interaction data, such as a purchase or custom event data. For more detailed information and uses cases for each, see [Types and Uses Cases]({{site.baseurl}}/user_guide/brazeai/recommendations/).
 
 {% alert tip %}
-When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
+When using **Most Recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most Popular** items as a fallback. You can see an approximation of the proportion of users receiving the **Most Popular** fallback displayed on the **Analytics** page. The **Most Popular** fallback only returns items that exist in the linked catalog. 
 {% endalert %}
 
 #### Step 3.1: Exclude prior purchases or interactions (optional)
